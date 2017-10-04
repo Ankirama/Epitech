@@ -1,0 +1,303 @@
+\hypertarget{group__gtx__quaternion}{}\section{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}
+\label{group__gtx__quaternion}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+
+
+Extented quaternion types and functions.  
+
+
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tvec3$<$ val\+Type $>$ \hyperlink{group__gtx__quaternion_ga57df84905f34b0d884ff5e2ac9a4d776}{glm\+::cross} (detail\+::tquat$<$ val\+Type $>$ const \&q, detail\+::tvec3$<$ val\+Type $>$ const \&v)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tvec3$<$ val\+Type $>$ \hyperlink{group__gtx__quaternion_gacd88ee5f0938469119199bdb216c68a1}{glm\+::cross} (detail\+::tvec3$<$ val\+Type $>$ const \&v, detail\+::tquat$<$ val\+Type $>$ const \&q)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tquat$<$ val\+Type $>$ \hyperlink{group__gtx__quaternion_ga3e9e70938d0e5528edddadb175f8eda4}{glm\+::squad} (detail\+::tquat$<$ val\+Type $>$ const \&q1, detail\+::tquat$<$ val\+Type $>$ const \&q2, detail\+::tquat$<$ val\+Type $>$ const \&s1, detail\+::tquat$<$ val\+Type $>$ const \&s2, val\+Type const \&h)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tquat$<$ val\+Type $>$ \hyperlink{group__gtx__quaternion_gadf15938f0260ed8894cc39be603fc4e9}{glm\+::intermediate} (detail\+::tquat$<$ val\+Type $>$ const \&prev, detail\+::tquat$<$ val\+Type $>$ const \&curr, detail\+::tquat$<$ val\+Type $>$ const \&next)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tquat$<$ val\+Type $>$ \hyperlink{group__gtx__quaternion_gaadefe537560bc9af6b6a7af1aea83eaf}{glm\+::exp} (detail\+::tquat$<$ val\+Type $>$ const \&q)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tquat$<$ val\+Type $>$ \hyperlink{group__gtx__quaternion_ga68d8d03cc87b3980abec4d80534f3d8e}{glm\+::log} (detail\+::tquat$<$ val\+Type $>$ const \&q)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tquat$<$ val\+Type $>$ \hyperlink{group__gtx__quaternion_ga7765f7d8a3399af25f8bc7956a77c7b2}{glm\+::pow} (detail\+::tquat$<$ val\+Type $>$ const \&x, val\+Type const \&y)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tvec3$<$ val\+Type $>$ \hyperlink{group__gtx__quaternion_gad1ada3be83514169fed6054b4e68b5ca}{glm\+::rotate} (detail\+::tquat$<$ val\+Type $>$ const \&q, detail\+::tvec3$<$ val\+Type $>$ const \&v)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tvec4$<$ val\+Type $>$ \hyperlink{group__gtx__quaternion_ga765b903facf3c4e325cab32cba75d9be}{glm\+::rotate} (detail\+::tquat$<$ val\+Type $>$ const \&q, detail\+::tvec4$<$ val\+Type $>$ const \&v)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\val\+Type \hyperlink{group__gtx__quaternion_gaa4574d2111d8c55c0e5c531706c0e20d}{glm\+::extract\+Real\+Component} (detail\+::tquat$<$ val\+Type $>$ const \&q)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tmat3x3$<$ val\+Type $>$ \hyperlink{group__gtx__quaternion_gaae1a23ba337628402dbe68d6567a9444}{glm\+::to\+Mat3} (detail\+::tquat$<$ val\+Type $>$ const \&x)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tmat4x4$<$ val\+Type $>$ \hyperlink{group__gtx__quaternion_ga14c3426d79fe82b07cd1f3610a18d9f5}{glm\+::to\+Mat4} (detail\+::tquat$<$ val\+Type $>$ const \&x)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tquat$<$ val\+Type $>$ \hyperlink{group__gtx__quaternion_ga70cb5b2da64a17632dbf151dcfec0150}{glm\+::to\+Quat} (detail\+::tmat3x3$<$ val\+Type $>$ const \&x)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tquat$<$ val\+Type $>$ \hyperlink{group__gtx__quaternion_ga25b6237ccb6c4a69d57a181aac99aa43}{glm\+::to\+Quat} (detail\+::tmat4x4$<$ val\+Type $>$ const \&x)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tquat$<$ T $>$ \hyperlink{group__gtx__quaternion_gae2cb4ac4676a57fb6db64aa515e608ab}{glm\+::short\+Mix} (detail\+::tquat$<$ T $>$ const \&x, detail\+::tquat$<$ T $>$ const \&y, T const \&a)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tquat$<$ T $>$ \hyperlink{group__gtx__quaternion_ga804e80b331a83eed2ed71a5c985593cd}{glm\+::fast\+Mix} (detail\+::tquat$<$ T $>$ const \&x, detail\+::tquat$<$ T $>$ const \&y, T const \&a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Extented quaternion types and functions. 
+
+$<$\hyperlink{gtx_2quaternion_8hpp}{glm/gtx/quaternion.\+hpp}$>$ need to be included to use these functionalities. 
+
+\subsection{Function Documentation}
+\hypertarget{group__gtx__quaternion_ga57df84905f34b0d884ff5e2ac9a4d776}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!cross@{cross}}
+\index{cross@{cross}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{cross}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tvec3$<$val\+Type$>$ glm\+::cross (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{q, }
+\item[{{\bf detail\+::tvec3}$<$ val\+Type $>$ const \&}]{v}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_ga57df84905f34b0d884ff5e2ac9a4d776}
+Compute a cross product between a quaternion and a vector.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+\hypertarget{group__gtx__quaternion_gacd88ee5f0938469119199bdb216c68a1}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!cross@{cross}}
+\index{cross@{cross}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{cross}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tvec3$<$val\+Type$>$ glm\+::cross (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec3}$<$ val\+Type $>$ const \&}]{v, }
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{q}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_gacd88ee5f0938469119199bdb216c68a1}
+Compute a cross product between a vector and a quaternion.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{group__gtx__quaternion_gaadefe537560bc9af6b6a7af1aea83eaf}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!exp@{exp}}
+\index{exp@{exp}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{exp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tquat$<$val\+Type$>$ glm\+::exp (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{q}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_gaadefe537560bc9af6b6a7af1aea83eaf}
+Returns a exp of a quaternion.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+\hypertarget{group__gtx__quaternion_gaa4574d2111d8c55c0e5c531706c0e20d}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!extract\+Real\+Component@{extract\+Real\+Component}}
+\index{extract\+Real\+Component@{extract\+Real\+Component}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{extract\+Real\+Component}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ val\+Type glm\+::extract\+Real\+Component (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{q}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_gaa4574d2111d8c55c0e5c531706c0e20d}
+Extract the real component of a quaternion.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+\hypertarget{group__gtx__quaternion_ga804e80b331a83eed2ed71a5c985593cd}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!fast\+Mix@{fast\+Mix}}
+\index{fast\+Mix@{fast\+Mix}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{fast\+Mix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tquat$<$T$>$ glm\+::fast\+Mix (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tquat}$<$ T $>$ const \&}]{x, }
+\item[{{\bf detail\+::tquat}$<$ T $>$ const \&}]{y, }
+\item[{T const \&}]{a}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_ga804e80b331a83eed2ed71a5c985593cd}
+Quaternion normalized linear interpolation.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\hypertarget{group__gtx__quaternion_gadf15938f0260ed8894cc39be603fc4e9}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!intermediate@{intermediate}}
+\index{intermediate@{intermediate}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{intermediate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tquat$<$val\+Type$>$ glm\+::intermediate (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{prev, }
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{curr, }
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{next}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_gadf15938f0260ed8894cc39be603fc4e9}
+Returns an intermediate control point for squad interpolation.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+\hypertarget{group__gtx__quaternion_ga68d8d03cc87b3980abec4d80534f3d8e}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!log@{log}}
+\index{log@{log}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tquat$<$val\+Type$>$ glm\+::log (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{q}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_ga68d8d03cc87b3980abec4d80534f3d8e}
+Returns a log of a quaternion.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+\hypertarget{group__gtx__quaternion_ga7765f7d8a3399af25f8bc7956a77c7b2}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!pow@{pow}}
+\index{pow@{pow}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{pow}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tquat$<$val\+Type$>$ glm\+::pow (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{x, }
+\item[{val\+Type const \&}]{y}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_ga7765f7d8a3399af25f8bc7956a77c7b2}
+Returns x raised to the y power.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+\hypertarget{group__gtx__quaternion_gad1ada3be83514169fed6054b4e68b5ca}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!rotate@{rotate}}
+\index{rotate@{rotate}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tvec3$<$val\+Type$>$ glm\+::rotate (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{q, }
+\item[{{\bf detail\+::tvec3}$<$ val\+Type $>$ const \&}]{v}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_gad1ada3be83514169fed6054b4e68b5ca}
+Returns quarternion square root.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} Rotates a 3 components vector by a quaternion.
+
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+\hypertarget{group__gtx__quaternion_ga765b903facf3c4e325cab32cba75d9be}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!rotate@{rotate}}
+\index{rotate@{rotate}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tvec4$<$val\+Type$>$ glm\+::rotate (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{q, }
+\item[{{\bf detail\+::tvec4}$<$ val\+Type $>$ const \&}]{v}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_ga765b903facf3c4e325cab32cba75d9be}
+Rotates a 4 components vector by a quaternion.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+\hypertarget{group__gtx__quaternion_gae2cb4ac4676a57fb6db64aa515e608ab}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!short\+Mix@{short\+Mix}}
+\index{short\+Mix@{short\+Mix}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{short\+Mix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tquat$<$T$>$ glm\+::short\+Mix (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tquat}$<$ T $>$ const \&}]{x, }
+\item[{{\bf detail\+::tquat}$<$ T $>$ const \&}]{y, }
+\item[{T const \&}]{a}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_gae2cb4ac4676a57fb6db64aa515e608ab}
+Quaternion interpolation using the rotation short path.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\hypertarget{group__gtx__quaternion_ga3e9e70938d0e5528edddadb175f8eda4}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!squad@{squad}}
+\index{squad@{squad}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{squad}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tquat$<$val\+Type$>$ glm\+::squad (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{q1, }
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{q2, }
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{s1, }
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{s2, }
+\item[{val\+Type const \&}]{h}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_ga3e9e70938d0e5528edddadb175f8eda4}
+Compute a point on a path according squad equation. q1 and q2 are control points; s1 and s2 are intermediate control points.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+\hypertarget{group__gtx__quaternion_gaae1a23ba337628402dbe68d6567a9444}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!to\+Mat3@{to\+Mat3}}
+\index{to\+Mat3@{to\+Mat3}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{to\+Mat3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tmat3x3$<$val\+Type$>$ glm\+::to\+Mat3 (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{x}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_gaae1a23ba337628402dbe68d6567a9444}
+Converts a quaternion to a 3 $\ast$ 3 matrix.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\hypertarget{group__gtx__quaternion_ga14c3426d79fe82b07cd1f3610a18d9f5}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!to\+Mat4@{to\+Mat4}}
+\index{to\+Mat4@{to\+Mat4}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{to\+Mat4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tmat4x4$<$val\+Type$>$ glm\+::to\+Mat4 (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tquat}$<$ val\+Type $>$ const \&}]{x}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_ga14c3426d79fe82b07cd1f3610a18d9f5}
+Converts a quaternion to a 4 $\ast$ 4 matrix.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\hypertarget{group__gtx__quaternion_ga70cb5b2da64a17632dbf151dcfec0150}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!to\+Quat@{to\+Quat}}
+\index{to\+Quat@{to\+Quat}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{to\+Quat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tquat$<$val\+Type$>$ glm\+::to\+Quat (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat3x3}$<$ val\+Type $>$ const \&}]{x}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_ga70cb5b2da64a17632dbf151dcfec0150}
+Converts a 3 $\ast$ 3 matrix to a quaternion.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+\hypertarget{group__gtx__quaternion_ga25b6237ccb6c4a69d57a181aac99aa43}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}!to\+Quat@{to\+Quat}}
+\index{to\+Quat@{to\+Quat}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion}}
+\subsubsection[{to\+Quat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tquat$<$val\+Type$>$ glm\+::to\+Quat (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat4x4}$<$ val\+Type $>$ const \&}]{x}
+\end{DoxyParamCaption}
+)}\label{group__gtx__quaternion_ga25b6237ccb6c4a69d57a181aac99aa43}
+Converts a 4 $\ast$ 4 matrix to a quaternion.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} 
+\end{DoxySeeAlso}
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+

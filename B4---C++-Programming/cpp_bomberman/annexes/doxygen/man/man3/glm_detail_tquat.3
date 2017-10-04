@@ -1,0 +1,76 @@
+.TH "glm::detail::tquat< T >" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+glm::detail::tquat< T > \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBctor\fP { \fBnull\fP }"
+.br
+.ti -1c
+.RI "typedef T \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef std::size_t \fBsize_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "GLM_FUNC_DECL size_type \fBlength\fP () const "
+.br
+.ti -1c
+.RI "\fBtquat\fP (value_type const &s, \fBglm::detail::tvec3\fP< T > const &v)"
+.br
+.ti -1c
+.RI "\fBtquat\fP (value_type const &w, value_type const &x, value_type const &y, value_type const &z)"
+.br
+.ti -1c
+.RI "\fBtquat\fP (\fBtvec3\fP< T > const &eulerAngles)"
+.br
+.RI "\fIBuild a quaternion from euler angles (pitch, yaw, roll), in radians\&. \fP"
+.ti -1c
+.RI "\fBtquat\fP (\fBtmat3x3\fP< T > const &m)"
+.br
+.ti -1c
+.RI "\fBtquat\fP (\fBtmat4x4\fP< T > const &m)"
+.br
+.ti -1c
+.RI "value_type & \fBoperator[]\fP (\fBint\fP i)"
+.br
+.ti -1c
+.RI "value_type const & \fBoperator[]\fP (\fBint\fP i) const "
+.br
+.ti -1c
+.RI "\fBtquat\fP< T > & \fBoperator*=\fP (value_type const &s)"
+.br
+.ti -1c
+.RI "\fBtquat\fP< T > & \fBoperator/=\fP (value_type const &s)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "value_type \fBx\fP"
+.br
+.ti -1c
+.RI "value_type \fBy\fP"
+.br
+.ti -1c
+.RI "value_type \fBz\fP"
+.br
+.ti -1c
+.RI "value_type \fBw\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

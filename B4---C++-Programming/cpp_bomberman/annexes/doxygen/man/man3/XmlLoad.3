@@ -1,0 +1,240 @@
+.TH "XmlLoad" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+XmlLoad \- load xml file  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <XmlLoad\&.hh>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXmlLoad\fP (std::string const &filename)"
+.br
+.RI "\fI\fBXmlLoad\fP's constructor\&. \fP"
+.ti -1c
+.RI "\fB~XmlLoad\fP ()"
+.br
+.RI "\fI\fBXmlLoad\fP's destructor\&. \fP"
+.ti -1c
+.RI "void \fBloadSave\fP ()"
+.br
+.RI "\fISet \fBGameState\fP from xml file\&. \fP"
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBgetIntValue\fP (\fBtinyxml2::XMLElement\fP *root, std::string const &name) const "
+.br
+.RI "\fIget int from xml \fP"
+.ti -1c
+.RI "float \fBgetFloatValue\fP (\fBtinyxml2::XMLElement\fP *root, std::string const &name) const "
+.br
+.RI "\fIget float from xml \fP"
+.ti -1c
+.RI "unsigned int \fBgetUnValue\fP (\fBtinyxml2::XMLElement\fP *root, std::string const &name) const "
+.br
+.RI "\fIget unsigned int from xml \fP"
+.ti -1c
+.RI "std::vector< \fBACharacter\fP * > bombermans \fBloadBombers\fP (\fBtinyxml2::XMLElement\fP *root) const "
+.br
+.RI "\fIload bombermans from xml \fP"
+.ti -1c
+.RI "\fBPlayer\fP * \fBcreatePlayer\fP (\fBtinyxml2::XMLElement\fP *player) const "
+.br
+.RI "\fIload player from xml \fP"
+.ti -1c
+.RI "\fBIA\fP * \fBcreateAI\fP (\fBtinyxml2::XMLElement\fP *ai) const "
+.br
+.RI "\fIload AI from xml \fP"
+.ti -1c
+.RI "std::vector< \fBBomb\fP * > \fBcreateBombs\fP (\fBtinyxml2::XMLElement\fP *bombs) const "
+.br
+.RI "\fIload bombs from player/ai \fP"
+.ti -1c
+.RI "\fBMaze\fP * \fBcreateMaze\fP (\fBtinyxml2::XMLElement\fP *maze) const "
+.br
+.RI "\fIload maze from xml \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBtinyxml2::XMLDocument\fP \fBm_xmlDoc\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+load xml file 
+
+Load a xml file and set \fBGameState\fP instance 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "XmlLoad::XmlLoad (std::string const & filename)"
+
+.PP
+\fBXmlLoad\fP's constructor\&. It will load our file and set a xml's object
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfilename\fP xml file we want to load 
+.RE
+.PP
+
+.SS "XmlLoad::~XmlLoad ()"
+
+.PP
+\fBXmlLoad\fP's destructor\&. It will close our file and delete our xml's object 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBIA\fP* XmlLoad::createAI (\fBtinyxml2::XMLElement\fP * ai) const\fC [private]\fP"
+
+.PP
+load AI from xml It will create an AI from our xml AIs' list
+.PP
+\fBParameters:\fP
+.RS 4
+\fIai\fP pointer into a element of AIs' list 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+New player loaded/created from our xml 
+.RE
+.PP
+
+.SS "std::vector<\fBBomb\fP *> XmlLoad::createBombs (\fBtinyxml2::XMLElement\fP * bombs) const\fC [private]\fP"
+
+.PP
+load bombs from player/ai It will create a bombs' vector from current player/ai
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbombs\fP pointer into player/ai's bombs 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+bombs's vector loaded 
+.RE
+.PP
+
+.SS "\fBMaze\fP* XmlLoad::createMaze (\fBtinyxml2::XMLElement\fP * maze) const\fC [private]\fP"
+
+.PP
+load maze from xml It will create the maze from our xml
+.PP
+\fBParameters:\fP
+.RS 4
+\fImaze\fP pointer into our xml 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+New maze loaded/created from our xml 
+.RE
+.PP
+
+.SS "\fBPlayer\fP* XmlLoad::createPlayer (\fBtinyxml2::XMLElement\fP * player) const\fC [private]\fP"
+
+.PP
+load player from xml It will create a player from our xml players' list
+.PP
+\fBParameters:\fP
+.RS 4
+\fIplayer\fP pointer into a element of players' list 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+New player loaded/created from our xml 
+.RE
+.PP
+
+.SS "float XmlLoad::getFloatValue (\fBtinyxml2::XMLElement\fP * root, std::string const & name) const\fC [private]\fP"
+
+.PP
+get float from xml It will search the first child element needed and return the value
+.PP
+\fBParameters:\fP
+.RS 4
+\fIroot\fP Current position into our xml file 
+.br
+\fIname\fP Name used in FirstChildElement to find our element 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The value found in our FirstChildElement 
+.RE
+.PP
+
+.SS "int XmlLoad::getIntValue (\fBtinyxml2::XMLElement\fP * root, std::string const & name) const\fC [private]\fP"
+
+.PP
+get int from xml It will search the first child element needed and return the value
+.PP
+\fBParameters:\fP
+.RS 4
+\fIroot\fP Current position into our xml file 
+.br
+\fIname\fP Name used in FirstChildElement to find our element 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The value found in our FirstChildElement 
+.RE
+.PP
+
+.SS "unsigned int XmlLoad::getUnValue (\fBtinyxml2::XMLElement\fP * root, std::string const & name) const\fC [private]\fP"
+
+.PP
+get unsigned int from xml It will search the first child element needed and return the value
+.PP
+\fBParameters:\fP
+.RS 4
+\fIroot\fP Current position into our xml file 
+.br
+\fIname\fP Name used in FirstChildElement to find our element 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The value found in our FirstChildElement 
+.RE
+.PP
+
+.SS "std::vector<\fBACharacter\fP *> bombermans XmlLoad::loadBombers (\fBtinyxml2::XMLElement\fP * root) const\fC [private]\fP"
+
+.PP
+load bombermans from xml It will load 'players' and 'AIs' elements\&. It will call createPlayer and createAI until the end
+.PP
+\fBParameters:\fP
+.RS 4
+\fIroot\fP the current pointer on 'save' tag (root tag in xml save) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Bombermans' vector with all players/AIs loaded 
+.RE
+.PP
+
+.SS "void XmlLoad::loadSave ()"
+
+.PP
+Set \fBGameState\fP from xml file\&. Main function to read our xml file and set our \fBGameState\fP 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBtinyxml2::XMLDocument\fP XmlLoad::m_xmlDoc\fC [private]\fP"
+Xml object needed to load and read xml file 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

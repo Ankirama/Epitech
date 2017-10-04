@@ -1,0 +1,89 @@
+\hypertarget{group__gtx__fast__square__root}{}\section{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root}
+\label{group__gtx__fast__square__root}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root}}
+
+
+Fast but less accurate implementations of square root based functions.  
+
+
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\gen\+Type \hyperlink{group__gtx__fast__square__root_gad57c343d2362c1469043adedeb8ef8eb}{glm\+::fast\+Sqrt} (gen\+Type const \&x)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\gen\+Type \hyperlink{group__gtx__fast__square__root_ga49dd9caa2853398474e5aae377259a22}{glm\+::fast\+Inverse\+Sqrt} (gen\+Type const \&x)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\gen\+Type\+::value\+\_\+type \hyperlink{group__gtx__fast__square__root_ga2e726cc8b9f02b7c09910858ea1afac6}{glm\+::fast\+Length} (gen\+Type const \&x)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\gen\+Type\+::value\+\_\+type \hyperlink{group__gtx__fast__square__root_ga646eee2633e9de7274de9bc6f5af92b5}{glm\+::fast\+Distance} (gen\+Type const \&x, gen\+Type const \&y)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\gen\+Type \hyperlink{group__gtx__fast__square__root_ga2953e7426a420bb2b33affce7360ef40}{glm\+::fast\+Normalize} (gen\+Type const \&x)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fast but less accurate implementations of square root based functions. 
+
+
+\begin{DoxyItemize}
+\item Sqrt optimisation based on Newton\textquotesingle{}s method, www.\+gamedev.\+net/community/forums/topic.asp?topic id=139956
+\end{DoxyItemize}
+
+$<$\hyperlink{fast__square__root_8hpp}{glm/gtx/fast\+\_\+square\+\_\+root.\+hpp}$>$ need to be included to use these functionalities. 
+
+\subsection{Function Documentation}
+\hypertarget{group__gtx__fast__square__root_ga646eee2633e9de7274de9bc6f5af92b5}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root}!fast\+Distance@{fast\+Distance}}
+\index{fast\+Distance@{fast\+Distance}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root}}
+\subsubsection[{fast\+Distance}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename gen\+Type $>$ gen\+Type\+::value\+\_\+type glm\+::fast\+Distance (
+\begin{DoxyParamCaption}
+\item[{gen\+Type const \&}]{x, }
+\item[{gen\+Type const \&}]{y}
+\end{DoxyParamCaption}
+)}\label{group__gtx__fast__square__root_ga646eee2633e9de7274de9bc6f5af92b5}
+Faster than the common distance function but less accurate. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root extension. 
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{group__gtx__fast__square__root_ga49dd9caa2853398474e5aae377259a22}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root}!fast\+Inverse\+Sqrt@{fast\+Inverse\+Sqrt}}
+\index{fast\+Inverse\+Sqrt@{fast\+Inverse\+Sqrt}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root}}
+\subsubsection[{fast\+Inverse\+Sqrt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename gen\+Type $>$ gen\+Type glm\+::fast\+Inverse\+Sqrt (
+\begin{DoxyParamCaption}
+\item[{gen\+Type const \&}]{x}
+\end{DoxyParamCaption}
+)}\label{group__gtx__fast__square__root_ga49dd9caa2853398474e5aae377259a22}
+Faster than the common inversesqrt function but less accurate. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root extension. \hypertarget{group__gtx__fast__square__root_ga2e726cc8b9f02b7c09910858ea1afac6}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root}!fast\+Length@{fast\+Length}}
+\index{fast\+Length@{fast\+Length}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root}}
+\subsubsection[{fast\+Length}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename gen\+Type $>$ gen\+Type\+::value\+\_\+type glm\+::fast\+Length (
+\begin{DoxyParamCaption}
+\item[{gen\+Type const \&}]{x}
+\end{DoxyParamCaption}
+)}\label{group__gtx__fast__square__root_ga2e726cc8b9f02b7c09910858ea1afac6}
+Faster than the common length function but less accurate. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root extension. 
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\hypertarget{group__gtx__fast__square__root_ga2953e7426a420bb2b33affce7360ef40}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root}!fast\+Normalize@{fast\+Normalize}}
+\index{fast\+Normalize@{fast\+Normalize}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root}}
+\subsubsection[{fast\+Normalize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename gen\+Type $>$ gen\+Type glm\+::fast\+Normalize (
+\begin{DoxyParamCaption}
+\item[{gen\+Type const \&}]{x}
+\end{DoxyParamCaption}
+)}\label{group__gtx__fast__square__root_ga2953e7426a420bb2b33affce7360ef40}
+Faster than the common normalize function but less accurate. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root extension. \hypertarget{group__gtx__fast__square__root_gad57c343d2362c1469043adedeb8ef8eb}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root}!fast\+Sqrt@{fast\+Sqrt}}
+\index{fast\+Sqrt@{fast\+Sqrt}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root}}
+\subsubsection[{fast\+Sqrt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename gen\+Type $>$ gen\+Type glm\+::fast\+Sqrt (
+\begin{DoxyParamCaption}
+\item[{gen\+Type const \&}]{x}
+\end{DoxyParamCaption}
+)}\label{group__gtx__fast__square__root_gad57c343d2362c1469043adedeb8ef8eb}
+Faster than the common sqrt function but less accurate. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+fast\+\_\+square\+\_\+root extension. 
+
+Here is the call graph for this function\+:
+% FIG 3
+
+

@@ -1,0 +1,11 @@
+digraph "glm::radialGradient"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::radialGradient",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="glm::gtx::pow2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__optimum__pow.html#ga56697e47a1375a352a746a5be3480fc8"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="glm::sqrt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__exponential.html#ga2317d4ff45af448b8402431afa0711f3"];
+}

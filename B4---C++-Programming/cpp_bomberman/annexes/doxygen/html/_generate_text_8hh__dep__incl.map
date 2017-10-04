@@ -1,0 +1,10 @@
+<map id="include/GenerateText.hh" name="include/GenerateText.hh">
+<area shape="rect" id="node2" href="$_intro_state_8hh.html" title="First state of the bomberman. " alt="" coords="525,80,669,107"/>
+<area shape="rect" id="node3" href="$_load_state_8hh_source.html" title="include/LoadState.hh" alt="" coords="5,155,152,181"/>
+<area shape="rect" id="node7" href="$_save_state_8hh_source.html" title="include/SaveState.hh" alt="" coords="1038,155,1186,181"/>
+<area shape="rect" id="node4" href="$_mult_state_8hh_source.html" title="include/MultState.hh" alt="" coords="177,155,319,181"/>
+<area shape="rect" id="node5" href="$_option_state_8hh_source.html" title="include/OptionState.hh" alt="" coords="344,155,501,181"/>
+<area shape="rect" id="node6" href="$_play_state_8hh_source.html" title="include/PlayState.hh" alt="" coords="525,155,669,181"/>
+<area shape="rect" id="node8" href="$_score_state_8hh_source.html" title="include/ScoreState.hh" alt="" coords="693,155,845,181"/>
+<area shape="rect" id="node9" href="$_solo_state_8hh_source.html" title="include/SoloState.hh" alt="" coords="869,155,1013,181"/>
+</map>

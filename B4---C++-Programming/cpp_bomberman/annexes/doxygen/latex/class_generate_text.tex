@@ -1,0 +1,184 @@
+\hypertarget{class_generate_text}{}\section{Generate\+Text Class Reference}
+\label{class_generate_text}\index{Generate\+Text@{Generate\+Text}}
+
+
+Display text on screen.  
+
+
+
+
+{\ttfamily \#include $<$Generate\+Text.\+hh$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_generate_text_a7ebb2297410b61c7dd02755087d268b4}{Generate\+Text} (const std\+::string \&text, float x, float y)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_generate_text}{Generate\+Text}\textquotesingle{}s constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_generate_text_ae4a9ecffdb0ecc45093a8a95f2d341e4}{$\sim$\+Generate\+Text} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_generate_text}{Generate\+Text}\textquotesingle{}s destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_generate_text_aaea83dde4387ef9ee6563d1b1bae53ea}{Init} ()
+\begin{DoxyCompactList}\small\item\em init vector \end{DoxyCompactList}\item 
+void \hyperlink{class_generate_text_a9e6d6b6a63f1191506ff051898d077a0}{Draw} (gdl\+::\+Basic\+Shader shader)
+\begin{DoxyCompactList}\small\item\em Display letters\textquotesingle{} vector. \end{DoxyCompactList}\item 
+int \hyperlink{class_generate_text_a76051f35410c569ca7339636dad0944d}{get\+Y} () const 
+\begin{DoxyCompactList}\small\item\em get Y position \end{DoxyCompactList}\item 
+std\+::string const \& \hyperlink{class_generate_text_a82a73342739af1610790d9dae5fefb85}{get\+Str} () const 
+\begin{DoxyCompactList}\small\item\em get text draw \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_generate_text_a0284aa0197083b5b7c035e890f2d4ee6}{}\hyperlink{class_object2_d}{Object2\+D} $\ast$ {\bfseries get\+Letter\+Obj} (char letter, float x, float y)\label{class_generate_text_a0284aa0197083b5b7c035e890f2d4ee6}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string const \hyperlink{class_generate_text_af19fb4b037211d026f4344a88174c555}{m\+\_\+str}
+\begin{DoxyCompactList}\small\item\em create new letter \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_object2_d}{Object2\+D} $\ast$ $>$ \hyperlink{class_generate_text_adc0479fef3c53816e44371416ffc467a}{m\+\_\+text}
+\item 
+float \hyperlink{class_generate_text_a8cb1c4cb430700466a123306afce1530}{m\+\_\+pos\+X}
+\item 
+float \hyperlink{class_generate_text_a5696c6548e6448b14fa4442df90d6de3}{m\+\_\+pos\+Y}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Display text on screen. 
+
+Function to display some text on the screen. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_generate_text_a7ebb2297410b61c7dd02755087d268b4}{}\index{Generate\+Text@{Generate\+Text}!Generate\+Text@{Generate\+Text}}
+\index{Generate\+Text@{Generate\+Text}!Generate\+Text@{Generate\+Text}}
+\subsubsection[{Generate\+Text}]{\setlength{\rightskip}{0pt plus 5cm}Generate\+Text\+::\+Generate\+Text (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{text, }
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)}\label{class_generate_text_a7ebb2297410b61c7dd02755087d268b4}
+
+
+\hyperlink{class_generate_text}{Generate\+Text}\textquotesingle{}s constructor. 
+
+It will create our object\textquotesingle{}s vector with every letter needed and set it
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Text we want to display on the screen \\
+\hline
+{\em x} & x\textquotesingle{}s position where we want to display it \\
+\hline
+{\em y} & y\textquotesingle{}s position where we want to display it \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_generate_text_ae4a9ecffdb0ecc45093a8a95f2d341e4}{}\index{Generate\+Text@{Generate\+Text}!````~Generate\+Text@{$\sim$\+Generate\+Text}}
+\index{````~Generate\+Text@{$\sim$\+Generate\+Text}!Generate\+Text@{Generate\+Text}}
+\subsubsection[{$\sim$\+Generate\+Text}]{\setlength{\rightskip}{0pt plus 5cm}Generate\+Text\+::$\sim$\+Generate\+Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_generate_text_ae4a9ecffdb0ecc45093a8a95f2d341e4}
+
+
+\hyperlink{class_generate_text}{Generate\+Text}\textquotesingle{}s destructor. 
+
+It will clean / delete every letter in our vector then destroy the class 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_generate_text_a9e6d6b6a63f1191506ff051898d077a0}{}\index{Generate\+Text@{Generate\+Text}!Draw@{Draw}}
+\index{Draw@{Draw}!Generate\+Text@{Generate\+Text}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}void Generate\+Text\+::\+Draw (
+\begin{DoxyParamCaption}
+\item[{gdl\+::\+Basic\+Shader}]{shader}
+\end{DoxyParamCaption}
+)}\label{class_generate_text_a9e6d6b6a63f1191506ff051898d077a0}
+
+
+Display letters\textquotesingle{} vector. 
+
+It will display our letters\textquotesingle{} vector. This function will be called in the draw\textquotesingle{}s loop in a state (like in \hyperlink{class_game_state}{Game\+State})
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & \hyperlink{class_object2_d}{Object2\+D} need a shader so we need it \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_generate_text_a82a73342739af1610790d9dae5fefb85}{}\index{Generate\+Text@{Generate\+Text}!get\+Str@{get\+Str}}
+\index{get\+Str@{get\+Str}!Generate\+Text@{Generate\+Text}}
+\subsubsection[{get\+Str}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string const\& Generate\+Text\+::get\+Str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_generate_text_a82a73342739af1610790d9dae5fefb85}
+
+
+get text draw 
+
+\begin{DoxyReturn}{Returns}
+text stored in the instance 
+\end{DoxyReturn}
+\hypertarget{class_generate_text_a76051f35410c569ca7339636dad0944d}{}\index{Generate\+Text@{Generate\+Text}!get\+Y@{get\+Y}}
+\index{get\+Y@{get\+Y}!Generate\+Text@{Generate\+Text}}
+\subsubsection[{get\+Y}]{\setlength{\rightskip}{0pt plus 5cm}int Generate\+Text\+::get\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_generate_text_a76051f35410c569ca7339636dad0944d}
+
+
+get Y position 
+
+\begin{DoxyReturn}{Returns}
+return Y position 
+\end{DoxyReturn}
+\hypertarget{class_generate_text_aaea83dde4387ef9ee6563d1b1bae53ea}{}\index{Generate\+Text@{Generate\+Text}!Init@{Init}}
+\index{Init@{Init}!Generate\+Text@{Generate\+Text}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void Generate\+Text\+::\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_generate_text_aaea83dde4387ef9ee6563d1b1bae53ea}
+
+
+init vector 
+
+Every letter are \hyperlink{class_object2_d}{Object2\+D} so they have to be initialized. This is the goal of this function 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_generate_text_a8cb1c4cb430700466a123306afce1530}{}\index{Generate\+Text@{Generate\+Text}!m\+\_\+pos\+X@{m\+\_\+pos\+X}}
+\index{m\+\_\+pos\+X@{m\+\_\+pos\+X}!Generate\+Text@{Generate\+Text}}
+\subsubsection[{m\+\_\+pos\+X}]{\setlength{\rightskip}{0pt plus 5cm}float Generate\+Text\+::m\+\_\+pos\+X\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_text_a8cb1c4cb430700466a123306afce1530}
+X initial position (for the first letter) \hypertarget{class_generate_text_a5696c6548e6448b14fa4442df90d6de3}{}\index{Generate\+Text@{Generate\+Text}!m\+\_\+pos\+Y@{m\+\_\+pos\+Y}}
+\index{m\+\_\+pos\+Y@{m\+\_\+pos\+Y}!Generate\+Text@{Generate\+Text}}
+\subsubsection[{m\+\_\+pos\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float Generate\+Text\+::m\+\_\+pos\+Y\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_text_a5696c6548e6448b14fa4442df90d6de3}
+Y initial position (for the first letter) \hypertarget{class_generate_text_af19fb4b037211d026f4344a88174c555}{}\index{Generate\+Text@{Generate\+Text}!m\+\_\+str@{m\+\_\+str}}
+\index{m\+\_\+str@{m\+\_\+str}!Generate\+Text@{Generate\+Text}}
+\subsubsection[{m\+\_\+str}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string const Generate\+Text\+::m\+\_\+str\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_text_af19fb4b037211d026f4344a88174c555}
+
+
+create new letter 
+
+Create a new object2d from a char
+
+
+\begin{DoxyParams}{Parameters}
+{\em letter} & Letter which well be converted \\
+\hline
+{\em x} & x\textquotesingle{}s position \\
+\hline
+{\em y} & y\textquotesingle{}s position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_object2_d}{Object2\+D} created from letterstring used to display text 
+\end{DoxyReturn}
+\hypertarget{class_generate_text_adc0479fef3c53816e44371416ffc467a}{}\index{Generate\+Text@{Generate\+Text}!m\+\_\+text@{m\+\_\+text}}
+\index{m\+\_\+text@{m\+\_\+text}!Generate\+Text@{Generate\+Text}}
+\subsubsection[{m\+\_\+text}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Object2\+D} $\ast$$>$ Generate\+Text\+::m\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_text_adc0479fef3c53816e44371416ffc467a}
+Letters\textquotesingle{} vector created to display on the screen 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_generate_text_8hh}{Generate\+Text.\+hh}\end{DoxyCompactItemize}

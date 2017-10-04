@@ -1,0 +1,13 @@
+#HEADER
+#cone x y z radius rotX rotY rotZ clrR clrG clrB brill [HYPER] PnX PnY PnZ
+#eye x y z rotX rotY rotZ
+#cylinder x y z radius rotX rotY rotZ clrR clrG clrB brill PnX PnY PnZ
+#light x y z clrR clrG clrB power
+#orb x y z radius clrR clrG clrB brill PnX PnY PnZ
+#plan x y z tran rotX rotY rotZ clrR clrG clrB brill PnX PnY PnZ
+eye -500 0 80 0 0 0
+plan 0 0 0 0 0 0 0 255 255 255 0.2 0 0 0 -1 -1 -1 -1 -1 -1
+light -1000 -10 100 0 0 240 100
+light 0 -200 100 0 255 0 100
+cone 0 0 50 0.4 -30 0 0 10 10 220 0.8 0 0 0 0 -1 -1 -1 -1 -1 -1
+ambiance 0

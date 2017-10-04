@@ -1,0 +1,73 @@
+#!/usr/bin/python2.7
+
+import sys
+import fileinput as fi
+
+def     usage():
+    print "Usage: ./109titrage < values.txt"
+    print "Usage: ./109titrage DEGREE < values.txt"
+    sys.exit()
+
+def     option_1(arr_x, arr_y):
+    print "arr_x : {}, arr_y : {}".format(arr_x, arr_y)
+    j = 0
+    i = 0
+    arr_z = []
+    while (i < len(arr_y)):
+        if (i == 0):
+            arr_z.append((arr_y[i + 1] - arr_y[i]) / (arr_x[i + 1] - arr_x[i]))
+        elif (i == len(arr_y) - 1):
+            arr_z.append((arr_y[i] - arr_y[i - 1]) / (arr_x[i] - arr_x[i - 1]))
+        else:
+<<<<<<< HEAD
+            arr_z.append(-(arr_y[i - 1] * (arr_x[i + 1] - arr_x[i]) + arr_y[i] * (2.0 * arr_x[i] - arr_x[i - 1] - arr_x[i + 1]) - arr_y[i + 1] * (arr_x[i] - arr_x[i - 1])) / ((arr_x[i] - arr_x[i - 1]) * (arr_x[i + 1] - arr_x[i])))
+=======
+            arr_z.append((arr_y[i - 1] * (arr_x[i + 1] - arr_x[i]) + arr_y[i] * (2 * arr_x[i] - arr_x[i - 1] - arr_x[i + 1]) - arr_y[i + 1] * (arr_x[i] - arr_x[i - 1])) / ((arr_x[i] - arr_x[i - 1]) * (arr_x[i + 1] - arr_x[i])))
+>>>>>>> 871e8815493887b5e9742fc5a05d393cf0830757
+        i = i + 1
+        j = j + 1
+    print "arr_z : {}".format(arr_z)
+
+def     option_2(arr_x, arr_y, degree):
+    print "arr_x : {}, arr_y : {}, degree: {}".format(arr_x, arr_y, degree)
+
+def     travel_file(degree):
+    tmp = ""
+    arr_x = []
+    arr_y = []
+    file = sys.stdin
+    for line in file:
+        if (line[:len(line) - 1] == "FIN"):
+            pass
+        elif ((line[1] != '(' and line[len(line) - 2] != ')')):
+            usage()
+        else:
+            tmp = line[1:len(line) - 2]
+            arr_tmp = tmp.split(";")
+            try:
+                arr_x.append((float(arr_tmp[0])))
+                arr_y.append((float(arr_tmp[1])))
+            except ValueError as e:
+                print "error : {}".format(e)
+                sys.exit()
+            except:
+                usage()
+    if degree == 0:
+        option_1(arr_x, arr_y)
+    else:
+        option_2(arr_x, arr_y, degree)
+
+def     main():
+    degree = 0
+    if (len(sys.argv) == 2):
+        try:
+            degree = (int(sys.argv[1]))
+            if degree < 10 or degree > 80:
+                raise ValueError("error here")
+        except ValueError as e:
+            print "error: 10 <= degree <= 80"
+            usage()
+    travel_file(degree)
+
+if __name__ == "__main__":
+    main()

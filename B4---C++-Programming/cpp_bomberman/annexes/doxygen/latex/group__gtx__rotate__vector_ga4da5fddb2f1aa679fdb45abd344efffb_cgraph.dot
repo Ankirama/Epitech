@@ -1,0 +1,23 @@
+digraph "glm::orientation"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::orientation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="glm::all",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__vector__relational.html#gab80f9b30c75030155590e429be597601"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="glm::equal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__vector__relational.html#gacd3085108f3505dd5a67f4f6d3a608c2"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="glm::cross",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__geometric.html#ga15a920c14f06882921757e453426efbe"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="glm::degrees",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__trigonometric.html#gaf4e5661bd1c993f6090d49e988a4c78a"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="glm::pi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__constants.html#gae671930537266a9a650ccb4b88757692"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="glm::acos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__trigonometric.html#gac85497ed2e39d4cac4ac32bed4dfc506"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="glm::dot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__geometric.html#ga05244a4e222740e5e38abe91fc51df79"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="glm::rotate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__rotate__vector.html#ga6e2b5cddfb385e640dfcf1ae7769b910"];
+}

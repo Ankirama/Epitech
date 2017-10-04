@@ -1,0 +1,202 @@
+.TH "XmlWrite" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+XmlWrite \- Create and write into xml\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <XmlWrite\&.hpp>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBController\fP"
+.br
+.RI "\fIInternal class to help \fBXmlWrite\fP\&. \fP"
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXmlWrite\fP (std::ostream &stream)"
+.br
+.RI "\fI\fBXmlWrite\fP's constructor\&. \fP"
+.ti -1c
+.RI "\fB~XmlWrite\fP ()"
+.br
+.RI "\fI\fBXmlWrite\fP's destructor\&. \fP"
+.ti -1c
+.RI "template<class T > \fBXmlWrite\fP & \fBoperator<<\fP (const T &value)"
+.br
+.RI "\fItemplate for << \fP"
+.ti -1c
+.RI "\fBXmlWrite\fP & \fBoperator<<\fP (const \fBController\fP &controller)"
+.br
+.RI "\fIoperator << to write our tag \fP"
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBe_state\fP { \fBNONE\fP, \fBATTRIBUTE\fP, \fBTAG\fP, \fBTAG_NAME\fP }"
+.br
+.ti -1c
+.RI "typedef enum XmlWrite::e_state \fBt_state\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXmlWrite\fP ()"
+.br
+.RI "\fI\fBXmlWrite\fP's default constructor\&. \fP"
+.ti -1c
+.RI "\fBXmlWrite\fP & \fBoperator=\fP (const \fBXmlWrite\fP &)"
+.br
+.RI "\fIprivate = operator to unable it \fP"
+.ti -1c
+.RI "\fBXmlWrite\fP (const \fBXmlWrite\fP &)"
+.br
+.RI "\fIprivate copy constructor \fP"
+.ti -1c
+.RI "void \fBcloseBracketStart\fP (bool end=false)"
+.br
+.RI "\fIClose an open bracket\&. \fP"
+.ti -1c
+.RI "void \fBcleanStringstream\fP ()"
+.br
+.RI "\fIClean a stringstream\&. \fP"
+.ti -1c
+.RI "void \fBcloseTag\fP (const std::string &\fBtag\fP)"
+.br
+.RI "\fIClose tags\&. \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBm_stream\fP"
+.br
+.ti -1c
+.RI "std::stack< std::string > \fBm_tags\fP"
+.br
+.ti -1c
+.RI "std::ostringstream \fBm_tagStream\fP"
+.br
+.ti -1c
+.RI "t_state \fBm_state\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Create and write into xml\&. 
+
+It will create a xml file and write into it with specific norm like a true xml 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "XmlWrite::XmlWrite (std::ostream & stream)\fC [inline]\fP"
+
+.PP
+\fBXmlWrite\fP's constructor\&. Stream initialized and we write the header in our xml file
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstream\fP Reference in our file's stream used to write into it 
+.RE
+.PP
+
+.SS "XmlWrite::~XmlWrite ()\fC [inline]\fP"
+
+.PP
+\fBXmlWrite\fP's destructor\&. it will close every tag which aren't closed\&. 
+.SS "XmlWrite::XmlWrite ()\fC [private]\fP"
+
+.PP
+\fBXmlWrite\fP's default constructor\&. unused default constructor 
+.SS "XmlWrite::XmlWrite (const \fBXmlWrite\fP &)\fC [private]\fP"
+
+.PP
+private copy constructor Unused 
+.SH "Member Function Documentation"
+.PP 
+.SS "void XmlWrite::cleanStringstream ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Clean a stringstream\&. It will clean the stringstream in the class 
+.SS "void XmlWrite::closeBracketStart (bool end = \fCfalse\fP)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Close an open bracket\&. It will close an open bracket like <'players
+and will add ''' + '/' (if end is true) + '>'
+.PP
+\fBParameters:\fP
+.RS 4
+\fIend\fP default value is false and it used to add a '/' 
+.RE
+.PP
+
+.SS "void XmlWrite::closeTag (const std::string & tag)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Close tags\&. It will close all tags until the tag given or the end
+.PP
+\fBParameters:\fP
+.RS 4
+\fItag\fP Close every tags until this tag 
+.RE
+.PP
+
+.SS "template<class T > \fBXmlWrite\fP& XmlWrite::operator<< (const T & value)\fC [inline]\fP"
+
+.PP
+template for << It will allow us to write directly into our file wich any variable 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvalue\fP The list of value type like string, char*, int, \&.\&.\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Current instance's reference to allow more than one << 
+.RE
+.PP
+
+.SS "\fBXmlWrite\fP& XmlWrite::operator<< (const \fBController\fP & controller)\fC [inline]\fP"
+
+.PP
+operator << to write our tag This is our main overload\&. We will check the controller used and do something with its typeField Switch between TAG_START / TAG_END / DATA / ATTRIBUTE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcontroller\fP a controller with a field type and a str 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Current instance's reference to allow more than one << 
+.RE
+.PP
+
+.SS "\fBXmlWrite\fP& XmlWrite::operator= (const \fBXmlWrite\fP &)\fC [private]\fP"
+
+.PP
+private = operator to unable it Unused and undefined 
+.SH "Member Data Documentation"
+.PP 
+.SS "t_state XmlWrite::m_state\fC [private]\fP"
+current state (init with NONE) used to to choose action with attribute 
+.SS "std::ostream& XmlWrite::m_stream\fC [private]\fP"
+our stream's reference used to write into the file 
+.SS "std::stack<std::string> XmlWrite::m_tags\fC [private]\fP"
+tags' stack (LIFO) used to open/close tags 
+.SS "std::ostringstream XmlWrite::m_tagStream\fC [private]\fP"
+current tag/attribute stored in our instance 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

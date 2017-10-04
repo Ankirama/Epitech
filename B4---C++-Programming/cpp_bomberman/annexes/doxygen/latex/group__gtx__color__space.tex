@@ -1,0 +1,94 @@
+\hypertarget{group__gtx__color__space}{}\section{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space}
+\label{group__gtx__color__space}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space}}
+
+
+Related to R\+G\+B to H\+S\+V conversions and operations.  
+
+
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tvec3$<$ val\+Type $>$ \hyperlink{group__gtx__color__space_ga0106a26e8ceac4e83b428979eb70c6e5}{glm\+::rgb\+Color} (detail\+::tvec3$<$ val\+Type $>$ const \&hsv\+Value)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tvec3$<$ val\+Type $>$ \hyperlink{group__gtx__color__space_ga434478ff2e692c2bc9fbe4d3a05570ea}{glm\+::hsv\+Color} (detail\+::tvec3$<$ val\+Type $>$ const \&rgb\+Value)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tmat4x4$<$ val\+Type $>$ \hyperlink{group__gtx__color__space_ga81289d2f4a42f70d5cf66dbb6e75dc97}{glm\+::saturation} (val\+Type const s)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tvec3$<$ val\+Type $>$ \hyperlink{group__gtx__color__space_ga54a479f39450ab45417f5d48abee5fb2}{glm\+::saturation} (val\+Type const s, detail\+::tvec3$<$ val\+Type $>$ const \&color)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\detail\+::tvec4$<$ val\+Type $>$ \hyperlink{group__gtx__color__space_ga2bdc5f77884c822b0dbc92d74a649d87}{glm\+::saturation} (val\+Type const s, detail\+::tvec4$<$ val\+Type $>$ const \&color)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\val\+Type \hyperlink{group__gtx__color__space_gaf9db3b89515c57d9d955b70a97c10f91}{glm\+::luminosity} (detail\+::tvec3$<$ val\+Type $>$ const \&color)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Related to R\+G\+B to H\+S\+V conversions and operations. 
+
+$<$\hyperlink{color__space_8hpp}{glm/gtx/color\+\_\+space.\+hpp}$>$ need to be included to use these functionalities. 
+
+\subsection{Function Documentation}
+\hypertarget{group__gtx__color__space_ga434478ff2e692c2bc9fbe4d3a05570ea}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space}!hsv\+Color@{hsv\+Color}}
+\index{hsv\+Color@{hsv\+Color}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space}}
+\subsubsection[{hsv\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tvec3$<$val\+Type$>$ glm\+::hsv\+Color (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec3}$<$ val\+Type $>$ const \&}]{rgb\+Value}
+\end{DoxyParamCaption}
+)}\label{group__gtx__color__space_ga434478ff2e692c2bc9fbe4d3a05570ea}
+Converts a color from R\+G\+B color space to its color in H\+S\+V color space. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__color__space}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space} 
+\end{DoxySeeAlso}
+\hypertarget{group__gtx__color__space_gaf9db3b89515c57d9d955b70a97c10f91}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space}!luminosity@{luminosity}}
+\index{luminosity@{luminosity}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space}}
+\subsubsection[{luminosity}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ val\+Type glm\+::luminosity (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec3}$<$ val\+Type $>$ const \&}]{color}
+\end{DoxyParamCaption}
+)}\label{group__gtx__color__space_gaf9db3b89515c57d9d955b70a97c10f91}
+Compute color luminosity associating ratios (0.\+33, 0.\+59, 0.\+11) to R\+G\+B canals. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__color__space}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space} 
+\end{DoxySeeAlso}
+\hypertarget{group__gtx__color__space_ga0106a26e8ceac4e83b428979eb70c6e5}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space}!rgb\+Color@{rgb\+Color}}
+\index{rgb\+Color@{rgb\+Color}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space}}
+\subsubsection[{rgb\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tvec3$<$val\+Type$>$ glm\+::rgb\+Color (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec3}$<$ val\+Type $>$ const \&}]{hsv\+Value}
+\end{DoxyParamCaption}
+)}\label{group__gtx__color__space_ga0106a26e8ceac4e83b428979eb70c6e5}
+Converts a color from H\+S\+V color space to its color in R\+G\+B color space. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__color__space}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space} 
+\end{DoxySeeAlso}
+\hypertarget{group__gtx__color__space_ga81289d2f4a42f70d5cf66dbb6e75dc97}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space}!saturation@{saturation}}
+\index{saturation@{saturation}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space}}
+\subsubsection[{saturation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tmat4x4$<$val\+Type$>$ glm\+::saturation (
+\begin{DoxyParamCaption}
+\item[{val\+Type const}]{s}
+\end{DoxyParamCaption}
+)}\label{group__gtx__color__space_ga81289d2f4a42f70d5cf66dbb6e75dc97}
+Build a saturation matrix. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__color__space}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space} 
+\end{DoxySeeAlso}
+\hypertarget{group__gtx__color__space_ga54a479f39450ab45417f5d48abee5fb2}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space}!saturation@{saturation}}
+\index{saturation@{saturation}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space}}
+\subsubsection[{saturation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tvec3$<$val\+Type$>$ glm\+::saturation (
+\begin{DoxyParamCaption}
+\item[{val\+Type const}]{s, }
+\item[{{\bf detail\+::tvec3}$<$ val\+Type $>$ const \&}]{color}
+\end{DoxyParamCaption}
+)}\label{group__gtx__color__space_ga54a479f39450ab45417f5d48abee5fb2}
+Modify the saturation of a color. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__color__space}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space} 
+\end{DoxySeeAlso}
+\hypertarget{group__gtx__color__space_ga2bdc5f77884c822b0dbc92d74a649d87}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space}!saturation@{saturation}}
+\index{saturation@{saturation}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space}}
+\subsubsection[{saturation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ detail\+::tvec4$<$val\+Type$>$ glm\+::saturation (
+\begin{DoxyParamCaption}
+\item[{val\+Type const}]{s, }
+\item[{{\bf detail\+::tvec4}$<$ val\+Type $>$ const \&}]{color}
+\end{DoxyParamCaption}
+)}\label{group__gtx__color__space_ga2bdc5f77884c822b0dbc92d74a649d87}
+Modify the saturation of a color. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__color__space}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+color\+\_\+space} 
+\end{DoxySeeAlso}

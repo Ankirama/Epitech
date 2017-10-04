@@ -1,0 +1,1 @@
+g++ map.cpp -lsfml-graphics -lsfml-system -lsfml-window

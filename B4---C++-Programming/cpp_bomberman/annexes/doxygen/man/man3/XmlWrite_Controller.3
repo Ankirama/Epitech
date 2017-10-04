@@ -1,0 +1,130 @@
+.TH "XmlWrite::Controller" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+XmlWrite::Controller \- Internal class to help \fBXmlWrite\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <XmlWrite\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBController\fP (const t_typeField type, const std::string &str='')"
+.br
+.RI "\fI\fBController\fP's constructor\&. \fP"
+.ti -1c
+.RI "\fBController\fP (const \fBController\fP &copy)"
+.br
+.RI "\fI\fBController\fP's constructor by copy\&. \fP"
+.ti -1c
+.RI "const std::string & \fBgetStr\fP () const "
+.br
+.RI "\fIgetter for str \fP"
+.ti -1c
+.RI "t_typeField \fBgetField\fP () const "
+.br
+.RI "\fIgetter for field type \fP"
+.ti -1c
+.RI "\fB~Controller\fP ()"
+.br
+.RI "\fI\fBController\fP's destructor\&. \fP"
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBController\fP & \fBoperator=\fP (const \fBController\fP &)"
+.br
+.RI "\fIprivate = operator to unable it \fP"
+.ti -1c
+.RI "\fBController\fP ()"
+.br
+.RI "\fI\fBController\fP's default constructor\&. \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "t_typeField \fBm_typeField\fP"
+.br
+.ti -1c
+.RI "std::string \fBm_str\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Internal class to help \fBXmlWrite\fP\&. 
+
+It will allow us to get some infos like field type or current string 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "XmlWrite::Controller::Controller (const t_typeField type, const std::string & str = \fC''\fP)\fC [inline]\fP"
+
+.PP
+\fBController\fP's constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItype\fP field type like DATA, TAG_START etc 
+.br
+\fIstr\fP Not necessary but useful to define a name 
+.RE
+.PP
+
+.SS "XmlWrite::Controller::Controller (const \fBController\fP & copy)\fC [inline]\fP"
+
+.PP
+\fBController\fP's constructor by copy\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcopy\fP \fBController\fP's reference we will copy 
+.RE
+.PP
+
+.SS "XmlWrite::Controller::Controller ()\fC [private]\fP"
+
+.PP
+\fBController\fP's default constructor\&. We don't need a default constructor so it's private 
+.SH "Member Function Documentation"
+.PP 
+.SS "t_typeField XmlWrite::Controller::getField () const\fC [inline]\fP"
+
+.PP
+getter for field type 
+.PP
+\fBReturns:\fP
+.RS 4
+Get the field type stored into the instance 
+.RE
+.PP
+
+.SS "const std::string& XmlWrite::Controller::getStr () const\fC [inline]\fP"
+
+.PP
+getter for str 
+.PP
+\fBReturns:\fP
+.RS 4
+Get the str's reference stored into the instance 
+.RE
+.PP
+
+.SS "\fBController\fP& XmlWrite::Controller::operator= (const \fBController\fP &)\fC [private]\fP"
+
+.PP
+private = operator to unable it Unused and undefined\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "std::string XmlWrite::Controller::m_str\fC [private]\fP"
+string for our controller 
+.SS "t_typeField XmlWrite::Controller::m_typeField\fC [private]\fP"
+field type for our controller 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

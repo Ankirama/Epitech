@@ -1,0 +1,13 @@
+[ 0 0 0 0 0 0 ]
+[ 0 0 0 0 0 0 ]
+[ 1 1 0 0 0 0 ]
+[ 0 0 1 0 0 1 ]
+[ 0 0 0 0 0 0 ]
+[ 0 1 0 0 1 0 ]
+
+fc.c -> fc.o -> tty
+fc.h -> fc.o -> tty
+fc.h -> tty.o -> tty
+fc.o -> tty
+tty.c -> tty.o -> tty
+tty.o -> tty

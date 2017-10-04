@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Conception &mdash; simpleCount 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="simpleCount 1.0 documentation" href="index.html"/>
+        <link rel="prev" title="Design Choices" href="design_choices.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> simpleCount
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="choice_of_components.html">Choice Of Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_choices.html">Design Choices</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Conception</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reverse-polish-notation">Reverse Polish Notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#model-pattern-view-controller-mvc">Model Pattern View Controller (MVC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#observer-observable-pattern">Observer / Observable Pattern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generic-listener">Generic Listener</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">simpleCount</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Conception</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/conception.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="conception">
+<h1>Conception<a class="headerlink" href="#conception" title="Permalink to this headline">¶</a></h1>
+<p>We did some improvments and use some pattern to try to create a nice calculator.</p>
+<p>To understand how each class works, we created a javadoc with each function and variable commented.</p>
+<ul class="simple">
+<li><a class="reference internal" href="#rpn"><span class="std std-ref">Reverse Polish Notation</span></a></li>
+<li><a class="reference internal" href="#pattern-mvc"><span class="std std-ref">Model Pattern View Controller (MVC)</span></a></li>
+<li><a class="reference internal" href="#pattern-observer"><span class="std std-ref">Observer / Observable Pattern</span></a></li>
+<li><a class="reference internal" href="#generic-listener"><span class="std std-ref">Generic Listener</span></a></li>
+</ul>
+<div class="section" id="reverse-polish-notation">
+<span id="rpn"></span><h2>Reverse Polish Notation<a class="headerlink" href="#reverse-polish-notation" title="Permalink to this headline">¶</a></h2>
+<p>The windows Calculator can evaluate priority opertaor except bracket, so we started our project with the same vision:
+If the user presses 4 + 3 * 5 then we will do</p>
+<div class="highlight-python"><div class="highlight"><pre>4 + 3 = 7
+7 * 5 = 35
+result: 35
+</pre></div>
+</div>
+<p>It was our first approach, very basic.
+After some coffees we changed our mind: a <strong>*RPN*</strong> will carry this calculator !</p>
+<p>To realise it we had to do <em>two</em> things:</p>
+<ul class="simple">
+<li>Convert infix notation to <a class="reference external" href="https://en.wikipedia.org/wiki/Shunting-yard_algorithm">Shunting Yard</a></li>
+<li>Calculate the result from Shunting Yard notation</li>
+</ul>
+<p>The &#8216;hardest&#8217; part of this RPN was to translate infix notation on the fly: every time the user presses a button, we will convert it in the Shunting yard notation.</p>
+<p>After the creation of our array with all tokens we were ready to convert it !</p>
+<p>We encountered a problem: exp(ln(x)) was not equal to x.
+Indeed, our RPN calculate step by step and it was a mistake!</p>
+</div>
+<div class="section" id="model-pattern-view-controller-mvc">
+<span id="pattern-mvc"></span><h2>Model Pattern View Controller (MVC)<a class="headerlink" href="#model-pattern-view-controller-mvc" title="Permalink to this headline">¶</a></h2>
+<p>We created a first version of our simpleCount in one class; it was so disgusting that we decided to change it and we had to structure our code.
+We used a <strong>*MVC pattern*</strong>, an amazing pattern who splits each logical part in a category:</p>
+<ul class="simple">
+<li>GUI in the <em>View</em> part</li>
+<li>Data / calculs in the <em>Model</em> part</li>
+<li>Allow GUI and Data to communicate: the <em>Controller</em> part</li>
+</ul>
+</div>
+<div class="section" id="observer-observable-pattern">
+<span id="pattern-observer"></span><h2>Observer / Observable Pattern<a class="headerlink" href="#observer-observable-pattern" title="Permalink to this headline">¶</a></h2>
+<p>We had a problem: how the view can know when it has to update some data from model? With asynchronous check like every XX miliseconds?
+It was a bad idea, so we used an other pattern with MVC pattern: Observer pattern.</p>
+<p>It allow 2 classes to communicate and notify the other one when there are some updates! It was very useful.</p>
+</div>
+<div class="section" id="generic-listener">
+<span id="id1"></span><h2>Generic Listener<a class="headerlink" href="#generic-listener" title="Permalink to this headline">¶</a></h2>
+<p>As you know, each button can trigger an action when we press it. To do it, we have to set for each button an <em>ActionListener</em>, the class or a child class.</p>
+<p>We created a generic child class that allow us to use it and create it with any kind of object and purpose.
+To do it, one word : <strong>*reflexivity*</strong>.
+With the reflexivity we can invoke any method from an object only with its name and its arguments, it&#8217;s amazing !</p>
+<p>It could be a little bit tricky to understand how to use the reflexivity, but its power is incredible! For this project, we just use it a little bit, without any power.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="design_choices.html" class="btn btn-neutral" title="Design Choices" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, mar_b.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

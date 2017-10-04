@@ -1,0 +1,155 @@
+.TH "lib/gdl/includes/glm/gtc/swizzle.hpp" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/glm/gtc/swizzle.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./glm\&.hpp'\fP
+.br
+\fC#include '\&.\&./gtc/type_precision\&.hpp'\fP
+.br
+\fC#include 'swizzle\&.inl'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGLM_GTC_swizzle\fP   GLM_VERSION"
+.br
+.ti -1c
+.RI "#define \fBstatic_swizzle1_const\fP(TYPE,  SIZE)"
+.br
+.ti -1c
+.RI "#define \fBstatic_swizzle1_ref\fP(TYPE,  SIZE)"
+.br
+.ti -1c
+.RI "#define \fBstatic_swizzle2_const\fP(TYPE,  SIZE)"
+.br
+.ti -1c
+.RI "#define \fBstatic_swizzle3_const\fP(TYPE,  SIZE)"
+.br
+.ti -1c
+.RI "#define \fBstatic_swizzle4_const\fP(TYPE,  SIZE)"
+.br
+.ti -1c
+.RI "#define \fBstatic_swizzle2_ref\fP(TYPE,  SIZE)"
+.br
+.ti -1c
+.RI "#define \fBstatic_swizzle3_ref\fP(TYPE,  SIZE)"
+.br
+.ti -1c
+.RI "#define \fBstatic_swizzle4_ref\fP(TYPE,  SIZE)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> T const & \fBglm::swizzle\fP (vecType< T > const &v, comp x)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> detail::tvec2< T > const & \fBglm::swizzle\fP (vecType< T > const &v, comp x, comp y)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> detail::tvec3< T > const & \fBglm::swizzle\fP (vecType< T > const &v, comp x, comp y, comp z)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> detail::tvec4< T > const & \fBglm::swizzle\fP (vecType< T > const &v, comp x, comp y, comp z, comp w)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> T & \fBglm::swizzle\fP (vecType< T > &v, comp x)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> detail::tref2< T > \fBglm::swizzle\fP (vecType< T > &v, comp x, comp y)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> detail::tref3< T > \fBglm::swizzle\fP (vecType< T > &v, comp x, comp y, comp z)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> detail::tref4< T > \fBglm::swizzle\fP (vecType< T > &v, comp x, comp y, comp z, comp w)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+OpenGL Mathematics (glm\&.g-truc\&.net)
+.PP
+Copyright (c) 2005 - 2013 G-Truc Creation (www\&.g-truc\&.net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software\&.
+.PP
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\&. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE\&.
+.PP
+\fBGLM_GTC_swizzle\fP
+.PP
+\fBDate:\fP
+.RS 4
+2010-02-20 / 2011-06-05 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christophe Riccio
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM Core\fP (dependence) 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define static_swizzle2_const(TYPE, SIZE)"
+\fBValue:\fP
+.PP
+.nf
+template <comp x, comp y>                                               \
+        GLM_FUNC_QUALIFIER detail::tvec2<TYPE> swizzle(detail::tvec##SIZE<TYPE> const & v)  \
+        {return detail::tvec2<TYPE>(v[x], v[y]);}
+.fi
+.SS "#define static_swizzle2_ref(TYPE, SIZE)"
+\fBValue:\fP
+.PP
+.nf
+template <glm::comp x, glm::comp y> \
+        GLM_FUNC_QUALIFIER glm::detail::tref2<TYPE> swizzle(detail::tvec##SIZE<TYPE> & v) \
+        {return glm::detail::tref2<TYPE>(v[x], v[y]);}
+.fi
+.SS "#define static_swizzle3_const(TYPE, SIZE)"
+\fBValue:\fP
+.PP
+.nf
+template <comp x, comp y, comp z>                                      \
+        GLM_FUNC_QUALIFIER detail::tvec3<TYPE> swizzle(detail::tvec##SIZE<TYPE> const & v)  \
+        {return detail::tvec3<TYPE>(v[x], v[y], v[z]);}
+.fi
+.SS "#define static_swizzle3_ref(TYPE, SIZE)"
+\fBValue:\fP
+.PP
+.nf
+template <glm::comp x, glm::comp y, glm::comp z> \
+        GLM_FUNC_QUALIFIER glm::detail::tref3<TYPE> swizzle(detail::tvec##SIZE<TYPE> & v) \
+        {return glm::detail::tref3<TYPE>(v[x], v[y], v[z]);}
+.fi
+.SS "#define static_swizzle4_const(TYPE, SIZE)"
+\fBValue:\fP
+.PP
+.nf
+template <comp x, comp y, comp z, comp w>                              \
+        GLM_FUNC_QUALIFIER detail::tvec4<TYPE> swizzle(detail::tvec##SIZE<TYPE> const & v)  \
+        {return detail::tvec4<TYPE>(v[x], v[y], v[z], v[w]);}
+.fi
+.SS "#define static_swizzle4_ref(TYPE, SIZE)"
+\fBValue:\fP
+.PP
+.nf
+template <glm::comp x, glm::comp y, glm::comp z, glm::comp w> \
+        GLM_FUNC_QUALIFIER glm::detail::tref4<TYPE> swizzle(detail::tvec##SIZE<TYPE> & v) \
+        {return glm::detail::tref4<TYPE>(v[x], v[y], v[z], v[w]);}
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

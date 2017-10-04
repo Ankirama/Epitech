@@ -1,0 +1,18 @@
+digraph "glm::areOrthogonal"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::areOrthogonal",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="glm::abs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#gaea946f96ec1df259802effe9f532e1c1"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="glm::dot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__geometric.html#ga05244a4e222740e5e38abe91fc51df79"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="glm::max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#gaa228561a9da55898f8f72ad2403fafac"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="glm::epsilon",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__constants.html#gacb41049b8d22c8aa90e362b96c524feb"];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="glm::e",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__constants.html#gab83fb6de0f05d6c0d11bdf0479f8319e"];
+}

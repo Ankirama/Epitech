@@ -1,0 +1,55 @@
+.TH "SDL_MessageBoxData" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_MessageBoxData \- MessageBox structure containing title, text, window, etc\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_messagebox\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBflags\fP"
+.br
+.ti -1c
+.RI "\fBSDL_Window\fP * \fBwindow\fP"
+.br
+.ti -1c
+.RI "const char * \fBtitle\fP"
+.br
+.ti -1c
+.RI "const char * \fBmessage\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBnumbuttons\fP"
+.br
+.ti -1c
+.RI "const \fBSDL_MessageBoxButtonData\fP * \fBbuttons\fP"
+.br
+.ti -1c
+.RI "const \fBSDL_MessageBoxColorScheme\fP * \fBcolorScheme\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+MessageBox structure containing title, text, window, etc\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "const \fBSDL_MessageBoxColorScheme\fP* SDL_MessageBoxData::colorScheme"
+\fBSDL_MessageBoxColorScheme\fP, can be NULL to use system settings 
+.SS "\fBUint32\fP SDL_MessageBoxData::flags"
+::SDL_MessageBoxFlags 
+.SS "const char* SDL_MessageBoxData::message"
+UTF-8 message text 
+.SS "const char* SDL_MessageBoxData::title"
+UTF-8 title 
+.SS "\fBSDL_Window\fP* SDL_MessageBoxData::window"
+Parent window, can be NULL 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

@@ -1,0 +1,7 @@
+1°) Est-ce que -c indique le nombre max de joueur dans une équipe (via fork, etc ...) ?
+2°) Dans exemple le serveur envoit la dimension du monde, pourquoi ?
+
+- On peut rajouter des pierres / nourriture sur le monde (par rapport à la taille de la map)
+- fork => +1 à l'issue de l'éclosion de l'oeuf
+- possibilité de faire une map pour l'ia (elle se souvient de ce qu'elle a vu)
+- nombre total de pierres / bouffer au niveau du serveur pour en faire apparaître ?

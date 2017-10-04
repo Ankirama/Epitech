@@ -1,0 +1,41 @@
+.TH "Button" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Button \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBButton\fP (const std::string &, const std::string &, const int, const int, void(*func)(\fBGameEngine\fP *))"
+.br
+.ti -1c
+.RI "void \fBInit\fP (const float, const float, const float)"
+.br
+.ti -1c
+.RI "void \fBDraw\fP (gdl::BasicShader shader, const e_Etat, \fBGameEngine\fP *)"
+.br
+.ti -1c
+.RI "int \fBgetY\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetY\fP (const int, const int)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< \fBObject2D\fP * > \fBm_container\fP"
+.br
+.ti -1c
+.RI "void(* \fBm_func\fP )(\fBGameEngine\fP *)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

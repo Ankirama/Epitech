@@ -1,0 +1,206 @@
+\hypertarget{group__core__func__matrix}{}\section{Matrix functions}
+\label{group__core__func__matrix}\index{Matrix functions@{Matrix functions}}
+Collaboration diagram for Matrix functions\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename mat\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L mat\+Type \hyperlink{group__core__func__matrix_ga171fac0b8564b1516930bb134fd297b8}{glm\+::matrix\+Comp\+Mult} (mat\+Type const \&x, mat\+Type const \&y)
+\item 
+{\footnotesize template$<$typename vec\+Type , typename mat\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L mat\+Type \hyperlink{group__core__func__matrix_ga15f67b26edfad8f08aa15048624d8b13}{glm\+::outer\+Product} (vec\+Type const \&c, vec\+Type const \&r)
+\item 
+{\footnotesize template$<$typename mat\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L mat\+Type\+::transpose\+\_\+type \hyperlink{group__core__func__matrix_gabe31c56ee9cec899aff9b2a5c01c3c28}{glm\+::transpose} (mat\+Type const \&x)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L detail\+::tmat2x2$<$ val\+Type $>$\+::value\+\_\+type \hyperlink{group__core__func__matrix_gada4f5f54657a819995c44e42eb3ed104}{glm\+::determinant} (detail\+::tmat2x2$<$ val\+Type $>$ const \&m)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L detail\+::tmat3x3$<$ val\+Type $>$\+::value\+\_\+type \hyperlink{group__core__func__matrix_gabc36bd87dfd1e89fb38a39316fb2ff1a}{glm\+::determinant} (detail\+::tmat3x3$<$ val\+Type $>$ const \&m)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L detail\+::tmat4x4$<$ val\+Type $>$\+::value\+\_\+type \hyperlink{group__core__func__matrix_gaa089890aa0f13996a0696a4334d99192}{glm\+::determinant} (detail\+::tmat4x4$<$ val\+Type $>$ const \&m)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L detail\+::tmat2x2$<$ val\+Type $>$ \hyperlink{group__core__func__matrix_gad455e8668bf4b20ba6672da31a2ce212}{glm\+::inverse} (detail\+::tmat2x2$<$ val\+Type $>$ const \&m)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L detail\+::tmat3x3$<$ val\+Type $>$ \hyperlink{group__core__func__matrix_gabaf49aa7a4181401e01f45078650f089}{glm\+::inverse} (detail\+::tmat3x3$<$ val\+Type $>$ const \&m)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L detail\+::tmat4x4$<$ val\+Type $>$ \hyperlink{group__core__func__matrix_gabe0ade5a6165299730a498c181c98a9c}{glm\+::inverse} (detail\+::tmat4x4$<$ val\+Type $>$ const \&m)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+For each of the following built-\/in matrix functions, there is both a single-\/precision floating point version, where all arguments and return values are single precision, and a double-\/precision floating version, where all arguments and return values are double precision. Only the single-\/precision floating point version is shown. 
+
+\subsection{Function Documentation}
+\hypertarget{group__core__func__matrix_gada4f5f54657a819995c44e42eb3ed104}{}\index{Matrix functions@{Matrix functions}!determinant@{determinant}}
+\index{determinant@{determinant}!Matrix functions@{Matrix functions}}
+\subsubsection[{determinant}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L detail\+::tmat2x2$<$val\+Type$>$\+::value\+\_\+type glm\+::determinant (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat2x2}$<$ val\+Type $>$ const \&}]{m}
+\end{DoxyParamCaption}
+)}\label{group__core__func__matrix_gada4f5f54657a819995c44e42eb3ed104}
+Return the determinant of a mat2 matrix.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em val\+Type} & Floating-\/point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/determinant.xml}{\tt G\+L\+S\+L determinant man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+6 Matrix Functions} 
+\end{DoxySeeAlso}
+\hypertarget{group__core__func__matrix_gabc36bd87dfd1e89fb38a39316fb2ff1a}{}\index{Matrix functions@{Matrix functions}!determinant@{determinant}}
+\index{determinant@{determinant}!Matrix functions@{Matrix functions}}
+\subsubsection[{determinant}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L detail\+::tmat3x3$<$val\+Type$>$\+::value\+\_\+type glm\+::determinant (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat3x3}$<$ val\+Type $>$ const \&}]{m}
+\end{DoxyParamCaption}
+)}\label{group__core__func__matrix_gabc36bd87dfd1e89fb38a39316fb2ff1a}
+Return the determinant of a mat3 matrix.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em val\+Type} & Floating-\/point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/determinant.xml}{\tt G\+L\+S\+L determinant man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+6 Matrix Functions} 
+\end{DoxySeeAlso}
+\hypertarget{group__core__func__matrix_gaa089890aa0f13996a0696a4334d99192}{}\index{Matrix functions@{Matrix functions}!determinant@{determinant}}
+\index{determinant@{determinant}!Matrix functions@{Matrix functions}}
+\subsubsection[{determinant}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L detail\+::tmat4x4$<$val\+Type$>$\+::value\+\_\+type glm\+::determinant (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat4x4}$<$ val\+Type $>$ const \&}]{m}
+\end{DoxyParamCaption}
+)}\label{group__core__func__matrix_gaa089890aa0f13996a0696a4334d99192}
+Return the determinant of a mat4 matrix.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em val\+Type} & Floating-\/point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/determinant.xml}{\tt G\+L\+S\+L determinant man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+6 Matrix Functions} 
+\end{DoxySeeAlso}
+\hypertarget{group__core__func__matrix_gad455e8668bf4b20ba6672da31a2ce212}{}\index{Matrix functions@{Matrix functions}!inverse@{inverse}}
+\index{inverse@{inverse}!Matrix functions@{Matrix functions}}
+\subsubsection[{inverse}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L detail\+::tmat2x2$<$val\+Type$>$ glm\+::inverse (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat2x2}$<$ val\+Type $>$ const \&}]{m}
+\end{DoxyParamCaption}
+)}\label{group__core__func__matrix_gad455e8668bf4b20ba6672da31a2ce212}
+Return the inverse of a mat2 matrix.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em val\+Type} & Floating-\/point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/inverse.xml}{\tt G\+L\+S\+L inverse man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+6 Matrix Functions} 
+\end{DoxySeeAlso}
+\hypertarget{group__core__func__matrix_gabaf49aa7a4181401e01f45078650f089}{}\index{Matrix functions@{Matrix functions}!inverse@{inverse}}
+\index{inverse@{inverse}!Matrix functions@{Matrix functions}}
+\subsubsection[{inverse}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L detail\+::tmat3x3$<$val\+Type$>$ glm\+::inverse (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat3x3}$<$ val\+Type $>$ const \&}]{m}
+\end{DoxyParamCaption}
+)}\label{group__core__func__matrix_gabaf49aa7a4181401e01f45078650f089}
+Return the inverse of a mat3 matrix.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em val\+Type} & Floating-\/point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/inverse.xml}{\tt G\+L\+S\+L inverse man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+6 Matrix Functions} 
+\end{DoxySeeAlso}
+\hypertarget{group__core__func__matrix_gabe0ade5a6165299730a498c181c98a9c}{}\index{Matrix functions@{Matrix functions}!inverse@{inverse}}
+\index{inverse@{inverse}!Matrix functions@{Matrix functions}}
+\subsubsection[{inverse}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L detail\+::tmat4x4$<$val\+Type$>$ glm\+::inverse (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat4x4}$<$ val\+Type $>$ const \&}]{m}
+\end{DoxyParamCaption}
+)}\label{group__core__func__matrix_gabe0ade5a6165299730a498c181c98a9c}
+Return the inverse of a mat4 matrix.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em val\+Type} & Floating-\/point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/inverse.xml}{\tt G\+L\+S\+L inverse man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+6 Matrix Functions} 
+\end{DoxySeeAlso}
+\hypertarget{group__core__func__matrix_ga171fac0b8564b1516930bb134fd297b8}{}\index{Matrix functions@{Matrix functions}!matrix\+Comp\+Mult@{matrix\+Comp\+Mult}}
+\index{matrix\+Comp\+Mult@{matrix\+Comp\+Mult}!Matrix functions@{Matrix functions}}
+\subsubsection[{matrix\+Comp\+Mult}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename mat\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L mat\+Type glm\+::matrix\+Comp\+Mult (
+\begin{DoxyParamCaption}
+\item[{mat\+Type const \&}]{x, }
+\item[{mat\+Type const \&}]{y}
+\end{DoxyParamCaption}
+)}\label{group__core__func__matrix_ga171fac0b8564b1516930bb134fd297b8}
+Multiply matrix x by matrix y component-\/wise, i.\+e., result\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} is the scalar product of x\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} and y\mbox{[}i\mbox{]}\mbox{[}j\mbox{]}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em mat\+Type} & Floating-\/point matrix types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/matrixCompMult.xml}{\tt G\+L\+S\+L matrix\+Comp\+Mult man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+6 Matrix Functions} 
+\end{DoxySeeAlso}
+\hypertarget{group__core__func__matrix_ga15f67b26edfad8f08aa15048624d8b13}{}\index{Matrix functions@{Matrix functions}!outer\+Product@{outer\+Product}}
+\index{outer\+Product@{outer\+Product}!Matrix functions@{Matrix functions}}
+\subsubsection[{outer\+Product}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename vec\+Type , typename mat\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L mat\+Type glm\+::outer\+Product (
+\begin{DoxyParamCaption}
+\item[{vec\+Type const \&}]{c, }
+\item[{vec\+Type const \&}]{r}
+\end{DoxyParamCaption}
+)}\label{group__core__func__matrix_ga15f67b26edfad8f08aa15048624d8b13}
+Treats the first parameter c as a column vector and the second parameter r as a row vector and does a linear algebraic matrix multiply c $\ast$ r.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em mat\+Type} & Floating-\/point matrix types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/outerProduct.xml}{\tt G\+L\+S\+L outer\+Product man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+6 Matrix Functions}
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000006}{Todo}]Clarify the declaration to specify that mat\+Type doesn\textquotesingle{}t have to be provided when used. \end{DoxyRefDesc}
+\hypertarget{group__core__func__matrix_gabe31c56ee9cec899aff9b2a5c01c3c28}{}\index{Matrix functions@{Matrix functions}!transpose@{transpose}}
+\index{transpose@{transpose}!Matrix functions@{Matrix functions}}
+\subsubsection[{transpose}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename mat\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L mat\+Type\+::transpose\+\_\+type glm\+::transpose (
+\begin{DoxyParamCaption}
+\item[{mat\+Type const \&}]{x}
+\end{DoxyParamCaption}
+)}\label{group__core__func__matrix_gabe31c56ee9cec899aff9b2a5c01c3c28}
+Returns the transposed matrix of x
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em mat\+Type} & Floating-\/point matrix types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/transpose.xml}{\tt G\+L\+S\+L transpose man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+6 Matrix Functions} 
+\end{DoxySeeAlso}

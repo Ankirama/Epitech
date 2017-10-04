@@ -1,0 +1,64 @@
+.TH "SDL_AudioSpec" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_AudioSpec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_audio\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBfreq\fP"
+.br
+.ti -1c
+.RI "\fBSDL_AudioFormat\fP \fBformat\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBchannels\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBsilence\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBsamples\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBpadding\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBsize\fP"
+.br
+.ti -1c
+.RI "SDL_AudioCallback \fBcallback\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBuserdata\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The calculated values in this structure are calculated by \fBSDL_OpenAudio()\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint8\fP SDL_AudioSpec::channels"
+Number of channels: 1 mono, 2 stereo 
+.SS "\fBSDL_AudioFormat\fP SDL_AudioSpec::format"
+Audio data format 
+.SS "\fBint\fP SDL_AudioSpec::freq"
+DSP frequency -- samples per second 
+.SS "\fBUint16\fP SDL_AudioSpec::padding"
+Necessary for some compile environments 
+.SS "\fBUint16\fP SDL_AudioSpec::samples"
+Audio buffer size in samples (power of 2) 
+.SS "\fBUint8\fP SDL_AudioSpec::silence"
+Audio buffer silence value (calculated) 
+.SS "\fBUint32\fP SDL_AudioSpec::size"
+Audio buffer size in bytes (calculated) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

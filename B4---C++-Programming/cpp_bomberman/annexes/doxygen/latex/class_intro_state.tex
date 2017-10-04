@@ -1,0 +1,518 @@
+\hypertarget{class_intro_state}{}\section{Intro\+State Class Reference}
+\label{class_intro_state}\index{Intro\+State@{Intro\+State}}
+
+
+First state of the bomberman.  
+
+
+
+
+{\ttfamily \#include $<$Intro\+State.\+hh$>$}
+
+
+
+Inheritance diagram for Intro\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_intro_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Intro\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{class_intro_state__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_intro_state_a7548d047181ad60ba46a2325d040d14e}{}enum \hyperlink{class_intro_state_a7548d047181ad60ba46a2325d040d14e}{e\+\_\+\+State} \{ \\*
+{\bfseries P\+L\+A\+Y}, 
+{\bfseries L\+O\+A\+D}, 
+{\bfseries S\+C\+O\+R\+E}, 
+{\bfseries O\+P\+T\+I\+O\+N}, 
+\\*
+{\bfseries Q\+U\+I\+T}
+ \}\label{class_intro_state_a7548d047181ad60ba46a2325d040d14e}
+
+\begin{DoxyCompactList}\small\item\em Choose the right action to do. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_intro_state_a88661f54a40cf3d1e3785b3eca900c9a}{Init} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)
+\begin{DoxyCompactList}\small\item\em Init the state. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_ad723da4e2d552a3f719d2f69f3cce87d}{Cleanup} ()
+\begin{DoxyCompactList}\small\item\em Cleanup the state. \end{DoxyCompactList}\item 
+\hypertarget{class_intro_state_a0d2a5b085e920e206c47f253bdbfc510}{}void \hyperlink{class_intro_state_a0d2a5b085e920e206c47f253bdbfc510}{Pause} ()\label{class_intro_state_a0d2a5b085e920e206c47f253bdbfc510}
+
+\begin{DoxyCompactList}\small\item\em Pause. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_ac82ca5f59f2e0fd8bcbd9334046f6b50}{Resume} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)
+\begin{DoxyCompactList}\small\item\em Resume. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_a4071906c4ca7d81687e2b90b7f36a664}{Update} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)
+\begin{DoxyCompactList}\small\item\em Update. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_a7509d07478cfd23c5180db2831908ca9}{Draw} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)
+\begin{DoxyCompactList}\small\item\em Draw the state. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_aeed77b6e9a15471c1110c47b0a854fe1}{Up} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)
+\begin{DoxyCompactList}\small\item\em Key Up. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_a812834ff23fc358fef6ce2bd554d9386}{Down} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)
+\begin{DoxyCompactList}\small\item\em Key Down. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_a6f39be642d7ae2f714262246a7801989}{Enter} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)
+\begin{DoxyCompactList}\small\item\em Key Enter. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_a7ede5ff0f84054f234efb566a0175aa5}{Quit} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)
+\begin{DoxyCompactList}\small\item\em Key Escape. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_ae7aa16b3aeaf7a350778db783323151d}{Left} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)
+\begin{DoxyCompactList}\small\item\em Key Left. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_ac488a07c4b0553f3b350eea5cdc62a04}{Right} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)
+\begin{DoxyCompactList}\small\item\em Key Right. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_a35e3deb07bf99043dae0687b6080fc0e}{key\+A} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)
+\begin{DoxyCompactList}\small\item\em Key A. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_a870ebe1a0d0e9ecfaf721ec2508ece93}{key\+B} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)
+\begin{DoxyCompactList}\small\item\em Key B. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_a5e145ec83bb5e65def711e7c3c24ddda}{style\+Draw} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$, int, std\+::vector$<$ \hyperlink{class_button}{Button} $\ast$ $>$\+::iterator)
+\begin{DoxyCompactList}\small\item\em Effect of the function style. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_a3904ef31d1fdc22eb85d6e5eb8903822}{Style} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)
+\begin{DoxyCompactList}\small\item\em Do an effect when we push a button. \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_a1a0660cb7d07eea4c54c12d512ee1595}{mod\+Key} (const int, const int)
+\begin{DoxyCompactList}\small\item\em For change a key, from the map of key. \end{DoxyCompactList}\item 
+\hypertarget{class_intro_state_a9cfb285246e88c904d085cc4f94d1e96}{}std\+::vector$<$ \hyperlink{class_button}{Button} $\ast$ $>$\+::iterator \& \hyperlink{class_intro_state_a9cfb285246e88c904d085cc4f94d1e96}{get\+Iterator} ()\label{class_intro_state_a9cfb285246e88c904d085cc4f94d1e96}
+
+\begin{DoxyCompactList}\small\item\em get the iterator button \end{DoxyCompactList}\item 
+\hypertarget{class_intro_state_a5e041267d3d4976648a1bd607854ee2c}{}std\+::vector$<$ \hyperlink{class_button}{Button} $\ast$ $>$ \& \hyperlink{class_intro_state_a5e041267d3d4976648a1bd607854ee2c}{get\+Vector} ()\label{class_intro_state_a5e041267d3d4976648a1bd607854ee2c}
+
+\begin{DoxyCompactList}\small\item\em get the vector button \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_a44e1f222e5870fe447529ff4228acda8}{set\+Released} (bool)
+\begin{DoxyCompactList}\small\item\em set the booleen m\+\_\+released \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_intro_state_ad9c1c5fda023a9568d9798ef4101d1b9}{}static \hyperlink{class_intro_state}{Intro\+State} $\ast$ \hyperlink{class_intro_state_ad9c1c5fda023a9568d9798ef4101d1b9}{Instance} ()\label{class_intro_state_ad9c1c5fda023a9568d9798ef4101d1b9}
+
+\begin{DoxyCompactList}\small\item\em Singleton of Introstate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_intro_state_a80297b0bfe88e4f6577b7eb9c6ce2156}{}typedef void(Intro\+State\+::$\ast$ {\bfseries m\+\_\+tab\+Fun}) (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)\label{class_intro_state_a80297b0bfe88e4f6577b7eb9c6ce2156}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_intro_state_a0148b4872bfee0d3cc6631016ba4e205}{add\+Key} (const int, m\+\_\+tab\+Fun)
+\begin{DoxyCompactList}\small\item\em add a key to the map \end{DoxyCompactList}\item 
+void \hyperlink{class_intro_state_a99e864ea5ad8b3a4f311fe63caf5e9e6}{del\+Key} (const int)
+\begin{DoxyCompactList}\small\item\em del a key to the map \end{DoxyCompactList}\item 
+\hypertarget{class_intro_state_af09b259f34fcfca35fd82f9618cbb0ed}{}void \hyperlink{class_intro_state_af09b259f34fcfca35fd82f9618cbb0ed}{del\+All\+Key} ()\label{class_intro_state_af09b259f34fcfca35fd82f9618cbb0ed}
+
+\begin{DoxyCompactList}\small\item\em del all the key of the map \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ int, m\+\_\+tab\+Fun $>$ \hyperlink{class_intro_state_a4c23780e73716669d319929e8906c598}{m\+\_\+map}
+\item 
+std\+::vector$<$ \hyperlink{class_button}{Button} $\ast$ $>$\+::iterator \hyperlink{class_intro_state_aff5068e91ae89f0c123dcfb3b269f5c7}{m\+\_\+it}
+\item 
+std\+::vector$<$ \hyperlink{class_button}{Button} $\ast$ $>$ \hyperlink{class_intro_state_a0b10257f3ddc662e0476bfd30def50e4}{m\+\_\+button}
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{class_intro_state_a9b6a7c6121418d2659ec79f600385b8f}{m\+\_\+easter}
+\item 
+std\+::vector$<$ std\+::string $>$\+::iterator \hyperlink{class_intro_state_a9a4157cf8aa4a5ce48b782b7f4a33af9}{m\+\_\+easter\+It}
+\item 
+\hyperlink{class_object2_d}{Object2\+D} $\ast$ \hyperlink{class_intro_state_ad64626c0d7654481449fec2f1d07c7ed}{m\+\_\+background}
+\item 
+\hyperlink{class_object2_d}{Object2\+D} $\ast$ \hyperlink{class_intro_state_abf443c0163efe764d7f8961e2816b73d}{m\+\_\+bomb\+\_\+left}
+\item 
+bool \hyperlink{class_intro_state_a746908a39dc856517869254b7d0a4114}{m\+\_\+released}
+\item 
+\hyperlink{class_generate_text}{Generate\+Text} $\ast$ \hyperlink{class_intro_state_ae3f313128aee34075d81f0a0faee7470}{m\+\_\+text}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_intro_state}{Intro\+State} \hyperlink{class_intro_state_a43ad1f560360ce4e465b059697193aa5}{m\+\_\+\+Intro\+State}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+First state of the bomberman. 
+
+Function for display the state and manage the state 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_intro_state_a0148b4872bfee0d3cc6631016ba4e205}{}\index{Intro\+State@{Intro\+State}!add\+Key@{add\+Key}}
+\index{add\+Key@{add\+Key}!Intro\+State@{Intro\+State}}
+\subsubsection[{add\+Key}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::add\+Key (
+\begin{DoxyParamCaption}
+\item[{const int}]{, }
+\item[{m\+\_\+tab\+Fun}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_intro_state_a0148b4872bfee0d3cc6631016ba4e205}
+
+
+add a key to the map 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & \\
+\hline
+{\em Function} & associate to the key \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_intro_state_ad723da4e2d552a3f719d2f69f3cce87d}{}\index{Intro\+State@{Intro\+State}!Cleanup@{Cleanup}}
+\index{Cleanup@{Cleanup}!Intro\+State@{Intro\+State}}
+\subsubsection[{Cleanup}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::\+Cleanup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_intro_state_ad723da4e2d552a3f719d2f69f3cce87d}
+
+
+Cleanup the state. 
+
+Clean the state, but don\textquotesingle{}t delete his element. 
+
+Implements \hyperlink{class_i_game_state}{I\+Game\+State}.
+
+\hypertarget{class_intro_state_a99e864ea5ad8b3a4f311fe63caf5e9e6}{}\index{Intro\+State@{Intro\+State}!del\+Key@{del\+Key}}
+\index{del\+Key@{del\+Key}!Intro\+State@{Intro\+State}}
+\subsubsection[{del\+Key}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::del\+Key (
+\begin{DoxyParamCaption}
+\item[{const int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_intro_state_a99e864ea5ad8b3a4f311fe63caf5e9e6}
+
+
+del a key to the map 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & to delete \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_intro_state_a812834ff23fc358fef6ce2bd554d9386}{}\index{Intro\+State@{Intro\+State}!Down@{Down}}
+\index{Down@{Down}!Intro\+State@{Intro\+State}}
+\subsubsection[{Down}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::\+Down (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Engine} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_intro_state_a812834ff23fc358fef6ce2bd554d9386}
+
+
+Key Down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & \hyperlink{class_game_engine}{Game\+Engine}, motor of the game \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_intro_state_a7509d07478cfd23c5180db2831908ca9}{}\index{Intro\+State@{Intro\+State}!Draw@{Draw}}
+\index{Draw@{Draw}!Intro\+State@{Intro\+State}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::\+Draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Engine} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_intro_state_a7509d07478cfd23c5180db2831908ca9}
+
+
+Draw the state. 
+
+Draw background, button... 
+
+Implements \hyperlink{class_i_game_state}{I\+Game\+State}.
+
+\hypertarget{class_intro_state_a6f39be642d7ae2f714262246a7801989}{}\index{Intro\+State@{Intro\+State}!Enter@{Enter}}
+\index{Enter@{Enter}!Intro\+State@{Intro\+State}}
+\subsubsection[{Enter}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::\+Enter (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Engine} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_intro_state_a6f39be642d7ae2f714262246a7801989}
+
+
+Key Enter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & \hyperlink{class_game_engine}{Game\+Engine}, motor of the game \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_intro_state_a88661f54a40cf3d1e3785b3eca900c9a}{}\index{Intro\+State@{Intro\+State}!Init@{Init}}
+\index{Init@{Init}!Intro\+State@{Intro\+State}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Engine} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_intro_state_a88661f54a40cf3d1e3785b3eca900c9a}
+
+
+Init the state. 
+
+Load the background, and other image off the state
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & \hyperlink{class_game_engine}{Game\+Engine}, motor of the game \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_game_state}{I\+Game\+State}.
+
+\hypertarget{class_intro_state_a35e3deb07bf99043dae0687b6080fc0e}{}\index{Intro\+State@{Intro\+State}!key\+A@{key\+A}}
+\index{key\+A@{key\+A}!Intro\+State@{Intro\+State}}
+\subsubsection[{key\+A}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::key\+A (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Engine} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_intro_state_a35e3deb07bf99043dae0687b6080fc0e}
+
+
+Key A. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & \hyperlink{class_game_engine}{Game\+Engine}, motor of the game \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_intro_state_a870ebe1a0d0e9ecfaf721ec2508ece93}{}\index{Intro\+State@{Intro\+State}!key\+B@{key\+B}}
+\index{key\+B@{key\+B}!Intro\+State@{Intro\+State}}
+\subsubsection[{key\+B}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::key\+B (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Engine} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_intro_state_a870ebe1a0d0e9ecfaf721ec2508ece93}
+
+
+Key B. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & \hyperlink{class_game_engine}{Game\+Engine}, motor of the game \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_intro_state_ae7aa16b3aeaf7a350778db783323151d}{}\index{Intro\+State@{Intro\+State}!Left@{Left}}
+\index{Left@{Left}!Intro\+State@{Intro\+State}}
+\subsubsection[{Left}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::\+Left (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Engine} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_intro_state_ae7aa16b3aeaf7a350778db783323151d}
+
+
+Key Left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & \hyperlink{class_game_engine}{Game\+Engine}, motor of the game \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_intro_state_a1a0660cb7d07eea4c54c12d512ee1595}{}\index{Intro\+State@{Intro\+State}!mod\+Key@{mod\+Key}}
+\index{mod\+Key@{mod\+Key}!Intro\+State@{Intro\+State}}
+\subsubsection[{mod\+Key}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::mod\+Key (
+\begin{DoxyParamCaption}
+\item[{const int}]{, }
+\item[{const int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_intro_state_a1a0660cb7d07eea4c54c12d512ee1595}
+
+
+For change a key, from the map of key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & old key \\
+\hline
+{\em The} & new key \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_game_state}{I\+Game\+State}.
+
+\hypertarget{class_intro_state_a7ede5ff0f84054f234efb566a0175aa5}{}\index{Intro\+State@{Intro\+State}!Quit@{Quit}}
+\index{Quit@{Quit}!Intro\+State@{Intro\+State}}
+\subsubsection[{Quit}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::\+Quit (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Engine} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_intro_state_a7ede5ff0f84054f234efb566a0175aa5}
+
+
+Key Escape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & \hyperlink{class_game_engine}{Game\+Engine}, motor of the game \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_intro_state_ac82ca5f59f2e0fd8bcbd9334046f6b50}{}\index{Intro\+State@{Intro\+State}!Resume@{Resume}}
+\index{Resume@{Resume}!Intro\+State@{Intro\+State}}
+\subsubsection[{Resume}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::\+Resume (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Engine} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_intro_state_ac82ca5f59f2e0fd8bcbd9334046f6b50}
+
+
+Resume. 
+
+Resume the state after pause
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & \hyperlink{class_game_engine}{Game\+Engine}, motor of the game \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_game_state}{I\+Game\+State}.
+
+\hypertarget{class_intro_state_ac488a07c4b0553f3b350eea5cdc62a04}{}\index{Intro\+State@{Intro\+State}!Right@{Right}}
+\index{Right@{Right}!Intro\+State@{Intro\+State}}
+\subsubsection[{Right}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::\+Right (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Engine} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_intro_state_ac488a07c4b0553f3b350eea5cdc62a04}
+
+
+Key Right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & \hyperlink{class_game_engine}{Game\+Engine}, motor of the game \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_intro_state_a44e1f222e5870fe447529ff4228acda8}{}\index{Intro\+State@{Intro\+State}!set\+Released@{set\+Released}}
+\index{set\+Released@{set\+Released}!Intro\+State@{Intro\+State}}
+\subsubsection[{set\+Released}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::set\+Released (
+\begin{DoxyParamCaption}
+\item[{bool}]{}
+\end{DoxyParamCaption}
+)}\label{class_intro_state_a44e1f222e5870fe447529ff4228acda8}
+
+
+set the booleen m\+\_\+released 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New} & etat of m\+\_\+released \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_intro_state_a3904ef31d1fdc22eb85d6e5eb8903822}{}\index{Intro\+State@{Intro\+State}!Style@{Style}}
+\index{Style@{Style}!Intro\+State@{Intro\+State}}
+\subsubsection[{Style}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::\+Style (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Engine} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_intro_state_a3904ef31d1fdc22eb85d6e5eb8903822}
+
+
+Do an effect when we push a button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & \hyperlink{class_game_engine}{Game\+Engine}, motor of the game \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_intro_state_a5e145ec83bb5e65def711e7c3c24ddda}{}\index{Intro\+State@{Intro\+State}!style\+Draw@{style\+Draw}}
+\index{style\+Draw@{style\+Draw}!Intro\+State@{Intro\+State}}
+\subsubsection[{style\+Draw}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::style\+Draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Engine} $\ast$}]{, }
+\item[{int}]{, }
+\item[{std\+::vector$<$ {\bf Button} $\ast$ $>$\+::iterator}]{}
+\end{DoxyParamCaption}
+)}\label{class_intro_state_a5e145ec83bb5e65def711e7c3c24ddda}
+
+
+Effect of the function style. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & \hyperlink{class_game_engine}{Game\+Engine}, motor of the game \\
+\hline
+{\em Int} & position \\
+\hline
+{\em An} & iterator to the button \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_intro_state_aeed77b6e9a15471c1110c47b0a854fe1}{}\index{Intro\+State@{Intro\+State}!Up@{Up}}
+\index{Up@{Up}!Intro\+State@{Intro\+State}}
+\subsubsection[{Up}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::\+Up (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Engine} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_intro_state_aeed77b6e9a15471c1110c47b0a854fe1}
+
+
+Key Up. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & \hyperlink{class_game_engine}{Game\+Engine}, motor of the game \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_intro_state_a4071906c4ca7d81687e2b90b7f36a664}{}\index{Intro\+State@{Intro\+State}!Update@{Update}}
+\index{Update@{Update}!Intro\+State@{Intro\+State}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+State\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Engine} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_intro_state_a4071906c4ca7d81687e2b90b7f36a664}
+
+
+Update. 
+
+Alias Handle\+Event, it\textquotesingle{}s catch the key frol the keyboard
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & \hyperlink{class_game_engine}{Game\+Engine}, motor of the game \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_game_state}{I\+Game\+State}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_intro_state_ad64626c0d7654481449fec2f1d07c7ed}{}\index{Intro\+State@{Intro\+State}!m\+\_\+background@{m\+\_\+background}}
+\index{m\+\_\+background@{m\+\_\+background}!Intro\+State@{Intro\+State}}
+\subsubsection[{m\+\_\+background}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object2\+D}$\ast$ Intro\+State\+::m\+\_\+background\hspace{0.3cm}{\ttfamily [private]}}\label{class_intro_state_ad64626c0d7654481449fec2f1d07c7ed}
+The background of the state \hypertarget{class_intro_state_abf443c0163efe764d7f8961e2816b73d}{}\index{Intro\+State@{Intro\+State}!m\+\_\+bomb\+\_\+left@{m\+\_\+bomb\+\_\+left}}
+\index{m\+\_\+bomb\+\_\+left@{m\+\_\+bomb\+\_\+left}!Intro\+State@{Intro\+State}}
+\subsubsection[{m\+\_\+bomb\+\_\+left}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object2\+D}$\ast$ Intro\+State\+::m\+\_\+bomb\+\_\+left\hspace{0.3cm}{\ttfamily [private]}}\label{class_intro_state_abf443c0163efe764d7f8961e2816b73d}
+The image bomb(between a button) \hypertarget{class_intro_state_a0b10257f3ddc662e0476bfd30def50e4}{}\index{Intro\+State@{Intro\+State}!m\+\_\+button@{m\+\_\+button}}
+\index{m\+\_\+button@{m\+\_\+button}!Intro\+State@{Intro\+State}}
+\subsubsection[{m\+\_\+button}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Button} $\ast$$>$ Intro\+State\+::m\+\_\+button\hspace{0.3cm}{\ttfamily [private]}}\label{class_intro_state_a0b10257f3ddc662e0476bfd30def50e4}
+Vector \hyperlink{class_button}{Button} \hypertarget{class_intro_state_a9b6a7c6121418d2659ec79f600385b8f}{}\index{Intro\+State@{Intro\+State}!m\+\_\+easter@{m\+\_\+easter}}
+\index{m\+\_\+easter@{m\+\_\+easter}!Intro\+State@{Intro\+State}}
+\subsubsection[{m\+\_\+easter}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ Intro\+State\+::m\+\_\+easter\hspace{0.3cm}{\ttfamily [private]}}\label{class_intro_state_a9b6a7c6121418d2659ec79f600385b8f}
+Vector Easter\+Egg \hypertarget{class_intro_state_a9a4157cf8aa4a5ce48b782b7f4a33af9}{}\index{Intro\+State@{Intro\+State}!m\+\_\+easter\+It@{m\+\_\+easter\+It}}
+\index{m\+\_\+easter\+It@{m\+\_\+easter\+It}!Intro\+State@{Intro\+State}}
+\subsubsection[{m\+\_\+easter\+It}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$\+::iterator Intro\+State\+::m\+\_\+easter\+It\hspace{0.3cm}{\ttfamily [private]}}\label{class_intro_state_a9a4157cf8aa4a5ce48b782b7f4a33af9}
+Iterator of the vector Easter\+Egg \hypertarget{class_intro_state_a43ad1f560360ce4e465b059697193aa5}{}\index{Intro\+State@{Intro\+State}!m\+\_\+\+Intro\+State@{m\+\_\+\+Intro\+State}}
+\index{m\+\_\+\+Intro\+State@{m\+\_\+\+Intro\+State}!Intro\+State@{Intro\+State}}
+\subsubsection[{m\+\_\+\+Intro\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Intro\+State} Intro\+State\+::m\+\_\+\+Intro\+State\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_intro_state_a43ad1f560360ce4e465b059697193aa5}
+Instance of introstate \hypertarget{class_intro_state_aff5068e91ae89f0c123dcfb3b269f5c7}{}\index{Intro\+State@{Intro\+State}!m\+\_\+it@{m\+\_\+it}}
+\index{m\+\_\+it@{m\+\_\+it}!Intro\+State@{Intro\+State}}
+\subsubsection[{m\+\_\+it}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Button} $\ast$$>$\+::iterator Intro\+State\+::m\+\_\+it\hspace{0.3cm}{\ttfamily [private]}}\label{class_intro_state_aff5068e91ae89f0c123dcfb3b269f5c7}
+Iterator of the vector \hyperlink{class_button}{Button} \hypertarget{class_intro_state_a4c23780e73716669d319929e8906c598}{}\index{Intro\+State@{Intro\+State}!m\+\_\+map@{m\+\_\+map}}
+\index{m\+\_\+map@{m\+\_\+map}!Intro\+State@{Intro\+State}}
+\subsubsection[{m\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$int, m\+\_\+tab\+Fun$>$ Intro\+State\+::m\+\_\+map\hspace{0.3cm}{\ttfamily [private]}}\label{class_intro_state_a4c23780e73716669d319929e8906c598}
+Map of key \hypertarget{class_intro_state_a746908a39dc856517869254b7d0a4114}{}\index{Intro\+State@{Intro\+State}!m\+\_\+released@{m\+\_\+released}}
+\index{m\+\_\+released@{m\+\_\+released}!Intro\+State@{Intro\+State}}
+\subsubsection[{m\+\_\+released}]{\setlength{\rightskip}{0pt plus 5cm}bool Intro\+State\+::m\+\_\+released\hspace{0.3cm}{\ttfamily [private]}}\label{class_intro_state_a746908a39dc856517869254b7d0a4114}
+The booleen for the map of key \hypertarget{class_intro_state_ae3f313128aee34075d81f0a0faee7470}{}\index{Intro\+State@{Intro\+State}!m\+\_\+text@{m\+\_\+text}}
+\index{m\+\_\+text@{m\+\_\+text}!Intro\+State@{Intro\+State}}
+\subsubsection[{m\+\_\+text}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Generate\+Text}$\ast$ Intro\+State\+::m\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}\label{class_intro_state_ae3f313128aee34075d81f0a0faee7470}
+Temporaire 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_intro_state_8hh}{Intro\+State.\+hh}\end{DoxyCompactItemize}

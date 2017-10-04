@@ -1,0 +1,163 @@
+.TH "lib/gdl/includes/SDL_rect.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_rect.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'SDL_pixels\&.h'\fP
+.br
+\fC#include 'SDL_rwops\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_Point\fP"
+.br
+.RI "\fIThe structure that defines a point\&. \fP"
+.ti -1c
+.RI "struct \fBSDL_Rect\fP"
+.br
+.RI "\fIA rectangle, with the origin at the upper left\&. \fP"
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBSDL_Point\fP \fBSDL_Point\fP"
+.br
+.RI "\fIThe structure that defines a point\&. \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_Rect\fP \fBSDL_Rect\fP"
+.br
+.RI "\fIA rectangle, with the origin at the upper left\&. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "SDL_FORCE_INLINE SDL_bool \fBSDL_RectEmpty\fP (const \fBSDL_Rect\fP *r)"
+.br
+.RI "\fIReturns true if the rectangle has no area\&. \fP"
+.ti -1c
+.RI "SDL_FORCE_INLINE SDL_bool \fBSDL_RectEquals\fP (const \fBSDL_Rect\fP *a, const \fBSDL_Rect\fP *b)"
+.br
+.RI "\fIReturns true if the two rectangles are equal\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_HasIntersection\fP (const \fBSDL_Rect\fP *A, const \fBSDL_Rect\fP *B)"
+.br
+.RI "\fIDetermine whether two rectangles intersect\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_IntersectRect\fP (const \fBSDL_Rect\fP *A, const \fBSDL_Rect\fP *B, \fBSDL_Rect\fP *result)"
+.br
+.RI "\fICalculate the intersection of two rectangles\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_UnionRect\fP (const \fBSDL_Rect\fP *A, const \fBSDL_Rect\fP *B, \fBSDL_Rect\fP *result)"
+.br
+.RI "\fICalculate the union of two rectangles\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_EnclosePoints\fP (const \fBSDL_Point\fP *points, \fBint\fP count, const \fBSDL_Rect\fP *clip, \fBSDL_Rect\fP *result)"
+.br
+.RI "\fICalculate a minimal rectangle enclosing a set of points\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_IntersectRectAndLine\fP (const \fBSDL_Rect\fP *rect, \fBint\fP *X1, \fBint\fP *Y1, \fBint\fP *X2, \fBint\fP *Y2)"
+.br
+.RI "\fICalculate the intersection of a rectangle and line segment\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file for SDL_rect definition and management functions\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBSDL_Point\fP  \fBSDL_Point\fP"
+
+.PP
+The structure that defines a point\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_EnclosePoints\fP 
+.RE
+.PP
+
+.SS "typedef struct \fBSDL_Rect\fP  \fBSDL_Rect\fP"
+
+.PP
+A rectangle, with the origin at the upper left\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_RectEmpty\fP 
+.PP
+\fBSDL_RectEquals\fP 
+.PP
+\fBSDL_HasIntersection\fP 
+.PP
+\fBSDL_IntersectRect\fP 
+.PP
+\fBSDL_UnionRect\fP 
+.PP
+\fBSDL_EnclosePoints\fP 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_EnclosePoints (const \fBSDL_Point\fP * points, \fBint\fP count, const \fBSDL_Rect\fP * clip, \fBSDL_Rect\fP * result)"
+
+.PP
+Calculate a minimal rectangle enclosing a set of points\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+SDL_TRUE if any points were within the clipping rect 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_bool SDLCALL SDL_HasIntersection (const \fBSDL_Rect\fP * A, const \fBSDL_Rect\fP * B)"
+
+.PP
+Determine whether two rectangles intersect\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+SDL_TRUE if there is an intersection, SDL_FALSE otherwise\&. 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_bool SDLCALL SDL_IntersectRect (const \fBSDL_Rect\fP * A, const \fBSDL_Rect\fP * B, \fBSDL_Rect\fP * result)"
+
+.PP
+Calculate the intersection of two rectangles\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+SDL_TRUE if there is an intersection, SDL_FALSE otherwise\&. 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_bool SDLCALL SDL_IntersectRectAndLine (const \fBSDL_Rect\fP * rect, \fBint\fP * X1, \fBint\fP * Y1, \fBint\fP * X2, \fBint\fP * Y2)"
+
+.PP
+Calculate the intersection of a rectangle and line segment\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+SDL_TRUE if there is an intersection, SDL_FALSE otherwise\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

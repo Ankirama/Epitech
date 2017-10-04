@@ -1,0 +1,58 @@
+.TH "SDL_KeyboardEvent" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_KeyboardEvent \- Keyboard button event structure (event\&.key\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwindowID\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBstate\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBrepeat\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding2\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding3\fP"
+.br
+.ti -1c
+.RI "\fBSDL_Keysym\fP \fBkeysym\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Keyboard button event structure (event\&.key\&.*) 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBSDL_Keysym\fP SDL_KeyboardEvent::keysym"
+The key that was pressed or released 
+.SS "\fBUint8\fP SDL_KeyboardEvent::repeat"
+Non-zero if this is a key repeat 
+.SS "\fBUint8\fP SDL_KeyboardEvent::state"
+::SDL_PRESSED or ::SDL_RELEASED 
+.SS "\fBUint32\fP SDL_KeyboardEvent::type"
+\fBSDL_KEYDOWN\fP or \fBSDL_KEYUP\fP 
+.SS "\fBUint32\fP SDL_KeyboardEvent::windowID"
+The window with keyboard focus, if any 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

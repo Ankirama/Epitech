@@ -1,0 +1,13 @@
+digraph "lib/lua" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_97aefd0d527b934f1d99a682da8fe6a9 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="lib" fontname="Helvetica", fontsize="10", URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"]
+  subgraph clusterdir_e3d6da42301ca0e60a340946f071e963 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_e3d6da42301ca0e60a340946f071e963.html"];
+    dir_e3d6da42301ca0e60a340946f071e963 [shape=plaintext label="lua"];
+    dir_d2c03d607096f6c6ab4fbdc40687a2b1 [shape=box label="include" color="black" fillcolor="white" style="filled" URL="dir_d2c03d607096f6c6ab4fbdc40687a2b1.html"];
+  }
+  }
+}

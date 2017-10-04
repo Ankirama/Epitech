@@ -1,0 +1,56 @@
+.TH "gdl::Geometry" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gdl::Geometry \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGeometry\fP & \fBpushVertex\fP (const \fBglm::vec3\fP &t)"
+.br
+.ti -1c
+.RI "\fBGeometry\fP & \fBpushUv\fP (const \fBglm::vec2\fP &t)"
+.br
+.ti -1c
+.RI "\fBGeometry\fP & \fBpushNormal\fP (const \fBglm::vec3\fP &t)"
+.br
+.ti -1c
+.RI "\fBGeometry\fP & \fBsetColor\fP (const \fBglm::vec4\fP &t)"
+.br
+.ti -1c
+.RI "bool \fBbuild\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBdraw\fP (\fBAShader\fP &shader, \fBglm::mat4\fP const &transform, GLenum drawMode)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "VertexBuffer * \fB_buffer\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBglm::vec4\fP > \fB_vertices\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBglm::vec4\fP > \fB_colors\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBglm::vec4\fP > \fB_normals\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBglm::vec2\fP > \fB_uvs\fP"
+.br
+.ti -1c
+.RI "\fBglm::vec4\fP \fB_currentColor\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

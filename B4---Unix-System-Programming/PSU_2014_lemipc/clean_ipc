@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ $# -lt 3 ]] ; then
+    echo "Usage : ./clen_ipc shm_id msg_id sem_id"
+    exit 1
+fi
+ipcrm -m $1 && echo "shm_id $1 removed"
+ipcrm -q $2 && echo "msg_id $2 removed"
+ipcrm -s $3 && echo "sem_id $3 removed"
+exit 0

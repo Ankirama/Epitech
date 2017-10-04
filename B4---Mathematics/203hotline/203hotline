@@ -1,0 +1,75 @@
+#!/usr/bin/python
+
+import sys
+import time
+import histogram
+from math import *
+
+def usage():
+    print("Usage : ./203hotline K N")
+    print("Usage : ./203hotline s")
+    sys.exit()
+
+def coeffBinom(k, n):
+    if (k < 0 or k > n):
+        return (0)
+    if (k == 0 or k == n):
+        return 1
+    k = min(k, n - k)
+    c = 1
+    for i in range(k):
+        c = c * (n - i) / (i + 1)
+    return (c)
+
+def factor(n):
+    if (n == 0):
+        return (1);
+    else:
+        return ( n* factor(n - 1))
+
+def poisson(l, k):
+    res = (exp(-1 * l) * pow(l, k)) / factor(k)
+    return (res)
+
+def calcul(var):
+    t1_bino = time.time()
+    x = [coeffBinom(i, 3500) * pow(var, i) * pow((1 - var), (3500 - i)) for i in range(0, 51)]
+    t2_bino = time.time()
+    # 3500 soit le nombre de personne qui peuvent appeler
+    t1_poisson = time.time()
+    value_poisson = [poisson(var * 3500.0, i) for i in range(0, 51)]
+    t2_poisson = time.time()
+    histogram.display(x, value_poisson, t2_bino - t1_bino, t2_poisson - t1_poisson, var)
+
+def main():
+    if (len(sys.argv) == 3):
+        try:
+            K = (int(sys.argv[1]))
+        except (ValueError):
+            print("Error : {} is not a number".format(sys.argv[1]))
+            usage()
+        try:
+            N = (int(sys.argv[2]))
+        except (ValueError):
+            print("Error : {} is not a number".format(sys.argv[2]))
+            usage()
+        string = "Combinaison de " + sys.argv[1] + " parmi " + sys.argv[2] + " : "
+        res = coeffBinom(K, N);
+        print "Combinaison de", sys.argv[1] + " parmi", sys.argv[2] + " :", res
+    elif (len(sys.argv) == 2):
+        try:
+            # 8h par jour soit 8 * 60 * 60 pour l'avoir en secondes
+            var = (float(sys.argv[1]) / (8 * 60 * 60))
+        except (ValueError):
+            print("Error : {} is not a number".format(sys.argv[2]))
+            usage()
+        calcul(var)
+    else:
+        usage()
+
+if __name__ == "__main__":
+    try:
+        import matplotlib.pyplot as pyp
+    except (ImportError):
+        "No module installed here, you cannot continue !"
+    main()

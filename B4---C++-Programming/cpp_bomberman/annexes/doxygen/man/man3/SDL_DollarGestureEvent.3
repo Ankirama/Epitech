@@ -1,0 +1,56 @@
+.TH "SDL_DollarGestureEvent" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_DollarGestureEvent \- Dollar Gesture Event (event\&.dgesture\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "SDL_TouchID \fBtouchId\fP"
+.br
+.ti -1c
+.RI "SDL_GestureID \fBgestureId\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBnumFingers\fP"
+.br
+.ti -1c
+.RI "float \fBerror\fP"
+.br
+.ti -1c
+.RI "float \fBx\fP"
+.br
+.ti -1c
+.RI "float \fBy\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Dollar Gesture Event (event\&.dgesture\&.*) 
+.SH "Member Data Documentation"
+.PP 
+.SS "SDL_TouchID SDL_DollarGestureEvent::touchId"
+The touch device id 
+.SS "\fBUint32\fP SDL_DollarGestureEvent::type"
+::SDL_DOLLARGESTURE 
+.SS "float SDL_DollarGestureEvent::x"
+Normalized center of gesture 
+.SS "float SDL_DollarGestureEvent::y"
+Normalized center of gesture 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

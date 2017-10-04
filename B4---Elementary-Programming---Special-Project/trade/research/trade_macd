@@ -1,0 +1,84 @@
+#!/usr/bin/env python2.7
+
+import sys, os
+from math import *
+
+def buy(portefeuille, cours):
+ buy_actions = floor((portefeuille[0] / 5) / cours)
+ commission = cours * buy_actions + (0.15 / 100.0 * (cours * buy_actions))
+ if (portefeuille[0] - commission < 0):
+  buy_actions = buy_actions - 1
+ if (buy_actions > 0):
+  portefeuille[0] = portefeuille[0] - cours * buy_actions - ceil((0.15 / 100.0 * (cours * buy_actions)))
+  portefeuille[1] = portefeuille[1] + buy_actions
+  os.write(1, "buy {}\n".format(buy_actions))
+ else:
+  os.write(1, "wait\n")
+
+def wait():
+ os.write(1, "wait\n")
+
+def sell(portefeuille, cours):
+ if (portefeuille[1] > 0):
+  os.write(1, "sell {}\n".format(portefeuille[1]))
+  portefeuille[0] = portefeuille[0] + portefeuille[1] * cours - ceil((0.15 / 100.0 * (portefeuille[1] * cours)))
+  portefeuille[1] = 0
+ else:
+  os.write(1, "wait\n")
+
+def calcul_mme(prev_mme, cours, day, i):
+ C = 2.0 / (day + 1.0)
+ return (C * cours + (1.0 - C) * prev_mme)
+
+def analyse_mme(mme_diff, mme_9, portefeuille, cours, bought):
+ if (mme_diff > mme_9 and portefeuille[0] > cours):
+  buy(portefeuille, cours)
+  return cours
+ elif (mme_diff < mme_9 and portefeuille[1] > 0 and cours >= bought):
+  sell(portefeuille, cours)
+  return 0
+ else:
+  wait()
+
+def getIn(portefeuille, max_day):
+ info = raw_input()
+ day = 1
+ mme_12 = 0.0
+ mme_26 = 0.0
+ mme_9 = 0.0
+ bought = 0.0
+ while (info.lower() != "--end--"):
+  cours = (int(info))
+  if (day == max_day and portefeuille[1] > 0):
+   sell(portefeuille, cours)
+  else:
+   mme_12 = calcul_mme(mme_12, cours, 12, day)
+   mme_26 = calcul_mme(mme_26, cours, 26, day)
+   mme_9 = calcul_mme(mme_9, mme_12 - mme_26, 9, day)
+   bought = analyse_mme(mme_12 - mme_26, mme_9, portefeuille, cours, bought)
+  day = day + 1
+  info = raw_input()
+
+def main():
+ info = raw_input()
+ try:
+  capital = (int(info))
+  if (capital <= 0):
+   raise ValueError("Negative Number")
+ except (ValueError):
+  print("error: [{}] must be a number and positive".format(info))
+ info = raw_input()
+ try:
+  day = (int(info))
+  if (day <= 0):
+   raise ValueError("Negative Number")
+ except (ValueError):
+  print("error: [{}] must be a number and positive".format(info))
+ portefeuille = []
+ actions = 0
+ portefeuille.append(capital)
+ portefeuille.append(actions)
+ getIn(portefeuille, day)
+
+if __name__ == "__main__":
+   main()

@@ -1,0 +1,418 @@
+ $$$$$$\                                        $$\
+$$  __$$\                                       $$ |
+$$ /  \__|$$$$$$\  $$$$$$\ $$$$$$\ $$$$$$\$$$$\ $$$$$$$\  $$$$$$\
+$$ |      \____$$\$$  __$$\\____$$\$$  _$$  _$$\$$  __$$\ \____$$\
+$$ |      $$$$$$$ $$ |  \__$$$$$$$ $$ / $$ / $$ $$ |  $$ |$$$$$$$ |
+$$ |  $$\$$  __$$ $$ |    $$  __$$ $$ | $$ | $$ $$ |  $$ $$  __$$ |
+\$$$$$$  \$$$$$$$ $$ |    \$$$$$$$ $$ | $$ | $$ $$$$$$$  \$$$$$$$ |
+ \______/ \_______\__|     \_______\__| \__| \__\_______/ \_______|
+
+ 	  $$$$$$$\                   $$\  $$\
+	  $$  __$$\                  \__| $$ |
+	  $$ |  $$ |$$$$$$\  $$$$$$\ $$\$$$$$$\   $$$$$$\
+	  $$$$$$$  $$  __$$\$$  __$$\$$ \_$$  _| $$  __$$\
+	  $$  ____/$$$$$$$$ $$ /  $$ $$ | $$ |   $$ /  $$ |
+	  $$ |     $$   ____$$ |  $$ $$ | $$ |$$\$$ |  $$ |
+	  $$ |     \$$$$$$$\$$$$$$$  $$ | \$$$$  \$$$$$$  |
+	  \__|      \_______$$  ____/\__|  \____/ \______/
+	  	  	    $$ |
+	  		    $$ |
+			    \__|
+
+          Par mar_b, farvac_t et viterb_c
+          Le Dimanche 14 Septembre 2014 à 23H42
+
+	           ___________________
+		  |                   |
+	          |  S O M M A I R E  |
+	          |___________________|
+	          |                   |
+	          | 1°)Presentation   |
+	          | 2°)Vulnerabilites |
+		  | 3°)Autre faille   |
+	   	  | 4°)Conclusion     |
+	   	  |___________________|
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                              1°) Presentation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	Suite a la demande de Pepito Corporation nous, Fabien Martinez,
+Thomas Farvacque et Charles Viterbo, avons étudié et detecte les vulnerabilites
+du code source du logiciel Semence de Granola Corp. que nous ont fournis nos
+collègues le Red Mexican Hackers Crew.
+	Nous expliquerons dans la suite de l'ezine les vulnerabilites
+decouvertes, leurs types, leurs localisations dans le code source et comment
+les corriger.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                              2°) Les vulnerabilites
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                          Stack / Heap Buffer Overflow
+
+			      --- Expliquations ---
+
+	Un stack ou heap buffer overflow a lieu lorsqu'on écrit des donnees a
+l'exterieur de l'espace alloué au buffer, ainsi on écrase les donnees adjacentes
+au buffer et le comportement du programme devient imprevisible. Si l'on ecrit
+dans la memoire alloue au programme par l'ordinateur on va ecraser les donnees
+adjacentes. Mais si l'on ecrit sur de la memoire non alloue a notre programme
+on risque d'avoir un segmentation fault qui arretera notre programme.
+On parle de stack buffer overflow lorsque le depassement a lieu avec un buffer
+alloue en "dur", par exemple char buffer[12], alors que le heap buffer overflow
+a lieu avec un buffer alloue dynamiquement, par exemple char *str et
+str = malloc(sizeof(char) * 12).
+
+            Non alloue          Memoire allouee          Non alloue
+	        |                      |                     |
+		|                      |                     |
+	       \./                    \./                   \./
+
+                           #---##---##---##---##---#
+                           |   ||   ||   ||   ||   |
+                           |   ||   ||   ||   ||   |
+                           #---##---##---##---##---#
+
+     Ecriture / Lecture     Ecriture / Lecture    Ecriture / Lecture
+            Non OK                   OK                  Non OK
+              |                                            |
+              |                                            |
+              |                                            |
+              ¤--------------------------------------------¤
+                                     |
+                                     |
+                                    \./
+
+                               Buffer Overflow
+
+			      --- Exploitations ---
+
+	L'exploitation des stack / heap buffer overflow est relativement
+simple. Les donnees ecrites dans le buffer vont ecraser les donnes adjacentes
+en memoire. Ainsi l'adresse de la prochaine instruction a etre execute sera
+modifiee. Par exemple si l'on remplit notre buffer de 'B' et que notre chaine
+de charactere deborde sur la memoire d'un char que l'on utilise dans notre
+programme, ce char aura la valeur 66, car en memoire on aura 0x42.
+
+       		     	      --- Protection ---
+
+	Utiliser à la place de strcat et strcpy, qui ne prennent pas en compte
+la taille, strncat et strncpy et donner la bonne taille, c'est-a-dire la place
+disponible dans le buffer
+
+			      --- Pepito ---
+
+		[code]
+
+main.c -> int checkPassword(char *password)
+
+ 61  if (!strcmp(password, userPassword))
+ 62    isUser = 1;
+ 63  strcpy(savePassword, password);
+
+Ici il y a deux problemes :
+    - password peut etre NULL et dans ce cas on essaye d'acceder a de la
+    memoire, avec strcmp, qui ne nous appartient pas, il s'agit d'un heap
+    buffer overflow
+
+    - le second probleme vient du fait que l'on a declare savePassword de la
+    maniere suivante : char	savePassword[64] = {0};
+    si password a une taille superieure a 64 characteres on depasse le buffer
+    alloue et on a un stack buffer overflow.
+
+      	   	[correction]
+
+main.c -> int	checkPassword(char *password)
+
+ 59  if (!password)
+ 60    return NOBODY;
+ 61  if (!strcmp(password, userPassword))
+ 62    isUser = 1;
+ 63  strcpy(savePassword, password);
+ 64  strncpy(savePassword, password, 63);
+ 65  savePassword[63] = '\0';
+
+Pour corriger a ces erreurs :
+     - on verifie que password et non-NULL, si c'est le cas on retourne NOBODY
+     (qui vaut 0)
+     - on ne copie que les 63 premiers characteres de password avec strncpy, si
+     une '\0' est rencontre on arrete la copie, et ont me un '\0' pour terminer
+     la chaine de charactere (et eviter les erreurs avec read).
+
+
+       	    	[code]
+
+main.c -> static void	changeUserPassword(char *password)
+
+ 87  if (password) {
+ 88    strcpy(userPassword, password);
+ 89    sendLogMessage(PASSWD_CHANGE);
+ 90  }
+
+Il s'agit encore d'un stack buffer overflow, userPassword est declare en dur:
+static char	userPassword[512] = "jt3d1l4t3";
+Si password a une taille superieure a 512 on depasse le buffer alloue.
+
+   	      	[correction]
+
+main.c -> static void	checkPassword(char *password)
+
+ 87  if (password) {
+ 88    strncpy(userPassword, password, 511);
+ 89    userPassword[511] = '\0';
+ 90    sendLogMessage(PASSWD_CHANGE);
+ 91   }
+
+Pour corriger cette erreur:
+     - on ne copie que les 511 premiers characteres de password avec strncpy,
+     si un '\0' est rencontre on arrete la copie, et on met un '\0' pour
+     terminer la chaine de charactere (et eviter les erreurs avec read).
+
+
+       	  	[code]
+
+main.c -> static void	changeAdminPassword
+
+ 98  if (password) {
+ 99    for (i = 0; password[i]; ++i)
+100      password[i] ^= xorKey;
+101    strcpy(adminPassword, password);
+102    sendLogMessage(PASSWD_CHANGE);
+
+Il s'agit encore d'un stack buffer overflow, adminPassword est declare en dur:
+static char	adminPassword[512] = "\x25\x20\x21\x34\x3c\x3b\x38\x3a\x3b\x05\
+				      x05\x16"; /* putainmonPPC */
+Si password a une taille superieure a 512 on depasse le buffer alloue
+
+   	      	[correction]
+
+main.c -> static void	changeAdminPassword
+
+ 87   if (password) {
+ 88    for (i = 0; password[i]; ++i)
+ 89      password[i] ^= xorKey;
+ 90    strncpy(adminPassword, password, 511);
+ 91    adminPassword[511] = '\0';
+ 92    sendLogMessage(PASSWD_CHANGE);
+
+Pour corriger cette erreur:
+     On ne copie que les 511 premiers characteres de password avec strncpy,
+     si un '\0' est rencontre on arrete la copie, et on met un '\0' pour
+     terminer la chaine de charactere (et eviter les erreurs avec read).
+
+
+       	  	[code]
+
+main.c -> static int	handlerBuyIngredient
+
+315    sprintf(log, "echo \"%s was bought\" >> log", ingredientName);
+
+Ici avec ingredient name, on pourrait depasser la taille maximale de log,
+qui est de 128 octets, ce qui resulterait en un stack buffer overflow.
+
+
+   	      	[correction]
+
+main.c -> static int	handlerBuyIngredient
+
+320    snprintf(log, 128, "echo \"%s was bought\" >> log", ingredientName);
+
+Pour corriger cette erreur:
+     On change la fonction sprintf pour la fonction snprintf qui elle sera
+     limitee pour ecrire, nous permettant de ne pas depasser la limite de log.
+
+
+       	  	[code]
+
+network.c -> int	getPacket
+
+ 63  if ((*(ssize_t *)packetSize = recv(client, packetPtr, PACKETLEN, 0)) < 0)
+ 64    dier("recv()");
+
+Il n'y a pas la place d'integrer un '\0' a la fin de la chaine, donc si des
+fonctions veulent lire jusqu'a un '\0', cela resultera en un stack buffer
+overflow car ces fonctions lirons au dela de l'espace alloue.
+
+   	      	[correction]
+
+daemon.c -> int		runDaemon
+
+ 82    char		packetPtr[PACKETLEN + 1];
+...
+103    bzero(packetPtr, PACKETLEN + 1);
+
+Pour corriger cette erreur:
+     Il faut augmenter la taille d'un octet dans cette chaine pour laisser de
+     la place pour le '\0'
+
+		      	         Format String
+
+			      --- Explications ---
+
+	Une erreur de type format string est une faille que l'on peut trouver
+dans des fonctions telle que printf avec les flags '%'. Cette faille peut etre
+utilisee pour afficher de la memoire ou executer une action non voulue et est
+tres dangereuse. Cette erreur apparait souvant a cause des varargs, qui permet
+d'utiliser un nombre indefini d'argument.
+
+	 		      --- Exploitations ---
+
+	Une erreur format string peut etre utilisee par exemple pour afficher la
+memoire du programme, cela peut etre utilise pour recuperer des informations
+secretes contenu dans le code tel des mots de passe secrets ou executer du
+code malveillant.
+
+    	      	   	      --- Protection ---
+
+	Il faut verifier dans les fonctions tel printf, les appels de flags
+avec '%' l'appel de la fonction printf de tel sorte : printf(string) est
+vulnerable, car printf interprete string comme un format string et verifiera
+a l'interieur l'appel des flags. L'appel suivant serait plus
+securise : printf("%s", string), "%s" sera interprete par printf et non string
+comme souhaité et ne causera pas d'erreur.
+
+    	      	   	      --- Pepito ---
+
+       	  	[code]
+
+network.c -> void	sendLogMessage
+
+ 73  write(client, msg, strlen(msg));
+ 74  fprintf(stderr, msg);
+
+Cette erreur est une erreur de type format string. En effet si msg contient
+des flags de printf, elle pourrait executer des actions non voulues.
+
+       	  	[correction]
+
+network.c -> void	sendLogMessage
+
+ 73  write(client, msg, strlen(msg));
+ 74  fprintf(stderr, "%s", msg);
+
+Pour corriger cette erreur:
+     Il suffit d'ajouter le flag "%s" pour que fprintf interpete msg comme une
+     chaine de characteres.
+
+				Sig Mismatch
+
+			      --- Explication ---
+
+	Une erreur de type sig mismatch correspond a une erreur de signe
+quand il n'est pas vérifié. Elle peut survenir lorsque le programme demande des
+informations au client.
+
+	 		      --- Exploitations ---
+
+	Elle peut causer des resultats inatendus non geres par le programme.
+
+    	      	   	      --- Protection ---
+
+	Il faut verifier les signes lors de l'utilisation d'une variable.
+Par exemple lorsque l'on ne veut pas utiliser de nombres negatifs dans certaines
+fonctions.
+
+    	      	   	      --- Pepito ---
+
+       	  	[code]
+
+main.c -> void	handlePacket
+
+351 if (cmdId > (int)HANDLER_LEN)
+352   fprintf(stderr, "ID (%i) out of range.\n", cmdId);
+353 else
+354   handlerTab[cmdId](packetPtr, packetSize);
+
+Dans cet example on ne veut pas utiliser handlerTab avec un cmdId negatif.
+Autrement, cela pourrait causer une erreur de type stack overflow.
+
+       	  	[correction]
+
+main.c -> void	handlePacket
+
+356 if (cmdId > (int)HANDLER_LEN || cmdId < 0)
+357   fprintf(stderr, "ID (%i) out of range.\n", cmdId);
+358 else
+359   handlerTab[cmdId](packetPtr, packetSize);
+
+Pour corriger cette erreur:
+     Il faut ajouter une verifictation si jamais cmdId est negatif, pour ne pas
+     utiliser handlerTab dans ce cas.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                              3°) Autre faille
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+			Integer Overflow / Underflow
+
+			     --- Explications ---
+
+	Une erreur de type integer overflow peut survenir lorsqu'une operation
+arithmetique fait depasser la valeur maximale (minimale pour l'erreur
+integer underflow) de l'espace de stockage designee par la variable choisie.
+L'espace de stockage d'une variable est definie par le nombre de bits
+qu'elle peut contenir. Par exemple, un char represente un octet qui
+lui represente 8 bits. Lorsque l'operation depasse la valeur maximale
+(minimale pour underflow) attendue par la variable, le resultat repartira
+depuis la valeur minimale (maximale pour underflow).
+
+
+      Octet non signe  +  Octet non signe  =  Depassement de max (255)
+      	 #-----#	      	#-----#      	    #-----#
+         | 255 |		|  1  |	    	    |  0  |  <--- Retour a la
+	 #-----#		#-----#	    	    #-----#	valeur minimale
+
+      Octet non signe  -  Octet non signe  =  Depassement de min (0)
+      	 #-----#	      	#-----#      	    #-----#
+	 |  0  |		|  1  |	    	    | 255 |  <--- Retour a la
+	 #-----#		#-----#	    	    #-----#	valeur maximale
+
+
+	 		     --- Exploitations ---
+
+	En elle meme cette erreur ne represente pas de faille. Cependant elle peut
+causer des resultats inatendus dans une programme.
+
+       	   	     	     --- Protection ---
+
+	Il faudrait toujours vérifier les bornes pour ne pas les dépasser.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			      4°) Conclusion
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Notre ezine sur les problemes de securite du logiciel Semence touche a sa fin.
+Dans cette ezine nous avons expliques les differents problemes rencontres et
+comment nous les avons corriges dans le patche.
+
+Pour exploiter pleinement le logiciel Semence il suffit que pepito applique le
+patch et les problemes de securite seront regles.
+
+--------------------------------------------------------------------------------
+		    ______________________________
+
+		   | 			          |
+		   | 	    Caramba Pepito	  |
+		   | 			          |
+		   | By mar_b, farvac_t, viterb_c |
+		   |    	    	      	  |
+		   |	        pour 	          |
+		   |______________________________|
+
+
+
+
+		$$$$$$$$\        $$$$$$\        $$\
+		$$  _____|      $$  __$$\       $$ |
+		$$ |            $$ /  \__|      $$ |
+		$$$$$\          \$$$$$$\        $$ |
+		$$  __|          \____$$\       $$ |
+		$$ |            $$\   $$ |      $$ |
+		$$$$$$$$\       \$$$$$$  |      $$$$$$$$\
+		\________|       \______/       \________|

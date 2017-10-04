@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="MyWindowsMediaPlayer.View.ButtonPlayer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Grid.Row="0" Command="{Binding LeftCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{DynamicResource MetroCircleButtonStyle}">
+                <Image Source="../Ressources/previous.png" />
+            </Button>
+            <Button Grid.Column="1" Grid.Row="0" Command="{Binding Path=PlayCommand}" CommandParameter="Play" Style="{DynamicResource MetroCircleButtonStyle}">
+                <Image Source="{Binding Path=SourceImg}"/>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="0" Command="{Binding Path=StopCommand}" Style="{DynamicResource MetroCircleButtonStyle}">
+                <Image Source="../Ressources/stop.png" />
+            </Button>
+            <Button Grid.Column="3" Grid.Row="0" Command="{Binding Path=RightCommand}" Style="{DynamicResource MetroCircleButtonStyle}">
+                <Image Source="../Ressources/next.png" />
+            </Button>
+            <Slider Grid.Column="4"  Grid.Row="0" Maximum="{Binding Path=Maximum}" Minimum="{Binding Path=Minimun}" IsMoveToPointEnabled="True" Value="{Binding Path=SlideValue}" VerticalAlignment="Center" Margin="10,0,10,0">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="ValueChanged">
+                        <i:InvokeCommandAction Command="{Binding Path=DragCompleted}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Slider>
+            <Slider Grid.Column="5" Grid.Row="0" Minimum="0" Maximum="1" Orientation="Vertical" HorizontalAlignment="Center" Margin="0,-100,0,70" Value="{Binding Path=Volume}" Visibility="{Binding Path=VolumeVisibility}"/>
+            <Button Grid.Column="5" Grid.Row="0" Command="{Binding Path=VolumeCommand}" Style="{DynamicResource MetroCircleButtonStyle}">
+                <Image Source="{Binding Path=VolumeImage}" />
+            </Button>
+        </Grid>
+</UserControl>

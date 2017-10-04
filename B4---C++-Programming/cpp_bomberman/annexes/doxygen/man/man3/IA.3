@@ -1,0 +1,73 @@
+.TH "IA" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IA \- NPC class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IA\&.hh>\fP
+.PP
+Inherits \fBACharacter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIA\fP (unsigned int position=0, \fBeDifficulty\fP=DUMMY)"
+.br
+.RI "\fI\fBIA\fP's constructor\&. \fP"
+.ti -1c
+.RI "\fB~IA\fP ()"
+.br
+.RI "\fI\fBIA\fP's destructor\&. \fP"
+.ti -1c
+.RI "\fBeDifficulty\fP \fBgetDifficulty\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetDifficulty\fP (\fBeDifficulty\fP)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIA\fP (\fBIA\fP const &)"
+.br
+.ti -1c
+.RI "\fBIA\fP & \fBoperator=\fP (\fBIA\fP const &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBeDifficulty\fP \fBm_difficulty\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+NPC class\&. 
+
+It will manage movement/update from an AI\&. It will call \fBLua\fP class to execute our lua's script 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "IA::IA (unsigned int position = \fC0\fP, \fBeDifficulty\fP = \fCDUMMY\fP)"
+
+.PP
+\fBIA\fP's constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIposition\fP Set the AI's position 
+.br
+\fIeDifficulty\fP Chose the AI's difficulty 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

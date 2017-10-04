@@ -1,0 +1,115 @@
+\hypertarget{class_game_engine}{}\section{Game\+Engine Class Reference}
+\label{class_game_engine}\index{Game\+Engine@{Game\+Engine}}
+
+
+Inheritance diagram for Game\+Engine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{class_game_engine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+Engine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{class_game_engine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_engine_aea52c2df16819a71ab9fe8118e0abdde}{}bool {\bfseries initialize} ()\label{class_game_engine_aea52c2df16819a71ab9fe8118e0abdde}
+
+\item 
+\hypertarget{class_game_engine_a259f741736a0d4429586cb268272d27a}{}void {\bfseries Cleanup} ()\label{class_game_engine_a259f741736a0d4429586cb268272d27a}
+
+\item 
+\hypertarget{class_game_engine_a4b85e8905d35f4b890c9ebd66b8cc51d}{}gdl\+::\+Sdl\+Context {\bfseries get\+Context} () const \label{class_game_engine_a4b85e8905d35f4b890c9ebd66b8cc51d}
+
+\item 
+\hypertarget{class_game_engine_ae6e381b14404418ddf8b3ddecc3cfd90}{}gdl\+::\+Clock {\bfseries get\+Clock} () const \label{class_game_engine_ae6e381b14404418ddf8b3ddecc3cfd90}
+
+\item 
+\hypertarget{class_game_engine_a2675e74989b5c08452eff45b7ac7e82a}{}void {\bfseries Change\+State} (\hyperlink{class_i_game_state}{I\+Game\+State} $\ast$)\label{class_game_engine_a2675e74989b5c08452eff45b7ac7e82a}
+
+\item 
+\hypertarget{class_game_engine_a460e6cab4805944c7e4b177361c574ae}{}void {\bfseries Push\+State} (\hyperlink{class_i_game_state}{I\+Game\+State} $\ast$)\label{class_game_engine_a460e6cab4805944c7e4b177361c574ae}
+
+\item 
+\hypertarget{class_game_engine_af97451dad66fdf759855e06f2fb1afbb}{}void {\bfseries Pop\+State} ()\label{class_game_engine_af97451dad66fdf759855e06f2fb1afbb}
+
+\item 
+\hypertarget{class_game_engine_ad891e2f56d13c73744ddb51a77c67b4d}{}void {\bfseries Handle\+Events} ()\label{class_game_engine_ad891e2f56d13c73744ddb51a77c67b4d}
+
+\item 
+\hypertarget{class_game_engine_a2f0e84b7f70f82b9c6a8cf1b6c7715bf}{}bool {\bfseries update} ()\label{class_game_engine_a2f0e84b7f70f82b9c6a8cf1b6c7715bf}
+
+\item 
+\hypertarget{class_game_engine_a5cbd1eef7917ab2ce33fd739fd537c53}{}void {\bfseries draw} ()\label{class_game_engine_a5cbd1eef7917ab2ce33fd739fd537c53}
+
+\item 
+\hypertarget{class_game_engine_a1ba8967ee35740cd1ced4a7460a48693}{}bool {\bfseries Running} ()\label{class_game_engine_a1ba8967ee35740cd1ced4a7460a48693}
+
+\item 
+\hypertarget{class_game_engine_a08dba9cea4715cf453a62b2aaecc7c51}{}void {\bfseries Quit} ()\label{class_game_engine_a08dba9cea4715cf453a62b2aaecc7c51}
+
+\item 
+\hypertarget{class_game_engine_afa0114d52a543ee102a0552149986bf2}{}void {\bfseries resize\+Window} (int, int)\label{class_game_engine_afa0114d52a543ee102a0552149986bf2}
+
+\item 
+\hypertarget{class_game_engine_aca4b3129720f662e1e6e50783fa72246}{}bool {\bfseries get\+Lock} () const \label{class_game_engine_aca4b3129720f662e1e6e50783fa72246}
+
+\item 
+\hypertarget{class_game_engine_ae4696bb1c7cd6b8134311487d81df440}{}void {\bfseries set\+Lock} (const bool)\label{class_game_engine_ae4696bb1c7cd6b8134311487d81df440}
+
+\item 
+\hypertarget{class_game_engine_a799f85f9a9a8af7a3e65c964f09459b3}{}gdl\+::\+Basic\+Shader \& {\bfseries get\+Shader} ()\label{class_game_engine_a799f85f9a9a8af7a3e65c964f09459b3}
+
+\item 
+\hypertarget{class_game_engine_a5db901b75245d580ec66d0136e3171be}{}gdl\+::\+Input \& {\bfseries get\+Input} ()\label{class_game_engine_a5db901b75245d580ec66d0136e3171be}
+
+\item 
+\hypertarget{class_game_engine_a82edf9ae74e2fd02360469fca021ecc0}{}pthread\+\_\+t \& {\bfseries get\+Pthread} ()\label{class_game_engine_a82edf9ae74e2fd02360469fca021ecc0}
+
+\item 
+\hypertarget{class_game_engine_a8127ed0261783f2a01fc69d91b8a3eaa}{}pthread\+\_\+attr\+\_\+t \& {\bfseries get\+Attr} ()\label{class_game_engine_a8127ed0261783f2a01fc69d91b8a3eaa}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_engine_a5ff384f98b3638039e07ef48f6d3c828}{}gdl\+::\+Sdl\+Context {\bfseries m\+\_\+context}\label{class_game_engine_a5ff384f98b3638039e07ef48f6d3c828}
+
+\item 
+\hypertarget{class_game_engine_a633938e001498d4d1ca4b824221360f7}{}gdl\+::\+Clock {\bfseries m\+\_\+clock}\label{class_game_engine_a633938e001498d4d1ca4b824221360f7}
+
+\item 
+\hypertarget{class_game_engine_ae48690f042e2a9e401395f4a010ccd38}{}gdl\+::\+Input {\bfseries m\+\_\+input}\label{class_game_engine_ae48690f042e2a9e401395f4a010ccd38}
+
+\item 
+\hypertarget{class_game_engine_afe772008322c982de843ae3d9b28bc12}{}gdl\+::\+Basic\+Shader {\bfseries m\+\_\+shader}\label{class_game_engine_afe772008322c982de843ae3d9b28bc12}
+
+\item 
+\hypertarget{class_game_engine_adc3eed19591e1fa6db5939952c22ad85}{}std\+::vector$<$ \hyperlink{class_i_game_state}{I\+Game\+State} $\ast$ $>$ {\bfseries m\+\_\+states}\label{class_game_engine_adc3eed19591e1fa6db5939952c22ad85}
+
+\item 
+\hypertarget{class_game_engine_ae587c23c6915881101bb2110dcb9370e}{}bool {\bfseries m\+\_\+running}\label{class_game_engine_ae587c23c6915881101bb2110dcb9370e}
+
+\item 
+\hypertarget{class_game_engine_a44d3485f57df88e39423b3ec89382299}{}bool {\bfseries m\+\_\+lock}\label{class_game_engine_a44d3485f57df88e39423b3ec89382299}
+
+\item 
+\hypertarget{class_game_engine_a05519032ab7b2e24af50a44e43dceb8b}{}pthread\+\_\+attr\+\_\+t {\bfseries m\+\_\+attr}\label{class_game_engine_a05519032ab7b2e24af50a44e43dceb8b}
+
+\item 
+\hypertarget{class_game_engine_ae912189ab93c1a1e14c9af6eab27f9cb}{}pthread\+\_\+t {\bfseries m\+\_\+sound}\label{class_game_engine_ae912189ab93c1a1e14c9af6eab27f9cb}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Game\+Engine.\+hh\end{DoxyCompactItemize}

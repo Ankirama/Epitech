@@ -1,0 +1,440 @@
+.TH "lib/gdl/includes/SDL_test_fuzzer.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_test_fuzzer.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_FuzzerInit\fP (\fBUint64\fP execKey)"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBSDLTest_RandomUint8\fP ()"
+.br
+.ti -1c
+.RI "\fBSint8\fP \fBSDLTest_RandomSint8\fP ()"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBSDLTest_RandomUint16\fP ()"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fBSDLTest_RandomSint16\fP ()"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBSDLTest_RandomSint32\fP ()"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBSDLTest_RandomUint32\fP ()"
+.br
+.ti -1c
+.RI "\fBUint64\fP \fBSDLTest_RandomUint64\fP ()"
+.br
+.ti -1c
+.RI "\fBSint64\fP \fBSDLTest_RandomSint64\fP ()"
+.br
+.ti -1c
+.RI "float \fBSDLTest_RandomUnitFloat\fP ()"
+.br
+.ti -1c
+.RI "double \fBSDLTest_RandomUnitDouble\fP ()"
+.br
+.ti -1c
+.RI "float \fBSDLTest_RandomFloat\fP ()"
+.br
+.ti -1c
+.RI "double \fBSDLTest_RandomDouble\fP ()"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBSDLTest_RandomUint8BoundaryValue\fP (\fBUint8\fP boundary1, \fBUint8\fP boundary2, SDL_bool validDomain)"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBSDLTest_RandomUint16BoundaryValue\fP (\fBUint16\fP boundary1, \fBUint16\fP boundary2, SDL_bool validDomain)"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBSDLTest_RandomUint32BoundaryValue\fP (\fBUint32\fP boundary1, \fBUint32\fP boundary2, SDL_bool validDomain)"
+.br
+.ti -1c
+.RI "\fBUint64\fP \fBSDLTest_RandomUint64BoundaryValue\fP (\fBUint64\fP boundary1, \fBUint64\fP boundary2, SDL_bool validDomain)"
+.br
+.ti -1c
+.RI "\fBSint8\fP \fBSDLTest_RandomSint8BoundaryValue\fP (\fBSint8\fP boundary1, \fBSint8\fP boundary2, SDL_bool validDomain)"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fBSDLTest_RandomSint16BoundaryValue\fP (\fBSint16\fP boundary1, \fBSint16\fP boundary2, SDL_bool validDomain)"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBSDLTest_RandomSint32BoundaryValue\fP (\fBSint32\fP boundary1, \fBSint32\fP boundary2, SDL_bool validDomain)"
+.br
+.ti -1c
+.RI "\fBSint64\fP \fBSDLTest_RandomSint64BoundaryValue\fP (\fBSint64\fP boundary1, \fBSint64\fP boundary2, SDL_bool validDomain)"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBSDLTest_RandomIntegerInRange\fP (\fBSint32\fP min, \fBSint32\fP max)"
+.br
+.ti -1c
+.RI "char * \fBSDLTest_RandomAsciiString\fP ()"
+.br
+.ti -1c
+.RI "char * \fBSDLTest_RandomAsciiStringWithMaximumLength\fP (\fBint\fP maxLength)"
+.br
+.ti -1c
+.RI "char * \fBSDLTest_RandomAsciiStringOfSize\fP (\fBint\fP size)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_GetFuzzerInvocationCount\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL test framework\&.
+.PP
+This code is a part of the SDL2_test library, not the main SDL library\&.
+.PP
+Note: The fuzzer implementation uses a static instance of random context internally which makes it thread-UNsafe\&. 
+.SH "Function Documentation"
+.PP 
+.SS "\fBvoid\fP SDLTest_FuzzerInit (\fBUint64\fP execKey)"
+Initializes the fuzzer for a test
+.PP
+/param execKey Execution 'Key' that initializes the random number generator uniquely for the test\&. 
+.SS "\fBint\fP SDLTest_GetFuzzerInvocationCount ()"
+Returns the invocation count for the fuzzer since last \&.\&.\&.FuzzerInit\&. 
+.SS "char* SDLTest_RandomAsciiString ()"
+Generates random null-terminated string\&. The minimum length for the string is 1 character, maximum length for the string is 255 characters and it can contain ASCII characters from 32 to 126\&.
+.PP
+Note: Returned string needs to be deallocated\&.
+.PP
+\fBReturns:\fP
+.RS 4
+Newly allocated random string; or NULL if length was invalid or string could not be allocated\&. 
+.RE
+.PP
+
+.SS "char* SDLTest_RandomAsciiStringOfSize (\fBint\fP size)"
+Generates random null-terminated string\&. The length for the string is defined by the size parameter\&. String can contain ASCII characters from 32 to 126\&.
+.PP
+Note: Returned string needs to be deallocated\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsize\fP The length of the generated string
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Newly allocated random string; or NULL if size was invalid or string could not be allocated\&. 
+.RE
+.PP
+
+.SS "char* SDLTest_RandomAsciiStringWithMaximumLength (\fBint\fP maxLength)"
+Generates random null-terminated string\&. The maximum length for the string is defined by the maxLength parameter\&. String can contain ASCII characters from 32 to 126\&.
+.PP
+Note: Returned string needs to be deallocated\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImaxLength\fP The maximum length of the generated string\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Newly allocated random string; or NULL if maxLength was invalid or string could not be allocated\&. 
+.RE
+.PP
+
+.SS "double SDLTest_RandomDouble ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+random double\&. 
+.RE
+.PP
+
+.SS "float SDLTest_RandomFloat ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+random float\&. 
+.RE
+.PP
+
+.SS "\fBSint32\fP SDLTest_RandomIntegerInRange (\fBSint32\fP min, \fBSint32\fP max)"
+Returns integer in range [min, max] (inclusive)\&. Min and max values can be negative values\&. If Max in smaller tham min, then the values are swapped\&. Min and max are the same value, that value will be returned\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImin\fP Minimum inclusive value of returned random number 
+.br
+\fImax\fP Maximum inclusive value of returned random number
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Generated random integer in range 
+.RE
+.PP
+
+.SS "\fBSint16\fP SDLTest_RandomSint16 ()"
+Returns a random Sint16
+.PP
+\fBReturns:\fP
+.RS 4
+Generated signed integer 
+.RE
+.PP
+
+.SS "\fBSint16\fP SDLTest_RandomSint16BoundaryValue (\fBSint16\fP boundary1, \fBSint16\fP boundary2, SDL_bool validDomain)"
+Returns a random boundary value for Sint16 within the given boundaries\&. Boundaries are inclusive, see the usage examples below\&. If validDomain is true, the function will only return valid boundaries, otherwise non-valid boundaries are also possible\&. If boundary1 > boundary2, the values are swapped
+.PP
+Usage examples: RandomSint16BoundaryValue(-10, 20, SDL_TRUE) returns -11, -10, 19 or 20 RandomSint16BoundaryValue(-100, -10, SDL_FALSE) returns -101 or -9 RandomSint16BoundaryValue(SINT16_MIN, 99, SDL_FALSE) returns 100 RandomSint16BoundaryValue(SINT16_MIN, SINT16_MAX, SDL_FALSE) returns SINT16_MIN (== error value) with error set
+.PP
+\fBParameters:\fP
+.RS 4
+\fIboundary1\fP Lower boundary limit 
+.br
+\fIboundary2\fP Upper boundary limit 
+.br
+\fIvalidDomain\fP Should the generated boundary be valid (=within the bounds) or not?
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Random boundary value for the given range and domain or SINT16_MIN with error set 
+.RE
+.PP
+
+.SS "\fBSint32\fP SDLTest_RandomSint32 ()"
+Returns a random integer
+.PP
+\fBReturns:\fP
+.RS 4
+Generated integer 
+.RE
+.PP
+
+.SS "\fBSint32\fP SDLTest_RandomSint32BoundaryValue (\fBSint32\fP boundary1, \fBSint32\fP boundary2, SDL_bool validDomain)"
+Returns a random boundary value for Sint32 within the given boundaries\&. Boundaries are inclusive, see the usage examples below\&. If validDomain is true, the function will only return valid boundaries, otherwise non-valid boundaries are also possible\&. If boundary1 > boundary2, the values are swapped
+.PP
+Usage examples: RandomSint32BoundaryValue(-10, 20, SDL_TRUE) returns -11, -10, 19 or 20 RandomSint32BoundaryValue(-100, -10, SDL_FALSE) returns -101 or -9 RandomSint32BoundaryValue(SINT32_MIN, 99, SDL_FALSE) returns 100 RandomSint32BoundaryValue(SINT32_MIN, SINT32_MAX, SDL_FALSE) returns SINT32_MIN (== error value)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIboundary1\fP Lower boundary limit 
+.br
+\fIboundary2\fP Upper boundary limit 
+.br
+\fIvalidDomain\fP Should the generated boundary be valid (=within the bounds) or not?
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Random boundary value for the given range and domain or SINT32_MIN with error set 
+.RE
+.PP
+
+.SS "\fBSint64\fP SDLTest_RandomSint64 ()"
+Returns random Sint64\&.
+.PP
+\fBReturns:\fP
+.RS 4
+Generated signed integer 
+.RE
+.PP
+
+.SS "\fBSint64\fP SDLTest_RandomSint64BoundaryValue (\fBSint64\fP boundary1, \fBSint64\fP boundary2, SDL_bool validDomain)"
+Returns a random boundary value for Sint64 within the given boundaries\&. Boundaries are inclusive, see the usage examples below\&. If validDomain is true, the function will only return valid boundaries, otherwise non-valid boundaries are also possible\&. If boundary1 > boundary2, the values are swapped
+.PP
+Usage examples: RandomSint64BoundaryValue(-10, 20, SDL_TRUE) returns -11, -10, 19 or 20 RandomSint64BoundaryValue(-100, -10, SDL_FALSE) returns -101 or -9 RandomSint64BoundaryValue(SINT64_MIN, 99, SDL_FALSE) returns 100 RandomSint64BoundaryValue(SINT64_MIN, SINT64_MAX, SDL_FALSE) returns SINT64_MIN (== error value) and error set
+.PP
+\fBParameters:\fP
+.RS 4
+\fIboundary1\fP Lower boundary limit 
+.br
+\fIboundary2\fP Upper boundary limit 
+.br
+\fIvalidDomain\fP Should the generated boundary be valid (=within the bounds) or not?
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Random boundary value for the given range and domain or SINT64_MIN with error set 
+.RE
+.PP
+
+.SS "\fBSint8\fP SDLTest_RandomSint8 ()"
+Returns a random Sint8
+.PP
+\fBReturns:\fP
+.RS 4
+Generated signed integer 
+.RE
+.PP
+
+.SS "\fBSint8\fP SDLTest_RandomSint8BoundaryValue (\fBSint8\fP boundary1, \fBSint8\fP boundary2, SDL_bool validDomain)"
+Returns a random boundary value for Sint8 within the given boundaries\&. Boundaries are inclusive, see the usage examples below\&. If validDomain is true, the function will only return valid boundaries, otherwise non-valid boundaries are also possible\&. If boundary1 > boundary2, the values are swapped
+.PP
+Usage examples: RandomSint8BoundaryValue(-10, 20, SDL_TRUE) returns -11, -10, 19 or 20 RandomSint8BoundaryValue(-100, -10, SDL_FALSE) returns -101 or -9 RandomSint8BoundaryValue(SINT8_MIN, 99, SDL_FALSE) returns 100 RandomSint8BoundaryValue(SINT8_MIN, SINT8_MAX, SDL_FALSE) returns SINT8_MIN (== error value) with error set
+.PP
+\fBParameters:\fP
+.RS 4
+\fIboundary1\fP Lower boundary limit 
+.br
+\fIboundary2\fP Upper boundary limit 
+.br
+\fIvalidDomain\fP Should the generated boundary be valid (=within the bounds) or not?
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Random boundary value for the given range and domain or SINT8_MIN with error set 
+.RE
+.PP
+
+.SS "\fBUint16\fP SDLTest_RandomUint16 ()"
+Returns a random Uint16
+.PP
+\fBReturns:\fP
+.RS 4
+Generated integer 
+.RE
+.PP
+
+.SS "\fBUint16\fP SDLTest_RandomUint16BoundaryValue (\fBUint16\fP boundary1, \fBUint16\fP boundary2, SDL_bool validDomain)"
+Returns a random boundary value for Uint16 within the given boundaries\&. Boundaries are inclusive, see the usage examples below\&. If validDomain is true, the function will only return valid boundaries, otherwise non-valid boundaries are also possible\&. If boundary1 > boundary2, the values are swapped
+.PP
+Usage examples: RandomUint16BoundaryValue(10, 20, SDL_TRUE) returns 10, 11, 19 or 20 RandomUint16BoundaryValue(1, 20, SDL_FALSE) returns 0 or 21 RandomUint16BoundaryValue(0, 99, SDL_FALSE) returns 100 RandomUint16BoundaryValue(0, 0xFFFF, SDL_FALSE) returns 0 (error set)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIboundary1\fP Lower boundary limit 
+.br
+\fIboundary2\fP Upper boundary limit 
+.br
+\fIvalidDomain\fP Should the generated boundary be valid (=within the bounds) or not?
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Random boundary value for the given range and domain or 0 with error set 
+.RE
+.PP
+
+.SS "\fBUint32\fP SDLTest_RandomUint32 ()"
+Returns a random positive integer
+.PP
+\fBReturns:\fP
+.RS 4
+Generated integer 
+.RE
+.PP
+
+.SS "\fBUint32\fP SDLTest_RandomUint32BoundaryValue (\fBUint32\fP boundary1, \fBUint32\fP boundary2, SDL_bool validDomain)"
+Returns a random boundary value for Uint32 within the given boundaries\&. Boundaries are inclusive, see the usage examples below\&. If validDomain is true, the function will only return valid boundaries, otherwise non-valid boundaries are also possible\&. If boundary1 > boundary2, the values are swapped
+.PP
+Usage examples: RandomUint32BoundaryValue(10, 20, SDL_TRUE) returns 10, 11, 19 or 20 RandomUint32BoundaryValue(1, 20, SDL_FALSE) returns 0 or 21 RandomUint32BoundaryValue(0, 99, SDL_FALSE) returns 100 RandomUint32BoundaryValue(0, 0xFFFFFFFF, SDL_FALSE) returns 0 (with error set)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIboundary1\fP Lower boundary limit 
+.br
+\fIboundary2\fP Upper boundary limit 
+.br
+\fIvalidDomain\fP Should the generated boundary be valid (=within the bounds) or not?
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Random boundary value for the given range and domain or 0 with error set 
+.RE
+.PP
+
+.SS "\fBUint64\fP SDLTest_RandomUint64 ()"
+Returns random Uint64\&.
+.PP
+\fBReturns:\fP
+.RS 4
+Generated integer 
+.RE
+.PP
+
+.SS "\fBUint64\fP SDLTest_RandomUint64BoundaryValue (\fBUint64\fP boundary1, \fBUint64\fP boundary2, SDL_bool validDomain)"
+Returns a random boundary value for Uint64 within the given boundaries\&. Boundaries are inclusive, see the usage examples below\&. If validDomain is true, the function will only return valid boundaries, otherwise non-valid boundaries are also possible\&. If boundary1 > boundary2, the values are swapped
+.PP
+Usage examples: RandomUint64BoundaryValue(10, 20, SDL_TRUE) returns 10, 11, 19 or 20 RandomUint64BoundaryValue(1, 20, SDL_FALSE) returns 0 or 21 RandomUint64BoundaryValue(0, 99, SDL_FALSE) returns 100 RandomUint64BoundaryValue(0, 0xFFFFFFFFFFFFFFFF, SDL_FALSE) returns 0 (with error set)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIboundary1\fP Lower boundary limit 
+.br
+\fIboundary2\fP Upper boundary limit 
+.br
+\fIvalidDomain\fP Should the generated boundary be valid (=within the bounds) or not?
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Random boundary value for the given range and domain or 0 with error set 
+.RE
+.PP
+
+.SS "\fBUint8\fP SDLTest_RandomUint8 ()"
+Returns a random Uint8
+.PP
+\fBReturns:\fP
+.RS 4
+Generated integer 
+.RE
+.PP
+
+.SS "\fBUint8\fP SDLTest_RandomUint8BoundaryValue (\fBUint8\fP boundary1, \fBUint8\fP boundary2, SDL_bool validDomain)"
+Returns a random boundary value for Uint8 within the given boundaries\&. Boundaries are inclusive, see the usage examples below\&. If validDomain is true, the function will only return valid boundaries, otherwise non-valid boundaries are also possible\&. If boundary1 > boundary2, the values are swapped
+.PP
+Usage examples: RandomUint8BoundaryValue(10, 20, SDL_TRUE) returns 10, 11, 19 or 20 RandomUint8BoundaryValue(1, 20, SDL_FALSE) returns 0 or 21 RandomUint8BoundaryValue(0, 99, SDL_FALSE) returns 100 RandomUint8BoundaryValue(0, 255, SDL_FALSE) returns 0 (error set)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIboundary1\fP Lower boundary limit 
+.br
+\fIboundary2\fP Upper boundary limit 
+.br
+\fIvalidDomain\fP Should the generated boundary be valid (=within the bounds) or not?
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Random boundary value for the given range and domain or 0 with error set 
+.RE
+.PP
+
+.SS "double SDLTest_RandomUnitDouble ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+random double in range [0\&.0 - 1\&.0[ 
+.RE
+.PP
+
+.SS "float SDLTest_RandomUnitFloat ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+random float in range [0\&.0 - 1\&.0[ 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

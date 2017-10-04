@@ -1,0 +1,107 @@
+.TH "ACharacter" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ACharacter \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBIA\fP, and \fBPlayer\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBACharacter\fP (std::string const &)"
+.br
+.ti -1c
+.RI "\fBACharacter\fP (std::string const &, bool const)"
+.br
+.ti -1c
+.RI "\fBACharacter\fP (std::string const &, bool const, eDirection const)"
+.br
+.ti -1c
+.RI "bool \fBgetAlive\fP () const "
+.br
+.ti -1c
+.RI "eDirection \fBgetDirection\fP () const "
+.br
+.ti -1c
+.RI "std::vector< \fBBomb\fP * > & \fBgetBomb\fP () const "
+.br
+.ti -1c
+.RI "\fBAnimation\fP & \fBgetAnimation\fP () const "
+.br
+.ti -1c
+.RI "unsigned long \fBgetScore\fP () const "
+.br
+.ti -1c
+.RI "std::string & \fBgetTexturePath\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetAlive\fP (bool const alive)"
+.br
+.ti -1c
+.RI "void \fBsetDirection\fP (eDirection const direction)"
+.br
+.ti -1c
+.RI "void \fBsetName\fP (\fBBomb\fP const &bomb)"
+.br
+.ti -1c
+.RI "void \fBsetName\fP (\fBAnimation\fP const &\fBAnimation\fP)"
+.br
+.ti -1c
+.RI "void \fBsetTexturePath\fP (std::string const &texturepath)"
+.br
+.ti -1c
+.RI "virtual void \fBspawn\fP (unsigned int, unsigned int)"
+.br
+.ti -1c
+.RI "virtual bool \fBaction\fP (eDirection, char *, unsigned int, unsigned int)=0"
+.br
+.ti -1c
+.RI "virtual void \fBinitialize\fP () const =0"
+.br
+.ti -1c
+.RI "virtual void \fBdraw\fP () const =0"
+.br
+.ti -1c
+.RI "virtual void \fBupdate\fP () const =0"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBm_type\fP"
+.br
+.ti -1c
+.RI "bool \fBm_alive\fP"
+.br
+.ti -1c
+.RI "eDirection \fBm_direction\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBm_position\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBBomb\fP * > \fBm_bomb\fP"
+.br
+.ti -1c
+.RI "\fBAnimation\fP * \fBm_animation\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBACharacter\fP (\fBACharacter\fP const &)"
+.br
+.ti -1c
+.RI "\fBACharacter\fP & \fBoperator=\fP (\fBACharacter\fP const &)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

@@ -1,0 +1,32 @@
+.TH "gtx_handed_coordinate_space" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtx_handed_coordinate_space \- GLM_GTX_handed_coordinate_space
+.PP
+To know if a set of three basis vectors defines a right or left-handed coordinate system\&.  
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > bool \fBglm::rightHanded\fP (detail::tvec3< T > const &tangent, detail::tvec3< T > const &binormal, detail::tvec3< T > const &normal)"
+.br
+.ti -1c
+.RI "template<typename T > bool \fBglm::leftHanded\fP (detail::tvec3< T > const &tangent, detail::tvec3< T > const &binormal, detail::tvec3< T > const &normal)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+To know if a set of three basis vectors defines a right or left-handed coordinate system\&. 
+
+<glm/gtx/handed_coordinate_system\&.hpp> need to be included to use these functionalities\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T > bool glm::leftHanded (\fBdetail::tvec3\fP< T > const & tangent, \fBdetail::tvec3\fP< T > const & binormal, \fBdetail::tvec3\fP< T > const & normal)"
+Return if a trihedron left handed or not\&. From GLM_GTX_handed_coordinate_space extension\&. 
+.SS "template<typename T > bool glm::rightHanded (\fBdetail::tvec3\fP< T > const & tangent, \fBdetail::tvec3\fP< T > const & binormal, \fBdetail::tvec3\fP< T > const & normal)"
+Return if a trihedron right handed or not\&. From GLM_GTX_handed_coordinate_space extension\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

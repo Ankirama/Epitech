@@ -1,0 +1,62 @@
+.TH "lib/gdl/includes/SDL_test_md5.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_test_md5.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDLTest_Md5Context\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef unsigned long \fBint\fP \fBMD5UINT4\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_Md5Init\fP (\fBSDLTest_Md5Context\fP *mdContext)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_Md5Update\fP (\fBSDLTest_Md5Context\fP *mdContext, unsigned char *inBuf, unsigned \fBint\fP inLen)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_Md5Final\fP (\fBSDLTest_Md5Context\fP *mdContext)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL test framework\&.
+.PP
+This code is a part of the SDL2_test library, not the main SDL library\&. 
+.SH "Function Documentation"
+.PP 
+.SS "\fBvoid\fP SDLTest_Md5Init (\fBSDLTest_Md5Context\fP * mdContext)"
+/brief initialize the context
+.PP
+/param mdContext pointer to context variable
+.PP
+Note: The function initializes the message-digest context mdContext\&. Call before each new use of the context - all fields are set to zero\&. 
+.SS "\fBvoid\fP SDLTest_Md5Update (\fBSDLTest_Md5Context\fP * mdContext, unsigned char * inBuf, unsigned \fBint\fP inLen)"
+/brief update digest from variable length data
+.PP
+/param mdContext pointer to context variable /param inBuf pointer to data array/string /param inLen length of data array/string
+.PP
+Note: The function updates the message-digest context to account for the presence of each of the characters inBuf[0\&.\&.inLen-1] in the message whose digest is being computed\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

@@ -1,0 +1,48 @@
+<?xml version="0.1" encoding="UTF-8"?>
+<save>
+  <players number="1">
+    <player id="1" type="player" state="alive">
+      <name>ankirama</name>
+      <position>
+        <x>42</x>
+        <y>24</y>
+      </position>
+      <direction>left</direction>
+      <speed>42</speed>
+      <texture>
+        <color>
+          <r>230</r>
+          <g>210</g>
+          <b>130</b>
+        </color>
+        <path>/home/tamaman/marvin.suce</path>
+      </texture>
+      <score>4224</score>
+      <keys>
+        <left>4</left>
+        <right>3</right>
+        <up>2</up>
+        <down>1</down>
+        <bomb>0</bomb>
+      </keys>
+      <bombs number="1">
+        <bomb id="1">
+          <texture>/home/tamaman/bomb.sucepatro</texture>
+          <time>3</time>
+          <range>2</range>
+          <position>
+            <x>42</x>
+            <y>23</y>
+          </position>
+        </bomb>
+      </bombs>
+    </player>
+  </players>
+  <maze>
+    <size>
+      <width>10</width>
+      <height>10</height>
+    </size>
+    <path>/home/tamaman/map.suce1pe</path>
+  </maze>
+</save>

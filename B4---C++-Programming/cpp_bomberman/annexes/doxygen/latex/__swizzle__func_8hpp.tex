@@ -1,0 +1,769 @@
+\hypertarget{__swizzle__func_8hpp}{}\section{lib/gdl/includes/glm/core/\+\_\+swizzle\+\_\+func.hpp File Reference}
+\label{__swizzle__func_8hpp}\index{lib/gdl/includes/glm/core/\+\_\+swizzle\+\_\+func.\+hpp@{lib/gdl/includes/glm/core/\+\_\+swizzle\+\_\+func.\+hpp}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  C\+O\+N\+S\+T,  A,  B)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  C\+O\+N\+S\+T,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  C\+O\+N\+S\+T,  A,  B,  C,  D)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  C\+O\+N\+S\+T,  A,  B)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  C\+O\+N\+S\+T,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  C\+O\+N\+S\+T,  A,  B,  C,  D)
+\item 
+\hypertarget{__swizzle__func_8hpp_a4feeb5a0a65101478fbc9939fbfcc81c}{}\#define {\bfseries G\+L\+M\+\_\+\+M\+U\+T\+A\+B\+L\+E}\label{__swizzle__func_8hpp_a4feeb5a0a65101478fbc9939fbfcc81c}
+
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+M\+P}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B,  C,  D)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B,  C,  D)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B,  C,  D)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+M\+P}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E,  A,  B,  C,  D)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+C\+O\+M\+P}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E,  A,  B)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B,  C)
+\item 
+\hypertarget{__swizzle__func_8hpp_a8d621934616cc6ffdc1fc7a65f7c362e}{}\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B,  C)\label{__swizzle__func_8hpp_a8d621934616cc6ffdc1fc7a65f7c362e}
+
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+M\+P}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B,  C,  D)
+\item 
+\hypertarget{__swizzle__func_8hpp_afe252fe59e94aedb43e82a506b9ffefa}{}\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B,  C,  D)\label{__swizzle__func_8hpp_afe252fe59e94aedb43e82a506b9ffefa}
+
+\item 
+\hypertarget{__swizzle__func_8hpp_abe51e1e3e1edd3000ccecd1685ac09cd}{}\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E,  A,  B,  C,  D)\label{__swizzle__func_8hpp_abe51e1e3e1edd3000ccecd1685ac09cd}
+
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+M\+P}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E,  A,  B,  C,  D)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}(T\+M\+P\+L\+\_\+\+T\+Y\+P\+E,  C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E,  S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Open\+G\+L Mathematics (glm.\+g-\/truc.\+net)
+
+Copyright (c) 2005 -\/ 2013 G-\/\+Truc Creation (www.\+g-\/truc.\+net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+H\+E S\+O\+F\+T\+W\+A\+R\+E I\+S P\+R\+O\+V\+I\+D\+E\+D \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+U\+T W\+A\+R\+R\+A\+N\+T\+Y O\+F A\+N\+Y K\+I\+N\+D, E\+X\+P\+R\+E\+S\+S O\+R I\+M\+P\+L\+I\+E\+D, I\+N\+C\+L\+U\+D\+I\+N\+G B\+U\+T N\+O\+T L\+I\+M\+I\+T\+E\+D T\+O T\+H\+E W\+A\+R\+R\+A\+N\+T\+I\+E\+S O\+F M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y, F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E A\+N\+D N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+N\+T. I\+N N\+O E\+V\+E\+N\+T S\+H\+A\+L\+L T\+H\+E A\+U\+T\+H\+O\+R\+S O\+R C\+O\+P\+Y\+R\+I\+G\+H\+T H\+O\+L\+D\+E\+R\+S B\+E L\+I\+A\+B\+L\+E F\+O\+R A\+N\+Y C\+L\+A\+I\+M, D\+A\+M\+A\+G\+E\+S O\+R O\+T\+H\+E\+R L\+I\+A\+B\+I\+L\+I\+T\+Y, W\+H\+E\+T\+H\+E\+R I\+N A\+N A\+C\+T\+I\+O\+N O\+F C\+O\+N\+T\+R\+A\+C\+T, T\+O\+R\+T O\+R O\+T\+H\+E\+R\+W\+I\+S\+E, A\+R\+I\+S\+I\+N\+G F\+R\+O\+M, O\+U\+T O\+F O\+R I\+N C\+O\+N\+N\+E\+C\+T\+I\+O\+N W\+I\+T\+H T\+H\+E S\+O\+F\+T\+W\+A\+R\+E O\+R T\+H\+E U\+S\+E O\+R O\+T\+H\+E\+R D\+E\+A\+L\+I\+N\+G\+S I\+N T\+H\+E S\+O\+F\+T\+W\+A\+R\+E.
+
+\hyperlink{group__core}{G\+L\+M Core}
+
+\begin{DoxyDate}{Date}
+2011-\/10-\/16 / 2011-\/10-\/16 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Christophe Riccio 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{__swizzle__func_8hpp_a12cdad0d6d094c24944d2e7b7a31fea0}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a12cdad0d6d094c24944d2e7b7a31fea0}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, B, A)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_aa7f49071c05bde6c4e5e36fee1a57cd5}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_aa7f49071c05bde6c4e5e36fee1a57cd5}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, C, B)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a392622d16561d3894ba05e72746b63fe}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C, }
+\item[{}]{D}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a392622d16561d3894ba05e72746b63fe}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, A, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, B, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, D, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, D, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, D, C)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a0ecf8acf985ecfa961ece3d5e5af4950}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a0ecf8acf985ecfa961ece3d5e5af4950}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, A, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, A, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, B, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, B, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, C, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, GLM\_MUTABLE, C, B, A)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a8cbb6d2f320284e888f4ee4aa02adc5b}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C, }
+\item[{}]{D}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a8cbb6d2f320284e888f4ee4aa02adc5b}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , A, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , A, B, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , A, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , A, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , A, D, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , A, D, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , B, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , B, A, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , B, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , B, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , B, D, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , B, D, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , C, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , C, A, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , C, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , C, B, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , C, D, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , C, D, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , D, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , D, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , D, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , D, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , D, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , D, C, B)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_ae919d8e8471578c3425e8714aa2bb693}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C, }
+\item[{}]{D}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_ae919d8e8471578c3425e8714aa2bb693}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , A, C, B, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , A, C, D, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , A, D, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , A, D, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , A, B, D, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , A, B, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , B, C, A, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , B, C, D, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , B, D, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , B, D, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , B, A, D, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , B, A, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , C, B, A, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , C, B, D, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , C, D, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , C, D, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , C, A, D, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , C, A, B, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , D, C, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , D, C, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , D, A, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , D, A, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , D, B, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, , D, B, C, A)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a019a49fa9457c48ae4a24a0cf63d4657}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a019a49fa9457c48ae4a24a0cf63d4657}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC2\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, x, y) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC2\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, r, g) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC2\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, s, t)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_aa73830e32e7cef205b5da9c6a79fa9dd}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_aa73830e32e7cef205b5da9c6a79fa9dd}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC3\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, x, y, z) 
+      \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC3\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, r, g,
+       b) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC3\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, s, t,
+       q)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a295c6f5ddc1d8c51929f647fa9df17a9}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+M\+P@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+M\+P}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+M\+P@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+M\+P}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+M\+P(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a295c6f5ddc1d8c51929f647fa9df17a9}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_REF3\_FROM\_VEC3\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC3\_TYPE, A, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC3\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, A, B, C)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_ad7a9f00506eafee9b1edf1ea2551b0ff}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_ad7a9f00506eafee9b1edf1ea2551b0ff}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC4\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, 
+      SWIZZLED\_VEC4\_TYPE, x, y, z, w) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC4\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, 
+      SWIZZLED\_VEC4\_TYPE, r, g, b, a) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC4\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, 
+      SWIZZLED\_VEC4\_TYPE, s, t, q, p)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a7f713891e69fc2070a675fdcf1988c9a}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+M\+P@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+M\+P}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+M\+P@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+M\+P}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+M\+P(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C, }
+\item[{}]{D}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a7f713891e69fc2070a675fdcf1988c9a}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC4\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, A, B, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF3\_FROM\_VEC4\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC3\_TYPE, A, B, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF4\_FROM\_VEC4\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC4\_TYPE, A, B, C, D)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a942d96d4acf3de0e6f569586b6ae0707}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+O\+N\+S\+T, }
+\item[{}]{A, }
+\item[{}]{B}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a942d96d4acf3de0e6f569586b6ae0707}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+SWIZZLED\_TYPE<TMPL\_TYPE> A ## B() CONST \(\backslash\)
+    \{ \(\backslash\)
+        return SWIZZLED\_TYPE<TMPL\_TYPE>(this->A, this->B); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a190c02deefb6f261fd80248c84d94c11}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+O\+N\+S\+T, }
+\item[{}]{A, }
+\item[{}]{B}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a190c02deefb6f261fd80248c84d94c11}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} TMPL\_TYPE> \(\backslash\)
+    SWIZZLED\_TYPE<TMPL\_TYPE> CLASS\_TYPE<TMPL\_TYPE>::A ## B() CONST \(\backslash\)
+    \{ \(\backslash\)
+        return SWIZZLED\_TYPE<TMPL\_TYPE>(this->A, this->B); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a60d187c12e1d1c69dd871d7e744eb2a1}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a60d187c12e1d1c69dd871d7e744eb2a1}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, B)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a148c1c06ccaa5c6400d601907802e25e}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a148c1c06ccaa5c6400d601907802e25e}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, C)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_aa4460baa2cc254b7904570fbe969e7df}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C, }
+\item[{}]{D}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_aa4460baa2cc254b7904570fbe969e7df}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, D, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, D, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, D, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, D, D)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a54351e2d53c9e3a937e7e284d5f2145c}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+O\+N\+S\+T, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a54351e2d53c9e3a937e7e284d5f2145c}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+SWIZZLED\_TYPE<TMPL\_TYPE> A ## B ## C() CONST \(\backslash\)
+    \{ \(\backslash\)
+        return SWIZZLED\_TYPE<TMPL\_TYPE>(this->A, this->B, this->C); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a9aebb5db521abf54f905acb4b42e5f22}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+O\+N\+S\+T, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a9aebb5db521abf54f905acb4b42e5f22}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} TMPL\_TYPE> \(\backslash\)
+    SWIZZLED\_TYPE<TMPL\_TYPE> CLASS\_TYPE<TMPL\_TYPE>::A ## B ## C() CONST \(\backslash\)
+    \{ \(\backslash\)
+        return SWIZZLED\_TYPE<TMPL\_TYPE>(this->A, this->B, this->C); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_adc6857f33d046c0efcaa36a00d26c9b0}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_adc6857f33d046c0efcaa36a00d26c9b0}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, B, B)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_afd278fef9d72cdf4d30b76f16513df54}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_afd278fef9d72cdf4d30b76f16513df54}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, C, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, C, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, C, C, C)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_af24ce349e2d79f1bfa9a84fc33250922}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+O\+N\+S\+T, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C, }
+\item[{}]{D}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_af24ce349e2d79f1bfa9a84fc33250922}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+SWIZZLED\_TYPE<TMPL\_TYPE> A ## B ## C ## D() CONST \(\backslash\)
+    \{ \(\backslash\)
+        return SWIZZLED\_TYPE<TMPL\_TYPE>(this->A, this->B, this->C, this->D); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a5b0075f1605acab887289a093b5d78f8}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+E\+F(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+O\+N\+S\+T, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C, }
+\item[{}]{D}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a5b0075f1605acab887289a093b5d78f8}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} TMPL\_TYPE> \(\backslash\)
+    SWIZZLED\_TYPE<TMPL\_TYPE> CLASS\_TYPE<TMPL\_TYPE>::A ## B ## C ## D() CONST \(\backslash\)
+    \{ \(\backslash\)
+        return SWIZZLED\_TYPE<TMPL\_TYPE>(this->A, this->B, this->C, this->D); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a670d420b488032fe0d9dff07413422e5}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a670d420b488032fe0d9dff07413422e5}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, A, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, A, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, A, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, A, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, B, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, B, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, B, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, A, B, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, A, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, A, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, A, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, A, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, B, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, B, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, B, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_TYPE, \textcolor{keyword}{const}, B, B, B, B)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_ab0eb270880b3becf23624d69fd7df506}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_ab0eb270880b3becf23624d69fd7df506}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC2\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, 
+      SWIZZLED\_VEC4\_TYPE, x, y) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC2\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, 
+      SWIZZLED\_VEC4\_TYPE, r, g) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC2\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, 
+      SWIZZLED\_VEC4\_TYPE, s, t)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a525779d34bdaa6722535801a054d5bbf}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+C\+O\+M\+P@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+C\+O\+M\+P}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+C\+O\+M\+P@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+C\+O\+M\+P}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+C\+O\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+C\+O\+M\+P(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a525779d34bdaa6722535801a054d5bbf}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC2\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_FROM\_VEC2\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC3\_TYPE, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_FROM\_VEC2\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC4\_TYPE, A, B)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_aa34efb6bef1fbda0cba53d4f79115987}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_aa34efb6bef1fbda0cba53d4f79115987}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC3\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, 
+      SWIZZLED\_VEC4\_TYPE, x, y, z) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC3\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, 
+      SWIZZLED\_VEC4\_TYPE, r, g, b) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC3\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, 
+      SWIZZLED\_VEC4\_TYPE, s, t, q)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_adba115f56b36791f9b71ae3436ecc064}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+M\+P@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+M\+P}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+M\+P@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+M\+P}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+M\+P(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_adba115f56b36791f9b71ae3436ecc064}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC3\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, A, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_FROM\_VEC3\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC3\_TYPE, A, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_FROM\_VEC3\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC4\_TYPE, A, B, C)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_abf36579a68f9f6ca2d99e0e122d4d946}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_abf36579a68f9f6ca2d99e0e122d4d946}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC4\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, 
+      SWIZZLED\_VEC4\_TYPE, x, y, z, w) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC4\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, 
+      SWIZZLED\_VEC4\_TYPE, r, g, b, a) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC4\_COMP(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, SWIZZLED\_VEC3\_TYPE, 
+      SWIZZLED\_VEC4\_TYPE, s, t, q, p)
+\end{DoxyCode}
+\hypertarget{__swizzle__func_8hpp_a713eb72d9262881f374ecea80e620af8}{}\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+M\+P@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+M\+P}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+M\+P@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+M\+P}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection[{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+M\+P(
+\begin{DoxyParamCaption}
+\item[{}]{T\+M\+P\+L\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{C\+L\+A\+S\+S\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C2\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C3\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{S\+W\+I\+Z\+Z\+L\+E\+D\+\_\+\+V\+E\+C4\+\_\+\+T\+Y\+P\+E, }
+\item[{}]{A, }
+\item[{}]{B, }
+\item[{}]{C, }
+\item[{}]{D}
+\end{DoxyParamCaption}
+)}\label{__swizzle__func_8hpp_a713eb72d9262881f374ecea80e620af8}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC4\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC2\_TYPE, A, B, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_FROM\_VEC4\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC3\_TYPE, A, B, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_FROM\_VEC4\_SWIZZLE(TMPL\_TYPE, CLASS\_TYPE, SWIZZLED\_VEC4\_TYPE, A, B, C, D)
+\end{DoxyCode}

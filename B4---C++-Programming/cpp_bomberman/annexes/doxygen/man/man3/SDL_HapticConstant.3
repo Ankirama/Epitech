@@ -1,0 +1,92 @@
+.TH "SDL_HapticConstant" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_HapticConstant \- A structure containing a template for a Constant effect\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_haptic\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint16\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBSDL_HapticDirection\fP \fBdirection\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBlength\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBdelay\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBinterval\fP"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fBlevel\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBattack_length\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBattack_level\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBfade_length\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBfade_level\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A structure containing a template for a Constant effect\&. 
+
+The struct is exclusive to the \fBSDL_HAPTIC_CONSTANT\fP effect\&.
+.PP
+A constant effect applies a constant force in the specified direction to the joystick\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_HAPTIC_CONSTANT\fP 
+.PP
+\fBSDL_HapticEffect\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint16\fP SDL_HapticConstant::attack_length"
+Duration of the attack\&. 
+.SS "\fBUint16\fP SDL_HapticConstant::attack_level"
+Level at the start of the attack\&. 
+.SS "\fBUint16\fP SDL_HapticConstant::button"
+\fBButton\fP that triggers the effect\&. 
+.SS "\fBUint16\fP SDL_HapticConstant::delay"
+Delay before starting the effect\&. 
+.SS "\fBSDL_HapticDirection\fP SDL_HapticConstant::direction"
+Direction of the effect\&. 
+.SS "\fBUint16\fP SDL_HapticConstant::fade_length"
+Duration of the fade\&. 
+.SS "\fBUint16\fP SDL_HapticConstant::fade_level"
+Level at the end of the fade\&. 
+.SS "\fBUint16\fP SDL_HapticConstant::interval"
+How soon it can be triggered again after button\&. 
+.SS "\fBUint32\fP SDL_HapticConstant::length"
+Duration of the effect\&. 
+.SS "\fBSint16\fP SDL_HapticConstant::level"
+Strength of the constant effect\&. 
+.SS "\fBUint16\fP SDL_HapticConstant::type"
+\fBSDL_HAPTIC_CONSTANT\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

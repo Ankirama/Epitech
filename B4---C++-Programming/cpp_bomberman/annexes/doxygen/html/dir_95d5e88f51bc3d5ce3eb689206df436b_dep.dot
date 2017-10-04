@@ -1,0 +1,14 @@
+digraph "lib/gdl" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_97aefd0d527b934f1d99a682da8fe6a9 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="lib" fontname="Helvetica", fontsize="10", URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"]
+  subgraph clusterdir_95d5e88f51bc3d5ce3eb689206df436b {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_95d5e88f51bc3d5ce3eb689206df436b.html"];
+    dir_95d5e88f51bc3d5ce3eb689206df436b [shape=plaintext label="gdl"];
+    dir_e2ad0eb9aebaa6e85935284e2b9d016a [shape=box label="includes" color="red" fillcolor="white" style="filled" URL="dir_e2ad0eb9aebaa6e85935284e2b9d016a.html"];
+    dir_0ae157be685a7303975bdcd6ab53d01b [shape=box label="src" color="black" fillcolor="white" style="filled" URL="dir_0ae157be685a7303975bdcd6ab53d01b.html"];
+  }
+  }
+}

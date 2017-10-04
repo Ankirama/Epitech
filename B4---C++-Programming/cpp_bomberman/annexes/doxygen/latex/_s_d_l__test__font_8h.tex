@@ -1,0 +1,85 @@
+\hypertarget{_s_d_l__test__font_8h}{}\section{lib/gdl/includes/\+S\+D\+L\+\_\+test\+\_\+font.h File Reference}
+\label{_s_d_l__test__font_8h}\index{lib/gdl/includes/\+S\+D\+L\+\_\+test\+\_\+font.\+h@{lib/gdl/includes/\+S\+D\+L\+\_\+test\+\_\+font.\+h}}
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+Include dependency graph for S\+D\+L\+\_\+test\+\_\+font.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__test__font_8h_a82fc3703abee6ebcdd3684365e1d06c9}{}\#define {\bfseries F\+O\+N\+T\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+S\+I\+Z\+E}~8\label{_s_d_l__test__font_8h_a82fc3703abee6ebcdd3684365e1d06c9}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} \hyperlink{_s_d_l__test__font_8h_aa7dc58388352aa14c537ac959220aa89}{S\+D\+L\+Test\+\_\+\+Draw\+Character} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} x, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} y, char c)
+\begin{DoxyCompactList}\small\item\em Draw a string in the currently set font. \end{DoxyCompactList}\item 
+\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} \hyperlink{_s_d_l__test__font_8h_ac5ece4b232de5964c2565360a7318a77}{S\+D\+L\+Test\+\_\+\+Draw\+String} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} x, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} y, const char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Draw a string in the currently set font. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include file for S\+D\+L test framework.
+
+This code is a part of the S\+D\+L2\+\_\+test library, not the main S\+D\+L library. 
+
+\subsection{Function Documentation}
+\hypertarget{_s_d_l__test__font_8h_aa7dc58388352aa14c537ac959220aa89}{}\index{S\+D\+L\+\_\+test\+\_\+font.\+h@{S\+D\+L\+\_\+test\+\_\+font.\+h}!S\+D\+L\+Test\+\_\+\+Draw\+Character@{S\+D\+L\+Test\+\_\+\+Draw\+Character}}
+\index{S\+D\+L\+Test\+\_\+\+Draw\+Character@{S\+D\+L\+Test\+\_\+\+Draw\+Character}!S\+D\+L\+\_\+test\+\_\+font.\+h@{S\+D\+L\+\_\+test\+\_\+font.\+h}}
+\subsubsection[{S\+D\+L\+Test\+\_\+\+Draw\+Character}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} S\+D\+L\+Test\+\_\+\+Draw\+Character (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf int}}]{y, }
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__test__font_8h_aa7dc58388352aa14c537ac959220aa89}
+
+
+Draw a string in the currently set font. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & The renderer to draw on. \\
+\hline
+{\em x} & The X coordinate of the upper left corner of the character. \\
+\hline
+{\em y} & The Y coordinate of the upper left corner of the character. \\
+\hline
+{\em c} & The character to draw.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+\hypertarget{_s_d_l__test__font_8h_ac5ece4b232de5964c2565360a7318a77}{}\index{S\+D\+L\+\_\+test\+\_\+font.\+h@{S\+D\+L\+\_\+test\+\_\+font.\+h}!S\+D\+L\+Test\+\_\+\+Draw\+String@{S\+D\+L\+Test\+\_\+\+Draw\+String}}
+\index{S\+D\+L\+Test\+\_\+\+Draw\+String@{S\+D\+L\+Test\+\_\+\+Draw\+String}!S\+D\+L\+\_\+test\+\_\+font.\+h@{S\+D\+L\+\_\+test\+\_\+font.\+h}}
+\subsubsection[{S\+D\+L\+Test\+\_\+\+Draw\+String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} S\+D\+L\+Test\+\_\+\+Draw\+String (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf int}}]{y, }
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__test__font_8h_ac5ece4b232de5964c2565360a7318a77}
+
+
+Draw a string in the currently set font. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & The renderer to draw on. \\
+\hline
+{\em x} & The X coordinate of the upper left corner of the string. \\
+\hline
+{\em y} & The Y coordinate of the upper left corner of the string. \\
+\hline
+{\em s} & The string to draw.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, -\/1 on failure. 
+\end{DoxyReturn}

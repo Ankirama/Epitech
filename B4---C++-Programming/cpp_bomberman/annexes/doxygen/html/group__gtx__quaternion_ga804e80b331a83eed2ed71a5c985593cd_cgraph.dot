@@ -1,0 +1,15 @@
+digraph "glm::fastMix"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::fastMix",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::normalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__quaternion.html#gabd269bb967469a6f1df5963455fee6be"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::length",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__quaternion.html#ga60d5647f87c2c423497d0f3bf8c407b8"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::sqrt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__exponential.html#ga2317d4ff45af448b8402431afa0711f3"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::dot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__quaternion.html#gab9101d7f5b27ca682fc84e32b8fd70ad"];
+}

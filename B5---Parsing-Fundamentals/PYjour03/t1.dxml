@@ -1,0 +1,11 @@
+<.root type = object>
+    <flags bool = True/>
+    <sb2 type = object>
+        <real float = 3.4e+20/>
+    </sb2>
+    <subnode type = object>
+        <num int = 12/>
+    </subnode>
+    <txt str = 'cool'/>
+    <zero/>
+</.root>

@@ -1,0 +1,173 @@
+.TH "lib/gdl/includes/SDL_version.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_version.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_version\fP"
+.br
+.RI "\fIInformation the version of SDL in use\&. \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_MAJOR_VERSION\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSDL_MINOR_VERSION\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSDL_PATCHLEVEL\fP   3"
+.br
+.ti -1c
+.RI "#define \fBSDL_VERSION\fP(x)"
+.br
+.RI "\fIMacro to determine SDL version program was compiled against\&. \fP"
+.ti -1c
+.RI "#define \fBSDL_VERSIONNUM\fP(X,  Y,  Z)   ((X)*1000 + (Y)*100 + (Z))"
+.br
+.ti -1c
+.RI "#define \fBSDL_COMPILEDVERSION\fP   \fBSDL_VERSIONNUM\fP(SDL_MAJOR_VERSION, SDL_MINOR_VERSION, SDL_PATCHLEVEL)"
+.br
+.ti -1c
+.RI "#define \fBSDL_VERSION_ATLEAST\fP(X,  Y,  Z)   (\fBSDL_COMPILEDVERSION\fP >= \fBSDL_VERSIONNUM\fP(X, Y, Z))"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBSDL_version\fP \fBSDL_version\fP"
+.br
+.RI "\fIInformation the version of SDL in use\&. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GetVersion\fP (\fBSDL_version\fP *ver)"
+.br
+.RI "\fIGet the version of SDL that is linked against your program\&. \fP"
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GetRevision\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the code revision of SDL that is linked against your program\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetRevisionNumber\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the revision number of SDL that is linked against your program\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This header defines the current SDL version\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define SDL_COMPILEDVERSION   \fBSDL_VERSIONNUM\fP(SDL_MAJOR_VERSION, SDL_MINOR_VERSION, SDL_PATCHLEVEL)"
+This is the version number macro for the current SDL version\&. 
+.SS "#define SDL_VERSION(x)"
+\fBValue:\fP
+.PP
+.nf
+{                                   \
+    (x)->major = SDL_MAJOR_VERSION;                 \
+    (x)->minor = SDL_MINOR_VERSION;                 \
+    (x)->patch = SDL_PATCHLEVEL;                    \
+}
+.fi
+.PP
+Macro to determine SDL version program was compiled against\&. This macro fills in a \fBSDL_version\fP structure with the version of the library you compiled against\&. This is determined by what header the compiler uses\&. Note that if you dynamically linked the library, you might have a slightly newer or older version at runtime\&. That version can be determined with \fBSDL_GetVersion()\fP, which, unlike \fBSDL_VERSION()\fP, is not a macro\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP A pointer to a \fBSDL_version\fP struct to initialize\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_version\fP 
+.PP
+\fBSDL_GetVersion\fP 
+.RE
+.PP
+
+.SS "#define SDL_VERSION_ATLEAST(X, Y, Z)   (\fBSDL_COMPILEDVERSION\fP >= \fBSDL_VERSIONNUM\fP(X, Y, Z))"
+This macro will evaluate to true if compiled with SDL at least X\&.Y\&.Z\&. 
+.SS "#define SDL_VERSIONNUM(X, Y, Z)   ((X)*1000 + (Y)*100 + (Z))"
+This macro turns the version numbers into a numeric value: 
+.PP
+.nf
+(1,2,3) -> (1203)
+
+.fi
+.PP
+.PP
+This assumes that there will never be more than 100 patchlevels\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBSDL_version\fP  \fBSDL_version\fP"
+
+.PP
+Information the version of SDL in use\&. Represents the library's version as three levels: major revision (increments with massive changes, additions, and enhancements), minor revision (increments with backwards-compatible changes to the major revision), and patchlevel (increments with fixes to the minor revision)\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_VERSION\fP 
+.PP
+\fBSDL_GetVersion\fP 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC const char* SDLCALL SDL_GetRevision (\fBvoid\fP)"
+
+.PP
+Get the code revision of SDL that is linked against your program\&. Returns an arbitrary string (a hash value) uniquely identifying the exact revision of the SDL library in use, and is only useful in comparing against other revisions\&. It is NOT an incrementing number\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetRevisionNumber (\fBvoid\fP)"
+
+.PP
+Get the revision number of SDL that is linked against your program\&. Returns a number uniquely identifying the exact revision of the SDL library in use\&. It is an incrementing number based on commits to hg\&.libsdl\&.org\&. 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_GetVersion (\fBSDL_version\fP * ver)"
+
+.PP
+Get the version of SDL that is linked against your program\&. If you are linking to SDL dynamically, then it is possible that the current version will be different than the version you compiled against\&. This function returns the current version, while \fBSDL_VERSION()\fP is a macro that tells you what version you compiled with\&.
+.PP
+.PP
+.nf
+1 SDL_version compiled;
+2 SDL_version linked;
+3 
+4 SDL_VERSION(&compiled);
+5 SDL_GetVersion(&linked);
+6 printf("We compiled against SDL version %d\&.%d\&.%d \&.\&.\&.\n",
+7        compiled\&.major, compiled\&.minor, compiled\&.patch);
+8 printf("But we linked against SDL version %d\&.%d\&.%d\&.\n",
+9        linked\&.major, linked\&.minor, linked\&.patch);
+.fi
+.PP
+.PP
+This function may be called safely at any time, even before \fBSDL_Init()\fP\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_VERSION\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

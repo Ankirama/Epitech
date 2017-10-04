@@ -1,0 +1,274 @@
+\hypertarget{class_xml_save}{}\section{Xml\+Save Class Reference}
+\label{class_xml_save}\index{Xml\+Save@{Xml\+Save}}
+
+
+create xml file (save)  
+
+
+
+
+{\ttfamily \#include $<$Xml\+Save.\+hh$>$}
+
+
+
+Collaboration diagram for Xml\+Save\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{class_xml_save__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_xml_save_a84029bc40fae8324d683821b9013b9f5}{Xml\+Save} (std\+::string const \&filename, int nb\+Players, int nb\+A\+Is)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_xml_save}{Xml\+Save}\textquotesingle{}s constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_xml_save_a87ca85b8767070250050f04dc5d539a4}{}\hyperlink{class_xml_save_a87ca85b8767070250050f04dc5d539a4}{$\sim$\+Xml\+Save} ()\label{class_xml_save_a87ca85b8767070250050f04dc5d539a4}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_xml_save}{Xml\+Save}\textquotesingle{}s destructor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_xml_save_a81baea0e33b9f7d85b1eed8e868cd0d8}{save\+Player} (\hyperlink{class_player}{Player} const \&bomber)
+\begin{DoxyCompactList}\small\item\em save player in xml \end{DoxyCompactList}\item 
+bool \hyperlink{class_xml_save_a33586de72e77757f2c8ec06f98666e9b}{save\+A\+I} (\hyperlink{class_i_a}{I\+A} const \&bomber)
+\begin{DoxyCompactList}\small\item\em save A\+I in xml \end{DoxyCompactList}\item 
+bool \hyperlink{class_xml_save_a25c1aef0c3bc8589dc7224c332a792a1}{save\+Maze} (char const $\ast$map, int width, int width)
+\begin{DoxyCompactList}\small\item\em save maze in xml \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_xml_save_a71f6f21d017db69b6c90e55c31ff01ff}{write\+Texture} (std\+::string const \&filepath)
+\begin{DoxyCompactList}\small\item\em write texture in xml \end{DoxyCompactList}\item 
+void \hyperlink{class_xml_save_a74407fe26dcd64701a6d060d8457a945}{write\+Keys} (int left, int right, int up, int down, int bomb)
+\begin{DoxyCompactList}\small\item\em write keys in xml \end{DoxyCompactList}\item 
+void \hyperlink{class_xml_save_ac4d5271a4ede082a3e5b60f79bea555c}{write\+Bombs} (std\+::vector$<$ \hyperlink{class_bomb}{Bomb} $>$ const \&bombs)
+\begin{DoxyCompactList}\small\item\em write bomber\textquotesingle{}s bombs in xml \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ofstream \hyperlink{class_xml_save_a06964370050c4b4791be4d283cf2e1d3}{m\+\_\+ofs}
+\item 
+\hyperlink{class_xml_write}{Xml\+Write} \hyperlink{class_xml_save_a56f35c6efd7b1a1e2e795bb53dbda194}{m\+\_\+xml\+Write}
+\item 
+int \hyperlink{class_xml_save_a74aefcd3daf12a9bf12ea768459d66b3}{m\+\_\+nb\+Players}
+\item 
+int \hyperlink{class_xml_save_a1fa82deb2905a7882354ef5cb4e96efd}{m\+\_\+nb\+A\+Is}
+\item 
+bool \hyperlink{class_xml_save_a95ea43610318f8de62b9e056c26859c2}{m\+\_\+players\+Done}
+\item 
+bool \hyperlink{class_xml_save_afb6a6d77bda66306dfac234dcae5248e}{m\+\_\+\+A\+I\+Done}
+\item 
+bool \hyperlink{class_xml_save_a8f2184f264a26945bb89eaa0b4e1d1c3}{m\+\_\+players\+Started}
+\item 
+bool \hyperlink{class_xml_save_a29c99f1952be494ebe9fa73275a3e9cc}{m\+\_\+\+A\+Is\+Started}
+\item 
+int \hyperlink{class_xml_save_a35dfc6619f277f16c41b53125036da0e}{m\+\_\+id\+Player}
+\item 
+int \hyperlink{class_xml_save_a13de35f1c25f9d3a0261b08dd9c915ee}{m\+\_\+id\+A\+I}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+create xml file (save) 
+
+Used to save the current \hyperlink{class_game_state}{Game\+State} in a xml file 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_xml_save_a84029bc40fae8324d683821b9013b9f5}{}\index{Xml\+Save@{Xml\+Save}!Xml\+Save@{Xml\+Save}}
+\index{Xml\+Save@{Xml\+Save}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{Xml\+Save}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Save\+::\+Xml\+Save (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{filename, }
+\item[{int}]{nb\+Players, }
+\item[{int}]{nb\+A\+Is}
+\end{DoxyParamCaption}
+)}\label{class_xml_save_a84029bc40fae8324d683821b9013b9f5}
+
+
+\hyperlink{class_xml_save}{Xml\+Save}\textquotesingle{}s constructor. 
+
+Set variables and set stream / xml Object
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & name for our new xml save  Players number (max 2) in the current game  A\+Is number (no limit) in the current game \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_xml_save_a33586de72e77757f2c8ec06f98666e9b}{}\index{Xml\+Save@{Xml\+Save}!save\+A\+I@{save\+A\+I}}
+\index{save\+A\+I@{save\+A\+I}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{save\+A\+I}]{\setlength{\rightskip}{0pt plus 5cm}bool Xml\+Save\+::save\+A\+I (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+A} const \&}]{bomber}
+\end{DoxyParamCaption}
+)}\label{class_xml_save_a33586de72e77757f2c8ec06f98666e9b}
+
+
+save A\+I in xml 
+
+It will save an A\+I in our xml save. It will use a specific pattern / tags to save it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bomber} & A\+I\textquotesingle{}s reference which will be saved \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if we saved it, false if we already saved every A\+I or we didnt\textquotesingle{}t finish with players 
+\end{DoxyReturn}
+\hypertarget{class_xml_save_a25c1aef0c3bc8589dc7224c332a792a1}{}\index{Xml\+Save@{Xml\+Save}!save\+Maze@{save\+Maze}}
+\index{save\+Maze@{save\+Maze}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{save\+Maze}]{\setlength{\rightskip}{0pt plus 5cm}bool Xml\+Save\+::save\+Maze (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{map, }
+\item[{int}]{width, }
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}\label{class_xml_save_a25c1aef0c3bc8589dc7224c332a792a1}
+
+
+save maze in xml 
+
+It will save the maze in our xml save. It will use a specific pattern / tags to save it.
+
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000003}{Bug}]we didnt check if we already added it into our xml file\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & Contains every cell we need to save \\
+\hline
+{\em width} & maze\textquotesingle{}s width \\
+\hline
+{\em height} & maze\textquotesingle{}s height \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if we saved it, false if players / A\+Is aren\textquotesingle{}t done yet 
+\end{DoxyReturn}
+\hypertarget{class_xml_save_a81baea0e33b9f7d85b1eed8e868cd0d8}{}\index{Xml\+Save@{Xml\+Save}!save\+Player@{save\+Player}}
+\index{save\+Player@{save\+Player}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{save\+Player}]{\setlength{\rightskip}{0pt plus 5cm}bool Xml\+Save\+::save\+Player (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} const \&}]{bomber}
+\end{DoxyParamCaption}
+)}\label{class_xml_save_a81baea0e33b9f7d85b1eed8e868cd0d8}
+
+
+save player in xml 
+
+It will save a player in our xml save. It will use a specific pattern / tags to save it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bomber} & player\textquotesingle{}s reference which will be saved \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if we saved it, false if we already saved every player 
+\end{DoxyReturn}
+\hypertarget{class_xml_save_ac4d5271a4ede082a3e5b60f79bea555c}{}\index{Xml\+Save@{Xml\+Save}!write\+Bombs@{write\+Bombs}}
+\index{write\+Bombs@{write\+Bombs}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{write\+Bombs}]{\setlength{\rightskip}{0pt plus 5cm}void Xml\+Save\+::write\+Bombs (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Bomb} $>$ const \&}]{bombs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_save_ac4d5271a4ede082a3e5b60f79bea555c}
+
+
+write bomber\textquotesingle{}s bombs in xml 
+
+It will write bomber\textquotesingle{}s bombs in tag(\char`\"{}bombs\char`\"{})
+
+
+\begin{DoxyParams}{Parameters}
+{\em bombs} & bombs\textquotesingle{} vector we will travel to write into our tag(\char`\"{}bombs\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_xml_save_a74407fe26dcd64701a6d060d8457a945}{}\index{Xml\+Save@{Xml\+Save}!write\+Keys@{write\+Keys}}
+\index{write\+Keys@{write\+Keys}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{write\+Keys}]{\setlength{\rightskip}{0pt plus 5cm}void Xml\+Save\+::write\+Keys (
+\begin{DoxyParamCaption}
+\item[{int}]{left, }
+\item[{int}]{right, }
+\item[{int}]{up, }
+\item[{int}]{down, }
+\item[{int}]{bomb}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_save_a74407fe26dcd64701a6d060d8457a945}
+
+
+write keys in xml 
+
+It will write keys used by a player
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & define for the left action \\
+\hline
+{\em right} & define for the right action \\
+\hline
+{\em up} & define for the up action \\
+\hline
+{\em down} & define for the down action \\
+\hline
+{\em bomb} & define for the bomb action \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_xml_save_a71f6f21d017db69b6c90e55c31ff01ff}{}\index{Xml\+Save@{Xml\+Save}!write\+Texture@{write\+Texture}}
+\index{write\+Texture@{write\+Texture}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{write\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}void Xml\+Save\+::write\+Texture (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{filepath}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_save_a71f6f21d017db69b6c90e55c31ff01ff}
+
+
+write texture in xml 
+
+It will write a texturepath with tag(\char`\"{}texture\char`\"{}) into the current xml
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & Filepath we want to save \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_xml_save_afb6a6d77bda66306dfac234dcae5248e}{}\index{Xml\+Save@{Xml\+Save}!m\+\_\+\+A\+I\+Done@{m\+\_\+\+A\+I\+Done}}
+\index{m\+\_\+\+A\+I\+Done@{m\+\_\+\+A\+I\+Done}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{m\+\_\+\+A\+I\+Done}]{\setlength{\rightskip}{0pt plus 5cm}bool Xml\+Save\+::m\+\_\+\+A\+I\+Done\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_save_afb6a6d77bda66306dfac234dcae5248e}
+true if we wrote all A\+Is, else false \hypertarget{class_xml_save_a29c99f1952be494ebe9fa73275a3e9cc}{}\index{Xml\+Save@{Xml\+Save}!m\+\_\+\+A\+Is\+Started@{m\+\_\+\+A\+Is\+Started}}
+\index{m\+\_\+\+A\+Is\+Started@{m\+\_\+\+A\+Is\+Started}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{m\+\_\+\+A\+Is\+Started}]{\setlength{\rightskip}{0pt plus 5cm}bool Xml\+Save\+::m\+\_\+\+A\+Is\+Started\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_save_a29c99f1952be494ebe9fa73275a3e9cc}
+set to true when we start to write A\+Is. Used to add tag(\char`\"{}\+A\+Is\char`\"{}) \hypertarget{class_xml_save_a13de35f1c25f9d3a0261b08dd9c915ee}{}\index{Xml\+Save@{Xml\+Save}!m\+\_\+id\+A\+I@{m\+\_\+id\+A\+I}}
+\index{m\+\_\+id\+A\+I@{m\+\_\+id\+A\+I}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{m\+\_\+id\+A\+I}]{\setlength{\rightskip}{0pt plus 5cm}int Xml\+Save\+::m\+\_\+id\+A\+I\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_save_a13de35f1c25f9d3a0261b08dd9c915ee}
+current A\+I\textquotesingle{}s id to check if we have another A\+I to add \hypertarget{class_xml_save_a35dfc6619f277f16c41b53125036da0e}{}\index{Xml\+Save@{Xml\+Save}!m\+\_\+id\+Player@{m\+\_\+id\+Player}}
+\index{m\+\_\+id\+Player@{m\+\_\+id\+Player}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{m\+\_\+id\+Player}]{\setlength{\rightskip}{0pt plus 5cm}int Xml\+Save\+::m\+\_\+id\+Player\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_save_a35dfc6619f277f16c41b53125036da0e}
+current player\textquotesingle{}s id to check if we have another player to add \hypertarget{class_xml_save_a1fa82deb2905a7882354ef5cb4e96efd}{}\index{Xml\+Save@{Xml\+Save}!m\+\_\+nb\+A\+Is@{m\+\_\+nb\+A\+Is}}
+\index{m\+\_\+nb\+A\+Is@{m\+\_\+nb\+A\+Is}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{m\+\_\+nb\+A\+Is}]{\setlength{\rightskip}{0pt plus 5cm}int Xml\+Save\+::m\+\_\+nb\+A\+Is\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_save_a1fa82deb2905a7882354ef5cb4e96efd}
+number A\+Is used to check if we wrote all and to close A\+Is element into our xml \hypertarget{class_xml_save_a74aefcd3daf12a9bf12ea768459d66b3}{}\index{Xml\+Save@{Xml\+Save}!m\+\_\+nb\+Players@{m\+\_\+nb\+Players}}
+\index{m\+\_\+nb\+Players@{m\+\_\+nb\+Players}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{m\+\_\+nb\+Players}]{\setlength{\rightskip}{0pt plus 5cm}int Xml\+Save\+::m\+\_\+nb\+Players\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_save_a74aefcd3daf12a9bf12ea768459d66b3}
+number players used to check if we wrote all and to close players element into our xml \hypertarget{class_xml_save_a06964370050c4b4791be4d283cf2e1d3}{}\index{Xml\+Save@{Xml\+Save}!m\+\_\+ofs@{m\+\_\+ofs}}
+\index{m\+\_\+ofs@{m\+\_\+ofs}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{m\+\_\+ofs}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ofstream Xml\+Save\+::m\+\_\+ofs\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_save_a06964370050c4b4791be4d283cf2e1d3}
+Stream used to write into our file \hypertarget{class_xml_save_a95ea43610318f8de62b9e056c26859c2}{}\index{Xml\+Save@{Xml\+Save}!m\+\_\+players\+Done@{m\+\_\+players\+Done}}
+\index{m\+\_\+players\+Done@{m\+\_\+players\+Done}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{m\+\_\+players\+Done}]{\setlength{\rightskip}{0pt plus 5cm}bool Xml\+Save\+::m\+\_\+players\+Done\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_save_a95ea43610318f8de62b9e056c26859c2}
+true if we wrote all players, else false \hypertarget{class_xml_save_a8f2184f264a26945bb89eaa0b4e1d1c3}{}\index{Xml\+Save@{Xml\+Save}!m\+\_\+players\+Started@{m\+\_\+players\+Started}}
+\index{m\+\_\+players\+Started@{m\+\_\+players\+Started}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{m\+\_\+players\+Started}]{\setlength{\rightskip}{0pt plus 5cm}bool Xml\+Save\+::m\+\_\+players\+Started\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_save_a8f2184f264a26945bb89eaa0b4e1d1c3}
+set to true when we start to write players. Used to add tag(\char`\"{}players\char`\"{}) \hypertarget{class_xml_save_a56f35c6efd7b1a1e2e795bb53dbda194}{}\index{Xml\+Save@{Xml\+Save}!m\+\_\+xml\+Write@{m\+\_\+xml\+Write}}
+\index{m\+\_\+xml\+Write@{m\+\_\+xml\+Write}!Xml\+Save@{Xml\+Save}}
+\subsubsection[{m\+\_\+xml\+Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Xml\+Write} Xml\+Save\+::m\+\_\+xml\+Write\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_save_a56f35c6efd7b1a1e2e795bb53dbda194}
+xml object to write an xml file 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Xml\+Save.\+hh\end{DoxyCompactItemize}

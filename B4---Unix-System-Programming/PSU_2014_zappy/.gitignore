@@ -1,0 +1,5 @@
+logs/**/*
+src/**/*.o
+src/**/*.~
+zappy_ai
+zappy_server

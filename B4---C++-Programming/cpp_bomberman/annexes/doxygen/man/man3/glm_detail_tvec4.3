@@ -1,0 +1,371 @@
+.TH "glm::detail::tvec4< T >" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+glm::detail::tvec4< T > \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBctor\fP { \fBnull\fP }"
+.br
+.ti -1c
+.RI "typedef T \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef std::size_t \fBsize_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBtvec4\fP< T > \fBtype\fP"
+.br
+.ti -1c
+.RI "typedef \fBtvec4\fP< bool > \fBbool_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "GLM_FUNC_DECL GLM_CONSTEXPR size_type \fBlength\fP () const "
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL value_type & \fBoperator[]\fP (size_type i)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL value_type const & \fBoperator[]\fP (size_type i) const "
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec4\fP (\fBtype\fP const &v)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec4\fP (ctor)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec4\fP (value_type const &s)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec4\fP (value_type const &s0, value_type const &s1, value_type const &s2, value_type const &s3)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP (U const &x)"
+.br
+.RI "\fIExplicit converions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename A , typename B , typename C , typename D > GLM_FUNC_DECL \fBtvec4\fP (A const &x, B const &y, C const &z, D const &w)"
+.br
+.RI "\fIExplicit converions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename A , typename B , typename C > GLM_FUNC_DECL \fBtvec4\fP (\fBtvec2\fP< A > const &v, B const &s1, C const &s2)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename A , typename B , typename C > GLM_FUNC_DECL \fBtvec4\fP (A const &s1, \fBtvec2\fP< B > const &v, C const &s2)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename A , typename B , typename C > GLM_FUNC_DECL \fBtvec4\fP (A const &s1, B const &s2, \fBtvec2\fP< C > const &v)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename A , typename B > GLM_FUNC_DECL \fBtvec4\fP (\fBtvec3\fP< A > const &v, B const &s)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename A , typename B > GLM_FUNC_DECL \fBtvec4\fP (A const &s, \fBtvec3\fP< B > const &v)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename A , typename B > GLM_FUNC_DECL \fBtvec4\fP (\fBtvec2\fP< A > const &v1, \fBtvec2\fP< B > const &v2)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP (\fBtvec4\fP< U > const &v)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<int E0, int E1, int E2, int E3> GLM_FUNC_DECL \fBtvec4\fP (\fBglm::detail::swizzle\fP< 4, T, \fBtvec4\fP< T >, E0, E1, E2, E3 > const &that)"
+.br
+.ti -1c
+.RI "template<int E0, int E1, int F0, int F1> GLM_FUNC_DECL \fBtvec4\fP (\fBglm::detail::swizzle\fP< 2, T, \fBtvec2\fP< T >, E0, E1,-1,-2 > const &v, \fBglm::detail::swizzle\fP< 2, T, \fBtvec2\fP< T >, F0, F1,-1,-2 > const &u)"
+.br
+.ti -1c
+.RI "template<int E0, int E1> GLM_FUNC_DECL \fBtvec4\fP (T const &x, T const &y, \fBglm::detail::swizzle\fP< 2, T, \fBtvec2\fP< T >, E0, E1,-1,-2 > const &v)"
+.br
+.ti -1c
+.RI "template<int E0, int E1> GLM_FUNC_DECL \fBtvec4\fP (T const &x, \fBglm::detail::swizzle\fP< 2, T, \fBtvec2\fP< T >, E0, E1,-1,-2 > const &v, T const &w)"
+.br
+.ti -1c
+.RI "template<int E0, int E1> GLM_FUNC_DECL \fBtvec4\fP (\fBglm::detail::swizzle\fP< 2, T, \fBtvec2\fP< T >, E0, E1,-1,-2 > const &v, T const &z, T const &w)"
+.br
+.ti -1c
+.RI "template<int E0, int E1, int E2> GLM_FUNC_DECL \fBtvec4\fP (\fBglm::detail::swizzle\fP< 3, T, \fBtvec3\fP< T >, E0, E1, E2,-1 > const &v, T const &w)"
+.br
+.ti -1c
+.RI "template<int E0, int E1, int E2> GLM_FUNC_DECL \fBtvec4\fP (T const &x, \fBglm::detail::swizzle\fP< 3, T, \fBtvec3\fP< T >, E0, E1, E2,-1 > const &v)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec4\fP (\fBtref4\fP< T > const &r)"
+.br
+.ti -1c
+.RI "template<typename A , typename B , typename C > GLM_FUNC_DECL \fBtvec4\fP (\fBtref2\fP< A > const &v, B const &s1, C const &s2)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename A , typename B , typename C > GLM_FUNC_DECL \fBtvec4\fP (A const &s1, \fBtref2\fP< B > const &v, C const &s2)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename A , typename B , typename C > GLM_FUNC_DECL \fBtvec4\fP (A const &s1, B const &s2, \fBtref2\fP< C > const &v)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename A , typename B > GLM_FUNC_DECL \fBtvec4\fP (\fBtref3\fP< A > const &v, B const &s)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename A , typename B > GLM_FUNC_DECL \fBtvec4\fP (A const &s, \fBtref3\fP< B > const &v)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename A , typename B > GLM_FUNC_DECL \fBtvec4\fP (\fBtref2\fP< A > const &v1, \fBtref2\fP< B > const &v2)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename A , typename B > GLM_FUNC_DECL \fBtvec4\fP (\fBtvec2\fP< A > const &v1, \fBtref2\fP< B > const &v2)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename A , typename B > GLM_FUNC_DECL \fBtvec4\fP (\fBtref2\fP< A > const &v1, \fBtvec2\fP< B > const &v2)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator=\fP (\fBtvec4\fP< T > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator+=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator+=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator-=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator-=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator*=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator*=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator/=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator/=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator++\fP ()"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator--\fP ()"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator%=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator%=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator&=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator&=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator|=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator|=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator^=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator^=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator<<=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator<<=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator>>=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec4\fP< T > & \fBoperator>>=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL value_type \fBswizzle\fP (comp X) const "
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec2\fP< T > \fBswizzle\fP (comp X, comp Y) const "
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec3\fP< T > \fBswizzle\fP (comp X, comp Y, comp Z) const "
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec4\fP< T > \fBswizzle\fP (comp X, comp Y, comp Z, comp W) const "
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtref2\fP< T > \fBswizzle\fP (comp X, comp Y)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtref3\fP< T > \fBswizzle\fP (comp X, comp Y, comp Z)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtref4\fP< T > \fBswizzle\fP (comp X, comp Y, comp Z, comp W)"
+.br
+.ti -1c
+.RI "template<typename A, typename B, typename C> GLM_FUNC_QUALIFIER \fBtvec4\fP (\fBtref2\fP< A > const &v, B const &s1, C const &s2)"
+.br
+.ti -1c
+.RI "template<typename A, typename B, typename C> GLM_FUNC_QUALIFIER \fBtvec4\fP (A const &s1, \fBtref2\fP< B > const &v, C const &s2)"
+.br
+.ti -1c
+.RI "template<typename A, typename B, typename C> GLM_FUNC_QUALIFIER \fBtvec4\fP (A const &s1, B const &s2, \fBtref2\fP< C > const &v)"
+.br
+.ti -1c
+.RI "template<typename A, typename B> GLM_FUNC_QUALIFIER \fBtvec4\fP (\fBtref3\fP< A > const &v, B const &s)"
+.br
+.ti -1c
+.RI "template<typename A, typename B> GLM_FUNC_QUALIFIER \fBtvec4\fP (A const &s, \fBtref3\fP< B > const &v)"
+.br
+.ti -1c
+.RI "template<typename A, typename B> GLM_FUNC_QUALIFIER \fBtvec4\fP (\fBtref2\fP< A > const &v1, \fBtref2\fP< B > const &v2)"
+.br
+.ti -1c
+.RI "template<typename A, typename B> GLM_FUNC_QUALIFIER \fBtvec4\fP (\fBtvec2\fP< A > const &v1, \fBtref2\fP< B > const &v2)"
+.br
+.ti -1c
+.RI "template<typename A, typename B> GLM_FUNC_QUALIFIER \fBtvec4\fP (\fBtref2\fP< A > const &v1, \fBtvec2\fP< B > const &v2)"
+.br
+.ti -1c
+.RI "template<typename U> GLM_FUNC_QUALIFIER \fBtvec4\fP (U const &x)"
+.br
+.ti -1c
+.RI "template<typename A, typename B, typename C, typename D> GLM_FUNC_QUALIFIER \fBtvec4\fP (A const &x, B const &y, C const &z, D const &w)"
+.br
+.ti -1c
+.RI "template<typename A, typename B, typename C> GLM_FUNC_QUALIFIER \fBtvec4\fP (\fBtvec2\fP< A > const &v, B const &s1, C const &s2)"
+.br
+.ti -1c
+.RI "template<typename A, typename B, typename C> GLM_FUNC_QUALIFIER \fBtvec4\fP (A const &s1, \fBtvec2\fP< B > const &v, C const &s2)"
+.br
+.ti -1c
+.RI "template<typename A, typename B, typename C> GLM_FUNC_QUALIFIER \fBtvec4\fP (A const &s1, B const &s2, \fBtvec2\fP< C > const &v)"
+.br
+.ti -1c
+.RI "template<typename A, typename B> GLM_FUNC_QUALIFIER \fBtvec4\fP (\fBtvec3\fP< A > const &v, B const &s)"
+.br
+.ti -1c
+.RI "template<typename A, typename B> GLM_FUNC_QUALIFIER \fBtvec4\fP (A const &s, \fBtvec3\fP< B > const &v)"
+.br
+.ti -1c
+.RI "template<typename A, typename B> GLM_FUNC_QUALIFIER \fBtvec4\fP (\fBtvec2\fP< A > const &v1, \fBtvec2\fP< B > const &v2)"
+.br
+.ti -1c
+.RI "template<typename U> GLM_FUNC_QUALIFIER \fBtvec4\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator+=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator+=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator-=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator-=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator*=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator*=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator/=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator/=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator%=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator%=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator&=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator&=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator|=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator|=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator^=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator^=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator<<=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator<<=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator>>=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec4\fP< T > & \fBoperator>>=\fP (\fBtvec4\fP< U > const &v)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "value_type \fBx\fP"
+.br
+.ti -1c
+.RI "value_type \fBy\fP"
+.br
+.ti -1c
+.RI "value_type \fBz\fP"
+.br
+.ti -1c
+.RI "value_type \fBw\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

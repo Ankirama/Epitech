@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_acceuil"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Home"/>
+        <item
+            android:id="@+id/nav_planning"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Planning"/>
+        <item
+            android:id="@+id/nav_module"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Module"/>
+        <item
+            android:id="@+id/nav_trombi"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Trombi"/>
+    </group>
+
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Settings"/>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Log Out"/>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,190 @@
+.TH "core_func_vector_relational" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+core_func_vector_relational \- Vector Relational Functions
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename vecType > GLM_FUNC_DECL vecType::bool_type \fBglm::lessThan\fP (vecType const &x, vecType const &y)"
+.br
+.ti -1c
+.RI "template<typename vecType > GLM_FUNC_DECL vecType::bool_type \fBglm::lessThanEqual\fP (vecType const &x, vecType const &y)"
+.br
+.ti -1c
+.RI "template<typename vecType > GLM_FUNC_DECL vecType::bool_type \fBglm::greaterThan\fP (vecType const &x, vecType const &y)"
+.br
+.ti -1c
+.RI "template<typename vecType > GLM_FUNC_DECL vecType::bool_type \fBglm::greaterThanEqual\fP (vecType const &x, vecType const &y)"
+.br
+.ti -1c
+.RI "template<typename vecType > GLM_FUNC_DECL vecType::bool_type \fBglm::equal\fP (vecType const &x, vecType const &y)"
+.br
+.ti -1c
+.RI "template<typename vecType > GLM_FUNC_DECL vecType::bool_type \fBglm::notEqual\fP (vecType const &x, vecType const &y)"
+.br
+.ti -1c
+.RI "template<template< typename > class vecType> GLM_FUNC_DECL bool \fBglm::any\fP (vecType< bool > const &v)"
+.br
+.ti -1c
+.RI "template<template< typename > class vecType> GLM_FUNC_DECL bool \fBglm::all\fP (vecType< bool > const &v)"
+.br
+.ti -1c
+.RI "template<template< typename > class vecType> GLM_FUNC_DECL vecType< bool > \fBglm::not_\fP (vecType< bool > const &v)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Relational and equality operators (<, <=, >, >=, ==, !=) are defined to operate on scalars and produce scalar Boolean results\&. For vector results, use the following built-in functions\&.
+.PP
+In all cases, the sizes of all the input and return vectors for any particular call must match\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<template< typename > class vecType> GLM_FUNC_DECL bool glm::all (vecType< bool > const & v)"
+Returns true if all components of x are true\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvecType\fP Boolean vector types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL all man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.7 Vector Relational Functions\fP 
+.RE
+.PP
+
+.SS "template<template< typename > class vecType> GLM_FUNC_DECL bool glm::any (vecType< bool > const & v)"
+Returns true if any component of x is true\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvecType\fP Boolean vector types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL any man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.7 Vector Relational Functions\fP 
+.RE
+.PP
+
+.SS "template<typename vecType > GLM_FUNC_DECL vecType::bool_type glm::equal (vecType const & x, vecType const & y)"
+Returns the component-wise comparison of result x == y\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvecType\fP Floating-point, integer or boolean vector types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL equal man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.7 Vector Relational Functions\fP 
+.RE
+.PP
+
+.SS "template<typename vecType > GLM_FUNC_DECL vecType::bool_type glm::greaterThan (vecType const & x, vecType const & y)"
+Returns the component-wise comparison of result x > y\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvecType\fP Floating-point or integer vector types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL greaterThan man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.7 Vector Relational Functions\fP 
+.RE
+.PP
+
+.SS "template<typename vecType > GLM_FUNC_DECL vecType::bool_type glm::greaterThanEqual (vecType const & x, vecType const & y)"
+Returns the component-wise comparison of result x >= y\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvecType\fP Floating-point or integer vector types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL greaterThanEqual man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.7 Vector Relational Functions\fP 
+.RE
+.PP
+
+.SS "template<typename vecType > GLM_FUNC_DECL vecType::bool_type glm::lessThan (vecType const & x, vecType const & y)"
+Returns the component-wise comparison result of x < y\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvecType\fP Floating-point or integer vector types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL lessThan man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.7 Vector Relational Functions\fP 
+.RE
+.PP
+
+.SS "template<typename vecType > GLM_FUNC_DECL vecType::bool_type glm::lessThanEqual (vecType const & x, vecType const & y)"
+Returns the component-wise comparison of result x <= y\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvecType\fP Floating-point or integer vector types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL lessThanEqual man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.7 Vector Relational Functions\fP 
+.RE
+.PP
+
+.SS "template<template< typename > class vecType> GLM_FUNC_DECL vecType<bool> glm::not_ (vecType< bool > const & v)"
+Returns the component-wise logical complement of x\&. /!\\ Because of language incompatibilities between C++ and GLSL, GLM defines the function not but not_ instead\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvecType\fP Boolean vector types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL not man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.7 Vector Relational Functions\fP 
+.RE
+.PP
+
+.SS "template<typename vecType > GLM_FUNC_DECL vecType::bool_type glm::notEqual (vecType const & x, vecType const & y)"
+Returns the component-wise comparison of result x != y\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvecType\fP Floating-point, integer or boolean vector types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL notEqual man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.7 Vector Relational Functions\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

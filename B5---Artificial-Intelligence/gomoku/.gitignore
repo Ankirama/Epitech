@@ -1,0 +1,4 @@
+.idea/
+gomoku/.idea/gomoku.iml
+gomoku/.idea/workspace.xml
+moc_*.cpp

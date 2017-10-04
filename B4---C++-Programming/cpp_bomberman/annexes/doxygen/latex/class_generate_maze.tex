@@ -1,0 +1,368 @@
+\hypertarget{class_generate_maze}{}\section{Generate\+Maze Class Reference}
+\label{class_generate_maze}\index{Generate\+Maze@{Generate\+Maze}}
+
+
+Generate maze (char $\ast$)  
+
+
+
+
+{\ttfamily \#include $<$Generate\+Maze.\+hh$>$}
+
+
+
+Collaboration diagram for Generate\+Maze\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_generate_maze__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_generate_maze_a4e31a3b0529f072fc09a779410303d11}{create} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Generate normal map (like bomberman) \end{DoxyCompactList}\item 
+void \hyperlink{class_generate_maze_abdbe8f10919c803ae559c13b449290ee}{create\+Random} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Generate random map. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{class_generate_maze_a2d6a889698a8b71473935c7b31b7f31e}{get\+Map} () const 
+\begin{DoxyCompactList}\small\item\em get the map generated \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \& \hyperlink{class_generate_maze_ada26aa042e28e5079c4a49365a1ea4f1}{get\+Empty\+Cells} ()
+\begin{DoxyCompactList}\small\item\em get empty cells in map \end{DoxyCompactList}\item 
+void \hyperlink{class_generate_maze_abf66b22d2f1d741304f4aab7929f1d53}{set\+Cell} (int x, int y, int id\+\_\+cell)
+\begin{DoxyCompactList}\small\item\em set a cell in the map \end{DoxyCompactList}\item 
+int \hyperlink{class_generate_maze_a71c4607fe4a0086f259ef32b2400ac87}{get\+Cell} (int x, int y)
+\begin{DoxyCompactList}\small\item\em get a cell in the map \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_generate_maze}{Generate\+Maze} \& \hyperlink{class_generate_maze_a27d12dc6eb88baa39e7b08c6057fc67c}{get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Used to return the current instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_generate_maze}{Generate\+Maze} \& \hyperlink{class_generate_maze_a8f367f5138321bebadd37f8f9ff08c29}{operator=} (const \hyperlink{class_generate_maze}{Generate\+Maze} \&)
+\begin{DoxyCompactList}\small\item\em private = operator to unable it \end{DoxyCompactList}\item 
+\hyperlink{class_generate_maze_aab170aa3141ef70c69c8e753fba22468}{Generate\+Maze} (const \hyperlink{class_generate_maze}{Generate\+Maze} \&)
+\begin{DoxyCompactList}\small\item\em private copy constructor \end{DoxyCompactList}\item 
+\hyperlink{class_generate_maze_a83710de04bb1b6b52668a2abde742e83}{Generate\+Maze} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_generate_maze}{Generate\+Maze}\textquotesingle{}s constructor private. \end{DoxyCompactList}\item 
+\hyperlink{class_generate_maze_a83513ab14774522438bb4620c289ed78}{$\sim$\+Generate\+Maze} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_generate_maze}{Generate\+Maze}\textquotesingle{}s destructor private. \end{DoxyCompactList}\item 
+void \hyperlink{class_generate_maze_aa199035f12556e690b7c980b7c9d358a}{init} (int width, int height)
+\begin{DoxyCompactList}\small\item\em init map for create \end{DoxyCompactList}\item 
+void \hyperlink{class_generate_maze_a8f21aa8627b9ced7a78138153d812316}{init\+Random} (int width, int height)
+\begin{DoxyCompactList}\small\item\em init map for create\+Random \end{DoxyCompactList}\item 
+int \hyperlink{class_generate_maze_a2fee93d99775cd7f9cda479204fed46a}{random\+Direction} () const 
+\begin{DoxyCompactList}\small\item\em random in 0 -\/ 3 (included) \end{DoxyCompactList}\item 
+bool \hyperlink{class_generate_maze_a2ff0a651fad57900b159d854847966d4}{set\+Wall} (int x, int y, int x\+Modifier, int y\+Modifier)
+\begin{DoxyCompactList}\small\item\em intern function for create\+Random \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_generate_maze_a0e05d9502767072ef2a613cf04cc9a20}{m\+\_\+width}
+\item 
+int \hyperlink{class_generate_maze_ac5c329940fd0c21779030d525884a792}{m\+\_\+height}
+\item 
+char $\ast$ \hyperlink{class_generate_maze_ac04e93698e6c2d8a3dc995eb592403e5}{m\+\_\+maze}
+\item 
+std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \hyperlink{class_generate_maze_aa4689e1f2afaf68008f93f7ce6409882}{m\+\_\+empty\+Cell}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_generate_maze}{Generate\+Maze} \hyperlink{class_generate_maze_a1d2abbee3d246f1a657934fca6916c0f}{m\+\_\+instance}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generate maze (char $\ast$) 
+
+Singleton to create a specific map 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_generate_maze_aab170aa3141ef70c69c8e753fba22468}{}\index{Generate\+Maze@{Generate\+Maze}!Generate\+Maze@{Generate\+Maze}}
+\index{Generate\+Maze@{Generate\+Maze}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{Generate\+Maze}]{\setlength{\rightskip}{0pt plus 5cm}Generate\+Maze\+::\+Generate\+Maze (
+\begin{DoxyParamCaption}
+\item[{const {\bf Generate\+Maze} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_generate_maze_aab170aa3141ef70c69c8e753fba22468}
+
+
+private copy constructor 
+
+Unused \hypertarget{class_generate_maze_a83710de04bb1b6b52668a2abde742e83}{}\index{Generate\+Maze@{Generate\+Maze}!Generate\+Maze@{Generate\+Maze}}
+\index{Generate\+Maze@{Generate\+Maze}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{Generate\+Maze}]{\setlength{\rightskip}{0pt plus 5cm}Generate\+Maze\+::\+Generate\+Maze (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_maze_a83710de04bb1b6b52668a2abde742e83}
+
+
+\hyperlink{class_generate_maze}{Generate\+Maze}\textquotesingle{}s constructor private. 
+
+Used to create a static instance (singleton) We will set default value for width, height and maze. \hypertarget{class_generate_maze_a83513ab14774522438bb4620c289ed78}{}\index{Generate\+Maze@{Generate\+Maze}!````~Generate\+Maze@{$\sim$\+Generate\+Maze}}
+\index{````~Generate\+Maze@{$\sim$\+Generate\+Maze}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{$\sim$\+Generate\+Maze}]{\setlength{\rightskip}{0pt plus 5cm}Generate\+Maze\+::$\sim$\+Generate\+Maze (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_maze_a83513ab14774522438bb4620c289ed78}
+
+
+\hyperlink{class_generate_maze}{Generate\+Maze}\textquotesingle{}s destructor private. 
+
+Used to destroy instance. It will delete the maze. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_generate_maze_a4e31a3b0529f072fc09a779410303d11}{}\index{Generate\+Maze@{Generate\+Maze}!create@{create}}
+\index{create@{create}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}void Generate\+Maze\+::create (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\label{class_generate_maze_a4e31a3b0529f072fc09a779410303d11}
+
+
+Generate normal map (like bomberman) 
+
+It will call the init private function and generate a map
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & the maze\textquotesingle{}s width \\
+\hline
+{\em heigth} & the maze\textquotesingle{}s height \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_generate_maze_abdbe8f10919c803ae559c13b449290ee}{}\index{Generate\+Maze@{Generate\+Maze}!create\+Random@{create\+Random}}
+\index{create\+Random@{create\+Random}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{create\+Random}]{\setlength{\rightskip}{0pt plus 5cm}void Generate\+Maze\+::create\+Random (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\label{class_generate_maze_abdbe8f10919c803ae559c13b449290ee}
+
+
+Generate random map. 
+
+It will call create random map with specific width / height
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & the maze\textquotesingle{}s width \\
+\hline
+{\em height} & the maze\textquotesingle{}s height \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_generate_maze_a71c4607fe4a0086f259ef32b2400ac87}{}\index{Generate\+Maze@{Generate\+Maze}!get\+Cell@{get\+Cell}}
+\index{get\+Cell@{get\+Cell}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{get\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}int Generate\+Maze\+::get\+Cell (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{class_generate_maze_a71c4607fe4a0086f259ef32b2400ac87}
+
+
+get a cell in the map 
+
+Get a cell with specific x and y position
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the x\textquotesingle{}s position in map we want to get \\
+\hline
+{\em y} & the y\textquotesingle{}s position in map we want to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Get the cell\textquotesingle{}s id like wall, empty etc 
+\end{DoxyReturn}
+\hypertarget{class_generate_maze_ada26aa042e28e5079c4a49365a1ea4f1}{}\index{Generate\+Maze@{Generate\+Maze}!get\+Empty\+Cells@{get\+Empty\+Cells}}
+\index{get\+Empty\+Cells@{get\+Empty\+Cells}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{get\+Empty\+Cells}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::pair $<$int, int$>$ $>$\& Generate\+Maze\+::get\+Empty\+Cells (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_generate_maze_ada26aa042e28e5079c4a49365a1ea4f1}
+
+
+get empty cells in map 
+
+Get the empty cells in the map generated
+
+\begin{DoxyReturn}{Returns}
+Cells\textquotesingle{} vector with empty\textquotesingle{}s position 
+\end{DoxyReturn}
+\hypertarget{class_generate_maze_a27d12dc6eb88baa39e7b08c6057fc67c}{}\index{Generate\+Maze@{Generate\+Maze}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{get\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Generate\+Maze}\& Generate\+Maze\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_generate_maze_a27d12dc6eb88baa39e7b08c6057fc67c}
+
+
+Used to return the current instance. 
+
+Our class is a singleton so we need a function to use it
+
+\begin{DoxyReturn}{Returns}
+the current class\textquotesingle{}s instance 
+\end{DoxyReturn}
+\hypertarget{class_generate_maze_a2d6a889698a8b71473935c7b31b7f31e}{}\index{Generate\+Maze@{Generate\+Maze}!get\+Map@{get\+Map}}
+\index{get\+Map@{get\+Map}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{get\+Map}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Generate\+Maze\+::get\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_generate_maze_a2d6a889698a8b71473935c7b31b7f31e}
+
+
+get the map generated 
+
+Get the map generated by create or create\+Random Or null if no map generated
+
+\begin{DoxyReturn}{Returns}
+Current map generated 
+\end{DoxyReturn}
+\hypertarget{class_generate_maze_aa199035f12556e690b7c980b7c9d358a}{}\index{Generate\+Maze@{Generate\+Maze}!init@{init}}
+\index{init@{init}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Generate\+Maze\+::init (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_maze_aa199035f12556e690b7c980b7c9d358a}
+
+
+init map for create 
+
+Init map with specific pattern (like bomberman)
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & maze\textquotesingle{}s width size \\
+\hline
+{\em height} & maze\textquotesingle{}s height size \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_generate_maze_a8f21aa8627b9ced7a78138153d812316}{}\index{Generate\+Maze@{Generate\+Maze}!init\+Random@{init\+Random}}
+\index{init\+Random@{init\+Random}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{init\+Random}]{\setlength{\rightskip}{0pt plus 5cm}void Generate\+Maze\+::init\+Random (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_maze_a8f21aa8627b9ced7a78138153d812316}
+
+
+init map for create\+Random 
+
+init map for create\+Random with I\+D\+\_\+\+W\+A\+L\+L or I\+D\+\_\+\+B\+L\+O\+C\+K
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & maze\textquotesingle{}s width size \\
+\hline
+{\em height} & maze\textquotesingle{}s height size \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_generate_maze_a8f367f5138321bebadd37f8f9ff08c29}{}\index{Generate\+Maze@{Generate\+Maze}!operator=@{operator=}}
+\index{operator=@{operator=}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Generate\+Maze}\& Generate\+Maze\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Generate\+Maze} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_maze_a8f367f5138321bebadd37f8f9ff08c29}
+
+
+private = operator to unable it 
+
+Unused and undefined \hypertarget{class_generate_maze_a2fee93d99775cd7f9cda479204fed46a}{}\index{Generate\+Maze@{Generate\+Maze}!random\+Direction@{random\+Direction}}
+\index{random\+Direction@{random\+Direction}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{random\+Direction}]{\setlength{\rightskip}{0pt plus 5cm}int Generate\+Maze\+::random\+Direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_maze_a2fee93d99775cd7f9cda479204fed46a}
+
+
+random in 0 -\/ 3 (included) 
+
+It will generate with random\+\_\+device, mt19937 and uniform\+\_\+int\+\_\+distribution a number in 0 -\/ 3 (included)
+
+\begin{DoxyReturn}{Returns}
+A number in 0 -\/ 3 (included) 
+\end{DoxyReturn}
+\hypertarget{class_generate_maze_abf66b22d2f1d741304f4aab7929f1d53}{}\index{Generate\+Maze@{Generate\+Maze}!set\+Cell@{set\+Cell}}
+\index{set\+Cell@{set\+Cell}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{set\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}void Generate\+Maze\+::set\+Cell (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{id\+\_\+cell}
+\end{DoxyParamCaption}
+)}\label{class_generate_maze_abf66b22d2f1d741304f4aab7929f1d53}
+
+
+set a cell in the map 
+
+it will a set a cell in the map with an id
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the x\textquotesingle{}s position in map we want to set \\
+\hline
+{\em y} & the y\textquotesingle{}s position in map we want to set \\
+\hline
+{\em id\+\_\+cell} & set the cell with specific id (like wall etc) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_generate_maze_a2ff0a651fad57900b159d854847966d4}{}\index{Generate\+Maze@{Generate\+Maze}!set\+Wall@{set\+Wall}}
+\index{set\+Wall@{set\+Wall}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{set\+Wall}]{\setlength{\rightskip}{0pt plus 5cm}bool Generate\+Maze\+::set\+Wall (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{x\+Modifier, }
+\item[{int}]{y\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_maze_a2ff0a651fad57900b159d854847966d4}
+
+
+intern function for create\+Random 
+
+Check if the new position is a valid one in create\+Random\textquotesingle{}s algo
+
+current x\textquotesingle{}s position in the map  current y\textquotesingle{}s position in the map  modifier we want to apply on our current position (like 1, -\/1, ...)  modifier we want to apply on our current position (like 1, -\/1, ...) \begin{DoxyReturn}{Returns}
+true if the new position isn\textquotesingle{}t valid else false 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_generate_maze_aa4689e1f2afaf68008f93f7ce6409882}{}\index{Generate\+Maze@{Generate\+Maze}!m\+\_\+empty\+Cell@{m\+\_\+empty\+Cell}}
+\index{m\+\_\+empty\+Cell@{m\+\_\+empty\+Cell}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{m\+\_\+empty\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::pair $<$int, int$>$ $>$ Generate\+Maze\+::m\+\_\+empty\+Cell\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_maze_aa4689e1f2afaf68008f93f7ce6409882}
+used to increase cell research \hypertarget{class_generate_maze_ac5c329940fd0c21779030d525884a792}{}\index{Generate\+Maze@{Generate\+Maze}!m\+\_\+height@{m\+\_\+height}}
+\index{m\+\_\+height@{m\+\_\+height}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{m\+\_\+height}]{\setlength{\rightskip}{0pt plus 5cm}int Generate\+Maze\+::m\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_maze_ac5c329940fd0c21779030d525884a792}
+maze\textquotesingle{}s height we will generate \hypertarget{class_generate_maze_a1d2abbee3d246f1a657934fca6916c0f}{}\index{Generate\+Maze@{Generate\+Maze}!m\+\_\+instance@{m\+\_\+instance}}
+\index{m\+\_\+instance@{m\+\_\+instance}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{m\+\_\+instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Generate\+Maze} Generate\+Maze\+::m\+\_\+instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_generate_maze_a1d2abbee3d246f1a657934fca6916c0f}
+used in singleton \hypertarget{class_generate_maze_ac04e93698e6c2d8a3dc995eb592403e5}{}\index{Generate\+Maze@{Generate\+Maze}!m\+\_\+maze@{m\+\_\+maze}}
+\index{m\+\_\+maze@{m\+\_\+maze}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{m\+\_\+maze}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Generate\+Maze\+::m\+\_\+maze\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_maze_ac04e93698e6c2d8a3dc995eb592403e5}
+the maze generated will be hold here \hypertarget{class_generate_maze_a0e05d9502767072ef2a613cf04cc9a20}{}\index{Generate\+Maze@{Generate\+Maze}!m\+\_\+width@{m\+\_\+width}}
+\index{m\+\_\+width@{m\+\_\+width}!Generate\+Maze@{Generate\+Maze}}
+\subsubsection[{m\+\_\+width}]{\setlength{\rightskip}{0pt plus 5cm}int Generate\+Maze\+::m\+\_\+width\hspace{0.3cm}{\ttfamily [private]}}\label{class_generate_maze_a0e05d9502767072ef2a613cf04cc9a20}
+maze\textquotesingle{}s width we will generate 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_generate_maze_8hh}{Generate\+Maze.\+hh}\end{DoxyCompactItemize}

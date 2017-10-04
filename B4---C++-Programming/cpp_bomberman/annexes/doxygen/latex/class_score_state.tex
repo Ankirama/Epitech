@@ -1,0 +1,115 @@
+\hypertarget{class_score_state}{}\section{Score\+State Class Reference}
+\label{class_score_state}\index{Score\+State@{Score\+State}}
+
+
+Inheritance diagram for Score\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_score_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Score\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{class_score_state__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_score_state_a1d7c84a61b32590a074ebd8988f89a91}{}void {\bfseries Init} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)\label{class_score_state_a1d7c84a61b32590a074ebd8988f89a91}
+
+\item 
+\hypertarget{class_score_state_a40e90c75f96dd668975f232b3f7163a0}{}void {\bfseries Cleanup} ()\label{class_score_state_a40e90c75f96dd668975f232b3f7163a0}
+
+\item 
+\hypertarget{class_score_state_ac25332b7a6b955d5782387a40e2d4af5}{}void {\bfseries Pause} ()\label{class_score_state_ac25332b7a6b955d5782387a40e2d4af5}
+
+\item 
+\hypertarget{class_score_state_a360a82fd1e96f1c51b15b18efe13817c}{}void {\bfseries Resume} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)\label{class_score_state_a360a82fd1e96f1c51b15b18efe13817c}
+
+\item 
+\hypertarget{class_score_state_a145192ba32c295a4c18f12246ed8b478}{}void {\bfseries Update} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)\label{class_score_state_a145192ba32c295a4c18f12246ed8b478}
+
+\item 
+\hypertarget{class_score_state_a6105161678611303915f95a9295ff19c}{}void {\bfseries Draw} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)\label{class_score_state_a6105161678611303915f95a9295ff19c}
+
+\item 
+\hypertarget{class_score_state_a582e504a6fe51dbea9c52fcc235efa69}{}void {\bfseries Quit\+State} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)\label{class_score_state_a582e504a6fe51dbea9c52fcc235efa69}
+
+\item 
+\hypertarget{class_score_state_ae7c38459e8b80c0ee517ca8f1e75f4d5}{}void {\bfseries Enter} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)\label{class_score_state_ae7c38459e8b80c0ee517ca8f1e75f4d5}
+
+\item 
+\hypertarget{class_score_state_ae002ecad31a616810733c04aca01798f}{}void {\bfseries Quit} (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)\label{class_score_state_ae002ecad31a616810733c04aca01798f}
+
+\item 
+\hypertarget{class_score_state_a5ba36c848a5cc0cf42c530c61c7c08e2}{}void {\bfseries mod\+Key} (const int, const int)\label{class_score_state_a5ba36c848a5cc0cf42c530c61c7c08e2}
+
+\item 
+\hypertarget{class_score_state_ae6776dab3d6d2806a5c900d218b1c0ba}{}std\+::vector$<$ \hyperlink{class_button}{Button} $\ast$ $>$\+::iterator \& {\bfseries get\+Iterator} ()\label{class_score_state_ae6776dab3d6d2806a5c900d218b1c0ba}
+
+\item 
+\hypertarget{class_score_state_ae675eeb23b98ad8a1b9c8a030bb2850a}{}std\+::vector$<$ \hyperlink{class_button}{Button} $\ast$ $>$ \& {\bfseries get\+Vector} ()\label{class_score_state_ae675eeb23b98ad8a1b9c8a030bb2850a}
+
+\item 
+\hypertarget{class_score_state_af0037d5636c4ba3d33563abe560d3aa3}{}void {\bfseries set\+Released} (bool)\label{class_score_state_af0037d5636c4ba3d33563abe560d3aa3}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_score_state_a4ddbeb51b5be5f2a9d55819edddf639e}{}static \hyperlink{class_score_state}{Score\+State} $\ast$ {\bfseries Instance} ()\label{class_score_state_a4ddbeb51b5be5f2a9d55819edddf639e}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_score_state_a587f2de36c7bdcf617736f2e677240b3}{}typedef void(Score\+State\+::$\ast$ {\bfseries m\+\_\+tab\+Fun}) (\hyperlink{class_game_engine}{Game\+Engine} $\ast$)\label{class_score_state_a587f2de36c7bdcf617736f2e677240b3}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_score_state_a83f0b59ad937c9b02e69a3facffcd338}{}void {\bfseries add\+Key} (const int, m\+\_\+tab\+Fun)\label{class_score_state_a83f0b59ad937c9b02e69a3facffcd338}
+
+\item 
+\hypertarget{class_score_state_a9522f586a47071e7196c3da6d0c91150}{}void {\bfseries del\+Key} (const int)\label{class_score_state_a9522f586a47071e7196c3da6d0c91150}
+
+\item 
+\hypertarget{class_score_state_a74804c61703e0ef47dea0fd73d8cab0a}{}void {\bfseries del\+All\+Key} ()\label{class_score_state_a74804c61703e0ef47dea0fd73d8cab0a}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_score_state_a20e3a1c9fada9fde3436450c6cbf6745}{}bool {\bfseries m\+\_\+released}\label{class_score_state_a20e3a1c9fada9fde3436450c6cbf6745}
+
+\item 
+\hypertarget{class_score_state_a62a4cfd1ca3b222718a37ca5eaa61b24}{}\hyperlink{class_object2_d}{Object2\+D} $\ast$ {\bfseries m\+\_\+background}\label{class_score_state_a62a4cfd1ca3b222718a37ca5eaa61b24}
+
+\item 
+\hypertarget{class_score_state_a04ec69594a02f7ea2ee77271a7b7caf0}{}std\+::map$<$ int, m\+\_\+tab\+Fun $>$ {\bfseries m\+\_\+map}\label{class_score_state_a04ec69594a02f7ea2ee77271a7b7caf0}
+
+\item 
+\hypertarget{class_score_state_a1299910b1fabeb8a5d0ff848f1062510}{}std\+::vector$<$ \hyperlink{class_button}{Button} $\ast$ $>$ {\bfseries m\+\_\+button}\label{class_score_state_a1299910b1fabeb8a5d0ff848f1062510}
+
+\item 
+\hypertarget{class_score_state_ab3e5bfc9e7e0914549d495be5b279081}{}std\+::vector$<$ \hyperlink{class_button}{Button} $\ast$ $>$\+::iterator {\bfseries m\+\_\+it}\label{class_score_state_ab3e5bfc9e7e0914549d495be5b279081}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_score_state_aa92cf238a5fbcf0a5a438610d065d66d}{}static \hyperlink{class_score_state}{Score\+State} {\bfseries m\+\_\+\+Score\+State}\label{class_score_state_aa92cf238a5fbcf0a5a438610d065d66d}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Score\+State.\+hh\end{DoxyCompactItemize}

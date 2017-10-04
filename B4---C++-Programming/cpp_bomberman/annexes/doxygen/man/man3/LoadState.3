@@ -1,0 +1,131 @@
+.TH "LoadState" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LoadState \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBIGameState\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInit\fP (\fBGameEngine\fP *)"
+.br
+.ti -1c
+.RI "void \fBCleanup\fP ()"
+.br
+.ti -1c
+.RI "void \fBPause\fP ()"
+.br
+.ti -1c
+.RI "void \fBResume\fP (\fBGameEngine\fP *)"
+.br
+.ti -1c
+.RI "void \fBUpdate\fP (\fBGameEngine\fP *)"
+.br
+.ti -1c
+.RI "void \fBDraw\fP (\fBGameEngine\fP *)"
+.br
+.ti -1c
+.RI "void \fBQuitState\fP (\fBGameEngine\fP *)"
+.br
+.ti -1c
+.RI "void \fBUp\fP (\fBGameEngine\fP *)"
+.br
+.ti -1c
+.RI "void \fBDown\fP (\fBGameEngine\fP *)"
+.br
+.ti -1c
+.RI "void \fBEnter\fP (\fBGameEngine\fP *)"
+.br
+.ti -1c
+.RI "void \fBQuit\fP (\fBGameEngine\fP *)"
+.br
+.ti -1c
+.RI "void \fBmodKey\fP (const int, const int)"
+.br
+.ti -1c
+.RI "std::vector< \fBButton\fP * >::iterator & \fBgetIterator\fP ()"
+.br
+.ti -1c
+.RI "std::vector< \fBButton\fP * > & \fBgetVector\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetReleased\fP (bool)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBLoadState\fP * \fBInstance\fP ()"
+.br
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "typedef void(LoadState::* \fBm_tabFun\fP) (\fBGameEngine\fP *)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddKey\fP (const int, m_tabFun)"
+.br
+.ti -1c
+.RI "void \fBdelKey\fP (const int)"
+.br
+.ti -1c
+.RI "void \fBdelAllKey\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_released\fP"
+.br
+.ti -1c
+.RI "bool \fBm_load\fP"
+.br
+.ti -1c
+.RI "\fBObject2D\fP * \fBm_background\fP"
+.br
+.ti -1c
+.RI "\fBObject2D\fP * \fBm_backsave\fP"
+.br
+.ti -1c
+.RI "\fBObject2D\fP * \fBm_bomb\fP"
+.br
+.ti -1c
+.RI "std::map< int, m_tabFun > \fBm_map\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBButton\fP * > \fBm_button\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBButton\fP * >::iterator \fBm_it\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBGenerateText\fP * > \fBm_file\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBGenerateText\fP * >::iterator \fBm_itFile\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBLoadState\fP \fBm_LoadState\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

@@ -1,0 +1,9 @@
+digraph "lib/gdl/includes/glm/core" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_64968273b11753b37819add9486a9979 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="glm" fontname="Helvetica", fontsize="10", URL="dir_64968273b11753b37819add9486a9979.html"]
+  dir_132c9455e2699bc579b15ebfc688d862 [shape=box, label="core", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_132c9455e2699bc579b15ebfc688d862.html"];
+  }
+}

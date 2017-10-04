@@ -1,0 +1,152 @@
+.TH "include/XmlWrite.hpp" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/XmlWrite.hpp \- create xml file  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <sstream>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <stack>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBXmlWrite\fP"
+.br
+.RI "\fICreate and write into xml\&. \fP"
+.ti -1c
+.RI "class \fBXmlWrite::Controller\fP"
+.br
+.RI "\fIInternal class to help \fBXmlWrite\fP\&. \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBVERSION\fP   '1\&.0'"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum e_typeField \fBt_typeField\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBe_typeField\fP { \fBFIELD_TAG_START\fP, \fBFIELD_TAG_END\fP, \fBFIELD_DATA\fP, \fBFIELD_ATTRIBUTE\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "const \fBXmlWrite::Controller\fP \fBtag\fP (const std::string &tag='')"
+.br
+.RI "\fIcreate a tag named <tag> \fP"
+.ti -1c
+.RI "const \fBXmlWrite::Controller\fP \fBendtag\fP (const std::string &\fBtag\fP='')"
+.br
+.RI "\fIclose a tag named <tag> \fP"
+.ti -1c
+.RI "const \fBXmlWrite::Controller\fP \fBattribute\fP (const std::string &attribute)"
+.br
+.RI "\fIcreate an attribute named <attribute> \fP"
+.ti -1c
+.RI "const \fBXmlWrite::Controller\fP \fBdata\fP ()"
+.br
+.RI "\fIadd data into element \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+create xml file 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+ankirama 
+.RE
+.PP
+\fBVersion:\fP
+.RS 4
+1\&.01 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "const \fBXmlWrite::Controller\fP attribute (const std::string & attribute)"
+
+.PP
+create an attribute named <attribute> 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIattribute\fP attribute's name 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Create a controller with ATTRIBUTE flag and return it 
+.RE
+.PP
+
+.SS "const \fBXmlWrite::Controller\fP data ()"
+
+.PP
+add data into element 
+.PP
+\fBReturns:\fP
+.RS 4
+Create a controller with DATA flag and return it 
+.RE
+.PP
+
+.SS "const \fBXmlWrite::Controller\fP endtag (const std::string & tag = \fC''\fP)"
+
+.PP
+close a tag named <tag> 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItag\fP tag's name 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Create a controller with TAG_END flag and return it 
+.RE
+.PP
+
+.SS "const \fBXmlWrite::Controller\fP tag (const std::string & tag = \fC''\fP)"
+
+.PP
+create a tag named <tag> 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItag\fP tag's name 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Create a controller with TAG_START flag and return it 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

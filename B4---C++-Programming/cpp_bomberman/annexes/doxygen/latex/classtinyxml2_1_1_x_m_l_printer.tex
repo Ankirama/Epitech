@@ -1,0 +1,277 @@
+\hypertarget{classtinyxml2_1_1_x_m_l_printer}{}\section{tinyxml2\+:\+:X\+M\+L\+Printer Class Reference}
+\label{classtinyxml2_1_1_x_m_l_printer}\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+
+
+{\ttfamily \#include $<$tinyxml2.\+h$>$}
+
+
+
+Inheritance diagram for tinyxml2\+:\+:X\+M\+L\+Printer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classtinyxml2_1_1_x_m_l_printer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tinyxml2\+:\+:X\+M\+L\+Printer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtinyxml2_1_1_x_m_l_printer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtinyxml2_1_1_x_m_l_printer_aa6d3841c069085f5b8a27bc7103c04f7}{X\+M\+L\+Printer} (F\+I\+L\+E $\ast$file=0, bool compact=false, int depth=0)
+\item 
+void \hyperlink{classtinyxml2_1_1_x_m_l_printer_a178c608ce8476043d5d6513819cde903}{Push\+Header} (bool write\+B\+O\+M, bool write\+Declaration)
+\item 
+void \hyperlink{classtinyxml2_1_1_x_m_l_printer_a20fb06c83bd13e5140d7dd13af06c010}{Open\+Element} (const char $\ast$name, bool compact\+Mode=false)
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a9a4e2c9348b42e147629d5a99f4af3f0}{}void \hyperlink{classtinyxml2_1_1_x_m_l_printer_a9a4e2c9348b42e147629d5a99f4af3f0}{Push\+Attribute} (const char $\ast$name, const char $\ast$value)\label{classtinyxml2_1_1_x_m_l_printer_a9a4e2c9348b42e147629d5a99f4af3f0}
+
+\begin{DoxyCompactList}\small\item\em If streaming, add an attribute to an open element. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a69120c82088597372d28d0a98f2ee7a1}{}void {\bfseries Push\+Attribute} (const char $\ast$name, int value)\label{classtinyxml2_1_1_x_m_l_printer_a69120c82088597372d28d0a98f2ee7a1}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_aa41039e51990aaf5342f3e0575a692c4}{}void {\bfseries Push\+Attribute} (const char $\ast$name, unsigned value)\label{classtinyxml2_1_1_x_m_l_printer_aa41039e51990aaf5342f3e0575a692c4}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a51f7950d7b7a19f0d3a0d549a318d45f}{}void {\bfseries Push\+Attribute} (const char $\ast$name, bool value)\label{classtinyxml2_1_1_x_m_l_printer_a51f7950d7b7a19f0d3a0d549a318d45f}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a1714867af40e68ca404c3e84b6cac2a6}{}void {\bfseries Push\+Attribute} (const char $\ast$name, double value)\label{classtinyxml2_1_1_x_m_l_printer_a1714867af40e68ca404c3e84b6cac2a6}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_ad04d29562b46fcdb23ab320f8b664240}{}virtual void \hyperlink{classtinyxml2_1_1_x_m_l_printer_ad04d29562b46fcdb23ab320f8b664240}{Close\+Element} (bool compact\+Mode=false)\label{classtinyxml2_1_1_x_m_l_printer_ad04d29562b46fcdb23ab320f8b664240}
+
+\begin{DoxyCompactList}\small\item\em If streaming, close the Element. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a1cc16a9362df4332012cb13cff6441b3}{}void \hyperlink{classtinyxml2_1_1_x_m_l_printer_a1cc16a9362df4332012cb13cff6441b3}{Push\+Text} (const char $\ast$text, bool cdata=false)\label{classtinyxml2_1_1_x_m_l_printer_a1cc16a9362df4332012cb13cff6441b3}
+
+\begin{DoxyCompactList}\small\item\em Add a text node. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a3e0d4d78de25d4cf081009e1431cea7e}{}void \hyperlink{classtinyxml2_1_1_x_m_l_printer_a3e0d4d78de25d4cf081009e1431cea7e}{Push\+Text} (int value)\label{classtinyxml2_1_1_x_m_l_printer_a3e0d4d78de25d4cf081009e1431cea7e}
+
+\begin{DoxyCompactList}\small\item\em Add a text node from an integer. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a661fb50e7e0a4918d2d259cb0fae647e}{}void \hyperlink{classtinyxml2_1_1_x_m_l_printer_a661fb50e7e0a4918d2d259cb0fae647e}{Push\+Text} (unsigned value)\label{classtinyxml2_1_1_x_m_l_printer_a661fb50e7e0a4918d2d259cb0fae647e}
+
+\begin{DoxyCompactList}\small\item\em Add a text node from an unsigned. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a4390e5fa1ed05189a8686647345ab29f}{}void \hyperlink{classtinyxml2_1_1_x_m_l_printer_a4390e5fa1ed05189a8686647345ab29f}{Push\+Text} (bool value)\label{classtinyxml2_1_1_x_m_l_printer_a4390e5fa1ed05189a8686647345ab29f}
+
+\begin{DoxyCompactList}\small\item\em Add a text node from a bool. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a1dbb1390e829d0673af66b9cd1928bd7}{}void \hyperlink{classtinyxml2_1_1_x_m_l_printer_a1dbb1390e829d0673af66b9cd1928bd7}{Push\+Text} (float value)\label{classtinyxml2_1_1_x_m_l_printer_a1dbb1390e829d0673af66b9cd1928bd7}
+
+\begin{DoxyCompactList}\small\item\em Add a text node from a float. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_aa715302dfc09473c77c853cbd5431965}{}void \hyperlink{classtinyxml2_1_1_x_m_l_printer_aa715302dfc09473c77c853cbd5431965}{Push\+Text} (double value)\label{classtinyxml2_1_1_x_m_l_printer_aa715302dfc09473c77c853cbd5431965}
+
+\begin{DoxyCompactList}\small\item\em Add a text node from a double. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_afc8416814219591c2fd5656e0c233140}{}void \hyperlink{classtinyxml2_1_1_x_m_l_printer_afc8416814219591c2fd5656e0c233140}{Push\+Comment} (const char $\ast$comment)\label{classtinyxml2_1_1_x_m_l_printer_afc8416814219591c2fd5656e0c233140}
+
+\begin{DoxyCompactList}\small\item\em Add a comment. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a2fe3565e262594efc6c0276723c83fe7}{}void {\bfseries Push\+Declaration} (const char $\ast$value)\label{classtinyxml2_1_1_x_m_l_printer_a2fe3565e262594efc6c0276723c83fe7}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_ab1efc6d1548505e9984185f58f54b713}{}void {\bfseries Push\+Unknown} (const char $\ast$value)\label{classtinyxml2_1_1_x_m_l_printer_ab1efc6d1548505e9984185f58f54b713}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_ae966b988a7a28c41e91c5ca17fb2054b}{}virtual bool \hyperlink{classtinyxml2_1_1_x_m_l_printer_ae966b988a7a28c41e91c5ca17fb2054b}{Visit\+Enter} (const \hyperlink{classtinyxml2_1_1_x_m_l_document}{X\+M\+L\+Document} \&)\label{classtinyxml2_1_1_x_m_l_printer_ae966b988a7a28c41e91c5ca17fb2054b}
+
+\begin{DoxyCompactList}\small\item\em Visit a document. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a15fc1f2b922f540917dcf52808737b29}{}virtual bool \hyperlink{classtinyxml2_1_1_x_m_l_printer_a15fc1f2b922f540917dcf52808737b29}{Visit\+Exit} (const \hyperlink{classtinyxml2_1_1_x_m_l_document}{X\+M\+L\+Document} \&)\label{classtinyxml2_1_1_x_m_l_printer_a15fc1f2b922f540917dcf52808737b29}
+
+\begin{DoxyCompactList}\small\item\em Visit a document. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a2ce2aa508c21ac91615093ddb9c282c5}{}virtual bool \hyperlink{classtinyxml2_1_1_x_m_l_printer_a2ce2aa508c21ac91615093ddb9c282c5}{Visit\+Enter} (const \hyperlink{classtinyxml2_1_1_x_m_l_element}{X\+M\+L\+Element} \&element, const \hyperlink{classtinyxml2_1_1_x_m_l_attribute}{X\+M\+L\+Attribute} $\ast$\hyperlink{_xml_write_8hpp_a4a687c3f177b66efa50586999b8a3172}{attribute})\label{classtinyxml2_1_1_x_m_l_printer_a2ce2aa508c21ac91615093ddb9c282c5}
+
+\begin{DoxyCompactList}\small\item\em Visit an element. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_ae99e0a7086543591edfb565f24689098}{}virtual bool \hyperlink{classtinyxml2_1_1_x_m_l_printer_ae99e0a7086543591edfb565f24689098}{Visit\+Exit} (const \hyperlink{classtinyxml2_1_1_x_m_l_element}{X\+M\+L\+Element} \&element)\label{classtinyxml2_1_1_x_m_l_printer_ae99e0a7086543591edfb565f24689098}
+
+\begin{DoxyCompactList}\small\item\em Visit an element. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a275ae25544a12199ae40b6994ca6e4de}{}virtual bool \hyperlink{classtinyxml2_1_1_x_m_l_printer_a275ae25544a12199ae40b6994ca6e4de}{Visit} (const \hyperlink{classtinyxml2_1_1_x_m_l_text}{X\+M\+L\+Text} \&text)\label{classtinyxml2_1_1_x_m_l_printer_a275ae25544a12199ae40b6994ca6e4de}
+
+\begin{DoxyCompactList}\small\item\em Visit a text node. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a3f16a30be1537ac141d9bd2db824ba9e}{}virtual bool \hyperlink{classtinyxml2_1_1_x_m_l_printer_a3f16a30be1537ac141d9bd2db824ba9e}{Visit} (const \hyperlink{classtinyxml2_1_1_x_m_l_comment}{X\+M\+L\+Comment} \&comment)\label{classtinyxml2_1_1_x_m_l_printer_a3f16a30be1537ac141d9bd2db824ba9e}
+
+\begin{DoxyCompactList}\small\item\em Visit a comment node. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a9ceff5cd85e5db65838962174fcdcc46}{}virtual bool \hyperlink{classtinyxml2_1_1_x_m_l_printer_a9ceff5cd85e5db65838962174fcdcc46}{Visit} (const \hyperlink{classtinyxml2_1_1_x_m_l_declaration}{X\+M\+L\+Declaration} \&declaration)\label{classtinyxml2_1_1_x_m_l_printer_a9ceff5cd85e5db65838962174fcdcc46}
+
+\begin{DoxyCompactList}\small\item\em Visit a declaration. \end{DoxyCompactList}\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_aa15e1da81e17dea5da6499ac5b08d9d8}{}virtual bool \hyperlink{classtinyxml2_1_1_x_m_l_printer_aa15e1da81e17dea5da6499ac5b08d9d8}{Visit} (const \hyperlink{classtinyxml2_1_1_x_m_l_unknown}{X\+M\+L\+Unknown} \&unknown)\label{classtinyxml2_1_1_x_m_l_printer_aa15e1da81e17dea5da6499ac5b08d9d8}
+
+\begin{DoxyCompactList}\small\item\em Visit an unknown node. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classtinyxml2_1_1_x_m_l_printer_a4a1b788e11b540921ec50687cd2b24a9}{C\+Str} () const 
+\item 
+int \hyperlink{classtinyxml2_1_1_x_m_l_printer_a02c3c5f8c6c007dcbaf10595d9e22bf0}{C\+Str\+Size} () const 
+\item 
+void \hyperlink{classtinyxml2_1_1_x_m_l_printer_a216157765b7267bf389975b1cbf9a909}{Clear\+Buffer} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a38e1ed5a779bdf63eda9e808f7a6de66}{}virtual bool {\bfseries Compact\+Mode} (const \hyperlink{classtinyxml2_1_1_x_m_l_element}{X\+M\+L\+Element} \&)\label{classtinyxml2_1_1_x_m_l_printer_a38e1ed5a779bdf63eda9e808f7a6de66}
+
+\item 
+virtual void \hyperlink{classtinyxml2_1_1_x_m_l_printer_a01148e2ebe6776e38c5a3e41bc5feb74}{Print\+Space} (int depth)
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_ab30210a7f32e45634e7a45137bf6fdf6}{}void {\bfseries Print} (const char $\ast$format,...)\label{classtinyxml2_1_1_x_m_l_printer_ab30210a7f32e45634e7a45137bf6fdf6}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_ac6e2c72c5d796f5b4de6ce81ca95e3fa}{}void {\bfseries Seal\+Element\+If\+Just\+Opened} ()\label{classtinyxml2_1_1_x_m_l_printer_ac6e2c72c5d796f5b4de6ce81ca95e3fa}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_ac07169d58b465214a2b1fa306e617c26}{}bool {\bfseries \+\_\+element\+Just\+Opened}\label{classtinyxml2_1_1_x_m_l_printer_ac07169d58b465214a2b1fa306e617c26}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a99d59e67e084714541bee3ae43884bef}{}\hyperlink{classtinyxml2_1_1_dyn_array}{Dyn\+Array}$<$ const char $\ast$, 10 $>$ {\bfseries \+\_\+stack}\label{classtinyxml2_1_1_x_m_l_printer_a99d59e67e084714541bee3ae43884bef}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_abd08e8da55b22d059d0484c53db1fae8}{}enum \{ {\bfseries E\+N\+T\+I\+T\+Y\+\_\+\+R\+A\+N\+G\+E} = 64, 
+{\bfseries B\+U\+F\+\_\+\+S\+I\+Z\+E} = 200
+ \}\label{classtinyxml2_1_1_x_m_l_printer_abd08e8da55b22d059d0484c53db1fae8}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a5495e504053f63f2c4d603327314fa91}{}void {\bfseries Print\+String} (const char $\ast$, bool restricted\+Entity\+Set)\label{classtinyxml2_1_1_x_m_l_printer_a5495e504053f63f2c4d603327314fa91}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_abbd7ac45d97ae5eceec12d6c058119f9}{}bool {\bfseries \+\_\+first\+Element}\label{classtinyxml2_1_1_x_m_l_printer_abbd7ac45d97ae5eceec12d6c058119f9}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a79d91decf17990f7ce18b592f3fdf44e}{}F\+I\+L\+E $\ast$ {\bfseries \+\_\+fp}\label{classtinyxml2_1_1_x_m_l_printer_a79d91decf17990f7ce18b592f3fdf44e}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a19cd59a9dbe4b666264803fb91ac8ec1}{}int {\bfseries \+\_\+depth}\label{classtinyxml2_1_1_x_m_l_printer_a19cd59a9dbe4b666264803fb91ac8ec1}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a3c5a442e57131faefde97188e92144f3}{}int {\bfseries \+\_\+text\+Depth}\label{classtinyxml2_1_1_x_m_l_printer_a3c5a442e57131faefde97188e92144f3}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a3e27c4b4fe791a96e4e139b5034e190b}{}bool {\bfseries \+\_\+process\+Entities}\label{classtinyxml2_1_1_x_m_l_printer_a3e27c4b4fe791a96e4e139b5034e190b}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a7bc067aa3f0dcee68e4ac75e19117bd0}{}bool {\bfseries \+\_\+compact\+Mode}\label{classtinyxml2_1_1_x_m_l_printer_a7bc067aa3f0dcee68e4ac75e19117bd0}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a334eb34c43f21daebef9341b4768c275}{}bool {\bfseries \+\_\+entity\+Flag} \mbox{[}E\+N\+T\+I\+T\+Y\+\_\+\+R\+A\+N\+G\+E\mbox{]}\label{classtinyxml2_1_1_x_m_l_printer_a334eb34c43f21daebef9341b4768c275}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a5df242509d42ae1c9128924121ebe093}{}bool {\bfseries \+\_\+restricted\+Entity\+Flag} \mbox{[}E\+N\+T\+I\+T\+Y\+\_\+\+R\+A\+N\+G\+E\mbox{]}\label{classtinyxml2_1_1_x_m_l_printer_a5df242509d42ae1c9128924121ebe093}
+
+\item 
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a19fca2e934576a892fefe2f602874d59}{}\hyperlink{classtinyxml2_1_1_dyn_array}{Dyn\+Array}$<$ char, 20 $>$ {\bfseries \+\_\+buffer}\label{classtinyxml2_1_1_x_m_l_printer_a19fca2e934576a892fefe2f602874d59}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Printing functionality. The \hyperlink{classtinyxml2_1_1_x_m_l_printer}{X\+M\+L\+Printer} gives you more options than the \hyperlink{classtinyxml2_1_1_x_m_l_document_a686ea28672c0e0c60383ec28148c1ac0}{X\+M\+L\+Document\+::\+Print()} method.
+
+It can\+:
+\begin{DoxyEnumerate}
+\item Print to memory.
+\item Print to a file you provide.
+\item Print X\+M\+L without a \hyperlink{classtinyxml2_1_1_x_m_l_document}{X\+M\+L\+Document}.
+\end{DoxyEnumerate}
+
+Print to Memory
+
+\begin{DoxyVerb}XMLPrinter printer;
+doc.Print( &printer );
+SomeFunction( printer.CStr() );
+\end{DoxyVerb}
+
+
+Print to a File
+
+You provide the file pointer. \begin{DoxyVerb}XMLPrinter printer( fp );
+doc.Print( &printer );
+\end{DoxyVerb}
+
+
+Print without a \hyperlink{classtinyxml2_1_1_x_m_l_document}{X\+M\+L\+Document}
+
+When loading, an X\+M\+L parser is very useful. However, sometimes when saving, it just gets in the way. The code is often set up for streaming, and constructing the D\+O\+M is just overhead.
+
+The Printer supports the streaming case. The following code prints out a trivially simple X\+M\+L file without ever creating an X\+M\+L document.
+
+\begin{DoxyVerb}XMLPrinter printer( fp );
+printer.OpenElement( "foo" );
+printer.PushAttribute( "foo", "bar" );
+printer.CloseElement();
+\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_aa6d3841c069085f5b8a27bc7103c04f7}{}\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!X\+M\+L\+Printer@{X\+M\+L\+Printer}}
+\index{X\+M\+L\+Printer@{X\+M\+L\+Printer}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{X\+M\+L\+Printer}]{\setlength{\rightskip}{0pt plus 5cm}tinyxml2\+::\+X\+M\+L\+Printer\+::\+X\+M\+L\+Printer (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{file = {\ttfamily 0}, }
+\item[{bool}]{compact = {\ttfamily false}, }
+\item[{int}]{depth = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_aa6d3841c069085f5b8a27bc7103c04f7}
+Construct the printer. If the F\+I\+L\+E$\ast$ is specified, this will print to the F\+I\+L\+E. Else it will print to memory, and the result is available in \hyperlink{classtinyxml2_1_1_x_m_l_printer_a4a1b788e11b540921ec50687cd2b24a9}{C\+Str()}. If \textquotesingle{}compact\textquotesingle{} is set to true, then output is created with only required whitespace and newlines. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classtinyxml2_1_1_x_m_l_printer_a216157765b7267bf389975b1cbf9a909}{}\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Clear\+Buffer@{Clear\+Buffer}}
+\index{Clear\+Buffer@{Clear\+Buffer}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Clear\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Clear\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_printer_a216157765b7267bf389975b1cbf9a909}
+If in print to memory mode, reset the buffer to the beginning. \hypertarget{classtinyxml2_1_1_x_m_l_printer_a4a1b788e11b540921ec50687cd2b24a9}{}\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!C\+Str@{C\+Str}}
+\index{C\+Str@{C\+Str}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{C\+Str}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ tinyxml2\+::\+X\+M\+L\+Printer\+::\+C\+Str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_printer_a4a1b788e11b540921ec50687cd2b24a9}
+If in print to memory mode, return a pointer to the X\+M\+L file in memory. \hypertarget{classtinyxml2_1_1_x_m_l_printer_a02c3c5f8c6c007dcbaf10595d9e22bf0}{}\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!C\+Str\+Size@{C\+Str\+Size}}
+\index{C\+Str\+Size@{C\+Str\+Size}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{C\+Str\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int tinyxml2\+::\+X\+M\+L\+Printer\+::\+C\+Str\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_printer_a02c3c5f8c6c007dcbaf10595d9e22bf0}
+If in print to memory mode, return the size of the X\+M\+L file in memory. (Note the size returned includes the terminating null.) \hypertarget{classtinyxml2_1_1_x_m_l_printer_a20fb06c83bd13e5140d7dd13af06c010}{}\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Open\+Element@{Open\+Element}}
+\index{Open\+Element@{Open\+Element}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Open\+Element}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Open\+Element (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{bool}]{compact\+Mode = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_a20fb06c83bd13e5140d7dd13af06c010}
+If streaming, start writing an element. The element must be closed with \hyperlink{classtinyxml2_1_1_x_m_l_printer_ad04d29562b46fcdb23ab320f8b664240}{Close\+Element()} \hypertarget{classtinyxml2_1_1_x_m_l_printer_a01148e2ebe6776e38c5a3e41bc5feb74}{}\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Print\+Space@{Print\+Space}}
+\index{Print\+Space@{Print\+Space}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Print\+Space}]{\setlength{\rightskip}{0pt plus 5cm}virtual void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Print\+Space (
+\begin{DoxyParamCaption}
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_printer_a01148e2ebe6776e38c5a3e41bc5feb74}
+Prints out the space before an element. You may override to change the space and tabs used. A \hyperlink{classtinyxml2_1_1_x_m_l_printer_a01148e2ebe6776e38c5a3e41bc5feb74}{Print\+Space()} override should call Print(). \hypertarget{classtinyxml2_1_1_x_m_l_printer_a178c608ce8476043d5d6513819cde903}{}\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Header@{Push\+Header}}
+\index{Push\+Header@{Push\+Header}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Header}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Header (
+\begin{DoxyParamCaption}
+\item[{bool}]{write\+B\+O\+M, }
+\item[{bool}]{write\+Declaration}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_a178c608ce8476043d5d6513819cde903}
+If streaming, write the B\+O\+M and declaration. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/tinyxml2.\+h\end{DoxyCompactItemize}

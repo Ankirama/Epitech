@@ -1,0 +1,37 @@
+.TH "gtx_vector_angle" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtx_vector_angle \- GLM_GTX_vector_angle
+.PP
+Compute angle between vectors\&.  
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename vecType > GLM_FUNC_QUALIFIER vecType::value_type \fBglm::angle\fP (vecType const &x, vecType const &y)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER T \fBglm::orientedAngle\fP (detail::tvec2< T > const &x, detail::tvec2< T > const &y)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER T \fBglm::orientedAngle\fP (detail::tvec3< T > const &x, detail::tvec3< T > const &y, detail::tvec3< T > const &ref)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Compute angle between vectors\&. 
+
+<\fBglm/gtx/vector_angle\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename vecType > GLM_FUNC_QUALIFIER vecType::value_type glm::angle (vecType const & x, vecType const & y)"
+Returns the absolute angle between two vectors Parameters need to be normalized\&. From GLM_GTX_vector_angle extension 
+.SS "template<typename T > GLM_FUNC_QUALIFIER T glm::orientedAngle (\fBdetail::tvec2\fP< T > const & x, \fBdetail::tvec2\fP< T > const & y)"
+Returns the oriented angle between two 2d vectors Parameters need to be normalized\&. From GLM_GTX_vector_angle extension\&. 
+.SS "template<typename T > GLM_FUNC_QUALIFIER T glm::orientedAngle (\fBdetail::tvec3\fP< T > const & x, \fBdetail::tvec3\fP< T > const & y, \fBdetail::tvec3\fP< T > const & ref)"
+Returns the oriented angle between two 3d vectors based from a reference axis\&. Parameters need to be normalized\&. From GLM_GTX_vector_angle extension\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

@@ -1,0 +1,50 @@
+.TH "gdl::Texture" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gdl::Texture \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTexture\fP (\fBTexture\fP const &o)"
+.br
+.ti -1c
+.RI "bool \fBload\fP (const std::string &path, bool genMimaps=false)"
+.br
+.ti -1c
+.RI "GLuint \fBgetId\fP () const "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBbind\fP () const "
+.br
+.ti -1c
+.RI "GLuint \fBgetWidth\fP () const "
+.br
+.ti -1c
+.RI "GLuint \fBgetHeight\fP () const "
+.br
+.ti -1c
+.RI "\fBTexture\fP & \fBoperator=\fP (\fBTexture\fP const &o)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "GLuint \fB_width\fP"
+.br
+.ti -1c
+.RI "GLuint \fB_height\fP"
+.br
+.ti -1c
+.RI "GLuint \fB_id\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

@@ -1,0 +1,112 @@
+\hypertarget{classgdl_1_1_texture}{\section{gdl\-:\-:Texture Class Reference}
+\label{classgdl_1_1_texture}\index{gdl\-::\-Texture@{gdl\-::\-Texture}}
+}
+
+
+Class representing an Open\-G\-L texture.  
+
+
+
+
+{\ttfamily \#include $<$Texture.\-hh$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classgdl_1_1_texture_a2d010f85c81be8c5b19cf7b4f0ae1af0}{{\bfseries Texture} (\hyperlink{classgdl_1_1_texture}{Texture} const \&o)}\label{classgdl_1_1_texture_a2d010f85c81be8c5b19cf7b4f0ae1af0}
+
+\item 
+bool \hyperlink{classgdl_1_1_texture_ada7dffc24ec794f7cc5a5a26dc0261fc}{load} (const std\-::string \&path, bool gen\-Mimaps=false)
+\begin{DoxyCompactList}\small\item\em Load a T\-G\-A file. \end{DoxyCompactList}\item 
+G\-Luint \hyperlink{classgdl_1_1_texture_a1954740f65f3e9265d6f4506ec75f4c2}{get\-Id} () const 
+\begin{DoxyCompactList}\small\item\em Returns the Open\-G\-L texture I\-D. \end{DoxyCompactList}\item 
+\hypertarget{classgdl_1_1_texture_a5b628612f89e1fc67a28085158236d9c}{void \hyperlink{classgdl_1_1_texture_a5b628612f89e1fc67a28085158236d9c}{bind} () const }\label{classgdl_1_1_texture_a5b628612f89e1fc67a28085158236d9c}
+
+\begin{DoxyCompactList}\small\item\em Bind the texture as the current used texture (call gl\-Bind\-Texture). \end{DoxyCompactList}\item 
+G\-Luint \hyperlink{classgdl_1_1_texture_a932fca1cf9da4570df0591ae2272f545}{get\-Width} () const 
+\item 
+G\-Luint \hyperlink{classgdl_1_1_texture_a7ffaf22e021293cab2a856c2ec795dca}{get\-Height} () const 
+\item 
+\hypertarget{classgdl_1_1_texture_afc8d4545507f62b5273f938dce5dfeba}{\hyperlink{classgdl_1_1_texture}{Texture} \& {\bfseries operator=} (\hyperlink{classgdl_1_1_texture}{Texture} const \&o)}\label{classgdl_1_1_texture_afc8d4545507f62b5273f938dce5dfeba}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classgdl_1_1_texture_a649311ec115dcd70df025714d52f887e}{G\-Luint {\bfseries \-\_\-width}}\label{classgdl_1_1_texture_a649311ec115dcd70df025714d52f887e}
+
+\item 
+\hypertarget{classgdl_1_1_texture_ad016a8f5410560f0ac2498eb75ba7570}{G\-Luint {\bfseries \-\_\-height}}\label{classgdl_1_1_texture_ad016a8f5410560f0ac2498eb75ba7570}
+
+\item 
+\hypertarget{classgdl_1_1_texture_ad583257567501c6c9f58b943c03cde68}{G\-Luint {\bfseries \-\_\-id}}\label{classgdl_1_1_texture_ad583257567501c6c9f58b943c03cde68}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing an Open\-G\-L texture. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classgdl_1_1_texture_a7ffaf22e021293cab2a856c2ec795dca}{\index{gdl\-::\-Texture@{gdl\-::\-Texture}!get\-Height@{get\-Height}}
+\index{get\-Height@{get\-Height}!gdl::Texture@{gdl\-::\-Texture}}
+\subsubsection[{get\-Height}]{\setlength{\rightskip}{0pt plus 5cm}G\-Luint gdl\-::\-Texture\-::get\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_texture_a7ffaf22e021293cab2a856c2ec795dca}
+\begin{DoxyReturn}{Returns}
+The height of the texture 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_texture_a1954740f65f3e9265d6f4506ec75f4c2}{\index{gdl\-::\-Texture@{gdl\-::\-Texture}!get\-Id@{get\-Id}}
+\index{get\-Id@{get\-Id}!gdl::Texture@{gdl\-::\-Texture}}
+\subsubsection[{get\-Id}]{\setlength{\rightskip}{0pt plus 5cm}G\-Luint gdl\-::\-Texture\-::get\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_texture_a1954740f65f3e9265d6f4506ec75f4c2}
+
+
+Returns the Open\-G\-L texture I\-D. 
+
+\begin{DoxyReturn}{Returns}
+The Open\-G\-L texture Id. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_texture_a932fca1cf9da4570df0591ae2272f545}{\index{gdl\-::\-Texture@{gdl\-::\-Texture}!get\-Width@{get\-Width}}
+\index{get\-Width@{get\-Width}!gdl::Texture@{gdl\-::\-Texture}}
+\subsubsection[{get\-Width}]{\setlength{\rightskip}{0pt plus 5cm}G\-Luint gdl\-::\-Texture\-::get\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_texture_a932fca1cf9da4570df0591ae2272f545}
+\begin{DoxyReturn}{Returns}
+The width of the texture 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_texture_ada7dffc24ec794f7cc5a5a26dc0261fc}{\index{gdl\-::\-Texture@{gdl\-::\-Texture}!load@{load}}
+\index{load@{load}!gdl::Texture@{gdl\-::\-Texture}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-Texture\-::load (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path, }
+\item[{bool}]{gen\-Mimaps = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_texture_ada7dffc24ec794f7cc5a5a26dc0261fc}
+
+
+Load a T\-G\-A file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path of the T\-G\-A file. \\
+\hline
+{\em gen\-Mipmaps} & If true, mipmaps will be generated and used as minfilter for this texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the load has failed. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+includes/Texture.\-hh\item 
+sources/Texture.\-cpp\end{DoxyCompactItemize}

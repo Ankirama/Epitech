@@ -1,0 +1,126 @@
+.TH "lib/gdl/includes/SDL_timer.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_timer.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_TICKS_PASSED\fP(A,  B)   ((\fBSint32\fP)((B) - (A)) <= 0)"
+.br
+.RI "\fICompare SDL ticks values, and return true if A has passed B\&. \fP"
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBvoid\fP * \fBparam\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBSDL_TimerID\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBUint32\fP SDLCALL \fBSDL_GetTicks\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the number of milliseconds since the SDL library initialization\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBUint64\fP SDLCALL \fBSDL_GetPerformanceCounter\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the current value of the high resolution counter\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBUint64\fP SDLCALL \fBSDL_GetPerformanceFrequency\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the count per second of the high resolution counter\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_Delay\fP (\fBUint32\fP ms)"
+.br
+.RI "\fIWait a specified number of milliseconds before returning\&. \fP"
+.ti -1c
+.RI "typedef \fBUint32\fP (SDLCALL *SDL_TimerCallback)(\fBUint32\fP interval"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSDL_TimerID\fP SDLCALL \fBSDL_AddTimer\fP (\fBUint32\fP interval, SDL_TimerCallback callback, \fBvoid\fP *param)"
+.br
+.RI "\fIAdd a new timer to the pool of timers already running\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_RemoveTimer\fP (\fBSDL_TimerID\fP id)"
+.br
+.RI "\fIRemove a timer knowing its ID\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header for the SDL time management routines\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define SDL_TICKS_PASSED(A, B)   ((\fBSint32\fP)((B) - (A)) <= 0)"
+
+.PP
+Compare SDL ticks values, and return true if A has passed B\&. e\&.g\&. if you want to wait 100 ms, you could do this: Uint32 timeout = \fBSDL_GetTicks()\fP + 100; while (!SDL_TICKS_PASSED(\fBSDL_GetTicks()\fP, timeout)) { \&.\&.\&. do work until timeout has elapsed } 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBint\fP \fBSDL_TimerID\fP"
+Definition of the timer ID type\&. 
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC \fBSDL_TimerID\fP SDLCALL SDL_AddTimer (\fBUint32\fP interval, SDL_TimerCallback callback, \fBvoid\fP * param)"
+
+.PP
+Add a new timer to the pool of timers already running\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A timer ID, or NULL when an error occurs\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBUint32\fP SDLCALL SDL_GetTicks (\fBvoid\fP)"
+
+.PP
+Get the number of milliseconds since the SDL library initialization\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This value wraps if the program runs for more than ~49 days\&. 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_bool SDLCALL SDL_RemoveTimer (\fBSDL_TimerID\fP id)"
+
+.PP
+Remove a timer knowing its ID\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A boolean value indicating success or failure\&.
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+It is not safe to remove a timer multiple times\&. 
+.RE
+.PP
+
+.SS "typedef \fBUint32\fP (SDLCALL * SDL_TimerCallback)"
+Function prototype for the timer callback function\&.
+.PP
+The callback function is passed the current timer interval and returns the next timer interval\&. If the returned value is the same as the one passed in, the periodic alarm continues, otherwise a new alarm is scheduled\&. If the callback returns 0, the periodic alarm is cancelled\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

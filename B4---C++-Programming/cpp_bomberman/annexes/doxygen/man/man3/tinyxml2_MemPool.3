@@ -1,0 +1,33 @@
+.TH "tinyxml2::MemPool" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tinyxml2::MemPool \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBtinyxml2::MemPoolT< sizeof(tinyxml2::XMLAttribute) >\fP, \fBtinyxml2::MemPoolT< sizeof(tinyxml2::XMLComment) >\fP, \fBtinyxml2::MemPoolT< sizeof(tinyxml2::XMLElement) >\fP, \fBtinyxml2::MemPoolT< sizeof(tinyxml2::XMLText) >\fP, and \fBtinyxml2::MemPoolT< SIZE >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual int \fBItemSize\fP () const =0"
+.br
+.ti -1c
+.RI "virtual void * \fBAlloc\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBFree\fP (void *)=0"
+.br
+.ti -1c
+.RI "virtual void \fBSetTracked\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBClear\fP ()=0"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

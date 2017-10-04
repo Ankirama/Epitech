@@ -1,0 +1,638 @@
+.TH "lib/gdl/includes/SDL_events.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_events.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'SDL_video\&.h'\fP
+.br
+\fC#include 'SDL_keyboard\&.h'\fP
+.br
+\fC#include 'SDL_mouse\&.h'\fP
+.br
+\fC#include 'SDL_joystick\&.h'\fP
+.br
+\fC#include 'SDL_gamecontroller\&.h'\fP
+.br
+\fC#include 'SDL_quit\&.h'\fP
+.br
+\fC#include 'SDL_gesture\&.h'\fP
+.br
+\fC#include 'SDL_touch\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_CommonEvent\fP"
+.br
+.RI "\fIFields shared by every event\&. \fP"
+.ti -1c
+.RI "struct \fBSDL_WindowEvent\fP"
+.br
+.RI "\fIWindow state change event data (event\&.window\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_KeyboardEvent\fP"
+.br
+.RI "\fIKeyboard button event structure (event\&.key\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_TextEditingEvent\fP"
+.br
+.RI "\fIKeyboard text editing event structure (event\&.edit\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_TextInputEvent\fP"
+.br
+.RI "\fIKeyboard text input event structure (event\&.text\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_MouseMotionEvent\fP"
+.br
+.RI "\fIMouse motion event structure (event\&.motion\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_MouseButtonEvent\fP"
+.br
+.RI "\fIMouse button event structure (event\&.button\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_MouseWheelEvent\fP"
+.br
+.RI "\fIMouse wheel event structure (event\&.wheel\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_JoyAxisEvent\fP"
+.br
+.RI "\fIJoystick axis motion event structure (event\&.jaxis\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_JoyBallEvent\fP"
+.br
+.RI "\fIJoystick trackball motion event structure (event\&.jball\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_JoyHatEvent\fP"
+.br
+.RI "\fIJoystick hat position change event structure (event\&.jhat\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_JoyButtonEvent\fP"
+.br
+.RI "\fIJoystick button event structure (event\&.jbutton\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_JoyDeviceEvent\fP"
+.br
+.RI "\fIJoystick device event structure (event\&.jdevice\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_ControllerAxisEvent\fP"
+.br
+.RI "\fIGame controller axis motion event structure (event\&.caxis\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_ControllerButtonEvent\fP"
+.br
+.RI "\fIGame controller button event structure (event\&.cbutton\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_ControllerDeviceEvent\fP"
+.br
+.RI "\fIController device event structure (event\&.cdevice\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_TouchFingerEvent\fP"
+.br
+.RI "\fITouch finger event structure (event\&.tfinger\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_MultiGestureEvent\fP"
+.br
+.RI "\fIMultiple Finger Gesture Event (event\&.mgesture\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_DollarGestureEvent\fP"
+.br
+.RI "\fIDollar Gesture Event (event\&.dgesture\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_DropEvent\fP"
+.br
+.RI "\fIAn event used to request a file open by the system (event\&.drop\&.*) This event is disabled by default, you can enable it with \fBSDL_EventState()\fP \fP"
+.ti -1c
+.RI "struct \fBSDL_QuitEvent\fP"
+.br
+.RI "\fIThe 'quit requested' event\&. \fP"
+.ti -1c
+.RI "struct \fBSDL_OSEvent\fP"
+.br
+.RI "\fIOS Specific event\&. \fP"
+.ti -1c
+.RI "struct \fBSDL_UserEvent\fP"
+.br
+.RI "\fIA user-defined event type (event\&.user\&.*) \fP"
+.ti -1c
+.RI "struct \fBSDL_SysWMEvent\fP"
+.br
+.RI "\fIA video driver dependent system event (event\&.syswm\&.*) This event is disabled by default, you can enable it with \fBSDL_EventState()\fP \fP"
+.ti -1c
+.RI "union \fBSDL_Event\fP"
+.br
+.RI "\fIGeneral event structure\&. \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_RELEASED\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSDL_PRESSED\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSDL_TEXTEDITINGEVENT_TEXT_SIZE\fP   (32)"
+.br
+.ti -1c
+.RI "#define \fBSDL_TEXTINPUTEVENT_TEXT_SIZE\fP   (32)"
+.br
+.ti -1c
+.RI "#define \fBSDL_GetEventState\fP(type)   \fBSDL_EventState\fP(type, SDL_QUERY)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBSDL_CommonEvent\fP \fBSDL_CommonEvent\fP"
+.br
+.RI "\fIFields shared by every event\&. \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_WindowEvent\fP \fBSDL_WindowEvent\fP"
+.br
+.RI "\fIWindow state change event data (event\&.window\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_KeyboardEvent\fP \fBSDL_KeyboardEvent\fP"
+.br
+.RI "\fIKeyboard button event structure (event\&.key\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_TextEditingEvent\fP \fBSDL_TextEditingEvent\fP"
+.br
+.RI "\fIKeyboard text editing event structure (event\&.edit\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_TextInputEvent\fP \fBSDL_TextInputEvent\fP"
+.br
+.RI "\fIKeyboard text input event structure (event\&.text\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_MouseMotionEvent\fP \fBSDL_MouseMotionEvent\fP"
+.br
+.RI "\fIMouse motion event structure (event\&.motion\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_MouseButtonEvent\fP \fBSDL_MouseButtonEvent\fP"
+.br
+.RI "\fIMouse button event structure (event\&.button\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_MouseWheelEvent\fP \fBSDL_MouseWheelEvent\fP"
+.br
+.RI "\fIMouse wheel event structure (event\&.wheel\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_JoyAxisEvent\fP \fBSDL_JoyAxisEvent\fP"
+.br
+.RI "\fIJoystick axis motion event structure (event\&.jaxis\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_JoyBallEvent\fP \fBSDL_JoyBallEvent\fP"
+.br
+.RI "\fIJoystick trackball motion event structure (event\&.jball\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_JoyHatEvent\fP \fBSDL_JoyHatEvent\fP"
+.br
+.RI "\fIJoystick hat position change event structure (event\&.jhat\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_JoyButtonEvent\fP \fBSDL_JoyButtonEvent\fP"
+.br
+.RI "\fIJoystick button event structure (event\&.jbutton\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_JoyDeviceEvent\fP \fBSDL_JoyDeviceEvent\fP"
+.br
+.RI "\fIJoystick device event structure (event\&.jdevice\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_ControllerAxisEvent\fP \fBSDL_ControllerAxisEvent\fP"
+.br
+.RI "\fIGame controller axis motion event structure (event\&.caxis\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_ControllerButtonEvent\fP \fBSDL_ControllerButtonEvent\fP"
+.br
+.RI "\fIGame controller button event structure (event\&.cbutton\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_ControllerDeviceEvent\fP \fBSDL_ControllerDeviceEvent\fP"
+.br
+.RI "\fIController device event structure (event\&.cdevice\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_TouchFingerEvent\fP \fBSDL_TouchFingerEvent\fP"
+.br
+.RI "\fITouch finger event structure (event\&.tfinger\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_MultiGestureEvent\fP \fBSDL_MultiGestureEvent\fP"
+.br
+.RI "\fIMultiple Finger Gesture Event (event\&.mgesture\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_DollarGestureEvent\fP \fBSDL_DollarGestureEvent\fP"
+.br
+.RI "\fIDollar Gesture Event (event\&.dgesture\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_DropEvent\fP \fBSDL_DropEvent\fP"
+.br
+.RI "\fIAn event used to request a file open by the system (event\&.drop\&.*) This event is disabled by default, you can enable it with \fBSDL_EventState()\fP \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_QuitEvent\fP \fBSDL_QuitEvent\fP"
+.br
+.RI "\fIThe 'quit requested' event\&. \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_OSEvent\fP \fBSDL_OSEvent\fP"
+.br
+.RI "\fIOS Specific event\&. \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_UserEvent\fP \fBSDL_UserEvent\fP"
+.br
+.RI "\fIA user-defined event type (event\&.user\&.*) \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_SysWMmsg\fP \fBSDL_SysWMmsg\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBSDL_SysWMEvent\fP \fBSDL_SysWMEvent\fP"
+.br
+.RI "\fIA video driver dependent system event (event\&.syswm\&.*) This event is disabled by default, you can enable it with \fBSDL_EventState()\fP \fP"
+.ti -1c
+.RI "typedef union \fBSDL_Event\fP \fBSDL_Event\fP"
+.br
+.RI "\fIGeneral event structure\&. \fP"
+.ti -1c
+.RI "typedef \fBSDL_Event\fP * \fBevent\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSDL_EventType\fP { \fBSDL_FIRSTEVENT\fP = 0, \fBSDL_QUIT\fP = 0x100, \fBSDL_APP_TERMINATING\fP, \fBSDL_APP_LOWMEMORY\fP, \fBSDL_APP_WILLENTERBACKGROUND\fP, \fBSDL_APP_DIDENTERBACKGROUND\fP, \fBSDL_APP_WILLENTERFOREGROUND\fP, \fBSDL_APP_DIDENTERFOREGROUND\fP, \fBSDL_WINDOWEVENT\fP = 0x200, \fBSDL_SYSWMEVENT\fP, \fBSDL_KEYDOWN\fP = 0x300, \fBSDL_KEYUP\fP, \fBSDL_TEXTEDITING\fP, \fBSDL_TEXTINPUT\fP, \fBSDL_MOUSEMOTION\fP = 0x400, \fBSDL_MOUSEBUTTONDOWN\fP, \fBSDL_MOUSEBUTTONUP\fP, \fBSDL_MOUSEWHEEL\fP, \fBSDL_JOYAXISMOTION\fP = 0x600, \fBSDL_JOYBALLMOTION\fP, \fBSDL_JOYHATMOTION\fP, \fBSDL_JOYBUTTONDOWN\fP, \fBSDL_JOYBUTTONUP\fP, \fBSDL_JOYDEVICEADDED\fP, \fBSDL_JOYDEVICEREMOVED\fP, \fBSDL_CONTROLLERAXISMOTION\fP = 0x650, \fBSDL_CONTROLLERBUTTONDOWN\fP, \fBSDL_CONTROLLERBUTTONUP\fP, \fBSDL_CONTROLLERDEVICEADDED\fP, \fBSDL_CONTROLLERDEVICEREMOVED\fP, \fBSDL_CONTROLLERDEVICEREMAPPED\fP, \fBSDL_FINGERDOWN\fP = 0x700, \fBSDL_FINGERUP\fP, \fBSDL_FINGERMOTION\fP, \fBSDL_DOLLARGESTURE\fP = 0x800, \fBSDL_DOLLARRECORD\fP, \fBSDL_MULTIGESTURE\fP, \fBSDL_CLIPBOARDUPDATE\fP = 0x900, \fBSDL_DROPFILE\fP = 0x1000, \fBSDL_RENDER_TARGETS_RESET\fP = 0x2000, \fBSDL_RENDER_DEVICE_RESET\fP, \fBSDL_USEREVENT\fP = 0x8000, \fBSDL_LASTEVENT\fP = 0xFFFF }"
+.br
+.RI "\fIThe types of events that can be delivered\&. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_PumpEvents\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_HasEvent\fP (\fBUint32\fP type)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_HasEvents\fP (\fBUint32\fP minType, \fBUint32\fP maxType)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_FlushEvent\fP (\fBUint32\fP type)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_FlushEvents\fP (\fBUint32\fP minType, \fBUint32\fP maxType)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_PollEvent\fP (\fBSDL_Event\fP *event)"
+.br
+.RI "\fIPolls for currently pending events\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_WaitEvent\fP (\fBSDL_Event\fP *event)"
+.br
+.RI "\fIWaits indefinitely for the next available event\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_WaitEventTimeout\fP (\fBSDL_Event\fP *event, \fBint\fP timeout)"
+.br
+.RI "\fIWaits until the specified timeout (in milliseconds) for the next available event\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_PushEvent\fP (\fBSDL_Event\fP *event)"
+.br
+.RI "\fIAdd an event to the event queue\&. \fP"
+.ti -1c
+.RI "typedef \fBint\fP (SDLCALL *SDL_EventFilter)(\fBvoid\fP *userdata"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_SetEventFilter\fP (SDL_EventFilter filter, \fBvoid\fP *userdata)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_GetEventFilter\fP (SDL_EventFilter *filter, \fBvoid\fP **userdata)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_AddEventWatch\fP (SDL_EventFilter filter, \fBvoid\fP *userdata)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_DelEventWatch\fP (SDL_EventFilter filter, \fBvoid\fP *userdata)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_FilterEvents\fP (SDL_EventFilter filter, \fBvoid\fP *userdata)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBUint32\fP SDLCALL \fBSDL_RegisterEvents\fP (\fBint\fP numevents)"
+.br
+.in -1c
+.in +1c
+.ti -1c
+.RI "enum \fBSDL_eventaction\fP { \fBSDL_ADDEVENT\fP, \fBSDL_PEEKEVENT\fP, \fBSDL_GETEVENT\fP }"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_PeepEvents\fP (\fBSDL_Event\fP *events, \fBint\fP numevents, SDL_eventaction action, \fBUint32\fP minType, \fBUint32\fP maxType)"
+.br
+.in -1c
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_QUERY\fP   -1"
+.br
+.ti -1c
+.RI "#define \fBSDL_IGNORE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSDL_DISABLE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSDL_ENABLE\fP   1"
+.br
+.ti -1c
+.RI "DECLSPEC \fBUint8\fP SDLCALL \fBSDL_EventState\fP (\fBUint32\fP type, \fBint\fP state)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL event handling\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBSDL_DropEvent\fP  \fBSDL_DropEvent\fP"
+
+.PP
+An event used to request a file open by the system (event\&.drop\&.*) This event is disabled by default, you can enable it with \fBSDL_EventState()\fP 
+.PP
+\fBNote:\fP
+.RS 4
+If you enable this event, you must free the filename in the event\&. 
+.RE
+.PP
+
+.SS "typedef struct \fBSDL_SysWMEvent\fP  \fBSDL_SysWMEvent\fP"
+
+.PP
+A video driver dependent system event (event\&.syswm\&.*) This event is disabled by default, you can enable it with \fBSDL_EventState()\fP 
+.PP
+\fBNote:\fP
+.RS 4
+If you want to use this event, you should include \fBSDL_syswm\&.h\fP\&. 
+.RE
+.PP
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBSDL_EventType\fP"
+
+.PP
+The types of events that can be delivered\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISDL_FIRSTEVENT \fP\fP
+Unused (do not remove) 
+.TP
+\fB\fISDL_QUIT \fP\fP
+User-requested quit 
+.TP
+\fB\fISDL_APP_TERMINATING \fP\fP
+The application is being terminated by the OS Called on iOS in applicationWillTerminate() Called on Android in onDestroy() 
+.TP
+\fB\fISDL_APP_LOWMEMORY \fP\fP
+The application is low on memory, free memory if possible\&. Called on iOS in applicationDidReceiveMemoryWarning() Called on Android in onLowMemory() 
+.TP
+\fB\fISDL_APP_WILLENTERBACKGROUND \fP\fP
+The application is about to enter the background Called on iOS in applicationWillResignActive() Called on Android in onPause() 
+.TP
+\fB\fISDL_APP_DIDENTERBACKGROUND \fP\fP
+The application did enter the background and may not get CPU for some time Called on iOS in applicationDidEnterBackground() Called on Android in onPause() 
+.TP
+\fB\fISDL_APP_WILLENTERFOREGROUND \fP\fP
+The application is about to enter the foreground Called on iOS in applicationWillEnterForeground() Called on Android in onResume() 
+.TP
+\fB\fISDL_APP_DIDENTERFOREGROUND \fP\fP
+The application is now interactive Called on iOS in applicationDidBecomeActive() Called on Android in onResume() 
+.TP
+\fB\fISDL_WINDOWEVENT \fP\fP
+Window state change 
+.TP
+\fB\fISDL_SYSWMEVENT \fP\fP
+System specific event 
+.TP
+\fB\fISDL_KEYDOWN \fP\fP
+Key pressed 
+.TP
+\fB\fISDL_KEYUP \fP\fP
+Key released 
+.TP
+\fB\fISDL_TEXTEDITING \fP\fP
+Keyboard text editing (composition) 
+.TP
+\fB\fISDL_TEXTINPUT \fP\fP
+Keyboard text input 
+.TP
+\fB\fISDL_MOUSEMOTION \fP\fP
+Mouse moved 
+.TP
+\fB\fISDL_MOUSEBUTTONDOWN \fP\fP
+Mouse button pressed 
+.TP
+\fB\fISDL_MOUSEBUTTONUP \fP\fP
+Mouse button released 
+.TP
+\fB\fISDL_MOUSEWHEEL \fP\fP
+Mouse wheel motion 
+.TP
+\fB\fISDL_JOYAXISMOTION \fP\fP
+Joystick axis motion 
+.TP
+\fB\fISDL_JOYBALLMOTION \fP\fP
+Joystick trackball motion 
+.TP
+\fB\fISDL_JOYHATMOTION \fP\fP
+Joystick hat position change 
+.TP
+\fB\fISDL_JOYBUTTONDOWN \fP\fP
+Joystick button pressed 
+.TP
+\fB\fISDL_JOYBUTTONUP \fP\fP
+Joystick button released 
+.TP
+\fB\fISDL_JOYDEVICEADDED \fP\fP
+A new joystick has been inserted into the system 
+.TP
+\fB\fISDL_JOYDEVICEREMOVED \fP\fP
+An opened joystick has been removed 
+.TP
+\fB\fISDL_CONTROLLERAXISMOTION \fP\fP
+Game controller axis motion 
+.TP
+\fB\fISDL_CONTROLLERBUTTONDOWN \fP\fP
+Game controller button pressed 
+.TP
+\fB\fISDL_CONTROLLERBUTTONUP \fP\fP
+Game controller button released 
+.TP
+\fB\fISDL_CONTROLLERDEVICEADDED \fP\fP
+A new Game controller has been inserted into the system 
+.TP
+\fB\fISDL_CONTROLLERDEVICEREMOVED \fP\fP
+An opened Game controller has been removed 
+.TP
+\fB\fISDL_CONTROLLERDEVICEREMAPPED \fP\fP
+The controller mapping was updated 
+.TP
+\fB\fISDL_CLIPBOARDUPDATE \fP\fP
+The clipboard changed 
+.TP
+\fB\fISDL_DROPFILE \fP\fP
+The system requests a file open 
+.TP
+\fB\fISDL_RENDER_TARGETS_RESET \fP\fP
+The render targets have been reset and their contents need to be updated 
+.TP
+\fB\fISDL_RENDER_DEVICE_RESET \fP\fP
+The device has been reset and all textures need to be recreated 
+.TP
+\fB\fISDL_USEREVENT \fP\fP
+Events \fBSDL_USEREVENT\fP through \fBSDL_LASTEVENT\fP are for your use, and should be allocated with \fBSDL_RegisterEvents()\fP 
+.TP
+\fB\fISDL_LASTEVENT \fP\fP
+This last event is only for bounding internal arrays 
+.SH "Function Documentation"
+.PP 
+.SS "typedef int (SDLCALL * SDL_ThreadFunction)"
+The function passed to \fBSDL_CreateThread()\fP\&. It is passed a void* user context parameter and returns an int\&. 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_AddEventWatch (SDL_EventFilter filter, \fBvoid\fP * userdata)"
+Add a function which is called when an event is added to the queue\&. 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_DelEventWatch (SDL_EventFilter filter, \fBvoid\fP * userdata)"
+Remove an event watch function added with \fBSDL_AddEventWatch()\fP 
+.SS "DECLSPEC \fBUint8\fP SDLCALL SDL_EventState (\fBUint32\fP type, \fBint\fP state)"
+This function allows you to set the state of processing certain events\&.
+.IP "\(bu" 2
+If \fCstate\fP is set to ::SDL_IGNORE, that event will be automatically dropped from the event queue and will not event be filtered\&.
+.IP "\(bu" 2
+If \fCstate\fP is set to ::SDL_ENABLE, that event will be processed normally\&.
+.IP "\(bu" 2
+If \fCstate\fP is set to ::SDL_QUERY, \fBSDL_EventState()\fP will return the current processing state of the specified event\&. 
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_FilterEvents (SDL_EventFilter filter, \fBvoid\fP * userdata)"
+Run the filter function on the current event queue, removing any events for which the filter returns 0\&. 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_FlushEvent (\fBUint32\fP type)"
+This function clears events from the event queue 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_GetEventFilter (SDL_EventFilter * filter, \fBvoid\fP ** userdata)"
+Return the current event filter - can be used to 'chain' filters\&. If there is no event filter set, this function returns SDL_FALSE\&. 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_HasEvent (\fBUint32\fP type)"
+Checks to see if certain event types are in the event queue\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_PeepEvents (\fBSDL_Event\fP * events, \fBint\fP numevents, SDL_eventaction action, \fBUint32\fP minType, \fBUint32\fP maxType)"
+Checks the event queue for messages and optionally returns them\&.
+.PP
+If \fCaction\fP is ::SDL_ADDEVENT, up to \fCnumevents\fP events will be added to the back of the event queue\&.
+.PP
+If \fCaction\fP is ::SDL_PEEKEVENT, up to \fCnumevents\fP events at the front of the event queue, within the specified minimum and maximum type, will be returned and will not be removed from the queue\&.
+.PP
+If \fCaction\fP is ::SDL_GETEVENT, up to \fCnumevents\fP events at the front of the event queue, within the specified minimum and maximum type, will be returned and will be removed from the queue\&.
+.PP
+\fBReturns:\fP
+.RS 4
+The number of events actually stored, or -1 if there was an error\&.
+.RE
+.PP
+This function is thread-safe\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_PollEvent (\fBSDL_Event\fP * event)"
+
+.PP
+Polls for currently pending events\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+1 if there are any pending events, or 0 if there are none available\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIevent\fP If not NULL, the next event is removed from the queue and stored in that area\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_PumpEvents (\fBvoid\fP)"
+Pumps the event loop, gathering events from the input devices\&.
+.PP
+This function updates the event queue and internal input device state\&.
+.PP
+This should only be run in the thread that sets the video mode\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_PushEvent (\fBSDL_Event\fP * event)"
+
+.PP
+Add an event to the event queue\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+1 on success, 0 if the event was filtered, or -1 if the event queue was full or there was some other error\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBUint32\fP SDLCALL SDL_RegisterEvents (\fBint\fP numevents)"
+This function allocates a set of user-defined events, and returns the beginning event number for that set of events\&.
+.PP
+If there aren't enough user-defined events left, this function returns (Uint32)-1 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_SetEventFilter (SDL_EventFilter filter, \fBvoid\fP * userdata)"
+Sets up a filter to process all events before they change internal state and are posted to the internal event queue\&.
+.PP
+The filter is prototyped as: 
+.PP
+.nf
+1 int SDL_EventFilter(void *userdata, SDL_Event * event);
+
+.fi
+.PP
+.PP
+If the filter returns 1, then the event will be added to the internal queue\&. If it returns 0, then the event will be dropped from the queue, but the internal state will still be updated\&. This allows selective filtering of dynamically arriving events\&.
+.PP
+\fBWarning:\fP
+.RS 4
+Be very careful of what you do in the event filter function, as it may run in a different thread!
+.RE
+.PP
+There is one caveat when dealing with the \fBSDL_QuitEvent\fP event type\&. The event filter is only called when the window manager desires to close the application window\&. If the event filter returns 1, then the window will be closed, otherwise the window will remain open if possible\&.
+.PP
+If the quit event is generated by an interrupt signal, it will bypass the internal queue and be delivered to the application at the next event poll\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_WaitEvent (\fBSDL_Event\fP * event)"
+
+.PP
+Waits indefinitely for the next available event\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+1, or 0 if there was an error while waiting for events\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIevent\fP If not NULL, the next event is removed from the queue and stored in that area\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_WaitEventTimeout (\fBSDL_Event\fP * event, \fBint\fP timeout)"
+
+.PP
+Waits until the specified timeout (in milliseconds) for the next available event\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+1, or 0 if there was an error while waiting for events\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIevent\fP If not NULL, the next event is removed from the queue and stored in that area\&. 
+.br
+\fItimeout\fP The timeout (in milliseconds) to wait for next event\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

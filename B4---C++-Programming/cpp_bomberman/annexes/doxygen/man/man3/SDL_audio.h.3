@@ -1,0 +1,504 @@
+.TH "lib/gdl/includes/SDL_audio.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_audio.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'SDL_endian\&.h'\fP
+.br
+\fC#include 'SDL_mutex\&.h'\fP
+.br
+\fC#include 'SDL_thread\&.h'\fP
+.br
+\fC#include 'SDL_rwops\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_AudioSpec\fP"
+.br
+.ti -1c
+.RI "struct \fBSDL_AudioCVT\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_AUDIOCVT_PACKED\fP"
+.br
+.ti -1c
+.RI "#define \fBSDL_LoadWAV\fP(file,  spec,  audio_buf,  audio_len)   \fBSDL_LoadWAV_RW\fP(SDL_RWFromFile(file, 'rb'),1, spec,audio_buf,audio_len)"
+.br
+.ti -1c
+.RI "#define \fBSDL_MIX_MAXVOLUME\fP   128"
+.br
+.in -1c
+.PP
+.RI "\fBAudio flags\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_AUDIO_MASK_BITSIZE\fP   (0xFF)"
+.br
+.ti -1c
+.RI "#define \fBSDL_AUDIO_MASK_DATATYPE\fP   (1<<8)"
+.br
+.ti -1c
+.RI "#define \fBSDL_AUDIO_MASK_ENDIAN\fP   (1<<12)"
+.br
+.ti -1c
+.RI "#define \fBSDL_AUDIO_MASK_SIGNED\fP   (1<<15)"
+.br
+.ti -1c
+.RI "#define \fBSDL_AUDIO_BITSIZE\fP(x)   (x & SDL_AUDIO_MASK_BITSIZE)"
+.br
+.ti -1c
+.RI "#define \fBSDL_AUDIO_ISFLOAT\fP(x)   (x & SDL_AUDIO_MASK_DATATYPE)"
+.br
+.ti -1c
+.RI "#define \fBSDL_AUDIO_ISBIGENDIAN\fP(x)   (x & SDL_AUDIO_MASK_ENDIAN)"
+.br
+.ti -1c
+.RI "#define \fBSDL_AUDIO_ISSIGNED\fP(x)   (x & SDL_AUDIO_MASK_SIGNED)"
+.br
+.ti -1c
+.RI "#define \fBSDL_AUDIO_ISINT\fP(x)   (!SDL_AUDIO_ISFLOAT(x))"
+.br
+.ti -1c
+.RI "#define \fBSDL_AUDIO_ISLITTLEENDIAN\fP(x)   (!SDL_AUDIO_ISBIGENDIAN(x))"
+.br
+.ti -1c
+.RI "#define \fBSDL_AUDIO_ISUNSIGNED\fP(x)   (!SDL_AUDIO_ISSIGNED(x))"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBAudio format flags\fP"
+.br
+Defaults to LSB byte order\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBAUDIO_U8\fP   0x0008"
+.br
+.ti -1c
+.RI "#define \fBAUDIO_S8\fP   0x8008"
+.br
+.ti -1c
+.RI "#define \fBAUDIO_U16LSB\fP   0x0010"
+.br
+.ti -1c
+.RI "#define \fBAUDIO_S16LSB\fP   0x8010"
+.br
+.ti -1c
+.RI "#define \fBAUDIO_U16MSB\fP   0x1010"
+.br
+.ti -1c
+.RI "#define \fBAUDIO_S16MSB\fP   0x9010"
+.br
+.ti -1c
+.RI "#define \fBAUDIO_U16\fP   \fBAUDIO_U16LSB\fP"
+.br
+.ti -1c
+.RI "#define \fBAUDIO_S16\fP   \fBAUDIO_S16LSB\fP"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBint32 support\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBAUDIO_S32LSB\fP   0x8020"
+.br
+.ti -1c
+.RI "#define \fBAUDIO_S32MSB\fP   0x9020"
+.br
+.ti -1c
+.RI "#define \fBAUDIO_S32\fP   \fBAUDIO_S32LSB\fP"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBfloat32 support\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBAUDIO_F32LSB\fP   0x8120"
+.br
+.ti -1c
+.RI "#define \fBAUDIO_F32MSB\fP   0x9120"
+.br
+.ti -1c
+.RI "#define \fBAUDIO_F32\fP   \fBAUDIO_F32LSB\fP"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBNative audio byte ordering\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBAUDIO_U16SYS\fP   \fBAUDIO_U16LSB\fP"
+.br
+.ti -1c
+.RI "#define \fBAUDIO_S16SYS\fP   \fBAUDIO_S16LSB\fP"
+.br
+.ti -1c
+.RI "#define \fBAUDIO_S32SYS\fP   \fBAUDIO_S32LSB\fP"
+.br
+.ti -1c
+.RI "#define \fBAUDIO_F32SYS\fP   \fBAUDIO_F32LSB\fP"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBAllow change flags\fP"
+.br
+Which audio format changes are allowed when opening a device\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_AUDIO_ALLOW_FREQUENCY_CHANGE\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBSDL_AUDIO_ALLOW_FORMAT_CHANGE\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBSDL_AUDIO_ALLOW_CHANNELS_CHANGE\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBSDL_AUDIO_ALLOW_ANY_CHANGE\fP   (SDL_AUDIO_ALLOW_FREQUENCY_CHANGE|SDL_AUDIO_ALLOW_FORMAT_CHANGE|SDL_AUDIO_ALLOW_CHANNELS_CHANGE)"
+.br
+.in -1c
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBUint16\fP \fBSDL_AudioFormat\fP"
+.br
+.RI "\fIAudio format flags\&. \fP"
+.ti -1c
+.RI "typedef \fBUint8\fP * \fBstream\fP"
+.br
+.ti -1c
+.RI "typedef \fBUint8\fP \fBint\fP \fBlen\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBSDL_AudioSpec\fP \fBSDL_AudioSpec\fP"
+.br
+.ti -1c
+.RI "typedef \fBSDL_AudioFormat\fP \fBformat\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBSDL_AudioCVT\fP \fBSDL_AudioCVT\fP"
+.br
+.ti -1c
+.RI "typedef \fBUint32\fP \fBSDL_AudioDeviceID\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBvoid\fP (SDLCALL *SDL_AudioCallback)(void *userdata"
+.br
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GetCurrentAudioDriver\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_OpenAudio\fP (\fBSDL_AudioSpec\fP *desired, \fBSDL_AudioSpec\fP *obtained)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetNumAudioDevices\fP (\fBint\fP iscapture)"
+.br
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GetAudioDeviceName\fP (\fBint\fP index, \fBint\fP iscapture)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSDL_AudioDeviceID\fP SDLCALL \fBSDL_OpenAudioDevice\fP (const char *device, \fBint\fP iscapture, const \fBSDL_AudioSpec\fP *desired, \fBSDL_AudioSpec\fP *obtained, \fBint\fP allowed_changes)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSDL_AudioSpec\fP *SDLCALL \fBSDL_LoadWAV_RW\fP (\fBSDL_RWops\fP *src, \fBint\fP freesrc, \fBSDL_AudioSpec\fP *spec, \fBUint8\fP **audio_buf, \fBUint32\fP *audio_len)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_FreeWAV\fP (\fBUint8\fP *audio_buf)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_BuildAudioCVT\fP (\fBSDL_AudioCVT\fP *cvt, \fBSDL_AudioFormat\fP src_format, \fBUint8\fP src_channels, \fBint\fP src_rate, \fBSDL_AudioFormat\fP dst_format, \fBUint8\fP dst_channels, \fBint\fP dst_rate)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_ConvertAudio\fP (\fBSDL_AudioCVT\fP *cvt)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_MixAudio\fP (\fBUint8\fP *dst, const \fBUint8\fP *src, \fBUint32\fP len, \fBint\fP volume)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_MixAudioFormat\fP (\fBUint8\fP *dst, const \fBUint8\fP *src, \fBSDL_AudioFormat\fP format, \fBUint32\fP len, \fBint\fP volume)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_CloseAudio\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_CloseAudioDevice\fP (\fBSDL_AudioDeviceID\fP dev)"
+.br
+.in -1c
+.PP
+.RI "\fBDriver discovery functions\fP"
+.br
+These functions return the list of built in audio drivers, in the order that they are normally initialized by default\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetNumAudioDrivers\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GetAudioDriver\fP (\fBint\fP index)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBInitialization and cleanup\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_AudioInit\fP (const char *driver_name)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_AudioQuit\fP (\fBvoid\fP)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBPause audio functions\fP"
+.br
+These functions pause and unpause the audio callback processing\&. They should be called with a parameter of 0 after opening the audio device to start playing sound\&. This is so you can safely initialize data for your callback function after opening the audio device\&. Silence will be written to the audio device during the pause\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_PauseAudio\fP (\fBint\fP pause_on)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_PauseAudioDevice\fP (\fBSDL_AudioDeviceID\fP dev, \fBint\fP pause_on)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBAudio lock functions\fP"
+.br
+The lock manipulated by these functions protects the callback function\&. During a SDL_LockAudio()/SDL_UnlockAudio() pair, you can be guaranteed that the callback function is not running\&. Do not call these from the callback function or you will cause deadlock\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_LockAudio\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_LockAudioDevice\fP (\fBSDL_AudioDeviceID\fP dev)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_UnlockAudio\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_UnlockAudioDevice\fP (\fBSDL_AudioDeviceID\fP dev)"
+.br
+.in -1c
+.in -1c
+.SS "Audio state"
+Get the current audio state\&. 
+.in +1c
+.ti -1c
+.RI "enum \fBSDL_AudioStatus\fP { \fBSDL_AUDIO_STOPPED\fP = 0, \fBSDL_AUDIO_PLAYING\fP, \fBSDL_AUDIO_PAUSED\fP }"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_AudioStatus SDLCALL \fBSDL_GetAudioStatus\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_AudioStatus SDLCALL \fBSDL_GetAudioDeviceStatus\fP (\fBSDL_AudioDeviceID\fP dev)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Access to the raw audio mixing buffer for the SDL library\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define AUDIO_F32LSB   0x8120"
+32-bit floating point samples 
+.SS "#define AUDIO_F32MSB   0x9120"
+As above, but big-endian byte order 
+.SS "#define AUDIO_S16LSB   0x8010"
+Signed 16-bit samples 
+.SS "#define AUDIO_S16MSB   0x9010"
+As above, but big-endian byte order 
+.SS "#define AUDIO_S32LSB   0x8020"
+32-bit integer samples 
+.SS "#define AUDIO_S32MSB   0x9020"
+As above, but big-endian byte order 
+.SS "#define AUDIO_S8   0x8008"
+Signed 8-bit samples 
+.SS "#define AUDIO_U16LSB   0x0010"
+Unsigned 16-bit samples 
+.SS "#define AUDIO_U16MSB   0x1010"
+As above, but big-endian byte order 
+.SS "#define AUDIO_U8   0x0008"
+Unsigned 8-bit samples 
+.SS "#define SDL_AUDIOCVT_PACKED"
+A structure to hold a set of audio conversion filters and buffers\&. 
+.SS "#define SDL_LoadWAV(file, spec, audio_buf, audio_len)   \fBSDL_LoadWAV_RW\fP(SDL_RWFromFile(file, 'rb'),1, spec,audio_buf,audio_len)"
+Loads a WAV from a file\&. Compatibility convenience function\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBUint32\fP \fBSDL_AudioDeviceID\fP"
+SDL Audio Device IDs\&.
+.PP
+A successful call to \fBSDL_OpenAudio()\fP is always device id 1, and legacy SDL audio APIs assume you want this device ID\&. \fBSDL_OpenAudioDevice()\fP calls always returns devices >= 2 on success\&. The legacy calls are good both for backwards compatibility and when you don't care about multiple, specific, or capture devices\&. 
+.SS "typedef \fBUint16\fP \fBSDL_AudioFormat\fP"
+
+.PP
+Audio format flags\&. These are what the 16 bits in SDL_AudioFormat currently mean\&.\&.\&. (Unspecified bits are always zero)\&.
+.PP
+.PP
+.nf
+++-----------------------sample is signed if set
+||
+||       ++-----------sample is bigendian if set
+||       ||
+||       ||          ++---sample is float if set
+||       ||          ||
+||       ||          || +---sample bit size---+
+||       ||          || |                     |
+15 14 13 12 11 10 09 08 07 06 05 04 03 02 01 00
+.fi
+.PP
+.PP
+There are macros in SDL 2\&.0 and later to query these bits\&. 
+.SS "typedef struct \fBSDL_AudioSpec\fP  \fBSDL_AudioSpec\fP"
+The calculated values in this structure are calculated by \fBSDL_OpenAudio()\fP\&. 
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_BuildAudioCVT (\fBSDL_AudioCVT\fP * cvt, \fBSDL_AudioFormat\fP src_format, \fBUint8\fP src_channels, \fBint\fP src_rate, \fBSDL_AudioFormat\fP dst_format, \fBUint8\fP dst_channels, \fBint\fP dst_rate)"
+This function takes a source format and rate and a destination format and rate, and initializes the \fCcvt\fP structure with information needed by \fBSDL_ConvertAudio()\fP to convert a buffer of audio data from one format to the other\&.
+.PP
+\fBReturns:\fP
+.RS 4
+-1 if the format conversion is not supported, 0 if there's no conversion needed, or 1 if the audio filter is set up\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_CloseAudio (\fBvoid\fP)"
+This function shuts down audio processing and closes the audio device\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_ConvertAudio (\fBSDL_AudioCVT\fP * cvt)"
+Once you have initialized the \fCcvt\fP structure using \fBSDL_BuildAudioCVT()\fP, created an audio buffer \fCcvt->buf\fP, and filled it with \fCcvt->len\fP bytes of audio data in the source format, this function will convert it in-place to the desired format\&.
+.PP
+The data conversion may expand the size of the audio data, so the buffer \fCcvt->buf\fP should be allocated after the \fCcvt\fP structure is initialized by \fBSDL_BuildAudioCVT()\fP, and should be \fCcvt->len*cvt->len_mult\fP bytes long\&. 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_FreeWAV (\fBUint8\fP * audio_buf)"
+This function frees data previously allocated with \fBSDL_LoadWAV_RW()\fP 
+.SS "DECLSPEC const char* SDLCALL SDL_GetAudioDeviceName (\fBint\fP index, \fBint\fP iscapture)"
+Get the human-readable name of a specific audio device\&. Must be a value between 0 and (number of audio devices-1)\&. Only valid after a successfully initializing the audio subsystem\&. The values returned by this function reflect the latest call to \fBSDL_GetNumAudioDevices()\fP; recall that function to redetect available hardware\&.
+.PP
+The string returned by this function is UTF-8 encoded, read-only, and managed internally\&. You are not to free it\&. If you need to keep the string for any length of time, you should make your own copy of it, as it will be invalid next time any of several other SDL functions is called\&. 
+.SS "DECLSPEC const char* SDLCALL SDL_GetCurrentAudioDriver (\fBvoid\fP)"
+This function returns the name of the current audio driver, or NULL if no driver has been initialized\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetNumAudioDevices (\fBint\fP iscapture)"
+Get the number of available devices exposed by the current driver\&. Only valid after a successfully initializing the audio subsystem\&. Returns -1 if an explicit list of devices can't be determined; this is not an error\&. For example, if SDL is set up to talk to a remote audio server, it can't list every one available on the Internet, but it will still allow a specific host to be specified to \fBSDL_OpenAudioDevice()\fP\&.
+.PP
+In many common cases, when this function returns a value <= 0, it can still successfully open the default device (NULL for first argument of \fBSDL_OpenAudioDevice()\fP)\&. 
+.SS "DECLSPEC \fBSDL_AudioSpec\fP* SDLCALL SDL_LoadWAV_RW (\fBSDL_RWops\fP * src, \fBint\fP freesrc, \fBSDL_AudioSpec\fP * spec, \fBUint8\fP ** audio_buf, \fBUint32\fP * audio_len)"
+This function loads a WAVE from the data source, automatically freeing that source if \fCfreesrc\fP is non-zero\&. For example, to load a WAVE file, you could do: 
+.PP
+.nf
+1 SDL_LoadWAV_RW(SDL_RWFromFile("sample\&.wav", "rb"), 1, \&.\&.\&.);
+
+.fi
+.PP
+.PP
+If this function succeeds, it returns the given \fBSDL_AudioSpec\fP, filled with the audio data format of the wave data, and sets \fC*audio_buf\fP to a malloc()'d buffer containing the audio data, and sets \fC*audio_len\fP to the length of that audio buffer, in bytes\&. You need to free the audio buffer with \fBSDL_FreeWAV()\fP when you are done with it\&.
+.PP
+This function returns NULL and sets the SDL error message if the wave file cannot be opened, uses an unknown data format, or is corrupt\&. Currently raw and MS-ADPCM WAVE files are supported\&. 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_MixAudio (\fBUint8\fP * dst, const \fBUint8\fP * src, \fBUint32\fP len, \fBint\fP volume)"
+This takes two audio buffers of the playing audio format and mixes them, performing addition, volume adjustment, and overflow clipping\&. The volume ranges from 0 - 128, and should be set to ::SDL_MIX_MAXVOLUME for full audio volume\&. Note this does not change hardware volume\&. This is provided for convenience -- you can mix your own audio data\&. 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_MixAudioFormat (\fBUint8\fP * dst, const \fBUint8\fP * src, \fBSDL_AudioFormat\fP format, \fBUint32\fP len, \fBint\fP volume)"
+This works like \fBSDL_MixAudio()\fP, but you specify the audio format instead of using the format of audio device 1\&. Thus it can be used when no audio device is open at all\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_OpenAudio (\fBSDL_AudioSpec\fP * desired, \fBSDL_AudioSpec\fP * obtained)"
+This function opens the audio device with the desired parameters, and returns 0 if successful, placing the actual hardware parameters in the structure pointed to by \fCobtained\fP\&. If \fCobtained\fP is NULL, the audio data passed to the callback function will be guaranteed to be in the requested format, and will be automatically converted to the hardware audio format if necessary\&. This function returns -1 if it failed to open the audio device, or couldn't set up the audio thread\&.
+.PP
+When filling in the desired audio spec structure,
+.IP "\(bu" 2
+\fCdesired->freq\fP should be the desired audio frequency in samples-per- second\&.
+.IP "\(bu" 2
+\fCdesired->format\fP should be the desired audio format\&.
+.IP "\(bu" 2
+\fCdesired->samples\fP is the desired size of the audio buffer, in samples\&. This number should be a power of two, and may be adjusted by the audio driver to a value more suitable for the hardware\&. Good values seem to range between 512 and 8096 inclusive, depending on the application and CPU speed\&. Smaller values yield faster response time, but can lead to underflow if the application is doing heavy processing and cannot fill the audio buffer in time\&. A stereo sample consists of both right and left channels in LR ordering\&. Note that the number of samples is directly related to time by the following formula:
+.PP
+.nf
+1 ms = (samples*1000)/freq 
+
+.fi
+.PP
+
+.IP "\(bu" 2
+\fCdesired->size\fP is the size in bytes of the audio buffer, and is calculated by \fBSDL_OpenAudio()\fP\&.
+.IP "\(bu" 2
+\fCdesired->silence\fP is the value used to set the buffer to silence, and is calculated by \fBSDL_OpenAudio()\fP\&.
+.IP "\(bu" 2
+\fCdesired->callback\fP should be set to a function that will be called when the audio device is ready for more data\&. It is passed a pointer to the audio buffer, and the length in bytes of the audio buffer\&. This function usually runs in a separate thread, and so you should protect data structures that it accesses by calling SDL_LockAudio() and SDL_UnlockAudio() in your code\&.
+.IP "\(bu" 2
+\fCdesired->userdata\fP is passed as the first parameter to your callback function\&.
+.PP
+.PP
+The audio device starts out playing silence when it's opened, and should be enabled for playing by calling \fCSDL_PauseAudio(0)\fP when you are ready for your audio callback function to be called\&. Since the audio driver may modify the requested size of the audio buffer, you should allocate any local mixing buffers after you open the audio device\&. 
+.SS "DECLSPEC \fBSDL_AudioDeviceID\fP SDLCALL SDL_OpenAudioDevice (const char * device, \fBint\fP iscapture, const \fBSDL_AudioSpec\fP * desired, \fBSDL_AudioSpec\fP * obtained, \fBint\fP allowed_changes)"
+Open a specific audio device\&. Passing in a device name of NULL requests the most reasonable default (and is equivalent to calling \fBSDL_OpenAudio()\fP)\&.
+.PP
+The device name is a UTF-8 string reported by \fBSDL_GetAudioDeviceName()\fP, but some drivers allow arbitrary and driver-specific strings, such as a hostname/IP address for a remote audio server, or a filename in the diskaudio driver\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 on error, a valid device ID that is >= 2 on success\&.
+.RE
+.PP
+\fBSDL_OpenAudio()\fP, unlike this function, always acts on device ID 1\&. 
+.SS "typedef void (SDLCALL * SDL_AudioCallback)"
+This function is called when the audio device needs more data\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuserdata\fP An application-specific parameter saved in the \fBSDL_AudioSpec\fP structure 
+.br
+\fIstream\fP A pointer to the audio data buffer\&. 
+.br
+\fIlen\fP The length of that buffer in bytes\&.
+.RE
+.PP
+Once the callback returns, the buffer will no longer be valid\&. Stereo samples are stored in a LRLRLR ordering\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

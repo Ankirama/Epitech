@@ -1,0 +1,65 @@
+.TH "SDL_TouchFingerEvent" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_TouchFingerEvent \- Touch finger event structure (event\&.tfinger\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "SDL_TouchID \fBtouchId\fP"
+.br
+.ti -1c
+.RI "SDL_FingerID \fBfingerId\fP"
+.br
+.ti -1c
+.RI "float \fBx\fP"
+.br
+.ti -1c
+.RI "float \fBy\fP"
+.br
+.ti -1c
+.RI "float \fBdx\fP"
+.br
+.ti -1c
+.RI "float \fBdy\fP"
+.br
+.ti -1c
+.RI "float \fBpressure\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Touch finger event structure (event\&.tfinger\&.*) 
+.SH "Member Data Documentation"
+.PP 
+.SS "float SDL_TouchFingerEvent::dx"
+Normalized in the range 0\&.\&.\&.1 
+.SS "float SDL_TouchFingerEvent::dy"
+Normalized in the range 0\&.\&.\&.1 
+.SS "float SDL_TouchFingerEvent::pressure"
+Normalized in the range 0\&.\&.\&.1 
+.SS "SDL_TouchID SDL_TouchFingerEvent::touchId"
+The touch device id 
+.SS "\fBUint32\fP SDL_TouchFingerEvent::type"
+::SDL_FINGERMOTION or ::SDL_FINGERDOWN or ::SDL_FINGERUP 
+.SS "float SDL_TouchFingerEvent::x"
+Normalized in the range 0\&.\&.\&.1 
+.SS "float SDL_TouchFingerEvent::y"
+Normalized in the range 0\&.\&.\&.1 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

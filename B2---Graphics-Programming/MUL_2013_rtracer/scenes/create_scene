@@ -1,0 +1,154 @@
+#!/usr/bin/python2.7
+
+import sys
+import os
+
+def     header(f):
+    '''Write an header into our file'''
+    print "\033[1;31mheader created\033[0m"
+    f.write("#HEADER\n")
+    f.write("#cone x y z radius rotX rotY rotZ clrR clrG clrB brill [HYPER] PnX PnY PnZ lim_max_x lim_max_y lim_max_z lim_min_x lim_min_y lim_min_z\n")
+    f.write("#eye x y z rotX rotY rotZ\n")
+    f.write("#cylinder x y z radius rotX rotY rotZ clrR clrG clrB brill PnX PnY PnZ lim_max_x lim_max_y lim_max_z lim_min_x lim_min_y lim_min_z\n")
+    f.write("#light x y z clrR clrG clrB power\n")
+    f.write("#orb x y z radius clrR clrG clrB brill PnX PnY PnZ lim_max_x lim_max_y lim_max_z lim_min_x lim_min_y lim_min_z\n")
+    f.write("#plan x y z tran rotX rotY rotZ clrR clrG clrB brill PnX PnY PnZ lim_max_x lim_max_y lim_max_z lim_min_x lim_min_y lim_min_z\n")
+
+def     raw_var(var, my_type, f):
+    '''my_type 0 : float, my_type 1 : unsigned char'''
+    '''while the variable isn't valide then we will try again'''
+    wrong = 1
+    check = var
+    while wrong == 1:
+        try:
+            string = raw_input(var)
+            if (my_type == 0):
+                check = (float(string))
+            else:
+                check = (int(string))
+                if (check < 0 or check > 255):
+                    raise ValueError('error')
+            wrong = 0
+        except ValueError:
+            print "wrong variable."
+    f.write(string)
+    f.write(" ")
+
+def     vector(f, string, my_type):
+    '''add a vector'''
+    print "{} : ".format(string)
+    raw_var("x : ", my_type, f)
+    raw_var("y : ", my_type, f)
+    raw_var("z : ", my_type, f)
+
+def     color(f):
+    '''add a vector'''
+    print "color : "
+    raw_var("R : ", 1, f)
+    raw_var("G : ", 1, f)
+    raw_var("B : ", 1, f)
+
+def     cone(f, hyper = 0):
+    vector(f, "position", 0)
+    raw_var("angle : ", 0, f)
+    vector(f, "rotation", 0)
+    color(f)
+    raw_var("shine : ", 0, f)
+    if (hyper):
+        print "hyper : negatif number : 1 sheet"
+        print "hyper : positif number : 2 sheets"
+        raw_var("hyper : ", 0, f)
+    else:
+        f.write("0 ")
+    vector(f, "Perturbation: ", 0)
+    vector(f, "Limite max : ", 0)
+    vector(f, "Limite min : ", 0)
+    f.write("\n")
+
+def     cylinder(f):
+    vector(f, "position", 0)
+    raw_var("radius : ", 0, f)
+    vector(f, "rotation", 0)
+    color(f)
+    raw_var("shine : ", 0, f)
+    vector(f, "Perturbation: ", 0)
+    vector(f, "Limite max : ", 0)
+    vector(f, "Limite min : ", 0)
+    f.write("\n")
+
+def     eye(f):
+    vector(f, "position", 0)
+    vector(f, "rotation", 0)
+    f.write("\n")
+
+def     light(f):
+    vector(f, "position", 0)
+    color(f)
+    raw_var("power : ", 1, f)
+    f.write("\n")
+
+def     orb(f):
+    vector(f, "position", 0)
+    raw_var("radius : ", 0, f)
+    color(f)
+    raw_var("shine : ", 0, f)
+    vector(f, "Perturbation: ", 0)
+    vector(f, "Limite max : ", 0)
+    vector(f, "Limite min : ", 0)
+    f.write("\n")
+
+def     plan(f):
+    vector(f, "position", 0)
+    raw_var("translation: ", 0, f)
+    vector(f, "rotation", 0)
+    color(f)
+    raw_var("shine : ", 0, f)
+    vector(f, "Perturbation: ", 0)
+    vector(f, "Limite max : ", 0)
+    vector(f, "Limite min : ", 0)
+    f.write("\n")
+
+def     main():
+    print "\033[1;32m----------------------"
+    print "| Create a new scene |"
+    print "----------------------\033[0m"
+    scene = raw_input("Choose a name for your scene : ")
+    if os.path.isfile(scene):
+        pressed = raw_input("The file already exist, do you want to replace it ? (y/n) [n]: ")
+        if (pressed != "y"):
+            sys.exit()
+    try:
+        f = open(scene, 'w')
+    except IOError:
+        print "Error: unable to create the file {}".format(scene)
+        sys.exit()
+    print "\033[1;31m----------------------"
+    print "file : {}".format(scene)
+    print "----------------------\033[0m"
+    correct = 1
+    fun = [("cone", cone), ("cylinder", cylinder),
+           ("eye", eye), ("light", light),
+           ("orb", orb), ("plan", plan)]
+    header(f)
+    while (correct):
+        i = 0
+        obj = raw_input("choose your type (cone, cylinder, eye, light, orb, plan, hyper) : ")
+        while (i < len(fun) and obj != fun[i][0]):
+            i = i + 1
+        if i < len(fun):
+            if (fun[i][0] == "hyper"):
+                f.write(fun[0][0])
+                f.write(" ")
+                fun[0][1](f, 1)
+            else:
+                f.write(fun[i][0])
+                f.write(" ")
+                fun[i][1](f)
+            print "{} added.".format(fun[i][0])
+        else:
+            correct = 0
+    print "\033[1;32mfile saved\033[0m"
+    f.close()
+
+if __name__ == "__main__":
+    main()

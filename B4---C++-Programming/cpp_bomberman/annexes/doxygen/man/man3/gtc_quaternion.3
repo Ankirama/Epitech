@@ -1,0 +1,438 @@
+.TH "gtc_quaternion" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtc_quaternion \- GLM_GTC_quaternion
+.PP
+Defines a templated quaternion type and several quaternion operations\&.  
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef detail::tquat< float > \fBglm::quat\fP"
+.br
+.ti -1c
+.RI "typedef detail::tquat< detail::half > \fBglm::hquat\fP"
+.br
+.ti -1c
+.RI "typedef detail::tquat< float > \fBglm::fquat\fP"
+.br
+.ti -1c
+.RI "typedef detail::tquat< double > \fBglm::dquat\fP"
+.br
+.ti -1c
+.RI "typedef detail::tquat< lowp_float > \fBglm::lowp_quat\fP"
+.br
+.ti -1c
+.RI "typedef detail::tquat< mediump_float > \fBglm::mediump_quat\fP"
+.br
+.ti -1c
+.RI "typedef detail::tquat< highp_float > \fBglm::highp_quat\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > T \fBglm::length\fP (detail::tquat< T > const &q)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tquat< T > \fBglm::normalize\fP (detail::tquat< T > const &q)"
+.br
+.ti -1c
+.RI "template<typename T > T \fBglm::dot\fP (detail::tquat< T > const &q1, detail::tquat< T > const &q2)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tquat< T > \fBglm::mix\fP (detail::tquat< T > const &x, detail::tquat< T > const &y, T const &a)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tquat< T > \fBglm::lerp\fP (detail::tquat< T > const &x, detail::tquat< T > const &y, T const &a)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tquat< T > \fBglm::slerp\fP (detail::tquat< T > const &x, detail::tquat< T > const &y, T const &a)"
+.br
+.RI "\fIReturns the slurp interpolation between two quaternions\&. \fP"
+.ti -1c
+.RI "template<typename T > detail::tquat< T > \fBglm::conjugate\fP (detail::tquat< T > const &q)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tquat< T > \fBglm::inverse\fP (detail::tquat< T > const &q)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tquat< T > \fBglm::rotate\fP (detail::tquat< T > const &q, typename detail::tquat< T >::value_type const &angle, detail::tvec3< T > const &axis)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tvec3< T > \fBglm::eulerAngles\fP (detail::tquat< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename valType > valType \fBglm::roll\fP (detail::tquat< valType > const &x)"
+.br
+.ti -1c
+.RI "template<typename valType > valType \fBglm::pitch\fP (detail::tquat< valType > const &x)"
+.br
+.ti -1c
+.RI "template<typename valType > valType \fBglm::yaw\fP (detail::tquat< valType > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat3x3< T > \fBglm::mat3_cast\fP (detail::tquat< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::mat4_cast\fP (detail::tquat< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tquat< T > \fBglm::quat_cast\fP (detail::tmat3x3< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tquat< T > \fBglm::quat_cast\fP (detail::tmat4x4< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename valType > valType \fBglm::angle\fP (detail::tquat< valType > const &x)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tvec3< valType > \fBglm::axis\fP (detail::tquat< valType > const &x)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tquat< valType > \fBglm::angleAxis\fP (valType const &angle, valType const &x, valType const &y, valType const &z)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tquat< valType > \fBglm::angleAxis\fP (valType const &angle, detail::tvec3< valType > const &axis)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Defines a templated quaternion type and several quaternion operations\&. 
+
+<\fBglm/gtc/quaternion\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef detail::tquat<double> \fBglm::dquat\fP"
+Quaternion of double-precision floating-point numbers\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "typedef detail::tquat<float> \fBglm::fquat\fP"
+Quaternion of single-precision floating-point numbers\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "typedef detail::tquat<highp_float> \fBglm::highp_quat\fP"
+Quaternion of high precision floating-point numbers\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "typedef detail::tquat<detail::half> \fBglm::hquat\fP"
+Quaternion of half-precision floating-point numbers\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "typedef detail::tquat<lowp_float> \fBglm::lowp_quat\fP"
+Quaternion of low precision floating-point numbers\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "typedef detail::tquat<mediump_float> \fBglm::mediump_quat\fP"
+Quaternion of medium precision floating-point numbers\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "typedef detail::tquat<float> \fBglm::quat\fP"
+Quaternion of floating-point numbers\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "template<typename valType > valType glm::angle (\fBdetail::tquat\fP< valType > const & x)"
+Returns the quaternion rotation angle\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tquat<valType> glm::angleAxis (valType const & angle, valType const & x, valType const & y, valType const & z)"
+Build a quaternion from an angle and a normalized axis\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIangle\fP Angle expressed in radians if GLM_FORCE_RADIANS is define or degrees otherwise\&. 
+.br
+\fIx\fP x component of the x-axis, x, y, z must be a normalized axis 
+.br
+\fIy\fP y component of the y-axis, x, y, z must be a normalized axis 
+.br
+\fIz\fP z component of the z-axis, x, y, z must be a normalized axis
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tquat<valType> glm::angleAxis (valType const & angle, \fBdetail::tvec3\fP< valType > const & axis)"
+Build a quaternion from an angle and a normalized axis\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIangle\fP Angle expressed in radians if GLM_FORCE_RADIANS is define or degrees otherwise\&. 
+.br
+\fIaxis\fP Axis of the quaternion, must be normalized\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tvec3<valType> glm::axis (\fBdetail::tquat\fP< valType > const & x)"
+Returns the q rotation axis\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tquat<T> glm::conjugate (\fBdetail::tquat\fP< T > const & q)"
+Returns the q conjugate\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > T glm::dot (\fBdetail::tquat\fP< T > const & q1, \fBdetail::tquat\fP< T > const & q2)"
+Returns dot product of q1 and q2, i\&.e\&., q1[0] * q2[0] + q1[1] * q2[1] + \&.\&.\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tvec3<T> glm::eulerAngles (\fBdetail::tquat\fP< T > const & x)"
+Returns euler angles, yitch as x, yaw as y, roll as z\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tquat<T> glm::inverse (\fBdetail::tquat\fP< T > const & q)"
+Returns the q inverse\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > T glm::length (\fBdetail::tquat\fP< T > const & q)"
+Returns the length of the quaternion\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tquat<T> glm::lerp (\fBdetail::tquat\fP< T > const & x, \fBdetail::tquat\fP< T > const & y, T const & a)"
+Linear interpolation of two quaternions\&. The interpolation is oriented\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP A quaternion 
+.br
+\fIy\fP A quaternion 
+.br
+\fIa\fP Interpolation factor\&. The interpolation is defined in the range [0, 1]\&. 
+.RE
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP Value type used to build the quaternion\&. Supported: half, float or double\&. 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tmat3x3<T> glm::mat3_cast (\fBdetail::tquat\fP< T > const & x)"
+Converts a quaternion to a 3 * 3 matrix\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tmat4x4<T> glm::mat4_cast (\fBdetail::tquat\fP< T > const & x)"
+Converts a quaternion to a 4 * 4 matrix\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tquat<T> glm::mix (\fBdetail::tquat\fP< T > const & x, \fBdetail::tquat\fP< T > const & y, T const & a)"
+Spherical linear interpolation of two quaternions\&. The interpolation is oriented and the rotation is performed at constant speed\&. For short path spherical linear interpolation, use the slerp function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP A quaternion 
+.br
+\fIy\fP A quaternion 
+.br
+\fIa\fP Interpolation factor\&. The interpolation is defined beyond the range [0, 1]\&. 
+.RE
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP Value type used to build the quaternion\&. Supported: half, float or double\&. 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.PP
+- slerp(detail::tquat<T> const & x, detail::tquat<T> const & y, T const & a) 
+.RE
+.PP
+
+.SS "template<typename T > detail::tquat<T> glm::normalize (\fBdetail::tquat\fP< T > const & q)"
+Returns the normalized quaternion\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > valType glm::pitch (\fBdetail::tquat\fP< valType > const & x)"
+Returns pitch value of euler angles expressed in radians if GLM_FORCE_RADIANS is define or degrees otherwise\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tquat<T> glm::quat_cast (\fBdetail::tmat3x3\fP< T > const & x)"
+Converts a 3 * 3 matrix to a quaternion\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tquat<T> glm::quat_cast (\fBdetail::tmat4x4\fP< T > const & x)"
+Converts a 4 * 4 matrix to a quaternion\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > valType glm::roll (\fBdetail::tquat\fP< valType > const & x)"
+Returns roll value of euler angles expressed in radians if GLM_FORCE_RADIANS is define or degrees otherwise\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tquat<T> glm::rotate (\fBdetail::tquat\fP< T > const & q, typename \fBdetail::tquat\fP< T >::value_type const & angle, \fBdetail::tvec3\fP< T > const & axis)"
+Rotates a quaternion from an vector of 3 components axis and an angle\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIq\fP Source orientation 
+.br
+\fIangle\fP Angle expressed in radians if GLM_FORCE_RADIANS is define or degrees otherwise\&. 
+.br
+\fIaxis\fP Axis of the rotation, must be normalized\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tquat<T> glm::slerp (\fBdetail::tquat\fP< T > const & x, \fBdetail::tquat\fP< T > const & y, T const & a)"
+
+.PP
+Returns the slurp interpolation between two quaternions\&. Spherical linear interpolation of two quaternions\&. The interpolation always take the short path and the rotation is performed at constant speed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP A quaternion 
+.br
+\fIy\fP A quaternion 
+.br
+\fIa\fP Interpolation factor\&. The interpolation is defined beyond the range [0, 1]\&. 
+.RE
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP Value type used to build the quaternion\&. Supported: half, float or double\&. 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > valType glm::yaw (\fBdetail::tquat\fP< valType > const & x)"
+Returns yaw value of euler angles expressed in radians if GLM_FORCE_RADIANS is define or degrees otherwise\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

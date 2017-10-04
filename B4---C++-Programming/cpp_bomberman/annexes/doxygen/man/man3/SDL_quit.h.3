@@ -1,0 +1,37 @@
+.TH "lib/gdl/includes/SDL_quit.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_quit.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_QuitRequested\fP()   (\fBSDL_PumpEvents\fP(), (\fBSDL_PeepEvents\fP(NULL,0,SDL_PEEKEVENT,\fBSDL_QUIT\fP,\fBSDL_QUIT\fP) > 0))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL quit event handling\&.
+.PP
+An \fBSDL_QUIT\fP event is generated when the user tries to close the application window\&. If it is ignored or filtered out, the window will remain open\&. If it is not ignored or filtered, it is queued normally and the window is allowed to close\&. When the window is closed, screen updates will complete, but have no effect\&.
+.PP
+\fBSDL_Init()\fP installs signal handlers for SIGINT (keyboard interrupt) and SIGTERM (system termination request), if handlers do not already exist, that generate \fBSDL_QUIT\fP events as well\&. There is no way to determine the cause of an \fBSDL_QUIT\fP event, but setting a signal handler in your application will override the default generation of quit events for that signal\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_Quit()\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

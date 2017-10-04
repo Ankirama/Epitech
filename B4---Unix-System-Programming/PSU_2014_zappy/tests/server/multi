@@ -1,0 +1,73 @@
+#!/usr/bin/env php
+
+<?php
+$_host = "localhost";
+$_port = "4224";
+
+function usage() {
+  exit( "Usage: ./unitary test_file nb_clients [port]\n" );
+}
+
+function  initClient( $host = "localhost", $port = "4224" ) {
+$_host = $host;
+$_port = $port;
+set_time_limit(0);
+$socket = socket_create( AF_INET, SOCK_STREAM, 0 ) or exit( "Could not create socket\n" );
+$server = socket_connect( $socket, $host, $port ) or exit( "Could not connect to server\n" );
+return $socket;
+}
+
+function getFile( $filepath ) {
+  $lines = file( $filepath, FILE_IGNORE_NEW_LINES ) or exit( "Could not read file " . $filepath . "\n");
+  return $lines;
+}
+
+function sendMsg( $socket, $msg ) {
+  echo "______________________________________\n";
+  echo "\e[01;33mSending message to server --> [" . $msg . "]\e[0m\n";
+  socket_write( $socket, $msg . "\n", strlen( $msg . "\n" ) ) or exit( "Could not send msg\n" );
+  echo "\e[01;32mMessage sent\e[0m\n\n";
+}
+
+function receiveMsg( $socket ) {
+  echo "\e[01;35mWaiting to receive answer...\e[0m\n";
+  $msg = socket_read( $socket, 1024, PHP_NORMAL_READ ) or exit( "Could not read\n" );
+  if ( strcmp( $msg, "ko\n" ) == 0)
+    echo "\e[01;31mMessage received --> [" . substr( $msg, 0, strlen( $msg ) - 1 ) . "]\e[0m\n";
+  else
+    echo "\e[01;34mMessage received --> [" . substr( $msg, 0, strlen( $msg ) - 1 ) . "]\e[0m\n";
+  echo "______________________________________\n";
+}
+
+function mainNetwork( $socket, $lines ) {
+  receiveMsg( $socket );
+  sendMsg( $socket, $lines[0] );
+  receiveMsg( $socket );
+  receiveMsg( $socket );
+  for ( $i=1; $i < count( $lines ); $i++ ) {
+    sendMsg( $socket, $lines[$i] );
+    receiveMsg( $socket );
+  }
+}
+
+function main( $argv ) {
+  if ( count( $argv ) == 3 ) {
+    $nb_clients = $argv[2];
+    for ( $i=0; $i < $nb_clients; $i++ ) {
+      $socket = initClient();
+      $lines = getFile( $argv[1] );
+      mainNetwork( $socket, $lines );
+    }
+  } else if ( count( $argv ) == 4 ) {
+    $nb_clients = $argv[2];
+    for ($i=0; $i < $nb_clients; $i++) {
+      $socket = initClient( "localhost", $argv[3] );
+      $lines = getFile( $argv[1] );
+      mainNetwork( $socket, $lines );
+    }
+  } else
+    usage();
+}
+
+main($argv);
+?>

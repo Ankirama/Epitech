@@ -1,0 +1,216 @@
+.TH "gtx_quaternion" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtx_quaternion \- GLM_GTX_quaternion
+.PP
+Extented quaternion types and functions\&.  
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename valType > detail::tvec3< valType > \fBglm::cross\fP (detail::tquat< valType > const &q, detail::tvec3< valType > const &v)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tvec3< valType > \fBglm::cross\fP (detail::tvec3< valType > const &v, detail::tquat< valType > const &q)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tquat< valType > \fBglm::squad\fP (detail::tquat< valType > const &q1, detail::tquat< valType > const &q2, detail::tquat< valType > const &s1, detail::tquat< valType > const &s2, valType const &h)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tquat< valType > \fBglm::intermediate\fP (detail::tquat< valType > const &prev, detail::tquat< valType > const &curr, detail::tquat< valType > const &next)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tquat< valType > \fBglm::exp\fP (detail::tquat< valType > const &q)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tquat< valType > \fBglm::log\fP (detail::tquat< valType > const &q)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tquat< valType > \fBglm::pow\fP (detail::tquat< valType > const &x, valType const &y)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tvec3< valType > \fBglm::rotate\fP (detail::tquat< valType > const &q, detail::tvec3< valType > const &v)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tvec4< valType > \fBglm::rotate\fP (detail::tquat< valType > const &q, detail::tvec4< valType > const &v)"
+.br
+.ti -1c
+.RI "template<typename valType > valType \fBglm::extractRealComponent\fP (detail::tquat< valType > const &q)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat3x3< valType > \fBglm::toMat3\fP (detail::tquat< valType > const &x)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::toMat4\fP (detail::tquat< valType > const &x)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tquat< valType > \fBglm::toQuat\fP (detail::tmat3x3< valType > const &x)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tquat< valType > \fBglm::toQuat\fP (detail::tmat4x4< valType > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tquat< T > \fBglm::shortMix\fP (detail::tquat< T > const &x, detail::tquat< T > const &y, T const &a)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tquat< T > \fBglm::fastMix\fP (detail::tquat< T > const &x, detail::tquat< T > const &y, T const &a)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Extented quaternion types and functions\&. 
+
+<\fBglm/gtx/quaternion\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename valType > detail::tvec3<valType> glm::cross (\fBdetail::tquat\fP< valType > const & q, \fBdetail::tvec3\fP< valType > const & v)"
+Compute a cross product between a quaternion and a vector\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tvec3<valType> glm::cross (\fBdetail::tvec3\fP< valType > const & v, \fBdetail::tquat\fP< valType > const & q)"
+Compute a cross product between a vector and a quaternion\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tquat<valType> glm::exp (\fBdetail::tquat\fP< valType > const & q)"
+Returns a exp of a quaternion\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > valType glm::extractRealComponent (\fBdetail::tquat\fP< valType > const & q)"
+Extract the real component of a quaternion\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tquat<T> glm::fastMix (\fBdetail::tquat\fP< T > const & x, \fBdetail::tquat\fP< T > const & y, T const & a)"
+Quaternion normalized linear interpolation\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tquat<valType> glm::intermediate (\fBdetail::tquat\fP< valType > const & prev, \fBdetail::tquat\fP< valType > const & curr, \fBdetail::tquat\fP< valType > const & next)"
+Returns an intermediate control point for squad interpolation\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tquat<valType> glm::log (\fBdetail::tquat\fP< valType > const & q)"
+Returns a log of a quaternion\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tquat<valType> glm::pow (\fBdetail::tquat\fP< valType > const & x, valType const & y)"
+Returns x raised to the y power\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tvec3<valType> glm::rotate (\fBdetail::tquat\fP< valType > const & q, \fBdetail::tvec3\fP< valType > const & v)"
+Returns quarternion square root\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP Rotates a 3 components vector by a quaternion\&.
+.PP
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tvec4<valType> glm::rotate (\fBdetail::tquat\fP< valType > const & q, \fBdetail::tvec4\fP< valType > const & v)"
+Rotates a 4 components vector by a quaternion\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tquat<T> glm::shortMix (\fBdetail::tquat\fP< T > const & x, \fBdetail::tquat\fP< T > const & y, T const & a)"
+Quaternion interpolation using the rotation short path\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tquat<valType> glm::squad (\fBdetail::tquat\fP< valType > const & q1, \fBdetail::tquat\fP< valType > const & q2, \fBdetail::tquat\fP< valType > const & s1, \fBdetail::tquat\fP< valType > const & s2, valType const & h)"
+Compute a point on a path according squad equation\&. q1 and q2 are control points; s1 and s2 are intermediate control points\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tmat3x3<valType> glm::toMat3 (\fBdetail::tquat\fP< valType > const & x)"
+Converts a quaternion to a 3 * 3 matrix\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tmat4x4<valType> glm::toMat4 (\fBdetail::tquat\fP< valType > const & x)"
+Converts a quaternion to a 4 * 4 matrix\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tquat<valType> glm::toQuat (\fBdetail::tmat3x3\fP< valType > const & x)"
+Converts a 3 * 3 matrix to a quaternion\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tquat<valType> glm::toQuat (\fBdetail::tmat4x4\fP< valType > const & x)"
+Converts a 4 * 4 matrix to a quaternion\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_quaternion\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

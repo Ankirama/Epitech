@@ -1,0 +1,70 @@
+.TH "SDL_MouseButtonEvent" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_MouseButtonEvent \- Mouse button event structure (event\&.button\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwindowID\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwhich\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBstate\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBclicks\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding1\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBx\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBy\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Mouse button event structure (event\&.button\&.*) 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint8\fP SDL_MouseButtonEvent::button"
+The mouse button index 
+.SS "\fBUint8\fP SDL_MouseButtonEvent::clicks"
+1 for single-click, 2 for double-click, etc\&. 
+.SS "\fBUint8\fP SDL_MouseButtonEvent::state"
+::SDL_PRESSED or ::SDL_RELEASED 
+.SS "\fBUint32\fP SDL_MouseButtonEvent::type"
+\fBSDL_MOUSEBUTTONDOWN\fP or \fBSDL_MOUSEBUTTONUP\fP 
+.SS "\fBUint32\fP SDL_MouseButtonEvent::which"
+The mouse instance id, or SDL_TOUCH_MOUSEID 
+.SS "\fBUint32\fP SDL_MouseButtonEvent::windowID"
+The window with mouse focus, if any 
+.SS "\fBSint32\fP SDL_MouseButtonEvent::x"
+X coordinate, relative to window 
+.SS "\fBSint32\fP SDL_MouseButtonEvent::y"
+Y coordinate, relative to window 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

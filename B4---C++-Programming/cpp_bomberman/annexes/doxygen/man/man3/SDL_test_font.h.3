@@ -1,0 +1,86 @@
+.TH "lib/gdl/includes/SDL_test_font.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_test_font.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFONT_CHARACTER_SIZE\fP   8"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_DrawCharacter\fP (SDL_Renderer *renderer, \fBint\fP x, \fBint\fP y, char c)"
+.br
+.RI "\fIDraw a string in the currently set font\&. \fP"
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_DrawString\fP (SDL_Renderer *renderer, \fBint\fP x, \fBint\fP y, const char *s)"
+.br
+.RI "\fIDraw a string in the currently set font\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL test framework\&.
+.PP
+This code is a part of the SDL2_test library, not the main SDL library\&. 
+.SH "Function Documentation"
+.PP 
+.SS "\fBint\fP SDLTest_DrawCharacter (SDL_Renderer * renderer, \fBint\fP x, \fBint\fP y, char c)"
+
+.PP
+Draw a string in the currently set font\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrenderer\fP The renderer to draw on\&. 
+.br
+\fIx\fP The X coordinate of the upper left corner of the character\&. 
+.br
+\fIy\fP The Y coordinate of the upper left corner of the character\&. 
+.br
+\fIc\fP The character to draw\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Returns 0 on success, -1 on failure\&. 
+.RE
+.PP
+
+.SS "\fBint\fP SDLTest_DrawString (SDL_Renderer * renderer, \fBint\fP x, \fBint\fP y, const char * s)"
+
+.PP
+Draw a string in the currently set font\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrenderer\fP The renderer to draw on\&. 
+.br
+\fIx\fP The X coordinate of the upper left corner of the string\&. 
+.br
+\fIy\fP The Y coordinate of the upper left corner of the string\&. 
+.br
+\fIs\fP The string to draw\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Returns 0 on success, -1 on failure\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

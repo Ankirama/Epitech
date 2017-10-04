@@ -1,0 +1,79 @@
+\hypertarget{group__gtc__swizzle}{}\section{G\+L\+M\+\_\+\+G\+T\+C\+\_\+swizzle}
+\label{group__gtc__swizzle}\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+swizzle@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+swizzle}}
+
+
+Provide functions to emulate G\+L\+S\+L swizzle operator fonctionalities.  
+
+
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+C\+\_\+swizzle\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries static\+\_\+swizzle1\+\_\+const}(T\+Y\+P\+E,  S\+I\+Z\+E)
+\item 
+\#define {\bfseries static\+\_\+swizzle1\+\_\+ref}(T\+Y\+P\+E,  S\+I\+Z\+E)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__gtc__swizzle_ga09b6f795bc75d7fa47085a715eb636c9}{}{\footnotesize template$<$typename T , template$<$ typename $>$ class vec\+Type$>$ }\\T const \& {\bfseries glm\+::swizzle} (vec\+Type$<$ T $>$ const \&v, comp x)\label{group__gtc__swizzle_ga09b6f795bc75d7fa47085a715eb636c9}
+
+\item 
+\hypertarget{group__gtc__swizzle_ga9eba89cade1f01221e5f4dc019b00245}{}{\footnotesize template$<$typename T , template$<$ typename $>$ class vec\+Type$>$ }\\detail\+::tvec2$<$ T $>$ const \& {\bfseries glm\+::swizzle} (vec\+Type$<$ T $>$ const \&v, comp x, comp y)\label{group__gtc__swizzle_ga9eba89cade1f01221e5f4dc019b00245}
+
+\item 
+\hypertarget{group__gtc__swizzle_gabf0ce6dc9ee0b7d6327e211760bb9d20}{}{\footnotesize template$<$typename T , template$<$ typename $>$ class vec\+Type$>$ }\\detail\+::tvec3$<$ T $>$ const \& {\bfseries glm\+::swizzle} (vec\+Type$<$ T $>$ const \&v, comp x, comp y, comp z)\label{group__gtc__swizzle_gabf0ce6dc9ee0b7d6327e211760bb9d20}
+
+\item 
+\hypertarget{group__gtc__swizzle_ga54740b832c0d65da8ca7c682d50f4ae5}{}{\footnotesize template$<$typename T , template$<$ typename $>$ class vec\+Type$>$ }\\detail\+::tvec4$<$ T $>$ const \& {\bfseries glm\+::swizzle} (vec\+Type$<$ T $>$ const \&v, comp x, comp y, comp z, comp w)\label{group__gtc__swizzle_ga54740b832c0d65da8ca7c682d50f4ae5}
+
+\item 
+\hypertarget{group__gtc__swizzle_gac4d0759e0f966baa98e69133c781bc9d}{}{\footnotesize template$<$typename T , template$<$ typename $>$ class vec\+Type$>$ }\\T \& {\bfseries glm\+::swizzle} (vec\+Type$<$ T $>$ \&v, comp x)\label{group__gtc__swizzle_gac4d0759e0f966baa98e69133c781bc9d}
+
+\item 
+\hypertarget{group__gtc__swizzle_gaff724836e02c36bf40441f5fae116b53}{}{\footnotesize template$<$typename T , template$<$ typename $>$ class vec\+Type$>$ }\\detail\+::tref2$<$ T $>$ {\bfseries glm\+::swizzle} (vec\+Type$<$ T $>$ \&v, comp x, comp y)\label{group__gtc__swizzle_gaff724836e02c36bf40441f5fae116b53}
+
+\item 
+\hypertarget{group__gtc__swizzle_ga93106a77480696f43f6f16653cdab940}{}{\footnotesize template$<$typename T , template$<$ typename $>$ class vec\+Type$>$ }\\detail\+::tref3$<$ T $>$ {\bfseries glm\+::swizzle} (vec\+Type$<$ T $>$ \&v, comp x, comp y, comp z)\label{group__gtc__swizzle_ga93106a77480696f43f6f16653cdab940}
+
+\item 
+\hypertarget{group__gtc__swizzle_gab79abf7b57f5482982bc87bfa924920a}{}{\footnotesize template$<$typename T , template$<$ typename $>$ class vec\+Type$>$ }\\detail\+::tref4$<$ T $>$ {\bfseries glm\+::swizzle} (vec\+Type$<$ T $>$ \&v, comp x, comp y, comp z, comp w)\label{group__gtc__swizzle_gab79abf7b57f5482982bc87bfa924920a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provide functions to emulate G\+L\+S\+L swizzle operator fonctionalities. 
+
+$<$\hyperlink{swizzle_8hpp}{glm/gtc/swizzle.\+hpp}$>$ need to be included to use these functionalities. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__gtc__swizzle_ga63a97949cf1ea4462eaa08b554ed1012}{}\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+swizzle@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+swizzle}!static\+\_\+swizzle1\+\_\+const@{static\+\_\+swizzle1\+\_\+const}}
+\index{static\+\_\+swizzle1\+\_\+const@{static\+\_\+swizzle1\+\_\+const}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+swizzle@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+swizzle}}
+\subsubsection[{static\+\_\+swizzle1\+\_\+const}]{\setlength{\rightskip}{0pt plus 5cm}\#define static\+\_\+swizzle1\+\_\+const(
+\begin{DoxyParamCaption}
+\item[{}]{T\+Y\+P\+E, }
+\item[{}]{S\+I\+Z\+E}
+\end{DoxyParamCaption}
+)}\label{group__gtc__swizzle_ga63a97949cf1ea4462eaa08b554ed1012}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <comp x>                                       \(\backslash\)
+        GLM\_FUNC\_QUALIFIER TYPE swizzle(detail::tvec##SIZE<TYPE> \textcolor{keyword}{const} & v) \(\backslash\)
+        \{\textcolor{keywordflow}{return} v[x];\}
+\end{DoxyCode}
+\hypertarget{group__gtc__swizzle_gaf7ea277f79f159c6d669718226da8765}{}\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+swizzle@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+swizzle}!static\+\_\+swizzle1\+\_\+ref@{static\+\_\+swizzle1\+\_\+ref}}
+\index{static\+\_\+swizzle1\+\_\+ref@{static\+\_\+swizzle1\+\_\+ref}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+swizzle@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+swizzle}}
+\subsubsection[{static\+\_\+swizzle1\+\_\+ref}]{\setlength{\rightskip}{0pt plus 5cm}\#define static\+\_\+swizzle1\+\_\+ref(
+\begin{DoxyParamCaption}
+\item[{}]{T\+Y\+P\+E, }
+\item[{}]{S\+I\+Z\+E}
+\end{DoxyParamCaption}
+)}\label{group__gtc__swizzle_gaf7ea277f79f159c6d669718226da8765}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <comp x>                                                   \(\backslash\)
+        GLM\_FUNC\_QUALIFIER TYPE& swizzle(detail::tvec##SIZE<TYPE> & v)      \(\backslash\)
+        \{\textcolor{keywordflow}{return} v[x];\}
+\end{DoxyCode}

@@ -1,0 +1,257 @@
+\hypertarget{_s_d_l__thread_8h}{}\section{lib/gdl/includes/\+S\+D\+L\+\_\+thread.h File Reference}
+\label{_s_d_l__thread_8h}\index{lib/gdl/includes/\+S\+D\+L\+\_\+thread.\+h@{lib/gdl/includes/\+S\+D\+L\+\_\+thread.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+atomic.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+mutex.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+Include dependency graph for S\+D\+L\+\_\+thread.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__thread_8h_a97cd1dc60cea74b74273affb1a974db5}{}typedef struct S\+D\+L\+\_\+\+Thread {\bfseries S\+D\+L\+\_\+\+Thread}\label{_s_d_l__thread_8h_a97cd1dc60cea74b74273affb1a974db5}
+
+\item 
+\hypertarget{_s_d_l__thread_8h_ac4db699531ce9f18f5a8547aa988b88e}{}typedef unsigned long {\bfseries S\+D\+L\+\_\+thread\+I\+D}\label{_s_d_l__thread_8h_ac4db699531ce9f18f5a8547aa988b88e}
+
+\item 
+\hypertarget{_s_d_l__thread_8h_a07ce005c35ad6ac377d6124db7296026}{}typedef unsigned \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries S\+D\+L\+\_\+\+T\+L\+S\+I\+D}\label{_s_d_l__thread_8h_a07ce005c35ad6ac377d6124db7296026}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_s_d_l__thread_8h_acce8dea56f6b307fadd2949b64e3ebda}{S\+D\+L\+\_\+\+Thread\+Priority} \{ {\bfseries S\+D\+L\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+L\+O\+W}, 
+{\bfseries S\+D\+L\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+N\+O\+R\+M\+A\+L}, 
+{\bfseries S\+D\+L\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+H\+I\+G\+H}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} (S\+D\+L\+C\+A\+L\+L $\ast$S\+D\+L\+\_\+\+Thread\+Function)(\hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} $\ast$data)
+\item 
+D\+E\+C\+L\+S\+P\+E\+C S\+D\+L\+\_\+\+Thread $\ast$S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__thread_8h_aca3013d4f50e918b17d2721b37e59082}{S\+D\+L\+\_\+\+Create\+Thread} (S\+D\+L\+\_\+\+Thread\+Function fn, const char $\ast$name, \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} $\ast$data)
+\item 
+D\+E\+C\+L\+S\+P\+E\+C const char $\ast$S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__thread_8h_abe2ffa508d85379b355673d557e74d9f}{S\+D\+L\+\_\+\+Get\+Thread\+Name} (S\+D\+L\+\_\+\+Thread $\ast$thread)
+\item 
+D\+E\+C\+L\+S\+P\+E\+C S\+D\+L\+\_\+thread\+I\+D S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__thread_8h_a341933eef1470789de20b05c1392b9ae}{S\+D\+L\+\_\+\+Thread\+I\+D} (\hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void})
+\item 
+D\+E\+C\+L\+S\+P\+E\+C S\+D\+L\+\_\+thread\+I\+D S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__thread_8h_a0bf5d93ed5cb25ea59307472c62c66db}{S\+D\+L\+\_\+\+Get\+Thread\+I\+D} (S\+D\+L\+\_\+\+Thread $\ast$thread)
+\item 
+D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__thread_8h_adf4da9c0e6a6833bef9741344b09699d}{S\+D\+L\+\_\+\+Set\+Thread\+Priority} (\hyperlink{_s_d_l__thread_8h_acce8dea56f6b307fadd2949b64e3ebda}{S\+D\+L\+\_\+\+Thread\+Priority} priority)
+\item 
+D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__thread_8h_ac96743626ed21d2cdb0868a23cca9705}{S\+D\+L\+\_\+\+Wait\+Thread} (S\+D\+L\+\_\+\+Thread $\ast$thread, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} $\ast$status)
+\item 
+D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__thread_8h_af90602c51ef5a62f26ed9931af484906}{S\+D\+L\+\_\+\+Detach\+Thread} (S\+D\+L\+\_\+\+Thread $\ast$thread)
+\item 
+D\+E\+C\+L\+S\+P\+E\+C S\+D\+L\+\_\+\+T\+L\+S\+I\+D S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__thread_8h_ac7ed1ec8dec5b902da25b60da2b728fa}{S\+D\+L\+\_\+\+T\+L\+S\+Create} (\hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void})
+\begin{DoxyCompactList}\small\item\em Create an identifier that is globally visible to all threads but refers to data that is thread-\/specific. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} $\ast$S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__thread_8h_ab519f8d89ea808f32fc139071e6207bb}{S\+D\+L\+\_\+\+T\+L\+S\+Get} (S\+D\+L\+\_\+\+T\+L\+S\+I\+D id)
+\begin{DoxyCompactList}\small\item\em Get the value associated with a thread local storage I\+D for the current thread. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__thread_8h_a73a9414493c106d9cb05d1a53d3412fc}{S\+D\+L\+\_\+\+T\+L\+S\+Set} (S\+D\+L\+\_\+\+T\+L\+S\+I\+D id, const \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} $\ast$value, \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void}($\ast$destructor)(\hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} $\ast$))
+\begin{DoxyCompactList}\small\item\em Set the value associated with a thread local storage I\+D for the current thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header for the S\+D\+L thread management routines. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_s_d_l__thread_8h_acce8dea56f6b307fadd2949b64e3ebda}{}\index{S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}!S\+D\+L\+\_\+\+Thread\+Priority@{S\+D\+L\+\_\+\+Thread\+Priority}}
+\index{S\+D\+L\+\_\+\+Thread\+Priority@{S\+D\+L\+\_\+\+Thread\+Priority}!S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Thread\+Priority}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+D\+L\+\_\+\+Thread\+Priority}}\label{_s_d_l__thread_8h_acce8dea56f6b307fadd2949b64e3ebda}
+The S\+D\+L thread priority.
+
+\begin{DoxyNote}{Note}
+On many systems you require special privileges to set high priority. 
+\end{DoxyNote}
+
+
+\subsection{Function Documentation}
+\hypertarget{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{}\index{S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}!int@{int}}
+\index{int@{int}!S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}}
+\subsubsection[{int}]{\setlength{\rightskip}{0pt plus 5cm}typedef int (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+C\+A\+L\+L $\ast$}]{S\+D\+L\+\_\+\+Thread\+Function}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}
+The function passed to \hyperlink{_s_d_l__thread_8h_aca3013d4f50e918b17d2721b37e59082}{S\+D\+L\+\_\+\+Create\+Thread()}. It is passed a void$\ast$ user context parameter and returns an int. \hypertarget{_s_d_l__thread_8h_aca3013d4f50e918b17d2721b37e59082}{}\index{S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}!S\+D\+L\+\_\+\+Create\+Thread@{S\+D\+L\+\_\+\+Create\+Thread}}
+\index{S\+D\+L\+\_\+\+Create\+Thread@{S\+D\+L\+\_\+\+Create\+Thread}!S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Create\+Thread}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C S\+D\+L\+\_\+\+Thread$\ast$ S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Create\+Thread (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Thread\+Function}]{fn, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf void} $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__thread_8h_aca3013d4f50e918b17d2721b37e59082}
+Create a thread.
+
+Thread naming is a little complicated\+: Most systems have very small limits for the string length (Haiku has 32 bytes, Linux currently has 16, Visual C++ 6.\+0 has nine!), and possibly other arbitrary rules. You\textquotesingle{}ll have to see what happens with your system\textquotesingle{}s debugger. The name should be U\+T\+F-\/8 (but using the naming limits of C identifiers is a better bet). There are no requirements for thread naming conventions, so long as the string is null-\/terminated U\+T\+F-\/8, but these guidelines are helpful in choosing a name\+:
+
+\href{http://stackoverflow.com/questions/149932/naming-conventions-for-threads}{\tt http\+://stackoverflow.\+com/questions/149932/naming-\/conventions-\/for-\/threads}
+
+If a system imposes requirements, S\+D\+L will try to munge the string for it (truncate, etc), but the original string contents will be available from \hyperlink{_s_d_l__thread_8h_abe2ffa508d85379b355673d557e74d9f}{S\+D\+L\+\_\+\+Get\+Thread\+Name()}. \hypertarget{_s_d_l__thread_8h_af90602c51ef5a62f26ed9931af484906}{}\index{S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}!S\+D\+L\+\_\+\+Detach\+Thread@{S\+D\+L\+\_\+\+Detach\+Thread}}
+\index{S\+D\+L\+\_\+\+Detach\+Thread@{S\+D\+L\+\_\+\+Detach\+Thread}!S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Detach\+Thread}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C {\bf void} S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Detach\+Thread (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Thread $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__thread_8h_af90602c51ef5a62f26ed9931af484906}
+A thread may be \char`\"{}detached\char`\"{} to signify that it should not remain until another thread has called \hyperlink{_s_d_l__thread_8h_ac96743626ed21d2cdb0868a23cca9705}{S\+D\+L\+\_\+\+Wait\+Thread()} on it. Detaching a thread is useful for long-\/running threads that nothing needs to synchronize with or further manage. When a detached thread is done, it simply goes away.
+
+There is no way to recover the return code of a detached thread. If you need this, don\textquotesingle{}t detach the thread and instead use \hyperlink{_s_d_l__thread_8h_ac96743626ed21d2cdb0868a23cca9705}{S\+D\+L\+\_\+\+Wait\+Thread()}.
+
+Once a thread is detached, you should usually assume the S\+D\+L\+\_\+\+Thread isn\textquotesingle{}t safe to reference again, as it will become invalid immediately upon the detached thread\textquotesingle{}s exit, instead of remaining until someone has called \hyperlink{_s_d_l__thread_8h_ac96743626ed21d2cdb0868a23cca9705}{S\+D\+L\+\_\+\+Wait\+Thread()} to finally clean it up. As such, don\textquotesingle{}t detach the same thread more than once.
+
+If a thread has already exited when passed to \hyperlink{_s_d_l__thread_8h_af90602c51ef5a62f26ed9931af484906}{S\+D\+L\+\_\+\+Detach\+Thread()}, it will stop waiting for a call to \hyperlink{_s_d_l__thread_8h_ac96743626ed21d2cdb0868a23cca9705}{S\+D\+L\+\_\+\+Wait\+Thread()} and clean up immediately. It is not safe to detach a thread that might be used with \hyperlink{_s_d_l__thread_8h_ac96743626ed21d2cdb0868a23cca9705}{S\+D\+L\+\_\+\+Wait\+Thread()}.
+
+You may not call \hyperlink{_s_d_l__thread_8h_ac96743626ed21d2cdb0868a23cca9705}{S\+D\+L\+\_\+\+Wait\+Thread()} on a thread that has been detached. Use either that function or this one, but not both, or behavior is undefined.
+
+It is safe to pass N\+U\+L\+L to this function; it is a no-\/op. \hypertarget{_s_d_l__thread_8h_a0bf5d93ed5cb25ea59307472c62c66db}{}\index{S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}!S\+D\+L\+\_\+\+Get\+Thread\+I\+D@{S\+D\+L\+\_\+\+Get\+Thread\+I\+D}}
+\index{S\+D\+L\+\_\+\+Get\+Thread\+I\+D@{S\+D\+L\+\_\+\+Get\+Thread\+I\+D}!S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Get\+Thread\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C S\+D\+L\+\_\+thread\+I\+D S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Get\+Thread\+I\+D (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Thread $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__thread_8h_a0bf5d93ed5cb25ea59307472c62c66db}
+Get the thread identifier for the specified thread.
+
+Equivalent to \hyperlink{_s_d_l__thread_8h_a341933eef1470789de20b05c1392b9ae}{S\+D\+L\+\_\+\+Thread\+I\+D()} if the specified thread is N\+U\+L\+L. \hypertarget{_s_d_l__thread_8h_abe2ffa508d85379b355673d557e74d9f}{}\index{S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}!S\+D\+L\+\_\+\+Get\+Thread\+Name@{S\+D\+L\+\_\+\+Get\+Thread\+Name}}
+\index{S\+D\+L\+\_\+\+Get\+Thread\+Name@{S\+D\+L\+\_\+\+Get\+Thread\+Name}!S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Get\+Thread\+Name}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C const char$\ast$ S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Get\+Thread\+Name (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Thread $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__thread_8h_abe2ffa508d85379b355673d557e74d9f}
+Get the thread name, as it was specified in \hyperlink{_s_d_l__thread_8h_aca3013d4f50e918b17d2721b37e59082}{S\+D\+L\+\_\+\+Create\+Thread()}. This function returns a pointer to a U\+T\+F-\/8 string that names the specified thread, or N\+U\+L\+L if it doesn\textquotesingle{}t have a name. This is internal memory, not to be free()\textquotesingle{}d by the caller, and remains valid until the specified thread is cleaned up by \hyperlink{_s_d_l__thread_8h_ac96743626ed21d2cdb0868a23cca9705}{S\+D\+L\+\_\+\+Wait\+Thread()}. \hypertarget{_s_d_l__thread_8h_adf4da9c0e6a6833bef9741344b09699d}{}\index{S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}!S\+D\+L\+\_\+\+Set\+Thread\+Priority@{S\+D\+L\+\_\+\+Set\+Thread\+Priority}}
+\index{S\+D\+L\+\_\+\+Set\+Thread\+Priority@{S\+D\+L\+\_\+\+Set\+Thread\+Priority}!S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Set\+Thread\+Priority}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C {\bf int} S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Set\+Thread\+Priority (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Thread\+Priority}}]{priority}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__thread_8h_adf4da9c0e6a6833bef9741344b09699d}
+Set the priority for the current thread \hypertarget{_s_d_l__thread_8h_a341933eef1470789de20b05c1392b9ae}{}\index{S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}!S\+D\+L\+\_\+\+Thread\+I\+D@{S\+D\+L\+\_\+\+Thread\+I\+D}}
+\index{S\+D\+L\+\_\+\+Thread\+I\+D@{S\+D\+L\+\_\+\+Thread\+I\+D}!S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Thread\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C S\+D\+L\+\_\+thread\+I\+D S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Thread\+I\+D (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__thread_8h_a341933eef1470789de20b05c1392b9ae}
+Get the thread identifier for the current thread. \hypertarget{_s_d_l__thread_8h_ac7ed1ec8dec5b902da25b60da2b728fa}{}\index{S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}!S\+D\+L\+\_\+\+T\+L\+S\+Create@{S\+D\+L\+\_\+\+T\+L\+S\+Create}}
+\index{S\+D\+L\+\_\+\+T\+L\+S\+Create@{S\+D\+L\+\_\+\+T\+L\+S\+Create}!S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+T\+L\+S\+Create}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C S\+D\+L\+\_\+\+T\+L\+S\+I\+D S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+T\+L\+S\+Create (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__thread_8h_ac7ed1ec8dec5b902da25b60da2b728fa}
+
+
+Create an identifier that is globally visible to all threads but refers to data that is thread-\/specific. 
+
+\begin{DoxyReturn}{Returns}
+The newly created thread local storage identifier, or 0 on error
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+1 static SDL\_SpinLock tls\_lock;
+2 static SDL\_TLSID thread\_local\_storage;
+3 
+4 void SetMyThreadData(void *value)
+5 \{
+6     if (!thread\_local\_storage) \{
+7         SDL\_AtomicLock(&tls\_lock);
+8         if (!thread\_local\_storage) \{
+9             thread\_local\_storage = SDL\_TLSCreate();
+10         \}
+11         SDL\_AtomicUnLock(&tls\_lock);
+12     \}
+13     SDL\_TLSSet(thread\_local\_storage, value);
+14 \}
+15 
+16 void *GetMyThreadData(void)
+17 \{
+18     return SDL\_TLSGet(thread\_local\_storage);
+19 \}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_s_d_l__thread_8h_ab519f8d89ea808f32fc139071e6207bb}{S\+D\+L\+\_\+\+T\+L\+S\+Get()} 
+
+\hyperlink{_s_d_l__thread_8h_a73a9414493c106d9cb05d1a53d3412fc}{S\+D\+L\+\_\+\+T\+L\+S\+Set()} 
+\end{DoxySeeAlso}
+\hypertarget{_s_d_l__thread_8h_ab519f8d89ea808f32fc139071e6207bb}{}\index{S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}!S\+D\+L\+\_\+\+T\+L\+S\+Get@{S\+D\+L\+\_\+\+T\+L\+S\+Get}}
+\index{S\+D\+L\+\_\+\+T\+L\+S\+Get@{S\+D\+L\+\_\+\+T\+L\+S\+Get}!S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+T\+L\+S\+Get}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C {\bf void}$\ast$ S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+T\+L\+S\+Get (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+T\+L\+S\+I\+D}]{id}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__thread_8h_ab519f8d89ea808f32fc139071e6207bb}
+
+
+Get the value associated with a thread local storage I\+D for the current thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The thread local storage I\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value associated with the I\+D for the current thread, or N\+U\+L\+L if no value has been set.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_s_d_l__thread_8h_ac7ed1ec8dec5b902da25b60da2b728fa}{S\+D\+L\+\_\+\+T\+L\+S\+Create()} 
+
+\hyperlink{_s_d_l__thread_8h_a73a9414493c106d9cb05d1a53d3412fc}{S\+D\+L\+\_\+\+T\+L\+S\+Set()} 
+\end{DoxySeeAlso}
+\hypertarget{_s_d_l__thread_8h_a73a9414493c106d9cb05d1a53d3412fc}{}\index{S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}!S\+D\+L\+\_\+\+T\+L\+S\+Set@{S\+D\+L\+\_\+\+T\+L\+S\+Set}}
+\index{S\+D\+L\+\_\+\+T\+L\+S\+Set@{S\+D\+L\+\_\+\+T\+L\+S\+Set}!S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+T\+L\+S\+Set}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C {\bf int} S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+T\+L\+S\+Set (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+T\+L\+S\+I\+D}]{id, }
+\item[{const {\bf void} $\ast$}]{value, }
+\item[{{\bf void}($\ast$)({\bf void} $\ast$)}]{destructor}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__thread_8h_a73a9414493c106d9cb05d1a53d3412fc}
+
+
+Set the value associated with a thread local storage I\+D for the current thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The thread local storage I\+D \\
+\hline
+{\em value} & The value to associate with the I\+D for the current thread \\
+\hline
+{\em destructor} & A function called when the thread exits, to free the value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on error
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_s_d_l__thread_8h_ac7ed1ec8dec5b902da25b60da2b728fa}{S\+D\+L\+\_\+\+T\+L\+S\+Create()} 
+
+\hyperlink{_s_d_l__thread_8h_ab519f8d89ea808f32fc139071e6207bb}{S\+D\+L\+\_\+\+T\+L\+S\+Get()} 
+\end{DoxySeeAlso}
+\hypertarget{_s_d_l__thread_8h_ac96743626ed21d2cdb0868a23cca9705}{}\index{S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}!S\+D\+L\+\_\+\+Wait\+Thread@{S\+D\+L\+\_\+\+Wait\+Thread}}
+\index{S\+D\+L\+\_\+\+Wait\+Thread@{S\+D\+L\+\_\+\+Wait\+Thread}!S\+D\+L\+\_\+thread.\+h@{S\+D\+L\+\_\+thread.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Wait\+Thread}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C {\bf void} S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Wait\+Thread (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Thread $\ast$}]{thread, }
+\item[{{\bf int} $\ast$}]{status}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__thread_8h_ac96743626ed21d2cdb0868a23cca9705}
+Wait for a thread to finish. Threads that haven\textquotesingle{}t been detached will remain (as a \char`\"{}zombie\char`\"{}) until this function cleans them up. Not doing so is a resource leak.
+
+Once a thread has been cleaned up through this function, the S\+D\+L\+\_\+\+Thread that references it becomes invalid and should not be referenced again. As such, only one thread may call \hyperlink{_s_d_l__thread_8h_ac96743626ed21d2cdb0868a23cca9705}{S\+D\+L\+\_\+\+Wait\+Thread()} on another.
+
+The return code for the thread function is placed in the area pointed to by {\ttfamily status}, if {\ttfamily status} is not N\+U\+L\+L.
+
+You may not wait on a thread that has been used in a call to \hyperlink{_s_d_l__thread_8h_af90602c51ef5a62f26ed9931af484906}{S\+D\+L\+\_\+\+Detach\+Thread()}. Use either that function or this one, but not both, or behavior is undefined.
+
+It is safe to pass N\+U\+L\+L to this function; it is a no-\/op. 

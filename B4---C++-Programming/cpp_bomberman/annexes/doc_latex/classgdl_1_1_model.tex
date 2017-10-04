@@ -1,0 +1,277 @@
+\hypertarget{classgdl_1_1_model}{\section{gdl\-:\-:Model Class Reference}
+\label{classgdl_1_1_model}\index{gdl\-::\-Model@{gdl\-::\-Model}}
+}
+
+
+Represents a Fbx, Obj or Collada model.  
+
+
+
+
+{\ttfamily \#include $<$Model.\-hh$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classgdl_1_1_model_a2880a8151a0a076dccc17c8a12530dcc}{pause} (bool pause\-Anim)
+\begin{DoxyCompactList}\small\item\em set the pause state for the current animation. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_model_a223b04dc9a2007ac22cc71d019af5749}{set\-Current\-Anim} (int stack, bool loop=true)
+\begin{DoxyCompactList}\small\item\em Set the current animation by it's index. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_model_ac4210edf1cfc619f8948e83820b41ca9}{set\-Current\-Anim} (std\-::string const \&name, bool loop=true)
+\begin{DoxyCompactList}\small\item\em Set the current animation by it's name. \end{DoxyCompactList}\item 
+int \hyperlink{classgdl_1_1_model_a6c07ff9af9e5f21976f74c76969c5209}{get\-Animation\-Frame\-Number} (int stack)
+\begin{DoxyCompactList}\small\item\em Get the number of frame of an animation. \end{DoxyCompactList}\item 
+int \hyperlink{classgdl_1_1_model_a2f46e23c1f5bbf46724ab88d4e09edeb}{get\-Animation\-Frame\-Number} (std\-::string const \&name)
+\begin{DoxyCompactList}\small\item\em Get the number of frame of an animation. \end{DoxyCompactList}\item 
+float \hyperlink{classgdl_1_1_model_a145f9bb956d043c28f23d8714e72447c}{get\-Frame\-Duration} ()
+\begin{DoxyCompactList}\small\item\em Get the time of one animation frame. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_model_ac903e3a9a4da067bf245a26e4bb02fd0}{create\-Sub\-Anim} (int stack, std\-::string const \&sub\-Anim\-Name, int frame\-Start, int frame\-End)
+\begin{DoxyCompactList}\small\item\em Create a sub animation depending on the name or index of a model animation. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_model_aa712f9125986a0d0ee9520e73a2a0f66}{create\-Sub\-Anim} (std\-::string const \&name, std\-::string const \&sub\-Anim\-Name, int frame\-Start, int frame\-End)
+\begin{DoxyCompactList}\small\item\em Create a sub animation depending on the name or index of a model animation. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_model_a7167ca64cd426f7bd46756ed33bad12f}{set\-Current\-Sub\-Anim} (std\-::string const \&name, bool loop=true)
+\begin{DoxyCompactList}\small\item\em Set the current sub animation to play. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_model_a73175b246228b1a275a4cf2b59c8d5cd}{load} (std\-::string const \&path)
+\begin{DoxyCompactList}\small\item\em Load an Fbx, Obj or collada model. \end{DoxyCompactList}\item 
+void \hyperlink{classgdl_1_1_model_a57be549452c2bef282709fe02b0072a3}{draw} (\hyperlink{classgdl_1_1_a_shader}{A\-Shader} \&shader, glm\-::mat4 const \&transform, double delta\-Time)
+\begin{DoxyCompactList}\small\item\em Draw the current model and update its animation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a Fbx, Obj or Collada model. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classgdl_1_1_model_ac903e3a9a4da067bf245a26e4bb02fd0}{\index{gdl\-::\-Model@{gdl\-::\-Model}!create\-Sub\-Anim@{create\-Sub\-Anim}}
+\index{create\-Sub\-Anim@{create\-Sub\-Anim}!gdl::Model@{gdl\-::\-Model}}
+\subsubsection[{create\-Sub\-Anim}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-Model\-::create\-Sub\-Anim (
+\begin{DoxyParamCaption}
+\item[{int}]{stack, }
+\item[{std\-::string const \&}]{sub\-Anim\-Name, }
+\item[{int}]{frame\-Start, }
+\item[{int}]{frame\-End}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_model_ac903e3a9a4da067bf245a26e4bb02fd0}
+
+
+Create a sub animation depending on the name or index of a model animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & The index of the animation to cut. \\
+\hline
+{\em sub\-Anim\-Name} & The name of the sub animation to create. \\
+\hline
+{\em frame\-Start} & The index of the first sub animation frame. \\
+\hline
+{\em frame\-End} & The index of the last sub animation frame. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the creation of the sub animation has worked, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_model_aa712f9125986a0d0ee9520e73a2a0f66}{\index{gdl\-::\-Model@{gdl\-::\-Model}!create\-Sub\-Anim@{create\-Sub\-Anim}}
+\index{create\-Sub\-Anim@{create\-Sub\-Anim}!gdl::Model@{gdl\-::\-Model}}
+\subsubsection[{create\-Sub\-Anim}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-Model\-::create\-Sub\-Anim (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{name, }
+\item[{std\-::string const \&}]{sub\-Anim\-Name, }
+\item[{int}]{frame\-Start, }
+\item[{int}]{frame\-End}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_model_aa712f9125986a0d0ee9520e73a2a0f66}
+
+
+Create a sub animation depending on the name or index of a model animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & The name of the animation to cut. \\
+\hline
+{\em sub\-Anim\-Name} & The name of the sub animation to create. \\
+\hline
+{\em frame\-Start} & The index of the first sub animation frame. \\
+\hline
+{\em frame\-End} & The index of the last sub animation frame. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the creation of the sub animation has worked, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_model_a57be549452c2bef282709fe02b0072a3}{\index{gdl\-::\-Model@{gdl\-::\-Model}!draw@{draw}}
+\index{draw@{draw}!gdl::Model@{gdl\-::\-Model}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void gdl\-::\-Model\-::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf A\-Shader} \&}]{shader, }
+\item[{glm\-::mat4 const \&}]{transform, }
+\item[{double}]{delta\-Time}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_model_a57be549452c2bef282709fe02b0072a3}
+
+
+Draw the current model and update its animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & The shader with which the model will be drawn \\
+\hline
+{\em transform} & The transformation of the model. \\
+\hline
+{\em delta\-Time} & The time elapsed since the last frame in seconds (if you want to update the animation). \\
+\hline
+\end{DoxyParams}
+\hypertarget{classgdl_1_1_model_a6c07ff9af9e5f21976f74c76969c5209}{\index{gdl\-::\-Model@{gdl\-::\-Model}!get\-Animation\-Frame\-Number@{get\-Animation\-Frame\-Number}}
+\index{get\-Animation\-Frame\-Number@{get\-Animation\-Frame\-Number}!gdl::Model@{gdl\-::\-Model}}
+\subsubsection[{get\-Animation\-Frame\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int gdl\-::\-Model\-::get\-Animation\-Frame\-Number (
+\begin{DoxyParamCaption}
+\item[{int}]{stack}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_model_a6c07ff9af9e5f21976f74c76969c5209}
+
+
+Get the number of frame of an animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & The index of the animation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of frame in this animation. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_model_a2f46e23c1f5bbf46724ab88d4e09edeb}{\index{gdl\-::\-Model@{gdl\-::\-Model}!get\-Animation\-Frame\-Number@{get\-Animation\-Frame\-Number}}
+\index{get\-Animation\-Frame\-Number@{get\-Animation\-Frame\-Number}!gdl::Model@{gdl\-::\-Model}}
+\subsubsection[{get\-Animation\-Frame\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int gdl\-::\-Model\-::get\-Animation\-Frame\-Number (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_model_a2f46e23c1f5bbf46724ab88d4e09edeb}
+
+
+Get the number of frame of an animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & The name of the animation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of frame in this animation. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_model_a145f9bb956d043c28f23d8714e72447c}{\index{gdl\-::\-Model@{gdl\-::\-Model}!get\-Frame\-Duration@{get\-Frame\-Duration}}
+\index{get\-Frame\-Duration@{get\-Frame\-Duration}!gdl::Model@{gdl\-::\-Model}}
+\subsubsection[{get\-Frame\-Duration}]{\setlength{\rightskip}{0pt plus 5cm}float gdl\-::\-Model\-::get\-Frame\-Duration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_model_a145f9bb956d043c28f23d8714e72447c}
+
+
+Get the time of one animation frame. 
+
+\begin{DoxyReturn}{Returns}
+The time of an animation frame in seconds. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_model_a73175b246228b1a275a4cf2b59c8d5cd}{\index{gdl\-::\-Model@{gdl\-::\-Model}!load@{load}}
+\index{load@{load}!gdl::Model@{gdl\-::\-Model}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-Model\-::load (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{path}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_model_a73175b246228b1a275a4cf2b59c8d5cd}
+
+
+Load an Fbx, Obj or collada model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to the .fbx, .obj or .dae file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the load has failed. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_model_a2880a8151a0a076dccc17c8a12530dcc}{\index{gdl\-::\-Model@{gdl\-::\-Model}!pause@{pause}}
+\index{pause@{pause}!gdl::Model@{gdl\-::\-Model}}
+\subsubsection[{pause}]{\setlength{\rightskip}{0pt plus 5cm}void gdl\-::\-Model\-::pause (
+\begin{DoxyParamCaption}
+\item[{bool}]{pause\-Anim}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_model_a2880a8151a0a076dccc17c8a12530dcc}
+
+
+set the pause state for the current animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pause\-Anim} & If true, pause the current animation. Play it otherwise. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classgdl_1_1_model_a223b04dc9a2007ac22cc71d019af5749}{\index{gdl\-::\-Model@{gdl\-::\-Model}!set\-Current\-Anim@{set\-Current\-Anim}}
+\index{set\-Current\-Anim@{set\-Current\-Anim}!gdl::Model@{gdl\-::\-Model}}
+\subsubsection[{set\-Current\-Anim}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-Model\-::set\-Current\-Anim (
+\begin{DoxyParamCaption}
+\item[{int}]{stack, }
+\item[{bool}]{loop = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_model_a223b04dc9a2007ac22cc71d019af5749}
+
+
+Set the current animation by it's index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & The index of the animation to set. \\
+\hline
+{\em loop} & If true, the animation is played in loop. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the animation exist, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_model_ac4210edf1cfc619f8948e83820b41ca9}{\index{gdl\-::\-Model@{gdl\-::\-Model}!set\-Current\-Anim@{set\-Current\-Anim}}
+\index{set\-Current\-Anim@{set\-Current\-Anim}!gdl::Model@{gdl\-::\-Model}}
+\subsubsection[{set\-Current\-Anim}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-Model\-::set\-Current\-Anim (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{name, }
+\item[{bool}]{loop = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_model_ac4210edf1cfc619f8948e83820b41ca9}
+
+
+Set the current animation by it's name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the animation to set. \\
+\hline
+{\em loop} & If true, the animation is played in loop. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classgdl_1_1_model_a7167ca64cd426f7bd46756ed33bad12f}{\index{gdl\-::\-Model@{gdl\-::\-Model}!set\-Current\-Sub\-Anim@{set\-Current\-Sub\-Anim}}
+\index{set\-Current\-Sub\-Anim@{set\-Current\-Sub\-Anim}!gdl::Model@{gdl\-::\-Model}}
+\subsubsection[{set\-Current\-Sub\-Anim}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-Model\-::set\-Current\-Sub\-Anim (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{name, }
+\item[{bool}]{loop = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_model_a7167ca64cd426f7bd46756ed33bad12f}
+
+
+Set the current sub animation to play. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the sub animation to play. This sub animation must have been created with a call to create\-Sub\-Anim. \\
+\hline
+{\em loop} & If true, the animation is played in loop. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the sub animation exist, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+includes/Model.\-hh\item 
+sources/Model.\-cpp\end{DoxyCompactItemize}

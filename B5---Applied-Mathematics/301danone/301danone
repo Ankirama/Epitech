@@ -1,0 +1,129 @@
+#!/usr/bin/env python2.7
+# -*- coding: utf-8 -*-
+
+from math import *
+import sys, os
+
+def    open_file(file_name):
+       my_list = []
+       try:
+              my_file = open(file_name, "r")
+       except (IOError):
+              sys.exit(1)
+       for line in my_file:
+              my_list.append([x for x in line.split()])
+       return my_list
+
+class  Sort(object):
+       def __init__(self, name, lst):
+              self.counter = 0
+              self.name = 'tri %s' % name
+              self.lst = list(lst)
+
+       def __str__(self):
+              return u'%s' % self.name
+
+       def _sort(self):
+              pass
+
+       def display(self):
+              self._sort()
+              msg = '%s : %d comparaisons' % (self.name, self.counter)
+              print(msg.decode('utf-8'))
+
+class Selection_sort(Sort):
+       def __init__(self, lst):
+              super(Selection_sort, self).__init__('par sélection', lst)
+
+       def _sort(self):
+              minus = 0
+              for i in range(0, len(self.lst) - 1):
+                     minus = 0
+                     for j in range(i + 1, len(self.lst)):
+                            self.counter += 1
+                            if (self.lst[j] < self.lst[minus]):
+                                   minus = j
+                     if (minus != i):
+                            tmp = self.lst[minus]
+                            self.lst[minus] = self.lst[i]
+                            self.lst[i] = tmp
+
+class Bubble_sort(Sort):
+       def __init__(self, lst):
+              super(Bubble_sort, self).__init__('à bulles', lst)
+
+       def _sort(self):
+              n = len(self.lst)
+              data_swap = True
+              while data_swap:
+                     data_swap = False
+                     for j in range(0, n - 1):
+                            self.counter += 1
+                            if self.lst[j] > self.lst[j + 1]:
+                                   data_swap = True
+                                   self.lst[j], self.lst[j+1] = self.lst[j+1], self.lst[j]
+                     n -= 1
+
+class Merge_sort(Sort):
+       def __init__(self, lst):
+              super(Merge_sort, self).__init__('fusion', lst)
+
+       def _merge_sort(self, lst):
+              if len(lst) > 1:
+                     left_lst, right_lst = lst[:len(lst)//2], lst[len(lst)//2:]
+                     self._merge_sort(left_lst)
+                     self._merge_sort(right_lst)
+                     i,j,k = 0,0,0
+                     while i < len(left_lst) and j < len(right_lst):
+                            self.counter += 1
+                            if left_lst[i] < right_lst[j]:
+                                   lst[k], i = left_lst[i], i + 1
+                            else:
+                                   lst[k], j = right_lst[j], j + 1
+                            k += 1
+                     while i < len(left_lst):
+                            lst[k] = left_lst[i]
+                            i, k = i + 1, k + 1
+                     while j < len(right_lst):
+                            lst[k] = right_lst[j]
+                            j, k = j + 1, k + 1
+
+       def _sort(self):
+              self._merge_sort(self.lst)
+
+class Insertion_sort(Sort):
+       def __init__(self, lst):
+              super(Insertion_sort, self).__init__('par insertion', lst)
+
+       def _sort(self):
+              for i in range(1, len(self.lst)):
+                     j = i
+                     tmp = self.lst[i]
+                     done = False
+                     while j > 0 and not done:
+                            self.counter += 1
+                            if not self.lst[j - 1] > tmp:
+                                   done = True
+                            else:
+                                   self.lst[j] = self.lst[j - 1]
+                                   j -= 1
+                     self.lst[j] = tmp
+
+def    all_algo(my_list):
+       print("{} éléments".format(len(my_list)))
+       sorts = [Selection_sort(my_list), Insertion_sort(my_list), Bubble_sort(my_list), Merge_sort(my_list)]
+       for lst_sort in sorts:
+              lst_sort.display()
+
+def    main():
+       if (len(sys.argv) != 2):
+              print("Error: you have to specify a file as argument", file=sys.stderr)
+              sys.exit(1)
+       my_list = open_file(sys.argv[1])
+#       if len(my_list) == 0:
+ #             sys.exit(1)
+       all_algo(my_list[0])
+       sys.exit(0)
+
+if __name__== "__main__":
+       main()

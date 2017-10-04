@@ -1,0 +1,45 @@
+.TH "SDL_SysWMmsg" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_SysWMmsg \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_syswm\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSDL_version\fP \fBversion\fP"
+.br
+.ti -1c
+.RI "\fBSDL_SYSWM_TYPE\fP \fBsubsystem\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      XEvent \fBevent\fP"
+.br
+.ti -1c
+.RI "   } \fBx11\fP"
+.br
+.ti -1c
+.RI "   \fBint\fP \fBdummy\fP"
+.br
+.ti -1c
+.RI "} \fBmsg\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The custom event structure\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

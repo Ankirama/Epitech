@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/title"
+            android:text="Title"
+            android:singleLine="false"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="0.80"
+            android:gravity="center_vertical" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="right|center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_weight="0.2">
+
+            <Button
+                android:id="@+id/subscribe"
+                android:visibility="invisible"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/start"
+            android:text="Start"
+            android:layout_width="0dp"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/separateur"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <TextView
+            android:text="End"
+            android:id="@+id/end"
+            android:layout_width="0dp"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" />
+    </LinearLayout>
+</LinearLayout>

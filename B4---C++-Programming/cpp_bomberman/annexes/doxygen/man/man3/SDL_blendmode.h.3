@@ -1,0 +1,48 @@
+.TH "lib/gdl/includes/SDL_blendmode.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_blendmode.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSDL_BlendMode\fP { \fBSDL_BLENDMODE_NONE\fP = 0x00000000, \fBSDL_BLENDMODE_BLEND\fP = 0x00000001, \fBSDL_BLENDMODE_ADD\fP = 0x00000002, \fBSDL_BLENDMODE_MOD\fP = 0x00000004 }"
+.br
+.RI "\fIThe blend mode used in \fBSDL_RenderCopy()\fP and drawing operations\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file declaring the SDL_BlendMode enumeration 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBSDL_BlendMode\fP"
+
+.PP
+The blend mode used in \fBSDL_RenderCopy()\fP and drawing operations\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISDL_BLENDMODE_NONE \fP\fP
+no blending dstRGBA = srcRGBA 
+.TP
+\fB\fISDL_BLENDMODE_BLEND \fP\fP
+alpha blending dstRGB = (srcRGB * srcA) + (dstRGB * (1-srcA)) dstA = srcA + (dstA * (1-srcA)) 
+.TP
+\fB\fISDL_BLENDMODE_ADD \fP\fP
+additive blending dstRGB = (srcRGB * srcA) + dstRGB dstA = dstA 
+.TP
+\fB\fISDL_BLENDMODE_MOD \fP\fP
+color modulate dstRGB = srcRGB * dstRGB dstA = dstA 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

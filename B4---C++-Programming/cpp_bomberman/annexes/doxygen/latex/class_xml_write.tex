@@ -1,0 +1,280 @@
+\hypertarget{class_xml_write}{}\section{Xml\+Write Class Reference}
+\label{class_xml_write}\index{Xml\+Write@{Xml\+Write}}
+
+
+Create and write into xml.  
+
+
+
+
+{\ttfamily \#include $<$Xml\+Write.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_xml_write_1_1_controller}{Controller}
+\begin{DoxyCompactList}\small\item\em Internal class to help \hyperlink{class_xml_write}{Xml\+Write}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_xml_write_af52da20afc341ca69b7904c77696b012}{Xml\+Write} (std\+::ostream \&stream)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_xml_write}{Xml\+Write}\textquotesingle{}s constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_xml_write_a5f8a23c115f58b38ae0192e5ac2627d5}{$\sim$\+Xml\+Write} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_xml_write}{Xml\+Write}\textquotesingle{}s destructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{class_xml_write}{Xml\+Write} \& \hyperlink{class_xml_write_a6154b8d035db4a591132ed26acb4d68a}{operator$<$$<$} (const T \&value)
+\begin{DoxyCompactList}\small\item\em template for $<$$<$ \end{DoxyCompactList}\item 
+\hyperlink{class_xml_write}{Xml\+Write} \& \hyperlink{class_xml_write_a6aec927dec4b9512329a2b8e11888f19}{operator$<$$<$} (const \hyperlink{class_xml_write_1_1_controller}{Controller} \&controller)
+\begin{DoxyCompactList}\small\item\em operator $<$$<$ to write our tag \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_xml_write_a1835614ff188743b88810d45a2fccc6a}{}enum {\bfseries e\+\_\+state} \{ {\bfseries N\+O\+N\+E}, 
+{\bfseries A\+T\+T\+R\+I\+B\+U\+T\+E}, 
+{\bfseries T\+A\+G}, 
+{\bfseries T\+A\+G\+\_\+\+N\+A\+M\+E}
+ \}\label{class_xml_write_a1835614ff188743b88810d45a2fccc6a}
+
+\item 
+\hypertarget{class_xml_write_a97dd59183c5b15cdd8d12b114dc65cf3}{}typedef enum Xml\+Write\+::e\+\_\+state {\bfseries t\+\_\+state}\label{class_xml_write_a97dd59183c5b15cdd8d12b114dc65cf3}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_xml_write_a672ade162809016f848aeb94089971bc}{Xml\+Write} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_xml_write}{Xml\+Write}\textquotesingle{}s default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_xml_write}{Xml\+Write} \& \hyperlink{class_xml_write_ae5b1e0e3d651fb90ace17452e3c746e5}{operator=} (const \hyperlink{class_xml_write}{Xml\+Write} \&)
+\begin{DoxyCompactList}\small\item\em private = operator to unable it \end{DoxyCompactList}\item 
+\hyperlink{class_xml_write_a7136893aea6b0cda898fcd7b4d7c9cf0}{Xml\+Write} (const \hyperlink{class_xml_write}{Xml\+Write} \&)
+\begin{DoxyCompactList}\small\item\em private copy constructor \end{DoxyCompactList}\item 
+void \hyperlink{class_xml_write_ab6282860f4918e95409c27210a465554}{close\+Bracket\+Start} (bool end=false)
+\begin{DoxyCompactList}\small\item\em Close an open bracket. \end{DoxyCompactList}\item 
+void \hyperlink{class_xml_write_a4b36555dcd80b43e31d54d54a673c6d9}{clean\+Stringstream} ()
+\begin{DoxyCompactList}\small\item\em Clean a stringstream. \end{DoxyCompactList}\item 
+void \hyperlink{class_xml_write_af146f5cdcd5c931f8a975c3a4b25fc22}{close\+Tag} (const std\+::string \&\hyperlink{_xml_write_8hpp_a60cbdc53b290e261cd21789056f81b59}{tag})
+\begin{DoxyCompactList}\small\item\em Close tags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{class_xml_write_a7c6a59414448b73008996927b4551e0b}{m\+\_\+stream}
+\item 
+std\+::stack$<$ std\+::string $>$ \hyperlink{class_xml_write_a3d08fed96e394c85908f775c2bb2590a}{m\+\_\+tags}
+\item 
+std\+::ostringstream \hyperlink{class_xml_write_a0dc4ac379bc45a84de47edc449efadb3}{m\+\_\+tag\+Stream}
+\item 
+t\+\_\+state \hyperlink{class_xml_write_a9bd46ca6457964de38d0c98ad91effb5}{m\+\_\+state}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Create and write into xml. 
+
+It will create a xml file and write into it with specific norm like a true xml 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_xml_write_af52da20afc341ca69b7904c77696b012}{}\index{Xml\+Write@{Xml\+Write}!Xml\+Write@{Xml\+Write}}
+\index{Xml\+Write@{Xml\+Write}!Xml\+Write@{Xml\+Write}}
+\subsubsection[{Xml\+Write}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Write\+::\+Xml\+Write (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{stream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_xml_write_af52da20afc341ca69b7904c77696b012}
+
+
+\hyperlink{class_xml_write}{Xml\+Write}\textquotesingle{}s constructor. 
+
+Stream initialized and we write the header in our xml file
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & Reference in our file\textquotesingle{}s stream used to write into it \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_xml_write_a5f8a23c115f58b38ae0192e5ac2627d5}{}\index{Xml\+Write@{Xml\+Write}!````~Xml\+Write@{$\sim$\+Xml\+Write}}
+\index{````~Xml\+Write@{$\sim$\+Xml\+Write}!Xml\+Write@{Xml\+Write}}
+\subsubsection[{$\sim$\+Xml\+Write}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Write\+::$\sim$\+Xml\+Write (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_xml_write_a5f8a23c115f58b38ae0192e5ac2627d5}
+
+
+\hyperlink{class_xml_write}{Xml\+Write}\textquotesingle{}s destructor. 
+
+it will close every tag which aren\textquotesingle{}t closed. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_xml_write_a5f8a23c115f58b38ae0192e5ac2627d5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_xml_write_a672ade162809016f848aeb94089971bc}{}\index{Xml\+Write@{Xml\+Write}!Xml\+Write@{Xml\+Write}}
+\index{Xml\+Write@{Xml\+Write}!Xml\+Write@{Xml\+Write}}
+\subsubsection[{Xml\+Write}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Write\+::\+Xml\+Write (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_write_a672ade162809016f848aeb94089971bc}
+
+
+\hyperlink{class_xml_write}{Xml\+Write}\textquotesingle{}s default constructor. 
+
+unused default constructor \hypertarget{class_xml_write_a7136893aea6b0cda898fcd7b4d7c9cf0}{}\index{Xml\+Write@{Xml\+Write}!Xml\+Write@{Xml\+Write}}
+\index{Xml\+Write@{Xml\+Write}!Xml\+Write@{Xml\+Write}}
+\subsubsection[{Xml\+Write}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Write\+::\+Xml\+Write (
+\begin{DoxyParamCaption}
+\item[{const {\bf Xml\+Write} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_write_a7136893aea6b0cda898fcd7b4d7c9cf0}
+
+
+private copy constructor 
+
+Unused 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_xml_write_a4b36555dcd80b43e31d54d54a673c6d9}{}\index{Xml\+Write@{Xml\+Write}!clean\+Stringstream@{clean\+Stringstream}}
+\index{clean\+Stringstream@{clean\+Stringstream}!Xml\+Write@{Xml\+Write}}
+\subsubsection[{clean\+Stringstream}]{\setlength{\rightskip}{0pt plus 5cm}void Xml\+Write\+::clean\+Stringstream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_xml_write_a4b36555dcd80b43e31d54d54a673c6d9}
+
+
+Clean a stringstream. 
+
+It will clean the stringstream in the class \hypertarget{class_xml_write_ab6282860f4918e95409c27210a465554}{}\index{Xml\+Write@{Xml\+Write}!close\+Bracket\+Start@{close\+Bracket\+Start}}
+\index{close\+Bracket\+Start@{close\+Bracket\+Start}!Xml\+Write@{Xml\+Write}}
+\subsubsection[{close\+Bracket\+Start}]{\setlength{\rightskip}{0pt plus 5cm}void Xml\+Write\+::close\+Bracket\+Start (
+\begin{DoxyParamCaption}
+\item[{bool}]{end = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_xml_write_ab6282860f4918e95409c27210a465554}
+
+
+Close an open bracket. 
+
+It will close an open bracket like $<$\char`\"{}players
+and will add \textquotesingle{}\char`\"{}\textquotesingle{} + \textquotesingle{}/\textquotesingle{} (if end is true) + \textquotesingle{}$>$\textquotesingle{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em end} & default value is false and it used to add a \textquotesingle{}/\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_xml_write_af146f5cdcd5c931f8a975c3a4b25fc22}{}\index{Xml\+Write@{Xml\+Write}!close\+Tag@{close\+Tag}}
+\index{close\+Tag@{close\+Tag}!Xml\+Write@{Xml\+Write}}
+\subsubsection[{close\+Tag}]{\setlength{\rightskip}{0pt plus 5cm}void Xml\+Write\+::close\+Tag (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_xml_write_af146f5cdcd5c931f8a975c3a4b25fc22}
+
+
+Close tags. 
+
+It will close all tags until the tag given or the end
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & Close every tags until this tag \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_xml_write_af146f5cdcd5c931f8a975c3a4b25fc22_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_xml_write_a6154b8d035db4a591132ed26acb4d68a}{}\index{Xml\+Write@{Xml\+Write}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Xml\+Write@{Xml\+Write}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Xml\+Write}\& Xml\+Write\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_xml_write_a6154b8d035db4a591132ed26acb4d68a}
+
+
+template for $<$$<$ 
+
+It will allow us to write directly into our file wich any variable 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em value} & The list of value type like string, char$\ast$, int, ... \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Current instance\textquotesingle{}s reference to allow more than one $<$$<$ 
+\end{DoxyReturn}
+\hypertarget{class_xml_write_a6aec927dec4b9512329a2b8e11888f19}{}\index{Xml\+Write@{Xml\+Write}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Xml\+Write@{Xml\+Write}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Xml\+Write}\& Xml\+Write\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Controller} \&}]{controller}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_xml_write_a6aec927dec4b9512329a2b8e11888f19}
+
+
+operator $<$$<$ to write our tag 
+
+This is our main overload. We will check the controller used and do something with its type\+Field Switch between T\+A\+G\+\_\+\+S\+T\+A\+R\+T / T\+A\+G\+\_\+\+E\+N\+D / D\+A\+T\+A / A\+T\+T\+R\+I\+B\+U\+T\+E
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller} & a controller with a field type and a str \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current instance\textquotesingle{}s reference to allow more than one $<$$<$ 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_xml_write_a6aec927dec4b9512329a2b8e11888f19_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_xml_write_ae5b1e0e3d651fb90ace17452e3c746e5}{}\index{Xml\+Write@{Xml\+Write}!operator=@{operator=}}
+\index{operator=@{operator=}!Xml\+Write@{Xml\+Write}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Xml\+Write}\& Xml\+Write\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Xml\+Write} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_write_ae5b1e0e3d651fb90ace17452e3c746e5}
+
+
+private = operator to unable it 
+
+Unused and undefined 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_xml_write_a9bd46ca6457964de38d0c98ad91effb5}{}\index{Xml\+Write@{Xml\+Write}!m\+\_\+state@{m\+\_\+state}}
+\index{m\+\_\+state@{m\+\_\+state}!Xml\+Write@{Xml\+Write}}
+\subsubsection[{m\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}t\+\_\+state Xml\+Write\+::m\+\_\+state\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_write_a9bd46ca6457964de38d0c98ad91effb5}
+current state (init with N\+O\+N\+E) used to to choose action with attribute \hypertarget{class_xml_write_a7c6a59414448b73008996927b4551e0b}{}\index{Xml\+Write@{Xml\+Write}!m\+\_\+stream@{m\+\_\+stream}}
+\index{m\+\_\+stream@{m\+\_\+stream}!Xml\+Write@{Xml\+Write}}
+\subsubsection[{m\+\_\+stream}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& Xml\+Write\+::m\+\_\+stream\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_write_a7c6a59414448b73008996927b4551e0b}
+our stream\textquotesingle{}s reference used to write into the file \hypertarget{class_xml_write_a3d08fed96e394c85908f775c2bb2590a}{}\index{Xml\+Write@{Xml\+Write}!m\+\_\+tags@{m\+\_\+tags}}
+\index{m\+\_\+tags@{m\+\_\+tags}!Xml\+Write@{Xml\+Write}}
+\subsubsection[{m\+\_\+tags}]{\setlength{\rightskip}{0pt plus 5cm}std\+::stack$<$std\+::string$>$ Xml\+Write\+::m\+\_\+tags\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_write_a3d08fed96e394c85908f775c2bb2590a}
+tags\textquotesingle{} stack (L\+I\+F\+O) used to open/close tags \hypertarget{class_xml_write_a0dc4ac379bc45a84de47edc449efadb3}{}\index{Xml\+Write@{Xml\+Write}!m\+\_\+tag\+Stream@{m\+\_\+tag\+Stream}}
+\index{m\+\_\+tag\+Stream@{m\+\_\+tag\+Stream}!Xml\+Write@{Xml\+Write}}
+\subsubsection[{m\+\_\+tag\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostringstream Xml\+Write\+::m\+\_\+tag\+Stream\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_write_a0dc4ac379bc45a84de47edc449efadb3}
+current tag/attribute stored in our instance 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_xml_write_8hpp}{Xml\+Write.\+hpp}\end{DoxyCompactItemize}

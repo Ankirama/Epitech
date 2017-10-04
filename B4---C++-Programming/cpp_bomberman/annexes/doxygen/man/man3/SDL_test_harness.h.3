@@ -1,0 +1,127 @@
+.TH "lib/gdl/includes/SDL_test_harness.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_test_harness.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDLTest_TestCaseReference\fP"
+.br
+.ti -1c
+.RI "struct \fBSDLTest_TestSuiteReference\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTEST_ENABLED\fP   1"
+.br
+.ti -1c
+.RI "#define \fBTEST_DISABLED\fP   0"
+.br
+.ti -1c
+.RI "#define \fBTEST_ABORTED\fP   -1"
+.br
+.ti -1c
+.RI "#define \fBTEST_STARTED\fP   0"
+.br
+.ti -1c
+.RI "#define \fBTEST_COMPLETED\fP   1"
+.br
+.ti -1c
+.RI "#define \fBTEST_SKIPPED\fP   2"
+.br
+.ti -1c
+.RI "#define \fBTEST_RESULT_PASSED\fP   0"
+.br
+.ti -1c
+.RI "#define \fBTEST_RESULT_FAILED\fP   1"
+.br
+.ti -1c
+.RI "#define \fBTEST_RESULT_NO_ASSERT\fP   2"
+.br
+.ti -1c
+.RI "#define \fBTEST_RESULT_SKIPPED\fP   3"
+.br
+.ti -1c
+.RI "#define \fBTEST_RESULT_SETUP_FAILURE\fP   4"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBSDLTest_TestCaseSetUpFp\fP) (\fBvoid\fP *arg)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBSDLTest_TestCaseFp\fP) (\fBvoid\fP *arg)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBSDLTest_TestCaseTearDownFp\fP) (\fBvoid\fP *arg)"
+.br
+.ti -1c
+.RI "typedef struct \fBSDLTest_TestCaseReference\fP \fBSDLTest_TestCaseReference\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBSDLTest_TestSuiteReference\fP \fBSDLTest_TestSuiteReference\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_RunSuites\fP (\fBSDLTest_TestSuiteReference\fP *testSuites[], const char *userRunSeed, \fBUint64\fP userExecKey, const char *filter, \fBint\fP testIterations)"
+.br
+.RI "\fIExecute a test suite using the given run seed and execution key\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL test framework\&.
+.PP
+This code is a part of the SDL2_test library, not the main SDL library\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBSDLTest_TestCaseReference\fP  \fBSDLTest_TestCaseReference\fP"
+Holds information about a single test case\&. 
+.SS "typedef struct \fBSDLTest_TestSuiteReference\fP  \fBSDLTest_TestSuiteReference\fP"
+Holds information about a test suite (multiple test cases)\&. 
+.SH "Function Documentation"
+.PP 
+.SS "\fBint\fP SDLTest_RunSuites (\fBSDLTest_TestSuiteReference\fP * testSuites[], const char * userRunSeed, \fBUint64\fP userExecKey, const char * filter, \fBint\fP testIterations)"
+
+.PP
+Execute a test suite using the given run seed and execution key\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItestSuites\fP Suites containing the test case\&. 
+.br
+\fIuserRunSeed\fP Custom run seed provided by user, or NULL to autogenerate one\&. 
+.br
+\fIuserExecKey\fP Custom execution key provided by user, or 0 to autogenerate one\&. 
+.br
+\fIfilter\fP Filter specification\&. NULL disables\&. Case sensitive\&. 
+.br
+\fItestIterations\fP Number of iterations to run each test case\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Test run result; 0 when all tests passed, 1 if any tests failed\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

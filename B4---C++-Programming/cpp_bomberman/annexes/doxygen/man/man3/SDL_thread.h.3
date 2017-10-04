@@ -1,0 +1,234 @@
+.TH "lib/gdl/includes/SDL_thread.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_thread.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'SDL_atomic\&.h'\fP
+.br
+\fC#include 'SDL_mutex\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct SDL_Thread \fBSDL_Thread\fP"
+.br
+.ti -1c
+.RI "typedef unsigned long \fBSDL_threadID\fP"
+.br
+.ti -1c
+.RI "typedef unsigned \fBint\fP \fBSDL_TLSID\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSDL_ThreadPriority\fP { \fBSDL_THREAD_PRIORITY_LOW\fP, \fBSDL_THREAD_PRIORITY_NORMAL\fP, \fBSDL_THREAD_PRIORITY_HIGH\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBint\fP (SDLCALL *SDL_ThreadFunction)(\fBvoid\fP *data)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_Thread *SDLCALL \fBSDL_CreateThread\fP (SDL_ThreadFunction fn, const char *name, \fBvoid\fP *data)"
+.br
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GetThreadName\fP (SDL_Thread *thread)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_threadID SDLCALL \fBSDL_ThreadID\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_threadID SDLCALL \fBSDL_GetThreadID\fP (SDL_Thread *thread)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetThreadPriority\fP (\fBSDL_ThreadPriority\fP priority)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_WaitThread\fP (SDL_Thread *thread, \fBint\fP *status)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_DetachThread\fP (SDL_Thread *thread)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_TLSID SDLCALL \fBSDL_TLSCreate\fP (\fBvoid\fP)"
+.br
+.RI "\fICreate an identifier that is globally visible to all threads but refers to data that is thread-specific\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP *SDLCALL \fBSDL_TLSGet\fP (SDL_TLSID id)"
+.br
+.RI "\fIGet the value associated with a thread local storage ID for the current thread\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_TLSSet\fP (SDL_TLSID id, const \fBvoid\fP *value, \fBvoid\fP(*destructor)(\fBvoid\fP *))"
+.br
+.RI "\fISet the value associated with a thread local storage ID for the current thread\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header for the SDL thread management routines\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBSDL_ThreadPriority\fP"
+The SDL thread priority\&.
+.PP
+\fBNote:\fP
+.RS 4
+On many systems you require special privileges to set high priority\&. 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "typedef int (SDLCALL * SDL_ThreadFunction)"
+The function passed to \fBSDL_CreateThread()\fP\&. It is passed a void* user context parameter and returns an int\&. 
+.SS "DECLSPEC SDL_Thread* SDLCALL SDL_CreateThread (SDL_ThreadFunction fn, const char * name, \fBvoid\fP * data)"
+Create a thread\&.
+.PP
+Thread naming is a little complicated: Most systems have very small limits for the string length (Haiku has 32 bytes, Linux currently has 16, Visual C++ 6\&.0 has nine!), and possibly other arbitrary rules\&. You'll have to see what happens with your system's debugger\&. The name should be UTF-8 (but using the naming limits of C identifiers is a better bet)\&. There are no requirements for thread naming conventions, so long as the string is null-terminated UTF-8, but these guidelines are helpful in choosing a name:
+.PP
+http://stackoverflow.com/questions/149932/naming-conventions-for-threads
+.PP
+If a system imposes requirements, SDL will try to munge the string for it (truncate, etc), but the original string contents will be available from \fBSDL_GetThreadName()\fP\&. 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_DetachThread (SDL_Thread * thread)"
+A thread may be 'detached' to signify that it should not remain until another thread has called \fBSDL_WaitThread()\fP on it\&. Detaching a thread is useful for long-running threads that nothing needs to synchronize with or further manage\&. When a detached thread is done, it simply goes away\&.
+.PP
+There is no way to recover the return code of a detached thread\&. If you need this, don't detach the thread and instead use \fBSDL_WaitThread()\fP\&.
+.PP
+Once a thread is detached, you should usually assume the SDL_Thread isn't safe to reference again, as it will become invalid immediately upon the detached thread's exit, instead of remaining until someone has called \fBSDL_WaitThread()\fP to finally clean it up\&. As such, don't detach the same thread more than once\&.
+.PP
+If a thread has already exited when passed to \fBSDL_DetachThread()\fP, it will stop waiting for a call to \fBSDL_WaitThread()\fP and clean up immediately\&. It is not safe to detach a thread that might be used with \fBSDL_WaitThread()\fP\&.
+.PP
+You may not call \fBSDL_WaitThread()\fP on a thread that has been detached\&. Use either that function or this one, but not both, or behavior is undefined\&.
+.PP
+It is safe to pass NULL to this function; it is a no-op\&. 
+.SS "DECLSPEC SDL_threadID SDLCALL SDL_GetThreadID (SDL_Thread * thread)"
+Get the thread identifier for the specified thread\&.
+.PP
+Equivalent to \fBSDL_ThreadID()\fP if the specified thread is NULL\&. 
+.SS "DECLSPEC const char* SDLCALL SDL_GetThreadName (SDL_Thread * thread)"
+Get the thread name, as it was specified in \fBSDL_CreateThread()\fP\&. This function returns a pointer to a UTF-8 string that names the specified thread, or NULL if it doesn't have a name\&. This is internal memory, not to be free()'d by the caller, and remains valid until the specified thread is cleaned up by \fBSDL_WaitThread()\fP\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetThreadPriority (\fBSDL_ThreadPriority\fP priority)"
+Set the priority for the current thread 
+.SS "DECLSPEC SDL_threadID SDLCALL SDL_ThreadID (\fBvoid\fP)"
+Get the thread identifier for the current thread\&. 
+.SS "DECLSPEC SDL_TLSID SDLCALL SDL_TLSCreate (\fBvoid\fP)"
+
+.PP
+Create an identifier that is globally visible to all threads but refers to data that is thread-specific\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The newly created thread local storage identifier, or 0 on error
+.RE
+.PP
+.PP
+.nf
+1 static SDL_SpinLock tls_lock;
+2 static SDL_TLSID thread_local_storage;
+3 
+4 void SetMyThreadData(void *value)
+5 {
+6     if (!thread_local_storage) {
+7         SDL_AtomicLock(&tls_lock);
+8         if (!thread_local_storage) {
+9             thread_local_storage = SDL_TLSCreate();
+10         }
+11         SDL_AtomicUnLock(&tls_lock);
+12     }
+13     SDL_TLSSet(thread_local_storage, value);
+14 }
+15 
+16 void *GetMyThreadData(void)
+17 {
+18     return SDL_TLSGet(thread_local_storage);
+19 }
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_TLSGet()\fP 
+.PP
+\fBSDL_TLSSet()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP* SDLCALL SDL_TLSGet (SDL_TLSID id)"
+
+.PP
+Get the value associated with a thread local storage ID for the current thread\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP The thread local storage ID
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The value associated with the ID for the current thread, or NULL if no value has been set\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_TLSCreate()\fP 
+.PP
+\fBSDL_TLSSet()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_TLSSet (SDL_TLSID id, const \fBvoid\fP * value, \fBvoid\fP(*)(\fBvoid\fP *) destructor)"
+
+.PP
+Set the value associated with a thread local storage ID for the current thread\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP The thread local storage ID 
+.br
+\fIvalue\fP The value to associate with the ID for the current thread 
+.br
+\fIdestructor\fP A function called when the thread exits, to free the value\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, -1 on error
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_TLSCreate()\fP 
+.PP
+\fBSDL_TLSGet()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_WaitThread (SDL_Thread * thread, \fBint\fP * status)"
+Wait for a thread to finish\&. Threads that haven't been detached will remain (as a 'zombie') until this function cleans them up\&. Not doing so is a resource leak\&.
+.PP
+Once a thread has been cleaned up through this function, the SDL_Thread that references it becomes invalid and should not be referenced again\&. As such, only one thread may call \fBSDL_WaitThread()\fP on another\&.
+.PP
+The return code for the thread function is placed in the area pointed to by \fCstatus\fP, if \fCstatus\fP is not NULL\&.
+.PP
+You may not wait on a thread that has been used in a call to \fBSDL_DetachThread()\fP\&. Use either that function or this one, but not both, or behavior is undefined\&.
+.PP
+It is safe to pass NULL to this function; it is a no-op\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

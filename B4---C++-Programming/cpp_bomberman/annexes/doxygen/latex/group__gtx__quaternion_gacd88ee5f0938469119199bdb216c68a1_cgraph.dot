@@ -1,0 +1,13 @@
+digraph "glm::cross"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::cross",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="glm::inverse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__quaternion.html#ga78b87a5e7152108e0dff0855d81b3bc1"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="glm::conjugate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__quaternion.html#ga8b6594dffb8bf455d848ffa2169ba41d"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="glm::dot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__quaternion.html#gab9101d7f5b27ca682fc84e32b8fd70ad"];
+}

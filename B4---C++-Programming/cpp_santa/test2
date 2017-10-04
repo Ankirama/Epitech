@@ -1,0 +1,21 @@
+tests a faire en gros -->
+
+box (c'est une Box)
+giftPaper (c'est un GiftPaper)
+toy (c'est un Object)
+
+CHECK : si box open
+      |- si oui : verifier si toy != null
+      |	    	 |- si != null : wrapMeThat box
+      |- si non : openMe box puis pareil que si oui
+apres ca, closeMe
+
+CHECK : si box != null && isWraped box && isClose box
+      |- si oui check isOpen giftPaper :
+      	    	      	     |- si oui : closeMe + comme si non
+			     |- si non : wrapMeThat giftPaper
+return giftPaper (en gros)
+_______________________
+Cheminement correct, a toi d'essayer de faire des trucs incorrects pour les erreurs
+
+

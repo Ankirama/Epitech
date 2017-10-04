@@ -1,0 +1,301 @@
+.TH "tinyxml2::XMLDocument" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tinyxml2::XMLDocument \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tinyxml2\&.h>\fP
+.PP
+Inherits \fBtinyxml2::XMLNode\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXMLDocument\fP (bool processEntities=true, Whitespace=PRESERVE_WHITESPACE)"
+.br
+.RI "\fIconstructor \fP"
+.ti -1c
+.RI "virtual \fBXMLDocument\fP * \fBToDocument\fP ()"
+.br
+.RI "\fISafely cast to a Document, or null\&. \fP"
+.ti -1c
+.RI "virtual const \fBXMLDocument\fP * \fBToDocument\fP () const "
+.br
+.ti -1c
+.RI "XMLError \fBParse\fP (const char *xml, size_t nBytes=(size_t)(-1))"
+.br
+.ti -1c
+.RI "XMLError \fBLoadFile\fP (const char *filename)"
+.br
+.ti -1c
+.RI "XMLError \fBLoadFile\fP (FILE *)"
+.br
+.ti -1c
+.RI "XMLError \fBSaveFile\fP (const char *filename, bool compact=false)"
+.br
+.ti -1c
+.RI "XMLError \fBSaveFile\fP (FILE *fp, bool compact=false)"
+.br
+.ti -1c
+.RI "bool \fBProcessEntities\fP () const "
+.br
+.ti -1c
+.RI "Whitespace \fBWhitespaceMode\fP () const "
+.br
+.ti -1c
+.RI "bool \fBHasBOM\fP () const "
+.br
+.ti -1c
+.RI "void \fBSetBOM\fP (bool useBOM)"
+.br
+.ti -1c
+.RI "\fBXMLElement\fP * \fBRootElement\fP ()"
+.br
+.ti -1c
+.RI "const \fBXMLElement\fP * \fBRootElement\fP () const "
+.br
+.ti -1c
+.RI "void \fBPrint\fP (\fBXMLPrinter\fP *streamer=0) const "
+.br
+.ti -1c
+.RI "virtual bool \fBAccept\fP (\fBXMLVisitor\fP *visitor) const "
+.br
+.ti -1c
+.RI "\fBXMLElement\fP * \fBNewElement\fP (const char *name)"
+.br
+.ti -1c
+.RI "\fBXMLComment\fP * \fBNewComment\fP (const char *comment)"
+.br
+.ti -1c
+.RI "\fBXMLText\fP * \fBNewText\fP (const char *text)"
+.br
+.ti -1c
+.RI "\fBXMLDeclaration\fP * \fBNewDeclaration\fP (const char *text=0)"
+.br
+.ti -1c
+.RI "\fBXMLUnknown\fP * \fBNewUnknown\fP (const char *text)"
+.br
+.ti -1c
+.RI "void \fBDeleteNode\fP (\fBXMLNode\fP *node)"
+.br
+.ti -1c
+.RI "void \fBSetError\fP (XMLError error, const char *str1, const char *str2)"
+.br
+.ti -1c
+.RI "bool \fBError\fP () const "
+.br
+.RI "\fIReturn true if there was an error parsing the document\&. \fP"
+.ti -1c
+.RI "XMLError \fBErrorID\fP () const "
+.br
+.RI "\fIReturn the errorID\&. \fP"
+.ti -1c
+.RI "const char * \fBErrorName\fP () const "
+.br
+.ti -1c
+.RI "const char * \fBGetErrorStr1\fP () const "
+.br
+.RI "\fIReturn a possibly helpful diagnostic location or string\&. \fP"
+.ti -1c
+.RI "const char * \fBGetErrorStr2\fP () const "
+.br
+.RI "\fIReturn a possibly helpful secondary diagnostic location or string\&. \fP"
+.ti -1c
+.RI "void \fBPrintError\fP () const "
+.br
+.RI "\fIIf there is an error, print it to stdout\&. \fP"
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.RI "\fIClear the document, resetting it to the initial state\&. \fP"
+.ti -1c
+.RI "char * \fBIdentify\fP (char *p, \fBXMLNode\fP **node)"
+.br
+.ti -1c
+.RI "virtual \fBXMLNode\fP * \fBShallowClone\fP (\fBXMLDocument\fP *) const "
+.br
+.ti -1c
+.RI "virtual bool \fBShallowEqual\fP (const \fBXMLNode\fP *) const "
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXMLDocument\fP (const \fBXMLDocument\fP &)"
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (const \fBXMLDocument\fP &)"
+.br
+.ti -1c
+.RI "void \fBParse\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fB_writeBOM\fP"
+.br
+.ti -1c
+.RI "bool \fB_processEntities\fP"
+.br
+.ti -1c
+.RI "XMLError \fB_errorID\fP"
+.br
+.ti -1c
+.RI "Whitespace \fB_whitespace\fP"
+.br
+.ti -1c
+.RI "const char * \fB_errorStr1\fP"
+.br
+.ti -1c
+.RI "const char * \fB_errorStr2\fP"
+.br
+.ti -1c
+.RI "char * \fB_charBuffer\fP"
+.br
+.ti -1c
+.RI "\fBMemPoolT\fP< sizeof(\fBXMLElement\fP) > \fB_elementPool\fP"
+.br
+.ti -1c
+.RI "\fBMemPoolT\fP< sizeof(\fBXMLAttribute\fP) > \fB_attributePool\fP"
+.br
+.ti -1c
+.RI "\fBMemPoolT\fP< sizeof(\fBXMLText\fP) > \fB_textPool\fP"
+.br
+.ti -1c
+.RI "\fBMemPoolT\fP< sizeof(\fBXMLComment\fP) > \fB_commentPool\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const char * \fB_errorNames\fP [XML_ERROR_COUNT]"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBXMLElement\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A Document binds together all the functionality\&. It can be saved, loaded, and printed to the screen\&. All Nodes are connected and allocated to a Document\&. If the Document is deleted, all its Nodes are also deleted\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual bool tinyxml2::XMLDocument::Accept (\fBXMLVisitor\fP * visitor) const\fC [virtual]\fP"
+Accept a hierarchical visit of the nodes in the TinyXML-2 DOM\&. Every node in the XML tree will be conditionally visited and the host will be called back via the \fBXMLVisitor\fP interface\&.
+.PP
+This is essentially a SAX interface for TinyXML-2\&. (Note however it doesn't re-parse the XML for the callbacks, so the performance of TinyXML-2 is unchanged by using this interface versus any other\&.)
+.PP
+The interface has been based on ideas from:
+.PP
+.IP "\(bu" 2
+http://www.saxproject.org/
+.IP "\(bu" 2
+http://c2.com/cgi/wiki?HierarchicalVisitorPattern
+.PP
+.PP
+Which are both good references for 'visiting'\&.
+.PP
+An example of using \fBAccept()\fP: 
+.PP
+.nf
+XMLPrinter printer;
+tinyxmlDoc.Accept( &printer );
+const char* xmlcstr = printer.CStr();
+
+.fi
+.PP
+ 
+.PP
+Implements \fBtinyxml2::XMLNode\fP\&.
+.SS "void tinyxml2::XMLDocument::DeleteNode (\fBXMLNode\fP * node)"
+Delete a node associated with this document\&. It will be unlinked from the DOM\&. 
+.SS "bool tinyxml2::XMLDocument::HasBOM () const\fC [inline]\fP"
+Returns true if this document has a leading Byte Order Mark of UTF8\&. 
+.SS "XMLError tinyxml2::XMLDocument::LoadFile (const char * filename)"
+Load an XML file from disk\&. Returns XML_NO_ERROR (0) on success, or an errorID\&. 
+.SS "XMLError tinyxml2::XMLDocument::LoadFile (FILE *)"
+Load an XML file from disk\&. You are responsible for providing and closing the FILE*\&.
+.PP
+NOTE: The file should be opened as binary ('rb') not text in order for TinyXML-2 to correctly do newline normalization\&.
+.PP
+Returns XML_NO_ERROR (0) on success, or an errorID\&. 
+.SS "\fBXMLComment\fP* tinyxml2::XMLDocument::NewComment (const char * comment)"
+Create a new Comment associated with this Document\&. The memory for the Comment is managed by the Document\&. 
+.SS "\fBXMLDeclaration\fP* tinyxml2::XMLDocument::NewDeclaration (const char * text = \fC0\fP)"
+Create a new Declaration associated with this Document\&. The memory for the object is managed by the Document\&.
+.PP
+If the 'text' param is null, the standard declaration is used\&.: 
+.PP
+.nf
+    <?xml version="1.0" encoding="UTF-8"?>
+
+.fi
+.PP
+ 
+.SS "\fBXMLElement\fP* tinyxml2::XMLDocument::NewElement (const char * name)"
+Create a new Element associated with this Document\&. The memory for the Element is managed by the Document\&. 
+.SS "\fBXMLText\fP* tinyxml2::XMLDocument::NewText (const char * text)"
+Create a new Text associated with this Document\&. The memory for the Text is managed by the Document\&. 
+.SS "\fBXMLUnknown\fP* tinyxml2::XMLDocument::NewUnknown (const char * text)"
+Create a new Unknown associated with this Document\&. The memory for the object is managed by the Document\&. 
+.SS "XMLError tinyxml2::XMLDocument::Parse (const char * xml, size_t nBytes = \fC(size_t)(-1)\fP)"
+Parse an XML file from a character string\&. Returns XML_NO_ERROR (0) on success, or an errorID\&.
+.PP
+You may optionally pass in the 'nBytes', which is the number of bytes which will be parsed\&. If not specified, TinyXML-2 will assume 'xml' points to a null terminated string\&. 
+.SS "void tinyxml2::XMLDocument::Print (\fBXMLPrinter\fP * streamer = \fC0\fP) const"
+Print the Document\&. If the Printer is not provided, it will print to stdout\&. If you provide Printer, this can print to a file: 
+.PP
+.nf
+XMLPrinter printer( fp );
+doc.Print( &printer );
+
+.fi
+.PP
+.PP
+Or you can use a printer to print to memory: 
+.PP
+.nf
+XMLPrinter printer;
+doc.Print( &printer );
+// printer.CStr() has a const char* to the XML
+
+.fi
+.PP
+ 
+.SS "\fBXMLElement\fP* tinyxml2::XMLDocument::RootElement ()\fC [inline]\fP"
+Return the root element of DOM\&. Equivalent to \fBFirstChildElement()\fP\&. To get the first node, use FirstChild()\&. 
+.SS "XMLError tinyxml2::XMLDocument::SaveFile (const char * filename, bool compact = \fCfalse\fP)"
+Save the XML file to disk\&. Returns XML_NO_ERROR (0) on success, or an errorID\&. 
+.SS "XMLError tinyxml2::XMLDocument::SaveFile (FILE * fp, bool compact = \fCfalse\fP)"
+Save the XML file to disk\&. You are responsible for providing and closing the FILE*\&.
+.PP
+Returns XML_NO_ERROR (0) on success, or an errorID\&. 
+.SS "void tinyxml2::XMLDocument::SetBOM (bool useBOM)\fC [inline]\fP"
+Sets whether to write the BOM when writing the file\&. 
+.SS "virtual \fBXMLNode\fP* tinyxml2::XMLDocument::ShallowClone (\fBXMLDocument\fP * document) const\fC [inline]\fP, \fC [virtual]\fP"
+Make a copy of this node, but not its children\&. You may pass in a Document pointer that will be the owner of the new Node\&. If the 'document' is null, then the node returned will be allocated from the current Document\&. (this->\fBGetDocument()\fP)
+.PP
+Note: if called on a \fBXMLDocument\fP, this will return null\&. 
+.PP
+Implements \fBtinyxml2::XMLNode\fP\&.
+.SS "virtual bool tinyxml2::XMLDocument::ShallowEqual (const \fBXMLNode\fP * compare) const\fC [inline]\fP, \fC [virtual]\fP"
+Test if 2 nodes are the same, but don't test children\&. The 2 nodes do not need to be in the same Document\&.
+.PP
+Note: if called on a \fBXMLDocument\fP, this will return false\&. 
+.PP
+Implements \fBtinyxml2::XMLNode\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

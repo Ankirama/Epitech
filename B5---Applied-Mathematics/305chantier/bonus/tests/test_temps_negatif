@@ -1,0 +1,9 @@
+Cha;charpente;-6;Fon
+Cfg;chauffage;3;Ele;Mac
+Cou;couverture;2;Cha
+Ele;électricité;1;Cou;Mac
+Fin;finitions;9;Cou;Ele;Mac;Plo
+Fon;fondations;8;Ter
+Mac;maçonnerie;4;Ter;Fon
+Plo;plomberie;1;Ele;Mac
+Ter;terrassement;3

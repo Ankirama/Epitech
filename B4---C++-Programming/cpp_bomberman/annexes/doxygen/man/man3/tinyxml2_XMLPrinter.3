@@ -1,0 +1,262 @@
+.TH "tinyxml2::XMLPrinter" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tinyxml2::XMLPrinter \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tinyxml2\&.h>\fP
+.PP
+Inherits \fBtinyxml2::XMLVisitor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXMLPrinter\fP (FILE *file=0, bool compact=false, int depth=0)"
+.br
+.ti -1c
+.RI "void \fBPushHeader\fP (bool writeBOM, bool writeDeclaration)"
+.br
+.ti -1c
+.RI "void \fBOpenElement\fP (const char *name, bool compactMode=false)"
+.br
+.ti -1c
+.RI "void \fBPushAttribute\fP (const char *name, const char *value)"
+.br
+.RI "\fIIf streaming, add an attribute to an open element\&. \fP"
+.ti -1c
+.RI "void \fBPushAttribute\fP (const char *name, int value)"
+.br
+.ti -1c
+.RI "void \fBPushAttribute\fP (const char *name, unsigned value)"
+.br
+.ti -1c
+.RI "void \fBPushAttribute\fP (const char *name, bool value)"
+.br
+.ti -1c
+.RI "void \fBPushAttribute\fP (const char *name, double value)"
+.br
+.ti -1c
+.RI "virtual void \fBCloseElement\fP (bool compactMode=false)"
+.br
+.RI "\fIIf streaming, close the Element\&. \fP"
+.ti -1c
+.RI "void \fBPushText\fP (const char *text, bool cdata=false)"
+.br
+.RI "\fIAdd a text node\&. \fP"
+.ti -1c
+.RI "void \fBPushText\fP (int value)"
+.br
+.RI "\fIAdd a text node from an integer\&. \fP"
+.ti -1c
+.RI "void \fBPushText\fP (unsigned value)"
+.br
+.RI "\fIAdd a text node from an unsigned\&. \fP"
+.ti -1c
+.RI "void \fBPushText\fP (bool value)"
+.br
+.RI "\fIAdd a text node from a bool\&. \fP"
+.ti -1c
+.RI "void \fBPushText\fP (float value)"
+.br
+.RI "\fIAdd a text node from a float\&. \fP"
+.ti -1c
+.RI "void \fBPushText\fP (double value)"
+.br
+.RI "\fIAdd a text node from a double\&. \fP"
+.ti -1c
+.RI "void \fBPushComment\fP (const char *comment)"
+.br
+.RI "\fIAdd a comment\&. \fP"
+.ti -1c
+.RI "void \fBPushDeclaration\fP (const char *value)"
+.br
+.ti -1c
+.RI "void \fBPushUnknown\fP (const char *value)"
+.br
+.ti -1c
+.RI "virtual bool \fBVisitEnter\fP (const \fBXMLDocument\fP &)"
+.br
+.RI "\fIVisit a document\&. \fP"
+.ti -1c
+.RI "virtual bool \fBVisitExit\fP (const \fBXMLDocument\fP &)"
+.br
+.RI "\fIVisit a document\&. \fP"
+.ti -1c
+.RI "virtual bool \fBVisitEnter\fP (const \fBXMLElement\fP &element, const \fBXMLAttribute\fP *\fBattribute\fP)"
+.br
+.RI "\fIVisit an element\&. \fP"
+.ti -1c
+.RI "virtual bool \fBVisitExit\fP (const \fBXMLElement\fP &element)"
+.br
+.RI "\fIVisit an element\&. \fP"
+.ti -1c
+.RI "virtual bool \fBVisit\fP (const \fBXMLText\fP &text)"
+.br
+.RI "\fIVisit a text node\&. \fP"
+.ti -1c
+.RI "virtual bool \fBVisit\fP (const \fBXMLComment\fP &comment)"
+.br
+.RI "\fIVisit a comment node\&. \fP"
+.ti -1c
+.RI "virtual bool \fBVisit\fP (const \fBXMLDeclaration\fP &declaration)"
+.br
+.RI "\fIVisit a declaration\&. \fP"
+.ti -1c
+.RI "virtual bool \fBVisit\fP (const \fBXMLUnknown\fP &unknown)"
+.br
+.RI "\fIVisit an unknown node\&. \fP"
+.ti -1c
+.RI "const char * \fBCStr\fP () const "
+.br
+.ti -1c
+.RI "int \fBCStrSize\fP () const "
+.br
+.ti -1c
+.RI "void \fBClearBuffer\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBCompactMode\fP (const \fBXMLElement\fP &)"
+.br
+.ti -1c
+.RI "virtual void \fBPrintSpace\fP (int depth)"
+.br
+.ti -1c
+.RI "void \fBPrint\fP (const char *format,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "void \fBSealElementIfJustOpened\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fB_elementJustOpened\fP"
+.br
+.ti -1c
+.RI "\fBDynArray\fP< const char *, 10 > \fB_stack\fP"
+.br
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBENTITY_RANGE\fP = 64, \fBBUF_SIZE\fP = 200 }"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBPrintString\fP (const char *, bool restrictedEntitySet)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fB_firstElement\fP"
+.br
+.ti -1c
+.RI "FILE * \fB_fp\fP"
+.br
+.ti -1c
+.RI "int \fB_depth\fP"
+.br
+.ti -1c
+.RI "int \fB_textDepth\fP"
+.br
+.ti -1c
+.RI "bool \fB_processEntities\fP"
+.br
+.ti -1c
+.RI "bool \fB_compactMode\fP"
+.br
+.ti -1c
+.RI "bool \fB_entityFlag\fP [ENTITY_RANGE]"
+.br
+.ti -1c
+.RI "bool \fB_restrictedEntityFlag\fP [ENTITY_RANGE]"
+.br
+.ti -1c
+.RI "\fBDynArray\fP< char, 20 > \fB_buffer\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Printing functionality\&. The \fBXMLPrinter\fP gives you more options than the \fBXMLDocument::Print()\fP method\&.
+.PP
+It can:
+.IP "1." 4
+Print to memory\&.
+.IP "2." 4
+Print to a file you provide\&.
+.IP "3." 4
+Print XML without a \fBXMLDocument\fP\&.
+.PP
+.PP
+Print to Memory
+.PP
+.PP
+.nf
+XMLPrinter printer;
+doc.Print( &printer );
+SomeFunction( printer.CStr() );
+.fi
+.PP
+.PP
+Print to a File
+.PP
+You provide the file pointer\&. 
+.PP
+.nf
+XMLPrinter printer( fp );
+doc.Print( &printer );
+
+.fi
+.PP
+.PP
+Print without a \fBXMLDocument\fP
+.PP
+When loading, an XML parser is very useful\&. However, sometimes when saving, it just gets in the way\&. The code is often set up for streaming, and constructing the DOM is just overhead\&.
+.PP
+The Printer supports the streaming case\&. The following code prints out a trivially simple XML file without ever creating an XML document\&.
+.PP
+.PP
+.nf
+XMLPrinter printer( fp );
+printer.OpenElement( "foo" );
+printer.PushAttribute( "foo", "bar" );
+printer.CloseElement();
+.fi
+.PP
+ 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "tinyxml2::XMLPrinter::XMLPrinter (FILE * file = \fC0\fP, bool compact = \fCfalse\fP, int depth = \fC0\fP)"
+Construct the printer\&. If the FILE* is specified, this will print to the FILE\&. Else it will print to memory, and the result is available in \fBCStr()\fP\&. If 'compact' is set to true, then output is created with only required whitespace and newlines\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void tinyxml2::XMLPrinter::ClearBuffer ()\fC [inline]\fP"
+If in print to memory mode, reset the buffer to the beginning\&. 
+.SS "const char* tinyxml2::XMLPrinter::CStr () const\fC [inline]\fP"
+If in print to memory mode, return a pointer to the XML file in memory\&. 
+.SS "int tinyxml2::XMLPrinter::CStrSize () const\fC [inline]\fP"
+If in print to memory mode, return the size of the XML file in memory\&. (Note the size returned includes the terminating null\&.) 
+.SS "void tinyxml2::XMLPrinter::OpenElement (const char * name, bool compactMode = \fCfalse\fP)"
+If streaming, start writing an element\&. The element must be closed with \fBCloseElement()\fP 
+.SS "virtual void tinyxml2::XMLPrinter::PrintSpace (int depth)\fC [protected]\fP, \fC [virtual]\fP"
+Prints out the space before an element\&. You may override to change the space and tabs used\&. A \fBPrintSpace()\fP override should call Print()\&. 
+.SS "void tinyxml2::XMLPrinter::PushHeader (bool writeBOM, bool writeDeclaration)"
+If streaming, write the BOM and declaration\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

@@ -1,0 +1,72 @@
+.TH "lib/gdl/includes/SDL_clipboard.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_clipboard.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetClipboardText\fP (const char *text)"
+.br
+.RI "\fIPut UTF-8 text into the clipboard\&. \fP"
+.ti -1c
+.RI "DECLSPEC char *SDLCALL \fBSDL_GetClipboardText\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet UTF-8 text from the clipboard, which must be freed with SDL_free() \fP"
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_HasClipboardText\fP (\fBvoid\fP)"
+.br
+.RI "\fIReturns a flag indicating whether the clipboard exists and contains a text string that is non-empty\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL clipboard handling 
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC char* SDLCALL SDL_GetClipboardText (\fBvoid\fP)"
+
+.PP
+Get UTF-8 text from the clipboard, which must be freed with SDL_free() 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_SetClipboardText()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_bool SDLCALL SDL_HasClipboardText (\fBvoid\fP)"
+
+.PP
+Returns a flag indicating whether the clipboard exists and contains a text string that is non-empty\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetClipboardText()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetClipboardText (const char * text)"
+
+.PP
+Put UTF-8 text into the clipboard\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetClipboardText()\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

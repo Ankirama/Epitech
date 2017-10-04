@@ -1,0 +1,54 @@
+.TH "SDL_RendererInfo" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_RendererInfo \- Information on the capabilities of a render driver or context\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_render\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBname\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBflags\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBnum_texture_formats\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtexture_formats\fP [16]"
+.br
+.ti -1c
+.RI "\fBint\fP \fBmax_texture_width\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBmax_texture_height\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Information on the capabilities of a render driver or context\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint32\fP SDL_RendererInfo::flags"
+Supported \fBSDL_RendererFlags\fP 
+.SS "\fBint\fP SDL_RendererInfo::max_texture_height"
+The maximimum texture height 
+.SS "\fBint\fP SDL_RendererInfo::max_texture_width"
+The maximimum texture width 
+.SS "const char* SDL_RendererInfo::name"
+The name of the renderer 
+.SS "\fBUint32\fP SDL_RendererInfo::num_texture_formats"
+The number of available texture formats 
+.SS "\fBUint32\fP SDL_RendererInfo::texture_formats[16]"
+The available texture formats 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

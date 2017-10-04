@@ -1,0 +1,61 @@
+#!/usr/bin/env  php
+
+<?php
+function usage() {
+  echo "Usage: ./209 sondage population echantillon sondage\n";
+  exit ;
+}
+
+function check_arg( $P, $E, $S ) {
+  if ( $P < $E ) {
+    echo "Error : population inferior to echantillon!\n";
+    usage();
+  }
+  elseif ( $P <= 1 || $E <= 1) {
+    echo "Error : population and echantillon must be > 1 !\n";
+    usage();
+  }
+  elseif ($S < 0) {
+    echo "Error : sondage must be > 0 !\n";
+    usage();
+  }
+}
+
+function calc_var($P, $E, $S) {
+  $p = $S / 100.0;
+  $var = $p * (1 - $p);
+  return ($var / $E * ($P - $E) / ($P - 1.0));
+}
+
+function print_result($P, $E, $S, $variance, $amp95, $amp99) {
+  echo"taille de la population :\t " . $P . "\n";
+  echo"taille de l'echantillon :\t " . $E ."\n";
+  echo"resultat du sondage :\t \t " . $S . "\n";
+  echo"variance estimee :\t \t " . number_format((float) ($variance), 6, '.', '') . "\n";
+  echo"intervalle de confiance a 95% : [" . number_format((float) ($S - $amp95), 2, '.', '') . "% ; " . number_format((float) ($S + $amp95), 2, '.', '') . "%]\n";
+  echo"intervalle de confiance a 99% : [" . number_format((float) ($S - $amp99), 2, '.', '') . "% ; " . number_format((float) ($S + $amp99), 2, '.', '') . "%]\n";
+}
+
+function run_cal($P, $E, $S) {
+  $variance = calc_var($P, $E, $S);
+  $amp_95 = 1.96 * sqrt($variance) * 100;
+  $amp_99 = 2.58 * sqrt($variance) * 100;
+  print_result($P, $E, $S, $variance, $amp_95, $amp_99);
+}
+
+function main($argv) {
+  if (count($argv) != 4)
+    usage();
+    for ($i=1; $i < 4; $i++) {
+      if (!is_numeric($argv[$i])) {
+        echo "Error: [" . $argv[$i] . "] is not a number.\n";
+        usage();
+      }
+    }
+    check_arg($argv[1], $argv[2], $argv[3]);
+    run_cal($argv[1], $argv[2], $argv[3]);
+}
+
+main($argv);
+
+?>

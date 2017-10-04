@@ -1,0 +1,77 @@
+.TH "Bomb" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Bomb \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBomb\fP (unsigned int, unsigned int delay=5, unsigned int range=2)"
+.br
+.ti -1c
+.RI "\fBAnimation\fP * \fBgetAnimation\fP () const "
+.br
+.ti -1c
+.RI "unsigned int \fBgetPosition\fP ()"
+.br
+.ti -1c
+.RI "unsigned int \fBgetDelay\fP ()"
+.br
+.ti -1c
+.RI "unsigned int \fBgetRange\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBgetTexturePath\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPosition\fP (unsigned int)"
+.br
+.ti -1c
+.RI "void \fBsetDelay\fP (unsigned int)"
+.br
+.ti -1c
+.RI "void \fBsetRange\fP (unsigned int)"
+.br
+.ti -1c
+.RI "void \fBupRange\fP ()"
+.br
+.ti -1c
+.RI "void \fBdownRange\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitialize\fP ()"
+.br
+.ti -1c
+.RI "void \fBdraw\fP (gdl::AShader &, gdl::Clock const &)"
+.br
+.ti -1c
+.RI "void \fBspawn\fP (unsigned int, unsigned int)"
+.br
+.ti -1c
+.RI "bool \fBupdate\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "unsigned int \fBm_position\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBm_delay\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBm_range\fP"
+.br
+.ti -1c
+.RI "\fBAnimation\fP * \fBm_animation\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

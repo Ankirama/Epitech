@@ -1,0 +1,1588 @@
+.TH "lib/gdl/includes/SDL_video.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_video.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_pixels\&.h'\fP
+.br
+\fC#include 'SDL_rect\&.h'\fP
+.br
+\fC#include 'SDL_surface\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_DisplayMode\fP"
+.br
+.RI "\fIThe structure that defines a display mode\&. \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_WINDOWPOS_UNDEFINED_MASK\fP   0x1FFF0000"
+.br
+.RI "\fIUsed to indicate that you don't care what the window position is\&. \fP"
+.ti -1c
+.RI "#define \fBSDL_WINDOWPOS_UNDEFINED_DISPLAY\fP(X)   (\fBSDL_WINDOWPOS_UNDEFINED_MASK\fP|(X))"
+.br
+.ti -1c
+.RI "#define \fBSDL_WINDOWPOS_UNDEFINED\fP   SDL_WINDOWPOS_UNDEFINED_DISPLAY(0)"
+.br
+.ti -1c
+.RI "#define \fBSDL_WINDOWPOS_ISUNDEFINED\fP(X)   (((X)&0xFFFF0000) == SDL_WINDOWPOS_UNDEFINED_MASK)"
+.br
+.ti -1c
+.RI "#define \fBSDL_WINDOWPOS_CENTERED_MASK\fP   0x2FFF0000"
+.br
+.RI "\fIUsed to indicate that the window position should be centered\&. \fP"
+.ti -1c
+.RI "#define \fBSDL_WINDOWPOS_CENTERED_DISPLAY\fP(X)   (\fBSDL_WINDOWPOS_CENTERED_MASK\fP|(X))"
+.br
+.ti -1c
+.RI "#define \fBSDL_WINDOWPOS_CENTERED\fP   SDL_WINDOWPOS_CENTERED_DISPLAY(0)"
+.br
+.ti -1c
+.RI "#define \fBSDL_WINDOWPOS_ISCENTERED\fP(X)   (((X)&0xFFFF0000) == SDL_WINDOWPOS_CENTERED_MASK)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBSDL_Window\fP \fBSDL_Window\fP"
+.br
+.RI "\fIThe type used to identify a window\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP * \fBSDL_GLContext\fP"
+.br
+.RI "\fIAn opaque handle to an OpenGL context\&. \fP"
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSDL_WindowFlags\fP { \fBSDL_WINDOW_FULLSCREEN\fP = 0x00000001, \fBSDL_WINDOW_OPENGL\fP = 0x00000002, \fBSDL_WINDOW_SHOWN\fP = 0x00000004, \fBSDL_WINDOW_HIDDEN\fP = 0x00000008, \fBSDL_WINDOW_BORDERLESS\fP = 0x00000010, \fBSDL_WINDOW_RESIZABLE\fP = 0x00000020, \fBSDL_WINDOW_MINIMIZED\fP = 0x00000040, \fBSDL_WINDOW_MAXIMIZED\fP = 0x00000080, \fBSDL_WINDOW_INPUT_GRABBED\fP = 0x00000100, \fBSDL_WINDOW_INPUT_FOCUS\fP = 0x00000200, \fBSDL_WINDOW_MOUSE_FOCUS\fP = 0x00000400, \fBSDL_WINDOW_FULLSCREEN_DESKTOP\fP = ( SDL_WINDOW_FULLSCREEN | 0x00001000 ), \fBSDL_WINDOW_FOREIGN\fP = 0x00000800, \fBSDL_WINDOW_ALLOW_HIGHDPI\fP = 0x00002000 }"
+.br
+.RI "\fIThe flags on a window\&. \fP"
+.ti -1c
+.RI "enum \fBSDL_WindowEventID\fP { \fBSDL_WINDOWEVENT_NONE\fP, \fBSDL_WINDOWEVENT_SHOWN\fP, \fBSDL_WINDOWEVENT_HIDDEN\fP, \fBSDL_WINDOWEVENT_EXPOSED\fP, \fBSDL_WINDOWEVENT_MOVED\fP, \fBSDL_WINDOWEVENT_RESIZED\fP, \fBSDL_WINDOWEVENT_SIZE_CHANGED\fP, \fBSDL_WINDOWEVENT_MINIMIZED\fP, \fBSDL_WINDOWEVENT_MAXIMIZED\fP, \fBSDL_WINDOWEVENT_RESTORED\fP, \fBSDL_WINDOWEVENT_ENTER\fP, \fBSDL_WINDOWEVENT_LEAVE\fP, \fBSDL_WINDOWEVENT_FOCUS_GAINED\fP, \fBSDL_WINDOWEVENT_FOCUS_LOST\fP, \fBSDL_WINDOWEVENT_CLOSE\fP }"
+.br
+.RI "\fIEvent subtype for window events\&. \fP"
+.ti -1c
+.RI "enum \fBSDL_GLattr\fP { \fBSDL_GL_RED_SIZE\fP, \fBSDL_GL_GREEN_SIZE\fP, \fBSDL_GL_BLUE_SIZE\fP, \fBSDL_GL_ALPHA_SIZE\fP, \fBSDL_GL_BUFFER_SIZE\fP, \fBSDL_GL_DOUBLEBUFFER\fP, \fBSDL_GL_DEPTH_SIZE\fP, \fBSDL_GL_STENCIL_SIZE\fP, \fBSDL_GL_ACCUM_RED_SIZE\fP, \fBSDL_GL_ACCUM_GREEN_SIZE\fP, \fBSDL_GL_ACCUM_BLUE_SIZE\fP, \fBSDL_GL_ACCUM_ALPHA_SIZE\fP, \fBSDL_GL_STEREO\fP, \fBSDL_GL_MULTISAMPLEBUFFERS\fP, \fBSDL_GL_MULTISAMPLESAMPLES\fP, \fBSDL_GL_ACCELERATED_VISUAL\fP, \fBSDL_GL_RETAINED_BACKING\fP, \fBSDL_GL_CONTEXT_MAJOR_VERSION\fP, \fBSDL_GL_CONTEXT_MINOR_VERSION\fP, \fBSDL_GL_CONTEXT_EGL\fP, \fBSDL_GL_CONTEXT_FLAGS\fP, \fBSDL_GL_CONTEXT_PROFILE_MASK\fP, \fBSDL_GL_SHARE_WITH_CURRENT_CONTEXT\fP, \fBSDL_GL_FRAMEBUFFER_SRGB_CAPABLE\fP }"
+.br
+.RI "\fIOpenGL configuration attributes\&. \fP"
+.ti -1c
+.RI "enum \fBSDL_GLprofile\fP { \fBSDL_GL_CONTEXT_PROFILE_CORE\fP = 0x0001, \fBSDL_GL_CONTEXT_PROFILE_COMPATIBILITY\fP = 0x0002, \fBSDL_GL_CONTEXT_PROFILE_ES\fP = 0x0004 }"
+.br
+.ti -1c
+.RI "enum \fBSDL_GLcontextFlag\fP { \fBSDL_GL_CONTEXT_DEBUG_FLAG\fP = 0x0001, \fBSDL_GL_CONTEXT_FORWARD_COMPATIBLE_FLAG\fP = 0x0002, \fBSDL_GL_CONTEXT_ROBUST_ACCESS_FLAG\fP = 0x0004, \fBSDL_GL_CONTEXT_RESET_ISOLATION_FLAG\fP = 0x0008 }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetNumVideoDrivers\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the number of video drivers compiled into SDL\&. \fP"
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GetVideoDriver\fP (\fBint\fP index)"
+.br
+.RI "\fIGet the name of a built in video driver\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_VideoInit\fP (const char *driver_name)"
+.br
+.RI "\fIInitialize the video subsystem, optionally specifying a video driver\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_VideoQuit\fP (\fBvoid\fP)"
+.br
+.RI "\fIShuts down the video subsystem\&. \fP"
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GetCurrentVideoDriver\fP (\fBvoid\fP)"
+.br
+.RI "\fIReturns the name of the currently initialized video driver\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetNumVideoDisplays\fP (\fBvoid\fP)"
+.br
+.RI "\fIReturns the number of available video displays\&. \fP"
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GetDisplayName\fP (\fBint\fP displayIndex)"
+.br
+.RI "\fIGet the name of a display in UTF-8 encoding\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetDisplayBounds\fP (\fBint\fP displayIndex, \fBSDL_Rect\fP *rect)"
+.br
+.RI "\fIGet the desktop area represented by a display, with the primary display located at 0,0\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetNumDisplayModes\fP (\fBint\fP displayIndex)"
+.br
+.RI "\fIReturns the number of available display modes\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetDisplayMode\fP (\fBint\fP displayIndex, \fBint\fP modeIndex, \fBSDL_DisplayMode\fP *mode)"
+.br
+.RI "\fIFill in information about a specific display mode\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetDesktopDisplayMode\fP (\fBint\fP displayIndex, \fBSDL_DisplayMode\fP *mode)"
+.br
+.RI "\fIFill in information about the desktop display mode\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetCurrentDisplayMode\fP (\fBint\fP displayIndex, \fBSDL_DisplayMode\fP *mode)"
+.br
+.RI "\fIFill in information about the current display mode\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBSDL_DisplayMode\fP *SDLCALL \fBSDL_GetClosestDisplayMode\fP (\fBint\fP displayIndex, const \fBSDL_DisplayMode\fP *mode, \fBSDL_DisplayMode\fP *closest)"
+.br
+.RI "\fIGet the closest match to the requested display mode\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetWindowDisplayIndex\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIGet the display index associated with a window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetWindowDisplayMode\fP (\fBSDL_Window\fP *window, const \fBSDL_DisplayMode\fP *mode)"
+.br
+.RI "\fISet the display mode used when a fullscreen window is visible\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetWindowDisplayMode\fP (\fBSDL_Window\fP *window, \fBSDL_DisplayMode\fP *mode)"
+.br
+.RI "\fIFill in information about the display mode used when a fullscreen window is visible\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBUint32\fP SDLCALL \fBSDL_GetWindowPixelFormat\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIGet the pixel format associated with the window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBSDL_Window\fP *SDLCALL \fBSDL_CreateWindow\fP (const char *title, \fBint\fP x, \fBint\fP y, \fBint\fP w, \fBint\fP h, \fBUint32\fP flags)"
+.br
+.RI "\fICreate a window with the specified position, dimensions, and flags\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBSDL_Window\fP *SDLCALL \fBSDL_CreateWindowFrom\fP (const \fBvoid\fP *data)"
+.br
+.RI "\fICreate an SDL window from an existing native window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBUint32\fP SDLCALL \fBSDL_GetWindowID\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIGet the numeric ID of a window, for logging purposes\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBSDL_Window\fP *SDLCALL \fBSDL_GetWindowFromID\fP (\fBUint32\fP id)"
+.br
+.RI "\fIGet a window from a stored ID, or NULL if it doesn't exist\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBUint32\fP SDLCALL \fBSDL_GetWindowFlags\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIGet the window flags\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_SetWindowTitle\fP (\fBSDL_Window\fP *window, const char *title)"
+.br
+.RI "\fISet the title of a window, in UTF-8 format\&. \fP"
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GetWindowTitle\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIGet the title of a window, in UTF-8 format\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_SetWindowIcon\fP (\fBSDL_Window\fP *window, \fBSDL_Surface\fP *icon)"
+.br
+.RI "\fISet the icon for a window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP *SDLCALL \fBSDL_SetWindowData\fP (\fBSDL_Window\fP *window, const char *name, \fBvoid\fP *userdata)"
+.br
+.RI "\fIAssociate an arbitrary named pointer with a window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP *SDLCALL \fBSDL_GetWindowData\fP (\fBSDL_Window\fP *window, const char *name)"
+.br
+.RI "\fIRetrieve the data pointer associated with a window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_SetWindowPosition\fP (\fBSDL_Window\fP *window, \fBint\fP x, \fBint\fP y)"
+.br
+.RI "\fISet the position of a window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GetWindowPosition\fP (\fBSDL_Window\fP *window, \fBint\fP *x, \fBint\fP *y)"
+.br
+.RI "\fIGet the position of a window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_SetWindowSize\fP (\fBSDL_Window\fP *window, \fBint\fP w, \fBint\fP h)"
+.br
+.RI "\fISet the size of a window's client area\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GetWindowSize\fP (\fBSDL_Window\fP *window, \fBint\fP *w, \fBint\fP *h)"
+.br
+.RI "\fIGet the size of a window's client area\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_SetWindowMinimumSize\fP (\fBSDL_Window\fP *window, \fBint\fP min_w, \fBint\fP min_h)"
+.br
+.RI "\fISet the minimum size of a window's client area\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GetWindowMinimumSize\fP (\fBSDL_Window\fP *window, \fBint\fP *w, \fBint\fP *h)"
+.br
+.RI "\fIGet the minimum size of a window's client area\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_SetWindowMaximumSize\fP (\fBSDL_Window\fP *window, \fBint\fP max_w, \fBint\fP max_h)"
+.br
+.RI "\fISet the maximum size of a window's client area\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GetWindowMaximumSize\fP (\fBSDL_Window\fP *window, \fBint\fP *w, \fBint\fP *h)"
+.br
+.RI "\fIGet the maximum size of a window's client area\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_SetWindowBordered\fP (\fBSDL_Window\fP *window, SDL_bool bordered)"
+.br
+.RI "\fISet the border state of a window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_ShowWindow\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIShow a window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_HideWindow\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIHide a window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_RaiseWindow\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIRaise a window above other windows and set the input focus\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_MaximizeWindow\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIMake a window as large as possible\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_MinimizeWindow\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIMinimize a window to an iconic representation\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_RestoreWindow\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIRestore the size and position of a minimized or maximized window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetWindowFullscreen\fP (\fBSDL_Window\fP *window, \fBUint32\fP flags)"
+.br
+.RI "\fISet a window's fullscreen state\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBSDL_Surface\fP *SDLCALL \fBSDL_GetWindowSurface\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIGet the SDL surface associated with the window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_UpdateWindowSurface\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fICopy the window surface to the screen\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_UpdateWindowSurfaceRects\fP (\fBSDL_Window\fP *window, const \fBSDL_Rect\fP *rects, \fBint\fP numrects)"
+.br
+.RI "\fICopy a number of rectangles on the window surface to the screen\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_SetWindowGrab\fP (\fBSDL_Window\fP *window, SDL_bool grabbed)"
+.br
+.RI "\fISet a window's input grab mode\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_GetWindowGrab\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIGet a window's input grab mode\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetWindowBrightness\fP (\fBSDL_Window\fP *window, float brightness)"
+.br
+.RI "\fISet the brightness (gamma correction) for a window\&. \fP"
+.ti -1c
+.RI "DECLSPEC float SDLCALL \fBSDL_GetWindowBrightness\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIGet the brightness (gamma correction) for a window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetWindowGammaRamp\fP (\fBSDL_Window\fP *window, const \fBUint16\fP *red, const \fBUint16\fP *green, const \fBUint16\fP *blue)"
+.br
+.RI "\fISet the gamma ramp for a window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetWindowGammaRamp\fP (\fBSDL_Window\fP *window, \fBUint16\fP *red, \fBUint16\fP *green, \fBUint16\fP *blue)"
+.br
+.RI "\fIGet the gamma ramp for a window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_DestroyWindow\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIDestroy a window\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_IsScreenSaverEnabled\fP (\fBvoid\fP)"
+.br
+.RI "\fIReturns whether the screensaver is currently enabled (default on)\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_EnableScreenSaver\fP (\fBvoid\fP)"
+.br
+.RI "\fIAllow the screen to be blanked by a screensaver\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_DisableScreenSaver\fP (\fBvoid\fP)"
+.br
+.RI "\fIPrevent the screen from being blanked by a screensaver\&. \fP"
+.in -1c
+.PP
+.RI "\fBOpenGL support functions\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GL_LoadLibrary\fP (const char *path)"
+.br
+.RI "\fIDynamically load an OpenGL library\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP *SDLCALL \fBSDL_GL_GetProcAddress\fP (const char *proc)"
+.br
+.RI "\fIGet the address of an OpenGL function\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GL_UnloadLibrary\fP (\fBvoid\fP)"
+.br
+.RI "\fIUnload the OpenGL library previously loaded by \fBSDL_GL_LoadLibrary()\fP\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_GL_ExtensionSupported\fP (const char *extension)"
+.br
+.RI "\fIReturn true if an OpenGL extension is supported for the current context\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GL_ResetAttributes\fP (\fBvoid\fP)"
+.br
+.RI "\fIReset all previously set OpenGL context attributes to their default values\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GL_SetAttribute\fP (\fBSDL_GLattr\fP attr, \fBint\fP value)"
+.br
+.RI "\fISet an OpenGL window attribute before window creation\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GL_GetAttribute\fP (\fBSDL_GLattr\fP attr, \fBint\fP *value)"
+.br
+.RI "\fIGet the actual value for an attribute from the current context\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBSDL_GLContext\fP SDLCALL \fBSDL_GL_CreateContext\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fICreate an OpenGL context for use with an OpenGL window, and make it current\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GL_MakeCurrent\fP (\fBSDL_Window\fP *window, \fBSDL_GLContext\fP context)"
+.br
+.RI "\fISet up an OpenGL context for rendering into an OpenGL window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBSDL_Window\fP *SDLCALL \fBSDL_GL_GetCurrentWindow\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the currently active OpenGL window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBSDL_GLContext\fP SDLCALL \fBSDL_GL_GetCurrentContext\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the currently active OpenGL context\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GL_GetDrawableSize\fP (\fBSDL_Window\fP *window, \fBint\fP *w, \fBint\fP *h)"
+.br
+.RI "\fIGet the size of a window's underlying drawable (for use with glViewport)\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GL_SetSwapInterval\fP (\fBint\fP interval)"
+.br
+.RI "\fISet the swap interval for the current OpenGL context\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GL_GetSwapInterval\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the swap interval for the current OpenGL context\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GL_SwapWindow\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fISwap the OpenGL buffers for a window, if double-buffering is supported\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GL_DeleteContext\fP (\fBSDL_GLContext\fP context)"
+.br
+.RI "\fIDelete an OpenGL context\&. \fP"
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file for SDL video functions\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBSDL_Window\fP \fBSDL_Window\fP"
+
+.PP
+The type used to identify a window\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_CreateWindow()\fP 
+.PP
+\fBSDL_CreateWindowFrom()\fP 
+.PP
+\fBSDL_DestroyWindow()\fP 
+.PP
+\fBSDL_GetWindowData()\fP 
+.PP
+\fBSDL_GetWindowFlags()\fP 
+.PP
+\fBSDL_GetWindowGrab()\fP 
+.PP
+\fBSDL_GetWindowPosition()\fP 
+.PP
+\fBSDL_GetWindowSize()\fP 
+.PP
+\fBSDL_GetWindowTitle()\fP 
+.PP
+\fBSDL_HideWindow()\fP 
+.PP
+\fBSDL_MaximizeWindow()\fP 
+.PP
+\fBSDL_MinimizeWindow()\fP 
+.PP
+\fBSDL_RaiseWindow()\fP 
+.PP
+\fBSDL_RestoreWindow()\fP 
+.PP
+\fBSDL_SetWindowData()\fP 
+.PP
+\fBSDL_SetWindowFullscreen()\fP 
+.PP
+\fBSDL_SetWindowGrab()\fP 
+.PP
+\fBSDL_SetWindowIcon()\fP 
+.PP
+\fBSDL_SetWindowPosition()\fP 
+.PP
+\fBSDL_SetWindowSize()\fP 
+.PP
+\fBSDL_SetWindowBordered()\fP 
+.PP
+\fBSDL_SetWindowTitle()\fP 
+.PP
+\fBSDL_ShowWindow()\fP 
+.RE
+.PP
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBSDL_WindowEventID\fP"
+
+.PP
+Event subtype for window events\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISDL_WINDOWEVENT_NONE \fP\fP
+Never used 
+.TP
+\fB\fISDL_WINDOWEVENT_SHOWN \fP\fP
+Window has been shown 
+.TP
+\fB\fISDL_WINDOWEVENT_HIDDEN \fP\fP
+Window has been hidden 
+.TP
+\fB\fISDL_WINDOWEVENT_EXPOSED \fP\fP
+Window has been exposed and should be redrawn 
+.TP
+\fB\fISDL_WINDOWEVENT_MOVED \fP\fP
+Window has been moved to data1, data2 
+.TP
+\fB\fISDL_WINDOWEVENT_RESIZED \fP\fP
+Window has been resized to data1xdata2 
+.TP
+\fB\fISDL_WINDOWEVENT_SIZE_CHANGED \fP\fP
+The window size has changed, either as a result of an API call or through the system or user changing the window size\&. 
+.TP
+\fB\fISDL_WINDOWEVENT_MINIMIZED \fP\fP
+Window has been minimized 
+.TP
+\fB\fISDL_WINDOWEVENT_MAXIMIZED \fP\fP
+Window has been maximized 
+.TP
+\fB\fISDL_WINDOWEVENT_RESTORED \fP\fP
+Window has been restored to normal size and position 
+.TP
+\fB\fISDL_WINDOWEVENT_ENTER \fP\fP
+Window has gained mouse focus 
+.TP
+\fB\fISDL_WINDOWEVENT_LEAVE \fP\fP
+Window has lost mouse focus 
+.TP
+\fB\fISDL_WINDOWEVENT_FOCUS_GAINED \fP\fP
+Window has gained keyboard focus 
+.TP
+\fB\fISDL_WINDOWEVENT_FOCUS_LOST \fP\fP
+Window has lost keyboard focus 
+.TP
+\fB\fISDL_WINDOWEVENT_CLOSE \fP\fP
+The window manager requests that the window be closed 
+.SS "enum \fBSDL_WindowFlags\fP"
+
+.PP
+The flags on a window\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowFlags()\fP 
+.RE
+.PP
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISDL_WINDOW_FULLSCREEN \fP\fP
+fullscreen window 
+.TP
+\fB\fISDL_WINDOW_OPENGL \fP\fP
+window usable with OpenGL context 
+.TP
+\fB\fISDL_WINDOW_SHOWN \fP\fP
+window is visible 
+.TP
+\fB\fISDL_WINDOW_HIDDEN \fP\fP
+window is not visible 
+.TP
+\fB\fISDL_WINDOW_BORDERLESS \fP\fP
+no window decoration 
+.TP
+\fB\fISDL_WINDOW_RESIZABLE \fP\fP
+window can be resized 
+.TP
+\fB\fISDL_WINDOW_MINIMIZED \fP\fP
+window is minimized 
+.TP
+\fB\fISDL_WINDOW_MAXIMIZED \fP\fP
+window is maximized 
+.TP
+\fB\fISDL_WINDOW_INPUT_GRABBED \fP\fP
+window has grabbed input focus 
+.TP
+\fB\fISDL_WINDOW_INPUT_FOCUS \fP\fP
+window has input focus 
+.TP
+\fB\fISDL_WINDOW_MOUSE_FOCUS \fP\fP
+window has mouse focus 
+.TP
+\fB\fISDL_WINDOW_FOREIGN \fP\fP
+window not created by SDL 
+.TP
+\fB\fISDL_WINDOW_ALLOW_HIGHDPI \fP\fP
+window should be created in high-DPI mode if supported 
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC \fBSDL_Window\fP* SDLCALL SDL_CreateWindow (const char * title, \fBint\fP x, \fBint\fP y, \fBint\fP w, \fBint\fP h, \fBUint32\fP flags)"
+
+.PP
+Create a window with the specified position, dimensions, and flags\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItitle\fP The title of the window, in UTF-8 encoding\&. 
+.br
+\fIx\fP The x position of the window, ::SDL_WINDOWPOS_CENTERED, or ::SDL_WINDOWPOS_UNDEFINED\&. 
+.br
+\fIy\fP The y position of the window, ::SDL_WINDOWPOS_CENTERED, or ::SDL_WINDOWPOS_UNDEFINED\&. 
+.br
+\fIw\fP The width of the window\&. 
+.br
+\fIh\fP The height of the window\&. 
+.br
+\fIflags\fP The flags for the window, a mask of any of the following: \fBSDL_WINDOW_FULLSCREEN\fP, \fBSDL_WINDOW_OPENGL\fP, \fBSDL_WINDOW_HIDDEN\fP, \fBSDL_WINDOW_BORDERLESS\fP, \fBSDL_WINDOW_RESIZABLE\fP, \fBSDL_WINDOW_MAXIMIZED\fP, \fBSDL_WINDOW_MINIMIZED\fP, \fBSDL_WINDOW_INPUT_GRABBED\fP, \fBSDL_WINDOW_ALLOW_HIGHDPI\fP\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The id of the window created, or zero if window creation failed\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_DestroyWindow()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBSDL_Window\fP* SDLCALL SDL_CreateWindowFrom (const \fBvoid\fP * data)"
+
+.PP
+Create an SDL window from an existing native window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP A pointer to driver-dependent window creation data
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The id of the window created, or zero if window creation failed\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_DestroyWindow()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_DisableScreenSaver (\fBvoid\fP)"
+
+.PP
+Prevent the screen from being blanked by a screensaver\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_IsScreenSaverEnabled()\fP 
+.PP
+\fBSDL_EnableScreenSaver()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_EnableScreenSaver (\fBvoid\fP)"
+
+.PP
+Allow the screen to be blanked by a screensaver\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_IsScreenSaverEnabled()\fP 
+.PP
+\fBSDL_DisableScreenSaver()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBSDL_DisplayMode\fP* SDLCALL SDL_GetClosestDisplayMode (\fBint\fP displayIndex, const \fBSDL_DisplayMode\fP * mode, \fBSDL_DisplayMode\fP * closest)"
+
+.PP
+Get the closest match to the requested display mode\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdisplayIndex\fP The index of display from which mode should be queried\&. 
+.br
+\fImode\fP The desired display mode 
+.br
+\fIclosest\fP A pointer to a display mode to be filled in with the closest match of the available display modes\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The passed in value \fCclosest\fP, or NULL if no matching video mode was available\&.
+.RE
+.PP
+The available display modes are scanned, and \fCclosest\fP is filled in with the closest mode matching the requested mode and returned\&. The mode format and refresh_rate default to the desktop mode if they are 0\&. The modes are scanned with size being first priority, format being second priority, and finally checking the refresh_rate\&. If all the available modes are too small, then NULL is returned\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetNumDisplayModes()\fP 
+.PP
+\fBSDL_GetDisplayMode()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC const char* SDLCALL SDL_GetCurrentVideoDriver (\fBvoid\fP)"
+
+.PP
+Returns the name of the currently initialized video driver\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The name of the current video driver or NULL if no driver has been initialized
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetNumVideoDrivers()\fP 
+.PP
+\fBSDL_GetVideoDriver()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetDisplayBounds (\fBint\fP displayIndex, \fBSDL_Rect\fP * rect)"
+
+.PP
+Get the desktop area represented by a display, with the primary display located at 0,0\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if the index is out of range\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetNumVideoDisplays()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetDisplayMode (\fBint\fP displayIndex, \fBint\fP modeIndex, \fBSDL_DisplayMode\fP * mode)"
+
+.PP
+Fill in information about a specific display mode\&. 
+.PP
+\fBNote:\fP
+.RS 4
+The display modes are sorted in this priority: 
+.PD 0
+
+.IP "\(bu" 2
+bits per pixel -> more colors to fewer colors 
+.IP "\(bu" 2
+width -> largest to smallest 
+.IP "\(bu" 2
+height -> largest to smallest 
+.IP "\(bu" 2
+refresh rate -> highest to lowest
+.PP
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetNumDisplayModes()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC const char* SDLCALL SDL_GetDisplayName (\fBint\fP displayIndex)"
+
+.PP
+Get the name of a display in UTF-8 encoding\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The name of a display, or NULL for an invalid display index\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetNumVideoDisplays()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetNumDisplayModes (\fBint\fP displayIndex)"
+
+.PP
+Returns the number of available display modes\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetDisplayMode()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetNumVideoDisplays (\fBvoid\fP)"
+
+.PP
+Returns the number of available video displays\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetDisplayBounds()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetNumVideoDrivers (\fBvoid\fP)"
+
+.PP
+Get the number of video drivers compiled into SDL\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetVideoDriver()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC const char* SDLCALL SDL_GetVideoDriver (\fBint\fP index)"
+
+.PP
+Get the name of a built in video driver\&. 
+.PP
+\fBNote:\fP
+.RS 4
+The video drivers are presented in the order in which they are normally checked during initialization\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetNumVideoDrivers()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC float SDLCALL SDL_GetWindowBrightness (\fBSDL_Window\fP * window)"
+
+.PP
+Get the brightness (gamma correction) for a window\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The last brightness value passed to \fBSDL_SetWindowBrightness()\fP
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_SetWindowBrightness()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP* SDLCALL SDL_GetWindowData (\fBSDL_Window\fP * window, const char * name)"
+
+.PP
+Retrieve the data pointer associated with a window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window to query\&. 
+.br
+\fIname\fP The name of the pointer\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The value associated with 'name'
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_SetWindowData()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetWindowDisplayIndex (\fBSDL_Window\fP * window)"
+
+.PP
+Get the display index associated with a window\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the display index of the display containing the center of the window, or -1 on error\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetWindowDisplayMode (\fBSDL_Window\fP * window, \fBSDL_DisplayMode\fP * mode)"
+
+.PP
+Fill in information about the display mode used when a fullscreen window is visible\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_SetWindowDisplayMode()\fP 
+.PP
+\fBSDL_SetWindowFullscreen()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetWindowGammaRamp (\fBSDL_Window\fP * window, \fBUint16\fP * red, \fBUint16\fP * green, \fBUint16\fP * blue)"
+
+.PP
+Get the gamma ramp for a window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window from which the gamma ramp should be queried\&. 
+.br
+\fIred\fP A pointer to a 256 element array of 16-bit quantities to hold the translation table for the red channel, or NULL\&. 
+.br
+\fIgreen\fP A pointer to a 256 element array of 16-bit quantities to hold the translation table for the green channel, or NULL\&. 
+.br
+\fIblue\fP A pointer to a 256 element array of 16-bit quantities to hold the translation table for the blue channel, or NULL\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if gamma ramps are unsupported\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_SetWindowGammaRamp()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_bool SDLCALL SDL_GetWindowGrab (\fBSDL_Window\fP * window)"
+
+.PP
+Get a window's input grab mode\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+This returns SDL_TRUE if input is grabbed, and SDL_FALSE otherwise\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_SetWindowGrab()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_GetWindowMaximumSize (\fBSDL_Window\fP * window, \fBint\fP * w, \fBint\fP * h)"
+
+.PP
+Get the maximum size of a window's client area\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window to query\&. 
+.br
+\fIw\fP Pointer to variable for storing the maximum width, may be NULL 
+.br
+\fIh\fP Pointer to variable for storing the maximum height, may be NULL
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowMinimumSize()\fP 
+.PP
+\fBSDL_SetWindowMaximumSize()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_GetWindowMinimumSize (\fBSDL_Window\fP * window, \fBint\fP * w, \fBint\fP * h)"
+
+.PP
+Get the minimum size of a window's client area\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window to query\&. 
+.br
+\fIw\fP Pointer to variable for storing the minimum width, may be NULL 
+.br
+\fIh\fP Pointer to variable for storing the minimum height, may be NULL
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowMaximumSize()\fP 
+.PP
+\fBSDL_SetWindowMinimumSize()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_GetWindowPosition (\fBSDL_Window\fP * window, \fBint\fP * x, \fBint\fP * y)"
+
+.PP
+Get the position of a window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window to query\&. 
+.br
+\fIx\fP Pointer to variable for storing the x position, may be NULL 
+.br
+\fIy\fP Pointer to variable for storing the y position, may be NULL
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_SetWindowPosition()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_GetWindowSize (\fBSDL_Window\fP * window, \fBint\fP * w, \fBint\fP * h)"
+
+.PP
+Get the size of a window's client area\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window to query\&. 
+.br
+\fIw\fP Pointer to variable for storing the width, may be NULL 
+.br
+\fIh\fP Pointer to variable for storing the height, may be NULL
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_SetWindowSize()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBSDL_Surface\fP* SDLCALL SDL_GetWindowSurface (\fBSDL_Window\fP * window)"
+
+.PP
+Get the SDL surface associated with the window\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The window's framebuffer surface, or NULL on error\&.
+.RE
+.PP
+A new surface will be created with the optimal format for the window, if necessary\&. This surface will be freed when the window is destroyed\&.
+.PP
+\fBNote:\fP
+.RS 4
+You may not combine this with 3D or the rendering API on this window\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_UpdateWindowSurface()\fP 
+.PP
+\fBSDL_UpdateWindowSurfaceRects()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC const char* SDLCALL SDL_GetWindowTitle (\fBSDL_Window\fP * window)"
+
+.PP
+Get the title of a window, in UTF-8 format\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_SetWindowTitle()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBSDL_GLContext\fP SDLCALL SDL_GL_CreateContext (\fBSDL_Window\fP * window)"
+
+.PP
+Create an OpenGL context for use with an OpenGL window, and make it current\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GL_DeleteContext()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_GL_DeleteContext (\fBSDL_GLContext\fP context)"
+
+.PP
+Delete an OpenGL context\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GL_CreateContext()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_GL_GetDrawableSize (\fBSDL_Window\fP * window, \fBint\fP * w, \fBint\fP * h)"
+
+.PP
+Get the size of a window's underlying drawable (for use with glViewport)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP Window from which the drawable size should be queried 
+.br
+\fIw\fP Pointer to variable for storing the width, may be NULL 
+.br
+\fIh\fP Pointer to variable for storing the height, may be NULL
+.RE
+.PP
+This may differ from SDL_GetWindowSize if we're rendering to a high-DPI drawable, i\&.e\&. the window was created with SDL_WINDOW_ALLOW_HIGHDPI on a platform with high-DPI support (Apple calls this 'Retina'), and not disabled by the SDL_HINT_VIDEO_HIGHDPI_DISABLED hint\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowSize()\fP 
+.PP
+\fBSDL_CreateWindow()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GL_GetSwapInterval (\fBvoid\fP)"
+
+.PP
+Get the swap interval for the current OpenGL context\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+0 if there is no vertical retrace synchronization, 1 if the buffer swap is synchronized with the vertical retrace, and -1 if late swaps happen immediately instead of waiting for the next retrace\&. If the system can't determine the swap interval, or there isn't a valid current context, this will return 0 as a safe default\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GL_SetSwapInterval()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GL_LoadLibrary (const char * path)"
+
+.PP
+Dynamically load an OpenGL library\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpath\fP The platform dependent OpenGL library name, or NULL to open the default OpenGL library\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if the library couldn't be loaded\&.
+.RE
+.PP
+This should be done after initializing the video driver, but before creating any OpenGL windows\&. If no OpenGL library is loaded, the default library will be loaded upon creation of the first OpenGL window\&.
+.PP
+\fBNote:\fP
+.RS 4
+If you do this, you need to retrieve all of the GL functions used in your program from the dynamic library using \fBSDL_GL_GetProcAddress()\fP\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GL_GetProcAddress()\fP 
+.PP
+\fBSDL_GL_UnloadLibrary()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GL_MakeCurrent (\fBSDL_Window\fP * window, \fBSDL_GLContext\fP context)"
+
+.PP
+Set up an OpenGL context for rendering into an OpenGL window\&. 
+.PP
+\fBNote:\fP
+.RS 4
+The context must have been created with a compatible window\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GL_SetSwapInterval (\fBint\fP interval)"
+
+.PP
+Set the swap interval for the current OpenGL context\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinterval\fP 0 for immediate updates, 1 for updates synchronized with the vertical retrace\&. If the system supports it, you may specify -1 to allow late swaps to happen immediately instead of waiting for the next retrace\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if setting the swap interval is not supported\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GL_GetSwapInterval()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_GL_UnloadLibrary (\fBvoid\fP)"
+
+.PP
+Unload the OpenGL library previously loaded by \fBSDL_GL_LoadLibrary()\fP\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GL_LoadLibrary()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_HideWindow (\fBSDL_Window\fP * window)"
+
+.PP
+Hide a window\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_ShowWindow()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_bool SDLCALL SDL_IsScreenSaverEnabled (\fBvoid\fP)"
+
+.PP
+Returns whether the screensaver is currently enabled (default on)\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_EnableScreenSaver()\fP 
+.PP
+\fBSDL_DisableScreenSaver()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_MaximizeWindow (\fBSDL_Window\fP * window)"
+
+.PP
+Make a window as large as possible\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_RestoreWindow()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_MinimizeWindow (\fBSDL_Window\fP * window)"
+
+.PP
+Minimize a window to an iconic representation\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_RestoreWindow()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_RestoreWindow (\fBSDL_Window\fP * window)"
+
+.PP
+Restore the size and position of a minimized or maximized window\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_MaximizeWindow()\fP 
+.PP
+\fBSDL_MinimizeWindow()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_SetWindowBordered (\fBSDL_Window\fP * window, SDL_bool bordered)"
+
+.PP
+Set the border state of a window\&. This will add or remove the window's SDL_WINDOW_BORDERLESS flag and add or remove the border from the actual window\&. This is a no-op if the window's border already matches the requested state\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window of which to change the border state\&. 
+.br
+\fIbordered\fP SDL_FALSE to remove border, SDL_TRUE to add border\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+You can't change the border state of a fullscreen window\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowFlags()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetWindowBrightness (\fBSDL_Window\fP * window, float brightness)"
+
+.PP
+Set the brightness (gamma correction) for a window\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if setting the brightness isn't supported\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowBrightness()\fP 
+.PP
+\fBSDL_SetWindowGammaRamp()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP* SDLCALL SDL_SetWindowData (\fBSDL_Window\fP * window, const char * name, \fBvoid\fP * userdata)"
+
+.PP
+Associate an arbitrary named pointer with a window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window to associate with the pointer\&. 
+.br
+\fIname\fP The name of the pointer\&. 
+.br
+\fIuserdata\fP The associated pointer\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The previous value associated with 'name'
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+The name is case-sensitive\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowData()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetWindowDisplayMode (\fBSDL_Window\fP * window, const \fBSDL_DisplayMode\fP * mode)"
+
+.PP
+Set the display mode used when a fullscreen window is visible\&. By default the window's dimensions and the desktop format and refresh rate are used\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window for which the display mode should be set\&. 
+.br
+\fImode\fP The mode to use, or NULL for the default mode\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if setting the display mode failed\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowDisplayMode()\fP 
+.PP
+\fBSDL_SetWindowFullscreen()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetWindowFullscreen (\fBSDL_Window\fP * window, \fBUint32\fP flags)"
+
+.PP
+Set a window's fullscreen state\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if setting the display mode failed\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_SetWindowDisplayMode()\fP 
+.PP
+\fBSDL_GetWindowDisplayMode()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetWindowGammaRamp (\fBSDL_Window\fP * window, const \fBUint16\fP * red, const \fBUint16\fP * green, const \fBUint16\fP * blue)"
+
+.PP
+Set the gamma ramp for a window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window for which the gamma ramp should be set\&. 
+.br
+\fIred\fP The translation table for the red channel, or NULL\&. 
+.br
+\fIgreen\fP The translation table for the green channel, or NULL\&. 
+.br
+\fIblue\fP The translation table for the blue channel, or NULL\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if gamma ramps are unsupported\&.
+.RE
+.PP
+Set the gamma translation table for the red, green, and blue channels of the video hardware\&. Each table is an array of 256 16-bit quantities, representing a mapping between the input and output for that channel\&. The input is the index into the array, and the output is the 16-bit gamma value at that index, scaled to the output color precision\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowGammaRamp()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_SetWindowGrab (\fBSDL_Window\fP * window, SDL_bool grabbed)"
+
+.PP
+Set a window's input grab mode\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window for which the input grab mode should be set\&. 
+.br
+\fIgrabbed\fP This is SDL_TRUE to grab input, and SDL_FALSE to release input\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowGrab()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_SetWindowIcon (\fBSDL_Window\fP * window, \fBSDL_Surface\fP * icon)"
+
+.PP
+Set the icon for a window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window for which the icon should be set\&. 
+.br
+\fIicon\fP The icon for the window\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_SetWindowMaximumSize (\fBSDL_Window\fP * window, \fBint\fP max_w, \fBint\fP max_h)"
+
+.PP
+Set the maximum size of a window's client area\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window to set a new maximum size\&. 
+.br
+\fImax_w\fP The maximum width of the window, must be >0 
+.br
+\fImax_h\fP The maximum height of the window, must be >0
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+You can't change the maximum size of a fullscreen window, it automatically matches the size of the display mode\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowMaximumSize()\fP 
+.PP
+\fBSDL_SetWindowMinimumSize()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_SetWindowMinimumSize (\fBSDL_Window\fP * window, \fBint\fP min_w, \fBint\fP min_h)"
+
+.PP
+Set the minimum size of a window's client area\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window to set a new minimum size\&. 
+.br
+\fImin_w\fP The minimum width of the window, must be >0 
+.br
+\fImin_h\fP The minimum height of the window, must be >0
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+You can't change the minimum size of a fullscreen window, it automatically matches the size of the display mode\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowMinimumSize()\fP 
+.PP
+\fBSDL_SetWindowMaximumSize()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_SetWindowPosition (\fBSDL_Window\fP * window, \fBint\fP x, \fBint\fP y)"
+
+.PP
+Set the position of a window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window to reposition\&. 
+.br
+\fIx\fP The x coordinate of the window, ::SDL_WINDOWPOS_CENTERED, or ::SDL_WINDOWPOS_UNDEFINED\&. 
+.br
+\fIy\fP The y coordinate of the window, ::SDL_WINDOWPOS_CENTERED, or ::SDL_WINDOWPOS_UNDEFINED\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+The window coordinate origin is the upper left of the display\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowPosition()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_SetWindowSize (\fBSDL_Window\fP * window, \fBint\fP w, \fBint\fP h)"
+
+.PP
+Set the size of a window's client area\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window to resize\&. 
+.br
+\fIw\fP The width of the window, must be >0 
+.br
+\fIh\fP The height of the window, must be >0
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+You can't change the size of a fullscreen window, it automatically matches the size of the display mode\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowSize()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_SetWindowTitle (\fBSDL_Window\fP * window, const char * title)"
+
+.PP
+Set the title of a window, in UTF-8 format\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowTitle()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_ShowWindow (\fBSDL_Window\fP * window)"
+
+.PP
+Show a window\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_HideWindow()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_UpdateWindowSurface (\fBSDL_Window\fP * window)"
+
+.PP
+Copy the window surface to the screen\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 on error\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowSurface()\fP 
+.PP
+\fBSDL_UpdateWindowSurfaceRects()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_UpdateWindowSurfaceRects (\fBSDL_Window\fP * window, const \fBSDL_Rect\fP * rects, \fBint\fP numrects)"
+
+.PP
+Copy a number of rectangles on the window surface to the screen\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 on error\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetWindowSurface()\fP 
+.PP
+SDL_UpdateWindowSurfaceRect() 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_VideoInit (const char * driver_name)"
+
+.PP
+Initialize the video subsystem, optionally specifying a video driver\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdriver_name\fP Initialize a specific driver by name, or NULL for the default video driver\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, -1 on error
+.RE
+.PP
+This function initializes the video subsystem; setting up a connection to the window manager, etc, and determines the available display modes and pixel formats, but does not initialize a window or graphics mode\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_VideoQuit()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_VideoQuit (\fBvoid\fP)"
+
+.PP
+Shuts down the video subsystem\&. This function closes all windows, and restores the original video mode\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_VideoInit()\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

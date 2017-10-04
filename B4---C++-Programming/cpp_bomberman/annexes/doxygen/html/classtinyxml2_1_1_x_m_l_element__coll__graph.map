@@ -1,0 +1,14 @@
+<map id="tinyxml2::XMLElement" name="tinyxml2::XMLElement">
+<area shape="rect" id="node2" href="$classtinyxml2_1_1_x_m_l_node.html" title="tinyxml2::XMLNode" alt="" coords="785,192,923,219"/>
+<area shape="rect" id="node3" href="$classtinyxml2_1_1_x_m_l_document.html" title="tinyxml2::XMLDocument" alt="" coords="1111,332,1277,359"/>
+<area shape="rect" id="node4" href="$classtinyxml2_1_1_mem_pool_t.html" title="tinyxml2::MemPoolT\l\&lt; sizeof(tinyxml2::XMLText) \&gt;" alt="" coords="755,451,953,493"/>
+<area shape="rect" id="node5" href="$classtinyxml2_1_1_mem_pool.html" title="tinyxml2::MemPool" alt="" coords="478,245,613,272"/>
+<area shape="rect" id="node9" href="$classtinyxml2_1_1_mem_pool_t.html" title="tinyxml2::MemPoolT\l\&lt; sizeof(tinyxml2::XMLComment) \&gt;" alt="" coords="739,362,969,403"/>
+<area shape="rect" id="node10" href="$classtinyxml2_1_1_mem_pool_t.html" title="tinyxml2::MemPoolT\l\&lt; sizeof(tinyxml2::XMLElement) \&gt;" alt="" coords="743,266,965,307"/>
+<area shape="rect" id="node11" href="$classtinyxml2_1_1_mem_pool_t.html" title="tinyxml2::MemPoolT\l\&lt; sizeof(tinyxml2::XMLAttribute) \&gt;" alt="" coords="743,535,965,577"/>
+<area shape="rect" id="node13" href="$classtinyxml2_1_1_x_m_l_attribute.html" title="tinyxml2::XMLAttribute" alt="" coords="776,44,932,71"/>
+<area shape="rect" id="node6" href="$uniontinyxml2_1_1_mem_pool_t_1_1_chunk.html" title="tinyxml2::MemPoolT\l\&lt; SIZE \&gt;::Chunk" alt="" coords="5,445,148,486"/>
+<area shape="rect" id="node8" href="$structtinyxml2_1_1_mem_pool_t_1_1_block.html" title="tinyxml2::MemPoolT\l\&lt; SIZE \&gt;::Block" alt="" coords="236,445,379,486"/>
+<area shape="rect" id="node7" href="$classtinyxml2_1_1_dyn_array.html" title="tinyxml2::DynArray\l\&lt; tinyxml2::MemPoolT\l::Block *, 10 \&gt;" alt="" coords="468,437,623,493"/>
+<area shape="rect" id="node12" href="$classtinyxml2_1_1_str_pair.html" title="tinyxml2::StrPair" alt="" coords="486,37,605,64"/>
+</map>

@@ -1,0 +1,52 @@
+\hypertarget{vector__angle_8hpp}{}\section{lib/gdl/includes/glm/gtx/vector\+\_\+angle.hpp File Reference}
+\label{vector__angle_8hpp}\index{lib/gdl/includes/glm/gtx/vector\+\_\+angle.\+hpp@{lib/gdl/includes/glm/gtx/vector\+\_\+angle.\+hpp}}
+{\ttfamily \#include \char`\"{}../glm.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../gtc/epsilon.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../gtx/quaternion.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../gtx/rotate\+\_\+vector.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vector\+\_\+angle.\+inl\char`\"{}}\\*
+Include dependency graph for vector\+\_\+angle.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{vector__angle_8hpp_ae778731e67ddc1d1e64b0a75421cc03e}{}\#define {\bfseries G\+L\+M\+\_\+\+G\+T\+X\+\_\+vector\+\_\+angle}~G\+L\+M\+\_\+\+V\+E\+R\+S\+I\+O\+N\label{vector__angle_8hpp_ae778731e67ddc1d1e64b0a75421cc03e}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename vec\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R vec\+Type\+::value\+\_\+type \hyperlink{group__gtx__vector__angle_gaff9a524d6451772dc6df11f8880498fa}{glm\+::angle} (vec\+Type const \&x, vec\+Type const \&y)
+\item 
+{\footnotesize template$<$typename T $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R T \hyperlink{group__gtx__vector__angle_ga4268cbf9472bcaeeab131626f8971301}{glm\+::oriented\+Angle} (detail\+::tvec2$<$ T $>$ const \&x, detail\+::tvec2$<$ T $>$ const \&y)
+\item 
+{\footnotesize template$<$typename T $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R T \hyperlink{group__gtx__vector__angle_ga3f15db506641d5f9461259672b7f276c}{glm\+::oriented\+Angle} (detail\+::tvec3$<$ T $>$ const \&x, detail\+::tvec3$<$ T $>$ const \&y, detail\+::tvec3$<$ T $>$ const \&ref)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Open\+G\+L Mathematics (glm.\+g-\/truc.\+net)
+
+Copyright (c) 2005 -\/ 2013 G-\/\+Truc Creation (www.\+g-\/truc.\+net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+H\+E S\+O\+F\+T\+W\+A\+R\+E I\+S P\+R\+O\+V\+I\+D\+E\+D \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+U\+T W\+A\+R\+R\+A\+N\+T\+Y O\+F A\+N\+Y K\+I\+N\+D, E\+X\+P\+R\+E\+S\+S O\+R I\+M\+P\+L\+I\+E\+D, I\+N\+C\+L\+U\+D\+I\+N\+G B\+U\+T N\+O\+T L\+I\+M\+I\+T\+E\+D T\+O T\+H\+E W\+A\+R\+R\+A\+N\+T\+I\+E\+S O\+F M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y, F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E A\+N\+D N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+N\+T. I\+N N\+O E\+V\+E\+N\+T S\+H\+A\+L\+L T\+H\+E A\+U\+T\+H\+O\+R\+S O\+R C\+O\+P\+Y\+R\+I\+G\+H\+T H\+O\+L\+D\+E\+R\+S B\+E L\+I\+A\+B\+L\+E F\+O\+R A\+N\+Y C\+L\+A\+I\+M, D\+A\+M\+A\+G\+E\+S O\+R O\+T\+H\+E\+R L\+I\+A\+B\+I\+L\+I\+T\+Y, W\+H\+E\+T\+H\+E\+R I\+N A\+N A\+C\+T\+I\+O\+N O\+F C\+O\+N\+T\+R\+A\+C\+T, T\+O\+R\+T O\+R O\+T\+H\+E\+R\+W\+I\+S\+E, A\+R\+I\+S\+I\+N\+G F\+R\+O\+M, O\+U\+T O\+F O\+R I\+N C\+O\+N\+N\+E\+C\+T\+I\+O\+N W\+I\+T\+H T\+H\+E S\+O\+F\+T\+W\+A\+R\+E O\+R T\+H\+E U\+S\+E O\+R O\+T\+H\+E\+R D\+E\+A\+L\+I\+N\+G\+S I\+N T\+H\+E S\+O\+F\+T\+W\+A\+R\+E.
+
+\hyperlink{group__gtx__vector__angle}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+vector\+\_\+angle}
+
+\begin{DoxyDate}{Date}
+2005-\/12-\/30 / 2011-\/06-\/07 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Christophe Riccio
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__core}{G\+L\+M Core} (dependence) 
+
+\hyperlink{group__gtx__quaternion}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+quaternion} (dependence) 
+
+gtx\+\_\+epsilon (dependence) 
+\end{DoxySeeAlso}

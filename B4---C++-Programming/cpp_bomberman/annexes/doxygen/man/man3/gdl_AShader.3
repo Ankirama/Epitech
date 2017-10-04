@@ -1,0 +1,123 @@
+.TH "gdl::AShader" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gdl::AShader \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBgdl::BasicShader\fP, and \fBgdl::BasicShader\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSHADER_TYPE\fP { \fBVERTEX_SHADER\fP, \fBFRAGMENT_SHADER\fP, \fBGEOMETRY_ID\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBbind\fP ()"
+.br
+.ti -1c
+.RI "GLuint \fBgetProgramId\fP () const "
+.br
+.ti -1c
+.RI "bool \fBload\fP (const std::string &path, GLenum type)"
+.br
+.ti -1c
+.RI "GLuint \fBgetUniformId\fP (const std::string &k) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, \fBglm::vec2\fP const &v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, \fBglm::vec3\fP const &v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, \fBglm::vec4\fP const &v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, \fBglm::mat2\fP const &v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, \fBglm::mat3\fP const &v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, \fBglm::mat4\fP const &v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, \fBglm::ivec2\fP const &v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, \fBglm::ivec3\fP const &v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, \fBglm::ivec4\fP const &v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, \fBglm::uvec2\fP const &v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, \fBglm::uvec3\fP const &v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, \fBglm::uvec4\fP const &v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, float v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, unsigned \fBint\fP v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, \fBint\fP v) const "
+.br
+.ti -1c
+.RI "bool \fBsetUniform\fP (const std::string &k, double v) const "
+.br
+.ti -1c
+.RI "virtual bool \fBbuild\fP ()=0"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fB_build\fP ()"
+.br
+.ti -1c
+.RI "bool \fB_compileShader\fP (GLuint shaderId, std::string const &file) const "
+.br
+.ti -1c
+.RI "bool \fB_linkProgram\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fB_bindAttribLocation\fP (GLuint location, std::string const &attribName)"
+.br
+.ti -1c
+.RI "bool \fB_bindTextureUnit\fP (GLuint texUnit, std::string const &samplerName)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "GLuint \fB_programId\fP"
+.br
+.ti -1c
+.RI "GLuint \fB_vertexId\fP"
+.br
+.ti -1c
+.RI "GLuint \fB_fragmentId\fP"
+.br
+.ti -1c
+.RI "GLuint \fB_geoId\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

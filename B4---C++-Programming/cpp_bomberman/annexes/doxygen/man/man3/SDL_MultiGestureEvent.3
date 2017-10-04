@@ -1,0 +1,55 @@
+.TH "SDL_MultiGestureEvent" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_MultiGestureEvent \- Multiple Finger Gesture Event (event\&.mgesture\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "SDL_TouchID \fBtouchId\fP"
+.br
+.ti -1c
+.RI "float \fBdTheta\fP"
+.br
+.ti -1c
+.RI "float \fBdDist\fP"
+.br
+.ti -1c
+.RI "float \fBx\fP"
+.br
+.ti -1c
+.RI "float \fBy\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBnumFingers\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBpadding\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Multiple Finger Gesture Event (event\&.mgesture\&.*) 
+.SH "Member Data Documentation"
+.PP 
+.SS "SDL_TouchID SDL_MultiGestureEvent::touchId"
+The touch device index 
+.SS "\fBUint32\fP SDL_MultiGestureEvent::type"
+::SDL_MULTIGESTURE 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

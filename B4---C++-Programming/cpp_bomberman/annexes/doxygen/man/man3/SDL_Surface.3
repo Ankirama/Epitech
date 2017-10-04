@@ -1,0 +1,91 @@
+.TH "SDL_Surface" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_Surface \- A collection of pixels used in software blitting\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_surface\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBflags\fP"
+.br
+.ti -1c
+.RI "\fBSDL_PixelFormat\fP * \fBformat\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBw\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBh\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBpitch\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBpixels\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBuserdata\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBlocked\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBlock_data\fP"
+.br
+.ti -1c
+.RI "\fBSDL_Rect\fP \fBclip_rect\fP"
+.br
+.ti -1c
+.RI "struct SDL_BlitMap * \fBmap\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBrefcount\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A collection of pixels used in software blitting\&. 
+
+
+.PP
+\fBNote:\fP
+.RS 4
+This structure should be treated as read-only, except for \fCpixels\fP, which, if not NULL, contains the raw pixel data for the surface\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBSDL_Rect\fP SDL_Surface::clip_rect"
+clipping information Read-only 
+.SS "\fBUint32\fP SDL_Surface::flags"
+Read-only 
+.SS "\fBSDL_PixelFormat\fP* SDL_Surface::format"
+Read-only 
+.SS "\fBint\fP SDL_Surface::h"
+Read-only 
+.SS "\fBvoid\fP* SDL_Surface::lock_data"
+Read-only 
+.SS "\fBint\fP SDL_Surface::locked"
+information needed for surfaces requiring locks Read-only 
+.SS "struct SDL_BlitMap* SDL_Surface::map"
+info for fast blit mapping to other surfaces Private 
+.SS "\fBint\fP SDL_Surface::pitch"
+Read-only 
+.SS "\fBvoid\fP* SDL_Surface::pixels"
+Read-write 
+.SS "\fBint\fP SDL_Surface::refcount"
+Reference count -- used when freeing surface Read-mostly 
+.SS "\fBvoid\fP* SDL_Surface::userdata"
+Application data associated with the surface Read-write 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

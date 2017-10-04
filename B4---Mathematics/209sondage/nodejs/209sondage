@@ -1,0 +1,55 @@
+#!/usr/bin/env node
+
+var myArgs = process.argv.slice(2);
+
+function usage() {
+  console.log("Usage : ./209sondage population echantillon sondage");
+  process.exit(1);
+}
+
+function check_arg(P, E, S) {
+  if (P < E) {
+    console.log("Error : population inferior to echantillon !");
+    usage();
+  } else if (P <= 1 || E <= 1) {
+    console.log("Error : population and echantillon must be > 1 !");
+    usage();
+  } else if (S < 0) {
+    console.log("Error : sondage must be > 0 !");
+    usage();
+  }
+}
+
+function calc_var(P, E, S) {
+  var p = S / 100.0
+  var tmp = p * (1 - p)
+  return (tmp / E * (P - E) / (P - 1.0));
+}
+
+function print_result(P, E, S, variance, amp_95, amp_99) {
+  console.log("taille de la population :\t ", P.toFixed(0));
+  console.log("taille de l'echantillon :\t ", E.toFixed(0));
+  console.log("resultat du sondage :\t \t ", S.toFixed(2));
+  console.log("variance estimee :\t \t ", variance.toFixed(6));
+  console.log("intervalle de confiance a 95% : [", (S - amp_95).toFixed(2), "% ; ", (S + amp_95).toFixed(2), "%]");
+  console.log("intervalle de confiance a 99% : [", (S - amp_99).toFixed(2), "% ; ", (S + amp_99).toFixed(2), "%]");
+}
+
+function run_calc(P, E, S) {
+  var variance = calc_var(P, E, S);
+  var amp_95 = 1.96 * Math.sqrt(variance) * 100
+  var amp_99 = 2.58 * Math.sqrt(variance) * 100
+  print_result(P, E, S, variance, amp_95, amp_99);
+}
+
+function main(argv) {
+  if (process.argv.length != 5)
+    console.log("Usage : ./209sondage population echantillon sondage");
+  var P = parseFloat(argv[0]);
+  var E = parseFloat(argv[1]);
+  var S = parseFloat(argv[2]);
+  check_arg(P, E, S);
+  run_calc(P, E, S);
+}
+
+main(myArgs);

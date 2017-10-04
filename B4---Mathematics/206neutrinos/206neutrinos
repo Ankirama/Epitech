@@ -1,0 +1,71 @@
+#!/usr/bin/python
+
+import sys
+from math import *
+
+def usage():
+    print("Usage: [nombre mesures relevees] [moyenne arithmetique] [moyenne harmonique] [ecart-type]")
+    sys.exit()
+
+def ecarttype(argc, value):
+    argc[3] = sqrt(pow(argc[4], 2.0) - pow(argc[1], 2))
+
+def moyenarith(argc, value):
+    argc[1] = (argc[1] * argc[0] + value) / (argc[0] + 1.0)
+
+def quadra(argc, value):
+    argc[4] = sqrt((pow(argc[4], 2.0) * argc[0]+ pow(value, 2.0)) / (argc[0] + 1.0))
+
+def harmo(argc, value):
+    argc[2] = ((argc[0] + 1.0) * value * argc[2]) / (argc[0] * value + argc[2])
+
+
+def printrslt(argc):
+    print"\tantal malinder [nombre mesure]: {:.0f}".format(argc[0])
+    print"\tstandardafvilgelse [ecart-type]: {:.2f}".format(argc[3])
+    print"\taritmetisk gennemsnit [moyenne arithmetique]: {:.2f}".format(argc[1])
+    print"\tkvadratik gennemsnit [moyenne quadratique]: {:.2f}".format(argc[4])
+    print"\tharmonisk gennemsnit [moyenne harmonique]: {:.2f}".format(argc[2])
+
+
+def calcul(argc, value):
+    moyenarith(argc, value)
+    quadra(argc, value)
+    harmo(argc, value)
+    ecarttype(argc, value)
+    argc[0] = argc[0] + 1.0
+    printrslt(argc)
+
+def getIn(argv):
+    info = raw_input("indtast din vaerdi : ")
+    #Rajout moyenne quadratique
+    argv.append(sqrt(pow(argv[3], 2) + pow(argv[1], 2)))
+    # 0 -> nbr mesure / 1 -> moyenne arithmetique / 2 -> moyenne harmonique / 3 -> ecart type / 4 -> moyenne quadratique
+    while (info != "ende"):
+        try:
+            value = (float(info))
+            if (value <= 0):
+                raise ValueError("Negative Number")
+            calcul(argv, value)
+        except (ValueError):
+            print("error: [{}] must be positive and it must be a number or ende to end the program".format(info))
+        info = raw_input("indtast din vaerdi : ")
+
+def main():
+    values = []
+    i = 1
+    if (len(sys.argv) != 5):
+        usage()
+    try:
+        while i <= 4:
+            values.append((float(sys.argv[i])))
+            if (values[i - 1] < 0):
+                raise ValueError("Negative number")
+            i = i + 1
+    except (ValueError):
+        print("error: [{}] must be positif and it must be a number!".format(sys.argv[i]))
+        usage()
+    getIn(values)
+
+if __name__ == "__main__":
+    main()

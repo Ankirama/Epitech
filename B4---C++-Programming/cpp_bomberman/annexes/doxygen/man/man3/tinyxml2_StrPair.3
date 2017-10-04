@@ -1,0 +1,83 @@
+.TH "tinyxml2::StrPair" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tinyxml2::StrPair \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBNEEDS_ENTITY_PROCESSING\fP = 0x01, \fBNEEDS_NEWLINE_NORMALIZATION\fP = 0x02, \fBNEEDS_WHITESPACE_COLLAPSING\fP = 0x04, \fBTEXT_ELEMENT\fP = NEEDS_ENTITY_PROCESSING | NEEDS_NEWLINE_NORMALIZATION, \fBTEXT_ELEMENT_LEAVE_ENTITIES\fP = NEEDS_NEWLINE_NORMALIZATION, \fBATTRIBUTE_NAME\fP = 0, \fBATTRIBUTE_VALUE\fP = NEEDS_ENTITY_PROCESSING | NEEDS_NEWLINE_NORMALIZATION, \fBATTRIBUTE_VALUE_LEAVE_ENTITIES\fP = NEEDS_NEWLINE_NORMALIZATION, \fBCOMMENT\fP = NEEDS_NEWLINE_NORMALIZATION }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBSet\fP (char *start, char *end, int flags)"
+.br
+.ti -1c
+.RI "const char * \fBGetStr\fP ()"
+.br
+.ti -1c
+.RI "bool \fBEmpty\fP () const "
+.br
+.ti -1c
+.RI "void \fBSetInternedStr\fP (const char *str)"
+.br
+.ti -1c
+.RI "void \fBSetStr\fP (const char *str, int flags=0)"
+.br
+.ti -1c
+.RI "char * \fBParseText\fP (char *in, const char *endTag, int strFlags)"
+.br
+.ti -1c
+.RI "char * \fBParseName\fP (char *in)"
+.br
+.ti -1c
+.RI "void \fBTransferTo\fP (\fBStrPair\fP *other)"
+.br
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBNEEDS_FLUSH\fP = 0x100, \fBNEEDS_DELETE\fP = 0x200 }"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBReset\fP ()"
+.br
+.ti -1c
+.RI "void \fBCollapseWhitespace\fP ()"
+.br
+.ti -1c
+.RI "\fBStrPair\fP (const \fBStrPair\fP &other)"
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (\fBStrPair\fP &other)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fB_flags\fP"
+.br
+.ti -1c
+.RI "char * \fB_start\fP"
+.br
+.ti -1c
+.RI "char * \fB_end\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

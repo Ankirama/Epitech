@@ -1,0 +1,219 @@
+\hypertarget{classgdl_1_1_input}{\section{gdl\-:\-:Input Class Reference}
+\label{classgdl_1_1_input}\index{gdl\-::\-Input@{gdl\-::\-Input}}
+}
+
+
+Handle the user inputs.  
+
+
+
+
+{\ttfamily \#include $<$Input.\-hh$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classgdl_1_1_input_a2cbd704d4c1069ac1fd7c4fb91d30b09}{void \hyperlink{classgdl_1_1_input_a2cbd704d4c1069ac1fd7c4fb91d30b09}{clear\-Inputs} ()}\label{classgdl_1_1_input_a2cbd704d4c1069ac1fd7c4fb91d30b09}
+
+\begin{DoxyCompactList}\small\item\em Clear the input list. /!\textbackslash{} Do not call this function. \end{DoxyCompactList}\item 
+void \hyperlink{classgdl_1_1_input_a7a175a63e780f1aa0fdebba68c0e8850}{add\-Input} (int input)
+\begin{DoxyCompactList}\small\item\em Add an input. /!\textbackslash{} Do not call this function. \end{DoxyCompactList}\item 
+void \hyperlink{classgdl_1_1_input_aa3380058a91f20b4889371ea07fd2bb4}{add\-Key\-Input} (int input)
+\begin{DoxyCompactList}\small\item\em Add a key input. /!\textbackslash{} Do not call this function. \end{DoxyCompactList}\item 
+void \hyperlink{classgdl_1_1_input_a531d2a805f5fdd33a0ce70ad74d0b3f8}{remove\-Key\-Input} (int input)
+\begin{DoxyCompactList}\small\item\em Remove a key input from the list. /!\textbackslash{} Do not call this function. \end{DoxyCompactList}\item 
+void \hyperlink{classgdl_1_1_input_aa6be10489840280271415ec1311ce5af}{set\-Mouse\-Position} (glm\-::ivec2 const \&pos, glm\-::ivec2 const \&rel)
+\begin{DoxyCompactList}\small\item\em Set the current mouse position. /!\textbackslash{} Do not call this function. \end{DoxyCompactList}\item 
+void \hyperlink{classgdl_1_1_input_a4864b681a18a087443024160861587fb}{set\-Mouse\-Wheel} (glm\-::ivec2 const \&delta)
+\begin{DoxyCompactList}\small\item\em Set the current mouse wheel delta. /!\textbackslash{} Do not call this function. \end{DoxyCompactList}\item 
+glm\-::ivec2 const \& \hyperlink{classgdl_1_1_input_afa2d25f94d2223a056be6fb5bcda935b}{get\-Mouse\-Position} ()
+\begin{DoxyCompactList}\small\item\em Get the mouse position in pixels. \end{DoxyCompactList}\item 
+glm\-::ivec2 const \& \hyperlink{classgdl_1_1_input_acf028a2fe8c45c19f6cf4145aeacc400}{get\-Mouse\-Delta} ()
+\begin{DoxyCompactList}\small\item\em Get the mouse movement since the last update. \end{DoxyCompactList}\item 
+glm\-::ivec2 const \& \hyperlink{classgdl_1_1_input_aaf79c0499e88cfabe234eb894a8122f2}{get\-Mouse\-Wheel} ()
+\begin{DoxyCompactList}\small\item\em Get the mouse wheel movement since the last update. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_input_a7d26a492aaf056166fe64ec00a927b7a}{get\-Input} (int input, bool handled=false)
+\begin{DoxyCompactList}\small\item\em Check if an input is currently happening. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_input_a8edd2ea49ebf6c8a833a65cf80133c4c}{get\-Key} (int input, bool handled=false)
+\begin{DoxyCompactList}\small\item\em Check if an input is currently happening. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handle the user inputs. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classgdl_1_1_input_a7a175a63e780f1aa0fdebba68c0e8850}{\index{gdl\-::\-Input@{gdl\-::\-Input}!add\-Input@{add\-Input}}
+\index{add\-Input@{add\-Input}!gdl::Input@{gdl\-::\-Input}}
+\subsubsection[{add\-Input}]{\setlength{\rightskip}{0pt plus 5cm}void gdl\-::\-Input\-::add\-Input (
+\begin{DoxyParamCaption}
+\item[{int}]{input}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_input_a7a175a63e780f1aa0fdebba68c0e8850}
+
+
+Add an input. /!\textbackslash{} Do not call this function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classgdl_1_1_input_aa3380058a91f20b4889371ea07fd2bb4}{\index{gdl\-::\-Input@{gdl\-::\-Input}!add\-Key\-Input@{add\-Key\-Input}}
+\index{add\-Key\-Input@{add\-Key\-Input}!gdl::Input@{gdl\-::\-Input}}
+\subsubsection[{add\-Key\-Input}]{\setlength{\rightskip}{0pt plus 5cm}void gdl\-::\-Input\-::add\-Key\-Input (
+\begin{DoxyParamCaption}
+\item[{int}]{input}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_input_aa3380058a91f20b4889371ea07fd2bb4}
+
+
+Add a key input. /!\textbackslash{} Do not call this function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The key to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classgdl_1_1_input_a7d26a492aaf056166fe64ec00a927b7a}{\index{gdl\-::\-Input@{gdl\-::\-Input}!get\-Input@{get\-Input}}
+\index{get\-Input@{get\-Input}!gdl::Input@{gdl\-::\-Input}}
+\subsubsection[{get\-Input}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-Input\-::get\-Input (
+\begin{DoxyParamCaption}
+\item[{int}]{input, }
+\item[{bool}]{handled = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_input_a7d26a492aaf056166fe64ec00a927b7a}
+
+
+Check if an input is currently happening. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input to check (For an \hyperlink{classgdl_1_1_sdl_context}{Sdl\-Context}, it will be S\-D\-L\-\_\-\-Q\-U\-I\-T, ...). \\
+\hline
+{\em handled} & If true, remove the input from the list and this function will not return true for this input anymore until the next update. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the input passed as parameter has been detected. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_input_a8edd2ea49ebf6c8a833a65cf80133c4c}{\index{gdl\-::\-Input@{gdl\-::\-Input}!get\-Key@{get\-Key}}
+\index{get\-Key@{get\-Key}!gdl::Input@{gdl\-::\-Input}}
+\subsubsection[{get\-Key}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-Input\-::get\-Key (
+\begin{DoxyParamCaption}
+\item[{int}]{input, }
+\item[{bool}]{handled = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_input_a8edd2ea49ebf6c8a833a65cf80133c4c}
+
+
+Check if an input is currently happening. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The key input to check (For an \hyperlink{classgdl_1_1_sdl_context}{Sdl\-Context}, it will be S\-D\-L\-K\-\_\-\-U\-P, S\-D\-L\-K\-\_\-a, ...). \\
+\hline
+{\em handled} & If true, remove the input from the list and this function will not return true for this input anymore until the next update. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the input passed as parameter has been detected. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_input_acf028a2fe8c45c19f6cf4145aeacc400}{\index{gdl\-::\-Input@{gdl\-::\-Input}!get\-Mouse\-Delta@{get\-Mouse\-Delta}}
+\index{get\-Mouse\-Delta@{get\-Mouse\-Delta}!gdl::Input@{gdl\-::\-Input}}
+\subsubsection[{get\-Mouse\-Delta}]{\setlength{\rightskip}{0pt plus 5cm}glm\-::ivec2 const \& gdl\-::\-Input\-::get\-Mouse\-Delta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_input_acf028a2fe8c45c19f6cf4145aeacc400}
+
+
+Get the mouse movement since the last update. 
+
+\begin{DoxyReturn}{Returns}
+The mouse delta in pixels. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_input_afa2d25f94d2223a056be6fb5bcda935b}{\index{gdl\-::\-Input@{gdl\-::\-Input}!get\-Mouse\-Position@{get\-Mouse\-Position}}
+\index{get\-Mouse\-Position@{get\-Mouse\-Position}!gdl::Input@{gdl\-::\-Input}}
+\subsubsection[{get\-Mouse\-Position}]{\setlength{\rightskip}{0pt plus 5cm}glm\-::ivec2 const \& gdl\-::\-Input\-::get\-Mouse\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_input_afa2d25f94d2223a056be6fb5bcda935b}
+
+
+Get the mouse position in pixels. 
+
+\begin{DoxyReturn}{Returns}
+The mouse position. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_input_aaf79c0499e88cfabe234eb894a8122f2}{\index{gdl\-::\-Input@{gdl\-::\-Input}!get\-Mouse\-Wheel@{get\-Mouse\-Wheel}}
+\index{get\-Mouse\-Wheel@{get\-Mouse\-Wheel}!gdl::Input@{gdl\-::\-Input}}
+\subsubsection[{get\-Mouse\-Wheel}]{\setlength{\rightskip}{0pt plus 5cm}glm\-::ivec2 const \& gdl\-::\-Input\-::get\-Mouse\-Wheel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_input_aaf79c0499e88cfabe234eb894a8122f2}
+
+
+Get the mouse wheel movement since the last update. 
+
+\begin{DoxyReturn}{Returns}
+The mouse wheel delta in pixels. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_input_a531d2a805f5fdd33a0ce70ad74d0b3f8}{\index{gdl\-::\-Input@{gdl\-::\-Input}!remove\-Key\-Input@{remove\-Key\-Input}}
+\index{remove\-Key\-Input@{remove\-Key\-Input}!gdl::Input@{gdl\-::\-Input}}
+\subsubsection[{remove\-Key\-Input}]{\setlength{\rightskip}{0pt plus 5cm}void gdl\-::\-Input\-::remove\-Key\-Input (
+\begin{DoxyParamCaption}
+\item[{int}]{input}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_input_a531d2a805f5fdd33a0ce70ad74d0b3f8}
+
+
+Remove a key input from the list. /!\textbackslash{} Do not call this function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The key input to remove \\
+\hline
+\end{DoxyParams}
+\hypertarget{classgdl_1_1_input_aa6be10489840280271415ec1311ce5af}{\index{gdl\-::\-Input@{gdl\-::\-Input}!set\-Mouse\-Position@{set\-Mouse\-Position}}
+\index{set\-Mouse\-Position@{set\-Mouse\-Position}!gdl::Input@{gdl\-::\-Input}}
+\subsubsection[{set\-Mouse\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void gdl\-::\-Input\-::set\-Mouse\-Position (
+\begin{DoxyParamCaption}
+\item[{glm\-::ivec2 const \&}]{pos, }
+\item[{glm\-::ivec2 const \&}]{rel}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_input_aa6be10489840280271415ec1311ce5af}
+
+
+Set the current mouse position. /!\textbackslash{} Do not call this function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The current mouse position. \\
+\hline
+{\em rel} & The offset since the last mouse position. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classgdl_1_1_input_a4864b681a18a087443024160861587fb}{\index{gdl\-::\-Input@{gdl\-::\-Input}!set\-Mouse\-Wheel@{set\-Mouse\-Wheel}}
+\index{set\-Mouse\-Wheel@{set\-Mouse\-Wheel}!gdl::Input@{gdl\-::\-Input}}
+\subsubsection[{set\-Mouse\-Wheel}]{\setlength{\rightskip}{0pt plus 5cm}void gdl\-::\-Input\-::set\-Mouse\-Wheel (
+\begin{DoxyParamCaption}
+\item[{glm\-::ivec2 const \&}]{delta}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_input_a4864b681a18a087443024160861587fb}
+
+
+Set the current mouse wheel delta. /!\textbackslash{} Do not call this function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & The current mouse wheel delta. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+includes/Input.\-hh\item 
+sources/Input.\-cpp\end{DoxyCompactItemize}

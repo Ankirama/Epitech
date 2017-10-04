@@ -1,0 +1,190 @@
+.TH "gtx_bit" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtx_bit \- GLM_GTX_bit
+.PP
+Allow to perform bit operations on integer values\&.  
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename genIType > genIType \fBglm::mask\fP (genIType const &count)"
+.br
+.ti -1c
+.RI "template<typename genIUType , typename sizeType > GLM_DEPRECATED genIUType \fBglm::extractField\fP (genIUType const &v, sizeType const &first, sizeType const &count)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_DEPRECATED \fBint\fP \fBglm::lowestBit\fP (genType const &value)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_DEPRECATED \fBint\fP \fBglm::highestBit\fP (genType const &value)"
+.br
+.ti -1c
+.RI "template<typename genType > genType \fBglm::highestBitValue\fP (genType const &value)"
+.br
+.ti -1c
+.RI "template<typename genType > bool \fBglm::isPowerOfTwo\fP (genType const &value)"
+.br
+.ti -1c
+.RI "template<typename genType > genType \fBglm::powerOfTwoAbove\fP (genType const &value)"
+.br
+.ti -1c
+.RI "template<typename genType > genType \fBglm::powerOfTwoBelow\fP (genType const &value)"
+.br
+.ti -1c
+.RI "template<typename genType > genType \fBglm::powerOfTwoNearest\fP (genType const &value)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_DEPRECATED genType \fBglm::bitRevert\fP (genType const &value)"
+.br
+.ti -1c
+.RI "template<typename genType > genType \fBglm::bitRotateRight\fP (genType const &In, std::size_t Shift)"
+.br
+.ti -1c
+.RI "template<typename genType > genType \fBglm::bitRotateLeft\fP (genType const &In, std::size_t Shift)"
+.br
+.ti -1c
+.RI "template<typename genIUType > genIUType \fBglm::fillBitfieldWithOne\fP (genIUType const &Value, \fBint\fP const &FromBit, \fBint\fP const &ToBit)"
+.br
+.ti -1c
+.RI "template<typename genIUType > genIUType \fBglm::fillBitfieldWithZero\fP (genIUType const &Value, \fBint\fP const &FromBit, \fBint\fP const &ToBit)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Allow to perform bit operations on integer values\&. 
+
+<\fBglm/gtx/bit\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename genType > GLM_DEPRECATED genType glm::bitRevert (genType const & value)"
+Revert all bits of any integer based type\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_bit\fP 
+.RE
+.PP
+
+.SS "template<typename genType > genType glm::bitRotateLeft (genType const & In, std::size_t Shift)"
+Rotate all bits to the left\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_bit\fP 
+.RE
+.PP
+
+.SS "template<typename genType > genType glm::bitRotateRight (genType const & In, std::size_t Shift)"
+Rotate all bits to the right\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_bit\fP 
+.RE
+.PP
+
+.SS "template<typename genIUType , typename sizeType > GLM_DEPRECATED genIUType glm::extractField (genIUType const & v, sizeType const & first, sizeType const & count)"
+Component wise extraction of bit fields\&. genType and genIType could be a scalar or a vector\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_bit\fP 
+.RE
+.PP
+
+.SS "template<typename genIUType > genIUType glm::fillBitfieldWithOne (genIUType const & Value, \fBint\fP const & FromBit, \fBint\fP const & ToBit)"
+Set to 1 a range of bits\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_bit\fP 
+.RE
+.PP
+
+.SS "template<typename genIUType > genIUType glm::fillBitfieldWithZero (genIUType const & Value, \fBint\fP const & FromBit, \fBint\fP const & ToBit)"
+Set to 0 a range of bits\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_bit\fP 
+.RE
+.PP
+
+.SS "template<typename genType > GLM_DEPRECATED \fBint\fP glm::highestBit (genType const & value)"
+Find the highest bit set to 1 in a integer variable\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_bit\fP 
+.RE
+.PP
+
+.SS "template<typename genType > genType glm::highestBitValue (genType const & value)"
+Find the highest bit set to 1 in a integer variable and return its value\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_bit\fP 
+.RE
+.PP
+
+.SS "template<typename genType > bool glm::isPowerOfTwo (genType const & value)"
+Return true if the value is a power of two number\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_bit\fP 
+.RE
+.PP
+
+.SS "template<typename genType > GLM_DEPRECATED \fBint\fP glm::lowestBit (genType const & value)"
+Find the lowest bit set to 1 in a integer variable\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_bit\fP 
+.RE
+.PP
+
+.SS "template<typename genIType > genIType glm::mask (genIType const & count)"
+Build a mask of 'count' bits 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_bit\fP 
+.RE
+.PP
+
+.SS "template<typename genType > genType glm::powerOfTwoAbove (genType const & value)"
+Return the power of two number which value is just higher the input value\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_bit\fP 
+.RE
+.PP
+
+.SS "template<typename genType > genType glm::powerOfTwoBelow (genType const & value)"
+Return the power of two number which value is just lower the input value\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_bit\fP 
+.RE
+.PP
+
+.SS "template<typename genType > genType glm::powerOfTwoNearest (genType const & value)"
+Return the power of two number which value is the closet to the input value\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_bit\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

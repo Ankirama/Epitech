@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.jweb.servlet</OriginalElement>
+  <nodes>
+    <node x="2203.203308416391" y="942.0">com.jweb.servlet.controller.admin.DeleteProduct</node>
+    <node x="343.75562015503965" y="66.0">com.jweb.servlet.model.beans.PaymentBean</node>
+    <node x="1734.8226882613512" y="88.0">com.jweb.servlet.model.beans.OpinionBean</node>
+    <node x="470.0" y="1060.0">com.jweb.servlet.controller.Contact</node>
+    <node x="3731.453308416391" y="931.0">com.jweb.servlet.controller.account.Account</node>
+    <node x="5285.00562015504" y="942.0">com.jweb.servlet.controller.News</node>
+    <node x="2262.890808416391" y="44.0">com.jweb.servlet.model.beans.ProductBean</node>
+    <node x="4877.64080841639" y="942.0">com.jweb.servlet.controller.account.DeleteAccount</node>
+    <node x="5159.00562015504" y="942.0">com.jweb.servlet.controller.admin.DeleteNews</node>
+    <node x="596.0" y="1222.0">com.jweb.servlet.controller.Images</node>
+    <node x="3207.453308416391" y="931.0">com.jweb.servlet.utils.HelperMenu</node>
+    <node x="0.0" y="1060.0">com.jweb.servlet.utils.SendEmail</node>
+    <node x="2300.953308416391" y="505.0">com.jweb.servlet.model.ModelProduct</node>
+    <node x="1166.7033084163909" y="593.0">com.jweb.servlet.model.ModelAddress</node>
+    <node x="2671.453308416391" y="942.0">com.jweb.servlet.controller.admin.UpdateProduct</node>
+    <node x="4714.45330841639" y="942.0">com.jweb.servlet.controller.admin.EnableAccount</node>
+    <node x="3914.89411683278" y="593.0">com.jweb.servlet.model.ModelNewsletter</node>
+    <node x="2086.703308416391" y="942.0">com.jweb.servlet.controller.Product</node>
+    <node x="4687.1393410852725" y="44.0">com.jweb.servlet.model.beans.UserBean</node>
+    <node x="2815.453308416391" y="942.0">com.jweb.servlet.controller.admin.DeleteCategory</node>
+    <node x="4137.45330841639" y="898.0">com.jweb.servlet.controller.Login</node>
+    <node x="2530.453308416391" y="942.0">com.jweb.servlet.controller.admin.EnableProduct</node>
+    <node x="2965.453308416391" y="571.0">com.jweb.servlet.model.ModelCategory</node>
+    <node x="5371.00562015504" y="942.0">com.jweb.servlet.controller.admin.News</node>
+    <node x="0.0" y="1222.0">com.jweb.servlet.controller.admin.Admin</node>
+    <node x="3491.453308416391" y="942.0">com.jweb.servlet.controller.admin.AddCategory</node>
+    <node x="3624.453308416391" y="942.0">com.jweb.servlet.controller.Products</node>
+    <node x="0.0" y="931.0">com.jweb.servlet.controller.account.Payments</node>
+    <node x="2939.188967331119" y="198.0">com.jweb.servlet.model.AModele</node>
+    <node x="925.2556201550397" y="942.0">com.jweb.servlet.controller.Cart</node>
+    <node x="2963.453308416391" y="942.0">com.jweb.servlet.controller.admin.AddProduct</node>
+    <node x="3107.015808416391" y="132.0">com.jweb.servlet.model.beans.CategoryBean</node>
+    <node x="1783.8226882613512" y="582.0">com.jweb.servlet.model.ModelOpinion</node>
+    <node x="5159.1393410852725" y="66.0">com.jweb.servlet.model.beans.NewsBean</node>
+    <node x="424.50562015503965" y="593.0">com.jweb.servlet.model.ModelPayment</node>
+    <node x="2343.203308416391" y="942.0">com.jweb.servlet.controller.admin.Products</node>
+    <node x="5015.3893410852725" y="582.0">com.jweb.servlet.model.ModelNews</node>
+    <node x="1461.3806201550397" y="931.0">com.jweb.servlet.controller.account.Addresses</node>
+    <node x="5021.64080841639" y="942.0">com.jweb.servlet.controller.admin.Accounts</node>
+    <node x="406.0" y="931.0">com.jweb.servlet.controller.account.NewPayment</node>
+    <node x="1899.3806201550397" y="942.0">com.jweb.servlet.controller.AddOpinion</node>
+    <node x="1763.0" y="1060.0">com.jweb.servlet.model.DBManager</node>
+    <node x="787.5056201550397" y="527.0">com.jweb.servlet.utils.ProductCart</node>
+    <node x="1027.2033084163909" y="0.0">com.jweb.servlet.model.beans.AddressBean</node>
+    <node x="4603.45330841639" y="942.0">com.jweb.servlet.controller.admin.AddNews</node>
+    <node x="1055.3806201550397" y="931.0">com.jweb.servlet.controller.account.NewAddress</node>
+    <node x="4508.3893410852725" y="549.0">com.jweb.servlet.model.ModelUser</node>
+    <node x="315.0" y="1222.0">com.jweb.servlet.controller.AddToCart</node>
+    <node x="1332.0" y="1060.0">com.jweb.servlet.controller.error.Error404</node>
+    <node x="901.0" y="1060.0">com.jweb.servlet.controller.Logout</node>
+    <node x="3088.453308416391" y="942.0">com.jweb.servlet.controller.admin.Categories</node>
+    <node x="459.0" y="1222.0">com.jweb.servlet.controller.Checkout</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.jweb.servlet.controller.admin.Accounts" target="com.jweb.servlet.model.ModelUser">
+      <point x="0.0" y="-14.5" />
+      <point x="5067.14080841639" y="868.0" />
+      <point x="4946.689341085272" y="868.0" />
+      <point x="194.80000000000018" y="102.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.account.Account" target="com.jweb.servlet.model.ModelNewsletter">
+      <point x="-96.50000000000045" y="-25.5" />
+      <point x="3827.9533084163904" y="858.0" />
+      <point x="4026.64411683278" y="858.0" />
+      <point x="-37.25" y="58.5" />
+    </edge>
+    <edge source="com.jweb.servlet.utils.HelperMenu" target="com.jweb.servlet.model.ModelCategory">
+      <point x="0.0" y="-25.5" />
+      <point x="3339.453308416391" y="878.0" />
+      <point x="3187.239022702105" y="878.0" />
+      <point x="49.28571428571422" y="80.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelOpinion" target="com.jweb.servlet.model.AModele">
+      <point x="110.5" y="-69.5" />
+      <point x="2115.3226882613512" y="475.0" />
+      <point x="2966.063967331119" y="475.0" />
+      <point x="-16.125" y="14.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.Cart" target="com.jweb.servlet.model.ModelAddress">
+      <point x="7.25" y="-14.5" />
+      <point x="961.5056201550397" y="838.0" />
+      <point x="1224.7033084163909" y="838.0" />
+      <point x="-116.0" y="58.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.account.Addresses" target="com.jweb.servlet.model.ModelAddress">
+      <point x="0.0" y="-25.5" />
+      <point x="1654.3806201550397" y="838.0" />
+      <point x="1456.7033084163909" y="838.0" />
+      <point x="116.0" y="58.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.Products" target="com.jweb.servlet.model.ModelCategory">
+      <point x="0.0" y="-14.5" />
+      <point x="3667.953308416391" y="818.0" />
+      <point x="3285.810451273534" y="818.0" />
+      <point x="147.85714285714312" y="80.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.Categories" target="com.jweb.servlet.model.ModelCategory">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="80.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.Cart" target="com.jweb.servlet.model.ModelProduct">
+      <point x="21.75" y="-14.5" />
+      <point x="976.0056201550397" y="848.0" />
+      <point x="2333.175530638613" y="848.0" />
+      <point x="-257.7777777777778" y="146.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.AddCategory" target="com.jweb.servlet.model.ModelCategory">
+      <point x="0.0" y="-14.5" />
+      <point x="3547.953308416391" y="868.0" />
+      <point x="3236.52473698782" y="868.0" />
+      <point x="98.5714285714289" y="80.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.Products" target="com.jweb.servlet.model.ModelNewsletter">
+      <point x="29.0" y="-14.5" />
+      <point x="3696.953308416391" y="848.0" />
+      <point x="3952.14411683278" y="848.0" />
+      <point x="-111.75" y="58.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.Products" target="com.jweb.servlet.model.ModelProduct">
+      <point x="0.0" y="-14.5" />
+      <point x="2386.703308416391" y="878.0" />
+      <point x="2526.5088639719465" y="878.0" />
+      <point x="-64.44444444444434" y="146.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.account.Payments" target="com.jweb.servlet.model.ModelPayment">
+      <point x="0.0" y="-25.5" />
+      <point x="193.0" y="878.0" />
+      <point x="481.67228682170617" y="878.0" />
+      <point x="-114.33333333333331" y="58.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.DeleteCategory" target="com.jweb.servlet.model.ModelProduct">
+      <point x="-32.0" y="-14.5" />
+      <point x="2847.453308416391" y="848.0" />
+      <point x="2719.84219730528" y="848.0" />
+      <point x="128.88888888888914" y="146.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelUser" target="com.jweb.servlet.model.AModele">
+      <point x="-121.75" y="-102.5" />
+      <point x="4630.1393410852725" y="465.0" />
+      <point x="3009.063967331119" y="465.0" />
+      <point x="26.875" y="14.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelNewsletter" target="com.jweb.servlet.model.AModele">
+      <point x="0.0" y="-58.5" />
+      <point x="4063.89411683278" y="475.0" />
+      <point x="2998.313967331119" y="475.0" />
+      <point x="16.125" y="14.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.Cart" target="com.jweb.servlet.utils.ProductCart">
+      <point x="-7.25" y="-14.5" />
+      <point x="0.0" y="124.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelPayment" target="com.jweb.servlet.model.AModele">
+      <point x="85.75" y="-58.5" />
+      <point x="681.7556201550397" y="455.0" />
+      <point x="2944.563967331119" y="455.0" />
+      <point x="-37.625" y="14.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelNews" target="com.jweb.servlet.model.beans.NewsBean">
+      <point x="107.75" y="-69.5" />
+      <point x="0.0" y="146.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.AddProduct" target="com.jweb.servlet.model.ModelProduct">
+      <point x="-26.25" y="-14.5" />
+      <point x="2989.703308416391" y="838.0" />
+      <point x="2784.2866417497244" y="838.0" />
+      <point x="193.33333333333348" y="146.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.AddProduct" target="com.jweb.servlet.model.ModelCategory">
+      <point x="26.25" y="-14.5" />
+      <point x="3042.203308416391" y="878.0" />
+      <point x="3088.6675941306767" y="878.0" />
+      <point x="-49.28571428571422" y="80.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelPayment" target="com.jweb.servlet.model.beans.PaymentBean">
+      <point x="-85.75" y="-58.5" />
+      <point x="0.0" y="146.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.Login" target="com.jweb.servlet.model.ModelUser">
+      <point x="111.5" y="-58.5" />
+      <point x="4471.95330841639" y="878.0" />
+      <point x="4654.489341085273" y="878.0" />
+      <point x="-97.39999999999964" y="102.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelProduct" target="com.jweb.servlet.model.AModele">
+      <point x="145.0" y="-146.5" />
+      <point x="2735.953308416391" y="485.0" />
+      <point x="2976.813967331119" y="485.0" />
+      <point x="-5.375" y="14.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.account.NewAddress" target="com.jweb.servlet.model.ModelAddress">
+      <point x="0.0" y="-25.5" />
+      <point x="1248.3806201550397" y="838.0" />
+      <point x="1340.7033084163909" y="838.0" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelUser" target="com.jweb.servlet.model.beans.UserBean">
+      <point x="121.75" y="-102.5" />
+      <point x="0.0" y="168.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.News" target="com.jweb.servlet.model.ModelNews">
+      <point x="0.0" y="-14.5" />
+      <point x="5404.00562015504" y="878.0" />
+      <point x="5392.5143410852725" y="878.0" />
+      <point x="161.625" y="69.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.account.NewPayment" target="com.jweb.servlet.model.ModelPayment">
+      <point x="0.0" y="-25.5" />
+      <point x="599.0" y="878.0" />
+      <point x="596.0056201550397" y="878.0" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.AddNews" target="com.jweb.servlet.model.ModelNews">
+      <point x="22.75" y="-14.5" />
+      <point x="4671.70330841639" y="878.0" />
+      <point x="5069.2643410852725" y="878.0" />
+      <point x="-161.625" y="69.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.account.DeleteAccount" target="com.jweb.servlet.model.ModelUser">
+      <point x="0.0" y="-14.5" />
+      <point x="4939.64080841639" y="868.0" />
+      <point x="4849.289341085272" y="868.0" />
+      <point x="97.39999999999964" y="102.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelCategory" target="com.jweb.servlet.model.AModele">
+      <point x="-86.25" y="-80.5" />
+      <point x="3051.703308416391" y="485.0" />
+      <point x="2987.563967331119" y="485.0" />
+      <point x="5.375" y="14.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelOpinion" target="com.jweb.servlet.model.beans.OpinionBean">
+      <point x="-110.5" y="-69.5" />
+      <point x="0.0" y="124.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.AddOpinion" target="com.jweb.servlet.model.ModelOpinion">
+      <point x="0.0" y="-14.5" />
+      <point x="1952.8806201550397" y="838.0" />
+      <point x="1894.3226882613512" y="838.0" />
+      <point x="-110.5" y="69.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelCategory" target="com.jweb.servlet.model.beans.CategoryBean">
+      <point x="86.25" y="-80.5" />
+      <point x="3224.203308416391" y="485.0" />
+      <point x="3226.515808416391" y="485.0" />
+      <point x="0.0" y="80.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelAddress" target="com.jweb.servlet.model.AModele">
+      <point x="87.0" y="-58.5" />
+      <point x="1427.7033084163909" y="465.0" />
+      <point x="2955.313967331119" y="465.0" />
+      <point x="-26.875" y="14.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.EnableProduct" target="com.jweb.servlet.model.ModelProduct">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="146.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.AddNews" target="com.jweb.servlet.model.ModelNewsletter">
+      <point x="-22.75" y="-14.5" />
+      <point x="4626.20330841639" y="848.0" />
+      <point x="4175.64411683278" y="848.0" />
+      <point x="111.75" y="58.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.EnableAccount" target="com.jweb.servlet.model.ModelUser">
+      <point x="0.0" y="-14.5" />
+      <point x="4776.95330841639" y="868.0" />
+      <point x="4751.8893410852725" y="868.0" />
+      <point x="0.0" y="102.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.DeleteProduct" target="com.jweb.servlet.model.ModelProduct">
+      <point x="0.0" y="-14.5" />
+      <point x="2263.203308416391" y="868.0" />
+      <point x="2462.064419527502" y="868.0" />
+      <point x="-128.8888888888887" y="146.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.DeleteCategory" target="com.jweb.servlet.model.ModelCategory">
+      <point x="32.0" y="-14.5" />
+      <point x="2911.453308416391" y="868.0" />
+      <point x="3039.3818798449624" y="868.0" />
+      <point x="-98.57142857142844" y="80.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelAddress" target="com.jweb.servlet.model.beans.AddressBean">
+      <point x="-87.0" y="-58.5" />
+      <point x="0.0" y="212.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.UpdateProduct" target="com.jweb.servlet.model.ModelCategory">
+      <point x="31.0" y="-14.5" />
+      <point x="2764.453308416391" y="858.0" />
+      <point x="2990.096165559248" y="858.0" />
+      <point x="-147.85714285714266" y="80.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.Product" target="com.jweb.servlet.model.ModelOpinion">
+      <point x="-20.0" y="-14.5" />
+      <point x="2106.703308416391" y="838.0" />
+      <point x="2115.3226882613512" y="838.0" />
+      <point x="110.5" y="69.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.account.Account" target="com.jweb.servlet.model.ModelUser">
+      <point x="96.49999999999955" y="-25.5" />
+      <point x="4020.9533084163904" y="868.0" />
+      <point x="4557.089341085271" y="868.0" />
+      <point x="-194.80000000000018" y="102.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.Products" target="com.jweb.servlet.model.ModelProduct">
+      <point x="-29.0" y="-14.5" />
+      <point x="3638.953308416391" y="828.0" />
+      <point x="2848.7310861941687" y="828.0" />
+      <point x="257.7777777777778" y="146.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.Cart" target="com.jweb.servlet.model.ModelPayment">
+      <point x="-21.75" y="-14.5" />
+      <point x="932.5056201550397" y="878.0" />
+      <point x="710.3389534883727" y="878.0" />
+      <point x="114.33333333333326" y="58.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.Product" target="com.jweb.servlet.model.ModelProduct">
+      <point x="20.0" y="-14.5" />
+      <point x="2146.703308416391" y="858.0" />
+      <point x="2397.6199750830574" y="858.0" />
+      <point x="-193.33333333333348" y="146.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelNews" target="com.jweb.servlet.model.AModele">
+      <point x="-107.75" y="-69.5" />
+      <point x="5123.1393410852725" y="455.0" />
+      <point x="3019.813967331119" y="455.0" />
+      <point x="37.625" y="14.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.Login" target="com.jweb.servlet.model.ModelNewsletter">
+      <point x="-111.5" y="-58.5" />
+      <point x="4248.95330841639" y="858.0" />
+      <point x="4101.14411683278" y="858.0" />
+      <point x="37.25" y="58.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.UpdateProduct" target="com.jweb.servlet.model.ModelProduct">
+      <point x="-31.0" y="-14.5" />
+      <point x="2702.453308416391" y="878.0" />
+      <point x="2655.397752860835" y="878.0" />
+      <point x="64.44444444444434" y="146.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.admin.DeleteNews" target="com.jweb.servlet.model.ModelNews">
+      <point x="0.0" y="-14.5" />
+      <point x="5212.00562015504" y="878.0" />
+      <point x="5177.0143410852725" y="878.0" />
+      <point x="-53.875" y="69.5" />
+    </edge>
+    <edge source="com.jweb.servlet.controller.News" target="com.jweb.servlet.model.ModelNews">
+      <point x="0.0" y="-14.5" />
+      <point x="5318.00562015504" y="878.0" />
+      <point x="5284.7643410852725" y="878.0" />
+      <point x="53.875" y="69.5" />
+    </edge>
+    <edge source="com.jweb.servlet.model.ModelProduct" target="com.jweb.servlet.model.beans.ProductBean">
+      <point x="-145.0" y="-146.5" />
+      <point x="2445.953308416391" y="445.0" />
+      <point x="2462.390808416391" y="445.0" />
+      <point x="0.0" y="168.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.18938436540891856" x="2759.5" y="636.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

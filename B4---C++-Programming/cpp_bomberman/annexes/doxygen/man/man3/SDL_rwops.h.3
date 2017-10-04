@@ -1,0 +1,198 @@
+.TH "lib/gdl/includes/SDL_rwops.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_rwops.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_RWops\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_RWOPS_UNKNOWN\fP   0   /* Unknown stream type */"
+.br
+.ti -1c
+.RI "#define \fBSDL_RWOPS_WINFILE\fP   1   /* Win32 file */"
+.br
+.ti -1c
+.RI "#define \fBSDL_RWOPS_STDFILE\fP   2   /* Stdio file */"
+.br
+.ti -1c
+.RI "#define \fBSDL_RWOPS_JNIFILE\fP   3   /* Android asset */"
+.br
+.ti -1c
+.RI "#define \fBSDL_RWOPS_MEMORY\fP   4   /* Memory stream */"
+.br
+.ti -1c
+.RI "#define \fBSDL_RWOPS_MEMORY_RO\fP   5   /* Read-Only memory stream */"
+.br
+.ti -1c
+.RI "#define \fBRW_SEEK_SET\fP   0"
+.br
+.ti -1c
+.RI "#define \fBRW_SEEK_CUR\fP   1"
+.br
+.ti -1c
+.RI "#define \fBRW_SEEK_END\fP   2"
+.br
+.in -1c
+.PP
+.RI "\fBRead/write macros\fP"
+.br
+Macros to easily read and write from an \fBSDL_RWops\fP structure\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_RWsize\fP(ctx)   (ctx)->size(ctx)"
+.br
+.ti -1c
+.RI "#define \fBSDL_RWseek\fP(ctx,  offset,  whence)   (ctx)->seek(ctx, offset, whence)"
+.br
+.ti -1c
+.RI "#define \fBSDL_RWtell\fP(ctx)   (ctx)->seek(ctx, 0, \fBRW_SEEK_CUR\fP)"
+.br
+.ti -1c
+.RI "#define \fBSDL_RWread\fP(ctx,  ptr,  size,  n)   (ctx)->read(ctx, ptr, size, n)"
+.br
+.ti -1c
+.RI "#define \fBSDL_RWwrite\fP(ctx,  ptr,  size,  n)   (ctx)->write(ctx, ptr, size, n)"
+.br
+.ti -1c
+.RI "#define \fBSDL_RWclose\fP(ctx)   (ctx)->close(ctx)"
+.br
+.in -1c
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBSDL_RWops\fP \fBSDL_RWops\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBSDL_RWops\fP *SDLCALL \fBSDL_AllocRW\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_FreeRW\fP (\fBSDL_RWops\fP *area)"
+.br
+.in -1c
+.PP
+.RI "\fBRWFrom functions\fP"
+.br
+Functions to create \fBSDL_RWops\fP structures from various data streams\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBSDL_RWops\fP *SDLCALL \fBSDL_RWFromFile\fP (const char *file, const char *mode)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSDL_RWops\fP *SDLCALL \fBSDL_RWFromFP\fP (FILE *fp, SDL_bool autoclose)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSDL_RWops\fP *SDLCALL \fBSDL_RWFromMem\fP (\fBvoid\fP *mem, \fBint\fP size)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSDL_RWops\fP *SDLCALL \fBSDL_RWFromConstMem\fP (const \fBvoid\fP *mem, \fBint\fP size)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBRead endian functions\fP"
+.br
+Read an item of the specified endianness and return in native format\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBUint8\fP SDLCALL \fBSDL_ReadU8\fP (\fBSDL_RWops\fP *src)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBUint16\fP SDLCALL \fBSDL_ReadLE16\fP (\fBSDL_RWops\fP *src)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBUint16\fP SDLCALL \fBSDL_ReadBE16\fP (\fBSDL_RWops\fP *src)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBUint32\fP SDLCALL \fBSDL_ReadLE32\fP (\fBSDL_RWops\fP *src)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBUint32\fP SDLCALL \fBSDL_ReadBE32\fP (\fBSDL_RWops\fP *src)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBUint64\fP SDLCALL \fBSDL_ReadLE64\fP (\fBSDL_RWops\fP *src)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBUint64\fP SDLCALL \fBSDL_ReadBE64\fP (\fBSDL_RWops\fP *src)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBWrite endian functions\fP"
+.br
+Write an item of native format to the specified endianness\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "DECLSPEC size_t SDLCALL \fBSDL_WriteU8\fP (\fBSDL_RWops\fP *dst, \fBUint8\fP value)"
+.br
+.ti -1c
+.RI "DECLSPEC size_t SDLCALL \fBSDL_WriteLE16\fP (\fBSDL_RWops\fP *dst, \fBUint16\fP value)"
+.br
+.ti -1c
+.RI "DECLSPEC size_t SDLCALL \fBSDL_WriteBE16\fP (\fBSDL_RWops\fP *dst, \fBUint16\fP value)"
+.br
+.ti -1c
+.RI "DECLSPEC size_t SDLCALL \fBSDL_WriteLE32\fP (\fBSDL_RWops\fP *dst, \fBUint32\fP value)"
+.br
+.ti -1c
+.RI "DECLSPEC size_t SDLCALL \fBSDL_WriteBE32\fP (\fBSDL_RWops\fP *dst, \fBUint32\fP value)"
+.br
+.ti -1c
+.RI "DECLSPEC size_t SDLCALL \fBSDL_WriteLE64\fP (\fBSDL_RWops\fP *dst, \fBUint64\fP value)"
+.br
+.ti -1c
+.RI "DECLSPEC size_t SDLCALL \fBSDL_WriteBE64\fP (\fBSDL_RWops\fP *dst, \fBUint64\fP value)"
+.br
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+This file provides a general interface for SDL to read and write data streams\&. It can easily be extended to files, memory, etc\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define RW_SEEK_CUR   1"
+Seek relative to current read point 
+.SS "#define RW_SEEK_END   2"
+Seek relative to the end of data 
+.SS "#define RW_SEEK_SET   0"
+Seek from the beginning of data 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBSDL_RWops\fP  \fBSDL_RWops\fP"
+This is the read/write operation structure -- very basic\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

@@ -1,0 +1,72 @@
+.TH "gtx_rotate_vector" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtx_rotate_vector \- GLM_GTX_rotate_vector
+.PP
+Function to directly rotate a vector\&.  
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > detail::tvec2< T > \fBglm::rotate\fP (detail::tvec2< T > const &v, T const &angle)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tvec3< T > \fBglm::rotate\fP (detail::tvec3< T > const &v, T const &angle, detail::tvec3< T > const &normal)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tvec4< T > \fBglm::rotate\fP (detail::tvec4< T > const &v, T const &angle, detail::tvec3< T > const &normal)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tvec3< T > \fBglm::rotateX\fP (detail::tvec3< T > const &v, T const &angle)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tvec3< T > \fBglm::rotateY\fP (detail::tvec3< T > const &v, T const &angle)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tvec3< T > \fBglm::rotateZ\fP (detail::tvec3< T > const &v, T const &angle)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tvec4< T > \fBglm::rotateX\fP (detail::tvec4< T > const &v, T const &angle)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tvec4< T > \fBglm::rotateY\fP (detail::tvec4< T > const &v, T const &angle)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tvec4< T > \fBglm::rotateZ\fP (detail::tvec4< T > const &v, T const &angle)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::orientation\fP (detail::tvec3< T > const &Normal, detail::tvec3< T > const &Up)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Function to directly rotate a vector\&. 
+
+<\fBglm/gtx/rotate_vector\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T > detail::tmat4x4<T> glm::orientation (\fBdetail::tvec3\fP< T > const & Normal, \fBdetail::tvec3\fP< T > const & Up)"
+Build a rotation matrix from a normal and a up vector\&. From GLM_GTX_rotate_vector extension\&. 
+.SS "template<typename T > detail::tvec2<T> glm::rotate (\fBdetail::tvec2\fP< T > const & v, T const & angle)"
+Rotate a two dimensional vector\&. From GLM_GTX_rotate_vector extension\&. 
+.SS "template<typename T > detail::tvec3<T> glm::rotate (\fBdetail::tvec3\fP< T > const & v, T const & angle, \fBdetail::tvec3\fP< T > const & normal)"
+Rotate a three dimensional vector around an axis\&. From GLM_GTX_rotate_vector extension\&. 
+.SS "template<typename T > detail::tvec4<T> glm::rotate (\fBdetail::tvec4\fP< T > const & v, T const & angle, \fBdetail::tvec3\fP< T > const & normal)"
+Rotate a four dimensional vector around an axis\&. From GLM_GTX_rotate_vector extension\&. 
+.SS "template<typename T > detail::tvec3<T> glm::rotateX (\fBdetail::tvec3\fP< T > const & v, T const & angle)"
+Rotate a three dimensional vector around the X axis\&. From GLM_GTX_rotate_vector extension\&. 
+.SS "template<typename T > detail::tvec4<T> glm::rotateX (\fBdetail::tvec4\fP< T > const & v, T const & angle)"
+Rotate a four dimentionnals vector around the X axis\&. From GLM_GTX_rotate_vector extension\&. 
+.SS "template<typename T > detail::tvec3<T> glm::rotateY (\fBdetail::tvec3\fP< T > const & v, T const & angle)"
+Rotate a three dimensional vector around the Y axis\&. From GLM_GTX_rotate_vector extension\&. 
+.SS "template<typename T > detail::tvec4<T> glm::rotateY (\fBdetail::tvec4\fP< T > const & v, T const & angle)"
+Rotate a four dimensional vector around the X axis\&. From GLM_GTX_rotate_vector extension\&. 
+.SS "template<typename T > detail::tvec3<T> glm::rotateZ (\fBdetail::tvec3\fP< T > const & v, T const & angle)"
+Rotate a three dimensional vector around the Z axis\&. From GLM_GTX_rotate_vector extension\&. 
+.SS "template<typename T > detail::tvec4<T> glm::rotateZ (\fBdetail::tvec4\fP< T > const & v, T const & angle)"
+Rotate a four dimensional vector around the X axis\&. From GLM_GTX_rotate_vector extension\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

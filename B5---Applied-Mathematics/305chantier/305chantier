@@ -1,0 +1,20 @@
+#!/usr/bin/env python2.7
+# -*- coding: latin-1 -*-
+__author__ = 'ankirama'
+
+import Parser, sys, Grant
+
+def main():
+    parser = Parser.Parser()
+    if len(sys.argv) != 2:
+        parser.error_message(msg='usage: ./305chantier file')
+    parser.parseFile(sys.argv[1])
+    project = parser.getProject()
+    grant = Grant.Grant(project)
+    grant.setTimes()
+    grant._maxBeginTime()
+    grant.displayGrantt()
+
+if __name__ == '__main__':
+    main()
+    sys.exit(0)

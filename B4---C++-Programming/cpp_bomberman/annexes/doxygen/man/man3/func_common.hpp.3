@@ -1,0 +1,148 @@
+.TH "lib/gdl/includes/glm/core/func_common.hpp" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/glm/core/func_common.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '_fixes\&.hpp'\fP
+.br
+\fC#include 'func_common\&.inl'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGLM_CORE_func_common\fP   GLM_VERSION"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::abs\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::sign\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::floor\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::trunc\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::round\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::roundEven\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::ceil\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::fract\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::mod\fP (genType const &x, genType const &y)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::mod\fP (genType const &x, typename genType::value_type const &y)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::modf\fP (genType const &x, genType &i)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::min\fP (genType const &x, genType const &y)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::min\fP (genType const &x, typename genType::value_type const &y)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::max\fP (genType const &x, genType const &y)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::max\fP (genType const &x, typename genType::value_type const &y)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::clamp\fP (genType const &x, genType const &minVal, genType const &maxVal)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::clamp\fP (genType const &x, typename genType::value_type const &minVal, typename genType::value_type const &maxVal)"
+.br
+.ti -1c
+.RI "template<typename genTypeT , typename genTypeU > GLM_FUNC_DECL genTypeT \fBglm::mix\fP (genTypeT const &x, genTypeT const &y, genTypeU const &a)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::step\fP (genType const &edge, genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::step\fP (typename genType::value_type const &edge, genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::smoothstep\fP (genType const &edge0, genType const &edge1, genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::smoothstep\fP (typename genType::value_type const &edge0, typename genType::value_type const &edge1, genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType::bool_type \fBglm::isnan\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType::bool_type \fBglm::isinf\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType , typename genIType > GLM_FUNC_DECL genIType \fBglm::floatBitsToInt\fP (genType const &value)"
+.br
+.ti -1c
+.RI "template<typename genType , typename genUType > GLM_FUNC_DECL genUType \fBglm::floatBitsToUint\fP (genType const &value)"
+.br
+.ti -1c
+.RI "template<typename genType , typename genIType > GLM_FUNC_DECL genType \fBglm::intBitsToFloat\fP (genIType const &value)"
+.br
+.ti -1c
+.RI "template<typename genType , typename genUType > GLM_FUNC_DECL genType \fBglm::uintBitsToFloat\fP (genUType const &value)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_DECL genType \fBglm::fma\fP (genType const &a, genType const &b, genType const &c)"
+.br
+.ti -1c
+.RI "template<typename genType , typename genIType > GLM_FUNC_DECL genType \fBglm::frexp\fP (genType const &x, genIType &exp)"
+.br
+.ti -1c
+.RI "template<typename genType , typename genIType > GLM_FUNC_DECL genType \fBglm::ldexp\fP (genType const &x, genIType const &exp)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+OpenGL Mathematics (glm\&.g-truc\&.net)
+.PP
+Copyright (c) 2005 - 2013 G-Truc Creation (www\&.g-truc\&.net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software\&.
+.PP
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\&. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE\&.
+.PP
+\fBGLM Core\fP
+.PP
+\fBDate:\fP
+.RS 4
+2008-03-08 / 2010-01-26 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christophe Riccio
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL 4\&.20\&.8 specification, section 8\&.3 Common Functions\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

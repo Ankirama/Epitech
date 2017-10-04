@@ -1,0 +1,1 @@
+static files in WEB-INF because they are privates

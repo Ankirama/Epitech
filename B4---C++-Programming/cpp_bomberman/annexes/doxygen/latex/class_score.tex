@@ -1,0 +1,227 @@
+\hypertarget{class_score}{}\section{Score Class Reference}
+\label{class_score}\index{Score@{Score}}
+
+
+Save/\+Load score.  
+
+
+
+
+{\ttfamily \#include $<$Score.\+hh$>$}
+
+
+
+Collaboration diagram for Score\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{class_score__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_score_a54ba906f1e5c010712ef2ba7035ea896}{add\+Score} (std\+::string const \&player, unsigned int score)
+\begin{DoxyCompactList}\small\item\em add a player\textquotesingle{}s score \end{DoxyCompactList}\item 
+void \hyperlink{class_score_a6c79b77f95e119a02dcdcbc89280bf6d}{show\+Score} () const 
+\begin{DoxyCompactList}\small\item\em show the map score \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_score_a5cb798e843bd541076b1e28f339273e9}{get\+Player\+Score} (std\+::string const \&player)
+\begin{DoxyCompactList}\small\item\em get the player\textquotesingle{}s score \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ std\+::string, unsigned int $>$ $>$ \hyperlink{class_score_a1413934ad0d6ab0cceb364b093f8f038}{get\+Top\+N} (int n)
+\begin{DoxyCompactList}\small\item\em get top N players \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_score}{Score} \& \hyperlink{class_score_a4e5e9dc104bc5d584c6bb956f01298d1}{get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Used to return the current instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_score}{Score} \& \hyperlink{class_score_a2eceab448e618bfe8483cbaacdcc2d57}{operator=} (const \hyperlink{class_score}{Score} \&)
+\begin{DoxyCompactList}\small\item\em private = operator to unable it \end{DoxyCompactList}\item 
+\hyperlink{class_score_a22637cafca7ae4a1aba0559bba58c74c}{Score} (const \hyperlink{class_score}{Score} \&)
+\begin{DoxyCompactList}\small\item\em private copy constructor \end{DoxyCompactList}\item 
+\hyperlink{class_score_a039c99843551e5e4b512ecee99e46617}{Score} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_score}{Score}\textquotesingle{}s constructor private. \end{DoxyCompactList}\item 
+\hyperlink{class_score_a54ab36a6fdd88696f0176d9534a76883}{$\sim$\+Score} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_score}{Score}\textquotesingle{}s destructor private. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ofstream \hyperlink{class_score_a8e223eb909ffc9773a466d3e3adae2ad}{m\+\_\+w\+File}
+\item 
+std\+::ifstream \hyperlink{class_score_ad2f89d43a25f346c8a90951ca94cca38}{m\+\_\+r\+File}
+\item 
+std\+::map$<$ std\+::string const, unsigned int $>$ \hyperlink{class_score_a6eba3f6ec553d618869dcd0355d47934}{m\+\_\+score}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_score}{Score} \hyperlink{class_score_ab4a91380380653fa12041d598c6af413}{m\+\_\+instance}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Save/\+Load score. 
+
+Save or Load scores file (scores). It\textquotesingle{}s a singleton so there is an unique instance 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_score_a22637cafca7ae4a1aba0559bba58c74c}{}\index{Score@{Score}!Score@{Score}}
+\index{Score@{Score}!Score@{Score}}
+\subsubsection[{Score}]{\setlength{\rightskip}{0pt plus 5cm}Score\+::\+Score (
+\begin{DoxyParamCaption}
+\item[{const {\bf Score} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_score_a22637cafca7ae4a1aba0559bba58c74c}
+
+
+private copy constructor 
+
+Unused \hypertarget{class_score_a039c99843551e5e4b512ecee99e46617}{}\index{Score@{Score}!Score@{Score}}
+\index{Score@{Score}!Score@{Score}}
+\subsubsection[{Score}]{\setlength{\rightskip}{0pt plus 5cm}Score\+::\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_score_a039c99843551e5e4b512ecee99e46617}
+
+
+\hyperlink{class_score}{Score}\textquotesingle{}s constructor private. 
+
+Used to create a static instance (singleton) The file \textquotesingle{}scores\textquotesingle{} will be opened and data will be extracted (in tokens). \hypertarget{class_score_a54ab36a6fdd88696f0176d9534a76883}{}\index{Score@{Score}!````~Score@{$\sim$\+Score}}
+\index{````~Score@{$\sim$\+Score}!Score@{Score}}
+\subsubsection[{$\sim$\+Score}]{\setlength{\rightskip}{0pt plus 5cm}Score\+::$\sim$\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_score_a54ab36a6fdd88696f0176d9534a76883}
+
+
+\hyperlink{class_score}{Score}\textquotesingle{}s destructor private. 
+
+It will close our streams and we willl rewrite into our scores\textquotesingle{} log 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_score_a54ba906f1e5c010712ef2ba7035ea896}{}\index{Score@{Score}!add\+Score@{add\+Score}}
+\index{add\+Score@{add\+Score}!Score@{Score}}
+\subsubsection[{add\+Score}]{\setlength{\rightskip}{0pt plus 5cm}void Score\+::add\+Score (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{player, }
+\item[{unsigned int}]{score}
+\end{DoxyParamCaption}
+)}\label{class_score_a54ba906f1e5c010712ef2ba7035ea896}
+
+
+add a player\textquotesingle{}s score 
+
+If the player is new then create a new value in our map, else add the score
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & player\textquotesingle{}s name \\
+\hline
+{\em score} & score to add \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_score_a4e5e9dc104bc5d584c6bb956f01298d1}{}\index{Score@{Score}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Score@{Score}}
+\subsubsection[{get\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Score}\& Score\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_score_a4e5e9dc104bc5d584c6bb956f01298d1}
+
+
+Used to return the current instance. 
+
+Our class is a singleton so we need a function to use it
+
+\begin{DoxyReturn}{Returns}
+the current class\textquotesingle{}s instance 
+\end{DoxyReturn}
+\hypertarget{class_score_a5cb798e843bd541076b1e28f339273e9}{}\index{Score@{Score}!get\+Player\+Score@{get\+Player\+Score}}
+\index{get\+Player\+Score@{get\+Player\+Score}!Score@{Score}}
+\subsubsection[{get\+Player\+Score}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Score\+::get\+Player\+Score (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{player}
+\end{DoxyParamCaption}
+)}\label{class_score_a5cb798e843bd541076b1e28f339273e9}
+
+
+get the player\textquotesingle{}s score 
+
+If player doens\textquotesingle{}t exist it will return 0
+
+player\textquotesingle{}s name \begin{DoxyReturn}{Returns}
+player\textquotesingle{}s score 
+\end{DoxyReturn}
+\hypertarget{class_score_a1413934ad0d6ab0cceb364b093f8f038}{}\index{Score@{Score}!get\+Top\+N@{get\+Top\+N}}
+\index{get\+Top\+N@{get\+Top\+N}!Score@{Score}}
+\subsubsection[{get\+Top\+N}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::pair$<$std\+::string, unsigned int $>$ $>$ Score\+::get\+Top\+N (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{class_score_a1413934ad0d6ab0cceb364b093f8f038}
+
+
+get top N players 
+
+Get a top N players with N $<$= map\textquotesingle{}s size
+
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000002}{Bug}]a map sort are entries so we have to use a vector instead 
+
+unable to create a pair with a const so we\textquotesingle{}ll use std\+::string alone\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & number players to return \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new vector with n players 
+\end{DoxyReturn}
+\hypertarget{class_score_a2eceab448e618bfe8483cbaacdcc2d57}{}\index{Score@{Score}!operator=@{operator=}}
+\index{operator=@{operator=}!Score@{Score}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Score}\& Score\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Score} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_score_a2eceab448e618bfe8483cbaacdcc2d57}
+
+
+private = operator to unable it 
+
+Unused and undefined \hypertarget{class_score_a6c79b77f95e119a02dcdcbc89280bf6d}{}\index{Score@{Score}!show\+Score@{show\+Score}}
+\index{show\+Score@{show\+Score}!Score@{Score}}
+\subsubsection[{show\+Score}]{\setlength{\rightskip}{0pt plus 5cm}void Score\+::show\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_score_a6c79b77f95e119a02dcdcbc89280bf6d}
+
+
+show the map score 
+
+It will display the score in stdout 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_score_ab4a91380380653fa12041d598c6af413}{}\index{Score@{Score}!m\+\_\+instance@{m\+\_\+instance}}
+\index{m\+\_\+instance@{m\+\_\+instance}!Score@{Score}}
+\subsubsection[{m\+\_\+instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Score} Score\+::m\+\_\+instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_score_ab4a91380380653fa12041d598c6af413}
+used in singleton \hypertarget{class_score_ad2f89d43a25f346c8a90951ca94cca38}{}\index{Score@{Score}!m\+\_\+r\+File@{m\+\_\+r\+File}}
+\index{m\+\_\+r\+File@{m\+\_\+r\+File}!Score@{Score}}
+\subsubsection[{m\+\_\+r\+File}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ifstream Score\+::m\+\_\+r\+File\hspace{0.3cm}{\ttfamily [private]}}\label{class_score_ad2f89d43a25f346c8a90951ca94cca38}
+stream to read from our file \hypertarget{class_score_a6eba3f6ec553d618869dcd0355d47934}{}\index{Score@{Score}!m\+\_\+score@{m\+\_\+score}}
+\index{m\+\_\+score@{m\+\_\+score}!Score@{Score}}
+\subsubsection[{m\+\_\+score}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string const, unsigned int$>$ Score\+::m\+\_\+score\hspace{0.3cm}{\ttfamily [private]}}\label{class_score_a6eba3f6ec553d618869dcd0355d47934}
+map to store user and score \hypertarget{class_score_a8e223eb909ffc9773a466d3e3adae2ad}{}\index{Score@{Score}!m\+\_\+w\+File@{m\+\_\+w\+File}}
+\index{m\+\_\+w\+File@{m\+\_\+w\+File}!Score@{Score}}
+\subsubsection[{m\+\_\+w\+File}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ofstream Score\+::m\+\_\+w\+File\hspace{0.3cm}{\ttfamily [private]}}\label{class_score_a8e223eb909ffc9773a466d3e3adae2ad}
+stream to write into our file 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_score_8hh}{Score.\+hh}\end{DoxyCompactItemize}

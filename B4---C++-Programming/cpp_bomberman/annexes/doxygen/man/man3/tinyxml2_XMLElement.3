@@ -1,0 +1,460 @@
+.TH "tinyxml2::XMLElement" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tinyxml2::XMLElement \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tinyxml2\&.h>\fP
+.PP
+Inherits \fBtinyxml2::XMLNode\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBOPEN\fP, \fBCLOSED\fP, \fBCLOSING\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBName\fP () const "
+.br
+.RI "\fIGet the name of an element (which is the \fBValue()\fP of the node\&.) \fP"
+.ti -1c
+.RI "void \fBSetName\fP (const char *str, bool staticMem=false)"
+.br
+.RI "\fISet the name of the element\&. \fP"
+.ti -1c
+.RI "virtual \fBXMLElement\fP * \fBToElement\fP ()"
+.br
+.RI "\fISafely cast to an Element, or null\&. \fP"
+.ti -1c
+.RI "virtual const \fBXMLElement\fP * \fBToElement\fP () const "
+.br
+.ti -1c
+.RI "virtual bool \fBAccept\fP (\fBXMLVisitor\fP *visitor) const "
+.br
+.ti -1c
+.RI "const char * \fBAttribute\fP (const char *name, const char *value=0) const "
+.br
+.ti -1c
+.RI "int \fBIntAttribute\fP (const char *name) const "
+.br
+.ti -1c
+.RI "unsigned \fBUnsignedAttribute\fP (const char *name) const "
+.br
+.RI "\fISee \fBIntAttribute()\fP \fP"
+.ti -1c
+.RI "bool \fBBoolAttribute\fP (const char *name) const "
+.br
+.RI "\fISee \fBIntAttribute()\fP \fP"
+.ti -1c
+.RI "double \fBDoubleAttribute\fP (const char *name) const "
+.br
+.RI "\fISee \fBIntAttribute()\fP \fP"
+.ti -1c
+.RI "float \fBFloatAttribute\fP (const char *name) const "
+.br
+.RI "\fISee \fBIntAttribute()\fP \fP"
+.ti -1c
+.RI "XMLError \fBQueryIntAttribute\fP (const char *name, int *value) const "
+.br
+.ti -1c
+.RI "XMLError \fBQueryUnsignedAttribute\fP (const char *name, unsigned int *value) const "
+.br
+.RI "\fISee \fBQueryIntAttribute()\fP \fP"
+.ti -1c
+.RI "XMLError \fBQueryBoolAttribute\fP (const char *name, bool *value) const "
+.br
+.RI "\fISee \fBQueryIntAttribute()\fP \fP"
+.ti -1c
+.RI "XMLError \fBQueryDoubleAttribute\fP (const char *name, double *value) const "
+.br
+.RI "\fISee \fBQueryIntAttribute()\fP \fP"
+.ti -1c
+.RI "XMLError \fBQueryFloatAttribute\fP (const char *name, float *value) const "
+.br
+.RI "\fISee \fBQueryIntAttribute()\fP \fP"
+.ti -1c
+.RI "int \fBQueryAttribute\fP (const char *name, int *value) const "
+.br
+.ti -1c
+.RI "int \fBQueryAttribute\fP (const char *name, unsigned int *value) const "
+.br
+.ti -1c
+.RI "int \fBQueryAttribute\fP (const char *name, bool *value) const "
+.br
+.ti -1c
+.RI "int \fBQueryAttribute\fP (const char *name, double *value) const "
+.br
+.ti -1c
+.RI "int \fBQueryAttribute\fP (const char *name, float *value) const "
+.br
+.ti -1c
+.RI "void \fBSetAttribute\fP (const char *name, const char *value)"
+.br
+.RI "\fISets the named attribute to value\&. \fP"
+.ti -1c
+.RI "void \fBSetAttribute\fP (const char *name, int value)"
+.br
+.RI "\fISets the named attribute to value\&. \fP"
+.ti -1c
+.RI "void \fBSetAttribute\fP (const char *name, unsigned value)"
+.br
+.RI "\fISets the named attribute to value\&. \fP"
+.ti -1c
+.RI "void \fBSetAttribute\fP (const char *name, bool value)"
+.br
+.RI "\fISets the named attribute to value\&. \fP"
+.ti -1c
+.RI "void \fBSetAttribute\fP (const char *name, double value)"
+.br
+.RI "\fISets the named attribute to value\&. \fP"
+.ti -1c
+.RI "void \fBSetAttribute\fP (const char *name, float value)"
+.br
+.RI "\fISets the named attribute to value\&. \fP"
+.ti -1c
+.RI "void \fBDeleteAttribute\fP (const char *name)"
+.br
+.ti -1c
+.RI "const \fBXMLAttribute\fP * \fBFirstAttribute\fP () const "
+.br
+.RI "\fIReturn the first attribute in the list\&. \fP"
+.ti -1c
+.RI "const \fBXMLAttribute\fP * \fBFindAttribute\fP (const char *name) const "
+.br
+.RI "\fIQuery a specific attribute in the list\&. \fP"
+.ti -1c
+.RI "const char * \fBGetText\fP () const "
+.br
+.ti -1c
+.RI "void \fBSetText\fP (const char *inText)"
+.br
+.ti -1c
+.RI "void \fBSetText\fP (int value)"
+.br
+.RI "\fIConvenience method for setting text inside and element\&. See \fBSetText()\fP for important limitations\&. \fP"
+.ti -1c
+.RI "void \fBSetText\fP (unsigned value)"
+.br
+.RI "\fIConvenience method for setting text inside and element\&. See \fBSetText()\fP for important limitations\&. \fP"
+.ti -1c
+.RI "void \fBSetText\fP (bool value)"
+.br
+.RI "\fIConvenience method for setting text inside and element\&. See \fBSetText()\fP for important limitations\&. \fP"
+.ti -1c
+.RI "void \fBSetText\fP (double value)"
+.br
+.RI "\fIConvenience method for setting text inside and element\&. See \fBSetText()\fP for important limitations\&. \fP"
+.ti -1c
+.RI "void \fBSetText\fP (float value)"
+.br
+.RI "\fIConvenience method for setting text inside and element\&. See \fBSetText()\fP for important limitations\&. \fP"
+.ti -1c
+.RI "XMLError \fBQueryIntText\fP (int *ival) const "
+.br
+.ti -1c
+.RI "XMLError \fBQueryUnsignedText\fP (unsigned *uval) const "
+.br
+.RI "\fISee \fBQueryIntText()\fP \fP"
+.ti -1c
+.RI "XMLError \fBQueryBoolText\fP (bool *bval) const "
+.br
+.RI "\fISee \fBQueryIntText()\fP \fP"
+.ti -1c
+.RI "XMLError \fBQueryDoubleText\fP (double *dval) const "
+.br
+.RI "\fISee \fBQueryIntText()\fP \fP"
+.ti -1c
+.RI "XMLError \fBQueryFloatText\fP (float *fval) const "
+.br
+.RI "\fISee \fBQueryIntText()\fP \fP"
+.ti -1c
+.RI "int \fBClosingType\fP () const "
+.br
+.ti -1c
+.RI "virtual \fBXMLNode\fP * \fBShallowClone\fP (\fBXMLDocument\fP *document) const "
+.br
+.ti -1c
+.RI "virtual bool \fBShallowEqual\fP (const \fBXMLNode\fP *compare) const "
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "char * \fBParseDeep\fP (char *p, \fBStrPair\fP *endTag)"
+.br
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBBUF_SIZE\fP = 200 }"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXMLElement\fP (\fBXMLDocument\fP *doc)"
+.br
+.ti -1c
+.RI "\fBXMLElement\fP (const \fBXMLElement\fP &)"
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (const \fBXMLElement\fP &)"
+.br
+.ti -1c
+.RI "\fBXMLAttribute\fP * \fBFindAttribute\fP (const char *name)"
+.br
+.ti -1c
+.RI "\fBXMLAttribute\fP * \fBFindOrCreateAttribute\fP (const char *name)"
+.br
+.ti -1c
+.RI "char * \fBParseAttributes\fP (char *p)"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBDeleteAttribute\fP (\fBXMLAttribute\fP *\fBattribute\fP)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fB_closingType\fP"
+.br
+.ti -1c
+.RI "\fBXMLAttribute\fP * \fB_rootAttribute\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBXMLBase\fP"
+.br
+.ti -1c
+.RI "class \fBXMLDocument\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The element is a container class\&. It has a value, the element name, and can contain other elements, text, comments, and unknowns\&. Elements also contain an arbitrary number of attributes\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual bool tinyxml2::XMLElement::Accept (\fBXMLVisitor\fP * visitor) const\fC [virtual]\fP"
+Accept a hierarchical visit of the nodes in the TinyXML-2 DOM\&. Every node in the XML tree will be conditionally visited and the host will be called back via the \fBXMLVisitor\fP interface\&.
+.PP
+This is essentially a SAX interface for TinyXML-2\&. (Note however it doesn't re-parse the XML for the callbacks, so the performance of TinyXML-2 is unchanged by using this interface versus any other\&.)
+.PP
+The interface has been based on ideas from:
+.PP
+.IP "\(bu" 2
+http://www.saxproject.org/
+.IP "\(bu" 2
+http://c2.com/cgi/wiki?HierarchicalVisitorPattern
+.PP
+.PP
+Which are both good references for 'visiting'\&.
+.PP
+An example of using \fBAccept()\fP: 
+.PP
+.nf
+XMLPrinter printer;
+tinyxmlDoc.Accept( &printer );
+const char* xmlcstr = printer.CStr();
+
+.fi
+.PP
+ 
+.PP
+Implements \fBtinyxml2::XMLNode\fP\&.
+.SS "const char* tinyxml2::XMLElement::Attribute (const char * name, const char * value = \fC0\fP) const"
+Given an attribute name, \fBAttribute()\fP returns the value for the attribute of that name, or null if none exists\&. For example:
+.PP
+.PP
+.nf
+const char* value = ele->Attribute( "foo" );
+.fi
+.PP
+.PP
+The 'value' parameter is normally null\&. However, if specified, the attribute will only be returned if the 'name' and 'value' match\&. This allow you to write code:
+.PP
+.PP
+.nf
+if ( ele->Attribute( "foo", "bar" ) ) callFooIsBar();
+.fi
+.PP
+.PP
+rather than: 
+.PP
+.nf
+if ( ele->Attribute( "foo" ) ) {
+    if ( strcmp( ele->Attribute( "foo" ), "bar" ) == 0 ) callFooIsBar();
+}
+
+.fi
+.PP
+ 
+.SS "void tinyxml2::XMLElement::DeleteAttribute (const char * name)"
+Delete an attribute\&. 
+.SS "const char* tinyxml2::XMLElement::GetText () const"
+Convenience function for easy access to the text inside an element\&. Although easy and concise, \fBGetText()\fP is limited compared to getting the \fBXMLText\fP child and accessing it directly\&.
+.PP
+If the first child of 'this' is a \fBXMLText\fP, the \fBGetText()\fP returns the character string of the Text node, else null is returned\&.
+.PP
+This is a convenient method for getting the text of simple contained text: 
+.PP
+.nf
+<foo>This is text</foo>
+    const char* str = fooElement->GetText();
+
+.fi
+.PP
+.PP
+'str' will be a pointer to 'This is text'\&.
+.PP
+Note that this function can be misleading\&. If the element foo was created from this XML: 
+.PP
+.nf
+    <foo><b>This is text</b></foo>
+
+.fi
+.PP
+.PP
+then the value of str would be null\&. The first child node isn't a text node, it is another element\&. From this XML: 
+.PP
+.nf
+    <foo>This is <b>text</b></foo>
+
+.fi
+.PP
+ \fBGetText()\fP will return 'This is '\&. 
+.SS "int tinyxml2::XMLElement::IntAttribute (const char * name) const\fC [inline]\fP"
+Given an attribute name, \fBIntAttribute()\fP returns the value of the attribute interpreted as an integer\&. 0 will be returned if there is an error\&. For a method with error checking, see \fBQueryIntAttribute()\fP 
+.SS "int tinyxml2::XMLElement::QueryAttribute (const char * name, int * value) const\fC [inline]\fP"
+Given an attribute name, \fBQueryAttribute()\fP returns XML_NO_ERROR, XML_WRONG_ATTRIBUTE_TYPE if the conversion can't be performed, or XML_NO_ATTRIBUTE if the attribute doesn't exist\&. It is overloaded for the primitive types, and is a generally more convenient replacement of \fBQueryIntAttribute()\fP and related functions\&.
+.PP
+If successful, the result of the conversion will be written to 'value'\&. If not successful, nothing will be written to 'value'\&. This allows you to provide default value:
+.PP
+.PP
+.nf
+int value = 10;
+QueryAttribute( "foo", &value );        // if "foo" isn't found, value will still be 10
+.fi
+.PP
+ 
+.SS "XMLError tinyxml2::XMLElement::QueryIntAttribute (const char * name, int * value) const\fC [inline]\fP"
+Given an attribute name, \fBQueryIntAttribute()\fP returns XML_NO_ERROR, XML_WRONG_ATTRIBUTE_TYPE if the conversion can't be performed, or XML_NO_ATTRIBUTE if the attribute doesn't exist\&. If successful, the result of the conversion will be written to 'value'\&. If not successful, nothing will be written to 'value'\&. This allows you to provide default value:
+.PP
+.PP
+.nf
+int value = 10;
+QueryIntAttribute( "foo", &value );     // if "foo" isn't found, value will still be 10
+.fi
+.PP
+ 
+.SS "XMLError tinyxml2::XMLElement::QueryIntText (int * ival) const"
+Convenience method to query the value of a child text node\&. This is probably best shown by example\&. Given you have a document is this form: 
+.PP
+.nf
+    <point>
+        <x>1</x>
+        <y>1.4</y>
+    </point>
+
+.fi
+.PP
+.PP
+The \fBQueryIntText()\fP and similar functions provide a safe and easier way to get to the 'value' of x and y\&.
+.PP
+.PP
+.nf
+    int x = 0;
+    float y = 0;    // types of x and y are contrived for example
+    const XMLElement* xElement = pointElement->FirstChildElement( "x" );
+    const XMLElement* yElement = pointElement->FirstChildElement( "y" );
+    xElement->QueryIntText( &x );
+    yElement->QueryFloatText( &y );
+.fi
+.PP
+.PP
+\fBReturns:\fP
+.RS 4
+XML_SUCCESS (0) on success, XML_CAN_NOT_CONVERT_TEXT if the text cannot be converted to the requested type, and XML_NO_TEXT_NODE if there is no child text to query\&. 
+.RE
+.PP
+
+.SS "void tinyxml2::XMLElement::SetText (const char * inText)"
+Convenience function for easy access to the text inside an element\&. Although easy and concise, \fBSetText()\fP is limited compared to creating an \fBXMLText\fP child and mutating it directly\&.
+.PP
+If the first child of 'this' is a \fBXMLText\fP, \fBSetText()\fP sets its value to the given string, otherwise it will create a first child that is an \fBXMLText\fP\&.
+.PP
+This is a convenient method for setting the text of simple contained text: 
+.PP
+.nf
+<foo>This is text</foo>
+    fooElement->SetText( "Hullaballoo!" );
+<foo>Hullaballoo!</foo>
+
+.fi
+.PP
+.PP
+Note that this function can be misleading\&. If the element foo was created from this XML: 
+.PP
+.nf
+    <foo><b>This is text</b></foo>
+
+.fi
+.PP
+.PP
+then it will not change 'This is text', but rather prefix it with a text element: 
+.PP
+.nf
+    <foo>Hullaballoo!<b>This is text</b></foo>
+
+.fi
+.PP
+.PP
+For this XML: 
+.PP
+.nf
+    <foo />
+
+.fi
+.PP
+ \fBSetText()\fP will generate 
+.PP
+.nf
+    <foo>Hullaballoo!</foo>
+
+.fi
+.PP
+ 
+.SS "virtual \fBXMLNode\fP* tinyxml2::XMLElement::ShallowClone (\fBXMLDocument\fP * document) const\fC [virtual]\fP"
+Make a copy of this node, but not its children\&. You may pass in a Document pointer that will be the owner of the new Node\&. If the 'document' is null, then the node returned will be allocated from the current Document\&. (this->\fBGetDocument()\fP)
+.PP
+Note: if called on a \fBXMLDocument\fP, this will return null\&. 
+.PP
+Implements \fBtinyxml2::XMLNode\fP\&.
+.SS "virtual bool tinyxml2::XMLElement::ShallowEqual (const \fBXMLNode\fP * compare) const\fC [virtual]\fP"
+Test if 2 nodes are the same, but don't test children\&. The 2 nodes do not need to be in the same Document\&.
+.PP
+Note: if called on a \fBXMLDocument\fP, this will return false\&. 
+.PP
+Implements \fBtinyxml2::XMLNode\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

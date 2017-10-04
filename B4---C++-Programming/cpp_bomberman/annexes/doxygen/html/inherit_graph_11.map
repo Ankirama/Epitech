@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_i_game_state.html" title="IGameState" alt="" coords="5,233,99,260"/>
+<area shape="rect" id="node2" href="$class_game_state.html" title="GameState" alt="" coords="148,5,237,32"/>
+<area shape="rect" id="node3" href="$class_intro_state.html" title="First state of the bomberman. " alt="" coords="153,56,233,83"/>
+<area shape="rect" id="node4" href="$class_load_state.html" title="LoadState" alt="" coords="151,107,234,133"/>
+<area shape="rect" id="node5" href="$class_menu_state.html" title="MenuState" alt="" coords="149,157,236,184"/>
+<area shape="rect" id="node6" href="$class_mult_state.html" title="MultState" alt="" coords="153,208,232,235"/>
+<area shape="rect" id="node7" href="$class_option_state.html" title="OptionState" alt="" coords="147,259,239,285"/>
+<area shape="rect" id="node8" href="$class_play_state.html" title="PlayState" alt="" coords="153,309,232,336"/>
+<area shape="rect" id="node9" href="$class_save_state.html" title="SaveState" alt="" coords="151,360,235,387"/>
+<area shape="rect" id="node10" href="$class_score_state.html" title="ScoreState" alt="" coords="149,411,237,437"/>
+<area shape="rect" id="node11" href="$class_solo_state.html" title="SoloState" alt="" coords="153,461,233,488"/>
+</map>

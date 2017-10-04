@@ -1,0 +1,51 @@
+.TH "SDL_Keysym" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_Keysym \- The SDL keysym structure, used in key events\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_keyboard\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSDL_Scancode\fP \fBscancode\fP"
+.br
+.ti -1c
+.RI "\fBSDL_Keycode\fP \fBsym\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBmod\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBunused\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The SDL keysym structure, used in key events\&. 
+
+
+.PP
+\fBNote:\fP
+.RS 4
+If you are looking for translated character input, see the \fBSDL_TEXTINPUT\fP event\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint16\fP SDL_Keysym::mod"
+current key modifiers 
+.SS "\fBSDL_Scancode\fP SDL_Keysym::scancode"
+SDL physical key code - see \fBSDL_Scancode\fP for details 
+.SS "\fBSDL_Keycode\fP SDL_Keysym::sym"
+SDL virtual key code - see \fBSDL_Keycode\fP for details 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

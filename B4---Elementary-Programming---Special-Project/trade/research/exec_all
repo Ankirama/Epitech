@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [[ $# -ne 4 ]]; then
+  echo "Usage: ./exec_all files_dir moulinette trade_prog money"
+  exit
+fi
+
+CMD=$(echo "test")
+
+#find $1 -name "*" -type f -exec echo {} \; -exec ./$2 -p $3 -f {} -m $4 \;
+find $1 -name "*" -type f -exec sh -c "echo {}; ./$2 -p $3 -f {} -m $4 | grep PROFIT" \;
+
+#LS=$(ls -1)
+#echo $LS

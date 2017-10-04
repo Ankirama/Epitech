@@ -1,0 +1,62 @@
+#!/usr/bin/python
+
+import sys
+from math import *
+
+def usage():
+    print("Usage : ./209sondage population echantillon sondage")
+    sys.exit()
+
+def check_arg(P, E, S):
+    if (P < E):
+        print("Error : population inferior to echantillon !")
+        sys.exit()
+    if (P <= 1 or E <= 1):
+        print("Error : population and echantillon must be > 1 !")
+        sys.exit()
+    if (S < 0):
+        print("Error : sondage must be > 0 !")
+        sys.exit()
+
+def calc_var(P, E, S):
+    p = S / 100.0
+    var = p * (1 - p)
+    return (var / E * (P - E) / (P - 1.0))
+
+def print_result(P, E, S, variance, amp_95, amp_99):
+    print("taille de la population :\t {}".format(P))
+    print("taille de l'echantillon :\t {}".format(E))
+    print("resultat du sondage :\t \t {}".format(S))
+    print("variance estimee :\t \t {:.6f}".format(variance))
+    print("intervalle de confiance a 95% : [{:.2f}% ; {:.2f}%]".format(S - amp_95, S + amp_95))
+    print("intervalle de confiance a 99% : [{:.2f}% ; {:.2f}%]".format(S - amp_99, S + amp_99))
+
+def run_calc(P, E, S):
+    variance = calc_var(P, E, S)
+    amp_95 = 1.96 * sqrt(variance) * 100
+    amp_99 = 2.58 * sqrt(variance) * 100
+    print_result(P, E, S, variance, amp_95, amp_99)
+
+def main():
+    if (len(sys.argv) != 4):
+        usage()
+    try:
+        P = int(sys.argv[1])
+    except (ValueError):
+        print("Error : {} is not an int".format(sys.argv[1]))
+        sys.exit()
+    try:
+        E = int(sys.argv[2])
+    except (ValueError):
+        print("Error : {} is not an int".format(sys.argv[2]))
+        sys.exit()
+    try:
+        S = float(sys.argv[3])
+    except (ValueError):
+        print("Error : {} is not an float".format(sys.argv[3]))
+        sys.exit()
+    check_arg(P, E, S)
+    run_calc(P, E, S)
+
+if __name__ == "__main__":
+    main()

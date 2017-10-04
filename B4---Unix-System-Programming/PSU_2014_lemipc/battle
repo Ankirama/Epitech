@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for i in $(seq 1 1) ; do ./lemipc 1 &
+done
+for i in $(seq 1 10) ; do ./lemipc 2 &
+done
+for i in $(seq 1 10) ; do ./lemipc 3 &
+done
+for i in $(seq 1 10) ; do ./lemipc 4 &
+done

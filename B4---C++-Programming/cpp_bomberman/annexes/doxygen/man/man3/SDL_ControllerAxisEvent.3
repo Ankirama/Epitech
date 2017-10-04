@@ -1,0 +1,59 @@
+.TH "SDL_ControllerAxisEvent" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_ControllerAxisEvent \- Game controller axis motion event structure (event\&.caxis\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "SDL_JoystickID \fBwhich\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBaxis\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding1\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding2\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding3\fP"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fBvalue\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBpadding4\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Game controller axis motion event structure (event\&.caxis\&.*) 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint8\fP SDL_ControllerAxisEvent::axis"
+The controller axis (SDL_GameControllerAxis) 
+.SS "\fBUint32\fP SDL_ControllerAxisEvent::type"
+\fBSDL_CONTROLLERAXISMOTION\fP 
+.SS "\fBSint16\fP SDL_ControllerAxisEvent::value"
+The axis value (range: -32768 to 32767) 
+.SS "SDL_JoystickID SDL_ControllerAxisEvent::which"
+The joystick instance id 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

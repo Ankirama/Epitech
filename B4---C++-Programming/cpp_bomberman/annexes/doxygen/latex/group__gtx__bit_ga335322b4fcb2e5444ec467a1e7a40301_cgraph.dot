@@ -1,0 +1,13 @@
+digraph "glm::powerOfTwoAbove"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::powerOfTwoAbove",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="glm::isPowerOfTwo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__bit.html#ga3c0b3e843fa21220f08e801bb558470a"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="glm::abs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#gaea946f96ec1df259802effe9f532e1c1"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="glm::highestBitValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__bit.html#ga485d3ead7f6c624b00cc800c68ab8e08"];
+}

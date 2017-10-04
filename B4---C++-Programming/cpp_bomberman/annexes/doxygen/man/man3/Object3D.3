@@ -1,0 +1,61 @@
+.TH "Object3D" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Object3D \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBAnimation\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBObject3D\fP (std::string const &, glm::vec3, glm::vec3, glm::vec3)"
+.br
+.ti -1c
+.RI "void \fBinitialize\fP (const float=0\&.5, const float=0\&.5, const float=0\&.5)"
+.br
+.ti -1c
+.RI "void \fBdraw\fP (gdl::BasicShader)"
+.br
+.ti -1c
+.RI "void \fBtranslate\fP (glm::vec3 const &)"
+.br
+.ti -1c
+.RI "void \fBrotate\fP (glm::vec3 const &, float)"
+.br
+.ti -1c
+.RI "void \fBscale\fP (glm::vec3 const &)"
+.br
+.ti -1c
+.RI "glm::mat4 \fBgetTransformation\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBm_path\fP"
+.br
+.ti -1c
+.RI "gdl::Texture \fBm_texture\fP"
+.br
+.ti -1c
+.RI "gdl::Geometry \fBm_geometry\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBm_position\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBm_rotation\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBm_scale\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

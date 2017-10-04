@@ -1,0 +1,136 @@
+#!/usr/bin/python
+
+import sys
+import csv
+from math import *
+import numpy as np
+try:
+	import matplotlib.pyplot as pyp
+except (ImportError):
+       print "No module installed here, you cannot continue !"
+       sys.exit()
+
+def usage():
+        print("Usage: ./207demographie [CODE PAYS] ...")
+        sys.exit()
+
+def print_countries(values):
+        print("pays:")
+        for i in range(len(values)):
+                print("\t" + values[i]["Country Name"])
+
+def get_moyenne(values, moyenne):
+        index = 1961
+        while index < 2012:
+                tmp = 0.0
+                valid = False
+                for i in range(len(values)):
+                        if (values[i][str(index)] != ""):
+                                valid = True
+                                tmp = tmp + float(values[i][str(index)].replace(",", "."))
+                        i = i + 1
+                index = index + 1
+                if (valid == True):
+                        moyenne.append(tmp / 1000000.0)
+
+def get_index(argv, values, reader):
+        i = 0
+        for line in reader:
+                i = i + 1
+                for value in argv:
+                        if (line["Country Code"] == value):
+                                values.append(line)
+        if (len(values) != len(argv) - 1):
+                print("Invalid Country Code")
+                sys.exit()
+
+def ajustyenx_lineaire(moyenne, yenx, a, b):
+        print("ajustement de Y en X :")
+        print("\tY = {:.2f}X + {:.2f}".format(b, a))
+        i = 0.0
+        summ = 0.0
+        for i in range(89):
+                fx = a + b * (1961.0 + i)
+                if i < len(moyenne):
+                        summ = summ + pow((moyenne[i] - fx), 2.0)
+                yenx.append(fx)
+                i = i + 1.0
+        summ = sqrt(summ / 51.0)
+        print("\tecart-type :\t \t \t      {:.2f}".format(summ))
+        print("\testimation de la population en 2050 : {:.2f}".format(a + b * (2050.0)))
+        return (summ)
+
+def ajustxeny_lineaire(moyenne, xeny, a, b):
+        print("ajustement de X en Y :")
+        print("\tX = {:.2f}Y + {:.2f}".format(b, a))
+        i = 0.0
+        summ = 0.0
+        for i in range(89):
+                fx = (-a / b) + (1.0 / b) * (1961.0 + i)
+                if i < len(moyenne):
+                        summ = summ + pow((moyenne[i] - fx), 2.0)
+                xeny.append(fx)
+                i = i + 1.0
+        summ = sqrt(summ / 51.0)
+        print("\tecart-type :\t \t \t      {:.2f}".format(summ))
+        print("\testimation de la population en 2050 : {:.2f}".format((-a / b) + (1.0 / b) * 2050.0))
+        return (summ)
+
+def moindres_carres_lineaire(moyenne, yenx, xeny):
+        sum_y = sum(moyenne)
+        sum_x = 0.0
+        sum_xy = 0.0
+        sum_x2 = 0.0
+        sum_y2 = 0.0
+        i = 0.0
+        for i in range(len(moyenne)):
+                year = 1961.0 + i
+                sum_x = sum_x + year
+                sum_x2 = sum_x2 + pow(year, 2.0)
+                sum_y2 = sum_y2 + pow(moyenne[i], 2.0)
+                sum_xy = sum_xy + year * moyenne[i]
+                i = i + 1.0
+        ax = (sum_y * sum_x2 - sum_x * sum_xy) / (51.0 * sum_x2 - pow(sum_x, 2.0))
+        bx = (51.0 * sum_xy - sum_x * sum_y) / (51.0 * sum_x2 - pow(sum_x, 2.0))
+        ay = (sum_x * sum_y2 - sum_y * sum_xy) / (51.0 * sum_y2 - pow(sum_y, 2.0))
+        by = (51.0 * sum_xy - sum_x * sum_y) / (51.0 * sum_y2 - pow(sum_y, 2.0))
+        print("coefficient de correlation : {:.4f}".format(ajustyenx_lineaire(moyenne, yenx, ax, bx) / ajustxeny_lineaire(moyenne, xeny, ay, by)))
+
+def open_file(argv):
+        try:
+                files = open("207demographie_donnees.csv", "rb")
+                reader = csv.DictReader(files, delimiter=";")
+        except (IOError):
+                print("Cannot open the file 207demographie_donnees.csv")
+                sys.exit()
+        values = []
+        get_index(argv, values, reader)
+        print_countries(values)
+        moyenne = []
+        yenx = []
+        xeny = []
+        get_moyenne(values, moyenne)
+        moindres_carres_lineaire(moyenne, yenx, xeny)
+        graph(moyenne, xeny, yenx)
+
+def graph(moyenne, xeny, yenx):
+        pyp.axis([-5, 55, min(moyenne[0], xeny[0], yenx[0]) - 10, xeny[len(xeny) - 1] * 103.0 / 100.0])
+        pyp.plot(moyenne, color="blue", label="moyenne demographique")
+        pyp.plot(xeny, color="red", label="ajustement de Y en X")
+        pyp.plot(yenx, color="green", label="ajustement de X en Y")
+        pyp.legend(loc='upper left')
+        pyp.xlabel("Years")
+        pyp.ylabel("Population")
+        pyp.xticks([0, 10, 20, 30, 40, 50, 60, 70, 80, 90],
+                   ['1960', '1970', '1980', '1990', '2000', '2010', '2020', '2030', '2040', '2050'])
+        pyp.title("207demographie")
+        pyp.show()
+
+def main():
+        if (len(sys.argv) >= 2):
+                open_file(sys.argv)
+        else:
+                usage()
+
+if __name__ == "__main__":
+        main()

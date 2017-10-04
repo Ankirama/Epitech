@@ -1,0 +1,77 @@
+#!/usr/bin/env python2.7
+
+import sys
+import myErrors as Error
+import random
+
+'''
+Kruskal amgorithm to generate a maze
+'''
+
+class Generator:
+    def __init__(self, filename, height, width):
+        try:
+            self.file = open(filename, "w")
+            self.height = int(height)
+            self.width = int(width)
+        except(ValueError):
+            Error.error_message("Something went wrong ! Filename must be valid and Height / Width number")
+        if self.height < 5 or self.width < 5:
+            Error.error_message("Height and width should be >= 5 !")
+        self.walls = []
+        self.cells = []
+        self.maze = []
+        
+    def generateWalls(self):
+        self.walls = [(x, y, x + 1, y)
+                      for x in range(self.width - 1)
+                      for y in range(self.height)]
+        self.walls.extend([(x, y, x, y + 1)
+                           for x in range(self.width)
+                           for y in range(self.height - 1)])
+
+    def generateCells(self):
+        self.cells = [set([(x, y)])
+                      for x in range(self.width)
+                      for y in range(self.height)]
+
+    def generateMaze(self):
+        walls_copy = self.walls
+        random.shuffle(walls_copy)
+        for wall in walls_copy:
+            set_a = None
+            set_b = None
+
+            for s in self.cells:
+                if (wall[0], wall[1]) in s:
+                    set_a = s
+                if (wall[2], wall[3]) in s:
+                    set_b = s
+            if set_a is not set_b:
+                self.cells.remove(set_a)
+                self.cells.remove(set_b)
+                self.cells.append(set_a.union(set_b))
+                self.walls.remove(wall)
+
+        for x in range(self.height):
+            maze_list = []
+            for y in range(self.width):
+                maze_list.append('1')
+            self.maze.append(maze_list)
+        for elt in self.walls:
+            self.maze[elt[0]][elt[1]] = '0'
+        for list_ in self.maze:
+            for elt in list_:
+                print elt,
+            print
+            
+def     main():
+    if len(sys.argv) != 4:
+        Error.error_message("Usage : ./generateMaze \"FileName\" \"Height\" \"Width\"")
+    gen = Generator(sys.argv[1], sys.argv[2], sys.argv[3])
+    gen.generateWalls()
+    gen.generateCells()
+    gen.generateMaze()
+                      
+if __name__ == '__main__':
+        main()

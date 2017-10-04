@@ -1,0 +1,120 @@
+.TH "Bomberman" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Bomberman \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBomberman\fP (std::string const &)"
+.br
+.ti -1c
+.RI "\fBBomberman\fP (std::string const &, unsigned int)"
+.br
+.ti -1c
+.RI "std::string \fBgetName\fP () const "
+.br
+.ti -1c
+.RI "bool \fBgetAlive\fP () const "
+.br
+.ti -1c
+.RI "float \fBgetSpeed\fP () const "
+.br
+.ti -1c
+.RI "eDirection \fBgetDirection\fP () const "
+.br
+.ti -1c
+.RI "unsigned int \fBgetPosition\fP () const "
+.br
+.ti -1c
+.RI "float \fBgetX\fP () const "
+.br
+.ti -1c
+.RI "float \fBgetY\fP () const "
+.br
+.ti -1c
+.RI "void \fBdie\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetName\fP (std::string const &)"
+.br
+.ti -1c
+.RI "void \fBsetDirection\fP (eDirection)"
+.br
+.ti -1c
+.RI "void \fBmodifySpeed\fP (float)"
+.br
+.ti -1c
+.RI "void \fBsetPosition\fP (unsigned int)"
+.br
+.ti -1c
+.RI "void \fBsetX\fP (float)"
+.br
+.ti -1c
+.RI "void \fBsetY\fP (float)"
+.br
+.ti -1c
+.RI "void \fBinitialize\fP ()"
+.br
+.ti -1c
+.RI "void \fBdraw\fP (gdl::AShader &, gdl::Clock const &)"
+.br
+.ti -1c
+.RI "void \fBspawn\fP (unsigned int, unsigned int)"
+.br
+.ti -1c
+.RI "\fBAnimation\fP * \fBgetAnimation\fP () const "
+.br
+.ti -1c
+.RI "bool \fBcollision\fP (eDirection, char *, unsigned int) const "
+.br
+.ti -1c
+.RI "bool \fBmove\fP (eDirection, char *, unsigned int)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBm_name\fP"
+.br
+.ti -1c
+.RI "bool \fBm_alive\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBm_position\fP"
+.br
+.ti -1c
+.RI "\fBAnimation\fP * \fBm_animation\fP"
+.br
+.ti -1c
+.RI "float \fBm_speed\fP"
+.br
+.ti -1c
+.RI "eDirection \fBm_direction\fP"
+.br
+.ti -1c
+.RI "float \fBm_x\fP"
+.br
+.ti -1c
+.RI "float \fBm_y\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBomberman\fP (\fBBomberman\fP const &)"
+.br
+.ti -1c
+.RI "\fBBomberman\fP & \fBoperator=\fP (\fBBomberman\fP const &)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

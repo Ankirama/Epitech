@@ -1,0 +1,147 @@
+.TH "SDL_Event" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_Event \- General event structure\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBSDL_CommonEvent\fP \fBcommon\fP"
+.br
+.ti -1c
+.RI "\fBSDL_WindowEvent\fP \fBwindow\fP"
+.br
+.ti -1c
+.RI "\fBSDL_KeyboardEvent\fP \fBkey\fP"
+.br
+.ti -1c
+.RI "\fBSDL_TextEditingEvent\fP \fBedit\fP"
+.br
+.ti -1c
+.RI "\fBSDL_TextInputEvent\fP \fBtext\fP"
+.br
+.ti -1c
+.RI "\fBSDL_MouseMotionEvent\fP \fBmotion\fP"
+.br
+.ti -1c
+.RI "\fBSDL_MouseButtonEvent\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "\fBSDL_MouseWheelEvent\fP \fBwheel\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoyAxisEvent\fP \fBjaxis\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoyBallEvent\fP \fBjball\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoyHatEvent\fP \fBjhat\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoyButtonEvent\fP \fBjbutton\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoyDeviceEvent\fP \fBjdevice\fP"
+.br
+.ti -1c
+.RI "\fBSDL_ControllerAxisEvent\fP \fBcaxis\fP"
+.br
+.ti -1c
+.RI "\fBSDL_ControllerButtonEvent\fP \fBcbutton\fP"
+.br
+.ti -1c
+.RI "\fBSDL_ControllerDeviceEvent\fP \fBcdevice\fP"
+.br
+.ti -1c
+.RI "\fBSDL_QuitEvent\fP \fBquit\fP"
+.br
+.ti -1c
+.RI "\fBSDL_UserEvent\fP \fBuser\fP"
+.br
+.ti -1c
+.RI "\fBSDL_SysWMEvent\fP \fBsyswm\fP"
+.br
+.ti -1c
+.RI "\fBSDL_TouchFingerEvent\fP \fBtfinger\fP"
+.br
+.ti -1c
+.RI "\fBSDL_MultiGestureEvent\fP \fBmgesture\fP"
+.br
+.ti -1c
+.RI "\fBSDL_DollarGestureEvent\fP \fBdgesture\fP"
+.br
+.ti -1c
+.RI "\fBSDL_DropEvent\fP \fBdrop\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding\fP [56]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+General event structure\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBSDL_MouseButtonEvent\fP SDL_Event::button"
+Mouse button event data 
+.SS "\fBSDL_ControllerAxisEvent\fP SDL_Event::caxis"
+Game Controller axis event data 
+.SS "\fBSDL_ControllerButtonEvent\fP SDL_Event::cbutton"
+Game Controller button event data 
+.SS "\fBSDL_ControllerDeviceEvent\fP SDL_Event::cdevice"
+Game Controller device event data 
+.SS "\fBSDL_CommonEvent\fP SDL_Event::common"
+Common event data 
+.SS "\fBSDL_DollarGestureEvent\fP SDL_Event::dgesture"
+Gesture event data 
+.SS "\fBSDL_DropEvent\fP SDL_Event::drop"
+Drag and drop event data 
+.SS "\fBSDL_TextEditingEvent\fP SDL_Event::edit"
+Text editing event data 
+.SS "\fBSDL_JoyAxisEvent\fP SDL_Event::jaxis"
+Joystick axis event data 
+.SS "\fBSDL_JoyBallEvent\fP SDL_Event::jball"
+Joystick ball event data 
+.SS "\fBSDL_JoyButtonEvent\fP SDL_Event::jbutton"
+Joystick button event data 
+.SS "\fBSDL_JoyDeviceEvent\fP SDL_Event::jdevice"
+Joystick device change event data 
+.SS "\fBSDL_JoyHatEvent\fP SDL_Event::jhat"
+Joystick hat event data 
+.SS "\fBSDL_KeyboardEvent\fP SDL_Event::key"
+Keyboard event data 
+.SS "\fBSDL_MultiGestureEvent\fP SDL_Event::mgesture"
+Gesture event data 
+.SS "\fBSDL_MouseMotionEvent\fP SDL_Event::motion"
+Mouse motion event data 
+.SS "\fBSDL_QuitEvent\fP SDL_Event::quit"
+Quit request event data 
+.SS "\fBSDL_SysWMEvent\fP SDL_Event::syswm"
+System dependent window event data 
+.SS "\fBSDL_TextInputEvent\fP SDL_Event::text"
+Text input event data 
+.SS "\fBSDL_TouchFingerEvent\fP SDL_Event::tfinger"
+Touch finger event data 
+.SS "\fBUint32\fP SDL_Event::type"
+Event type, shared with all events 
+.SS "\fBSDL_UserEvent\fP SDL_Event::user"
+Custom event data 
+.SS "\fBSDL_MouseWheelEvent\fP SDL_Event::wheel"
+Mouse wheel event data 
+.SS "\fBSDL_WindowEvent\fP SDL_Event::window"
+Window event data 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

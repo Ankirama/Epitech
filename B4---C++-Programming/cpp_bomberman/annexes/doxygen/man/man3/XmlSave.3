@@ -1,0 +1,230 @@
+.TH "XmlSave" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+XmlSave \- create xml file (save)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <XmlSave\&.hh>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXmlSave\fP (std::string const &filename, int nbPlayers, int nbAIs)"
+.br
+.RI "\fI\fBXmlSave\fP's constructor\&. \fP"
+.ti -1c
+.RI "\fB~XmlSave\fP ()"
+.br
+.RI "\fI\fBXmlSave\fP's destructor\&. \fP"
+.ti -1c
+.RI "bool \fBsavePlayer\fP (\fBPlayer\fP const &bomber)"
+.br
+.RI "\fIsave player in xml \fP"
+.ti -1c
+.RI "bool \fBsaveAI\fP (\fBIA\fP const &bomber)"
+.br
+.RI "\fIsave AI in xml \fP"
+.ti -1c
+.RI "bool \fBsaveMaze\fP (char const *map, int width, int width)"
+.br
+.RI "\fIsave maze in xml \fP"
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBwriteTexture\fP (std::string const &filepath)"
+.br
+.RI "\fIwrite texture in xml \fP"
+.ti -1c
+.RI "void \fBwriteKeys\fP (int left, int right, int up, int down, int bomb)"
+.br
+.RI "\fIwrite keys in xml \fP"
+.ti -1c
+.RI "void \fBwriteBombs\fP (std::vector< \fBBomb\fP > const &bombs)"
+.br
+.RI "\fIwrite bomber's bombs in xml \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::ofstream \fBm_ofs\fP"
+.br
+.ti -1c
+.RI "\fBXmlWrite\fP \fBm_xmlWrite\fP"
+.br
+.ti -1c
+.RI "int \fBm_nbPlayers\fP"
+.br
+.ti -1c
+.RI "int \fBm_nbAIs\fP"
+.br
+.ti -1c
+.RI "bool \fBm_playersDone\fP"
+.br
+.ti -1c
+.RI "bool \fBm_AIDone\fP"
+.br
+.ti -1c
+.RI "bool \fBm_playersStarted\fP"
+.br
+.ti -1c
+.RI "bool \fBm_AIsStarted\fP"
+.br
+.ti -1c
+.RI "int \fBm_idPlayer\fP"
+.br
+.ti -1c
+.RI "int \fBm_idAI\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+create xml file (save) 
+
+Used to save the current \fBGameState\fP in a xml file 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "XmlSave::XmlSave (std::string const & filename, int nbPlayers, int nbAIs)"
+
+.PP
+\fBXmlSave\fP's constructor\&. Set variables and set stream / xml Object
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfilename\fP name for our new xml save  Players number (max 2) in the current game  AIs number (no limit) in the current game 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool XmlSave::saveAI (\fBIA\fP const & bomber)"
+
+.PP
+save AI in xml It will save an AI in our xml save\&. It will use a specific pattern / tags to save it\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbomber\fP AI's reference which will be saved 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if we saved it, false if we already saved every AI or we didnt't finish with players 
+.RE
+.PP
+
+.SS "bool XmlSave::saveMaze (char const * map, int width, int width)"
+
+.PP
+save maze in xml It will save the maze in our xml save\&. It will use a specific pattern / tags to save it\&.
+.PP
+\fBBug\fP
+.RS 4
+we didnt check if we already added it into our xml file
+.RE
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fImap\fP Contains every cell we need to save 
+.br
+\fIwidth\fP maze's width 
+.br
+\fIheight\fP maze's height 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if we saved it, false if players / AIs aren't done yet 
+.RE
+.PP
+
+.SS "bool XmlSave::savePlayer (\fBPlayer\fP const & bomber)"
+
+.PP
+save player in xml It will save a player in our xml save\&. It will use a specific pattern / tags to save it\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbomber\fP player's reference which will be saved 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if we saved it, false if we already saved every player 
+.RE
+.PP
+
+.SS "void XmlSave::writeBombs (std::vector< \fBBomb\fP > const & bombs)\fC [private]\fP"
+
+.PP
+write bomber's bombs in xml It will write bomber's bombs in tag('bombs')
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbombs\fP bombs' vector we will travel to write into our tag('bombs') 
+.RE
+.PP
+
+.SS "void XmlSave::writeKeys (int left, int right, int up, int down, int bomb)\fC [private]\fP"
+
+.PP
+write keys in xml It will write keys used by a player
+.PP
+\fBParameters:\fP
+.RS 4
+\fIleft\fP define for the left action 
+.br
+\fIright\fP define for the right action 
+.br
+\fIup\fP define for the up action 
+.br
+\fIdown\fP define for the down action 
+.br
+\fIbomb\fP define for the bomb action 
+.RE
+.PP
+
+.SS "void XmlSave::writeTexture (std::string const & filepath)\fC [private]\fP"
+
+.PP
+write texture in xml It will write a texturepath with tag('texture') into the current xml
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfilepath\fP Filepath we want to save 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool XmlSave::m_AIDone\fC [private]\fP"
+true if we wrote all AIs, else false 
+.SS "bool XmlSave::m_AIsStarted\fC [private]\fP"
+set to true when we start to write AIs\&. Used to add tag('AIs') 
+.SS "int XmlSave::m_idAI\fC [private]\fP"
+current AI's id to check if we have another AI to add 
+.SS "int XmlSave::m_idPlayer\fC [private]\fP"
+current player's id to check if we have another player to add 
+.SS "int XmlSave::m_nbAIs\fC [private]\fP"
+number AIs used to check if we wrote all and to close AIs element into our xml 
+.SS "int XmlSave::m_nbPlayers\fC [private]\fP"
+number players used to check if we wrote all and to close players element into our xml 
+.SS "std::ofstream XmlSave::m_ofs\fC [private]\fP"
+Stream used to write into our file 
+.SS "bool XmlSave::m_playersDone\fC [private]\fP"
+true if we wrote all players, else false 
+.SS "bool XmlSave::m_playersStarted\fC [private]\fP"
+set to true when we start to write players\&. Used to add tag('players') 
+.SS "\fBXmlWrite\fP XmlSave::m_xmlWrite\fC [private]\fP"
+xml object to write an xml file 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

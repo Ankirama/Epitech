@@ -1,0 +1,176 @@
+\hypertarget{group__gtx__rotate__vector}{}\section{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}
+\label{group__gtx__rotate__vector}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}}
+
+
+Function to directly rotate a vector.  
+
+
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tvec2$<$ T $>$ \hyperlink{group__gtx__rotate__vector_gab40685a29feeaa0b2ceb5b733421adcb}{glm\+::rotate} (detail\+::tvec2$<$ T $>$ const \&v, T const \&angle)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tvec3$<$ T $>$ \hyperlink{group__gtx__rotate__vector_gab556da0efabc9606f198f89a74cb1964}{glm\+::rotate} (detail\+::tvec3$<$ T $>$ const \&v, T const \&angle, detail\+::tvec3$<$ T $>$ const \&normal)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tvec4$<$ T $>$ \hyperlink{group__gtx__rotate__vector_ga6e2b5cddfb385e640dfcf1ae7769b910}{glm\+::rotate} (detail\+::tvec4$<$ T $>$ const \&v, T const \&angle, detail\+::tvec3$<$ T $>$ const \&normal)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tvec3$<$ T $>$ \hyperlink{group__gtx__rotate__vector_gaaadca0c077515d56955f3c662a3a3c7f}{glm\+::rotate\+X} (detail\+::tvec3$<$ T $>$ const \&v, T const \&angle)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tvec3$<$ T $>$ \hyperlink{group__gtx__rotate__vector_gacffa0ae7f32f4e2ee7bc1dc0ed290d45}{glm\+::rotate\+Y} (detail\+::tvec3$<$ T $>$ const \&v, T const \&angle)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tvec3$<$ T $>$ \hyperlink{group__gtx__rotate__vector_ga105c77751b4ab56c491334655751e0af}{glm\+::rotate\+Z} (detail\+::tvec3$<$ T $>$ const \&v, T const \&angle)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tvec4$<$ T $>$ \hyperlink{group__gtx__rotate__vector_ga5fb5ea6e3daf540f1445aea068f49eb1}{glm\+::rotate\+X} (detail\+::tvec4$<$ T $>$ const \&v, T const \&angle)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tvec4$<$ T $>$ \hyperlink{group__gtx__rotate__vector_ga869410096bb5a69f9b9a58708eadcbad}{glm\+::rotate\+Y} (detail\+::tvec4$<$ T $>$ const \&v, T const \&angle)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tvec4$<$ T $>$ \hyperlink{group__gtx__rotate__vector_ga6330788b96a0ec5e76ca3dd2892cca8c}{glm\+::rotate\+Z} (detail\+::tvec4$<$ T $>$ const \&v, T const \&angle)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tmat4x4$<$ T $>$ \hyperlink{group__gtx__rotate__vector_ga4da5fddb2f1aa679fdb45abd344efffb}{glm\+::orientation} (detail\+::tvec3$<$ T $>$ const \&Normal, detail\+::tvec3$<$ T $>$ const \&Up)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Function to directly rotate a vector. 
+
+$<$\hyperlink{rotate__vector_8hpp}{glm/gtx/rotate\+\_\+vector.\+hpp}$>$ need to be included to use these functionalities. 
+
+\subsection{Function Documentation}
+\hypertarget{group__gtx__rotate__vector_ga4da5fddb2f1aa679fdb45abd344efffb}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}!orientation@{orientation}}
+\index{orientation@{orientation}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}}
+\subsubsection[{orientation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tmat4x4$<$T$>$ glm\+::orientation (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec3}$<$ T $>$ const \&}]{Normal, }
+\item[{{\bf detail\+::tvec3}$<$ T $>$ const \&}]{Up}
+\end{DoxyParamCaption}
+)}\label{group__gtx__rotate__vector_ga4da5fddb2f1aa679fdb45abd344efffb}
+Build a rotation matrix from a normal and a up vector. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector extension. 
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{group__gtx__rotate__vector_gab40685a29feeaa0b2ceb5b733421adcb}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}!rotate@{rotate}}
+\index{rotate@{rotate}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tvec2$<$T$>$ glm\+::rotate (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec2}$<$ T $>$ const \&}]{v, }
+\item[{T const \&}]{angle}
+\end{DoxyParamCaption}
+)}\label{group__gtx__rotate__vector_gab40685a29feeaa0b2ceb5b733421adcb}
+Rotate a two dimensional vector. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector extension. 
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\hypertarget{group__gtx__rotate__vector_gab556da0efabc9606f198f89a74cb1964}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}!rotate@{rotate}}
+\index{rotate@{rotate}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tvec3$<$T$>$ glm\+::rotate (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec3}$<$ T $>$ const \&}]{v, }
+\item[{T const \&}]{angle, }
+\item[{{\bf detail\+::tvec3}$<$ T $>$ const \&}]{normal}
+\end{DoxyParamCaption}
+)}\label{group__gtx__rotate__vector_gab556da0efabc9606f198f89a74cb1964}
+Rotate a three dimensional vector around an axis. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector extension. 
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\hypertarget{group__gtx__rotate__vector_ga6e2b5cddfb385e640dfcf1ae7769b910}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}!rotate@{rotate}}
+\index{rotate@{rotate}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tvec4$<$T$>$ glm\+::rotate (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec4}$<$ T $>$ const \&}]{v, }
+\item[{T const \&}]{angle, }
+\item[{{\bf detail\+::tvec3}$<$ T $>$ const \&}]{normal}
+\end{DoxyParamCaption}
+)}\label{group__gtx__rotate__vector_ga6e2b5cddfb385e640dfcf1ae7769b910}
+Rotate a four dimensional vector around an axis. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector extension. \hypertarget{group__gtx__rotate__vector_gaaadca0c077515d56955f3c662a3a3c7f}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}!rotate\+X@{rotate\+X}}
+\index{rotate\+X@{rotate\+X}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}}
+\subsubsection[{rotate\+X}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tvec3$<$T$>$ glm\+::rotate\+X (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec3}$<$ T $>$ const \&}]{v, }
+\item[{T const \&}]{angle}
+\end{DoxyParamCaption}
+)}\label{group__gtx__rotate__vector_gaaadca0c077515d56955f3c662a3a3c7f}
+Rotate a three dimensional vector around the X axis. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector extension. 
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\hypertarget{group__gtx__rotate__vector_ga5fb5ea6e3daf540f1445aea068f49eb1}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}!rotate\+X@{rotate\+X}}
+\index{rotate\+X@{rotate\+X}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}}
+\subsubsection[{rotate\+X}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tvec4$<$T$>$ glm\+::rotate\+X (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec4}$<$ T $>$ const \&}]{v, }
+\item[{T const \&}]{angle}
+\end{DoxyParamCaption}
+)}\label{group__gtx__rotate__vector_ga5fb5ea6e3daf540f1445aea068f49eb1}
+Rotate a four dimentionnals vector around the X axis. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector extension. 
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\hypertarget{group__gtx__rotate__vector_gacffa0ae7f32f4e2ee7bc1dc0ed290d45}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}!rotate\+Y@{rotate\+Y}}
+\index{rotate\+Y@{rotate\+Y}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}}
+\subsubsection[{rotate\+Y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tvec3$<$T$>$ glm\+::rotate\+Y (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec3}$<$ T $>$ const \&}]{v, }
+\item[{T const \&}]{angle}
+\end{DoxyParamCaption}
+)}\label{group__gtx__rotate__vector_gacffa0ae7f32f4e2ee7bc1dc0ed290d45}
+Rotate a three dimensional vector around the Y axis. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector extension. 
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+\hypertarget{group__gtx__rotate__vector_ga869410096bb5a69f9b9a58708eadcbad}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}!rotate\+Y@{rotate\+Y}}
+\index{rotate\+Y@{rotate\+Y}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}}
+\subsubsection[{rotate\+Y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tvec4$<$T$>$ glm\+::rotate\+Y (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec4}$<$ T $>$ const \&}]{v, }
+\item[{T const \&}]{angle}
+\end{DoxyParamCaption}
+)}\label{group__gtx__rotate__vector_ga869410096bb5a69f9b9a58708eadcbad}
+Rotate a four dimensional vector around the X axis. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector extension. 
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+\hypertarget{group__gtx__rotate__vector_ga105c77751b4ab56c491334655751e0af}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}!rotate\+Z@{rotate\+Z}}
+\index{rotate\+Z@{rotate\+Z}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}}
+\subsubsection[{rotate\+Z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tvec3$<$T$>$ glm\+::rotate\+Z (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec3}$<$ T $>$ const \&}]{v, }
+\item[{T const \&}]{angle}
+\end{DoxyParamCaption}
+)}\label{group__gtx__rotate__vector_ga105c77751b4ab56c491334655751e0af}
+Rotate a three dimensional vector around the Z axis. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector extension. 
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+\hypertarget{group__gtx__rotate__vector_ga6330788b96a0ec5e76ca3dd2892cca8c}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}!rotate\+Z@{rotate\+Z}}
+\index{rotate\+Z@{rotate\+Z}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector}}
+\subsubsection[{rotate\+Z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tvec4$<$T$>$ glm\+::rotate\+Z (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec4}$<$ T $>$ const \&}]{v, }
+\item[{T const \&}]{angle}
+\end{DoxyParamCaption}
+)}\label{group__gtx__rotate__vector_ga6330788b96a0ec5e76ca3dd2892cca8c}
+Rotate a four dimensional vector around the X axis. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+vector extension. 
+
+Here is the call graph for this function\+:
+% FIG 9
+
+

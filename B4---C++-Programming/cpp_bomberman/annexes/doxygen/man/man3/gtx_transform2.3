@@ -1,0 +1,67 @@
+.TH "gtx_transform2" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtx_transform2 \- GLM_GTX_transform2
+.PP
+Add extra transformation matrices\&.  
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > detail::tmat3x3< T > \fBglm::shearX2D\fP (detail::tmat3x3< T > const &m, T y)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat3x3< T > \fBglm::shearY2D\fP (detail::tmat3x3< T > const &m, T x)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::shearX3D\fP (const detail::tmat4x4< T > &m, T y, T z)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::shearY3D\fP (const detail::tmat4x4< T > &m, T x, T z)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::shearZ3D\fP (const detail::tmat4x4< T > &m, T x, T y)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat3x3< T > \fBglm::proj2D\fP (const detail::tmat3x3< T > &m, const detail::tvec3< T > &normal)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::proj3D\fP (const detail::tmat4x4< T > &m, const detail::tvec3< T > &normal)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::scaleBias\fP (valType scale, valType bias)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::scaleBias\fP (detail::tmat4x4< valType > const &m, valType scale, valType bias)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Add extra transformation matrices\&. 
+
+<\fBglm/gtx/transform2\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T > detail::tmat3x3<T> glm::proj2D (const \fBdetail::tmat3x3\fP< T > & m, const \fBdetail::tvec3\fP< T > & normal)"
+Build planar projection matrix along normal axis\&. From GLM_GTX_transform2 extension\&. 
+.SS "template<typename T > detail::tmat4x4<T> glm::proj3D (const \fBdetail::tmat4x4\fP< T > & m, const \fBdetail::tvec3\fP< T > & normal)"
+Build planar projection matrix along normal axis\&. From GLM_GTX_transform2 extension\&. 
+.SS "template<typename valType > detail::tmat4x4<valType> glm::scaleBias (valType scale, valType bias)"
+Build a scale bias matrix\&. From GLM_GTX_transform2 extension\&. 
+.SS "template<typename valType > detail::tmat4x4<valType> glm::scaleBias (\fBdetail::tmat4x4\fP< valType > const & m, valType scale, valType bias)"
+Build a scale bias matrix\&. From GLM_GTX_transform2 extension\&. 
+.SS "template<typename T > detail::tmat3x3<T> glm::shearX2D (\fBdetail::tmat3x3\fP< T > const & m, T y)"
+Transforms a matrix with a shearing on X axis\&. From GLM_GTX_transform2 extension\&. 
+.SS "template<typename T > detail::tmat4x4<T> glm::shearX3D (const \fBdetail::tmat4x4\fP< T > & m, T y, T z)"
+Transforms a matrix with a shearing on X axis From GLM_GTX_transform2 extension\&. 
+.SS "template<typename T > detail::tmat3x3<T> glm::shearY2D (\fBdetail::tmat3x3\fP< T > const & m, T x)"
+Transforms a matrix with a shearing on Y axis\&. From GLM_GTX_transform2 extension\&. 
+.SS "template<typename T > detail::tmat4x4<T> glm::shearY3D (const \fBdetail::tmat4x4\fP< T > & m, T x, T z)"
+Transforms a matrix with a shearing on Y axis\&. From GLM_GTX_transform2 extension\&. 
+.SS "template<typename T > detail::tmat4x4<T> glm::shearZ3D (const \fBdetail::tmat4x4\fP< T > & m, T x, T y)"
+Transforms a matrix with a shearing on Z axis\&. From GLM_GTX_transform2 extension\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

@@ -1,0 +1,107 @@
+.TH "SDL_HapticCustom" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_HapticCustom \- A structure containing a template for the \fBSDL_HAPTIC_CUSTOM\fP effect\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_haptic\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint16\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBSDL_HapticDirection\fP \fBdirection\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBlength\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBdelay\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBinterval\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBchannels\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBperiod\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBsamples\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP * \fBdata\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBattack_length\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBattack_level\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBfade_length\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBfade_level\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A structure containing a template for the \fBSDL_HAPTIC_CUSTOM\fP effect\&. 
+
+A custom force feedback effect is much like a periodic effect, where the application can define its exact shape\&. You will have to allocate the data yourself\&. Data should consist of channels * samples Uint16 samples\&.
+.PP
+If channels is one, the effect is rotated using the defined direction\&. Otherwise it uses the samples in data for the different axes\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_HAPTIC_CUSTOM\fP 
+.PP
+\fBSDL_HapticEffect\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint16\fP SDL_HapticCustom::attack_length"
+Duration of the attack\&. 
+.SS "\fBUint16\fP SDL_HapticCustom::attack_level"
+Level at the start of the attack\&. 
+.SS "\fBUint16\fP SDL_HapticCustom::button"
+\fBButton\fP that triggers the effect\&. 
+.SS "\fBUint8\fP SDL_HapticCustom::channels"
+Axes to use, minimum of one\&. 
+.SS "\fBUint16\fP* SDL_HapticCustom::data"
+Should contain channels*samples items\&. 
+.SS "\fBUint16\fP SDL_HapticCustom::delay"
+Delay before starting the effect\&. 
+.SS "\fBSDL_HapticDirection\fP SDL_HapticCustom::direction"
+Direction of the effect\&. 
+.SS "\fBUint16\fP SDL_HapticCustom::fade_length"
+Duration of the fade\&. 
+.SS "\fBUint16\fP SDL_HapticCustom::fade_level"
+Level at the end of the fade\&. 
+.SS "\fBUint16\fP SDL_HapticCustom::interval"
+How soon it can be triggered again after button\&. 
+.SS "\fBUint32\fP SDL_HapticCustom::length"
+Duration of the effect\&. 
+.SS "\fBUint16\fP SDL_HapticCustom::period"
+Sample periods\&. 
+.SS "\fBUint16\fP SDL_HapticCustom::samples"
+Amount of samples\&. 
+.SS "\fBUint16\fP SDL_HapticCustom::type"
+\fBSDL_HAPTIC_CUSTOM\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

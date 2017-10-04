@@ -1,0 +1,12 @@
+check retours fonctions:
+src/server/
+src/utils/
+libs/printf/ --> DONE
+
+_____________________
+
+check specific error select
+
+creation de log (ne pas ecrire sur 1)
+
+ATTENTION --> check du random et voir comment gere le fd_max + 1 dans check_fd (cote server) + attention au interpret_message

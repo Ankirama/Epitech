@@ -1,0 +1,6 @@
+plazza.log
+plazza
+src/*.o
+src/*~
+includes/*~
+*~

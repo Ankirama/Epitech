@@ -1,0 +1,237 @@
+.TH "lib/gdl/includes/glm/gtx/color_cast.hpp" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/glm/gtx/color_cast.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./glm\&.hpp'\fP
+.br
+\fC#include '\&.\&./gtx/number_precision\&.hpp'\fP
+.br
+\fC#include 'color_cast\&.inl'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGLM_GTX_color_cast\fP   GLM_VERSION"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename valType > uint8 \fBglm::u8channel_cast\fP (valType a)"
+.br
+.ti -1c
+.RI "template<typename valType > uint16 \fBglm::u16channel_cast\fP (valType a)"
+.br
+.ti -1c
+.RI "template<typename T > uint32 \fBglm::u32_rgbx_cast\fP (const detail::tvec3< T > &c)"
+.br
+.RI "\fIConversion of a 3 components color into an 32bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint32 \fBglm::u32_xrgb_cast\fP (const detail::tvec3< T > &c)"
+.br
+.RI "\fIConversion of a 3 components color into an 32bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint32 \fBglm::u32_bgrx_cast\fP (const detail::tvec3< T > &c)"
+.br
+.RI "\fIConversion of a 3 components color into an 32bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint32 \fBglm::u32_xbgr_cast\fP (const detail::tvec3< T > &c)"
+.br
+.RI "\fIConversion of a 3 components color into an 32bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint32 \fBglm::u32_rgba_cast\fP (const detail::tvec4< T > &c)"
+.br
+.RI "\fIConversion of a 4 components color into an 32bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint32 \fBglm::u32_argb_cast\fP (const detail::tvec4< T > &c)"
+.br
+.RI "\fIConversion of a 4 components color into an 32bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint32 \fBglm::u32_bgra_cast\fP (const detail::tvec4< T > &c)"
+.br
+.RI "\fIConversion of a 4 components color into an 32bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint32 \fBglm::u32_abgr_cast\fP (const detail::tvec4< T > &c)"
+.br
+.RI "\fIConversion of a 4 components color into an 32bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint64 \fBglm::u64_rgbx_cast\fP (const detail::tvec3< T > &c)"
+.br
+.RI "\fIConversion of a 3 components color into an 64bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint64 \fBglm::u64_xrgb_cast\fP (const detail::tvec3< T > &c)"
+.br
+.RI "\fIConversion of a 3 components color into an 64bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint64 \fBglm::u64_bgrx_cast\fP (const detail::tvec3< T > &c)"
+.br
+.RI "\fIConversion of a 3 components color into an 64bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint64 \fBglm::u64_xbgr_cast\fP (const detail::tvec3< T > &c)"
+.br
+.RI "\fIConversion of a 3 components color into an 64bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint64 \fBglm::u64_rgba_cast\fP (const detail::tvec4< T > &c)"
+.br
+.RI "\fIConversion of a 4 components color into an 64bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint64 \fBglm::u64_argb_cast\fP (const detail::tvec4< T > &c)"
+.br
+.RI "\fIConversion of a 4 components color into an 64bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint64 \fBglm::u64_bgra_cast\fP (const detail::tvec4< T > &c)"
+.br
+.RI "\fIConversion of a 4 components color into an 64bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > uint64 \fBglm::u64_abgr_cast\fP (const detail::tvec4< T > &c)"
+.br
+.RI "\fIConversion of a 4 components color into an 64bit unsigned int value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f16 \fBglm::f16_channel_cast\fP (T a)"
+.br
+.RI "\fIConversion of a u8 or u16 value to a single channel floating value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f16vec3 \fBglm::f16_rgbx_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 3 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f16vec3 \fBglm::f16_xrgb_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 3 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f16vec3 \fBglm::f16_bgrx_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 3 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f16vec3 \fBglm::f16_xbgr_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 3 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f16vec4 \fBglm::f16_rgba_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 4 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f16vec4 \fBglm::f16_argb_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 4 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f16vec4 \fBglm::f16_bgra_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 4 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f16vec4 \fBglm::f16_abgr_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 4 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f32 \fBglm::f32_channel_cast\fP (T a)"
+.br
+.RI "\fIConversion of a u8 or u16 value to a single channel floating value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f32vec3 \fBglm::f32_rgbx_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 3 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f32vec3 \fBglm::f32_xrgb_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 3 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f32vec3 \fBglm::f32_bgrx_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 3 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f32vec3 \fBglm::f32_xbgr_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 3 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f32vec4 \fBglm::f32_rgba_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 4 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f32vec4 \fBglm::f32_argb_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 4 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f32vec4 \fBglm::f32_bgra_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 4 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f32vec4 \fBglm::f32_abgr_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 4 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f64 \fBglm::f64_channel_cast\fP (T a)"
+.br
+.RI "\fIConversion of a u8 or u16 value to a single channel floating value\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f64vec3 \fBglm::f64_rgbx_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 3 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f64vec3 \fBglm::f64_xrgb_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 3 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f64vec3 \fBglm::f64_bgrx_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 3 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f64vec3 \fBglm::f64_xbgr_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 3 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f64vec4 \fBglm::f64_rgba_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 4 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f64vec4 \fBglm::f64_argb_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 4 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f64vec4 \fBglm::f64_bgra_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 4 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.ti -1c
+.RI "template<typename T > f64vec4 \fBglm::f64_abgr_cast\fP (T c)"
+.br
+.RI "\fIConversion of a u32 or u64 color into 4 components floating color\&. (From GLM_GTX_color_cast extension) \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+OpenGL Mathematics (glm\&.g-truc\&.net)
+.PP
+Copyright (c) 2005 - 2013 G-Truc Creation (www\&.g-truc\&.net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software\&.
+.PP
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\&. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE\&.
+.PP
+\fBGLM_GTX_color_cast\fP
+.PP
+\fBDate:\fP
+.RS 4
+2007-06-21 / 2011-06-07 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christophe Riccio
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM Core\fP (dependence) 
+.PP
+\fBGLM_GTX_number_precision\fP (dependence) 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

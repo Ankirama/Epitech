@@ -1,0 +1,183 @@
+.TH "Score" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Score \- Save/Load score\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Score\&.hh>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddScore\fP (std::string const &player, unsigned int score)"
+.br
+.RI "\fIadd a player's score \fP"
+.ti -1c
+.RI "void \fBshowScore\fP () const "
+.br
+.RI "\fIshow the map score \fP"
+.ti -1c
+.RI "unsigned int \fBgetPlayerScore\fP (std::string const &player)"
+.br
+.RI "\fIget the player's score \fP"
+.ti -1c
+.RI "std::vector< std::pair< std::string, unsigned int > > \fBgetTopN\fP (int n)"
+.br
+.RI "\fIget top N players \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBScore\fP & \fBgetInstance\fP ()"
+.br
+.RI "\fIUsed to return the current instance\&. \fP"
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBScore\fP & \fBoperator=\fP (const \fBScore\fP &)"
+.br
+.RI "\fIprivate = operator to unable it \fP"
+.ti -1c
+.RI "\fBScore\fP (const \fBScore\fP &)"
+.br
+.RI "\fIprivate copy constructor \fP"
+.ti -1c
+.RI "\fBScore\fP ()"
+.br
+.RI "\fI\fBScore\fP's constructor private\&. \fP"
+.ti -1c
+.RI "\fB~Score\fP ()"
+.br
+.RI "\fI\fBScore\fP's destructor private\&. \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::ofstream \fBm_wFile\fP"
+.br
+.ti -1c
+.RI "std::ifstream \fBm_rFile\fP"
+.br
+.ti -1c
+.RI "std::map< std::string const, unsigned int > \fBm_score\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBScore\fP \fBm_instance\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Save/Load score\&. 
+
+Save or Load scores file (scores)\&. It's a singleton so there is an unique instance 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Score::Score (const \fBScore\fP &)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+private copy constructor Unused 
+.SS "Score::Score ()\fC [private]\fP"
+
+.PP
+\fBScore\fP's constructor private\&. Used to create a static instance (singleton) The file 'scores' will be opened and data will be extracted (in tokens)\&. 
+.SS "Score::~Score ()\fC [private]\fP"
+
+.PP
+\fBScore\fP's destructor private\&. It will close our streams and we willl rewrite into our scores' log 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Score::addScore (std::string const & player, unsigned int score)"
+
+.PP
+add a player's score If the player is new then create a new value in our map, else add the score
+.PP
+\fBParameters:\fP
+.RS 4
+\fIplayer\fP player's name 
+.br
+\fIscore\fP score to add 
+.RE
+.PP
+
+.SS "static \fBScore\fP& Score::getInstance ()\fC [static]\fP"
+
+.PP
+Used to return the current instance\&. Our class is a singleton so we need a function to use it
+.PP
+\fBReturns:\fP
+.RS 4
+the current class's instance 
+.RE
+.PP
+
+.SS "unsigned int Score::getPlayerScore (std::string const & player)"
+
+.PP
+get the player's score If player doens't exist it will return 0
+.PP
+player's name 
+.PP
+\fBReturns:\fP
+.RS 4
+player's score 
+.RE
+.PP
+
+.SS "std::vector< std::pair<std::string, unsigned int > > Score::getTopN (int n)"
+
+.PP
+get top N players Get a top N players with N <= map's size
+.PP
+\fBBug\fP
+.RS 4
+a map sort are entries so we have to use a vector instead 
+.PP
+unable to create a pair with a const so we'll use std::string alone
+.RE
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIn\fP number players to return 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new vector with n players 
+.RE
+.PP
+
+.SS "\fBScore\fP& Score::operator= (const \fBScore\fP &)\fC [private]\fP"
+
+.PP
+private = operator to unable it Unused and undefined 
+.SS "void Score::showScore () const"
+
+.PP
+show the map score It will display the score in stdout 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBScore\fP Score::m_instance\fC [static]\fP, \fC [private]\fP"
+used in singleton 
+.SS "std::ifstream Score::m_rFile\fC [private]\fP"
+stream to read from our file 
+.SS "std::map<std::string const, unsigned int> Score::m_score\fC [private]\fP"
+map to store user and score 
+.SS "std::ofstream Score::m_wFile\fC [private]\fP"
+stream to write into our file 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

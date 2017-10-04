@@ -1,0 +1,9 @@
+digraph "annexes/xml" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_5f68467203ae247211b4b892d1eb974d {
+    graph [ bgcolor="#ddddee", pencolor="black", label="annexes" fontname="Helvetica", fontsize="10", URL="dir_5f68467203ae247211b4b892d1eb974d.html"]
+  dir_1fb3124171196a1246034d9f6173b38f [shape=box, label="xml", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_1fb3124171196a1246034d9f6173b38f.html"];
+  }
+}
