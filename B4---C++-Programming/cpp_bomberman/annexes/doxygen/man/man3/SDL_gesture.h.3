@@ -1,0 +1,54 @@
+.TH "lib/gdl/includes/SDL_gesture.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_gesture.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'SDL_video\&.h'\fP
+.br
+\fC#include 'SDL_touch\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBSint64\fP \fBSDL_GestureID\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_RecordGesture\fP (SDL_TouchID touchId)"
+.br
+.RI "\fIBegin Recording a gesture on the specified touch, or all touches (-1) \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SaveAllDollarTemplates\fP (\fBSDL_RWops\fP *dst)"
+.br
+.RI "\fISave all currently loaded Dollar Gesture templates\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SaveDollarTemplate\fP (SDL_GestureID gestureId, \fBSDL_RWops\fP *dst)"
+.br
+.RI "\fISave a currently loaded Dollar Gesture template\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_LoadDollarTemplates\fP (SDL_TouchID touchId, \fBSDL_RWops\fP *src)"
+.br
+.RI "\fILoad Dollar Gesture templates from a file\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL gesture event handling\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

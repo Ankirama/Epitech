@@ -1,0 +1,76 @@
+.TH "tinyxml2::XMLUtil" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tinyxml2::XMLUtil \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const char * \fBSkipWhiteSpace\fP (const char *p)"
+.br
+.ti -1c
+.RI "static char * \fBSkipWhiteSpace\fP (char *p)"
+.br
+.ti -1c
+.RI "static bool \fBIsWhiteSpace\fP (char p)"
+.br
+.ti -1c
+.RI "static bool \fBIsNameStartChar\fP (unsigned char ch)"
+.br
+.ti -1c
+.RI "static bool \fBIsNameChar\fP (unsigned char ch)"
+.br
+.ti -1c
+.RI "static bool \fBStringEqual\fP (const char *p, const char *q, int nChar=INT_MAX)"
+.br
+.ti -1c
+.RI "static bool \fBIsUTF8Continuation\fP (const char p)"
+.br
+.ti -1c
+.RI "static const char * \fBReadBOM\fP (const char *p, bool *hasBOM)"
+.br
+.ti -1c
+.RI "static const char * \fBGetCharacterRef\fP (const char *p, char *value, int *length)"
+.br
+.ti -1c
+.RI "static void \fBConvertUTF32ToUTF8\fP (unsigned long input, char *output, int *length)"
+.br
+.ti -1c
+.RI "static void \fBToStr\fP (int v, char *buffer, int bufferSize)"
+.br
+.ti -1c
+.RI "static void \fBToStr\fP (unsigned v, char *buffer, int bufferSize)"
+.br
+.ti -1c
+.RI "static void \fBToStr\fP (bool v, char *buffer, int bufferSize)"
+.br
+.ti -1c
+.RI "static void \fBToStr\fP (float v, char *buffer, int bufferSize)"
+.br
+.ti -1c
+.RI "static void \fBToStr\fP (double v, char *buffer, int bufferSize)"
+.br
+.ti -1c
+.RI "static bool \fBToInt\fP (const char *str, int *value)"
+.br
+.ti -1c
+.RI "static bool \fBToUnsigned\fP (const char *str, unsigned *value)"
+.br
+.ti -1c
+.RI "static bool \fBToBool\fP (const char *str, bool *value)"
+.br
+.ti -1c
+.RI "static bool \fBToFloat\fP (const char *str, float *value)"
+.br
+.ti -1c
+.RI "static bool \fBToDouble\fP (const char *str, double *value)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

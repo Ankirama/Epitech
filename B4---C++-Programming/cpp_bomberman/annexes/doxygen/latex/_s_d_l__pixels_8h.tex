@@ -1,0 +1,499 @@
+\hypertarget{_s_d_l__pixels_8h}{}\section{lib/gdl/includes/\+S\+D\+L\+\_\+pixels.h File Reference}
+\label{_s_d_l__pixels_8h}\index{lib/gdl/includes/\+S\+D\+L\+\_\+pixels.\+h@{lib/gdl/includes/\+S\+D\+L\+\_\+pixels.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+Include dependency graph for S\+D\+L\+\_\+pixels.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s_d_l___color}{S\+D\+L\+\_\+\+Color}
+\item 
+struct \hyperlink{struct_s_d_l___palette}{S\+D\+L\+\_\+\+Palette}
+\item 
+struct \hyperlink{struct_s_d_l___pixel_format}{S\+D\+L\+\_\+\+Pixel\+Format}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__pixels_8h_a7dc1903b18ca972a3676628782873f71}{}\#define {\bfseries S\+D\+L\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+P\+I\+X\+E\+L\+F\+O\+U\+R\+C\+C}(A,  B,  C,  D)~S\+D\+L\+\_\+\+F\+O\+U\+R\+C\+C(A, B, C, D)\label{_s_d_l__pixels_8h_a7dc1903b18ca972a3676628782873f71}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T}(type,  order,  layout,  bits,  bytes)
+\item 
+\hypertarget{_s_d_l__pixels_8h_a11eb1848a5ecbc9033855a3d7fabcf83}{}\#define {\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+L\+A\+G}(X)~(((X) $>$$>$ 28) \& 0x0\+F)\label{_s_d_l__pixels_8h_a11eb1848a5ecbc9033855a3d7fabcf83}
+
+\item 
+\hypertarget{_s_d_l__pixels_8h_a9a13feff26a3bed0e04a74f503b0397e}{}\#define {\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+T\+Y\+P\+E}(X)~(((X) $>$$>$ 24) \& 0x0\+F)\label{_s_d_l__pixels_8h_a9a13feff26a3bed0e04a74f503b0397e}
+
+\item 
+\hypertarget{_s_d_l__pixels_8h_a38b57b9e01151753588d55a4e2438856}{}\#define {\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+O\+R\+D\+E\+R}(X)~(((X) $>$$>$ 20) \& 0x0\+F)\label{_s_d_l__pixels_8h_a38b57b9e01151753588d55a4e2438856}
+
+\item 
+\hypertarget{_s_d_l__pixels_8h_a850007b089215fe1d5e0efa5e4e73d72}{}\#define {\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+L\+A\+Y\+O\+U\+T}(X)~(((X) $>$$>$ 16) \& 0x0\+F)\label{_s_d_l__pixels_8h_a850007b089215fe1d5e0efa5e4e73d72}
+
+\item 
+\hypertarget{_s_d_l__pixels_8h_a4637c50b3383aa176eac2d267684e75d}{}\#define {\bfseries S\+D\+L\+\_\+\+B\+I\+T\+S\+P\+E\+R\+P\+I\+X\+E\+L}(X)~(((X) $>$$>$ 8) \& 0x\+F\+F)\label{_s_d_l__pixels_8h_a4637c50b3383aa176eac2d267684e75d}
+
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+B\+Y\+T\+E\+S\+P\+E\+R\+P\+I\+X\+E\+L}(X)
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+N\+D\+E\+X\+E\+D}(format)
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+L\+P\+H\+A}(format)
+\item 
+\hypertarget{_s_d_l__pixels_8h_ac2a8124d1f6842ddf7ef5cc01c760818}{}\#define {\bfseries S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+F\+O\+U\+R\+C\+C}(format)~((format) \&\& (S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+L\+A\+G(format) != 1))\label{_s_d_l__pixels_8h_ac2a8124d1f6842ddf7ef5cc01c760818}
+
+\item 
+\hypertarget{_s_d_l__pixels_8h_aceb6cb42789d5646f5206f02a07a36dc}{}\#define {\bfseries S\+D\+L\+\_\+\+Colour}~\hyperlink{struct_s_d_l___color}{S\+D\+L\+\_\+\+Color}\label{_s_d_l__pixels_8h_aceb6cb42789d5646f5206f02a07a36dc}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Transparency definitions}\par
+{\em These define alpha as the opacity of a surface. }\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__pixels_8h_a5d933eb0233ca33d598800f33ef43376}{}\#define {\bfseries S\+D\+L\+\_\+\+A\+L\+P\+H\+A\+\_\+\+O\+P\+A\+Q\+U\+E}~255\label{_s_d_l__pixels_8h_a5d933eb0233ca33d598800f33ef43376}
+
+\item 
+\hypertarget{_s_d_l__pixels_8h_a604d4b3b28add80eb4824ffd083d3ef4}{}\#define {\bfseries S\+D\+L\+\_\+\+A\+L\+P\+H\+A\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T}~0\label{_s_d_l__pixels_8h_a604d4b3b28add80eb4824ffd083d3ef4}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__pixels_8h_a6c62a9e85197f93df21a6a4a9d36eb25}{}typedef struct \hyperlink{struct_s_d_l___color}{S\+D\+L\+\_\+\+Color} {\bfseries S\+D\+L\+\_\+\+Color}\label{_s_d_l__pixels_8h_a6c62a9e85197f93df21a6a4a9d36eb25}
+
+\item 
+\hypertarget{_s_d_l__pixels_8h_a801e2814517a3e61daf86403d4dd1c6e}{}typedef struct \hyperlink{struct_s_d_l___palette}{S\+D\+L\+\_\+\+Palette} {\bfseries S\+D\+L\+\_\+\+Palette}\label{_s_d_l__pixels_8h_a801e2814517a3e61daf86403d4dd1c6e}
+
+\item 
+typedef struct \hyperlink{struct_s_d_l___pixel_format}{S\+D\+L\+\_\+\+Pixel\+Format} \hyperlink{_s_d_l__pixels_8h_a9e5dc2921ca058ecb7cbe15ff38248e2}{S\+D\+L\+\_\+\+Pixel\+Format}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+T\+Y\+P\+E\+\_\+\+U\+N\+K\+N\+O\+W\+N}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+T\+Y\+P\+E\+\_\+\+I\+N\+D\+E\+X1}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+T\+Y\+P\+E\+\_\+\+I\+N\+D\+E\+X4}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+T\+Y\+P\+E\+\_\+\+I\+N\+D\+E\+X8}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+T\+Y\+P\+E\+\_\+\+P\+A\+C\+K\+E\+D8}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+T\+Y\+P\+E\+\_\+\+P\+A\+C\+K\+E\+D16}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+T\+Y\+P\+E\+\_\+\+P\+A\+C\+K\+E\+D32}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+T\+Y\+P\+E\+\_\+\+A\+R\+R\+A\+Y\+U8}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+T\+Y\+P\+E\+\_\+\+A\+R\+R\+A\+Y\+U16}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+T\+Y\+P\+E\+\_\+\+A\+R\+R\+A\+Y\+U32}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+T\+Y\+P\+E\+\_\+\+A\+R\+R\+A\+Y\+F16}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+T\+Y\+P\+E\+\_\+\+A\+R\+R\+A\+Y\+F32}
+ \}
+\item 
+enum \{ {\bfseries S\+D\+L\+\_\+\+B\+I\+T\+M\+A\+P\+O\+R\+D\+E\+R\+\_\+\+N\+O\+N\+E}, 
+{\bfseries S\+D\+L\+\_\+\+B\+I\+T\+M\+A\+P\+O\+R\+D\+E\+R\+\_\+4321}, 
+{\bfseries S\+D\+L\+\_\+\+B\+I\+T\+M\+A\+P\+O\+R\+D\+E\+R\+\_\+1234}
+ \}
+\item 
+enum \{ \\*
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+O\+R\+D\+E\+R\+\_\+\+N\+O\+N\+E}, 
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+O\+R\+D\+E\+R\+\_\+\+X\+R\+G\+B}, 
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+O\+R\+D\+E\+R\+\_\+\+R\+G\+B\+X}, 
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+O\+R\+D\+E\+R\+\_\+\+A\+R\+G\+B}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+O\+R\+D\+E\+R\+\_\+\+R\+G\+B\+A}, 
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+O\+R\+D\+E\+R\+\_\+\+X\+B\+G\+R}, 
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+O\+R\+D\+E\+R\+\_\+\+B\+G\+R\+X}, 
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+O\+R\+D\+E\+R\+\_\+\+A\+B\+G\+R}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+O\+R\+D\+E\+R\+\_\+\+B\+G\+R\+A}
+ \}
+\item 
+enum \{ \\*
+{\bfseries S\+D\+L\+\_\+\+A\+R\+R\+A\+Y\+O\+R\+D\+E\+R\+\_\+\+N\+O\+N\+E}, 
+{\bfseries S\+D\+L\+\_\+\+A\+R\+R\+A\+Y\+O\+R\+D\+E\+R\+\_\+\+R\+G\+B}, 
+{\bfseries S\+D\+L\+\_\+\+A\+R\+R\+A\+Y\+O\+R\+D\+E\+R\+\_\+\+R\+G\+B\+A}, 
+{\bfseries S\+D\+L\+\_\+\+A\+R\+R\+A\+Y\+O\+R\+D\+E\+R\+\_\+\+A\+R\+G\+B}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+A\+R\+R\+A\+Y\+O\+R\+D\+E\+R\+\_\+\+B\+G\+R}, 
+{\bfseries S\+D\+L\+\_\+\+A\+R\+R\+A\+Y\+O\+R\+D\+E\+R\+\_\+\+B\+G\+R\+A}, 
+{\bfseries S\+D\+L\+\_\+\+A\+R\+R\+A\+Y\+O\+R\+D\+E\+R\+\_\+\+A\+B\+G\+R}
+ \}
+\item 
+enum \{ \\*
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+L\+A\+Y\+O\+U\+T\+\_\+\+N\+O\+N\+E}, 
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+L\+A\+Y\+O\+U\+T\+\_\+332}, 
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+L\+A\+Y\+O\+U\+T\+\_\+4444}, 
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+L\+A\+Y\+O\+U\+T\+\_\+1555}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+L\+A\+Y\+O\+U\+T\+\_\+5551}, 
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+L\+A\+Y\+O\+U\+T\+\_\+565}, 
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+L\+A\+Y\+O\+U\+T\+\_\+8888}, 
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+L\+A\+Y\+O\+U\+T\+\_\+2101010}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+P\+A\+C\+K\+E\+D\+L\+A\+Y\+O\+U\+T\+\_\+1010102}
+ \}
+\item 
+enum \{ \\*
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+N\+D\+E\+X1\+L\+S\+B}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+N\+D\+E\+X1\+M\+S\+B}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+N\+D\+E\+X4\+L\+S\+B}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+N\+D\+E\+X4\+M\+S\+B}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+N\+D\+E\+X8}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+R\+G\+B332}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+R\+G\+B444}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+R\+G\+B555}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+B\+G\+R555}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+R\+G\+B4444}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+R\+G\+B\+A4444}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+B\+G\+R4444}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+B\+G\+R\+A4444}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+R\+G\+B1555}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+R\+G\+B\+A5551}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+B\+G\+R1555}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+B\+G\+R\+A5551}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+R\+G\+B565}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+B\+G\+R565}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+R\+G\+B24}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+B\+G\+R24}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+R\+G\+B888}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+R\+G\+B\+X8888}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+B\+G\+R888}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+B\+G\+R\+X8888}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+R\+G\+B8888}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+R\+G\+B\+A8888}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+B\+G\+R8888}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+B\+G\+R\+A8888}, 
+{\bfseries S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+R\+G\+B2101010}, 
+\hyperlink{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a706edeff2993aaabae0e8a85dd456d23}{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+V12}, 
+\\*
+\hyperlink{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a9d5d930c6560d21d02be1d3738160e08}{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+Y\+U\+V}, 
+\hyperlink{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a87d182ad80264610243c4bdbba13b456}{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+U\+Y2}, 
+\hyperlink{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a69bd11cf739b7e762d5103555fe85094}{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+U\+Y\+V\+Y}, 
+\hyperlink{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a0fba10d58b6af54319f3653724a54a29}{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+V\+Y\+U} =
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__pixels_8h_abc7a949ed918d285449d6a8fcc2b0321}{}D\+E\+C\+L\+S\+P\+E\+C const char $\ast$S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__pixels_8h_abc7a949ed918d285449d6a8fcc2b0321}{S\+D\+L\+\_\+\+Get\+Pixel\+Format\+Name} (\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} format)\label{_s_d_l__pixels_8h_abc7a949ed918d285449d6a8fcc2b0321}
+
+\begin{DoxyCompactList}\small\item\em Get the human readable name of a pixel format. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+E\+C S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__pixels_8h_aabce46ecd37dd031b6b9a1b2d64f962b}{S\+D\+L\+\_\+\+Pixel\+Format\+Enum\+To\+Masks} (\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} format, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} $\ast$bpp, \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} $\ast$Rmask, \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} $\ast$Gmask, \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} $\ast$Bmask, \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} $\ast$Amask)
+\begin{DoxyCompactList}\small\item\em Convert one of the enumerated pixel formats to a bpp and R\+G\+B\+A masks. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__pixels_8h_a60fede85fba7bdca549f46b3f6372593}{S\+D\+L\+\_\+\+Masks\+To\+Pixel\+Format\+Enum} (\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} bpp, \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} Rmask, \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} Gmask, \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} Bmask, \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} Amask)
+\begin{DoxyCompactList}\small\item\em Convert a bpp and R\+G\+B\+A masks to an enumerated pixel format. \end{DoxyCompactList}\item 
+\hypertarget{_s_d_l__pixels_8h_a95972bb1fcfc9ddde496cd9ce13c7edd}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{struct_s_d_l___pixel_format}{S\+D\+L\+\_\+\+Pixel\+Format} $\ast$S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__pixels_8h_a95972bb1fcfc9ddde496cd9ce13c7edd}{S\+D\+L\+\_\+\+Alloc\+Format} (\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} pixel\+\_\+format)\label{_s_d_l__pixels_8h_a95972bb1fcfc9ddde496cd9ce13c7edd}
+
+\begin{DoxyCompactList}\small\item\em Create an \hyperlink{struct_s_d_l___pixel_format}{S\+D\+L\+\_\+\+Pixel\+Format} structure from a pixel format enum. \end{DoxyCompactList}\item 
+\hypertarget{_s_d_l__pixels_8h_a6b40e44d9a48dfecde34428a78648f8a}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__pixels_8h_a6b40e44d9a48dfecde34428a78648f8a}{S\+D\+L\+\_\+\+Free\+Format} (\hyperlink{struct_s_d_l___pixel_format}{S\+D\+L\+\_\+\+Pixel\+Format} $\ast$format)\label{_s_d_l__pixels_8h_a6b40e44d9a48dfecde34428a78648f8a}
+
+\begin{DoxyCompactList}\small\item\em Free an \hyperlink{struct_s_d_l___pixel_format}{S\+D\+L\+\_\+\+Pixel\+Format} structure. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+E\+C \hyperlink{struct_s_d_l___palette}{S\+D\+L\+\_\+\+Palette} $\ast$S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__pixels_8h_a9824eb994b2431017b57fcc1b6a8055c}{S\+D\+L\+\_\+\+Alloc\+Palette} (\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} ncolors)
+\begin{DoxyCompactList}\small\item\em Create a palette structure with the specified number of color entries. \end{DoxyCompactList}\item 
+\hypertarget{_s_d_l__pixels_8h_ae7835e283254c53bed7e7b3d2287d3b6}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__pixels_8h_ae7835e283254c53bed7e7b3d2287d3b6}{S\+D\+L\+\_\+\+Set\+Pixel\+Format\+Palette} (\hyperlink{struct_s_d_l___pixel_format}{S\+D\+L\+\_\+\+Pixel\+Format} $\ast$format, \hyperlink{struct_s_d_l___palette}{S\+D\+L\+\_\+\+Palette} $\ast$palette)\label{_s_d_l__pixels_8h_ae7835e283254c53bed7e7b3d2287d3b6}
+
+\begin{DoxyCompactList}\small\item\em Set the palette for a pixel format structure. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__pixels_8h_a51164f5ac7a7b2b4117ff0e0f256eaff}{S\+D\+L\+\_\+\+Set\+Palette\+Colors} (\hyperlink{struct_s_d_l___palette}{S\+D\+L\+\_\+\+Palette} $\ast$palette, const \hyperlink{struct_s_d_l___color}{S\+D\+L\+\_\+\+Color} $\ast$colors, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} firstcolor, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} ncolors)
+\begin{DoxyCompactList}\small\item\em Set a range of colors in a palette. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__pixels_8h_a31d328d11619b5f5ed0a14612cbb429a}{S\+D\+L\+\_\+\+Free\+Palette} (\hyperlink{struct_s_d_l___palette}{S\+D\+L\+\_\+\+Palette} $\ast$palette)
+\begin{DoxyCompactList}\small\item\em Free a palette created with \hyperlink{_s_d_l__pixels_8h_a9824eb994b2431017b57fcc1b6a8055c}{S\+D\+L\+\_\+\+Alloc\+Palette()}. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__pixels_8h_a157cf64c250c578722b939ea11a85b39}{S\+D\+L\+\_\+\+Map\+R\+G\+B} (const \hyperlink{struct_s_d_l___pixel_format}{S\+D\+L\+\_\+\+Pixel\+Format} $\ast$format, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} r, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} g, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} b)
+\begin{DoxyCompactList}\small\item\em Maps an R\+G\+B triple to an opaque pixel value for a given pixel format. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__pixels_8h_a8cc5000a066e052d4d36070ea91ac942}{S\+D\+L\+\_\+\+Map\+R\+G\+B\+A} (const \hyperlink{struct_s_d_l___pixel_format}{S\+D\+L\+\_\+\+Pixel\+Format} $\ast$format, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} r, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} g, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} b, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} a)
+\begin{DoxyCompactList}\small\item\em Maps an R\+G\+B\+A quadruple to a pixel value for a given pixel format. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__pixels_8h_a26dc44b5dac11825abb4b59ac5af76e3}{S\+D\+L\+\_\+\+Get\+R\+G\+B} (\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} pixel, const \hyperlink{struct_s_d_l___pixel_format}{S\+D\+L\+\_\+\+Pixel\+Format} $\ast$format, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} $\ast$r, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} $\ast$g, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Get the R\+G\+B components from a pixel of the specified format. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__pixels_8h_a02d675543e9c5bb72232a08a529ae64e}{S\+D\+L\+\_\+\+Get\+R\+G\+B\+A} (\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} pixel, const \hyperlink{struct_s_d_l___pixel_format}{S\+D\+L\+\_\+\+Pixel\+Format} $\ast$format, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} $\ast$r, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} $\ast$g, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} $\ast$b, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} $\ast$a)
+\begin{DoxyCompactList}\small\item\em Get the R\+G\+B\+A components from a pixel of the specified format. \end{DoxyCompactList}\item 
+\hypertarget{_s_d_l__pixels_8h_a768b7ed72549e36a26a36267772906fb}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__pixels_8h_a768b7ed72549e36a26a36267772906fb}{S\+D\+L\+\_\+\+Calculate\+Gamma\+Ramp} (float gamma, \hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} $\ast$ramp)\label{_s_d_l__pixels_8h_a768b7ed72549e36a26a36267772906fb}
+
+\begin{DoxyCompactList}\small\item\em Calculate a 256 entry gamma ramp for a gamma value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header for the enumerated pixel format definitions. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_s_d_l__pixels_8h_a0a65fc19d5122dd3c544f283553ad42c}{}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+B\+Y\+T\+E\+S\+P\+E\+R\+P\+I\+X\+E\+L@{S\+D\+L\+\_\+\+B\+Y\+T\+E\+S\+P\+E\+R\+P\+I\+X\+E\+L}}
+\index{S\+D\+L\+\_\+\+B\+Y\+T\+E\+S\+P\+E\+R\+P\+I\+X\+E\+L@{S\+D\+L\+\_\+\+B\+Y\+T\+E\+S\+P\+E\+R\+P\+I\+X\+E\+L}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+B\+Y\+T\+E\+S\+P\+E\+R\+P\+I\+X\+E\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+B\+Y\+T\+E\+S\+P\+E\+R\+P\+I\+X\+E\+L(
+\begin{DoxyParamCaption}
+\item[{}]{X}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__pixels_8h_a0a65fc19d5122dd3c544f283553ad42c}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(SDL\_ISPIXELFORMAT\_FOURCC(X) ? \(\backslash\)
+        ((((X) == \hyperlink{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a87d182ad80264610243c4bdbba13b456}{SDL\_PIXELFORMAT\_YUY2}) || \(\backslash\)
+          ((X) == \hyperlink{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a69bd11cf739b7e762d5103555fe85094}{SDL\_PIXELFORMAT\_UYVY}) || \(\backslash\)
+          ((X) == \hyperlink{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a0fba10d58b6af54319f3653724a54a29}{SDL\_PIXELFORMAT\_YVYU})) ? 2 : 1) : (((X) >> 0) & 0xFF))
+\end{DoxyCode}
+\hypertarget{_s_d_l__pixels_8h_a99163b258b6b49ab19845cf800a803f8}{}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T@{S\+D\+L\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T}}
+\index{S\+D\+L\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T@{S\+D\+L\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T(
+\begin{DoxyParamCaption}
+\item[{}]{type, }
+\item[{}]{order, }
+\item[{}]{layout, }
+\item[{}]{bits, }
+\item[{}]{bytes}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__pixels_8h_a99163b258b6b49ab19845cf800a803f8}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((1 << 28) | ((type) << 24) | ((order) << 20) | ((layout) << 16) | \(\backslash\)
+     ((bits) << 8) | ((bytes) << 0))
+\end{DoxyCode}
+\hypertarget{_s_d_l__pixels_8h_a4d4ef3b8864a55ebc83539a6d0c6b15d}{}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+L\+P\+H\+A@{S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+L\+P\+H\+A}}
+\index{S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+L\+P\+H\+A@{S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+L\+P\+H\+A}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+L\+P\+H\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+L\+P\+H\+A(
+\begin{DoxyParamCaption}
+\item[{}]{format}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__pixels_8h_a4d4ef3b8864a55ebc83539a6d0c6b15d}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(!SDL\_ISPIXELFORMAT\_FOURCC(format) && \(\backslash\)
+     ((SDL\_PIXELORDER(format) == SDL\_PACKEDORDER\_ARGB) || \(\backslash\)
+      (SDL\_PIXELORDER(format) == SDL\_PACKEDORDER\_RGBA) || \(\backslash\)
+      (SDL\_PIXELORDER(format) == SDL\_PACKEDORDER\_ABGR) || \(\backslash\)
+      (SDL\_PIXELORDER(format) == SDL\_PACKEDORDER\_BGRA)))
+\end{DoxyCode}
+\hypertarget{_s_d_l__pixels_8h_a8bbf98a12987b0b22864743efb4b136e}{}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+N\+D\+E\+X\+E\+D@{S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+N\+D\+E\+X\+E\+D}}
+\index{S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+N\+D\+E\+X\+E\+D@{S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+N\+D\+E\+X\+E\+D}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+N\+D\+E\+X\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+D\+L\+\_\+\+I\+S\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+N\+D\+E\+X\+E\+D(
+\begin{DoxyParamCaption}
+\item[{}]{format}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__pixels_8h_a8bbf98a12987b0b22864743efb4b136e}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(!SDL\_ISPIXELFORMAT\_FOURCC(format) && \(\backslash\)
+     ((SDL\_PIXELTYPE(format) == SDL\_PIXELTYPE\_INDEX1) || \(\backslash\)
+      (SDL\_PIXELTYPE(format) == SDL\_PIXELTYPE\_INDEX4) || \(\backslash\)
+      (SDL\_PIXELTYPE(format) == SDL\_PIXELTYPE\_INDEX8)))
+\end{DoxyCode}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_s_d_l__pixels_8h_a9e5dc2921ca058ecb7cbe15ff38248e2}{}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+Pixel\+Format@{S\+D\+L\+\_\+\+Pixel\+Format}}
+\index{S\+D\+L\+\_\+\+Pixel\+Format@{S\+D\+L\+\_\+\+Pixel\+Format}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Pixel\+Format}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+Pixel\+Format}  {\bf S\+D\+L\+\_\+\+Pixel\+Format}}\label{_s_d_l__pixels_8h_a9e5dc2921ca058ecb7cbe15ff38248e2}
+\begin{DoxyNote}{Note}
+Everything in the pixel format structure is read-\/only. 
+\end{DoxyNote}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_s_d_l__pixels_8h_a4caf8d8f829279fba122163d961608a4}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_s_d_l__pixels_8h_a4caf8d8f829279fba122163d961608a4}
+Pixel type. \hypertarget{_s_d_l__pixels_8h_a96a58e29e8dbf2b5bdeb775cba46556e}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_s_d_l__pixels_8h_a96a58e29e8dbf2b5bdeb775cba46556e}
+Bitmap pixel order, high bit -\/$>$ low bit. \hypertarget{_s_d_l__pixels_8h_ab48899087cc647f0f791ed0c459adc53}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_s_d_l__pixels_8h_ab48899087cc647f0f791ed0c459adc53}
+Packed component order, high bit -\/$>$ low bit. \hypertarget{_s_d_l__pixels_8h_a458e651af6690959efa2afb96be7d609}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_s_d_l__pixels_8h_a458e651af6690959efa2afb96be7d609}
+Array component order, low byte -\/$>$ high byte. \hypertarget{_s_d_l__pixels_8h_a1f9aebf1de3ebbf4283a4dcf73308562}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_s_d_l__pixels_8h_a1f9aebf1de3ebbf4283a4dcf73308562}
+Packed component layout. \hypertarget{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+V12@{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+V12}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+V12@{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+V12}}\item[{\em 
+\hypertarget{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a706edeff2993aaabae0e8a85dd456d23}{}S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+V12\label{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a706edeff2993aaabae0e8a85dd456d23}
+}]Planar mode\+: Y + V + U (3 planes) \index{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+Y\+U\+V@{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+Y\+U\+V}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+Y\+U\+V@{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+Y\+U\+V}}\item[{\em 
+\hypertarget{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a9d5d930c6560d21d02be1d3738160e08}{}S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+I\+Y\+U\+V\label{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a9d5d930c6560d21d02be1d3738160e08}
+}]Planar mode\+: Y + U + V (3 planes) \index{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+U\+Y2@{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+U\+Y2}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+U\+Y2@{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+U\+Y2}}\item[{\em 
+\hypertarget{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a87d182ad80264610243c4bdbba13b456}{}S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+U\+Y2\label{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a87d182ad80264610243c4bdbba13b456}
+}]Packed mode\+: Y0+\+U0+\+Y1+\+V0 (1 plane) \index{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+U\+Y\+V\+Y@{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+U\+Y\+V\+Y}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+U\+Y\+V\+Y@{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+U\+Y\+V\+Y}}\item[{\em 
+\hypertarget{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a69bd11cf739b7e762d5103555fe85094}{}S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+U\+Y\+V\+Y\label{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a69bd11cf739b7e762d5103555fe85094}
+}]Packed mode\+: U0+\+Y0+\+V0+\+Y1 (1 plane) \index{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+V\+Y\+U@{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+V\+Y\+U}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+V\+Y\+U@{S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+V\+Y\+U}}\item[{\em 
+\hypertarget{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a0fba10d58b6af54319f3653724a54a29}{}S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+Y\+V\+Y\+U\label{_s_d_l__pixels_8h_a77867ab4129f63159b37bca3b652a798a0fba10d58b6af54319f3653724a54a29}
+}]Packed mode\+: Y0+\+V0+\+Y1+\+U0 (1 plane) \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{_s_d_l__pixels_8h_a9824eb994b2431017b57fcc1b6a8055c}{}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+Alloc\+Palette@{S\+D\+L\+\_\+\+Alloc\+Palette}}
+\index{S\+D\+L\+\_\+\+Alloc\+Palette@{S\+D\+L\+\_\+\+Alloc\+Palette}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Alloc\+Palette}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C {\bf S\+D\+L\+\_\+\+Palette}$\ast$ S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Alloc\+Palette (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{ncolors}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__pixels_8h_a9824eb994b2431017b57fcc1b6a8055c}
+
+
+Create a palette structure with the specified number of color entries. 
+
+\begin{DoxyReturn}{Returns}
+A new palette, or N\+U\+L\+L if there wasn\textquotesingle{}t enough memory.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The palette entries are initialized to white.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_s_d_l__pixels_8h_a31d328d11619b5f5ed0a14612cbb429a}{S\+D\+L\+\_\+\+Free\+Palette()} 
+\end{DoxySeeAlso}
+\hypertarget{_s_d_l__pixels_8h_a31d328d11619b5f5ed0a14612cbb429a}{}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+Free\+Palette@{S\+D\+L\+\_\+\+Free\+Palette}}
+\index{S\+D\+L\+\_\+\+Free\+Palette@{S\+D\+L\+\_\+\+Free\+Palette}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Free\+Palette}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C {\bf void} S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Free\+Palette (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Palette} $\ast$}]{palette}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__pixels_8h_a31d328d11619b5f5ed0a14612cbb429a}
+
+
+Free a palette created with \hyperlink{_s_d_l__pixels_8h_a9824eb994b2431017b57fcc1b6a8055c}{S\+D\+L\+\_\+\+Alloc\+Palette()}. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_s_d_l__pixels_8h_a9824eb994b2431017b57fcc1b6a8055c}{S\+D\+L\+\_\+\+Alloc\+Palette()} 
+\end{DoxySeeAlso}
+\hypertarget{_s_d_l__pixels_8h_a26dc44b5dac11825abb4b59ac5af76e3}{}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+Get\+R\+G\+B@{S\+D\+L\+\_\+\+Get\+R\+G\+B}}
+\index{S\+D\+L\+\_\+\+Get\+R\+G\+B@{S\+D\+L\+\_\+\+Get\+R\+G\+B}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Get\+R\+G\+B}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C {\bf void} S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Get\+R\+G\+B (
+\begin{DoxyParamCaption}
+\item[{{\bf Uint32}}]{pixel, }
+\item[{const {\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$}]{format, }
+\item[{{\bf Uint8} $\ast$}]{r, }
+\item[{{\bf Uint8} $\ast$}]{g, }
+\item[{{\bf Uint8} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__pixels_8h_a26dc44b5dac11825abb4b59ac5af76e3}
+
+
+Get the R\+G\+B components from a pixel of the specified format. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_s_d_l__pixels_8h_a02d675543e9c5bb72232a08a529ae64e}{S\+D\+L\+\_\+\+Get\+R\+G\+B\+A} 
+\end{DoxySeeAlso}
+\hypertarget{_s_d_l__pixels_8h_a02d675543e9c5bb72232a08a529ae64e}{}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+Get\+R\+G\+B\+A@{S\+D\+L\+\_\+\+Get\+R\+G\+B\+A}}
+\index{S\+D\+L\+\_\+\+Get\+R\+G\+B\+A@{S\+D\+L\+\_\+\+Get\+R\+G\+B\+A}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Get\+R\+G\+B\+A}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C {\bf void} S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Get\+R\+G\+B\+A (
+\begin{DoxyParamCaption}
+\item[{{\bf Uint32}}]{pixel, }
+\item[{const {\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$}]{format, }
+\item[{{\bf Uint8} $\ast$}]{r, }
+\item[{{\bf Uint8} $\ast$}]{g, }
+\item[{{\bf Uint8} $\ast$}]{b, }
+\item[{{\bf Uint8} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__pixels_8h_a02d675543e9c5bb72232a08a529ae64e}
+
+
+Get the R\+G\+B\+A components from a pixel of the specified format. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_s_d_l__pixels_8h_a26dc44b5dac11825abb4b59ac5af76e3}{S\+D\+L\+\_\+\+Get\+R\+G\+B} 
+\end{DoxySeeAlso}
+\hypertarget{_s_d_l__pixels_8h_a157cf64c250c578722b939ea11a85b39}{}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+Map\+R\+G\+B@{S\+D\+L\+\_\+\+Map\+R\+G\+B}}
+\index{S\+D\+L\+\_\+\+Map\+R\+G\+B@{S\+D\+L\+\_\+\+Map\+R\+G\+B}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Map\+R\+G\+B}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C {\bf Uint32} S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Map\+R\+G\+B (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$}]{format, }
+\item[{{\bf Uint8}}]{r, }
+\item[{{\bf Uint8}}]{g, }
+\item[{{\bf Uint8}}]{b}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__pixels_8h_a157cf64c250c578722b939ea11a85b39}
+
+
+Maps an R\+G\+B triple to an opaque pixel value for a given pixel format. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_s_d_l__pixels_8h_a8cc5000a066e052d4d36070ea91ac942}{S\+D\+L\+\_\+\+Map\+R\+G\+B\+A} 
+\end{DoxySeeAlso}
+\hypertarget{_s_d_l__pixels_8h_a8cc5000a066e052d4d36070ea91ac942}{}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+Map\+R\+G\+B\+A@{S\+D\+L\+\_\+\+Map\+R\+G\+B\+A}}
+\index{S\+D\+L\+\_\+\+Map\+R\+G\+B\+A@{S\+D\+L\+\_\+\+Map\+R\+G\+B\+A}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Map\+R\+G\+B\+A}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C {\bf Uint32} S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Map\+R\+G\+B\+A (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+D\+L\+\_\+\+Pixel\+Format} $\ast$}]{format, }
+\item[{{\bf Uint8}}]{r, }
+\item[{{\bf Uint8}}]{g, }
+\item[{{\bf Uint8}}]{b, }
+\item[{{\bf Uint8}}]{a}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__pixels_8h_a8cc5000a066e052d4d36070ea91ac942}
+
+
+Maps an R\+G\+B\+A quadruple to a pixel value for a given pixel format. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_s_d_l__pixels_8h_a157cf64c250c578722b939ea11a85b39}{S\+D\+L\+\_\+\+Map\+R\+G\+B} 
+\end{DoxySeeAlso}
+\hypertarget{_s_d_l__pixels_8h_a60fede85fba7bdca549f46b3f6372593}{}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+Masks\+To\+Pixel\+Format\+Enum@{S\+D\+L\+\_\+\+Masks\+To\+Pixel\+Format\+Enum}}
+\index{S\+D\+L\+\_\+\+Masks\+To\+Pixel\+Format\+Enum@{S\+D\+L\+\_\+\+Masks\+To\+Pixel\+Format\+Enum}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Masks\+To\+Pixel\+Format\+Enum}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C {\bf Uint32} S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Masks\+To\+Pixel\+Format\+Enum (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{bpp, }
+\item[{{\bf Uint32}}]{Rmask, }
+\item[{{\bf Uint32}}]{Gmask, }
+\item[{{\bf Uint32}}]{Bmask, }
+\item[{{\bf Uint32}}]{Amask}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__pixels_8h_a60fede85fba7bdca549f46b3f6372593}
+
+
+Convert a bpp and R\+G\+B\+A masks to an enumerated pixel format. 
+
+\begin{DoxyReturn}{Returns}
+The pixel format, or \+::\+S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N if the conversion wasn\textquotesingle{}t possible.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_s_d_l__pixels_8h_aabce46ecd37dd031b6b9a1b2d64f962b}{S\+D\+L\+\_\+\+Pixel\+Format\+Enum\+To\+Masks()} 
+\end{DoxySeeAlso}
+\hypertarget{_s_d_l__pixels_8h_aabce46ecd37dd031b6b9a1b2d64f962b}{}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+Pixel\+Format\+Enum\+To\+Masks@{S\+D\+L\+\_\+\+Pixel\+Format\+Enum\+To\+Masks}}
+\index{S\+D\+L\+\_\+\+Pixel\+Format\+Enum\+To\+Masks@{S\+D\+L\+\_\+\+Pixel\+Format\+Enum\+To\+Masks}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Pixel\+Format\+Enum\+To\+Masks}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Pixel\+Format\+Enum\+To\+Masks (
+\begin{DoxyParamCaption}
+\item[{{\bf Uint32}}]{format, }
+\item[{{\bf int} $\ast$}]{bpp, }
+\item[{{\bf Uint32} $\ast$}]{Rmask, }
+\item[{{\bf Uint32} $\ast$}]{Gmask, }
+\item[{{\bf Uint32} $\ast$}]{Bmask, }
+\item[{{\bf Uint32} $\ast$}]{Amask}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__pixels_8h_aabce46ecd37dd031b6b9a1b2d64f962b}
+
+
+Convert one of the enumerated pixel formats to a bpp and R\+G\+B\+A masks. 
+
+\begin{DoxyReturn}{Returns}
+S\+D\+L\+\_\+\+T\+R\+U\+E, or S\+D\+L\+\_\+\+F\+A\+L\+S\+E if the conversion wasn\textquotesingle{}t possible.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_s_d_l__pixels_8h_a60fede85fba7bdca549f46b3f6372593}{S\+D\+L\+\_\+\+Masks\+To\+Pixel\+Format\+Enum()} 
+\end{DoxySeeAlso}
+\hypertarget{_s_d_l__pixels_8h_a51164f5ac7a7b2b4117ff0e0f256eaff}{}\index{S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}!S\+D\+L\+\_\+\+Set\+Palette\+Colors@{S\+D\+L\+\_\+\+Set\+Palette\+Colors}}
+\index{S\+D\+L\+\_\+\+Set\+Palette\+Colors@{S\+D\+L\+\_\+\+Set\+Palette\+Colors}!S\+D\+L\+\_\+pixels.\+h@{S\+D\+L\+\_\+pixels.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Set\+Palette\+Colors}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C {\bf int} S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Set\+Palette\+Colors (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Palette} $\ast$}]{palette, }
+\item[{const {\bf S\+D\+L\+\_\+\+Color} $\ast$}]{colors, }
+\item[{{\bf int}}]{firstcolor, }
+\item[{{\bf int}}]{ncolors}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__pixels_8h_a51164f5ac7a7b2b4117ff0e0f256eaff}
+
+
+Set a range of colors in a palette. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em palette} & The palette to modify. \\
+\hline
+{\em colors} & An array of colors to copy into the palette. \\
+\hline
+{\em firstcolor} & The index of the first palette entry to modify. \\
+\hline
+{\em ncolors} & The number of entries to modify.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, or -\/1 if not all of the colors could be set. 
+\end{DoxyReturn}

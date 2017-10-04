@@ -1,0 +1,259 @@
+#!/usr/bin/env python2.7
+# -*- coding: utf-8 -*-
+
+import os, sys, re
+
+def error_message(msg='unknown error', code_error=84):
+    '''
+    Write an error message on stderr and exit the program with code 84
+    :param msg: message we will display on our stderr
+    :param code_error: code error we will use to exit
+    '''
+    sys.stderr.write(msg + '\n')
+    sys.exit(code_error)
+
+class Parser:
+    '''
+    This class will parse our file to create our graph and check every line
+    '''
+    def __init__(self, filepath):
+        '''
+        constructor for our Parser class.
+        It can throw if it can't open the file
+        It will init our variables with default value
+        :param filepath: the filepath we want to parse
+        '''
+        self.currentKey = None
+        self.graph = {}
+        self.commands = {}
+        self.graph_cmd = {}
+        self.matrix = []
+        self.binaire = None
+        try:
+            with open(filepath, 'r') as f:
+                data_tmp = f.readlines()
+                self.lines = [x.rstrip('\n').decode('utf-8') for x in data_tmp]
+        except IOError as e:
+            error_message('error: [%s]: ' % filepath + e.strerror)
+        except:
+            error_message()
+
+    def _findArguments(self, line, rule):
+        '''
+        This function (private) will extract every values from a rule line with a regex
+        every value must be start with a-zA-Z and contains a-zA-Z0-9 or -_
+        every value can contain an extension name
+        :param line: current line
+        :param rule: current rule (tty: toto.c tata.a -> tty is the rule name)
+        :return: values from the line (tty: toto.c tata.a will return [u'toto.c', u'tata.a'])
+        '''
+        tmp = line[line.find(rule) + len(rule) + len(':'):].split(' ')
+        values = []
+        for x in tmp:
+            value = x.replace('\t', '')
+            if len(value) > 0:
+                if (re.match(r'^[a-zA-Z][a-zA-Z0-9\-_]*(\.[a-zA-Z][a-zA-Z0-9\-_]*)?$', value)):
+                    values.append(value)
+                else:
+                    error_message('error: [' + value + '] is not a valid value')
+        return values
+
+    def _findRule(self, line):
+        '''
+        It will try to check if the current line is a rule line (like 'tty: louise.zero asuna.sao')
+        It will extract the current rule (tty for our example) and check if this rule is correct
+        :param line: our current line we will check
+        :return: rule found or None
+        '''
+        rule = re.search(r'^[\ \t]*([a-zA-Z][a-zA-Z0-9\-_]*)(\.[a-zA-Z0-9]+)?:', line)
+        if rule:
+            return rule.group(1) + (rule.group(2) if rule.group(2) else '')
+        else:
+            return None
+
+    def _findValues(self, line):
+        '''
+        It will check the file and let it if it's a correct one
+        :param line: current line
+        :return: values extracted
+        '''
+        if len(line) > 0:
+            if line[0] != '\t':
+                error_message()
+            else:
+                tmp = line.replace('\t', '')
+                for v in tmp.split(' '):
+                    if len(v) > 0 and not re.match(r'^[a-zA-Z\-][a-zA-Z0-9_\-\.]*$', v):
+                        error_message('error: [' + v + '] is not a valid line')
+                return tmp
+        else:
+            return False
+
+    def _parseLine(self, line, nb_line):
+        '''
+        It will parse our line.
+        It will check if the line is a rule or an argument, else it will call error_message and exit
+        If the line is a rule then it will set to True the variable isCurrentRule
+        :param line: the current line
+        '''
+        rule = self._findRule(line)
+        if rule:
+            if rule in self.graph:
+                error_message('error: [' + rule + '] is already a rule')
+            if nb_line == 0:
+                self.binaire = rule
+            self.graph[rule] = self._findArguments(line, rule)
+            self.commands[rule] = []
+            self.currentKey = rule
+        else:
+            if self.currentKey:
+                values = self._findValues(line)
+                if values:
+                    self.commands[self.currentKey].append(values)
+            else:
+                error_message('error: [' + line + '] isnt a valid line')
+
+    def _completegraph(self):
+        '''
+        It will complete our graph
+        For every key it 'parcours' the list and add new 'sommet'
+        Je suis fatigué nique ta race
+        '''
+        for key in self.graph.keys():
+            for value in self.graph[key]:
+                if value not in self.graph.keys():
+                    self.graph[value] = []
+
+
+    def parseFile(self):
+        '''
+        It will travel our lines and parse everyline
+        '''
+        nb_line = 0
+        for line in self.lines:
+            self._parseLine(line, nb_line)
+            nb_line = nb_line + 1
+        self._completegraph()
+
+    def displayCommands(self):
+        print('Binaire : %s' % self.binaire)
+        print('commands:')
+        for k,v in self.commands.iteritems():
+            print('key: %s' % k)
+            for cmd in v:
+                print('command: %s' % cmd)
+            print('_________')
+
+    def displayGraph(self):
+        print('graph:')
+        for k,v in self.graph.iteritems():
+            print('key: %s' % k)
+            print('values: %s' % v)
+            print('______')
+
+    def display_adj_matrix(self):
+        '''
+        Display the adjacent matrix
+        '''
+        for curr_key in sorted(self.graph.keys()):
+            print('['),
+            for key in sorted(self.graph.keys()):
+                if key in self.graph[curr_key]:
+                    print('1'),
+                else:
+                    print('0'),
+            print(']')
+        print
+
+    def save_adj_matrix(self):
+        '''
+        Save the ajacent matrix in a list(list)
+        '''
+        for curr_key in sorted(self.graph.keys()):
+            line = []
+            for key in sorted(self.graph.keys()):
+                if key in self.graph[curr_key]:
+                    line.append(1)
+                else:
+                    line.append(0)
+            self.matrix.append(line)
+
+    def     all_path(self, node_start, node_end, path = []):
+        '''
+        Save the shortest path between two nodes
+        node_start and node_end
+        path is saved in path
+        '''
+        path = path + [node_start]
+        if node_start == node_end:
+            return [path]
+        if not self.graph[node_start]:
+            return []
+        paths = []
+        for node in self.graph[node_start]:
+            if node not in path:
+                newpaths = self.all_path(node, node_end, path)
+                for newpath in newpaths:
+                    paths.append(newpath)
+        return paths
+
+    def paths(self):
+        '''
+        For every file (= key in our graph)
+        it will calculate all paths with the binary
+        and display them
+        '''
+        for key in sorted(self.graph.keys()):
+            if key != self.binaire:
+                path = self.all_path(self.binaire, key, path = [])
+                if path is not None:
+                    path_list = len(path) - 1
+                    while path_list >= 0:
+                        elt = len(path[path_list]) - 1
+                        while elt > 0:
+                            print('%s ->' % path[path_list][elt]),
+                            elt -= 1
+                        print(path[path_list][elt])
+                        path_list -= 1
+
+    def first_option(self):
+        self.display_adj_matrix()
+        self.paths()
+
+    def find(self, degre, index):
+        i = 0
+        for node in self.matrix:
+            if node[index] == 1:
+                if sorted(self.graph.keys())[i] in self.commands.keys():
+                    if degre in self.graph_cmd.keys() :
+                        self.graph_cmd[degre].append(sorted(self.graph.keys())[i])
+                    else:
+                        self.graph_cmd[degre] = [sorted(self.graph.keys())[i]]
+                self.find(degre + 1, i)
+            i += 1
+
+    def second_option(self, mod_file):
+        if mod_file not in self.graph.keys():
+            error_message(mod_file + ' is not a file or a rule !')
+        self.save_adj_matrix()
+        self.find(0, sorted(self.graph.keys()).index(mod_file))
+        for key in sorted(self.graph_cmd.keys()):
+            for elt in set(self.graph_cmd[key]):
+                for elt in self.commands[elt]:
+                    print elt
+
+def main():
+    if len(sys.argv) < 2:
+        error_message('You have to specify at least your make file')
+    elif len(sys.argv) > 3:
+        error_message('Too many argument')
+    p = Parser(sys.argv[1])
+    p.parseFile()
+    if len(sys.argv) == 2:
+        p.first_option()
+    elif len(sys.argv) == 3:
+        p.second_option(sys.argv[2])
+    sys.exit(0)
+
+if __name__ == '__main__':
+    main()

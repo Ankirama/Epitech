@@ -1,0 +1,129 @@
+\hypertarget{classgdl_1_1_sdl_context}{\section{gdl\-:\-:Sdl\-Context Class Reference}
+\label{classgdl_1_1_sdl_context}\index{gdl\-::\-Sdl\-Context@{gdl\-::\-Sdl\-Context}}
+}
+
+
+Class for an Sdl Context.  
+
+
+
+
+{\ttfamily \#include $<$Sdl\-Context.\-hh$>$}
+
+Inheritance diagram for gdl\-:\-:Sdl\-Context\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgdl_1_1_sdl_context}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classgdl_1_1_sdl_context_a317e2f02518809a4ff1d4ec381cf29a2}{start} (unsigned int swidth, unsigned int sheight, const std\-::string \&name, int init\-Flags=S\-D\-L\-\_\-\-I\-N\-I\-T\-\_\-\-V\-I\-D\-E\-O, int windows\-Flags=S\-D\-L\-\_\-\-W\-I\-N\-D\-O\-W\-\_\-\-O\-P\-E\-N\-G\-L)
+\begin{DoxyCompactList}\small\item\em Start the context, create a window. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classgdl_1_1_sdl_context_a899be84a90438d59547155e4aecc2c87}{update\-Inputs} (\hyperlink{classgdl_1_1_input}{Input} \&input) const 
+\begin{DoxyCompactList}\small\item\em Update the inputs. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classgdl_1_1_sdl_context_aec8807a2f1b9ca64c880286f1046ad2a}{update\-Clock} (\hyperlink{classgdl_1_1_clock}{Clock} \&clock) const 
+\begin{DoxyCompactList}\small\item\em Update the game clock. \end{DoxyCompactList}\item 
+\hypertarget{classgdl_1_1_sdl_context_a107b456e3df4727c6c32fff36f45faa7}{virtual void \hyperlink{classgdl_1_1_sdl_context_a107b456e3df4727c6c32fff36f45faa7}{flush} () const }\label{classgdl_1_1_sdl_context_a107b456e3df4727c6c32fff36f45faa7}
+
+\begin{DoxyCompactList}\small\item\em Flush the screen to show what has been drawn. (Just call S\-D\-L\-\_\-\-G\-L\-\_\-\-Swap\-Window). \end{DoxyCompactList}\item 
+\hypertarget{classgdl_1_1_sdl_context_a02007ea70c7e5a60048c1bb5812b48b6}{virtual void \hyperlink{classgdl_1_1_sdl_context_a02007ea70c7e5a60048c1bb5812b48b6}{stop} () const }\label{classgdl_1_1_sdl_context_a02007ea70c7e5a60048c1bb5812b48b6}
+
+\begin{DoxyCompactList}\small\item\em Close the context and the window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classgdl_1_1_sdl_context_a3c298835a8a3e236d389efeb6c1d3303}{S\-D\-L\-\_\-\-Window $\ast$ \hyperlink{classgdl_1_1_sdl_context_a3c298835a8a3e236d389efeb6c1d3303}{\-\_\-window}}\label{classgdl_1_1_sdl_context_a3c298835a8a3e236d389efeb6c1d3303}
+
+\begin{DoxyCompactList}\small\item\em The S\-D\-L window object. \end{DoxyCompactList}\item 
+\hypertarget{classgdl_1_1_sdl_context_a8a997eff1d38bc784ee95ce76db93359}{S\-D\-L\-\_\-\-G\-L\-Context \hyperlink{classgdl_1_1_sdl_context_a8a997eff1d38bc784ee95ce76db93359}{\-\_\-gl\-Context}}\label{classgdl_1_1_sdl_context_a8a997eff1d38bc784ee95ce76db93359}
+
+\begin{DoxyCompactList}\small\item\em The S\-D\-L Open\-G\-L context object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for an Sdl Context. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classgdl_1_1_sdl_context_a317e2f02518809a4ff1d4ec381cf29a2}{\index{gdl\-::\-Sdl\-Context@{gdl\-::\-Sdl\-Context}!start@{start}}
+\index{start@{start}!gdl::SdlContext@{gdl\-::\-Sdl\-Context}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-Sdl\-Context\-::start (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{swidth, }
+\item[{unsigned int}]{sheight, }
+\item[{const std\-::string \&}]{name, }
+\item[{int}]{init\-Flags = {\ttfamily SDL\-\_\-INIT\-\_\-VIDEO}, }
+\item[{int}]{windows\-Flags = {\ttfamily SDL\-\_\-WINDOW\-\_\-OPENGL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classgdl_1_1_sdl_context_a317e2f02518809a4ff1d4ec381cf29a2}
+
+
+Start the context, create a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em swidth} & The width of the window to create. \\
+\hline
+{\em sheight} & The height of the window to create. \\
+\hline
+{\em name} & The name of the window. \\
+\hline
+{\em init\-Flags} & Flags passed to S\-D\-L\-\_\-\-Init. \\
+\hline
+{\em windows\-Flags} & Flags passed to S\-D\-L\-\_\-\-Create\-Window. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the context creation has failed. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classgdl_1_1_i_render_context}{gdl\-::\-I\-Render\-Context}.
+
+\hypertarget{classgdl_1_1_sdl_context_aec8807a2f1b9ca64c880286f1046ad2a}{\index{gdl\-::\-Sdl\-Context@{gdl\-::\-Sdl\-Context}!update\-Clock@{update\-Clock}}
+\index{update\-Clock@{update\-Clock}!gdl::SdlContext@{gdl\-::\-Sdl\-Context}}
+\subsubsection[{update\-Clock}]{\setlength{\rightskip}{0pt plus 5cm}void gdl\-::\-Sdl\-Context\-::update\-Clock (
+\begin{DoxyParamCaption}
+\item[{{\bf Clock} \&}]{clock}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classgdl_1_1_sdl_context_aec8807a2f1b9ca64c880286f1046ad2a}
+
+
+Update the game clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The clock object to update. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classgdl_1_1_i_render_context}{gdl\-::\-I\-Render\-Context}.
+
+\hypertarget{classgdl_1_1_sdl_context_a899be84a90438d59547155e4aecc2c87}{\index{gdl\-::\-Sdl\-Context@{gdl\-::\-Sdl\-Context}!update\-Inputs@{update\-Inputs}}
+\index{update\-Inputs@{update\-Inputs}!gdl::SdlContext@{gdl\-::\-Sdl\-Context}}
+\subsubsection[{update\-Inputs}]{\setlength{\rightskip}{0pt plus 5cm}void gdl\-::\-Sdl\-Context\-::update\-Inputs (
+\begin{DoxyParamCaption}
+\item[{{\bf Input} \&}]{input}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classgdl_1_1_sdl_context_a899be84a90438d59547155e4aecc2c87}
+
+
+Update the inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input object to fill. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classgdl_1_1_i_render_context}{gdl\-::\-I\-Render\-Context}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+includes/Sdl\-Context.\-hh\item 
+sources/Sdl\-Context.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,151 @@
+\hypertarget{classgdl_1_1_geometry}{\section{gdl\-:\-:Geometry Class Reference}
+\label{classgdl_1_1_geometry}\index{gdl\-::\-Geometry@{gdl\-::\-Geometry}}
+}
+
+
+Class used to create raw geometry by pushing vertex informations.  
+
+
+
+
+{\ttfamily \#include $<$Geometry.\-hh$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgdl_1_1_geometry}{Geometry} \& \hyperlink{classgdl_1_1_geometry_afb0537b5e20e5f7aed2621e8fea93f87}{push\-Vertex} (const glm\-::vec3 \&t)
+\begin{DoxyCompactList}\small\item\em Push a vertice. \end{DoxyCompactList}\item 
+\hyperlink{classgdl_1_1_geometry}{Geometry} \& \hyperlink{classgdl_1_1_geometry_a14d0218f49c1486b9f04de32b6533f1e}{push\-Uv} (const glm\-::vec2 \&t)
+\begin{DoxyCompactList}\small\item\em Push a U\-V texture coordinate. \end{DoxyCompactList}\item 
+\hyperlink{classgdl_1_1_geometry}{Geometry} \& \hyperlink{classgdl_1_1_geometry_a952a056d62627e002c3516476fd71b99}{push\-Normal} (const glm\-::vec3 \&t)
+\begin{DoxyCompactList}\small\item\em Push a normal vector. \end{DoxyCompactList}\item 
+\hyperlink{classgdl_1_1_geometry}{Geometry} \& \hyperlink{classgdl_1_1_geometry_abcce9e727917d430e4a68650c50c2a0e}{set\-Color} (const glm\-::vec4 \&t)
+\begin{DoxyCompactList}\small\item\em Push a color that is going to be applied on the next pushed vertices. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_geometry_a6e8f3c283012d41ea72d4f091b82652d}{build} ()
+\begin{DoxyCompactList}\small\item\em Build the current geometry. \end{DoxyCompactList}\item 
+void \hyperlink{classgdl_1_1_geometry_a1345bc83eed3ae62fce3158e459e6973}{draw} (\hyperlink{classgdl_1_1_a_shader}{A\-Shader} \&shader, glm\-::mat4 const \&transform, G\-Lenum draw\-Mode)
+\begin{DoxyCompactList}\small\item\em Draw the geometry, the build function must have been called before. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to create raw geometry by pushing vertex informations. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classgdl_1_1_geometry_a6e8f3c283012d41ea72d4f091b82652d}{\index{gdl\-::\-Geometry@{gdl\-::\-Geometry}!build@{build}}
+\index{build@{build}!gdl::Geometry@{gdl\-::\-Geometry}}
+\subsubsection[{build}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-Geometry\-::build (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_geometry_a6e8f3c283012d41ea72d4f091b82652d}
+
+
+Build the current geometry. 
+
+\begin{DoxyReturn}{Returns}
+True if the geometry was successfully built, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_geometry_a1345bc83eed3ae62fce3158e459e6973}{\index{gdl\-::\-Geometry@{gdl\-::\-Geometry}!draw@{draw}}
+\index{draw@{draw}!gdl::Geometry@{gdl\-::\-Geometry}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void gdl\-::\-Geometry\-::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf A\-Shader} \&}]{shader, }
+\item[{glm\-::mat4 const \&}]{transform, }
+\item[{G\-Lenum}]{draw\-Mode}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_geometry_a1345bc83eed3ae62fce3158e459e6973}
+
+
+Draw the geometry, the build function must have been called before. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & The shader to use for drawing the geometry. \\
+\hline
+{\em transform} & The model transformation to apply. \\
+\hline
+{\em dra\-Mode} & The Open\-G\-L draw mode to use (G\-L\-\_\-\-L\-I\-N\-E\-S, G\-L\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-S, ...). \\
+\hline
+\end{DoxyParams}
+\hypertarget{classgdl_1_1_geometry_a952a056d62627e002c3516476fd71b99}{\index{gdl\-::\-Geometry@{gdl\-::\-Geometry}!push\-Normal@{push\-Normal}}
+\index{push\-Normal@{push\-Normal}!gdl::Geometry@{gdl\-::\-Geometry}}
+\subsubsection[{push\-Normal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geometry} \& gdl\-::\-Geometry\-::push\-Normal (
+\begin{DoxyParamCaption}
+\item[{const glm\-::vec3 \&}]{t}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_geometry_a952a056d62627e002c3516476fd71b99}
+
+
+Push a normal vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The normal to push. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This \hyperlink{classgdl_1_1_geometry}{Geometry}. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_geometry_a14d0218f49c1486b9f04de32b6533f1e}{\index{gdl\-::\-Geometry@{gdl\-::\-Geometry}!push\-Uv@{push\-Uv}}
+\index{push\-Uv@{push\-Uv}!gdl::Geometry@{gdl\-::\-Geometry}}
+\subsubsection[{push\-Uv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geometry} \& gdl\-::\-Geometry\-::push\-Uv (
+\begin{DoxyParamCaption}
+\item[{const glm\-::vec2 \&}]{t}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_geometry_a14d0218f49c1486b9f04de32b6533f1e}
+
+
+Push a U\-V texture coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The U\-V texture coordinate to push. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This \hyperlink{classgdl_1_1_geometry}{Geometry}. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_geometry_afb0537b5e20e5f7aed2621e8fea93f87}{\index{gdl\-::\-Geometry@{gdl\-::\-Geometry}!push\-Vertex@{push\-Vertex}}
+\index{push\-Vertex@{push\-Vertex}!gdl::Geometry@{gdl\-::\-Geometry}}
+\subsubsection[{push\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geometry} \& gdl\-::\-Geometry\-::push\-Vertex (
+\begin{DoxyParamCaption}
+\item[{const glm\-::vec3 \&}]{t}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_geometry_afb0537b5e20e5f7aed2621e8fea93f87}
+
+
+Push a vertice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The coordinate of the vertice to push. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This \hyperlink{classgdl_1_1_geometry}{Geometry}. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_geometry_abcce9e727917d430e4a68650c50c2a0e}{\index{gdl\-::\-Geometry@{gdl\-::\-Geometry}!set\-Color@{set\-Color}}
+\index{set\-Color@{set\-Color}!gdl::Geometry@{gdl\-::\-Geometry}}
+\subsubsection[{set\-Color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geometry} \& gdl\-::\-Geometry\-::set\-Color (
+\begin{DoxyParamCaption}
+\item[{const glm\-::vec4 \&}]{t}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_geometry_abcce9e727917d430e4a68650c50c2a0e}
+
+
+Push a color that is going to be applied on the next pushed vertices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The color to push (rgba). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This \hyperlink{classgdl_1_1_geometry}{Geometry}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+includes/Geometry.\-hh\item 
+sources/Geometry.\-cpp\end{DoxyCompactItemize}

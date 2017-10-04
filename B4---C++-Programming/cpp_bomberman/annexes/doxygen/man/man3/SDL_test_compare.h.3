@@ -1,0 +1,55 @@
+.TH "lib/gdl/includes/SDL_test_compare.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_test_compare.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL\&.h'\fP
+.br
+\fC#include 'SDL_test_images\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_CompareSurfaces\fP (\fBSDL_Surface\fP *surface, \fBSDL_Surface\fP *referenceSurface, \fBint\fP allowable_error)"
+.br
+.RI "\fICompares a surface and with reference image data for equality\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL test framework\&.
+.PP
+This code is a part of the SDL2_test library, not the main SDL library\&. 
+.SH "Function Documentation"
+.PP 
+.SS "\fBint\fP SDLTest_CompareSurfaces (\fBSDL_Surface\fP * surface, \fBSDL_Surface\fP * referenceSurface, \fBint\fP allowable_error)"
+
+.PP
+Compares a surface and with reference image data for equality\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsurface\fP Surface used in comparison 
+.br
+\fIreferenceSurface\fP Test Surface used in comparison 
+.br
+\fIallowable_error\fP Allowable difference (squared) in blending accuracy\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 if comparison succeeded, >0 (=number of pixels where comparison failed) if comparison failed, -1 if any of the surfaces were NULL, -2 if the surface sizes differ\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

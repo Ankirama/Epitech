@@ -1,0 +1,56 @@
+.TH "SDL_SysWMinfo" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_SysWMinfo \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_syswm\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSDL_version\fP \fBversion\fP"
+.br
+.ti -1c
+.RI "\fBSDL_SYSWM_TYPE\fP \fBsubsystem\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      Display * \fBdisplay\fP"
+.br
+.ti -1c
+.RI "      Window \fBwindow\fP"
+.br
+.ti -1c
+.RI "   } \fBx11\fP"
+.br
+.ti -1c
+.RI "   \fBint\fP \fBdummy\fP"
+.br
+.ti -1c
+.RI "} \fBinfo\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The custom window manager information structure\&.
+.PP
+When this structure is returned, it holds information about which low level system it is using, and will be one of SDL_SYSWM_TYPE\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "Display* SDL_SysWMinfo::display"
+The X11 display 
+.SS "Window SDL_SysWMinfo::window"
+The X11 window 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

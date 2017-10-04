@@ -1,0 +1,37 @@
+.TH "SDL_ControllerDeviceEvent" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_ControllerDeviceEvent \- Controller device event structure (event\&.cdevice\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBwhich\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Controller device event structure (event\&.cdevice\&.*) 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint32\fP SDL_ControllerDeviceEvent::type"
+\fBSDL_CONTROLLERDEVICEADDED\fP, \fBSDL_CONTROLLERDEVICEREMOVED\fP, or \fBSDL_CONTROLLERDEVICEREMAPPED\fP 
+.SS "\fBSint32\fP SDL_ControllerDeviceEvent::which"
+The joystick device index for the ADDED event, instance id for the REMOVED or REMAPPED event 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

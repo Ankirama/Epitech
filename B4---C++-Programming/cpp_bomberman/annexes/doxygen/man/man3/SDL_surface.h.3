@@ -1,0 +1,637 @@
+.TH "lib/gdl/includes/SDL_surface.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_surface.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_pixels\&.h'\fP
+.br
+\fC#include 'SDL_rect\&.h'\fP
+.br
+\fC#include 'SDL_blendmode\&.h'\fP
+.br
+\fC#include 'SDL_rwops\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_Surface\fP"
+.br
+.RI "\fIA collection of pixels used in software blitting\&. \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_MUSTLOCK\fP(S)   (((S)->flags & \fBSDL_RLEACCEL\fP) != 0)"
+.br
+.ti -1c
+.RI "#define \fBSDL_LoadBMP\fP(file)   \fBSDL_LoadBMP_RW\fP(SDL_RWFromFile(file, 'rb'), 1)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SaveBMP\fP(surface,  file)   \fBSDL_SaveBMP_RW\fP(surface, SDL_RWFromFile(file, 'wb'), 1)"
+.br
+.ti -1c
+.RI "#define \fBSDL_BlitSurface\fP   \fBSDL_UpperBlit\fP"
+.br
+.ti -1c
+.RI "#define \fBSDL_BlitScaled\fP   \fBSDL_UpperBlitScaled\fP"
+.br
+.in -1c
+.PP
+.RI "\fBSurface flags\fP"
+.br
+These are the currently supported flags for the \fBSDL_Surface\fP\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_SWSURFACE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSDL_PREALLOC\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBSDL_RLEACCEL\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBSDL_DONTFREE\fP   0x00000004"
+.br
+.in -1c
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBSDL_Surface\fP \fBSDL_Surface\fP"
+.br
+.RI "\fIA collection of pixels used in software blitting\&. \fP"
+.ti -1c
+.RI "typedef \fBint\fP(* \fBSDL_blit\fP) (struct \fBSDL_Surface\fP *src, \fBSDL_Rect\fP *srcrect, struct \fBSDL_Surface\fP *dst, \fBSDL_Rect\fP *dstrect)"
+.br
+.RI "\fIThe type of function used for surface blitting functions\&. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBSDL_Surface\fP *SDLCALL \fBSDL_CreateRGBSurface\fP (\fBUint32\fP flags, \fBint\fP width, \fBint\fP height, \fBint\fP depth, \fBUint32\fP Rmask, \fBUint32\fP Gmask, \fBUint32\fP Bmask, \fBUint32\fP Amask)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSDL_Surface\fP *SDLCALL \fBSDL_CreateRGBSurfaceFrom\fP (\fBvoid\fP *pixels, \fBint\fP width, \fBint\fP height, \fBint\fP depth, \fBint\fP pitch, \fBUint32\fP Rmask, \fBUint32\fP Gmask, \fBUint32\fP Bmask, \fBUint32\fP Amask)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_FreeSurface\fP (\fBSDL_Surface\fP *surface)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetSurfacePalette\fP (\fBSDL_Surface\fP *surface, \fBSDL_Palette\fP *palette)"
+.br
+.RI "\fISet the palette used by a surface\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_LockSurface\fP (\fBSDL_Surface\fP *surface)"
+.br
+.RI "\fISets up a surface for directly accessing the pixels\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_UnlockSurface\fP (\fBSDL_Surface\fP *surface)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSDL_Surface\fP *SDLCALL \fBSDL_LoadBMP_RW\fP (\fBSDL_RWops\fP *src, \fBint\fP freesrc)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SaveBMP_RW\fP (\fBSDL_Surface\fP *surface, \fBSDL_RWops\fP *dst, \fBint\fP freedst)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetSurfaceRLE\fP (\fBSDL_Surface\fP *surface, \fBint\fP flag)"
+.br
+.RI "\fISets the RLE acceleration hint for a surface\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetColorKey\fP (\fBSDL_Surface\fP *surface, \fBint\fP flag, \fBUint32\fP key)"
+.br
+.RI "\fISets the color key (transparent pixel) in a blittable surface\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetColorKey\fP (\fBSDL_Surface\fP *surface, \fBUint32\fP *key)"
+.br
+.RI "\fIGets the color key (transparent pixel) in a blittable surface\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetSurfaceColorMod\fP (\fBSDL_Surface\fP *surface, \fBUint8\fP r, \fBUint8\fP g, \fBUint8\fP b)"
+.br
+.RI "\fISet an additional color value used in blit operations\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetSurfaceColorMod\fP (\fBSDL_Surface\fP *surface, \fBUint8\fP *r, \fBUint8\fP *g, \fBUint8\fP *b)"
+.br
+.RI "\fIGet the additional color value used in blit operations\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetSurfaceAlphaMod\fP (\fBSDL_Surface\fP *surface, \fBUint8\fP alpha)"
+.br
+.RI "\fISet an additional alpha value used in blit operations\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetSurfaceAlphaMod\fP (\fBSDL_Surface\fP *surface, \fBUint8\fP *alpha)"
+.br
+.RI "\fIGet the additional alpha value used in blit operations\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetSurfaceBlendMode\fP (\fBSDL_Surface\fP *surface, \fBSDL_BlendMode\fP blendMode)"
+.br
+.RI "\fISet the blend mode used for blit operations\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetSurfaceBlendMode\fP (\fBSDL_Surface\fP *surface, \fBSDL_BlendMode\fP *blendMode)"
+.br
+.RI "\fIGet the blend mode used for blit operations\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_SetClipRect\fP (\fBSDL_Surface\fP *surface, const \fBSDL_Rect\fP *rect)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GetClipRect\fP (\fBSDL_Surface\fP *surface, \fBSDL_Rect\fP *rect)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSDL_Surface\fP *SDLCALL \fBSDL_ConvertSurface\fP (\fBSDL_Surface\fP *src, const \fBSDL_PixelFormat\fP *fmt, \fBUint32\fP flags)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSDL_Surface\fP *SDLCALL \fBSDL_ConvertSurfaceFormat\fP (\fBSDL_Surface\fP *src, \fBUint32\fP pixel_format, \fBUint32\fP flags)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_ConvertPixels\fP (\fBint\fP width, \fBint\fP height, \fBUint32\fP src_format, const \fBvoid\fP *src, \fBint\fP src_pitch, \fBUint32\fP dst_format, \fBvoid\fP *dst, \fBint\fP dst_pitch)"
+.br
+.RI "\fICopy a block of pixels of one format to another format\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_FillRect\fP (\fBSDL_Surface\fP *dst, const \fBSDL_Rect\fP *rect, \fBUint32\fP color)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_FillRects\fP (\fBSDL_Surface\fP *dst, const \fBSDL_Rect\fP *rects, \fBint\fP count, \fBUint32\fP color)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_UpperBlit\fP (\fBSDL_Surface\fP *src, const \fBSDL_Rect\fP *srcrect, \fBSDL_Surface\fP *dst, \fBSDL_Rect\fP *dstrect)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_LowerBlit\fP (\fBSDL_Surface\fP *src, \fBSDL_Rect\fP *srcrect, \fBSDL_Surface\fP *dst, \fBSDL_Rect\fP *dstrect)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SoftStretch\fP (\fBSDL_Surface\fP *src, const \fBSDL_Rect\fP *srcrect, \fBSDL_Surface\fP *dst, const \fBSDL_Rect\fP *dstrect)"
+.br
+.RI "\fIPerform a fast, low quality, stretch blit between two surfaces of the same pixel format\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_UpperBlitScaled\fP (\fBSDL_Surface\fP *src, const \fBSDL_Rect\fP *srcrect, \fBSDL_Surface\fP *dst, \fBSDL_Rect\fP *dstrect)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_LowerBlitScaled\fP (\fBSDL_Surface\fP *src, \fBSDL_Rect\fP *srcrect, \fBSDL_Surface\fP *dst, \fBSDL_Rect\fP *dstrect)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file for \fBSDL_Surface\fP definition and management functions\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define SDL_BlitSurface   \fBSDL_UpperBlit\fP"
+Performs a fast blit from the source surface to the destination surface\&.
+.PP
+This assumes that the source and destination rectangles are the same size\&. If either \fCsrcrect\fP or \fCdstrect\fP are NULL, the entire surface (\fCsrc\fP or \fCdst\fP) is copied\&. The final blit rectangles are saved in \fCsrcrect\fP and \fCdstrect\fP after all clipping is performed\&.
+.PP
+\fBReturns:\fP
+.RS 4
+If the blit is successful, it returns 0, otherwise it returns -1\&.
+.RE
+.PP
+The blit function should not be called on a locked surface\&.
+.PP
+The blit semantics for surfaces with and without blending and colorkey are defined as follows: 
+.PP
+.nf
+RGBA->RGB:
+  Source surface blend mode set to SDL_BLENDMODE_BLEND:
+    alpha-blend (using the source alpha-channel and per-surface alpha)
+    SDL_SRCCOLORKEY ignored.
+  Source surface blend mode set to SDL_BLENDMODE_NONE:
+    copy RGB.
+    if SDL_SRCCOLORKEY set, only copy the pixels matching the
+    RGB values of the source color key, ignoring alpha in the
+    comparison.
+
+RGB->RGBA:
+  Source surface blend mode set to SDL_BLENDMODE_BLEND:
+    alpha-blend (using the source per-surface alpha)
+  Source surface blend mode set to SDL_BLENDMODE_NONE:
+    copy RGB, set destination alpha to source per-surface alpha value.
+  both:
+    if SDL_SRCCOLORKEY set, only copy the pixels matching the
+    source color key.
+
+RGBA->RGBA:
+  Source surface blend mode set to SDL_BLENDMODE_BLEND:
+    alpha-blend (using the source alpha-channel and per-surface alpha)
+    SDL_SRCCOLORKEY ignored.
+  Source surface blend mode set to SDL_BLENDMODE_NONE:
+    copy all of RGBA to the destination.
+    if SDL_SRCCOLORKEY set, only copy the pixels matching the
+    RGB values of the source color key, ignoring alpha in the
+    comparison.
+
+RGB->RGB:
+  Source surface blend mode set to SDL_BLENDMODE_BLEND:
+    alpha-blend (using the source per-surface alpha)
+  Source surface blend mode set to SDL_BLENDMODE_NONE:
+    copy RGB.
+  both:
+    if SDL_SRCCOLORKEY set, only copy the pixels matching the
+    source color key.
+
+.fi
+.PP
+.PP
+You should call \fBSDL_BlitSurface()\fP unless you know exactly how SDL blitting works internally and how to use the other blit functions\&. 
+.SS "#define SDL_DONTFREE   0x00000004"
+Surface is referenced internally 
+.SS "#define SDL_LoadBMP(file)   \fBSDL_LoadBMP_RW\fP(SDL_RWFromFile(file, 'rb'), 1)"
+Load a surface from a file\&.
+.PP
+Convenience macro\&. 
+.SS "#define SDL_MUSTLOCK(S)   (((S)->flags & \fBSDL_RLEACCEL\fP) != 0)"
+Evaluates to true if the surface needs to be locked before access\&. 
+.SS "#define SDL_PREALLOC   0x00000001"
+Surface uses preallocated memory 
+.SS "#define SDL_RLEACCEL   0x00000002"
+Surface is RLE encoded 
+.SS "#define SDL_SaveBMP(surface, file)   \fBSDL_SaveBMP_RW\fP(surface, SDL_RWFromFile(file, 'wb'), 1)"
+Save a surface to a file\&.
+.PP
+Convenience macro\&. 
+.SS "#define SDL_SWSURFACE   0"
+Just here for compatibility 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBSDL_Surface\fP  \fBSDL_Surface\fP"
+
+.PP
+A collection of pixels used in software blitting\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This structure should be treated as read-only, except for \fCpixels\fP, which, if not NULL, contains the raw pixel data for the surface\&. 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_ConvertPixels (\fBint\fP width, \fBint\fP height, \fBUint32\fP src_format, const \fBvoid\fP * src, \fBint\fP src_pitch, \fBUint32\fP dst_format, \fBvoid\fP * dst, \fBint\fP dst_pitch)"
+
+.PP
+Copy a block of pixels of one format to another format\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if there was an error 
+.RE
+.PP
+
+.SS "DECLSPEC \fBSDL_Surface\fP* SDLCALL SDL_ConvertSurface (\fBSDL_Surface\fP * src, const \fBSDL_PixelFormat\fP * fmt, \fBUint32\fP flags)"
+Creates a new surface of the specified format, and then copies and maps the given surface to it so the blit of the converted surface will be as fast as possible\&. If this function fails, it returns NULL\&.
+.PP
+The \fCflags\fP parameter is passed to \fBSDL_CreateRGBSurface()\fP and has those semantics\&. You can also pass \fBSDL_RLEACCEL\fP in the flags parameter and SDL will try to RLE accelerate colorkey and alpha blits in the resulting surface\&. 
+.SS "DECLSPEC \fBSDL_Surface\fP* SDLCALL SDL_CreateRGBSurface (\fBUint32\fP flags, \fBint\fP width, \fBint\fP height, \fBint\fP depth, \fBUint32\fP Rmask, \fBUint32\fP Gmask, \fBUint32\fP Bmask, \fBUint32\fP Amask)"
+Allocate and free an RGB surface\&.
+.PP
+If the depth is 4 or 8 bits, an empty palette is allocated for the surface\&. If the depth is greater than 8 bits, the pixel format is set using the flags '[RGB]mask'\&.
+.PP
+If the function runs out of memory, it will return NULL\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIflags\fP The \fCflags\fP are obsolete and should be set to 0\&. 
+.br
+\fIwidth\fP The width in pixels of the surface to create\&. 
+.br
+\fIheight\fP The height in pixels of the surface to create\&. 
+.br
+\fIdepth\fP The depth in bits of the surface to create\&. 
+.br
+\fIRmask\fP The red mask of the surface to create\&. 
+.br
+\fIGmask\fP The green mask of the surface to create\&. 
+.br
+\fIBmask\fP The blue mask of the surface to create\&. 
+.br
+\fIAmask\fP The alpha mask of the surface to create\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_FillRect (\fBSDL_Surface\fP * dst, const \fBSDL_Rect\fP * rect, \fBUint32\fP color)"
+Performs a fast fill of the given rectangle with \fCcolor\fP\&.
+.PP
+If \fCrect\fP is NULL, the whole surface will be filled with \fCcolor\fP\&.
+.PP
+The color should be a pixel of the format used by the surface, and can be generated by the \fBSDL_MapRGB()\fP function\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 on error\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_GetClipRect (\fBSDL_Surface\fP * surface, \fBSDL_Rect\fP * rect)"
+Gets the clipping rectangle for the destination surface in a blit\&.
+.PP
+\fCrect\fP must be a pointer to a valid rectangle which will be filled with the correct values\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetColorKey (\fBSDL_Surface\fP * surface, \fBUint32\fP * key)"
+
+.PP
+Gets the color key (transparent pixel) in a blittable surface\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsurface\fP The surface to update 
+.br
+\fIkey\fP A pointer filled in with the transparent pixel in the native surface format
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if the surface is not valid or colorkey is not enabled\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetSurfaceAlphaMod (\fBSDL_Surface\fP * surface, \fBUint8\fP * alpha)"
+
+.PP
+Get the additional alpha value used in blit operations\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsurface\fP The surface to query\&. 
+.br
+\fIalpha\fP A pointer filled in with the current alpha value\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if the surface is not valid\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_SetSurfaceAlphaMod()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetSurfaceBlendMode (\fBSDL_Surface\fP * surface, \fBSDL_BlendMode\fP * blendMode)"
+
+.PP
+Get the blend mode used for blit operations\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsurface\fP The surface to query\&. 
+.br
+\fIblendMode\fP A pointer filled in with the current blend mode\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if the surface is not valid\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_SetSurfaceBlendMode()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetSurfaceColorMod (\fBSDL_Surface\fP * surface, \fBUint8\fP * r, \fBUint8\fP * g, \fBUint8\fP * b)"
+
+.PP
+Get the additional color value used in blit operations\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsurface\fP The surface to query\&. 
+.br
+\fIr\fP A pointer filled in with the current red color value\&. 
+.br
+\fIg\fP A pointer filled in with the current green color value\&. 
+.br
+\fIb\fP A pointer filled in with the current blue color value\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if the surface is not valid\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_SetSurfaceColorMod()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBSDL_Surface\fP* SDLCALL SDL_LoadBMP_RW (\fBSDL_RWops\fP * src, \fBint\fP freesrc)"
+Load a surface from a seekable SDL data stream (memory or file)\&.
+.PP
+If \fCfreesrc\fP is non-zero, the stream will be closed after being read\&.
+.PP
+The new surface should be freed with SDL_FreeSurface()\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the new surface, or NULL if there was an error\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_LockSurface (\fBSDL_Surface\fP * surface)"
+
+.PP
+Sets up a surface for directly accessing the pixels\&. Between calls to \fBSDL_LockSurface()\fP / \fBSDL_UnlockSurface()\fP, you can write to and read from \fCsurface->pixels\fP, using the pixel format stored in \fCsurface->format\fP\&. Once you are done accessing the surface, you should use \fBSDL_UnlockSurface()\fP to release it\&.
+.PP
+Not all surfaces require locking\&. If \fBSDL_MUSTLOCK(surface)\fP evaluates to 0, then you can read and write to the surface at any time, and the pixel format of the surface will not change\&.
+.PP
+No operating system or library calls should be made between lock/unlock pairs, as critical system locks may be held during this time\&.
+.PP
+\fBSDL_LockSurface()\fP returns 0, or -1 if the surface couldn't be locked\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_UnlockSurface()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_LowerBlit (\fBSDL_Surface\fP * src, \fBSDL_Rect\fP * srcrect, \fBSDL_Surface\fP * dst, \fBSDL_Rect\fP * dstrect)"
+This is a semi-private blit function and it performs low-level surface blitting only\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_LowerBlitScaled (\fBSDL_Surface\fP * src, \fBSDL_Rect\fP * srcrect, \fBSDL_Surface\fP * dst, \fBSDL_Rect\fP * dstrect)"
+This is a semi-private blit function and it performs low-level surface scaled blitting only\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SaveBMP_RW (\fBSDL_Surface\fP * surface, \fBSDL_RWops\fP * dst, \fBint\fP freedst)"
+Save a surface to a seekable SDL data stream (memory or file)\&.
+.PP
+If \fCfreedst\fP is non-zero, the stream will be closed after being written\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 if successful or -1 if there was an error\&. 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_bool SDLCALL SDL_SetClipRect (\fBSDL_Surface\fP * surface, const \fBSDL_Rect\fP * rect)"
+Sets the clipping rectangle for the destination surface in a blit\&.
+.PP
+If the clip rectangle is NULL, clipping will be disabled\&.
+.PP
+If the clip rectangle doesn't intersect the surface, the function will return SDL_FALSE and blits will be completely clipped\&. Otherwise the function returns SDL_TRUE and blits to the surface will be clipped to the intersection of the surface area and the clipping rectangle\&.
+.PP
+Note that blits are automatically clipped to the edges of the source and destination surfaces\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetColorKey (\fBSDL_Surface\fP * surface, \fBint\fP flag, \fBUint32\fP key)"
+
+.PP
+Sets the color key (transparent pixel) in a blittable surface\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsurface\fP The surface to update 
+.br
+\fIflag\fP Non-zero to enable colorkey and 0 to disable colorkey 
+.br
+\fIkey\fP The transparent pixel in the native surface format
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if the surface is not valid
+.RE
+.PP
+You can pass SDL_RLEACCEL to enable RLE accelerated blits\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetSurfaceAlphaMod (\fBSDL_Surface\fP * surface, \fBUint8\fP alpha)"
+
+.PP
+Set an additional alpha value used in blit operations\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsurface\fP The surface to update\&. 
+.br
+\fIalpha\fP The alpha value multiplied into blit operations\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if the surface is not valid\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetSurfaceAlphaMod()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetSurfaceBlendMode (\fBSDL_Surface\fP * surface, \fBSDL_BlendMode\fP blendMode)"
+
+.PP
+Set the blend mode used for blit operations\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsurface\fP The surface to update\&. 
+.br
+\fIblendMode\fP \fBSDL_BlendMode\fP to use for blit blending\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if the parameters are not valid\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetSurfaceBlendMode()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetSurfaceColorMod (\fBSDL_Surface\fP * surface, \fBUint8\fP r, \fBUint8\fP g, \fBUint8\fP b)"
+
+.PP
+Set an additional color value used in blit operations\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsurface\fP The surface to update\&. 
+.br
+\fIr\fP The red color value multiplied into blit operations\&. 
+.br
+\fIg\fP The green color value multiplied into blit operations\&. 
+.br
+\fIb\fP The blue color value multiplied into blit operations\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if the surface is not valid\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetSurfaceColorMod()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetSurfacePalette (\fBSDL_Surface\fP * surface, \fBSDL_Palette\fP * palette)"
+
+.PP
+Set the palette used by a surface\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+0, or -1 if the surface format doesn't use a palette\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+A single palette can be shared with many surfaces\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetSurfaceRLE (\fBSDL_Surface\fP * surface, \fBint\fP flag)"
+
+.PP
+Sets the RLE acceleration hint for a surface\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if the surface is not valid
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+If RLE is enabled, colorkey and alpha blending blits are much faster, but the surface must be locked before directly accessing the pixels\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SoftStretch (\fBSDL_Surface\fP * src, const \fBSDL_Rect\fP * srcrect, \fBSDL_Surface\fP * dst, const \fBSDL_Rect\fP * dstrect)"
+
+.PP
+Perform a fast, low quality, stretch blit between two surfaces of the same pixel format\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This function uses a static buffer, and is not thread-safe\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_UnlockSurface (\fBSDL_Surface\fP * surface)"
+
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_LockSurface()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_UpperBlit (\fBSDL_Surface\fP * src, const \fBSDL_Rect\fP * srcrect, \fBSDL_Surface\fP * dst, \fBSDL_Rect\fP * dstrect)"
+This is the public blit function, \fBSDL_BlitSurface()\fP, and it performs rectangle validation and clipping before passing it to \fBSDL_LowerBlit()\fP 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_UpperBlitScaled (\fBSDL_Surface\fP * src, const \fBSDL_Rect\fP * srcrect, \fBSDL_Surface\fP * dst, \fBSDL_Rect\fP * dstrect)"
+This is the public scaled blit function, SDL_BlitScaled(), and it performs rectangle validation and clipping before passing it to \fBSDL_LowerBlitScaled()\fP 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

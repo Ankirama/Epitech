@@ -1,0 +1,42 @@
+.TH "SDL_TextInputEvent" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_TextInputEvent \- Keyboard text input event structure (event\&.text\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwindowID\fP"
+.br
+.ti -1c
+.RI "char \fBtext\fP [SDL_TEXTINPUTEVENT_TEXT_SIZE]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Keyboard text input event structure (event\&.text\&.*) 
+.SH "Member Data Documentation"
+.PP 
+.SS "char SDL_TextInputEvent::text[SDL_TEXTINPUTEVENT_TEXT_SIZE]"
+The input text 
+.SS "\fBUint32\fP SDL_TextInputEvent::type"
+\fBSDL_TEXTINPUT\fP 
+.SS "\fBUint32\fP SDL_TextInputEvent::windowID"
+The window with keyboard focus, if any 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

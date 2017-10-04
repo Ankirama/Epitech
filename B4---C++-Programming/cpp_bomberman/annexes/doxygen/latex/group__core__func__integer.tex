@@ -1,0 +1,254 @@
+\hypertarget{group__core__func__integer}{}\section{Integer functions}
+\label{group__core__func__integer}\index{Integer functions@{Integer functions}}
+Collaboration diagram for Integer functions\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename gen\+U\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+U\+Type \hyperlink{group__core__func__integer_ga19276bb7adbe9f0d74515ae49e40b481}{glm\+::uadd\+Carry} (gen\+U\+Type const \&x, gen\+U\+Type const \&y, gen\+U\+Type \&carry)
+\item 
+{\footnotesize template$<$typename gen\+U\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+U\+Type \hyperlink{group__core__func__integer_gae5b4a6cefd1e21fd2e1b8526b4c964a7}{glm\+::usub\+Borrow} (gen\+U\+Type const \&x, gen\+U\+Type const \&y, gen\+U\+Type \&borrow)
+\item 
+{\footnotesize template$<$typename gen\+U\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} \hyperlink{group__core__func__integer_gad991bf53779a4309a920bb7bfcf2639c}{glm\+::umul\+Extended} (gen\+U\+Type const \&x, gen\+U\+Type const \&y, gen\+U\+Type \&msb, gen\+U\+Type \&lsb)
+\item 
+{\footnotesize template$<$typename gen\+I\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} \hyperlink{group__core__func__integer_ga7d284e3ea5059cae9fe8f0fe1a76dd02}{glm\+::imul\+Extended} (gen\+I\+Type const \&x, gen\+I\+Type const \&y, gen\+I\+Type \&msb, gen\+I\+Type \&lsb)
+\item 
+{\footnotesize template$<$typename gen\+I\+U\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+I\+U\+Type \hyperlink{group__core__func__integer_ga251d309beb171bf95117d2c301b2ad8b}{glm\+::bitfield\+Extract} (gen\+I\+U\+Type const \&Value, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} const \&Offset, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} const \&Bits)
+\item 
+{\footnotesize template$<$typename gen\+I\+U\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+I\+U\+Type \hyperlink{group__core__func__integer_ga7ab09972d52094d97d2480982e657dd0}{glm\+::bitfield\+Insert} (gen\+I\+U\+Type const \&Base, gen\+I\+U\+Type const \&Insert, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} const \&Offset, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} const \&Bits)
+\item 
+{\footnotesize template$<$typename gen\+I\+U\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+I\+U\+Type \hyperlink{group__core__func__integer_gac28880e609c6eeb0a28f1a54b1edc715}{glm\+::bitfield\+Reverse} (gen\+I\+U\+Type const \&Value)
+\item 
+{\footnotesize template$<$typename T , template$<$ typename $>$ class gen\+I\+U\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+I\+U\+Type$<$ T $>$\+::signed\+\_\+type \hyperlink{group__core__func__integer_gaf5ecf64cbcb7f806a3c7915dd622209b}{glm\+::bit\+Count} (gen\+I\+U\+Type$<$ T $>$ const \&Value)
+\item 
+{\footnotesize template$<$typename T , template$<$ typename $>$ class gen\+I\+U\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+I\+U\+Type$<$ T $>$\+::signed\+\_\+type \hyperlink{group__core__func__integer_ga43d5d9ec05ba4c46035c764ad5fd3135}{glm\+::find\+L\+S\+B} (gen\+I\+U\+Type$<$ T $>$ const \&Value)
+\item 
+{\footnotesize template$<$typename T , template$<$ typename $>$ class gen\+I\+U\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+I\+U\+Type$<$ T $>$\+::signed\+\_\+type \hyperlink{group__core__func__integer_gaee931af2eaecf61b629b33899c9d6f29}{glm\+::find\+M\+S\+B} (gen\+I\+U\+Type$<$ T $>$ const \&Value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+These all operate component-\/wise. The description is per component. The notation \mbox{[}a, b\mbox{]} means the set of bits from bit-\/number a through bit-\/number b, inclusive. The lowest-\/order bit is bit 0. 
+
+\subsection{Function Documentation}
+\hypertarget{group__core__func__integer_gaf5ecf64cbcb7f806a3c7915dd622209b}{}\index{Integer functions@{Integer functions}!bit\+Count@{bit\+Count}}
+\index{bit\+Count@{bit\+Count}!Integer functions@{Integer functions}}
+\subsubsection[{bit\+Count}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , template$<$ typename $>$ class gen\+I\+U\+Type$>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+I\+U\+Type$<$T$>$\+::signed\+\_\+type glm\+::bit\+Count (
+\begin{DoxyParamCaption}
+\item[{gen\+I\+U\+Type$<$ T $>$ const \&}]{Value}
+\end{DoxyParamCaption}
+)}\label{group__core__func__integer_gaf5ecf64cbcb7f806a3c7915dd622209b}
+Returns the number of bits set to 1 in the binary representation of value.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em gen\+I\+U\+Type} & Signed or unsigned integer scalar or vector types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/bitCount.xml}{\tt G\+L\+S\+L bit\+Count man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+8 Integer Functions}
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]Clarify the declaration to specify that scalars are suported. \end{DoxyRefDesc}
+\hypertarget{group__core__func__integer_ga251d309beb171bf95117d2c301b2ad8b}{}\index{Integer functions@{Integer functions}!bitfield\+Extract@{bitfield\+Extract}}
+\index{bitfield\+Extract@{bitfield\+Extract}!Integer functions@{Integer functions}}
+\subsubsection[{bitfield\+Extract}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename gen\+I\+U\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+I\+U\+Type glm\+::bitfield\+Extract (
+\begin{DoxyParamCaption}
+\item[{gen\+I\+U\+Type const \&}]{Value, }
+\item[{{\bf int} const \&}]{Offset, }
+\item[{{\bf int} const \&}]{Bits}
+\end{DoxyParamCaption}
+)}\label{group__core__func__integer_ga251d309beb171bf95117d2c301b2ad8b}
+Extracts bits \mbox{[}offset, offset + bits -\/ 1\mbox{]} from value, returning them in the least significant bits of the result. For unsigned data types, the most significant bits of the result will be set to zero. For signed data types, the most significant bits will be set to the value of bit offset + base -\/ 1.
+
+If bits is zero, the result will be zero. The result will be undefined if offset or bits is negative, or if the sum of offset and bits is greater than the number of bits used to store the operand.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em gen\+I\+U\+Type} & Signed or unsigned integer scalar or vector types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/bitfieldExtract.xml}{\tt G\+L\+S\+L bitfield\+Extract man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+8 Integer Functions} 
+\end{DoxySeeAlso}
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{group__core__func__integer_ga7ab09972d52094d97d2480982e657dd0}{}\index{Integer functions@{Integer functions}!bitfield\+Insert@{bitfield\+Insert}}
+\index{bitfield\+Insert@{bitfield\+Insert}!Integer functions@{Integer functions}}
+\subsubsection[{bitfield\+Insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename gen\+I\+U\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+I\+U\+Type glm\+::bitfield\+Insert (
+\begin{DoxyParamCaption}
+\item[{gen\+I\+U\+Type const \&}]{Base, }
+\item[{gen\+I\+U\+Type const \&}]{Insert, }
+\item[{{\bf int} const \&}]{Offset, }
+\item[{{\bf int} const \&}]{Bits}
+\end{DoxyParamCaption}
+)}\label{group__core__func__integer_ga7ab09972d52094d97d2480982e657dd0}
+Returns the insertion the bits least-\/significant bits of insert into base.
+
+The result will have bits \mbox{[}offset, offset + bits -\/ 1\mbox{]} taken from bits \mbox{[}0, bits -\/ 1\mbox{]} of insert, and all other bits taken directly from the corresponding bits of base. If bits is zero, the result will simply be base. The result will be undefined if offset or bits is negative, or if the sum of offset and bits is greater than the number of bits used to store the operand.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em gen\+I\+U\+Type} & Signed or unsigned integer scalar or vector types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/bitfieldInsert.xml}{\tt G\+L\+S\+L bitfield\+Insert man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+8 Integer Functions} 
+\end{DoxySeeAlso}
+\hypertarget{group__core__func__integer_gac28880e609c6eeb0a28f1a54b1edc715}{}\index{Integer functions@{Integer functions}!bitfield\+Reverse@{bitfield\+Reverse}}
+\index{bitfield\+Reverse@{bitfield\+Reverse}!Integer functions@{Integer functions}}
+\subsubsection[{bitfield\+Reverse}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename gen\+I\+U\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+I\+U\+Type glm\+::bitfield\+Reverse (
+\begin{DoxyParamCaption}
+\item[{gen\+I\+U\+Type const \&}]{Value}
+\end{DoxyParamCaption}
+)}\label{group__core__func__integer_gac28880e609c6eeb0a28f1a54b1edc715}
+Returns the reversal of the bits of value. The bit numbered n of the result will be taken from bit (bits -\/ 1) -\/ n of value, where bits is the total number of bits used to represent value.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em gen\+I\+U\+Type} & Signed or unsigned integer scalar or vector types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/bitfieldReverse.xml}{\tt G\+L\+S\+L bitfield\+Reverse man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+8 Integer Functions} 
+\end{DoxySeeAlso}
+\hypertarget{group__core__func__integer_ga43d5d9ec05ba4c46035c764ad5fd3135}{}\index{Integer functions@{Integer functions}!find\+L\+S\+B@{find\+L\+S\+B}}
+\index{find\+L\+S\+B@{find\+L\+S\+B}!Integer functions@{Integer functions}}
+\subsubsection[{find\+L\+S\+B}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , template$<$ typename $>$ class gen\+I\+U\+Type$>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+I\+U\+Type$<$T$>$\+::signed\+\_\+type glm\+::find\+L\+S\+B (
+\begin{DoxyParamCaption}
+\item[{gen\+I\+U\+Type$<$ T $>$ const \&}]{Value}
+\end{DoxyParamCaption}
+)}\label{group__core__func__integer_ga43d5d9ec05ba4c46035c764ad5fd3135}
+Returns the bit number of the least significant bit set to 1 in the binary representation of value. If value is zero, -\/1 will be returned.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em gen\+I\+U\+Type} & Signed or unsigned integer scalar or vector types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/findLSB.xml}{\tt G\+L\+S\+L find\+L\+S\+B man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+8 Integer Functions}
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}]Clarify the declaration to specify that scalars are suported. \end{DoxyRefDesc}
+\hypertarget{group__core__func__integer_gaee931af2eaecf61b629b33899c9d6f29}{}\index{Integer functions@{Integer functions}!find\+M\+S\+B@{find\+M\+S\+B}}
+\index{find\+M\+S\+B@{find\+M\+S\+B}!Integer functions@{Integer functions}}
+\subsubsection[{find\+M\+S\+B}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , template$<$ typename $>$ class gen\+I\+U\+Type$>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+I\+U\+Type$<$T$>$\+::signed\+\_\+type glm\+::find\+M\+S\+B (
+\begin{DoxyParamCaption}
+\item[{gen\+I\+U\+Type$<$ T $>$ const \&}]{Value}
+\end{DoxyParamCaption}
+)}\label{group__core__func__integer_gaee931af2eaecf61b629b33899c9d6f29}
+Returns the bit number of the most significant bit in the binary representation of value. For positive integers, the result will be the bit number of the most significant bit set to 1. For negative integers, the result will be the bit number of the most significant bit set to 0. For a value of zero or negative one, -\/1 will be returned.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em gen\+I\+U\+Type} & Signed or unsigned integer scalar or vector types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/findMSB.xml}{\tt G\+L\+S\+L find\+M\+S\+B man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+8 Integer Functions}
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000005}{Todo}]Clarify the declaration to specify that scalars are suported. \end{DoxyRefDesc}
+\hypertarget{group__core__func__integer_ga7d284e3ea5059cae9fe8f0fe1a76dd02}{}\index{Integer functions@{Integer functions}!imul\+Extended@{imul\+Extended}}
+\index{imul\+Extended@{imul\+Extended}!Integer functions@{Integer functions}}
+\subsubsection[{imul\+Extended}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename gen\+I\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L {\bf void} glm\+::imul\+Extended (
+\begin{DoxyParamCaption}
+\item[{gen\+I\+Type const \&}]{x, }
+\item[{gen\+I\+Type const \&}]{y, }
+\item[{gen\+I\+Type \&}]{msb, }
+\item[{gen\+I\+Type \&}]{lsb}
+\end{DoxyParamCaption}
+)}\label{group__core__func__integer_ga7d284e3ea5059cae9fe8f0fe1a76dd02}
+Multiplies 32-\/bit integers x and y, producing a 64-\/bit result. The 32 least-\/significant bits are returned in lsb. The 32 most-\/significant bits are returned in msb.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em gen\+I\+Type} & Signed integer scalar or vector types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/imulExtended.xml}{\tt G\+L\+S\+L imul\+Extended man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+8 Integer Functions} 
+\end{DoxySeeAlso}
+\hypertarget{group__core__func__integer_ga19276bb7adbe9f0d74515ae49e40b481}{}\index{Integer functions@{Integer functions}!uadd\+Carry@{uadd\+Carry}}
+\index{uadd\+Carry@{uadd\+Carry}!Integer functions@{Integer functions}}
+\subsubsection[{uadd\+Carry}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename gen\+U\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+U\+Type glm\+::uadd\+Carry (
+\begin{DoxyParamCaption}
+\item[{gen\+U\+Type const \&}]{x, }
+\item[{gen\+U\+Type const \&}]{y, }
+\item[{gen\+U\+Type \&}]{carry}
+\end{DoxyParamCaption}
+)}\label{group__core__func__integer_ga19276bb7adbe9f0d74515ae49e40b481}
+Adds 32-\/bit unsigned integer x and y, returning the sum modulo pow(2, 32). The value carry is set to 0 if the sum was less than pow(2, 32), or to 1 otherwise.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em gen\+U\+Type} & Unsigned integer scalar or vector types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/uaddCarry.xml}{\tt G\+L\+S\+L uadd\+Carry man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+8 Integer Functions} 
+\end{DoxySeeAlso}
+\hypertarget{group__core__func__integer_gad991bf53779a4309a920bb7bfcf2639c}{}\index{Integer functions@{Integer functions}!umul\+Extended@{umul\+Extended}}
+\index{umul\+Extended@{umul\+Extended}!Integer functions@{Integer functions}}
+\subsubsection[{umul\+Extended}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename gen\+U\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L {\bf void} glm\+::umul\+Extended (
+\begin{DoxyParamCaption}
+\item[{gen\+U\+Type const \&}]{x, }
+\item[{gen\+U\+Type const \&}]{y, }
+\item[{gen\+U\+Type \&}]{msb, }
+\item[{gen\+U\+Type \&}]{lsb}
+\end{DoxyParamCaption}
+)}\label{group__core__func__integer_gad991bf53779a4309a920bb7bfcf2639c}
+Multiplies 32-\/bit integers x and y, producing a 64-\/bit result. The 32 least-\/significant bits are returned in lsb. The 32 most-\/significant bits are returned in msb.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em gen\+U\+Type} & Unsigned integer scalar or vector types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/umulExtended.xml}{\tt G\+L\+S\+L umul\+Extended man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+8 Integer Functions} 
+\end{DoxySeeAlso}
+\hypertarget{group__core__func__integer_gae5b4a6cefd1e21fd2e1b8526b4c964a7}{}\index{Integer functions@{Integer functions}!usub\+Borrow@{usub\+Borrow}}
+\index{usub\+Borrow@{usub\+Borrow}!Integer functions@{Integer functions}}
+\subsubsection[{usub\+Borrow}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename gen\+U\+Type $>$ G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+C\+L gen\+U\+Type glm\+::usub\+Borrow (
+\begin{DoxyParamCaption}
+\item[{gen\+U\+Type const \&}]{x, }
+\item[{gen\+U\+Type const \&}]{y, }
+\item[{gen\+U\+Type \&}]{borrow}
+\end{DoxyParamCaption}
+)}\label{group__core__func__integer_gae5b4a6cefd1e21fd2e1b8526b4c964a7}
+Subtracts the 32-\/bit unsigned integer y from x, returning the difference if non-\/negative, or pow(2, 32) plus the difference otherwise. The value borrow is set to 0 if x $>$= y, or to 1 otherwise.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em gen\+U\+Type} & Unsigned integer scalar or vector types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/usubBorrow.xml}{\tt G\+L\+S\+L usub\+Borrow man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+S\+L 4.\+20.\+8 specification, section 8.\+8 Integer Functions} 
+\end{DoxySeeAlso}

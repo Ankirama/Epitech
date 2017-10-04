@@ -1,0 +1,2353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0a63466f-d876-4e02-ae03-4047b824290d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/rtd/source/choice_of_components.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/rtd/source/design.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/rtd/source/features.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/rtd/source/getting_started.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jweb/servlet/controller/Javadoc.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jweb/servlet/controller/Rtd.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/allclasses-frame.html" afterPath="$PROJECT_DIR$/doc/javadoc/allclasses-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/doc/javadoc/allclasses-noframe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/AddOpinion.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/AddOpinion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/AddToCart.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/AddToCart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Cart.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Cart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Checkout.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Checkout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Contact.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Contact.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Images.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Images.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Login.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Logout.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Logout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/News.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/News.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Product.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Product.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Products.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/Products.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/Account.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/Account.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/Addresses.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/Addresses.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/DeleteAccount.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/DeleteAccount.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/NewAddress.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/NewAddress.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/NewPayment.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/NewPayment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/Payments.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/Payments.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/package-frame.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/package-summary.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/package-tree.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/account/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/Accounts.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/Accounts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/AddCategory.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/AddCategory.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/AddNews.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/AddNews.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/AddProduct.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/AddProduct.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/Admin.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/Admin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/Categories.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/Categories.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/DeleteCategory.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/DeleteCategory.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/DeleteNews.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/DeleteNews.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/DeleteProduct.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/DeleteProduct.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/EnableAccount.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/EnableAccount.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/EnableProduct.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/EnableProduct.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/News.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/News.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/Products.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/Products.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/UpdateProduct.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/UpdateProduct.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/package-frame.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/package-summary.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/package-tree.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/admin/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/error/Error404.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/error/Error404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/error/package-frame.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/error/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/error/package-summary.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/error/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/error/package-tree.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/error/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/package-frame.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/package-summary.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/package-tree.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/controller/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/AModele.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/AModele.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/DBManager.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/DBManager.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelAddress.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelAddress.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelCategory.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelCategory.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelNews.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelNews.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelNewsletter.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelNewsletter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelOpinion.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelOpinion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelPayment.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelPayment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelProduct.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelProduct.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelUser.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/ModelUser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/AddressBean.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/AddressBean.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/CategoryBean.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/CategoryBean.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/NewsBean.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/NewsBean.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/OpinionBean.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/OpinionBean.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/PaymentBean.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/PaymentBean.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/ProductBean.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/ProductBean.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/UserBean.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/UserBean.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/package-frame.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/package-summary.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/package-tree.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/beans/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/package-frame.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/package-summary.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/package-tree.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/model/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/utils/HelperMenu.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/utils/HelperMenu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/utils/ProductCart.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/utils/ProductCart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/utils/SendEmail.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/utils/SendEmail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/utils/package-frame.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/utils/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/utils/package-summary.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/utils/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/utils/package-tree.html" afterPath="$PROJECT_DIR$/doc/javadoc/com/jweb/servlet/utils/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/constant-values.html" afterPath="$PROJECT_DIR$/doc/javadoc/constant-values.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/help-doc.html" afterPath="$PROJECT_DIR$/doc/javadoc/help-doc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index-files/index-1.html" afterPath="$PROJECT_DIR$/doc/javadoc/index-files/index-1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index-files/index-10.html" afterPath="$PROJECT_DIR$/doc/javadoc/index-files/index-10.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index-files/index-11.html" afterPath="$PROJECT_DIR$/doc/javadoc/index-files/index-11.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index-files/index-12.html" afterPath="$PROJECT_DIR$/doc/javadoc/index-files/index-12.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index-files/index-13.html" afterPath="$PROJECT_DIR$/doc/javadoc/index-files/index-13.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index-files/index-14.html" afterPath="$PROJECT_DIR$/doc/javadoc/index-files/index-14.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index-files/index-2.html" afterPath="$PROJECT_DIR$/doc/javadoc/index-files/index-2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index-files/index-3.html" afterPath="$PROJECT_DIR$/doc/javadoc/index-files/index-3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index-files/index-4.html" afterPath="$PROJECT_DIR$/doc/javadoc/index-files/index-4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index-files/index-5.html" afterPath="$PROJECT_DIR$/doc/javadoc/index-files/index-5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index-files/index-6.html" afterPath="$PROJECT_DIR$/doc/javadoc/index-files/index-6.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index-files/index-7.html" afterPath="$PROJECT_DIR$/doc/javadoc/index-files/index-7.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index-files/index-8.html" afterPath="$PROJECT_DIR$/doc/javadoc/index-files/index-8.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index-files/index-9.html" afterPath="$PROJECT_DIR$/doc/javadoc/index-files/index-9.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/index.html" afterPath="$PROJECT_DIR$/doc/javadoc/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/overview-frame.html" afterPath="$PROJECT_DIR$/doc/javadoc/overview-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/overview-summary.html" afterPath="$PROJECT_DIR$/doc/javadoc/overview-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/overview-tree.html" afterPath="$PROJECT_DIR$/doc/javadoc/overview-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/javadoc/serialized-form.html" afterPath="$PROJECT_DIR$/doc/javadoc/serialized-form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/cart.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/cart.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/static/jsp/elements/adminCategories.jsp" afterPath="$PROJECT_DIR$/web/static/jsp/elements/adminCategories.jsp" />
+    </list>
+    <ignored path="JWeb.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="JWeb" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.rst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doc/rtd/source/index.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="features.rst" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/doc/rtd/source/features.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41275167">
+              <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="design.rst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doc/rtd/source/design.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getting_started.rst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doc/rtd/source/getting_started.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="45" column="112" selection-start-line="45" selection-start-column="112" selection-end-line="45" selection-end-column="112" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conf.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doc/rtd/source/conf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.26087">
+              <caret line="253" column="22" selection-start-line="253" selection-start-column="22" selection-end-line="253" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="jsf" />
+        <option value="Jsp File" />
+        <option value="UML Sequence" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/admin/Categories.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/addCategory.jsp" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/admin/Accounts.java" />
+        <option value="$PROJECT_DIR$/web/static/jsp/elements/productCategories.jsp" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/model/beans/UserBean.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/admin/EnableAccount.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/account/DeleteAccount.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/admin/EnableProduct.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/model/ModelOpinion.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/model/ModelNews.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/addProduct.jsp" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/model/beans/ProductBean.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/model/ModelProduct.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/categories.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/accounts.jsp" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/admin/Products.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/products.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/admin/updateProduct.jsp" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/admin/UpdateProduct.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/AddOpinion.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/utils/SendEmail.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/Product.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/cart.html" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/utils/ProductCart.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/Cart.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/AddToCart.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/product.jsp" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/Checkout.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/Products.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/Contact.java" />
+        <option value="$PROJECT_DIR$/web/static/jsp/elements/header.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/products.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/Images.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/admin/AddNews.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/admin/AddProduct.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/model/ModelUser.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/Login.java" />
+        <option value="$PROJECT_DIR$/web/static/jsp/elements/adminCategories.jsp" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/Javadoc.java" />
+        <option value="$PROJECT_DIR$/src/com/jweb/servlet/controller/Rtd.java" />
+        <option value="$PROJECT_DIR$/doc/rtd/source/conf.py" />
+        <option value="$PROJECT_DIR$/doc/rtd/source/getting_started.rst" />
+        <option value="$PROJECT_DIR$/doc/rtd/source/functionalities.rst" />
+        <option value="$PROJECT_DIR$/doc/rtd/source/functionnalities.rst" />
+        <option value="$PROJECT_DIR$/doc/rtd/source/choice_of_components.rst" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/cart.jsp" />
+        <option value="$PROJECT_DIR$/doc/rtd/source/design.rst" />
+        <option value="$PROJECT_DIR$/doc/rtd/source/index.rst" />
+        <option value="$PROJECT_DIR$/doc/rtd/source/features.rst" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>Ant inspections</id>
+          </State>
+          <State>
+            <id>Application Server Specific Inspections</id>
+          </State>
+          <State>
+            <id>Control flow issuesJava</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Declaration redundancyJava</id>
+          </State>
+          <State>
+            <id>Faces Model</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>Hibernate Issues</id>
+          </State>
+          <State>
+            <id>Initialization issuesJava</id>
+          </State>
+          <State>
+            <id>Internationalization issuesJava</id>
+          </State>
+          <State>
+            <id>JBoss Seam issues</id>
+          </State>
+          <State>
+            <id>JPA issues</id>
+          </State>
+          <State>
+            <id>JSON</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java EE issues</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript validity issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Maven</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Properties Files</id>
+          </State>
+          <State>
+            <id>SQL</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring CoreSpring</id>
+          </State>
+          <State>
+            <id>Struts</id>
+          </State>
+          <State>
+            <id>Struts 1Struts</id>
+          </State>
+          <State>
+            <id>TestNGJava</id>
+          </State>
+          <State>
+            <id>UI Form Problems</id>
+          </State>
+          <State>
+            <id>Validity issuesGroovy</id>
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+          <State>
+            <id>XMLSpring CoreSpring</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Duplicates</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servlet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servlet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/doc" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="FullScreen" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/web/static/images" />
+      <recent name="$PROJECT_DIR$/web/static" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/jsp/account" />
+      <recent name="$PROJECT_DIR$/web/static/jsp" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/WEB-INF/jsp" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
+      <recent name="E:\Desktop\projects\JWeb\web\WEB-INF\lib" />
+      <recent name="E:\Desktop\projects\JWeb\JWeb\web\WEB-INF\static\js" />
+      <recent name="E:\Desktop\projects\JWeb\JWeb\web\WEB-INF\static\css" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.jweb">
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.29" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_JWeb_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="25104" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="JWeb" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JWeb" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="JWeb" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="JWeb" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="JWeb" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_JWeb" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="25103" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="JWeb" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="JWeb" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="JWeb" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="JWeb" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="JWeb" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="jweb" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.29" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="1.7">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:3000/home" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="JWeb:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_JWeb" />
+        <option name="HTTP_PORT" value="3000" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="25104" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="false" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+        <EnvironmentVariables>
+          <option name="NAME" value="test" />
+          <option name="VALUE" value="test" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+      </ConfigurationWrapper>
+      <method>
+        <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_initDB" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="JWeb:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.jweb" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a63466f-d876-4e02-ae03-4047b824290d" name="Default" comment="" />
+      <created>1448894345129</created>
+      <option name="number" value="Default" />
+      <updated>1448894345129</updated>
+      <workItem from="1448894347625" duration="33396000" />
+      <workItem from="1448962216147" duration="297000" />
+      <workItem from="1448962558394" duration="507000" />
+      <workItem from="1449854213426" duration="1713000" />
+      <workItem from="1449856144777" duration="29440000" />
+      <workItem from="1450028578153" duration="80689000" />
+      <workItem from="1450259604755" duration="714000" />
+      <workItem from="1450886902676" duration="114021000" />
+      <workItem from="1451240072144" duration="631000" />
+      <workItem from="1451240762274" duration="1894000" />
+      <workItem from="1451246445170" duration="6716000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="270018000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771084" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24819277" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.48658317" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5134168" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="GfmBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="100" y="100" width="1240" height="700" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="6" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/updateProduct.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6788831">
+          <caret line="36" column="89" selection-start-line="36" selection-start-column="89" selection-end-line="36" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/admin/products.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.991274">
+          <caret line="59" column="124" selection-start-line="59" selection-start-column="124" selection-end-line="59" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/admin/UpdateProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45302013">
+          <caret line="57" column="64" selection-start-line="57" selection-start-column="64" selection-end-line="57" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/account/newAddress.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.05061082">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/utils/SendEmail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15436241">
+          <caret line="88" column="46" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/model/beans/ProductBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8691275">
+          <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/AddOpinion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41275167">
+          <caret line="33" column="61" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/model/ModelProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31879196">
+          <caret line="215" column="37" selection-start-line="215" selection-start-column="23" selection-end-line="215" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/utils/ProductCart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70469797">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/account/Payments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5402685">
+          <caret line="35" column="130" selection-start-line="35" selection-start-column="119" selection-end-line="35" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/account/Addresses.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5637584">
+          <caret line="36" column="130" selection-start-line="36" selection-start-column="118" selection-end-line="36" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34228188">
+          <caret line="34" column="93" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/Products.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17785235">
+          <caret line="40" column="58" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/Checkout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6812081">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/product.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.26876092">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/AddToCart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/news.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4886562">
+          <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/Contact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/jsp/elements/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5619546">
+          <caret line="0" column="64" selection-start-line="0" selection-start-column="64" selection-end-line="0" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/products.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.782609">
+          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/uploads/illustration_news-5754827378758985402.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/uploads/illustration_news-5382323294026793221.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/uploads/illustration_news-3904277332603321245.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/uploads/illustration_news-3670795595453076065.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/uploads/illustration_news-3472983106397244373.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/uploads/illustration_news-1955591843642799646.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/uploads/illustration_news-1639973881238258534.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/uploads/illustration_news-912409556869530315.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/uploads/illustration_news-813258715668423610.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/uploads/2QvNewu.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0704698">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/Cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76510066">
+          <caret line="64" column="47" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/admin/AddNews.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6107383">
+          <caret line="51" column="84" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/admin/AddProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3389262">
+          <caret line="74" column="47" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.jweb.servlet">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.jweb.servlet</OriginalElement>
+          <nodes>
+            <node x="2203.203308416391" y="942.0">com.jweb.servlet.controller.admin.DeleteProduct</node>
+            <node x="343.75562015503965" y="66.0">com.jweb.servlet.model.beans.PaymentBean</node>
+            <node x="1734.8226882613512" y="88.0">com.jweb.servlet.model.beans.OpinionBean</node>
+            <node x="470.0" y="1060.0">com.jweb.servlet.controller.Contact</node>
+            <node x="3731.453308416391" y="931.0">com.jweb.servlet.controller.account.Account</node>
+            <node x="5285.00562015504" y="942.0">com.jweb.servlet.controller.News</node>
+            <node x="2262.890808416391" y="44.0">com.jweb.servlet.model.beans.ProductBean</node>
+            <node x="4877.64080841639" y="942.0">com.jweb.servlet.controller.account.DeleteAccount</node>
+            <node x="5159.00562015504" y="942.0">com.jweb.servlet.controller.admin.DeleteNews</node>
+            <node x="596.0" y="1222.0">com.jweb.servlet.controller.Images</node>
+            <node x="3207.453308416391" y="931.0">com.jweb.servlet.utils.HelperMenu</node>
+            <node x="0.0" y="1060.0">com.jweb.servlet.utils.SendEmail</node>
+            <node x="2300.953308416391" y="505.0">com.jweb.servlet.model.ModelProduct</node>
+            <node x="1166.7033084163909" y="593.0">com.jweb.servlet.model.ModelAddress</node>
+            <node x="2671.453308416391" y="942.0">com.jweb.servlet.controller.admin.UpdateProduct</node>
+            <node x="4714.45330841639" y="942.0">com.jweb.servlet.controller.admin.EnableAccount</node>
+            <node x="3914.89411683278" y="593.0">com.jweb.servlet.model.ModelNewsletter</node>
+            <node x="2086.703308416391" y="942.0">com.jweb.servlet.controller.Product</node>
+            <node x="4687.1393410852725" y="44.0">com.jweb.servlet.model.beans.UserBean</node>
+            <node x="2815.453308416391" y="942.0">com.jweb.servlet.controller.admin.DeleteCategory</node>
+            <node x="4137.45330841639" y="898.0">com.jweb.servlet.controller.Login</node>
+            <node x="2530.453308416391" y="942.0">com.jweb.servlet.controller.admin.EnableProduct</node>
+            <node x="2965.453308416391" y="571.0">com.jweb.servlet.model.ModelCategory</node>
+            <node x="5371.00562015504" y="942.0">com.jweb.servlet.controller.admin.News</node>
+            <node x="0.0" y="1222.0">com.jweb.servlet.controller.admin.Admin</node>
+            <node x="3491.453308416391" y="942.0">com.jweb.servlet.controller.admin.AddCategory</node>
+            <node x="3624.453308416391" y="942.0">com.jweb.servlet.controller.Products</node>
+            <node x="0.0" y="931.0">com.jweb.servlet.controller.account.Payments</node>
+            <node x="2939.188967331119" y="198.0">com.jweb.servlet.model.AModele</node>
+            <node x="925.2556201550397" y="942.0">com.jweb.servlet.controller.Cart</node>
+            <node x="2963.453308416391" y="942.0">com.jweb.servlet.controller.admin.AddProduct</node>
+            <node x="3107.015808416391" y="132.0">com.jweb.servlet.model.beans.CategoryBean</node>
+            <node x="1783.8226882613512" y="582.0">com.jweb.servlet.model.ModelOpinion</node>
+            <node x="5159.1393410852725" y="66.0">com.jweb.servlet.model.beans.NewsBean</node>
+            <node x="424.50562015503965" y="593.0">com.jweb.servlet.model.ModelPayment</node>
+            <node x="2343.203308416391" y="942.0">com.jweb.servlet.controller.admin.Products</node>
+            <node x="5015.3893410852725" y="582.0">com.jweb.servlet.model.ModelNews</node>
+            <node x="1461.3806201550397" y="931.0">com.jweb.servlet.controller.account.Addresses</node>
+            <node x="5021.64080841639" y="942.0">com.jweb.servlet.controller.admin.Accounts</node>
+            <node x="406.0" y="931.0">com.jweb.servlet.controller.account.NewPayment</node>
+            <node x="1899.3806201550397" y="942.0">com.jweb.servlet.controller.AddOpinion</node>
+            <node x="1763.0" y="1060.0">com.jweb.servlet.model.DBManager</node>
+            <node x="787.5056201550397" y="527.0">com.jweb.servlet.utils.ProductCart</node>
+            <node x="1027.2033084163909" y="0.0">com.jweb.servlet.model.beans.AddressBean</node>
+            <node x="4603.45330841639" y="942.0">com.jweb.servlet.controller.admin.AddNews</node>
+            <node x="1055.3806201550397" y="931.0">com.jweb.servlet.controller.account.NewAddress</node>
+            <node x="4508.3893410852725" y="549.0">com.jweb.servlet.model.ModelUser</node>
+            <node x="315.0" y="1222.0">com.jweb.servlet.controller.AddToCart</node>
+            <node x="1332.0" y="1060.0">com.jweb.servlet.controller.error.Error404</node>
+            <node x="901.0" y="1060.0">com.jweb.servlet.controller.Logout</node>
+            <node x="3088.453308416391" y="942.0">com.jweb.servlet.controller.admin.Categories</node>
+            <node x="459.0" y="1222.0">com.jweb.servlet.controller.Checkout</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.jweb.servlet.controller.admin.Accounts" target="com.jweb.servlet.model.ModelUser">
+              <point x="0.0" y="-14.5" />
+              <point x="5067.14080841639" y="868.0" />
+              <point x="4946.689341085272" y="868.0" />
+              <point x="194.80000000000018" y="102.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.account.Account" target="com.jweb.servlet.model.ModelNewsletter">
+              <point x="-96.50000000000045" y="-25.5" />
+              <point x="3827.9533084163904" y="858.0" />
+              <point x="4026.64411683278" y="858.0" />
+              <point x="-37.25" y="58.5" />
+            </edge>
+            <edge source="com.jweb.servlet.utils.HelperMenu" target="com.jweb.servlet.model.ModelCategory">
+              <point x="0.0" y="-25.5" />
+              <point x="3339.453308416391" y="878.0" />
+              <point x="3187.239022702105" y="878.0" />
+              <point x="49.28571428571422" y="80.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelOpinion" target="com.jweb.servlet.model.AModele">
+              <point x="110.5" y="-69.5" />
+              <point x="2115.3226882613512" y="475.0" />
+              <point x="2966.063967331119" y="475.0" />
+              <point x="-16.125" y="14.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.Cart" target="com.jweb.servlet.model.ModelAddress">
+              <point x="7.25" y="-14.5" />
+              <point x="961.5056201550397" y="838.0" />
+              <point x="1224.7033084163909" y="838.0" />
+              <point x="-116.0" y="58.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.account.Addresses" target="com.jweb.servlet.model.ModelAddress">
+              <point x="0.0" y="-25.5" />
+              <point x="1654.3806201550397" y="838.0" />
+              <point x="1456.7033084163909" y="838.0" />
+              <point x="116.0" y="58.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.Products" target="com.jweb.servlet.model.ModelCategory">
+              <point x="0.0" y="-14.5" />
+              <point x="3667.953308416391" y="818.0" />
+              <point x="3285.810451273534" y="818.0" />
+              <point x="147.85714285714312" y="80.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.Categories" target="com.jweb.servlet.model.ModelCategory">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="80.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.Cart" target="com.jweb.servlet.model.ModelProduct">
+              <point x="21.75" y="-14.5" />
+              <point x="976.0056201550397" y="848.0" />
+              <point x="2333.175530638613" y="848.0" />
+              <point x="-257.7777777777778" y="146.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.AddCategory" target="com.jweb.servlet.model.ModelCategory">
+              <point x="0.0" y="-14.5" />
+              <point x="3547.953308416391" y="868.0" />
+              <point x="3236.52473698782" y="868.0" />
+              <point x="98.5714285714289" y="80.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.Products" target="com.jweb.servlet.model.ModelNewsletter">
+              <point x="29.0" y="-14.5" />
+              <point x="3696.953308416391" y="848.0" />
+              <point x="3952.14411683278" y="848.0" />
+              <point x="-111.75" y="58.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.Products" target="com.jweb.servlet.model.ModelProduct">
+              <point x="0.0" y="-14.5" />
+              <point x="2386.703308416391" y="878.0" />
+              <point x="2526.5088639719465" y="878.0" />
+              <point x="-64.44444444444434" y="146.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.account.Payments" target="com.jweb.servlet.model.ModelPayment">
+              <point x="0.0" y="-25.5" />
+              <point x="193.0" y="878.0" />
+              <point x="481.67228682170617" y="878.0" />
+              <point x="-114.33333333333331" y="58.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.DeleteCategory" target="com.jweb.servlet.model.ModelProduct">
+              <point x="-32.0" y="-14.5" />
+              <point x="2847.453308416391" y="848.0" />
+              <point x="2719.84219730528" y="848.0" />
+              <point x="128.88888888888914" y="146.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelUser" target="com.jweb.servlet.model.AModele">
+              <point x="-121.75" y="-102.5" />
+              <point x="4630.1393410852725" y="465.0" />
+              <point x="3009.063967331119" y="465.0" />
+              <point x="26.875" y="14.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelNewsletter" target="com.jweb.servlet.model.AModele">
+              <point x="0.0" y="-58.5" />
+              <point x="4063.89411683278" y="475.0" />
+              <point x="2998.313967331119" y="475.0" />
+              <point x="16.125" y="14.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.Cart" target="com.jweb.servlet.utils.ProductCart">
+              <point x="-7.25" y="-14.5" />
+              <point x="0.0" y="124.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelPayment" target="com.jweb.servlet.model.AModele">
+              <point x="85.75" y="-58.5" />
+              <point x="681.7556201550397" y="455.0" />
+              <point x="2944.563967331119" y="455.0" />
+              <point x="-37.625" y="14.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelNews" target="com.jweb.servlet.model.beans.NewsBean">
+              <point x="107.75" y="-69.5" />
+              <point x="0.0" y="146.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.AddProduct" target="com.jweb.servlet.model.ModelProduct">
+              <point x="-26.25" y="-14.5" />
+              <point x="2989.703308416391" y="838.0" />
+              <point x="2784.2866417497244" y="838.0" />
+              <point x="193.33333333333348" y="146.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.AddProduct" target="com.jweb.servlet.model.ModelCategory">
+              <point x="26.25" y="-14.5" />
+              <point x="3042.203308416391" y="878.0" />
+              <point x="3088.6675941306767" y="878.0" />
+              <point x="-49.28571428571422" y="80.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelPayment" target="com.jweb.servlet.model.beans.PaymentBean">
+              <point x="-85.75" y="-58.5" />
+              <point x="0.0" y="146.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.Login" target="com.jweb.servlet.model.ModelUser">
+              <point x="111.5" y="-58.5" />
+              <point x="4471.95330841639" y="878.0" />
+              <point x="4654.489341085273" y="878.0" />
+              <point x="-97.39999999999964" y="102.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelProduct" target="com.jweb.servlet.model.AModele">
+              <point x="145.0" y="-146.5" />
+              <point x="2735.953308416391" y="485.0" />
+              <point x="2976.813967331119" y="485.0" />
+              <point x="-5.375" y="14.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.account.NewAddress" target="com.jweb.servlet.model.ModelAddress">
+              <point x="0.0" y="-25.5" />
+              <point x="1248.3806201550397" y="838.0" />
+              <point x="1340.7033084163909" y="838.0" />
+              <point x="0.0" y="58.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelUser" target="com.jweb.servlet.model.beans.UserBean">
+              <point x="121.75" y="-102.5" />
+              <point x="0.0" y="168.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.News" target="com.jweb.servlet.model.ModelNews">
+              <point x="0.0" y="-14.5" />
+              <point x="5404.00562015504" y="878.0" />
+              <point x="5392.5143410852725" y="878.0" />
+              <point x="161.625" y="69.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.account.NewPayment" target="com.jweb.servlet.model.ModelPayment">
+              <point x="0.0" y="-25.5" />
+              <point x="599.0" y="878.0" />
+              <point x="596.0056201550397" y="878.0" />
+              <point x="0.0" y="58.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.AddNews" target="com.jweb.servlet.model.ModelNews">
+              <point x="22.75" y="-14.5" />
+              <point x="4671.70330841639" y="878.0" />
+              <point x="5069.2643410852725" y="878.0" />
+              <point x="-161.625" y="69.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.account.DeleteAccount" target="com.jweb.servlet.model.ModelUser">
+              <point x="0.0" y="-14.5" />
+              <point x="4939.64080841639" y="868.0" />
+              <point x="4849.289341085272" y="868.0" />
+              <point x="97.39999999999964" y="102.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelCategory" target="com.jweb.servlet.model.AModele">
+              <point x="-86.25" y="-80.5" />
+              <point x="3051.703308416391" y="485.0" />
+              <point x="2987.563967331119" y="485.0" />
+              <point x="5.375" y="14.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelOpinion" target="com.jweb.servlet.model.beans.OpinionBean">
+              <point x="-110.5" y="-69.5" />
+              <point x="0.0" y="124.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.AddOpinion" target="com.jweb.servlet.model.ModelOpinion">
+              <point x="0.0" y="-14.5" />
+              <point x="1952.8806201550397" y="838.0" />
+              <point x="1894.3226882613512" y="838.0" />
+              <point x="-110.5" y="69.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelCategory" target="com.jweb.servlet.model.beans.CategoryBean">
+              <point x="86.25" y="-80.5" />
+              <point x="3224.203308416391" y="485.0" />
+              <point x="3226.515808416391" y="485.0" />
+              <point x="0.0" y="80.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelAddress" target="com.jweb.servlet.model.AModele">
+              <point x="87.0" y="-58.5" />
+              <point x="1427.7033084163909" y="465.0" />
+              <point x="2955.313967331119" y="465.0" />
+              <point x="-26.875" y="14.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.EnableProduct" target="com.jweb.servlet.model.ModelProduct">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="146.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.AddNews" target="com.jweb.servlet.model.ModelNewsletter">
+              <point x="-22.75" y="-14.5" />
+              <point x="4626.20330841639" y="848.0" />
+              <point x="4175.64411683278" y="848.0" />
+              <point x="111.75" y="58.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.EnableAccount" target="com.jweb.servlet.model.ModelUser">
+              <point x="0.0" y="-14.5" />
+              <point x="4776.95330841639" y="868.0" />
+              <point x="4751.8893410852725" y="868.0" />
+              <point x="0.0" y="102.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.DeleteProduct" target="com.jweb.servlet.model.ModelProduct">
+              <point x="0.0" y="-14.5" />
+              <point x="2263.203308416391" y="868.0" />
+              <point x="2462.064419527502" y="868.0" />
+              <point x="-128.8888888888887" y="146.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.DeleteCategory" target="com.jweb.servlet.model.ModelCategory">
+              <point x="32.0" y="-14.5" />
+              <point x="2911.453308416391" y="868.0" />
+              <point x="3039.3818798449624" y="868.0" />
+              <point x="-98.57142857142844" y="80.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelAddress" target="com.jweb.servlet.model.beans.AddressBean">
+              <point x="-87.0" y="-58.5" />
+              <point x="0.0" y="212.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.UpdateProduct" target="com.jweb.servlet.model.ModelCategory">
+              <point x="31.0" y="-14.5" />
+              <point x="2764.453308416391" y="858.0" />
+              <point x="2990.096165559248" y="858.0" />
+              <point x="-147.85714285714266" y="80.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.Product" target="com.jweb.servlet.model.ModelOpinion">
+              <point x="-20.0" y="-14.5" />
+              <point x="2106.703308416391" y="838.0" />
+              <point x="2115.3226882613512" y="838.0" />
+              <point x="110.5" y="69.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.account.Account" target="com.jweb.servlet.model.ModelUser">
+              <point x="96.49999999999955" y="-25.5" />
+              <point x="4020.9533084163904" y="868.0" />
+              <point x="4557.089341085271" y="868.0" />
+              <point x="-194.80000000000018" y="102.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.Products" target="com.jweb.servlet.model.ModelProduct">
+              <point x="-29.0" y="-14.5" />
+              <point x="3638.953308416391" y="828.0" />
+              <point x="2848.7310861941687" y="828.0" />
+              <point x="257.7777777777778" y="146.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.Cart" target="com.jweb.servlet.model.ModelPayment">
+              <point x="-21.75" y="-14.5" />
+              <point x="932.5056201550397" y="878.0" />
+              <point x="710.3389534883727" y="878.0" />
+              <point x="114.33333333333326" y="58.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.Product" target="com.jweb.servlet.model.ModelProduct">
+              <point x="20.0" y="-14.5" />
+              <point x="2146.703308416391" y="858.0" />
+              <point x="2397.6199750830574" y="858.0" />
+              <point x="-193.33333333333348" y="146.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelNews" target="com.jweb.servlet.model.AModele">
+              <point x="-107.75" y="-69.5" />
+              <point x="5123.1393410852725" y="455.0" />
+              <point x="3019.813967331119" y="455.0" />
+              <point x="37.625" y="14.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.Login" target="com.jweb.servlet.model.ModelNewsletter">
+              <point x="-111.5" y="-58.5" />
+              <point x="4248.95330841639" y="858.0" />
+              <point x="4101.14411683278" y="858.0" />
+              <point x="37.25" y="58.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.UpdateProduct" target="com.jweb.servlet.model.ModelProduct">
+              <point x="-31.0" y="-14.5" />
+              <point x="2702.453308416391" y="878.0" />
+              <point x="2655.397752860835" y="878.0" />
+              <point x="64.44444444444434" y="146.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.admin.DeleteNews" target="com.jweb.servlet.model.ModelNews">
+              <point x="0.0" y="-14.5" />
+              <point x="5212.00562015504" y="878.0" />
+              <point x="5177.0143410852725" y="878.0" />
+              <point x="-53.875" y="69.5" />
+            </edge>
+            <edge source="com.jweb.servlet.controller.News" target="com.jweb.servlet.model.ModelNews">
+              <point x="0.0" y="-14.5" />
+              <point x="5318.00562015504" y="878.0" />
+              <point x="5284.7643410852725" y="878.0" />
+              <point x="53.875" y="69.5" />
+            </edge>
+            <edge source="com.jweb.servlet.model.ModelProduct" target="com.jweb.servlet.model.beans.ProductBean">
+              <point x="-145.0" y="-146.5" />
+              <point x="2445.953308416391" y="445.0" />
+              <point x="2462.390808416391" y="445.0" />
+              <point x="0.0" y="168.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.18938436540891856" x="2760.0" y="637.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>public</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1409396">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/javadoc/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/rtd/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/Images.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16442953">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/jsp/elements/adminCategories.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29319373">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/model/ModelUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0704698">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.26087">
+          <caret line="253" column="22" selection-start-line="253" selection-start-column="22" selection-end-line="253" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/Javadoc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31421447">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jweb/servlet/controller/Rtd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6107383">
+          <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/rtd/source/conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/rtd/source/getting_started.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="112" selection-start-line="45" selection-start-column="112" selection-end-line="45" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/rtd/source/choice_of_components.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62416106">
+          <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cart.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58464223">
+          <caret line="83" column="101" selection-start-line="83" selection-start-column="101" selection-end-line="83" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/rtd/source/design.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/rtd/source/index.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/rtd/source/features.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41275167">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>JWeb:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>JWeb</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>sqlite-jdbc-3.8.11.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

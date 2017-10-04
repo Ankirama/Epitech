@@ -1,0 +1,325 @@
+.TH "lib/gdl/includes/SDL_mouse.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_mouse.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'SDL_video\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_BUTTON\fP(X)   (1 << ((X)-1))"
+.br
+.ti -1c
+.RI "#define \fBSDL_BUTTON_LEFT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSDL_BUTTON_MIDDLE\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSDL_BUTTON_RIGHT\fP   3"
+.br
+.ti -1c
+.RI "#define \fBSDL_BUTTON_X1\fP   4"
+.br
+.ti -1c
+.RI "#define \fBSDL_BUTTON_X2\fP   5"
+.br
+.ti -1c
+.RI "#define \fBSDL_BUTTON_LMASK\fP   \fBSDL_BUTTON\fP(SDL_BUTTON_LEFT)"
+.br
+.ti -1c
+.RI "#define \fBSDL_BUTTON_MMASK\fP   \fBSDL_BUTTON\fP(SDL_BUTTON_MIDDLE)"
+.br
+.ti -1c
+.RI "#define \fBSDL_BUTTON_RMASK\fP   \fBSDL_BUTTON\fP(SDL_BUTTON_RIGHT)"
+.br
+.ti -1c
+.RI "#define \fBSDL_BUTTON_X1MASK\fP   \fBSDL_BUTTON\fP(SDL_BUTTON_X1)"
+.br
+.ti -1c
+.RI "#define \fBSDL_BUTTON_X2MASK\fP   \fBSDL_BUTTON\fP(SDL_BUTTON_X2)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct SDL_Cursor \fBSDL_Cursor\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSDL_SystemCursor\fP { \fBSDL_SYSTEM_CURSOR_ARROW\fP, \fBSDL_SYSTEM_CURSOR_IBEAM\fP, \fBSDL_SYSTEM_CURSOR_WAIT\fP, \fBSDL_SYSTEM_CURSOR_CROSSHAIR\fP, \fBSDL_SYSTEM_CURSOR_WAITARROW\fP, \fBSDL_SYSTEM_CURSOR_SIZENWSE\fP, \fBSDL_SYSTEM_CURSOR_SIZENESW\fP, \fBSDL_SYSTEM_CURSOR_SIZEWE\fP, \fBSDL_SYSTEM_CURSOR_SIZENS\fP, \fBSDL_SYSTEM_CURSOR_SIZEALL\fP, \fBSDL_SYSTEM_CURSOR_NO\fP, \fBSDL_SYSTEM_CURSOR_HAND\fP, \fBSDL_NUM_SYSTEM_CURSORS\fP }"
+.br
+.RI "\fICursor types for SDL_CreateSystemCursor\&. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBSDL_Window\fP *SDLCALL \fBSDL_GetMouseFocus\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the window which currently has mouse focus\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBUint32\fP SDLCALL \fBSDL_GetMouseState\fP (\fBint\fP *x, \fBint\fP *y)"
+.br
+.RI "\fIRetrieve the current state of the mouse\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBUint32\fP SDLCALL \fBSDL_GetRelativeMouseState\fP (\fBint\fP *x, \fBint\fP *y)"
+.br
+.RI "\fIRetrieve the relative state of the mouse\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_WarpMouseInWindow\fP (\fBSDL_Window\fP *window, \fBint\fP x, \fBint\fP y)"
+.br
+.RI "\fIMoves the mouse to the given position within the window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetRelativeMouseMode\fP (SDL_bool enabled)"
+.br
+.RI "\fISet relative mouse mode\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_GetRelativeMouseMode\fP (\fBvoid\fP)"
+.br
+.RI "\fIQuery whether relative mouse mode is enabled\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_Cursor *SDLCALL \fBSDL_CreateCursor\fP (const \fBUint8\fP *data, const \fBUint8\fP *mask, \fBint\fP w, \fBint\fP h, \fBint\fP hot_x, \fBint\fP hot_y)"
+.br
+.RI "\fICreate a cursor, using the specified bitmap data and mask (in MSB format)\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_Cursor *SDLCALL \fBSDL_CreateColorCursor\fP (\fBSDL_Surface\fP *surface, \fBint\fP hot_x, \fBint\fP hot_y)"
+.br
+.RI "\fICreate a color cursor\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_Cursor *SDLCALL \fBSDL_CreateSystemCursor\fP (\fBSDL_SystemCursor\fP id)"
+.br
+.RI "\fICreate a system cursor\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_SetCursor\fP (SDL_Cursor *cursor)"
+.br
+.RI "\fISet the active cursor\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_Cursor *SDLCALL \fBSDL_GetCursor\fP (\fBvoid\fP)"
+.br
+.RI "\fIReturn the active cursor\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_Cursor *SDLCALL \fBSDL_GetDefaultCursor\fP (\fBvoid\fP)"
+.br
+.RI "\fIReturn the default cursor\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_FreeCursor\fP (SDL_Cursor *cursor)"
+.br
+.RI "\fIFrees a cursor created with \fBSDL_CreateCursor()\fP\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_ShowCursor\fP (\fBint\fP toggle)"
+.br
+.RI "\fIToggle whether or not the cursor is shown\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL mouse event handling\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define SDL_BUTTON(X)   (1 << ((X)-1))"
+Used as a mask when testing buttons in buttonstate\&.
+.IP "\(bu" 2
+\fBButton\fP 1: Left mouse button
+.IP "\(bu" 2
+\fBButton\fP 2: Middle mouse button
+.IP "\(bu" 2
+\fBButton\fP 3: Right mouse button 
+.PP
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBSDL_SystemCursor\fP"
+
+.PP
+Cursor types for SDL_CreateSystemCursor\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISDL_SYSTEM_CURSOR_ARROW \fP\fP
+Arrow 
+.TP
+\fB\fISDL_SYSTEM_CURSOR_IBEAM \fP\fP
+I-beam 
+.TP
+\fB\fISDL_SYSTEM_CURSOR_WAIT \fP\fP
+Wait 
+.TP
+\fB\fISDL_SYSTEM_CURSOR_CROSSHAIR \fP\fP
+Crosshair 
+.TP
+\fB\fISDL_SYSTEM_CURSOR_WAITARROW \fP\fP
+Small wait cursor (or Wait if not available) 
+.TP
+\fB\fISDL_SYSTEM_CURSOR_SIZENWSE \fP\fP
+Double arrow pointing northwest and southeast 
+.TP
+\fB\fISDL_SYSTEM_CURSOR_SIZENESW \fP\fP
+Double arrow pointing northeast and southwest 
+.TP
+\fB\fISDL_SYSTEM_CURSOR_SIZEWE \fP\fP
+Double arrow pointing west and east 
+.TP
+\fB\fISDL_SYSTEM_CURSOR_SIZENS \fP\fP
+Double arrow pointing north and south 
+.TP
+\fB\fISDL_SYSTEM_CURSOR_SIZEALL \fP\fP
+Four pointed arrow pointing north, south, east, and west 
+.TP
+\fB\fISDL_SYSTEM_CURSOR_NO \fP\fP
+Slashed circle or crossbones 
+.TP
+\fB\fISDL_SYSTEM_CURSOR_HAND \fP\fP
+Hand 
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC SDL_Cursor* SDLCALL SDL_CreateColorCursor (\fBSDL_Surface\fP * surface, \fBint\fP hot_x, \fBint\fP hot_y)"
+
+.PP
+Create a color cursor\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_FreeCursor()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_Cursor* SDLCALL SDL_CreateCursor (const \fBUint8\fP * data, const \fBUint8\fP * mask, \fBint\fP w, \fBint\fP h, \fBint\fP hot_x, \fBint\fP hot_y)"
+
+.PP
+Create a cursor, using the specified bitmap data and mask (in MSB format)\&. The cursor width must be a multiple of 8 bits\&.
+.PP
+The cursor is created in black and white according to the following: data mask resulting pixel on screen  0 1 White  1 1 Black  0 0 Transparent  1 0 Inverted color if possible, black if not\&.  
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_FreeCursor()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_Cursor* SDLCALL SDL_CreateSystemCursor (\fBSDL_SystemCursor\fP id)"
+
+.PP
+Create a system cursor\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_FreeCursor()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_FreeCursor (SDL_Cursor * cursor)"
+
+.PP
+Frees a cursor created with \fBSDL_CreateCursor()\fP\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_CreateCursor()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBUint32\fP SDLCALL SDL_GetMouseState (\fBint\fP * x, \fBint\fP * y)"
+
+.PP
+Retrieve the current state of the mouse\&. The current button state is returned as a button bitmask, which can be tested using the \fBSDL_BUTTON(X)\fP macros, and x and y are set to the mouse cursor position relative to the focus window for the currently selected mouse\&. You can pass NULL for either x or y\&. 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_GetRelativeMouseMode (\fBvoid\fP)"
+
+.PP
+Query whether relative mouse mode is enabled\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_SetRelativeMouseMode()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBUint32\fP SDLCALL SDL_GetRelativeMouseState (\fBint\fP * x, \fBint\fP * y)"
+
+.PP
+Retrieve the relative state of the mouse\&. The current button state is returned as a button bitmask, which can be tested using the \fBSDL_BUTTON(X)\fP macros, and x and y are set to the mouse deltas since the last call to \fBSDL_GetRelativeMouseState()\fP\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetRelativeMouseMode (SDL_bool enabled)"
+
+.PP
+Set relative mouse mode\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIenabled\fP Whether or not to enable relative mode
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if relative mode is not supported\&.
+.RE
+.PP
+While the mouse is in relative mode, the cursor is hidden, and the driver will try to report continuous motion in the current window\&. Only relative motion events will be delivered, the mouse position will not change\&.
+.PP
+\fBNote:\fP
+.RS 4
+This function will flush any pending mouse motion\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetRelativeMouseMode()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_ShowCursor (\fBint\fP toggle)"
+
+.PP
+Toggle whether or not the cursor is shown\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItoggle\fP 1 to show the cursor, 0 to hide it, -1 to query the current state\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+1 if the cursor is shown, or 0 if the cursor is hidden\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_WarpMouseInWindow (\fBSDL_Window\fP * window, \fBint\fP x, \fBint\fP y)"
+
+.PP
+Moves the mouse to the given position within the window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window to move the mouse into, or NULL for the current mouse focus 
+.br
+\fIx\fP The x coordinate within the window 
+.br
+\fIy\fP The y coordinate within the window
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+This function generates a mouse motion event 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

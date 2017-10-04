@@ -1,0 +1,57 @@
+.TH "SDL_HapticLeftRight" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_HapticLeftRight \- A structure containing a template for a Left/Right effect\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_haptic\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint16\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBlength\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBlarge_magnitude\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBsmall_magnitude\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A structure containing a template for a Left/Right effect\&. 
+
+This struct is exclusively for the \fBSDL_HAPTIC_LEFTRIGHT\fP effect\&.
+.PP
+The Left/Right effect is used to explicitly control the large and small motors, commonly found in modern game controllers\&. One motor is high frequency, the other is low frequency\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_HAPTIC_LEFTRIGHT\fP 
+.PP
+\fBSDL_HapticEffect\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint16\fP SDL_HapticLeftRight::large_magnitude"
+Control of the large controller motor\&. 
+.SS "\fBUint32\fP SDL_HapticLeftRight::length"
+Duration of the effect\&. 
+.SS "\fBUint16\fP SDL_HapticLeftRight::small_magnitude"
+Control of the small controller motor\&. 
+.SS "\fBUint16\fP SDL_HapticLeftRight::type"
+\fBSDL_HAPTIC_LEFTRIGHT\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

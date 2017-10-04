@@ -1,0 +1,292 @@
+\hypertarget{class_xml_load}{}\section{Xml\+Load Class Reference}
+\label{class_xml_load}\index{Xml\+Load@{Xml\+Load}}
+
+
+load xml file  
+
+
+
+
+{\ttfamily \#include $<$Xml\+Load.\+hh$>$}
+
+
+
+Collaboration diagram for Xml\+Load\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_xml_load__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_xml_load_aaf07a6622c712880f951c11c9f40c133}{Xml\+Load} (std\+::string const \&filename)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_xml_load}{Xml\+Load}\textquotesingle{}s constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_xml_load_a95d063b80a1f7fa349787b1c1ca99f15}{$\sim$\+Xml\+Load} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_xml_load}{Xml\+Load}\textquotesingle{}s destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_xml_load_acf296045159ccecb13e4628bc5678295}{load\+Save} ()
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{class_game_state}{Game\+State} from xml file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_xml_load_ad95a1e42108dac9b1c89d23f0b9341b3}{get\+Int\+Value} (\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+X\+M\+L\+Element} $\ast$root, std\+::string const \&name) const 
+\begin{DoxyCompactList}\small\item\em get int from xml \end{DoxyCompactList}\item 
+float \hyperlink{class_xml_load_ab58d4761f6f49ca3ec39569059763b30}{get\+Float\+Value} (\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+X\+M\+L\+Element} $\ast$root, std\+::string const \&name) const 
+\begin{DoxyCompactList}\small\item\em get float from xml \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_xml_load_a4210a275d1d8f96ec47c3ad848431546}{get\+Un\+Value} (\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+X\+M\+L\+Element} $\ast$root, std\+::string const \&name) const 
+\begin{DoxyCompactList}\small\item\em get unsigned int from xml \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_a_character}{A\+Character} $\ast$ $>$ bombermans \hyperlink{class_xml_load_a903aeab03d442461816a3fe816aeea8e}{load\+Bombers} (\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+X\+M\+L\+Element} $\ast$root) const 
+\begin{DoxyCompactList}\small\item\em load bombermans from xml \end{DoxyCompactList}\item 
+\hyperlink{class_player}{Player} $\ast$ \hyperlink{class_xml_load_abe63285d5007b634763a4a7da8dfa77e}{create\+Player} (\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+X\+M\+L\+Element} $\ast$player) const 
+\begin{DoxyCompactList}\small\item\em load player from xml \end{DoxyCompactList}\item 
+\hyperlink{class_i_a}{I\+A} $\ast$ \hyperlink{class_xml_load_a3583a4d484965ecdb8625b8c267518c1}{create\+A\+I} (\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+X\+M\+L\+Element} $\ast$ai) const 
+\begin{DoxyCompactList}\small\item\em load A\+I from xml \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_bomb}{Bomb} $\ast$ $>$ \hyperlink{class_xml_load_a94455fad3586a8cacadaec35ba743c1e}{create\+Bombs} (\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+X\+M\+L\+Element} $\ast$bombs) const 
+\begin{DoxyCompactList}\small\item\em load bombs from player/ai \end{DoxyCompactList}\item 
+\hyperlink{class_maze}{Maze} $\ast$ \hyperlink{class_xml_load_aaec79171f5c07ef19df2ed4d7cc61499}{create\+Maze} (\hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\+::\+X\+M\+L\+Element} $\ast$maze) const 
+\begin{DoxyCompactList}\small\item\em load maze from xml \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtinyxml2_1_1_x_m_l_document}{tinyxml2\+::\+X\+M\+L\+Document} \hyperlink{class_xml_load_acef322779a50e79c11c783444d38778e}{m\+\_\+xml\+Doc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+load xml file 
+
+Load a xml file and set \hyperlink{class_game_state}{Game\+State} instance 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_xml_load_aaf07a6622c712880f951c11c9f40c133}{}\index{Xml\+Load@{Xml\+Load}!Xml\+Load@{Xml\+Load}}
+\index{Xml\+Load@{Xml\+Load}!Xml\+Load@{Xml\+Load}}
+\subsubsection[{Xml\+Load}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Load\+::\+Xml\+Load (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{filename}
+\end{DoxyParamCaption}
+)}\label{class_xml_load_aaf07a6622c712880f951c11c9f40c133}
+
+
+\hyperlink{class_xml_load}{Xml\+Load}\textquotesingle{}s constructor. 
+
+It will load our file and set a xml\textquotesingle{}s object
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & xml file we want to load \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_xml_load_a95d063b80a1f7fa349787b1c1ca99f15}{}\index{Xml\+Load@{Xml\+Load}!````~Xml\+Load@{$\sim$\+Xml\+Load}}
+\index{````~Xml\+Load@{$\sim$\+Xml\+Load}!Xml\+Load@{Xml\+Load}}
+\subsubsection[{$\sim$\+Xml\+Load}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Load\+::$\sim$\+Xml\+Load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_xml_load_a95d063b80a1f7fa349787b1c1ca99f15}
+
+
+\hyperlink{class_xml_load}{Xml\+Load}\textquotesingle{}s destructor. 
+
+It will close our file and delete our xml\textquotesingle{}s object 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_xml_load_a3583a4d484965ecdb8625b8c267518c1}{}\index{Xml\+Load@{Xml\+Load}!create\+A\+I@{create\+A\+I}}
+\index{create\+A\+I@{create\+A\+I}!Xml\+Load@{Xml\+Load}}
+\subsubsection[{create\+A\+I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+A}$\ast$ Xml\+Load\+::create\+A\+I (
+\begin{DoxyParamCaption}
+\item[{{\bf tinyxml2\+::\+X\+M\+L\+Element} $\ast$}]{ai}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_load_a3583a4d484965ecdb8625b8c267518c1}
+
+
+load A\+I from xml 
+
+It will create an A\+I from our xml A\+Is\textquotesingle{} list
+
+
+\begin{DoxyParams}{Parameters}
+{\em ai} & pointer into a element of A\+Is\textquotesingle{} list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New player loaded/created from our xml 
+\end{DoxyReturn}
+\hypertarget{class_xml_load_a94455fad3586a8cacadaec35ba743c1e}{}\index{Xml\+Load@{Xml\+Load}!create\+Bombs@{create\+Bombs}}
+\index{create\+Bombs@{create\+Bombs}!Xml\+Load@{Xml\+Load}}
+\subsubsection[{create\+Bombs}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Bomb} $\ast$$>$ Xml\+Load\+::create\+Bombs (
+\begin{DoxyParamCaption}
+\item[{{\bf tinyxml2\+::\+X\+M\+L\+Element} $\ast$}]{bombs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_load_a94455fad3586a8cacadaec35ba743c1e}
+
+
+load bombs from player/ai 
+
+It will create a bombs\textquotesingle{} vector from current player/ai
+
+
+\begin{DoxyParams}{Parameters}
+{\em bombs} & pointer into player/ai\textquotesingle{}s bombs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bombs\textquotesingle{}s vector loaded 
+\end{DoxyReturn}
+\hypertarget{class_xml_load_aaec79171f5c07ef19df2ed4d7cc61499}{}\index{Xml\+Load@{Xml\+Load}!create\+Maze@{create\+Maze}}
+\index{create\+Maze@{create\+Maze}!Xml\+Load@{Xml\+Load}}
+\subsubsection[{create\+Maze}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Maze}$\ast$ Xml\+Load\+::create\+Maze (
+\begin{DoxyParamCaption}
+\item[{{\bf tinyxml2\+::\+X\+M\+L\+Element} $\ast$}]{maze}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_load_aaec79171f5c07ef19df2ed4d7cc61499}
+
+
+load maze from xml 
+
+It will create the maze from our xml
+
+
+\begin{DoxyParams}{Parameters}
+{\em maze} & pointer into our xml \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New maze loaded/created from our xml 
+\end{DoxyReturn}
+\hypertarget{class_xml_load_abe63285d5007b634763a4a7da8dfa77e}{}\index{Xml\+Load@{Xml\+Load}!create\+Player@{create\+Player}}
+\index{create\+Player@{create\+Player}!Xml\+Load@{Xml\+Load}}
+\subsubsection[{create\+Player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player}$\ast$ Xml\+Load\+::create\+Player (
+\begin{DoxyParamCaption}
+\item[{{\bf tinyxml2\+::\+X\+M\+L\+Element} $\ast$}]{player}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_load_abe63285d5007b634763a4a7da8dfa77e}
+
+
+load player from xml 
+
+It will create a player from our xml players\textquotesingle{} list
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & pointer into a element of players\textquotesingle{} list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New player loaded/created from our xml 
+\end{DoxyReturn}
+\hypertarget{class_xml_load_ab58d4761f6f49ca3ec39569059763b30}{}\index{Xml\+Load@{Xml\+Load}!get\+Float\+Value@{get\+Float\+Value}}
+\index{get\+Float\+Value@{get\+Float\+Value}!Xml\+Load@{Xml\+Load}}
+\subsubsection[{get\+Float\+Value}]{\setlength{\rightskip}{0pt plus 5cm}float Xml\+Load\+::get\+Float\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf tinyxml2\+::\+X\+M\+L\+Element} $\ast$}]{root, }
+\item[{std\+::string const \&}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_load_ab58d4761f6f49ca3ec39569059763b30}
+
+
+get float from xml 
+
+It will search the first child element needed and return the value
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Current position into our xml file \\
+\hline
+{\em name} & Name used in First\+Child\+Element to find our element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value found in our First\+Child\+Element 
+\end{DoxyReturn}
+\hypertarget{class_xml_load_ad95a1e42108dac9b1c89d23f0b9341b3}{}\index{Xml\+Load@{Xml\+Load}!get\+Int\+Value@{get\+Int\+Value}}
+\index{get\+Int\+Value@{get\+Int\+Value}!Xml\+Load@{Xml\+Load}}
+\subsubsection[{get\+Int\+Value}]{\setlength{\rightskip}{0pt plus 5cm}int Xml\+Load\+::get\+Int\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf tinyxml2\+::\+X\+M\+L\+Element} $\ast$}]{root, }
+\item[{std\+::string const \&}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_load_ad95a1e42108dac9b1c89d23f0b9341b3}
+
+
+get int from xml 
+
+It will search the first child element needed and return the value
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Current position into our xml file \\
+\hline
+{\em name} & Name used in First\+Child\+Element to find our element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value found in our First\+Child\+Element 
+\end{DoxyReturn}
+\hypertarget{class_xml_load_a4210a275d1d8f96ec47c3ad848431546}{}\index{Xml\+Load@{Xml\+Load}!get\+Un\+Value@{get\+Un\+Value}}
+\index{get\+Un\+Value@{get\+Un\+Value}!Xml\+Load@{Xml\+Load}}
+\subsubsection[{get\+Un\+Value}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Xml\+Load\+::get\+Un\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf tinyxml2\+::\+X\+M\+L\+Element} $\ast$}]{root, }
+\item[{std\+::string const \&}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_load_a4210a275d1d8f96ec47c3ad848431546}
+
+
+get unsigned int from xml 
+
+It will search the first child element needed and return the value
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Current position into our xml file \\
+\hline
+{\em name} & Name used in First\+Child\+Element to find our element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value found in our First\+Child\+Element 
+\end{DoxyReturn}
+\hypertarget{class_xml_load_a903aeab03d442461816a3fe816aeea8e}{}\index{Xml\+Load@{Xml\+Load}!load\+Bombers@{load\+Bombers}}
+\index{load\+Bombers@{load\+Bombers}!Xml\+Load@{Xml\+Load}}
+\subsubsection[{load\+Bombers}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf A\+Character} $\ast$$>$ bombermans Xml\+Load\+::load\+Bombers (
+\begin{DoxyParamCaption}
+\item[{{\bf tinyxml2\+::\+X\+M\+L\+Element} $\ast$}]{root}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_load_a903aeab03d442461816a3fe816aeea8e}
+
+
+load bombermans from xml 
+
+It will load \char`\"{}players\char`\"{} and \char`\"{}\+A\+Is\char`\"{} elements. It will call create\+Player and create\+A\+I until the end
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & the current pointer on \char`\"{}save\char`\"{} tag (root tag in xml save) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bombermans\textquotesingle{} vector with all players/\+A\+Is loaded 
+\end{DoxyReturn}
+\hypertarget{class_xml_load_acf296045159ccecb13e4628bc5678295}{}\index{Xml\+Load@{Xml\+Load}!load\+Save@{load\+Save}}
+\index{load\+Save@{load\+Save}!Xml\+Load@{Xml\+Load}}
+\subsubsection[{load\+Save}]{\setlength{\rightskip}{0pt plus 5cm}void Xml\+Load\+::load\+Save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_xml_load_acf296045159ccecb13e4628bc5678295}
+
+
+Set \hyperlink{class_game_state}{Game\+State} from xml file. 
+
+Main function to read our xml file and set our \hyperlink{class_game_state}{Game\+State} 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_xml_load_acef322779a50e79c11c783444d38778e}{}\index{Xml\+Load@{Xml\+Load}!m\+\_\+xml\+Doc@{m\+\_\+xml\+Doc}}
+\index{m\+\_\+xml\+Doc@{m\+\_\+xml\+Doc}!Xml\+Load@{Xml\+Load}}
+\subsubsection[{m\+\_\+xml\+Doc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tinyxml2\+::\+X\+M\+L\+Document} Xml\+Load\+::m\+\_\+xml\+Doc\hspace{0.3cm}{\ttfamily [private]}}\label{class_xml_load_acef322779a50e79c11c783444d38778e}
+Xml object needed to load and read xml file 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_xml_load_8hh}{Xml\+Load.\+hh}\end{DoxyCompactItemize}

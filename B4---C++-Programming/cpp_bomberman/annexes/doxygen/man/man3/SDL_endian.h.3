@@ -1,0 +1,91 @@
+.TH "lib/gdl/includes/SDL_endian.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_endian.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_BYTEORDER\fP   SDL_LIL_ENDIAN"
+.br
+.in -1c
+.PP
+.RI "\fBThe two types of endianness\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_LIL_ENDIAN\fP   1234"
+.br
+.ti -1c
+.RI "#define \fBSDL_BIG_ENDIAN\fP   4321"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBSwap to native\fP"
+.br
+Byteswap item from the specified endianness to the native endianness\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_SwapLE16\fP(X)   (X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SwapLE32\fP(X)   (X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SwapLE64\fP(X)   (X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SwapFloatLE\fP(X)   (X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SwapBE16\fP(X)   SDL_Swap16(X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SwapBE32\fP(X)   SDL_Swap32(X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SwapBE64\fP(X)   SDL_Swap64(X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SwapFloatBE\fP(X)   SDL_SwapFloat(X)"
+.br
+.in -1c
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "SDL_FORCE_INLINE \fBUint16\fP \fBSDL_Swap16\fP (\fBUint16\fP x)"
+.br
+.ti -1c
+.RI "SDL_FORCE_INLINE \fBUint32\fP \fBSDL_Swap32\fP (\fBUint32\fP x)"
+.br
+.ti -1c
+.RI "SDL_FORCE_INLINE \fBUint64\fP \fBSDL_Swap64\fP (\fBUint64\fP x)"
+.br
+.ti -1c
+.RI "SDL_FORCE_INLINE float \fBSDL_SwapFloat\fP (float x)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Functions for reading and writing endian-specific values
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

@@ -1,0 +1,78 @@
+.TH "Maze" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Maze \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMaze\fP (int, int, char *)"
+.br
+.ti -1c
+.RI "\fBMaze\fP (int, int, char *, std::string const &, std::string const &, std::string const &)"
+.br
+.ti -1c
+.RI "char * \fBgetMaze\fP () const "
+.br
+.ti -1c
+.RI "unsigned int \fBgetWidth\fP () const "
+.br
+.ti -1c
+.RI "unsigned int \fBgetHeight\fP () const "
+.br
+.ti -1c
+.RI "void \fBinit\fP (const float, const float)"
+.br
+.ti -1c
+.RI "std::vector< \fBBomberman\fP * > \fBgetBomberman\fP () const "
+.br
+.ti -1c
+.RI "void \fBdraw\fP (gdl::BasicShader, gdl::Clock const &)"
+.br
+.ti -1c
+.RI "void \fBadd_bomberman\fP (std::string const &, unsigned int)"
+.br
+.ti -1c
+.RI "void \fBdelete_bomberman\fP (std::string const &)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMaze\fP (const \fBMaze\fP &)"
+.br
+.ti -1c
+.RI "\fBMaze\fP & \fBoperator=\fP (const \fBMaze\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "unsigned int \fBm_width\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBm_height\fP"
+.br
+.ti -1c
+.RI "char * \fBm_maze\fP"
+.br
+.ti -1c
+.RI "\fBObject2D\fP * \fBm_ground\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBObject3D\fP * > \fBm_object\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBBomberman\fP * > \fBm_bomberman\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

@@ -1,0 +1,89 @@
+.TH "lib/gdl/includes/glm/core/func_packing.hpp" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/glm/core/func_packing.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'func_packing\&.inl'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGLM_CORE_func_packing\fP   GLM_VERSION"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "GLM_FUNC_DECL detail::uint32 \fBglm::packUnorm2x16\fP (detail::tvec2< detail::float32 > const &v)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL detail::uint32 \fBglm::packSnorm2x16\fP (detail::tvec2< detail::float32 > const &v)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL detail::uint32 \fBglm::packUnorm4x8\fP (detail::tvec4< detail::float32 > const &v)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL detail::uint32 \fBglm::packSnorm4x8\fP (detail::tvec4< detail::float32 > const &v)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL detail::tvec2< detail::float32 > \fBglm::unpackUnorm2x16\fP (detail::uint32 const &p)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL detail::tvec2< detail::float32 > \fBglm::unpackSnorm2x16\fP (detail::uint32 const &p)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL detail::tvec4< detail::float32 > \fBglm::unpackUnorm4x8\fP (detail::uint32 const &p)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL detail::tvec4< detail::float32 > \fBglm::unpackSnorm4x8\fP (detail::uint32 const &p)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL double \fBglm::packDouble2x32\fP (detail::tvec2< detail::uint32 > const &v)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL detail::tvec2< detail::uint32 > \fBglm::unpackDouble2x32\fP (double const &v)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL uint \fBglm::packHalf2x16\fP (vec2 const &v)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL vec2 \fBglm::unpackHalf2x16\fP (uint const &v)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+OpenGL Mathematics (glm\&.g-truc\&.net)
+.PP
+Copyright (c) 2005 - 2013 G-Truc Creation (www\&.g-truc\&.net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software\&.
+.PP
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\&. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE\&.
+.PP
+\fBGLM Core\fP
+.PP
+\fBDate:\fP
+.RS 4
+2010-03-17 / 2011-06-15 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christophe Riccio
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL 4\&.20\&.8 specification, section 8\&.4 Floating-Point Pack and Unpack Functions\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

@@ -1,0 +1,53 @@
+.TH "gtc_noise" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtc_noise \- GLM_GTC_noise
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> T \fBglm::perlin\fP (vecType< T > const &p)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> T \fBglm::perlin\fP (vecType< T > const &p, vecType< T > const &rep)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> T \fBglm::simplex\fP (vecType< T > const &p)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Defines 2D, 3D and 4D procedural noise functions Based on the work of Stefan Gustavson and Ashima Arts on 'webgl-noise': https://github.com/ashima/webgl-noise Following Stefan Gustavson's paper 'Simplex noise demystified': http://www.itn.liu.se/~stegu/simplexnoise/simplexnoise.pdf <\fBglm/gtc/noise\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T , template< typename > class vecType> T glm::perlin (vecType< T > const & p)"
+Classic perlin noise\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_noise\fP 
+.RE
+.PP
+
+.SS "template<typename T , template< typename > class vecType> T glm::perlin (vecType< T > const & p, vecType< T > const & rep)"
+Periodic perlin noise\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_noise\fP 
+.RE
+.PP
+
+.SS "template<typename T , template< typename > class vecType> T glm::simplex (vecType< T > const & p)"
+Simplex noise\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTC_noise\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

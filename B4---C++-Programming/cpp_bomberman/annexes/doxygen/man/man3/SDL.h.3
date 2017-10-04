@@ -1,0 +1,163 @@
+.TH "lib/gdl/includes/SDL.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_main\&.h'\fP
+.br
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_assert\&.h'\fP
+.br
+\fC#include 'SDL_atomic\&.h'\fP
+.br
+\fC#include 'SDL_audio\&.h'\fP
+.br
+\fC#include 'SDL_clipboard\&.h'\fP
+.br
+\fC#include 'SDL_cpuinfo\&.h'\fP
+.br
+\fC#include 'SDL_endian\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'SDL_events\&.h'\fP
+.br
+\fC#include 'SDL_filesystem\&.h'\fP
+.br
+\fC#include 'SDL_joystick\&.h'\fP
+.br
+\fC#include 'SDL_gamecontroller\&.h'\fP
+.br
+\fC#include 'SDL_haptic\&.h'\fP
+.br
+\fC#include 'SDL_hints\&.h'\fP
+.br
+\fC#include 'SDL_loadso\&.h'\fP
+.br
+\fC#include 'SDL_log\&.h'\fP
+.br
+\fC#include 'SDL_messagebox\&.h'\fP
+.br
+\fC#include 'SDL_mutex\&.h'\fP
+.br
+\fC#include 'SDL_power\&.h'\fP
+.br
+\fC#include 'SDL_render\&.h'\fP
+.br
+\fC#include 'SDL_rwops\&.h'\fP
+.br
+\fC#include 'SDL_system\&.h'\fP
+.br
+\fC#include 'SDL_thread\&.h'\fP
+.br
+\fC#include 'SDL_timer\&.h'\fP
+.br
+\fC#include 'SDL_version\&.h'\fP
+.br
+\fC#include 'SDL_video\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.PP
+.RI "\fBSDL_INIT_*\fP"
+.br
+These are the flags which may be passed to \fBSDL_Init()\fP\&. You should specify the subsystems which you will be using in your application\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_INIT_TIMER\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_AUDIO\fP   0x00000010"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_VIDEO\fP   0x00000020"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_JOYSTICK\fP   0x00000200"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_HAPTIC\fP   0x00001000"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_GAMECONTROLLER\fP   0x00002000"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_EVENTS\fP   0x00004000"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_NOPARACHUTE\fP   0x00100000"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_EVERYTHING\fP"
+.br
+.in -1c
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_Init\fP (\fBUint32\fP flags)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_InitSubSystem\fP (\fBUint32\fP flags)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_QuitSubSystem\fP (\fBUint32\fP flags)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBUint32\fP SDLCALL \fBSDL_WasInit\fP (\fBUint32\fP flags)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_Quit\fP (\fBvoid\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Main include header for the SDL library 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define SDL_INIT_EVERYTHING"
+\fBValue:\fP
+.PP
+.nf
+( \
+                SDL_INIT_TIMER | SDL_INIT_AUDIO | SDL_INIT_VIDEO | SDL_INIT_EVENTS | \\
+                SDL_INIT_JOYSTICK | SDL_INIT_HAPTIC | SDL_INIT_GAMECONTROLLER \
+            )
+.fi
+.SS "#define SDL_INIT_GAMECONTROLLER   0x00002000"
+SDL_INIT_GAMECONTROLLER implies SDL_INIT_JOYSTICK 
+.SS "#define SDL_INIT_JOYSTICK   0x00000200"
+SDL_INIT_JOYSTICK implies SDL_INIT_EVENTS 
+.SS "#define SDL_INIT_NOPARACHUTE   0x00100000"
+Don't catch fatal signals 
+.SS "#define SDL_INIT_VIDEO   0x00000020"
+SDL_INIT_VIDEO implies SDL_INIT_EVENTS 
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_Init (\fBUint32\fP flags)"
+This function initializes the subsystems specified by \fCflags\fP Unless the \fBSDL_INIT_NOPARACHUTE\fP flag is set, it will install cleanup signal handlers for some commonly ignored fatal signals (like SIGSEGV)\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_InitSubSystem (\fBUint32\fP flags)"
+This function initializes specific SDL subsystems 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_Quit (\fBvoid\fP)"
+This function cleans up all initialized subsystems\&. You should call it upon all exit conditions\&. 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_QuitSubSystem (\fBUint32\fP flags)"
+This function cleans up specific SDL subsystems 
+.SS "DECLSPEC \fBUint32\fP SDLCALL SDL_WasInit (\fBUint32\fP flags)"
+This function returns a mask of the specified subsystems which have previously been initialized\&.
+.PP
+If \fCflags\fP is 0, it returns a mask of all initialized subsystems\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

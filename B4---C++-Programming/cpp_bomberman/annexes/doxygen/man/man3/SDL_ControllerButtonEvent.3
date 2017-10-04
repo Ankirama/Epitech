@@ -1,0 +1,53 @@
+.TH "SDL_ControllerButtonEvent" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_ControllerButtonEvent \- Game controller button event structure (event\&.cbutton\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "SDL_JoystickID \fBwhich\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBstate\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding1\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding2\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Game controller button event structure (event\&.cbutton\&.*) 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint8\fP SDL_ControllerButtonEvent::button"
+The controller button (SDL_GameControllerButton) 
+.SS "\fBUint8\fP SDL_ControllerButtonEvent::state"
+::SDL_PRESSED or ::SDL_RELEASED 
+.SS "\fBUint32\fP SDL_ControllerButtonEvent::type"
+\fBSDL_CONTROLLERBUTTONDOWN\fP or \fBSDL_CONTROLLERBUTTONUP\fP 
+.SS "SDL_JoystickID SDL_ControllerButtonEvent::which"
+The joystick instance id 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

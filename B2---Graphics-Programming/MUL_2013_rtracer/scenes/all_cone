@@ -1,0 +1,16 @@
+#HEADER
+#cone x y z radius rotX rotY rotZ clrR clrG clrB brill [HYPER] PnX PnY PnZ lim_max_x lim_max_y lim_max_z lim_min_x lim_min_y lim_min_z
+#eye x y z rotX rotY rotZ
+#cylinder x y z radius rotX rotY rotZ clrR clrG clrB brill PnX PnY PnZ lim_max_x lim_max_y lim_max_z lim_min_x lim_min_y lim_min_z
+#light x y z clrR clrG clrB power
+#orb x y z radius clrR clrG clrB brill hyper PnX PnY PnZ lim_max_x lim_max_y lim_max_z lim_min_x lim_min_y lim_min_z
+#plan x y z tran rotX rotY rotZ clrR clrG clrB brill PnX PnY PnZ lim_max_x lim_max_y lim_max_z lim_min_x lim_min_y lim_min_z
+cone 0 0 30 0.5 0 0 0 255 255 255 0.0 0 0 0 0 -1 -1 80 -1 -1 -1 
+cone 0 120 30 0.5 0 0 0 0 0 255 0.0 -200 0 0 0 -1 -1 80 -1 -1 -1 
+cone 0 -120 30 0.5 0 0 0 255 0 0 0.0 200 0 0 0 -1 -1 80 -1 -1 -1 
+eye -1000 0 100 0 0 0 
+plan 0 0 0 10 0 0 0 255 255 255 0.5 0 0 0 -1 -1 -1 -1 -1 -1 
+light -1000 0 30 255 255 255 100 
+light -500 120 30 255 255 255 100 
+light -500 -120 30 255 255 255 100 
+ambiance 1

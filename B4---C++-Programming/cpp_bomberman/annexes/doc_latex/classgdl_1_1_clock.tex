@@ -1,0 +1,61 @@
+\hypertarget{classgdl_1_1_clock}{\section{gdl\-:\-:Clock Class Reference}
+\label{classgdl_1_1_clock}\index{gdl\-::\-Clock@{gdl\-::\-Clock}}
+}
+
+
+Class used to get the elapsed time since the last update.  
+
+
+
+
+{\ttfamily \#include $<$Clock.\-hh$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classgdl_1_1_clock_a1ec15565cb419cd67e6cdfedf6b112ca}{update} (unsigned int current\-Time)
+\begin{DoxyCompactList}\small\item\em Do not call this function yourself! It is used by the context to update the current time. \end{DoxyCompactList}\item 
+double \hyperlink{classgdl_1_1_clock_a8ea324bb269ca68e8f5a8c1cf071c3f7}{get\-Elapsed} () const 
+\begin{DoxyCompactList}\small\item\em Function used to get the elapsed time since the last update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to get the elapsed time since the last update. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classgdl_1_1_clock_a8ea324bb269ca68e8f5a8c1cf071c3f7}{\index{gdl\-::\-Clock@{gdl\-::\-Clock}!get\-Elapsed@{get\-Elapsed}}
+\index{get\-Elapsed@{get\-Elapsed}!gdl::Clock@{gdl\-::\-Clock}}
+\subsubsection[{get\-Elapsed}]{\setlength{\rightskip}{0pt plus 5cm}double gdl\-::\-Clock\-::get\-Elapsed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_clock_a8ea324bb269ca68e8f5a8c1cf071c3f7}
+
+
+Function used to get the elapsed time since the last update. 
+
+\begin{DoxyReturn}{Returns}
+The number of seconds elapsed since the last update. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_clock_a1ec15565cb419cd67e6cdfedf6b112ca}{\index{gdl\-::\-Clock@{gdl\-::\-Clock}!update@{update}}
+\index{update@{update}!gdl::Clock@{gdl\-::\-Clock}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void gdl\-::\-Clock\-::update (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{current\-Time}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_clock_a1ec15565cb419cd67e6cdfedf6b112ca}
+
+
+Do not call this function yourself! It is used by the context to update the current time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & current time in milliseconds. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+includes/Clock.\-hh\item 
+sources/Clock.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,605 @@
+#!/usr/bin/python2.7
+# "teyssa_r"
+
+import sys
+import os
+try:
+    from Tkinter import *
+    from tkMessageBox import *
+    import tkFileDialog
+except ImportError:
+    print "Error: you do not have the module Tkinter, please use create_scene"
+    sys.exit()
+
+############################ - Window Principal - ############################
+
+class Demo1:
+    def __init__(self, master):
+        self.master = master
+        self.frame = Frame(self.master)
+        self.quitter = Button(master, text="Valider", command=master.quit)
+        self.quitter.pack(side=BOTTOM)
+        global f
+        f.seek(0)
+        self.variable = StringVar(master)
+        self.variable.set("None")
+        self.visua = Button(master, text="Visualiser", command=self.visu)
+        self.visua.pack(side=TOP)
+        self.previ = Button(master, text="Previsualiser", command = lambda: self.prev(self.master, self.variable.get()))
+        self.previ.pack(side=TOP)
+        self.button = Button(master, text="Ok", command = self.ok)
+        self.button.pack(side=BOTTOM)
+        self.label = Label(master, text=f.read())
+        self.label.pack(side=BOTTOM)
+        self.objects = OptionMenu(master, self.variable, "Cone", "Cylinder", "Orb", "Light", "Eye", "Plan", "Hyperboloide - One Nape", "Hyperboloide - Two Nape", "Paraboloide", "Ambiance")
+        self.objects.pack()
+        self.w = Label(master)
+        self.w.pack()
+        self.frame.pack()
+
+    def ok(self):
+        self.newWindow = Toplevel(self.master)
+        self.newWindow.title(self.variable.get());
+        self.app = Gene(self.newWindow, self.variable.get())
+
+    def visu(self):
+        global f
+        f.seek(0)
+        self.label.configure(text=f.read())
+
+    def prev(self, master, variable):
+        if self.variable.get() != "None":
+            photo = PhotoImage(file="./img/" + self.variable.get() + ".gif")
+            self.photo = photo
+            self.w.configure(image=photo)
+
+############################ - Window for set variable - ############################
+
+class Gene:
+    def __init__(self, master, variable):
+        self.variable = variable
+        self.master = master
+        self.frame = Frame(self.master)
+        ############################ - Hyper variable - ############################
+        if self.variable != "Ambiance":
+            if self.variable == "Cone" or self.variable == "Hyperboloide - One Nape" or self.variable == "Hyperboloide - Two Nape":
+                self.hyper = StringVar()
+                self.hyper.set("0")
+                if self.variable == "Hyperboloide - One Nape" or self.variable == "Hyperboloide - Two Nape":
+                    self.invith = Label(self.frame, text='Hyper:', width = 6, height=1, fg="navy")
+                    self.invith.grid(row=0, column=2)
+                    self.master.saisi = Entry(self.frame, textvariable=self.hyper, width=30)
+                    self.master.saisi.grid(row=1, column=2)
+                    ############################ - Angle - ############################
+                self.invita = Label(self.frame, text='Angle:', width = 6, height=1, fg="navy")
+                self.invita.grid(row=0, column=0)
+                self.angle = StringVar()
+                self.angle.set("0")
+                self.master.saisi = Entry(self.frame, textvariable=self.angle, width=30)
+                self.master.saisi.grid(row=1, column=0)
+            ############################ - Rayon - ############################
+            elif self.variable == "Cylinder" or self.variable == "Orb":
+                self.invitr = Label(self.frame, text='Rayon:', width = 6, height=1, fg="navy")
+                self.invitr.grid(row=0, column=1)
+                self.rayon = StringVar()
+                self.rayon.set("0")
+                self.master.saisi = Entry(self.frame, textvariable=self.rayon, width=30)
+                self.master.saisi.grid(row=1, column=1)
+            ############################ - Translation - ############################
+            elif self.variable == "Plan":
+                self.invitt = Label(self.frame, text='Translation:', width = 12, height=1, fg="navy")
+                self.invitt.grid(row=0, column=1)
+                self.tran = StringVar()
+                self.tran.set("0")
+                self.master.saisi = Entry(self.frame, textvariable=self.tran, width=30)
+                self.master.saisi.grid(row=1, column=1)
+            ############################ - Constante - ############################
+            elif self.variable == "Paraboloide":
+                self.minus = Label(self.frame, text='Constante:', width = 10, height=1, fg="navy")
+                self.minus.grid(row=0, column=2)
+                self.const = StringVar()
+                self.const.set("0")
+                self.master.saisi = Entry(self.frame, textvariable=self.const, width=30)
+                self.master.saisi.grid(row=1, column=2)
+            ############################ - Position - ############################
+            self.invitx = Label(self.frame, text='Position x:', width = 11, height=1, fg="navy")
+            self.invitx.grid(row=3, column=0)
+            self.x = StringVar()
+            self.x.set("0")
+            self.master.saisi = Entry(self.frame, textvariable=self.x, width=30)
+            self.master.saisi.grid(row=4, column=0)
+
+            self.invity = Label(self.frame, text='Position y:', width = 11, height=1, fg="navy")
+            self.invity.grid(row=6, column=0)
+            self.y = StringVar()
+            self.y.set("0")
+            self.master.saisi = Entry(self.frame, textvariable=self.y, width=30)
+            self.master.saisi.grid(row=7, column=0)
+
+            self.invitz = Label(self.frame, text='Position z:', width = 11, height=1, fg="navy")
+            self.invitz.grid(row=9, column=0)
+            self.z = StringVar()
+            self.z.set("0")
+            self.master.saisi = Entry(self.frame, textvariable=self.z, width=30)
+            self.master.saisi.grid(row=10, column=0)
+            ############################ - Rotation - ############################
+            if self.variable != "Light" and self.variable != "Orb":
+                self.invitrx = Label(self.frame, text='Rotation x:', width = 11, height=1, fg="navy")
+                self.invitrx.grid(row=3, column=1)
+                self.rx = StringVar()
+                self.rx.set("0")
+                self.master.saisi = Entry(self.frame, textvariable=self.rx, width=30)
+                self.master.saisi.grid(row=4, column=1)
+
+                self.invitry = Label(self.frame, text='Rotation y:', width = 11, height=1, fg="navy")
+                self.invitry.grid(row=6, column=1)
+                self.ry = StringVar()
+                self.ry.set("0")
+                self.master.saisi = Entry(self.frame, textvariable=self.ry, width=30)
+                self.master.saisi.grid(row=7, column=1)
+
+                self.invitrz = Label(self.frame, text='Rotation z:', width = 11, height=1, fg="navy")
+                self.invitrz.grid(row=9, column=1)
+                self.rz = StringVar()
+                self.rz.set("0")
+                self.master.saisi = Entry(self.frame, textvariable=self.rz, width=30)
+                self.master.saisi.grid(row=10, column=1)
+            ############################ - Perturbation - ############################
+            if self.variable != "Light" and self.variable != "Eye":
+                self.invitpx = Label(self.frame, text='Perturbation x:', width = 15, height=1, fg="navy")
+                self.invitpx.grid(row=3, column=2)
+                self.px = StringVar()
+                self.px.set("0")
+                self.master.saisi = Entry(self.frame, textvariable=self.px, width=30)
+                self.master.saisi.grid(row=4, column=2)
+
+                self.invitpy = Label(self.frame, text='Perturbation y:', width = 15, height=1, fg="navy")
+                self.invitpy.grid(row=6, column=2)
+                self.py = StringVar()
+                self.py.set("0")
+                self.master.saisi = Entry(self.frame, textvariable=self.py, width=30)
+                self.master.saisi.grid(row=7, column=2)
+
+                self.invitpz = Label(self.frame, text='Perturbation z:', width = 15, height=1, fg="navy")
+                self.invitpz.grid(row=9, column=2)
+                self.pz = StringVar()
+                self.pz.set("0")
+                self.master.saisi = Entry(self.frame, textvariable=self.pz, width=30)
+                self.master.saisi.grid(row=10, column=2)
+
+                self.invitlimxs = Label(self.frame, text='Limit Sup x:', width = 8, height=1, fg="navy")
+                self.invitlimxs.grid(row=12, column=0)
+                self.limxs = StringVar()
+                self.limxs.set("-1")
+                self.master.saisi = Entry(self.frame, textvariable=self.limxs, width=30)
+                self.master.saisi.grid(row=13, column=0)
+
+                self.invitlimys = Label(self.frame, text='Limit Sup y:', width = 8, height=1, fg="navy")
+                self.invitlimys.grid(row=15, column=0)
+                self.limys = StringVar()
+                self.limys.set("-1")
+                self.master.saisi = Entry(self.frame, textvariable=self.limys, width=30)
+                self.master.saisi.grid(row=16, column=0)
+
+                self.invitlimzs = Label(self.frame, text='Limit Sup z:', width = 8, height=1, fg="navy")
+                self.invitlimzs.grid(row=18, column=0)
+                self.limzs = StringVar()
+                self.limzs.set("-1")
+                self.master.saisi = Entry(self.frame, textvariable=self.limzs, width=30)
+                self.master.saisi.grid(row=19, column=0)
+
+                self.invitlimxi = Label(self.frame, text='Limit Inf x:', width = 8, height=1, fg="navy")
+                self.invitlimxi.grid(row=12, column=2)
+                self.limxi = StringVar()
+                self.limxi.set("-1")
+                self.master.saisi = Entry(self.frame, textvariable=self.limxi, width=30)
+                self.master.saisi.grid(row=13, column=2)
+
+                self.invitlimyi = Label(self.frame, text='Limit Inf y:', width = 8, height=1, fg="navy")
+                self.invitlimyi.grid(row=15, column=2)
+                self.limyi = StringVar()
+                self.limyi.set("-1")
+                self.master.saisi = Entry(self.frame, textvariable=self.limyi, width=30)
+                self.master.saisi.grid(row=16, column=2)
+
+                self.invitlimzi = Label(self.frame, text='Limit Inf z:', width = 8, height=1, fg="navy")
+                self.invitlimzi.grid(row=18, column=2)
+                self.limzi = StringVar()
+                self.limzi.set("-1")
+                self.master.saisi = Entry(self.frame, textvariable=self.limzi, width=30)
+                self.master.saisi.grid(row=19, column=2)
+            ############################ - Color RGB - ############################
+            if self.variable != "Eye":
+                self.color_r = StringVar()
+                self.color_g = StringVar()
+                self.color_b = StringVar()
+                self.color_r.set("128")
+                self.color_g.set("128")
+                self.color_b.set("128")
+                self.echelle_r = Scale(self.frame, from_=0, to=255, resolution=1, orient=VERTICAL, length=300, width=20, label="Red", tickinterval=255, variable=self.color_r)
+                self.echelle_g = Scale(self.frame, from_=0, to=255, resolution=1, orient=VERTICAL, length=300, width=20, label="Green", tickinterval=255, variable=self.color_g)
+                self.echelle_b = Scale(self.frame, from_=0, to=255, resolution=1, orient=VERTICAL, length=300, width=20, label="Blue", tickinterval=255, variable=self.color_b)
+                self.echelle_r.grid(row=21, column=0)
+                self.echelle_g.grid(row=21, column=1)
+                self.echelle_b.grid(row=21, column=2)
+            ############################ - Brill - ############################
+            if self.variable != "Light" and self.variable != "Eye":
+                self.brill = StringVar()
+                self.brill.set("0.5")
+                self.echelle_brill = Scale(self.frame, from_=0, to=1, resolution=0.01, orient=HORIZONTAL, length=300, width=20, label="Shine", tickinterval=1, variable=self.brill)
+                self.echelle_brill.grid(row=23, column=1)
+            if self.variable == "Light":
+                self.power = StringVar()
+                self.power.set("50")
+                self.echelle_power = Scale(self.frame, from_=0, to=100, resolution=1, orient=HORIZONTAL, length=300, width=20, label="Power", tickinterval=10, variable=self.power)
+                self.echelle_power.grid(row=24, column=1)
+        ############################ - Ambiance - ############################
+        if self.variable == "Ambiance":
+            self.radio = Label(self.frame, text='Ambiance ?', width = 10, height = 1, fg = "navy")
+            self.radio.grid(row=0, column=1)
+            self.retour = StringVar()
+            self.retour.set("0")
+            self.bouton1=Radiobutton(self.frame, text="Yes", variable=self.retour, value=1, bd=2)
+            self.bouton2=Radiobutton(self.frame, text="No", variable=self.retour, value=0, bd=3)
+            self.bouton1.grid(row=1, column=1)
+            self.bouton2.grid(row=2, column=1)
+        ############################ - Paraboloide - ############################
+        if self.variable == "Paraboloide":
+            self.radio = Label(self.frame, text='Paraboloide:', width = 12, height = 1, fg = "navy")
+            self.radio.grid(row=0, column=1)
+            self.typ = StringVar()
+            self.typ.set("0")
+            self.bouton1=Radiobutton(self.frame, text="-1", variable=self.typ, value=1, bd=2)
+            self.bouton2=Radiobutton(self.frame, text="1", variable=self.typ, value=-1, bd=3)
+            self.bouton1.grid(row=1, column=1)
+            self.bouton2.grid(row=2, column=1)
+
+        self.quitButton = Button(self.frame, text = 'Valider', width = 10, command = self.close_windows)
+        self.quitButton.grid(row=25, column=1)
+        self.frame.pack()
+    ############################ - Write in file - ############################
+    def close_windows(self):
+        error = 0
+        if self.variable != "Ambiance":
+            if self.variable == "Cone" or self.variable == "Hyperboloide - One Nape" or self.variable == "Hyperboloide - Two Nape":
+                try:
+                    check = (float(self.angle.get()))
+                except ValueError:
+                    self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                    self.err.grid(row=2, column=0)
+                    error = 1
+
+                if self.variable == "Hyperboloide - One Nape":
+                    try:
+                        check = (int(self.hyper.get()))
+                        if check >= 0:
+                            self.err = Label(self.frame, text='Error: value', width = 12, height=1, fg="red")
+                            self.err.grid(row=2, column=2)
+                            error = 1
+                    except ValueError:
+                        self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                        self.err.grid(row=2, column=2)
+                        error = 1
+
+                if self.variable == "Hyperboloide - Two Nape":
+                    try:
+                        check = (int(self.hyper.get()))
+                        if check <= 0:
+                            self.err = Label(self.frame, text='Error: value', width = 12, height=1, fg="red")
+                            self.err.grid(row=2, column=2)
+                            error = 1
+                    except ValueError:
+                        self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                        self.err.grid(row=2, column=2)
+                        error = 1
+
+            try:
+                check = (float(self.x.get()))
+            except ValueError:
+                self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                self.err.grid(row=5, column=0)
+                error = 1
+
+            try:
+                check = (float(self.y.get()))
+            except ValueError:
+                self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                self.err.grid(row=8, column=0)
+                error = 1
+            try:
+                check = (float(self.z.get()))
+            except ValueError:
+                self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                self.err.grid(row=11, column=0)
+                error = 1
+
+            if self.variable != "Light" and self.variable != "Orb":
+                try:
+                    check = (float(self.rx.get()))
+                except ValueError:
+                    self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                    self.err.grid(row=5, column=1)
+                    error = 1
+                try:
+                    check = (float(self.ry.get()))
+                except ValueError:
+                    self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                    self.err.grid(row=8, column=1)
+                    error = 1
+                try:
+                    check = (float(self.rz.get()))
+                except ValueError:
+                    self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                    self.err.grid(row=11, column=1)
+                    error = 1
+
+            if self.variable != "Light" and self.variable != "Eye":
+                try:
+                    check = (float(self.px.get()))
+                    if (check < 0):
+                        self.err = Label(self.frame, text='Error: value', width = 12, height=1, fg="red")
+                        self.err.grid(row=5, column=2)
+                        error = 1
+                except ValueError:
+                    self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                    self.err.grid(row=5, column=2)
+                    error = 1
+                try:
+                    check = (float(self.py.get()))
+                    if (check < 0):
+                        self.err = Label(self.frame, text='Error: value', width = 12, height=1, fg="red")
+                        self.err.grid(row=8, column=2)
+                        error = 1
+                except ValueError:
+                        self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                        self.err.grid(row=8, column=2)
+                        error = 1
+                try:
+                    check = (float(self.pz.get()))
+                    if (check < 0):
+                        self.err = Label(self.frame, text='Error: value', width = 12, height=1, fg="red")
+                        self.err.grid(row=11, column=2)
+                        error = 1
+                except ValueError:
+                        self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                        self.err.grid(row=11, column=2)
+                        error = 1
+                try:
+                    check = (float(self.limxs.get()))
+                except ValueError:
+                        self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                        self.err.grid(row=14, column=0)
+                        error = 1
+
+                try:
+                    check = (float(self.limys.get()))
+                except ValueError:
+                        self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                        self.err.grid(row=17, column=0)
+                        error = 1
+
+                try:
+                    check = (float(self.limzs.get()))
+                except ValueError:
+                        self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                        self.err.grid(row=20, column=0)
+                        error = 1
+
+                try:
+                    check = (float(self.limxi.get()))
+                except ValueError:
+                        self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                        self.err.grid(row=14, column=2)
+                        error = 1
+
+                try:
+                    check = (float(self.limyi.get()))
+                except ValueError:
+                        self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                        self.err.grid(row=17, column=2)
+                        error = 1
+
+                try:
+                    check = (float(self.limzi.get()))
+                except ValueError:
+                        self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                        self.err.grid(row=20, column=2)
+                        error = 1
+
+            if self.variable == "Cylindre" or self.variable == "Orb":
+                try:
+                    check = (float(self.rayon.get()))
+                except ValueError:
+                    self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                    self.err.grid(row=11, column=2)
+                    error = 1
+
+            if self.variable == "Plan":
+                try:
+                    check = (float(self.tran.get()))
+                except ValueError:
+                    self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                    self.err.grid(row=11, column=2)
+                    error = 1
+            if self.variable == "Paraboloide":
+                try:
+                    check = (float(self.const.get()))
+                except ValueError:
+                    self.err = Label(self.frame, text='Error', width = 5, height=1, fg="red")
+                    self.err.grid(row=2, column=2)
+                    error = 1
+
+        if error == 0:
+            global f
+            if self.variable == "Hyperboloide - Two Nape" or self.variable == "Hyperboloide - One Nape":
+                f.write("cone ")
+            else:
+                f.write(self.variable.lower() + " ")
+            if self.variable != "Ambiance":
+                f.write(self.x.get() + " ")
+                f.write(self.y.get() + " ")
+                f.write(self.z.get() + " ")
+                if self.variable == "Cone" or self.variable == "Hyperboloide - One Nape" or self.variable == "Hyperboloide - Two Nape":
+                    f.write(self.angle.get() + " ")
+                elif self.variable == "Cylindre" or self.variable == "Orb":
+                    f.write(self.rayon.get() + " ")
+                elif self.variable == "Plan":
+                    f.write(self.tran.get() + " ")
+                elif self.variable == "Paraboloide":
+                    f.write(self.typ.get() + " ")
+                    f.write(self.const.get() + " ")
+                if self.variable != "Light" and self.variable != "Orb":
+                    f.write(self.rx.get() + " ")
+                    f.write(self.ry.get() + " ")
+                    f.write(self.rz.get() + " ")
+                if self.variable != "Eye":
+                    f.write(self.color_r.get() + " ")
+                    f.write(self.color_g.get() + " ")
+                    f.write(self.color_b.get() + " ")
+                if self.variable != "Light" and self.variable != "Eye":
+                    f.write(self.brill.get() + " ")
+                if self.variable == "Cone" or self.variable == "Hyperboloide - One Nape" or self.variable == "Hyperboloide - Two Nape":
+                    f.write(self.hyper.get() + " ")
+                if self.variable != "Light" and self.variable != "Eye":
+                    f.write(self.px.get() + " ")
+                    f.write(self.py.get() + " ")
+                    f.write(self.pz.get() + " ")
+                if self.variable == "Light":
+                    f.write(self.power.get() + " ")
+                if self.variable != "Light" and self.variable != "Eye":
+                    f.write(self.limxs.get() + " ")
+                    f.write(self.limys.get() + " ")
+                    f.write(self.limzs.get() + " ")
+                    f.write(self.limxi.get() + " ")
+                    f.write(self.limyi.get() + " ")
+                    f.write(self.limzi.get() + " ")
+                if self.variable == "Orb":
+                    f.write("0 ")
+            else:
+                f.write(self.retour.get() + " ")
+            f.write("\n")
+
+            self.master.destroy()
+
+def intercept_edit(edit):
+    global f
+    global globvar
+    global scene
+    globvar = 2
+    f.close()
+    scene.new_err.edit.destroy()
+
+def intercept(scene):
+    global error
+    global edit
+    global globvar
+    globvar = 2
+    scene.destroy()
+
+def yes(edit, scene, error):
+    global globvar
+    globvar = 1
+    scene.destroy()
+
+def no(edit):
+    global f
+    global globvar
+    global scene
+    globvar = 2
+    f.close()
+    scene.new_err.destroy()
+
+def edit(scene, name, error):
+    scene.new_err.edit = Toplevel(scene.new_err)
+    scene.new_err.edit.title("Edit Scene")
+    global f
+    f = open(name, 'rw+')
+    scene.new_err.edit.label = Label(scene.new_err.edit, text=f.read())
+    scene.new_err.edit.label.pack()
+    scene.new_err.edit.button = Button(scene.new_err.edit, text='No', width = 7, command=lambda: no(edit))
+    scene.new_err.edit.button.pack()
+    scene.new_err.edit.button = Button(scene.new_err.edit, text='Yes', width = 7, command = lambda: yes(scene.new_err.edit, scene, error))
+    scene.new_err.edit.button.pack()
+    scene.new_err.edit.protocol('WM_DELETE_WINDOW', lambda: intercept_edit(edit))
+    scene.new_err.edit.mainloop()
+
+def error_err(error, scene):
+    scene.name_scene.focus_set()
+    scene.name_scene.selection_range(0, END)
+    scene.new_err.destroy()
+
+def verif(name):
+    global scene
+    if os.path.isfile(name.get()) and name.get() != 0:
+        global error
+        scene.new_err = Toplevel(scene)
+        scene.new_err.title("Error !")
+        scene.new_err.resizable(width=False, height=False)
+        scene.new_err.invitrx = Label(scene.new_err, text='Error: Name is already exist.', width = 30, height=1, fg="red")
+        scene.new_err.invitrx.grid(row=1, column=1)
+        scene.new_err.editer = Button(scene.new_err, text = 'Edit', width = 5, command = lambda: edit(scene, name.get(), scene.new_err))
+        scene.new_err.editer.grid(row=2, column=0)
+        scene.new_err.quitButton = Button(scene.new_err, text = 'Quit', width = 5, command = lambda: error_err(scene.new_err, scene))
+        scene.new_err.quitButton.grid(row=2, column=2)
+        scene.new_err.mainloop()
+    else:
+        scene.destroy()
+
+def enter(event):
+    global name
+    if verif(name) == 1:
+        scene.destroy()
+
+def escape(event):
+    global globvar
+    globvar = 2
+    global scene
+    scene.destroy()
+
+def escape_new_err(event):
+    global globvar
+    globvar = 2
+    global scene
+    scene.new_err.destroy()
+
+def main():
+    global globvar
+    globvar = 0
+    global scene
+    scene = Tk()
+    scene.title("Name Scene")
+    scene.protocol('WM_DELETE_WINDOW', lambda: intercept(scene))
+    labels = Label(scene, text='Name of scene ')
+    labels.pack(side=LEFT, padx=5, pady=5)
+    global name
+    name = StringVar()
+    scene.name_scene = Entry(scene, textvariable=name)
+    scene.name_scene.bind("<Return>", enter)
+    scene.name_scene.bind("<Escape>", escape)
+    scene.name_scene.pack(side=LEFT, padx=5, pady=5)
+    name.set(u"0")
+    scene.name_scene.focus_set()
+    scene.name_scene.selection_range(0, END)
+    scene_b = Button(scene, text='Valider', command=lambda:verif(name))
+    scene_b.pack(side=LEFT, padx=5, pady=5)
+    scene.mainloop()
+    if globvar == 0:
+        global f
+        f = open(name.get(), 'w+')
+        f.write("#HEADER\n")
+        f.write("#cone x y z radius rotX rotY rotZ clrR clrG clrB brill [HYPER] PnX PnY PnZ lim_max_x lim_max_y lim_max_z lim_min_x lim_min_y lim_min_z\n")
+        f.write("#eye x y z rotX rotY rotZ\n")
+        f.write("#cylinder x y z radius rotX rotY rotZ clrR clrG clrB brill PnX PnY PnZ lim_max_x lim_max_y lim_max_z lim_min_x lim_min_y lim_min_z\n")
+        f.write("#light x y z clrR clrG clrB power\n")
+        f.write("#orb x y z radius clrR clrG clrB brill hyper PnX PnY PnZ lim_max_x lim_max_y lim_max_z lim_min_x lim_min_y lim_min_z\n")
+        f.write("#plan x y z tran rotX rotY rotZ clrR clrG clrB brill PnX PnY PnZ lim_max_x lim_max_y lim_max_z lim_min_x lim_min_y lim_min_z\n")
+    if (name.get() != "0" and os.path.isfile(name.get()) == True and globvar == 0) or globvar == 1:
+        root = Tk()
+        root.title("Create Scene")
+        root.geometry("500x500")
+        app = Demo1(root)
+        gifdict={}
+        root.mainloop()
+
+if __name__ == '__main__':
+    main()

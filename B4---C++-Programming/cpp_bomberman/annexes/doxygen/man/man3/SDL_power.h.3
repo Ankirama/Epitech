@@ -1,0 +1,81 @@
+.TH "lib/gdl/includes/SDL_power.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_power.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSDL_PowerState\fP { \fBSDL_POWERSTATE_UNKNOWN\fP, \fBSDL_POWERSTATE_ON_BATTERY\fP, \fBSDL_POWERSTATE_NO_BATTERY\fP, \fBSDL_POWERSTATE_CHARGING\fP, \fBSDL_POWERSTATE_CHARGED\fP }"
+.br
+.RI "\fIThe basic state for the system's power supply\&. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBSDL_PowerState\fP SDLCALL \fBSDL_GetPowerInfo\fP (\fBint\fP *secs, \fBint\fP *pct)"
+.br
+.RI "\fIGet the current power supply details\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header for the SDL power management routines\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBSDL_PowerState\fP"
+
+.PP
+The basic state for the system's power supply\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISDL_POWERSTATE_UNKNOWN \fP\fP
+cannot determine power status 
+.TP
+\fB\fISDL_POWERSTATE_ON_BATTERY \fP\fP
+Not plugged in, running on the battery 
+.TP
+\fB\fISDL_POWERSTATE_NO_BATTERY \fP\fP
+Plugged in, no battery available 
+.TP
+\fB\fISDL_POWERSTATE_CHARGING \fP\fP
+Plugged in, charging battery 
+.TP
+\fB\fISDL_POWERSTATE_CHARGED \fP\fP
+Plugged in, battery charged 
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC \fBSDL_PowerState\fP SDLCALL SDL_GetPowerInfo (\fBint\fP * secs, \fBint\fP * pct)"
+
+.PP
+Get the current power supply details\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsecs\fP Seconds of battery life left\&. You can pass a NULL here if you don't care\&. Will return -1 if we can't determine a value, or we're not running on a battery\&.
+.br
+\fIpct\fP Percentage of battery life left, between 0 and 100\&. You can pass a NULL here if you don't care\&. Will return -1 if we can't determine a value, or we're not running on a battery\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The state of the battery (if any)\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

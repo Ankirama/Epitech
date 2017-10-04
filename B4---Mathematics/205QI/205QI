@@ -1,0 +1,142 @@
+#!/usr/bin/python
+
+import sys
+from math import *
+try:
+    import matplotlib.pyplot as pyp
+except (ImportError):
+    print "No module installed here, you cannot continue !"
+    sys.exit()
+import numpy as np
+
+def usage():
+    print("Usage: ./205QI M E")
+    print("Usage: ./205QI M E QI")
+    print("Usage: ./205QI M E QI QI")
+    print("M: moyenne / E: ecart-type")
+    sys.exit()
+
+def gauss(x, M, E):
+    return ((1.0 / (E * sqrt(2.0 * pi)) * exp ( - pow((x - M), 2.0) / (2.0 * pow(E, 2.0)))))
+
+def option(Q1, Q2, M, E):
+    tmp = 0.0
+    if (Q2 == 0):
+        i = 0.0;
+        while (i < Q1):
+            tmp = tmp + gauss(i, M, E)
+            i = i + 0.01
+    else:
+        i = Q1;
+        while (i < Q2):
+            tmp = tmp + gauss(i, M, E)
+            i = i + 0.01
+    return (tmp)
+
+def checkarg(M, E, Q1, Q2):
+    if (M < 0 or M > 200):
+        print("La moyenne doit etre comprise entre 0 et 200.")
+        sys.exit()
+    elif (E < 0 or E > 200):
+        print("L'ecart-type doit etre compris entre 0 et 200.")
+        sys.exit()
+    elif (Q1 < 0 or Q1 > 200 or Q2 < 0 or Q2 > 200):
+        print("Le QI doit etre compris entre 0 et 200.")
+        sys.exit()
+    elif (Q2 != 0 and Q1 > Q2):
+        print("Le deuxieme QI doit etre superieur au premier")
+        sys.exit()
+
+def     distribution(x):
+    if x == 0:
+        return 0.5
+    u = abs(x)
+    n = int(u * 2000)
+    du = u / n
+    k = 1 / sqrt(2 * pi)
+    u1 = 0
+    f1 = k
+    p = 0.5
+    for i in range(n):
+        u2 = u1 + du
+        f2 = k * exp(-0.5 * pow(u2, 2))
+        p = p + (f1 + f2) * du * 0.5
+        u1 = u2
+        f1 = f2
+    if x > 0:
+        return p
+    return 1.0 - p
+
+def graph(result):
+    pyp.axis([0, 200, 0, 120])
+    pyp.plot(result)
+    pyp.legend(loc="center right")
+    pyp.xlabel("QI")
+    pyp.ylabel("probabilite (%)")
+    pyp.title("205QI")
+    pyp.show()
+
+def main():
+    if (len(sys.argv) == 3):
+        try:
+            M = (float(sys.argv[1]))
+        except (ValueError):
+            print("Error : {} is not a number".format(sys.argv[1]))
+            usage()
+        try:
+            E = (float(sys.argv[2]))
+        except (ValueError):
+            print("Error : {} is not a number".format(sys.argv[2]))
+            usage()
+        checkarg(M, E, 0, 0)
+        result = list()
+        for i in range(200):
+            tmp = distribution((i - M) / E)
+            result.append(tmp * 100)
+        graph(result)
+    elif (len(sys.argv) == 4):
+        try:
+            M = (int(sys.argv[1]))
+        except (ValueError):
+            print("Error : {} is not a number".format(sys.argv[1]))
+            usage()
+        try:
+            E = (int(sys.argv[2]))
+        except (ValueError):
+            print("Error : {} is not a number".format(sys.argv[2]))
+            usage()
+        try:
+            Q1 = (int(sys.argv[3]))
+        except (ValueError):
+            print("Error : {} is not a number".format(sys.argv[3]))
+            usage()
+        checkarg(M, E, Q1, 0)
+        print "{:.2f}% des personnes ont un QI inferieur a {}".format(option(Q1,0, M, E), Q1)
+    elif (len(sys.argv) == 5):
+        try:
+            M = (int(sys.argv[1]))
+        except (ValueError):
+            print("Error : {} is not a number".format(sys.argv[1]))
+            usage()
+        try:
+            E = (int(sys.argv[2]))
+        except (ValueError):
+            print("Error : {} is not a number".format(sys.argv[2]))
+            usage()
+        try:
+            Q1 = (int(sys.argv[3]))
+        except (ValueError):
+            print("Error : {} is not a number".format(sys.argv[3]))
+            usage()
+        try:
+            Q2 = (int(sys.argv[4]))
+        except (ValueError):
+            print("Error : {} is not a number".format(sys.argv[4]))
+            usage()
+        checkarg(M, E, Q1, Q2)
+        print "{:.2f}% des personnes ont un QI compris entre {} et {}".format(option(Q1, Q2, M, E), Q1, Q2)
+    else:
+        usage()
+
+if __name__ == "__main__":
+    main()

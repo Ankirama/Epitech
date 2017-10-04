@@ -1,0 +1,55 @@
+\hypertarget{vector__query_8hpp}{}\section{lib/gdl/includes/glm/gtx/vector\+\_\+query.hpp File Reference}
+\label{vector__query_8hpp}\index{lib/gdl/includes/glm/gtx/vector\+\_\+query.\+hpp@{lib/gdl/includes/glm/gtx/vector\+\_\+query.\+hpp}}
+{\ttfamily \#include \char`\"{}../glm.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$cfloat$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+{\ttfamily \#include \char`\"{}vector\+\_\+query.\+inl\char`\"{}}\\*
+Include dependency graph for vector\+\_\+query.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{vector__query_8hpp_aabc0baf126b2dab486b2a18baf6437cf}{}\#define {\bfseries G\+L\+M\+\_\+\+G\+T\+X\+\_\+vector\+\_\+query}~G\+L\+M\+\_\+\+V\+E\+R\+S\+I\+O\+N\label{vector__query_8hpp_aabc0baf126b2dab486b2a18baf6437cf}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\bool \hyperlink{group__gtx__vector__query_ga516c25a0d2c46c64fb5afca5eb24daab}{glm\+::are\+Collinear} (gen\+Type const \&v0, gen\+Type const \&v1, typename gen\+Type\+::value\+\_\+type const \&epsilon)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\bool \hyperlink{group__gtx__vector__query_ga0cba4a48074a8b8b8474538385a709e7}{glm\+::are\+Orthogonal} (gen\+Type const \&v0, gen\+Type const \&v1, typename gen\+Type\+::value\+\_\+type const \&epsilon)
+\item 
+{\footnotesize template$<$typename gen\+Type , template$<$ typename $>$ class vec\+Type$>$ }\\bool \hyperlink{group__gtx__vector__query_ga462311ef54b0201f227b927bdcbf2c6e}{glm\+::is\+Normalized} (vec\+Type$<$ gen\+Type $>$ const \&v, gen\+Type const \&epsilon)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\bool \hyperlink{group__gtx__vector__query_ga891a13a3a161b48496d478cadc53c5cf}{glm\+::is\+Null} (detail\+::tvec2$<$ val\+Type $>$ const \&v, val\+Type const \&epsilon)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\bool \hyperlink{group__gtx__vector__query_ga4be073840d3219da9caa30bbfca34140}{glm\+::is\+Null} (detail\+::tvec3$<$ val\+Type $>$ const \&v, val\+Type const \&epsilon)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\bool \hyperlink{group__gtx__vector__query_gaeaf0cba105a973ea70c74c308ae7954f}{glm\+::is\+Null} (detail\+::tvec4$<$ val\+Type $>$ const \&v, val\+Type const \&epsilon)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\bool \hyperlink{group__gtx__vector__query_gab6b9a4e79fb7b34e8817ae9c870eb06e}{glm\+::are\+Orthonormal} (gen\+Type const \&v0, gen\+Type const \&v1, typename gen\+Type\+::value\+\_\+type const \&epsilon)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Open\+G\+L Mathematics (glm.\+g-\/truc.\+net)
+
+Copyright (c) 2005 -\/ 2013 G-\/\+Truc Creation (www.\+g-\/truc.\+net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+H\+E S\+O\+F\+T\+W\+A\+R\+E I\+S P\+R\+O\+V\+I\+D\+E\+D \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+U\+T W\+A\+R\+R\+A\+N\+T\+Y O\+F A\+N\+Y K\+I\+N\+D, E\+X\+P\+R\+E\+S\+S O\+R I\+M\+P\+L\+I\+E\+D, I\+N\+C\+L\+U\+D\+I\+N\+G B\+U\+T N\+O\+T L\+I\+M\+I\+T\+E\+D T\+O T\+H\+E W\+A\+R\+R\+A\+N\+T\+I\+E\+S O\+F M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y, F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E A\+N\+D N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+N\+T. I\+N N\+O E\+V\+E\+N\+T S\+H\+A\+L\+L T\+H\+E A\+U\+T\+H\+O\+R\+S O\+R C\+O\+P\+Y\+R\+I\+G\+H\+T H\+O\+L\+D\+E\+R\+S B\+E L\+I\+A\+B\+L\+E F\+O\+R A\+N\+Y C\+L\+A\+I\+M, D\+A\+M\+A\+G\+E\+S O\+R O\+T\+H\+E\+R L\+I\+A\+B\+I\+L\+I\+T\+Y, W\+H\+E\+T\+H\+E\+R I\+N A\+N A\+C\+T\+I\+O\+N O\+F C\+O\+N\+T\+R\+A\+C\+T, T\+O\+R\+T O\+R O\+T\+H\+E\+R\+W\+I\+S\+E, A\+R\+I\+S\+I\+N\+G F\+R\+O\+M, O\+U\+T O\+F O\+R I\+N C\+O\+N\+N\+E\+C\+T\+I\+O\+N W\+I\+T\+H T\+H\+E S\+O\+F\+T\+W\+A\+R\+E O\+R T\+H\+E U\+S\+E O\+R O\+T\+H\+E\+R D\+E\+A\+L\+I\+N\+G\+S I\+N T\+H\+E S\+O\+F\+T\+W\+A\+R\+E.
+
+\hyperlink{group__gtx__vector__query}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+vector\+\_\+query}
+
+\begin{DoxyDate}{Date}
+2008-\/03-\/10 / 2011-\/06-\/07 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Christophe Riccio
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__core}{G\+L\+M Core} (dependence) 
+\end{DoxySeeAlso}

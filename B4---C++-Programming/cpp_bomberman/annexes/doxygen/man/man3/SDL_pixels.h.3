@@ -1,0 +1,396 @@
+.TH "lib/gdl/includes/SDL_pixels.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_pixels.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_Color\fP"
+.br
+.ti -1c
+.RI "struct \fBSDL_Palette\fP"
+.br
+.ti -1c
+.RI "struct \fBSDL_PixelFormat\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_DEFINE_PIXELFOURCC\fP(A,  B,  C,  D)   SDL_FOURCC(A, B, C, D)"
+.br
+.ti -1c
+.RI "#define \fBSDL_DEFINE_PIXELFORMAT\fP(type,  order,  layout,  bits,  bytes)"
+.br
+.ti -1c
+.RI "#define \fBSDL_PIXELFLAG\fP(X)   (((X) >> 28) & 0x0F)"
+.br
+.ti -1c
+.RI "#define \fBSDL_PIXELTYPE\fP(X)   (((X) >> 24) & 0x0F)"
+.br
+.ti -1c
+.RI "#define \fBSDL_PIXELORDER\fP(X)   (((X) >> 20) & 0x0F)"
+.br
+.ti -1c
+.RI "#define \fBSDL_PIXELLAYOUT\fP(X)   (((X) >> 16) & 0x0F)"
+.br
+.ti -1c
+.RI "#define \fBSDL_BITSPERPIXEL\fP(X)   (((X) >> 8) & 0xFF)"
+.br
+.ti -1c
+.RI "#define \fBSDL_BYTESPERPIXEL\fP(X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_ISPIXELFORMAT_INDEXED\fP(format)"
+.br
+.ti -1c
+.RI "#define \fBSDL_ISPIXELFORMAT_ALPHA\fP(format)"
+.br
+.ti -1c
+.RI "#define \fBSDL_ISPIXELFORMAT_FOURCC\fP(format)   ((format) && (SDL_PIXELFLAG(format) != 1))"
+.br
+.ti -1c
+.RI "#define \fBSDL_Colour\fP   \fBSDL_Color\fP"
+.br
+.in -1c
+.PP
+.RI "\fBTransparency definitions\fP"
+.br
+These define alpha as the opacity of a surface\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_ALPHA_OPAQUE\fP   255"
+.br
+.ti -1c
+.RI "#define \fBSDL_ALPHA_TRANSPARENT\fP   0"
+.br
+.in -1c
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBSDL_Color\fP \fBSDL_Color\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBSDL_Palette\fP \fBSDL_Palette\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBSDL_PixelFormat\fP \fBSDL_PixelFormat\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBSDL_PIXELTYPE_UNKNOWN\fP, \fBSDL_PIXELTYPE_INDEX1\fP, \fBSDL_PIXELTYPE_INDEX4\fP, \fBSDL_PIXELTYPE_INDEX8\fP, \fBSDL_PIXELTYPE_PACKED8\fP, \fBSDL_PIXELTYPE_PACKED16\fP, \fBSDL_PIXELTYPE_PACKED32\fP, \fBSDL_PIXELTYPE_ARRAYU8\fP, \fBSDL_PIXELTYPE_ARRAYU16\fP, \fBSDL_PIXELTYPE_ARRAYU32\fP, \fBSDL_PIXELTYPE_ARRAYF16\fP, \fBSDL_PIXELTYPE_ARRAYF32\fP }"
+.br
+.ti -1c
+.RI "enum { \fBSDL_BITMAPORDER_NONE\fP, \fBSDL_BITMAPORDER_4321\fP, \fBSDL_BITMAPORDER_1234\fP }"
+.br
+.ti -1c
+.RI "enum { \fBSDL_PACKEDORDER_NONE\fP, \fBSDL_PACKEDORDER_XRGB\fP, \fBSDL_PACKEDORDER_RGBX\fP, \fBSDL_PACKEDORDER_ARGB\fP, \fBSDL_PACKEDORDER_RGBA\fP, \fBSDL_PACKEDORDER_XBGR\fP, \fBSDL_PACKEDORDER_BGRX\fP, \fBSDL_PACKEDORDER_ABGR\fP, \fBSDL_PACKEDORDER_BGRA\fP }"
+.br
+.ti -1c
+.RI "enum { \fBSDL_ARRAYORDER_NONE\fP, \fBSDL_ARRAYORDER_RGB\fP, \fBSDL_ARRAYORDER_RGBA\fP, \fBSDL_ARRAYORDER_ARGB\fP, \fBSDL_ARRAYORDER_BGR\fP, \fBSDL_ARRAYORDER_BGRA\fP, \fBSDL_ARRAYORDER_ABGR\fP }"
+.br
+.ti -1c
+.RI "enum { \fBSDL_PACKEDLAYOUT_NONE\fP, \fBSDL_PACKEDLAYOUT_332\fP, \fBSDL_PACKEDLAYOUT_4444\fP, \fBSDL_PACKEDLAYOUT_1555\fP, \fBSDL_PACKEDLAYOUT_5551\fP, \fBSDL_PACKEDLAYOUT_565\fP, \fBSDL_PACKEDLAYOUT_8888\fP, \fBSDL_PACKEDLAYOUT_2101010\fP, \fBSDL_PACKEDLAYOUT_1010102\fP }"
+.br
+.ti -1c
+.RI "enum { \fBSDL_PIXELFORMAT_UNKNOWN\fP, \fBSDL_PIXELFORMAT_INDEX1LSB\fP, \fBSDL_PIXELFORMAT_INDEX1MSB\fP, \fBSDL_PIXELFORMAT_INDEX4LSB\fP, \fBSDL_PIXELFORMAT_INDEX4MSB\fP, \fBSDL_PIXELFORMAT_INDEX8\fP, \fBSDL_PIXELFORMAT_RGB332\fP, \fBSDL_PIXELFORMAT_RGB444\fP, \fBSDL_PIXELFORMAT_RGB555\fP, \fBSDL_PIXELFORMAT_BGR555\fP, \fBSDL_PIXELFORMAT_ARGB4444\fP, \fBSDL_PIXELFORMAT_RGBA4444\fP, \fBSDL_PIXELFORMAT_ABGR4444\fP, \fBSDL_PIXELFORMAT_BGRA4444\fP, \fBSDL_PIXELFORMAT_ARGB1555\fP, \fBSDL_PIXELFORMAT_RGBA5551\fP, \fBSDL_PIXELFORMAT_ABGR1555\fP, \fBSDL_PIXELFORMAT_BGRA5551\fP, \fBSDL_PIXELFORMAT_RGB565\fP, \fBSDL_PIXELFORMAT_BGR565\fP, \fBSDL_PIXELFORMAT_RGB24\fP, \fBSDL_PIXELFORMAT_BGR24\fP, \fBSDL_PIXELFORMAT_RGB888\fP, \fBSDL_PIXELFORMAT_RGBX8888\fP, \fBSDL_PIXELFORMAT_BGR888\fP, \fBSDL_PIXELFORMAT_BGRX8888\fP, \fBSDL_PIXELFORMAT_ARGB8888\fP, \fBSDL_PIXELFORMAT_RGBA8888\fP, \fBSDL_PIXELFORMAT_ABGR8888\fP, \fBSDL_PIXELFORMAT_BGRA8888\fP, \fBSDL_PIXELFORMAT_ARGB2101010\fP, \fBSDL_PIXELFORMAT_YV12\fP, \fBSDL_PIXELFORMAT_IYUV\fP, \fBSDL_PIXELFORMAT_YUY2\fP, \fBSDL_PIXELFORMAT_UYVY\fP, \fBSDL_PIXELFORMAT_YVYU\fP = }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GetPixelFormatName\fP (\fBUint32\fP format)"
+.br
+.RI "\fIGet the human readable name of a pixel format\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_PixelFormatEnumToMasks\fP (\fBUint32\fP format, \fBint\fP *bpp, \fBUint32\fP *Rmask, \fBUint32\fP *Gmask, \fBUint32\fP *Bmask, \fBUint32\fP *Amask)"
+.br
+.RI "\fIConvert one of the enumerated pixel formats to a bpp and RGBA masks\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBUint32\fP SDLCALL \fBSDL_MasksToPixelFormatEnum\fP (\fBint\fP bpp, \fBUint32\fP Rmask, \fBUint32\fP Gmask, \fBUint32\fP Bmask, \fBUint32\fP Amask)"
+.br
+.RI "\fIConvert a bpp and RGBA masks to an enumerated pixel format\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBSDL_PixelFormat\fP *SDLCALL \fBSDL_AllocFormat\fP (\fBUint32\fP pixel_format)"
+.br
+.RI "\fICreate an \fBSDL_PixelFormat\fP structure from a pixel format enum\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_FreeFormat\fP (\fBSDL_PixelFormat\fP *format)"
+.br
+.RI "\fIFree an \fBSDL_PixelFormat\fP structure\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBSDL_Palette\fP *SDLCALL \fBSDL_AllocPalette\fP (\fBint\fP ncolors)"
+.br
+.RI "\fICreate a palette structure with the specified number of color entries\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetPixelFormatPalette\fP (\fBSDL_PixelFormat\fP *format, \fBSDL_Palette\fP *palette)"
+.br
+.RI "\fISet the palette for a pixel format structure\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetPaletteColors\fP (\fBSDL_Palette\fP *palette, const \fBSDL_Color\fP *colors, \fBint\fP firstcolor, \fBint\fP ncolors)"
+.br
+.RI "\fISet a range of colors in a palette\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_FreePalette\fP (\fBSDL_Palette\fP *palette)"
+.br
+.RI "\fIFree a palette created with \fBSDL_AllocPalette()\fP\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBUint32\fP SDLCALL \fBSDL_MapRGB\fP (const \fBSDL_PixelFormat\fP *format, \fBUint8\fP r, \fBUint8\fP g, \fBUint8\fP b)"
+.br
+.RI "\fIMaps an RGB triple to an opaque pixel value for a given pixel format\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBUint32\fP SDLCALL \fBSDL_MapRGBA\fP (const \fBSDL_PixelFormat\fP *format, \fBUint8\fP r, \fBUint8\fP g, \fBUint8\fP b, \fBUint8\fP a)"
+.br
+.RI "\fIMaps an RGBA quadruple to a pixel value for a given pixel format\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GetRGB\fP (\fBUint32\fP pixel, const \fBSDL_PixelFormat\fP *format, \fBUint8\fP *r, \fBUint8\fP *g, \fBUint8\fP *b)"
+.br
+.RI "\fIGet the RGB components from a pixel of the specified format\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GetRGBA\fP (\fBUint32\fP pixel, const \fBSDL_PixelFormat\fP *format, \fBUint8\fP *r, \fBUint8\fP *g, \fBUint8\fP *b, \fBUint8\fP *a)"
+.br
+.RI "\fIGet the RGBA components from a pixel of the specified format\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_CalculateGammaRamp\fP (float gamma, \fBUint16\fP *ramp)"
+.br
+.RI "\fICalculate a 256 entry gamma ramp for a gamma value\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header for the enumerated pixel format definitions\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define SDL_BYTESPERPIXEL(X)"
+\fBValue:\fP
+.PP
+.nf
+(SDL_ISPIXELFORMAT_FOURCC(X) ? \
+        ((((X) == SDL_PIXELFORMAT_YUY2) || \
+          ((X) == SDL_PIXELFORMAT_UYVY) || \
+          ((X) == SDL_PIXELFORMAT_YVYU)) ? 2 : 1) : (((X) >> 0) & 0xFF))
+.fi
+.SS "#define SDL_DEFINE_PIXELFORMAT(type, order, layout, bits, bytes)"
+\fBValue:\fP
+.PP
+.nf
+((1 << 28) | ((type) << 24) | ((order) << 20) | ((layout) << 16) | \
+     ((bits) << 8) | ((bytes) << 0))
+.fi
+.SS "#define SDL_ISPIXELFORMAT_ALPHA(format)"
+\fBValue:\fP
+.PP
+.nf
+(!SDL_ISPIXELFORMAT_FOURCC(format) && \
+     ((SDL_PIXELORDER(format) == SDL_PACKEDORDER_ARGB) || \
+      (SDL_PIXELORDER(format) == SDL_PACKEDORDER_RGBA) || \
+      (SDL_PIXELORDER(format) == SDL_PACKEDORDER_ABGR) || \
+      (SDL_PIXELORDER(format) == SDL_PACKEDORDER_BGRA)))
+.fi
+.SS "#define SDL_ISPIXELFORMAT_INDEXED(format)"
+\fBValue:\fP
+.PP
+.nf
+(!SDL_ISPIXELFORMAT_FOURCC(format) && \
+     ((SDL_PIXELTYPE(format) == SDL_PIXELTYPE_INDEX1) || \
+      (SDL_PIXELTYPE(format) == SDL_PIXELTYPE_INDEX4) || \
+      (SDL_PIXELTYPE(format) == SDL_PIXELTYPE_INDEX8)))
+.fi
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBSDL_PixelFormat\fP  \fBSDL_PixelFormat\fP"
+
+.PP
+\fBNote:\fP
+.RS 4
+Everything in the pixel format structure is read-only\&. 
+.RE
+.PP
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "anonymous enum"
+Pixel type\&. 
+.SS "anonymous enum"
+Bitmap pixel order, high bit -> low bit\&. 
+.SS "anonymous enum"
+Packed component order, high bit -> low bit\&. 
+.SS "anonymous enum"
+Array component order, low byte -> high byte\&. 
+.SS "anonymous enum"
+Packed component layout\&. 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISDL_PIXELFORMAT_YV12 \fP\fP
+Planar mode: Y + V + U (3 planes) 
+.TP
+\fB\fISDL_PIXELFORMAT_IYUV \fP\fP
+Planar mode: Y + U + V (3 planes) 
+.TP
+\fB\fISDL_PIXELFORMAT_YUY2 \fP\fP
+Packed mode: Y0+U0+Y1+V0 (1 plane) 
+.TP
+\fB\fISDL_PIXELFORMAT_UYVY \fP\fP
+Packed mode: U0+Y0+V0+Y1 (1 plane) 
+.TP
+\fB\fISDL_PIXELFORMAT_YVYU \fP\fP
+Packed mode: Y0+V0+Y1+U0 (1 plane) 
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC \fBSDL_Palette\fP* SDLCALL SDL_AllocPalette (\fBint\fP ncolors)"
+
+.PP
+Create a palette structure with the specified number of color entries\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A new palette, or NULL if there wasn't enough memory\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+The palette entries are initialized to white\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_FreePalette()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_FreePalette (\fBSDL_Palette\fP * palette)"
+
+.PP
+Free a palette created with \fBSDL_AllocPalette()\fP\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_AllocPalette()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_GetRGB (\fBUint32\fP pixel, const \fBSDL_PixelFormat\fP * format, \fBUint8\fP * r, \fBUint8\fP * g, \fBUint8\fP * b)"
+
+.PP
+Get the RGB components from a pixel of the specified format\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetRGBA\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_GetRGBA (\fBUint32\fP pixel, const \fBSDL_PixelFormat\fP * format, \fBUint8\fP * r, \fBUint8\fP * g, \fBUint8\fP * b, \fBUint8\fP * a)"
+
+.PP
+Get the RGBA components from a pixel of the specified format\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetRGB\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBUint32\fP SDLCALL SDL_MapRGB (const \fBSDL_PixelFormat\fP * format, \fBUint8\fP r, \fBUint8\fP g, \fBUint8\fP b)"
+
+.PP
+Maps an RGB triple to an opaque pixel value for a given pixel format\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_MapRGBA\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBUint32\fP SDLCALL SDL_MapRGBA (const \fBSDL_PixelFormat\fP * format, \fBUint8\fP r, \fBUint8\fP g, \fBUint8\fP b, \fBUint8\fP a)"
+
+.PP
+Maps an RGBA quadruple to a pixel value for a given pixel format\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_MapRGB\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBUint32\fP SDLCALL SDL_MasksToPixelFormatEnum (\fBint\fP bpp, \fBUint32\fP Rmask, \fBUint32\fP Gmask, \fBUint32\fP Bmask, \fBUint32\fP Amask)"
+
+.PP
+Convert a bpp and RGBA masks to an enumerated pixel format\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The pixel format, or ::SDL_PIXELFORMAT_UNKNOWN if the conversion wasn't possible\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_PixelFormatEnumToMasks()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_bool SDLCALL SDL_PixelFormatEnumToMasks (\fBUint32\fP format, \fBint\fP * bpp, \fBUint32\fP * Rmask, \fBUint32\fP * Gmask, \fBUint32\fP * Bmask, \fBUint32\fP * Amask)"
+
+.PP
+Convert one of the enumerated pixel formats to a bpp and RGBA masks\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+SDL_TRUE, or SDL_FALSE if the conversion wasn't possible\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_MasksToPixelFormatEnum()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetPaletteColors (\fBSDL_Palette\fP * palette, const \fBSDL_Color\fP * colors, \fBint\fP firstcolor, \fBint\fP ncolors)"
+
+.PP
+Set a range of colors in a palette\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpalette\fP The palette to modify\&. 
+.br
+\fIcolors\fP An array of colors to copy into the palette\&. 
+.br
+\fIfirstcolor\fP The index of the first palette entry to modify\&. 
+.br
+\fIncolors\fP The number of entries to modify\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, or -1 if not all of the colors could be set\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

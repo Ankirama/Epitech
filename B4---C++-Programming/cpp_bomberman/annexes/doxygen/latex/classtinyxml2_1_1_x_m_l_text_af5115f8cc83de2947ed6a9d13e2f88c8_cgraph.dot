@@ -1,0 +1,17 @@
+digraph "tinyxml2::XMLText::ShallowClone"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="tinyxml2::XMLText::\lShallowClone",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="tinyxml2::XMLDocument\l::NewText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_document.html#acece5de77a0819f2341b08c1e1ed9987"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="tinyxml2::XMLNode::\lValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_node.html#a92835c779871918f9af569bfe9669fe6"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="tinyxml2::XMLNode::\lToDocument",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_node.html#a836e2966ed736fc3c94f70e12a2a3357",tooltip="Safely cast to a Document, or null. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="tinyxml2::XMLText::\lSetCData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_text.html#ad080357d76ab7cc59d7651249949329d",tooltip="Declare whether this should be CDATA or standard text. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="tinyxml2::XMLText::\lCData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_text.html#a125574fe49da80efbae1349f20d02d41",tooltip="Returns true if this is a CDATA text element. "];
+}

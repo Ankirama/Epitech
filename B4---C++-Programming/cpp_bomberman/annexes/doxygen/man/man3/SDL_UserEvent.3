@@ -1,0 +1,52 @@
+.TH "SDL_UserEvent" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_UserEvent \- A user-defined event type (event\&.user\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwindowID\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBcode\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBdata1\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBdata2\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A user-defined event type (event\&.user\&.*) 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBSint32\fP SDL_UserEvent::code"
+User defined event code 
+.SS "\fBvoid\fP* SDL_UserEvent::data1"
+User defined data pointer 
+.SS "\fBvoid\fP* SDL_UserEvent::data2"
+User defined data pointer 
+.SS "\fBUint32\fP SDL_UserEvent::type"
+\fBSDL_USEREVENT\fP through \fBSDL_LASTEVENT\fP-1 
+.SS "\fBUint32\fP SDL_UserEvent::windowID"
+The associated window if any 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

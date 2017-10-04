@@ -1,0 +1,11 @@
+digraph "lib/gdl/includes/glm/virtrev" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_64968273b11753b37819add9486a9979 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="glm" fontname="Helvetica", fontsize="10", URL="dir_64968273b11753b37819add9486a9979.html"]
+  dir_d02d6b9691386eb82e5730bda8fce61f [shape=box, label="virtrev", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_d02d6b9691386eb82e5730bda8fce61f.html"];
+  }
+  dir_08f863690be3d0e86506f072d9d228f8 [shape=box label="gtc" URL="dir_08f863690be3d0e86506f072d9d228f8.html"];
+  dir_d02d6b9691386eb82e5730bda8fce61f->dir_08f863690be3d0e86506f072d9d228f8 [headlabel="1", labeldistance=1.5 headhref="dir_000022_000020.html"];
+}

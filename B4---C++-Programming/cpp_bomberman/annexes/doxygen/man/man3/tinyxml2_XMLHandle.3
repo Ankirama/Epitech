@@ -1,0 +1,153 @@
+.TH "tinyxml2::XMLHandle" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tinyxml2::XMLHandle \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tinyxml2\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXMLHandle\fP (\fBXMLNode\fP *node)"
+.br
+.RI "\fICreate a handle from any node (at any depth of the tree\&.) This can be a null pointer\&. \fP"
+.ti -1c
+.RI "\fBXMLHandle\fP (\fBXMLNode\fP &node)"
+.br
+.RI "\fICreate a handle from a node\&. \fP"
+.ti -1c
+.RI "\fBXMLHandle\fP (const \fBXMLHandle\fP &ref)"
+.br
+.RI "\fICopy constructor\&. \fP"
+.ti -1c
+.RI "\fBXMLHandle\fP & \fBoperator=\fP (const \fBXMLHandle\fP &ref)"
+.br
+.RI "\fIAssignment\&. \fP"
+.ti -1c
+.RI "\fBXMLHandle\fP \fBFirstChild\fP ()"
+.br
+.RI "\fIGet the first child of this handle\&. \fP"
+.ti -1c
+.RI "\fBXMLHandle\fP \fBFirstChildElement\fP (const char *value=0)"
+.br
+.RI "\fIGet the first child element of this handle\&. \fP"
+.ti -1c
+.RI "\fBXMLHandle\fP \fBLastChild\fP ()"
+.br
+.RI "\fIGet the last child of this handle\&. \fP"
+.ti -1c
+.RI "\fBXMLHandle\fP \fBLastChildElement\fP (const char *_value=0)"
+.br
+.RI "\fIGet the last child element of this handle\&. \fP"
+.ti -1c
+.RI "\fBXMLHandle\fP \fBPreviousSibling\fP ()"
+.br
+.RI "\fIGet the previous sibling of this handle\&. \fP"
+.ti -1c
+.RI "\fBXMLHandle\fP \fBPreviousSiblingElement\fP (const char *_value=0)"
+.br
+.RI "\fIGet the previous sibling element of this handle\&. \fP"
+.ti -1c
+.RI "\fBXMLHandle\fP \fBNextSibling\fP ()"
+.br
+.RI "\fIGet the next sibling of this handle\&. \fP"
+.ti -1c
+.RI "\fBXMLHandle\fP \fBNextSiblingElement\fP (const char *_value=0)"
+.br
+.RI "\fIGet the next sibling element of this handle\&. \fP"
+.ti -1c
+.RI "\fBXMLNode\fP * \fBToNode\fP ()"
+.br
+.RI "\fISafe cast to \fBXMLNode\fP\&. This can return null\&. \fP"
+.ti -1c
+.RI "\fBXMLElement\fP * \fBToElement\fP ()"
+.br
+.RI "\fISafe cast to \fBXMLElement\fP\&. This can return null\&. \fP"
+.ti -1c
+.RI "\fBXMLText\fP * \fBToText\fP ()"
+.br
+.RI "\fISafe cast to \fBXMLText\fP\&. This can return null\&. \fP"
+.ti -1c
+.RI "\fBXMLUnknown\fP * \fBToUnknown\fP ()"
+.br
+.RI "\fISafe cast to \fBXMLUnknown\fP\&. This can return null\&. \fP"
+.ti -1c
+.RI "\fBXMLDeclaration\fP * \fBToDeclaration\fP ()"
+.br
+.RI "\fISafe cast to \fBXMLDeclaration\fP\&. This can return null\&. \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBXMLNode\fP * \fB_node\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A \fBXMLHandle\fP is a class that wraps a node pointer with null checks; this is an incredibly useful thing\&. Note that \fBXMLHandle\fP is not part of the TinyXML-2 DOM structure\&. It is a separate utility class\&.
+.PP
+Take an example: 
+.PP
+.nf
+<Document>
+    <Element attributeA = "valueA">
+        <Child attributeB = "value1" />
+        <Child attributeB = "value2" />
+    </Element>
+</Document>
+
+.fi
+.PP
+.PP
+Assuming you want the value of 'attributeB' in the 2nd 'Child' element, it's very easy to write a \fIlot\fP of code that looks like:
+.PP
+.PP
+.nf
+XMLElement* root = document.FirstChildElement( "Document" );
+if ( root )
+{
+    XMLElement* element = root->FirstChildElement( "Element" );
+    if ( element )
+    {
+        XMLElement* child = element->FirstChildElement( "Child" );
+        if ( child )
+        {
+            XMLElement* child2 = child->NextSiblingElement( "Child" );
+            if ( child2 )
+            {
+                // Finally do something useful.
+.fi
+.PP
+.PP
+And that doesn't even cover 'else' cases\&. \fBXMLHandle\fP addresses the verbosity of such code\&. A \fBXMLHandle\fP checks for null pointers so it is perfectly safe and correct to use:
+.PP
+.PP
+.nf
+XMLHandle docHandle( &document );
+XMLElement* child2 = docHandle.FirstChildElement( "Document" ).FirstChildElement( "Element" ).FirstChildElement().NextSiblingElement();
+if ( child2 )
+{
+    // do something useful
+.fi
+.PP
+.PP
+Which is MUCH more concise and useful\&.
+.PP
+It is also safe to copy handles - internally they are nothing more than node pointers\&. 
+.PP
+.nf
+XMLHandle handleCopy = handle;
+
+.fi
+.PP
+.PP
+See also \fBXMLConstHandle\fP, which is the same as \fBXMLHandle\fP, but operates on const objects\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

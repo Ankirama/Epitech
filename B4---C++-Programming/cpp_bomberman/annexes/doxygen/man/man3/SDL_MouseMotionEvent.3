@@ -1,0 +1,67 @@
+.TH "SDL_MouseMotionEvent" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_MouseMotionEvent \- Mouse motion event structure (event\&.motion\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwindowID\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwhich\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBstate\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBx\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBy\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBxrel\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fByrel\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Mouse motion event structure (event\&.motion\&.*) 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint32\fP SDL_MouseMotionEvent::state"
+The current button state 
+.SS "\fBUint32\fP SDL_MouseMotionEvent::type"
+\fBSDL_MOUSEMOTION\fP 
+.SS "\fBUint32\fP SDL_MouseMotionEvent::which"
+The mouse instance id, or SDL_TOUCH_MOUSEID 
+.SS "\fBUint32\fP SDL_MouseMotionEvent::windowID"
+The window with mouse focus, if any 
+.SS "\fBSint32\fP SDL_MouseMotionEvent::x"
+X coordinate, relative to window 
+.SS "\fBSint32\fP SDL_MouseMotionEvent::xrel"
+The relative motion in the X direction 
+.SS "\fBSint32\fP SDL_MouseMotionEvent::y"
+Y coordinate, relative to window 
+.SS "\fBSint32\fP SDL_MouseMotionEvent::yrel"
+The relative motion in the Y direction 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

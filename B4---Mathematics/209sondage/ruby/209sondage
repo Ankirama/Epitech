@@ -1,0 +1,54 @@
+#!/usr/bin/env ruby
+
+# puts "%.2f" % [42.24]
+
+def usage()
+  puts "Usage : ./209sondage population echantillon sondage"
+  exit
+end
+
+def check_arg(pa, e, s)
+  if pa < e
+    puts "Error : population inferior to echantillon !"
+    usage()
+  elsif pa <= 1 || e <= 1
+    puts "Error : population and echantillon must be > 1 !"
+    usage()
+  elsif s < 0
+    puts "Error : sondage must be > 0 !"
+    usage()
+  end
+end
+
+def calc_var(pa, e, s)
+  tmp = s / 100.0
+  var = tmp * (1 - tmp)
+  return (var / e * (pa - e) / (pa - 1.0))
+end
+
+def print_result(pa, e, s, variance, amp_95, amp_99)
+  puts "%.2f" % [42.24]
+  puts "taille de la population :\t %.0f" % [pa]
+  puts "taille de l'echantillon :\t %.0f" % [e]
+  puts "resultat du sondage :\t \t %.2f" % [s]
+  puts "variance estimee :\t \t %.6f" % [variance]
+  puts "intervalle de confiance a 95%% : [%.2f%% ; %.2f%%]" % [s - amp_95, s + amp_95]
+  puts "intervalle de confiance a 99%% : [%.2f%% ; %.2f%%]" % [s - amp_99, s + amp_99]
+end
+
+def run_calc(pa, e, s)
+  variance = calc_var(pa, e, s)
+  amp_95 = 1.96 * Math.sqrt(variance) * 100.0
+  amp_99 = 2.58 * Math.sqrt(variance) * 100.0
+  print_result(pa, e, s, variance, amp_95, amp_99)
+end
+
+def main()
+  if ARGV.length != 3
+    usage()
+  end
+  check_arg(ARGV[0].to_f, ARGV[1].to_f, ARGV[2].to_f)
+  run_calc(ARGV[0].to_f, ARGV[1].to_f, ARGV[2].to_f)
+end
+
+main()

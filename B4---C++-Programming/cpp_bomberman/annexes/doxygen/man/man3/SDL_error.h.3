@@ -1,0 +1,53 @@
+.TH "lib/gdl/includes/SDL_error.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_error.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetError\fP (const char *fmt,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GetError\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_ClearError\fP (\fBvoid\fP)"
+.br
+.in -1c
+.SS "Internal error functions"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_OutOfMemory\fP()   SDL_Error(SDL_ENOMEM)"
+.br
+.ti -1c
+.RI "#define \fBSDL_Unsupported\fP()   SDL_Error(SDL_UNSUPPORTED)"
+.br
+.ti -1c
+.RI "#define \fBSDL_InvalidParamError\fP(param)   SDL_SetError('Parameter '%s' is invalid', (param))"
+.br
+.ti -1c
+.RI "enum \fBSDL_errorcode\fP { \fBSDL_ENOMEM\fP, \fBSDL_EFREAD\fP, \fBSDL_EFWRITE\fP, \fBSDL_EFSEEK\fP, \fBSDL_UNSUPPORTED\fP, \fBSDL_LASTERROR\fP }"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_Error\fP (SDL_errorcode code)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Simple error message routines for SDL\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

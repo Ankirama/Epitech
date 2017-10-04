@@ -1,0 +1,70 @@
+.TH "SDL_DisplayMode" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_DisplayMode \- The structure that defines a display mode\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_video\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBformat\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBw\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBh\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBrefresh_rate\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBdriverdata\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The structure that defines a display mode\&. 
+
+
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_GetNumDisplayModes()\fP 
+.PP
+\fBSDL_GetDisplayMode()\fP 
+.PP
+\fBSDL_GetDesktopDisplayMode()\fP 
+.PP
+\fBSDL_GetCurrentDisplayMode()\fP 
+.PP
+\fBSDL_GetClosestDisplayMode()\fP 
+.PP
+\fBSDL_SetWindowDisplayMode()\fP 
+.PP
+\fBSDL_GetWindowDisplayMode()\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBvoid\fP* SDL_DisplayMode::driverdata"
+driver-specific data, initialize to 0 
+.SS "\fBUint32\fP SDL_DisplayMode::format"
+pixel format 
+.SS "\fBint\fP SDL_DisplayMode::h"
+height 
+.SS "\fBint\fP SDL_DisplayMode::refresh_rate"
+refresh rate (or zero for unspecified) 
+.SS "\fBint\fP SDL_DisplayMode::w"
+width 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

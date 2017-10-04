@@ -1,0 +1,174 @@
+.TH "lib/gdl/includes/glm/core/type_mat3x3.hpp" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/glm/core/type_mat3x3.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'type_mat\&.hpp'\fP
+.br
+\fC#include 'type_mat3x3\&.inl'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBglm::detail::tvec1< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::tvec2< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::tvec3< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::tvec4< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::tmat2x2< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::tmat2x3< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::tmat2x4< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::tmat3x2< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::tmat3x3< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::tmat3x4< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::tmat4x2< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::tmat4x3< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::tmat4x4< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::tmat3x3< T >\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef detail::tmat3x3< lowp_float > \fBglm::lowp_mat3\fP"
+.br
+.ti -1c
+.RI "typedef detail::tmat3x3< mediump_float > \fBglm::mediump_mat3\fP"
+.br
+.ti -1c
+.RI "typedef detail::tmat3x3< highp_float > \fBglm::highp_mat3\fP"
+.br
+.ti -1c
+.RI "typedef detail::tmat3x3< lowp_float > \fBglm::lowp_mat3x3\fP"
+.br
+.ti -1c
+.RI "typedef detail::tmat3x3< mediump_float > \fBglm::mediump_mat3x3\fP"
+.br
+.ti -1c
+.RI "typedef detail::tmat3x3< highp_float > \fBglm::highp_mat3x3\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > \fBglm::detail::operator+\fP (tmat3x3< T > const &m, typename tmat3x3< T >::value_type const &s)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > \fBglm::detail::operator+\fP (typename tmat3x3< T >::value_type const &s, tmat3x3< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > \fBglm::detail::operator+\fP (tmat3x3< T > const &m1, tmat3x3< T > const &m2)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > \fBglm::detail::operator-\fP (tmat3x3< T > const &m, typename tmat3x3< T >::value_type const &s)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > \fBglm::detail::operator-\fP (typename tmat3x3< T >::value_type const &s, tmat3x3< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > \fBglm::detail::operator-\fP (tmat3x3< T > const &m1, tmat3x3< T > const &m2)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > \fBglm::detail::operator*\fP (tmat3x3< T > const &m, typename tmat3x3< T >::value_type const &s)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > \fBglm::detail::operator*\fP (typename tmat3x3< T >::value_type const &s, tmat3x3< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T >::col_type \fBglm::detail::operator*\fP (tmat3x3< T > const &m, typename tmat3x3< T >::row_type const &v)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T >::row_type \fBglm::detail::operator*\fP (typename tmat3x3< T >::col_type const &v, tmat3x3< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > \fBglm::detail::operator*\fP (tmat3x3< T > const &m1, tmat3x3< T > const &m2)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat2x3< T > \fBglm::detail::operator*\fP (tmat3x3< T > const &m1, tmat2x3< T > const &m2)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat4x3< T > \fBglm::detail::operator*\fP (tmat3x3< T > const &m1, tmat4x3< T > const &m2)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > \fBglm::detail::operator/\fP (tmat3x3< T > const &m, typename tmat3x3< T >::value_type const &s)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > \fBglm::detail::operator/\fP (typename tmat3x3< T >::value_type const &s, tmat3x3< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T >::col_type \fBglm::detail::operator/\fP (tmat3x3< T > const &m, typename tmat3x3< T >::row_type const &v)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T >::row_type \fBglm::detail::operator/\fP (typename tmat3x3< T >::col_type const &v, tmat3x3< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > \fBglm::detail::operator/\fP (tmat3x3< T > const &m1, tmat3x3< T > const &m2)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > const \fBglm::detail::operator-\fP (tmat3x3< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > const \fBglm::detail::operator--\fP (tmat3x3< T > const &m, \fBint\fP)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_DECL tmat3x3< T > const \fBglm::detail::operator++\fP (tmat3x3< T > const &m, \fBint\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+OpenGL Mathematics (glm\&.g-truc\&.net)
+.PP
+Copyright (c) 2005 - 2013 G-Truc Creation (www\&.g-truc\&.net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software\&.
+.PP
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\&. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE\&.
+.PP
+\fBGLM Core\fP
+.PP
+\fBDate:\fP
+.RS 4
+2005-01-27 / 2011-06-15 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christophe Riccio 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

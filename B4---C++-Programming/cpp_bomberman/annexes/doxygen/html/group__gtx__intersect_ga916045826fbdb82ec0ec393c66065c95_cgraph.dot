@@ -1,0 +1,16 @@
+digraph "glm::intersectRaySphere"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::intersectRaySphere",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::epsilon",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__constants.html#gacb41049b8d22c8aa90e362b96c524feb"];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::e",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__constants.html#gab83fb6de0f05d6c0d11bdf0479f8319e"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::dot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__geometric.html#ga05244a4e222740e5e38abe91fc51df79"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::sqrt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__exponential.html#ga2317d4ff45af448b8402431afa0711f3"];
+}

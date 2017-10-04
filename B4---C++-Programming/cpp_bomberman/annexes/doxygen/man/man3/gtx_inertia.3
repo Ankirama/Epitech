@@ -1,0 +1,62 @@
+.TH "gtx_inertia" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtx_inertia \- GLM_GTX_inertia
+.PP
+Create inertia matrices\&.  
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > detail::tmat3x3< T > \fBglm::boxInertia3\fP (T const &Mass, detail::tvec3< T > const &Scale)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::boxInertia4\fP (T const &Mass, detail::tvec3< T > const &Scale)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat3x3< T > \fBglm::diskInertia3\fP (T const &Mass, T const &Radius)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::diskInertia4\fP (T const &Mass, T const &Radius)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat3x3< T > \fBglm::ballInertia3\fP (T const &Mass, T const &Radius)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::ballInertia4\fP (T const &Mass, T const &Radius)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat3x3< T > \fBglm::sphereInertia3\fP (T const &Mass, T const &Radius)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::sphereInertia4\fP (T const &Mass, T const &Radius)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Create inertia matrices\&. 
+
+<\fBglm/gtx/inertia\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T > detail::tmat3x3<T> glm::ballInertia3 (T const & Mass, T const & Radius)"
+Build an inertia matrix for a ball\&. From GLM_GTX_inertia extension\&. 
+.SS "template<typename T > detail::tmat4x4<T> glm::ballInertia4 (T const & Mass, T const & Radius)"
+Build an inertia matrix for a ball\&. From GLM_GTX_inertia extension\&. 
+.SS "template<typename T > detail::tmat3x3<T> glm::boxInertia3 (T const & Mass, \fBdetail::tvec3\fP< T > const & Scale)"
+Build an inertia matrix for a box\&. From GLM_GTX_inertia extension\&. 
+.SS "template<typename T > detail::tmat4x4<T> glm::boxInertia4 (T const & Mass, \fBdetail::tvec3\fP< T > const & Scale)"
+Build an inertia matrix for a box\&. From GLM_GTX_inertia extension\&. 
+.SS "template<typename T > detail::tmat3x3<T> glm::diskInertia3 (T const & Mass, T const & Radius)"
+Build an inertia matrix for a disk\&. From GLM_GTX_inertia extension\&. 
+.SS "template<typename T > detail::tmat4x4<T> glm::diskInertia4 (T const & Mass, T const & Radius)"
+Build an inertia matrix for a disk\&. From GLM_GTX_inertia extension\&. 
+.SS "template<typename T > detail::tmat3x3<T> glm::sphereInertia3 (T const & Mass, T const & Radius)"
+Build an inertia matrix for a sphere\&. From GLM_GTX_inertia extension\&. 
+.SS "template<typename T > detail::tmat4x4<T> glm::sphereInertia4 (T const & Mass, T const & Radius)"
+Build an inertia matrix for a sphere\&. From GLM_GTX_inertia extension\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

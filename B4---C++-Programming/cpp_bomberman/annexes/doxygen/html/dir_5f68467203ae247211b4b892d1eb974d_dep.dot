@@ -1,0 +1,14 @@
+digraph "annexes" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_5f68467203ae247211b4b892d1eb974d {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_5f68467203ae247211b4b892d1eb974d.html"];
+    dir_5f68467203ae247211b4b892d1eb974d [shape=plaintext label="annexes"];
+    dir_57af5b0c31a2c9fa6f238c8e4b8a58cc [shape=box label="doc_html" color="red" fillcolor="white" style="filled" URL="dir_57af5b0c31a2c9fa6f238c8e4b8a58cc.html"];
+    dir_a27da54ff62549009583f5039d07860b [shape=box label="tutoriel" color="black" fillcolor="white" style="filled" URL="dir_a27da54ff62549009583f5039d07860b.html"];
+    dir_1fb3124171196a1246034d9f6173b38f [shape=box label="xml" color="black" fillcolor="white" style="filled" URL="dir_1fb3124171196a1246034d9f6173b38f.html"];
+  }
+  dir_97aefd0d527b934f1d99a682da8fe6a9 [shape=box label="lib" fillcolor="white" style="filled" color="red" URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"];
+  dir_a27da54ff62549009583f5039d07860b->dir_97aefd0d527b934f1d99a682da8fe6a9 [headlabel="2", labeldistance=1.5 headhref="dir_000003_000010.html"];
+}

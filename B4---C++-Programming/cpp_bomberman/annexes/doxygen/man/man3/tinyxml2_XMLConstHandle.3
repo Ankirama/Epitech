@@ -1,0 +1,79 @@
+.TH "tinyxml2::XMLConstHandle" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tinyxml2::XMLConstHandle \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tinyxml2\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXMLConstHandle\fP (const \fBXMLNode\fP *node)"
+.br
+.ti -1c
+.RI "\fBXMLConstHandle\fP (const \fBXMLNode\fP &node)"
+.br
+.ti -1c
+.RI "\fBXMLConstHandle\fP (const \fBXMLConstHandle\fP &ref)"
+.br
+.ti -1c
+.RI "\fBXMLConstHandle\fP & \fBoperator=\fP (const \fBXMLConstHandle\fP &ref)"
+.br
+.ti -1c
+.RI "const \fBXMLConstHandle\fP \fBFirstChild\fP () const "
+.br
+.ti -1c
+.RI "const \fBXMLConstHandle\fP \fBFirstChildElement\fP (const char *value=0) const "
+.br
+.ti -1c
+.RI "const \fBXMLConstHandle\fP \fBLastChild\fP () const "
+.br
+.ti -1c
+.RI "const \fBXMLConstHandle\fP \fBLastChildElement\fP (const char *_value=0) const "
+.br
+.ti -1c
+.RI "const \fBXMLConstHandle\fP \fBPreviousSibling\fP () const "
+.br
+.ti -1c
+.RI "const \fBXMLConstHandle\fP \fBPreviousSiblingElement\fP (const char *_value=0) const "
+.br
+.ti -1c
+.RI "const \fBXMLConstHandle\fP \fBNextSibling\fP () const "
+.br
+.ti -1c
+.RI "const \fBXMLConstHandle\fP \fBNextSiblingElement\fP (const char *_value=0) const "
+.br
+.ti -1c
+.RI "const \fBXMLNode\fP * \fBToNode\fP () const "
+.br
+.ti -1c
+.RI "const \fBXMLElement\fP * \fBToElement\fP () const "
+.br
+.ti -1c
+.RI "const \fBXMLText\fP * \fBToText\fP () const "
+.br
+.ti -1c
+.RI "const \fBXMLUnknown\fP * \fBToUnknown\fP () const "
+.br
+.ti -1c
+.RI "const \fBXMLDeclaration\fP * \fBToDeclaration\fP () const "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "const \fBXMLNode\fP * \fB_node\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A variant of the \fBXMLHandle\fP class for working with const XMLNodes and Documents\&. It is the same in all regards, except for the 'const' qualifiers\&. See \fBXMLHandle\fP for API\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

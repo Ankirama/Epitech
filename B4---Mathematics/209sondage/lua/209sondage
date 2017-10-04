@@ -1,0 +1,58 @@
+#!/usr/bin/env lua
+
+function usage()
+  print("Usage : ./209sondage population echantillon sondage");
+  os.exit()
+end
+
+function check_arg(P, E, S)
+  if P < E then
+    print("Error : population inferior to echantillon !")
+    os.exit()
+  elseif P <= 1 or E <= 1 then
+    print("Error : population and echantillon must be > 1 !")
+    os.exit()
+  elseif S < 0 then
+    print("Error : sondage must be > 0 !")
+    os.exit()
+  end
+end
+
+function calc_var(P, E, S)
+  local p = S / 100.0
+  local var = p * (1.0 - p)
+  return (var / E * (P - E) / (P - 1.0))
+end
+
+function print_result(P, E, S, variance, amp_95, amp_99)
+  print(string.format("taille de la population :\t %.0f", P))
+  print(string.format("taille de l'echantillon :\t %.0f", E))
+  print(string.format("resultat du sondage :\t \t %.2f", S))
+  print(string.format("variance estimee :\t \t %.6f", variance))
+  print(string.format("intervalle de confiance a 95%% : [%.2f%% ; %.2f%%]", S - amp_95, S + amp_95))
+  print(string.format("intervalle de confiance a 99%% : [%.2f%% ; %.2f%%]", S - amp_99, S + amp_99))
+end
+
+function run_calc(P, E, S)
+  local variance = calc_var(P, E, S)
+  local amp_95 = 1.96 * math.sqrt(variance) * 100
+  local amp_99 = 2.58 * math.sqrt(variance) * 100
+  print_result(P, E, S, variance, amp_95, amp_99)
+end
+
+function main()
+  if #arg ~= 3 then
+    usage()
+  end
+  if not tonumber(arg[1]) then
+    print(string.format("Error: [%s] must be a number"), arg[1])
+  elseif not tonumber(arg[2]) then
+    print(string.format("Error: [%s] must be a number"), arg[2])
+  elseif not tonumber(arg[3]) then
+    print(string.format("Error: [%s] must be a number"), arg[3])
+  end
+  check_arg(tonumber(arg[1]), tonumber(arg[2]), tonumber(arg[3]))
+  run_calc(tonumber(arg[1]), tonumber(arg[2]), tonumber(arg[3]))
+end
+
+main()

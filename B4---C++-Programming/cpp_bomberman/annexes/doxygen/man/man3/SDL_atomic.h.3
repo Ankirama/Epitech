@@ -1,0 +1,254 @@
+.TH "lib/gdl/includes/SDL_atomic.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_atomic.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_platform\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_atomic_t\fP"
+.br
+.RI "\fIA type representing an atomic integer value\&. It is a struct so people don't accidentally use numeric operations on it\&. \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_CompilerBarrier\fP()   { SDL_SpinLock _tmp = 0; \fBSDL_AtomicLock\fP(&_tmp); \fBSDL_AtomicUnlock\fP(&_tmp); }"
+.br
+.ti -1c
+.RI "#define \fBSDL_MemoryBarrierRelease\fP()   \fBSDL_CompilerBarrier\fP()"
+.br
+.ti -1c
+.RI "#define \fBSDL_MemoryBarrierAcquire\fP()   \fBSDL_CompilerBarrier\fP()"
+.br
+.ti -1c
+.RI "#define \fBSDL_AtomicIncRef\fP(a)   \fBSDL_AtomicAdd\fP(a, 1)"
+.br
+.RI "\fIIncrement an atomic variable used as a reference count\&. \fP"
+.ti -1c
+.RI "#define \fBSDL_AtomicDecRef\fP(a)   (\fBSDL_AtomicAdd\fP(a, -1) == 1)"
+.br
+.RI "\fIDecrement an atomic variable used as a reference count\&. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_AtomicCAS\fP (\fBSDL_atomic_t\fP *a, \fBint\fP oldval, \fBint\fP newval)"
+.br
+.RI "\fISet an atomic variable to a new value if it is currently an old value\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_AtomicSet\fP (\fBSDL_atomic_t\fP *a, \fBint\fP v)"
+.br
+.RI "\fISet an atomic variable to a value\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_AtomicGet\fP (\fBSDL_atomic_t\fP *a)"
+.br
+.RI "\fIGet the value of an atomic variable\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_AtomicAdd\fP (\fBSDL_atomic_t\fP *a, \fBint\fP v)"
+.br
+.RI "\fIAdd to an atomic variable\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_AtomicCASPtr\fP (\fBvoid\fP **a, \fBvoid\fP *oldval, \fBvoid\fP *newval)"
+.br
+.RI "\fISet a pointer to a new value if it is currently an old value\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP *SDLCALL \fBSDL_AtomicSetPtr\fP (\fBvoid\fP **a, \fBvoid\fP *v)"
+.br
+.RI "\fISet a pointer to a value atomically\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP *SDLCALL \fBSDL_AtomicGetPtr\fP (\fBvoid\fP **a)"
+.br
+.RI "\fIGet the value of a pointer atomically\&. \fP"
+.in -1c
+.SS "SDL AtomicLock"
+The atomic locks are efficient spinlocks using CPU instructions, but are vulnerable to starvation and can spin forever if a thread holding a lock has been terminated\&. For this reason you should minimize the code executed inside an atomic lock and never do expensive things like API or system calls while holding them\&.
+.PP
+The atomic locks are not safe to lock recursively\&.
+.PP
+Porting Note: The spin lock functions and type are required and can not be emulated because they are used in the atomic emulation code\&. 
+.in +1c
+.ti -1c
+.RI "typedef \fBint\fP \fBSDL_SpinLock\fP"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_AtomicTryLock\fP (SDL_SpinLock *lock)"
+.br
+.RI "\fITry to lock a spin lock by setting it to a non-zero value\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_AtomicLock\fP (SDL_SpinLock *lock)"
+.br
+.RI "\fILock a spin lock by setting it to a non-zero value\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_AtomicUnlock\fP (SDL_SpinLock *lock)"
+.br
+.RI "\fIUnlock a spin lock by setting it to 0\&. Always returns immediately\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Atomic operations\&.
+.PP
+IMPORTANT: If you are not an expert in concurrent lockless programming, you should only be using the atomic lock and reference counting functions in this file\&. In all other cases you should be protecting your data structures with full mutexes\&.
+.PP
+The list of 'safe' functions to use are: \fBSDL_AtomicLock()\fP \fBSDL_AtomicUnlock()\fP \fBSDL_AtomicIncRef()\fP \fBSDL_AtomicDecRef()\fP
+.PP
+Seriously, here be dragons! ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.PP
+You can find out a little more about lockless programming and the subtle issues that can arise here: http://msdn.microsoft.com/en-us/library/ee418650%28v=vs.85%29.aspx
+.PP
+There's also lots of good information here: http://www.1024cores.net/home/lock-free-algorithms http://preshing.com/
+.PP
+These operations may or may not actually be implemented using processor specific atomic operations\&. When possible they are implemented as true processor specific atomic operations\&. When that is not possible the are implemented using locks that \fIdo\fP use the available atomic operations\&.
+.PP
+All of the atomic operations that modify memory are full memory barriers\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define SDL_AtomicDecRef(a)   (\fBSDL_AtomicAdd\fP(a, -1) == 1)"
+
+.PP
+Decrement an atomic variable used as a reference count\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+SDL_TRUE if the variable reached zero after decrementing, SDL_FALSE otherwise 
+.RE
+.PP
+
+.SS "#define SDL_CompilerBarrier()   { SDL_SpinLock _tmp = 0; \fBSDL_AtomicLock\fP(&_tmp); \fBSDL_AtomicUnlock\fP(&_tmp); }"
+The compiler barrier prevents the compiler from reordering reads and writes to globally visible variables across the call\&. 
+.SS "#define SDL_MemoryBarrierRelease()   \fBSDL_CompilerBarrier\fP()"
+Memory barriers are designed to prevent reads and writes from being reordered by the compiler and being seen out of order on multi-core CPUs\&.
+.PP
+A typical pattern would be for thread A to write some data and a flag, and for thread B to read the flag and get the data\&. In this case you would insert a release barrier between writing the data and the flag, guaranteeing that the data write completes no later than the flag is written, and you would insert an acquire barrier between reading the flag and reading the data, to ensure that all the reads associated with the flag have completed\&.
+.PP
+In this pattern you should always see a release barrier paired with an acquire barrier and you should gate the data reads/writes with a single flag variable\&.
+.PP
+For more information on these semantics, take a look at the blog post: http://preshing.com/20120913/acquire-and-release-semantics 
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_AtomicAdd (\fBSDL_atomic_t\fP * a, \fBint\fP v)"
+
+.PP
+Add to an atomic variable\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The previous value of the atomic variable\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+This same style can be used for any number operation 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_bool SDLCALL SDL_AtomicCAS (\fBSDL_atomic_t\fP * a, \fBint\fP oldval, \fBint\fP newval)"
+
+.PP
+Set an atomic variable to a new value if it is currently an old value\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+SDL_TRUE if the atomic variable was set, SDL_FALSE otherwise\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+If you don't know what this function is for, you shouldn't use it! 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_bool SDLCALL SDL_AtomicCASPtr (\fBvoid\fP ** a, \fBvoid\fP * oldval, \fBvoid\fP * newval)"
+
+.PP
+Set a pointer to a new value if it is currently an old value\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+SDL_TRUE if the pointer was set, SDL_FALSE otherwise\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+If you don't know what this function is for, you shouldn't use it! 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_AtomicLock (SDL_SpinLock * lock)"
+
+.PP
+Lock a spin lock by setting it to a non-zero value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlock\fP Points to the lock\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_AtomicSet (\fBSDL_atomic_t\fP * a, \fBint\fP v)"
+
+.PP
+Set an atomic variable to a value\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The previous value of the atomic variable\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP* SDLCALL SDL_AtomicSetPtr (\fBvoid\fP ** a, \fBvoid\fP * v)"
+
+.PP
+Set a pointer to a value atomically\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The previous value of the pointer\&. 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_bool SDLCALL SDL_AtomicTryLock (SDL_SpinLock * lock)"
+
+.PP
+Try to lock a spin lock by setting it to a non-zero value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlock\fP Points to the lock\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+SDL_TRUE if the lock succeeded, SDL_FALSE if the lock is already held\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_AtomicUnlock (SDL_SpinLock * lock)"
+
+.PP
+Unlock a spin lock by setting it to 0\&. Always returns immediately\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlock\fP Points to the lock\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

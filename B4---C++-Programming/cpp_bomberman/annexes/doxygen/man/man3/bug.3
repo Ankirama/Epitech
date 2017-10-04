@@ -1,0 +1,16 @@
+.TH "bug" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+bug \- Bug List 
+
+.IP "\fBClass \fBLua\fP \fP" 1c
+not generic, we can't use it to load/use a generic lua file\&.  
+.IP "\fBMember \fBScore::getTopN\fP (int n)\fP" 1c
+a map sort are entries so we have to use a vector instead 
+.PP
+unable to create a pair with a const so we'll use std::string alone 
+.IP "\fBMember \fBXmlSave::saveMaze\fP (char const *map, int width, int width)\fP" 1c
+we didnt check if we already added it into our xml file
+.PP
+

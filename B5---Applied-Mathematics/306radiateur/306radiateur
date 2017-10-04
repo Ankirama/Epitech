@@ -1,0 +1,28 @@
+#!/usr/bin/env python2.7
+
+import sys, Gauss
+from Error import *
+
+def main():
+    if len(sys.argv) == 4 or len(sys.argv) == 6:
+        list_gauss = []
+        try:
+            for i in range(1, len(sys.argv)):
+                list_gauss.append(int(sys.argv[i]))
+        except:
+            error_message("All arguments must be int")
+    else:
+        error_message("Usage : ./306radiateur N ir jr [i j]\nN size room\n(ir, jr) coordonate radiator\n(i, j) location in the room")
+    if len(sys.argv) == 4:
+        gauss = Gauss.Gauss(list_gauss, True)
+    else:
+        gauss = Gauss.Gauss(list_gauss, False)
+    gauss.build_matrix()
+    gauss.build_vector()
+    gauss.display_matrix()
+    gauss.solution_sys()
+    gauss.display_temp()
+    
+if __name__ == '__main__':
+    main()
+    sys.exit(0)

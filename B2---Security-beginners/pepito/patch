@@ -1,0 +1,88 @@
+diff -u source/daemon.c my_path/daemon.c
+--- source/daemon.c	2013-04-15 19:55:50.000000000 +0200
++++ my_path/daemon.c	2014-09-11 18:20:51.799468671 +0200
+@@ -79,7 +79,7 @@
+ int
+ runDaemon(int debug)
+ {
+-  char			packetPtr[PACKETLEN];
++  char			packetPtr[PACKETLEN + 1];
+   size_t	       	packetSize;
+   struct sockaddr_in	sa;
+ 
+@@ -100,7 +100,7 @@
+   initConnection(&sa);
+   while (1) {
+     setClient(acceptClient(&sa));
+-    bzero(packetPtr, PACKETLEN);
++    bzero(packetPtr, PACKETLEN + 1);
+     getPacket(packetPtr, &packetSize);
+     handlePacket(packetPtr, packetSize);
+     setClient(-1);
+diff -u source/main.c my_path/main.c
+--- source/main.c	2013-04-15 19:55:50.000000000 +0200
++++ my_path/main.c	2014-09-11 21:59:06.305029921 +0200
+@@ -58,9 +58,12 @@
+   int			isAdmin = 0;
+   int			i;
+ 
++  if (!password)
++    return NOBODY;
+   if (!strcmp(password, userPassword))
+     isUser = 1;
+-  strcpy(savePassword, password);
++  strncpy(savePassword, password, 63);
++  savePassword[63] = '\0';
+ 
+   for (i = 0; password[i]; ++i)
+     password[i] ^= xorKey;
+@@ -85,7 +88,8 @@
+ changeUserPassword(char *password)
+ {
+   if (password) {
+-    strcpy(userPassword, password);
++    strncpy(userPassword, password, 511);
++    userPassword[511] = '\0';
+     sendLogMessage(PASSWD_CHANGE);
+   }
+ }
+@@ -98,7 +102,8 @@
+   if (password) {
+     for (i = 0; password[i]; ++i)
+       password[i] ^= xorKey;
+-    strcpy(adminPassword, password);
++    strncpy(adminPassword, password, 511);
++    adminPassword[511] = '\0';
+     sendLogMessage(PASSWD_CHANGE);
+   }
+ }
+@@ -312,7 +317,7 @@
+ 	money -= 2 * amount;
+ 	stock[i].quantity += amount;
+ 	sendLogMessage(INGREDIENT_BOUGHT);
+-	sprintf(log, "echo \"%s was bought\" >> log", ingredientName);
++	snprintf(log, 128, "echo \"%s was bought\" >> log", ingredientName);
+ 	free(ingredientName);
+ 	system(log);
+ 	return amount;
+@@ -348,7 +353,7 @@
+   int			cmdId;
+ 
+   cmdId = getNumber(&packetPtr, &packetSize);
+-  if (cmdId > (int)HANDLER_LEN)
++  if (cmdId > (int)HANDLER_LEN || cmdId < 0)
+     fprintf(stderr, "ID (%i) out of range.\n", cmdId);
+   else
+     handlerTab[cmdId](packetPtr, packetSize);
+diff -u source/network.c my_path/network.c
+--- source/network.c	2013-04-15 19:55:50.000000000 +0200
++++ my_path/network.c	2014-09-11 21:48:37.957596436 +0200
+@@ -71,7 +71,7 @@
+ sendLogMessage(char *msg)
+ {
+   write(client, msg, strlen(msg));
+-  fprintf(stderr, msg);
++  fprintf(stderr, "%s", msg);
+ }
+ 
+ void

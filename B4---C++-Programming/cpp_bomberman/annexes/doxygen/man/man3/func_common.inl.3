@@ -1,0 +1,306 @@
+.TH "lib/gdl/includes/glm/core/func_common.inl" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/glm/core/func_common.inl \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBglm::detail::Abs_< genFIType, bool >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::Abs_< genFIType, true >\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::Abs_< genFIType, false >\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename genFIType > GLM_FUNC_QUALIFIER genFIType \fBglm::abs\fP (genFIType const &x)"
+.br
+.ti -1c
+.RI "template<typename genFIType > GLM_FUNC_QUALIFIER genFIType \fBglm::sign\fP (genFIType const &x)"
+.br
+.ti -1c
+.RI "template<> GLM_FUNC_QUALIFIER detail::half \fBglm::floor< detail::half >\fP (detail::half const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::floor\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::trunc\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::round\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::roundEven\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::ceil\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::fract\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::mod\fP (genType const &x, genType const &y)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::modf\fP (genType const &x, genType &i)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_QUALIFIER detail::tvec2< valType > \fBglm::modf\fP (detail::tvec2< valType > const &x, detail::tvec2< valType > &i)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_QUALIFIER detail::tvec3< valType > \fBglm::modf\fP (detail::tvec3< valType > const &x, detail::tvec3< valType > &i)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_QUALIFIER detail::tvec4< valType > \fBglm::modf\fP (detail::tvec4< valType > const &x, detail::tvec4< valType > &i)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::min\fP (genType const &x, genType const &y)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::max\fP (genType const &x, genType const &y)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_QUALIFIER valType \fBglm::clamp\fP (valType const &x, valType const &minVal, valType const &maxVal)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec2< T > \fBglm::clamp\fP (detail::tvec2< T > const &x, typename detail::tvec2< T >::value_type const &minVal, typename detail::tvec2< T >::value_type const &maxVal)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec3< T > \fBglm::clamp\fP (detail::tvec3< T > const &x, typename detail::tvec3< T >::value_type const &minVal, typename detail::tvec3< T >::value_type const &maxVal)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec4< T > \fBglm::clamp\fP (detail::tvec4< T > const &x, typename detail::tvec4< T >::value_type const &minVal, typename detail::tvec4< T >::value_type const &maxVal)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec2< T > \fBglm::clamp\fP (detail::tvec2< T > const &x, detail::tvec2< T > const &minVal, detail::tvec2< T > const &maxVal)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec3< T > \fBglm::clamp\fP (detail::tvec3< T > const &x, detail::tvec3< T > const &minVal, detail::tvec3< T > const &maxVal)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec4< T > \fBglm::clamp\fP (detail::tvec4< T > const &x, detail::tvec4< T > const &minVal, detail::tvec4< T > const &maxVal)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::mix\fP (genType const &x, genType const &y, genType const &a)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_QUALIFIER detail::tvec2< valType > \fBglm::mix\fP (detail::tvec2< valType > const &x, detail::tvec2< valType > const &y, valType const &a)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_QUALIFIER detail::tvec3< valType > \fBglm::mix\fP (detail::tvec3< valType > const &x, detail::tvec3< valType > const &y, valType const &a)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_QUALIFIER detail::tvec4< valType > \fBglm::mix\fP (detail::tvec4< valType > const &x, detail::tvec4< valType > const &y, valType const &a)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_QUALIFIER detail::tvec2< valType > \fBglm::mix\fP (detail::tvec2< valType > const &x, detail::tvec2< valType > const &y, detail::tvec2< valType > const &a)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_QUALIFIER detail::tvec3< valType > \fBglm::mix\fP (detail::tvec3< valType > const &x, detail::tvec3< valType > const &y, detail::tvec3< valType > const &a)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_QUALIFIER detail::tvec4< valType > \fBglm::mix\fP (detail::tvec4< valType > const &x, detail::tvec4< valType > const &y, detail::tvec4< valType > const &a)"
+.br
+.ti -1c
+.RI "template<> GLM_FUNC_QUALIFIER float \fBglm::mix\fP (float const &x, float const &y, bool const &a)"
+.br
+.ti -1c
+.RI "template<> GLM_FUNC_QUALIFIER double \fBglm::mix\fP (double const &x, double const &y, bool const &a)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec2< T > \fBglm::mix\fP (detail::tvec2< T > const &x, detail::tvec2< T > const &y, bool a)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec3< T > \fBglm::mix\fP (detail::tvec3< T > const &x, detail::tvec3< T > const &y, bool a)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec4< T > \fBglm::mix\fP (detail::tvec4< T > const &x, detail::tvec4< T > const &y, bool a)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec2< T > \fBglm::mix\fP (detail::tvec2< T > const &x, detail::tvec2< T > const &y, typename detail::tvec2< T >::bool_type a)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec3< T > \fBglm::mix\fP (detail::tvec3< T > const &x, detail::tvec3< T > const &y, typename detail::tvec3< T >::bool_type a)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec4< T > \fBglm::mix\fP (detail::tvec4< T > const &x, detail::tvec4< T > const &y, typename detail::tvec4< T >::bool_type a)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::step\fP (genType const &edge, genType const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec2< T > \fBglm::step\fP (typename detail::tvec2< T >::value_type const &edge, detail::tvec2< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec3< T > \fBglm::step\fP (typename detail::tvec3< T >::value_type const &edge, detail::tvec3< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec4< T > \fBglm::step\fP (typename detail::tvec4< T >::value_type const &edge, detail::tvec4< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec2< T > \fBglm::step\fP (detail::tvec2< T > const &edge, detail::tvec2< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec3< T > \fBglm::step\fP (detail::tvec3< T > const &edge, detail::tvec3< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec4< T > \fBglm::step\fP (detail::tvec4< T > const &edge, detail::tvec4< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::smoothstep\fP (genType const &edge0, genType const &edge1, genType const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec2< T > \fBglm::smoothstep\fP (typename detail::tvec2< T >::value_type const &edge0, typename detail::tvec2< T >::value_type const &edge1, detail::tvec2< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec3< T > \fBglm::smoothstep\fP (typename detail::tvec3< T >::value_type const &edge0, typename detail::tvec3< T >::value_type const &edge1, detail::tvec3< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec4< T > \fBglm::smoothstep\fP (typename detail::tvec4< T >::value_type const &edge0, typename detail::tvec4< T >::value_type const &edge1, detail::tvec4< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec2< T > \fBglm::smoothstep\fP (detail::tvec2< T > const &edge0, detail::tvec2< T > const &edge1, detail::tvec2< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec3< T > \fBglm::smoothstep\fP (detail::tvec3< T > const &edge0, detail::tvec3< T > const &edge1, detail::tvec3< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec4< T > \fBglm::smoothstep\fP (detail::tvec4< T > const &edge0, detail::tvec4< T > const &edge1, detail::tvec4< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER bool \fBglm::isnan\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec2< T >::bool_type \fBglm::isnan\fP (detail::tvec2< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec3< T >::bool_type \fBglm::isnan\fP (detail::tvec3< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec4< T >::bool_type \fBglm::isnan\fP (detail::tvec4< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER bool \fBglm::isinf\fP (genType const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec2< T >::bool_type \fBglm::isinf\fP (detail::tvec2< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec3< T >::bool_type \fBglm::isinf\fP (detail::tvec3< T > const &x)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec4< T >::bool_type \fBglm::isinf\fP (detail::tvec4< T > const &x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER \fBint\fP \fBglm::floatBitsToInt\fP (float const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER detail::tvec2< \fBint\fP > \fBglm::floatBitsToInt\fP (detail::tvec2< float > const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER detail::tvec3< \fBint\fP > \fBglm::floatBitsToInt\fP (detail::tvec3< float > const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER detail::tvec4< \fBint\fP > \fBglm::floatBitsToInt\fP (detail::tvec4< float > const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER uint \fBglm::floatBitsToUint\fP (float const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER detail::tvec2< uint > \fBglm::floatBitsToUint\fP (detail::tvec2< float > const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER detail::tvec3< uint > \fBglm::floatBitsToUint\fP (detail::tvec3< float > const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER detail::tvec4< uint > \fBglm::floatBitsToUint\fP (detail::tvec4< float > const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER float \fBglm::intBitsToFloat\fP (\fBint\fP const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER detail::tvec2< float > \fBglm::intBitsToFloat\fP (detail::tvec2< \fBint\fP > const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER detail::tvec3< float > \fBglm::intBitsToFloat\fP (detail::tvec3< \fBint\fP > const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER detail::tvec4< float > \fBglm::intBitsToFloat\fP (detail::tvec4< \fBint\fP > const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER float \fBglm::uintBitsToFloat\fP (uint const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER detail::tvec2< float > \fBglm::uintBitsToFloat\fP (detail::tvec2< uint > const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER detail::tvec3< float > \fBglm::uintBitsToFloat\fP (detail::tvec3< uint > const &value)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER detail::tvec4< float > \fBglm::uintBitsToFloat\fP (detail::tvec4< uint > const &value)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::fma\fP (genType const &a, genType const &b, genType const &c)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::frexp\fP (genType const &x, \fBint\fP &exp)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec2< T > \fBglm::frexp\fP (detail::tvec2< T > const &x, detail::tvec2< \fBint\fP > &exp)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec3< T > \fBglm::frexp\fP (detail::tvec3< T > const &x, detail::tvec3< \fBint\fP > &exp)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec4< T > \fBglm::frexp\fP (detail::tvec4< T > const &x, detail::tvec4< \fBint\fP > &exp)"
+.br
+.ti -1c
+.RI "template<typename genType > GLM_FUNC_QUALIFIER genType \fBglm::ldexp\fP (genType const &x, \fBint\fP const &exp)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec2< T > \fBglm::ldexp\fP (detail::tvec2< T > const &x, detail::tvec2< \fBint\fP > const &exp)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec3< T > \fBglm::ldexp\fP (detail::tvec3< T > const &x, detail::tvec3< \fBint\fP > const &exp)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tvec4< T > \fBglm::ldexp\fP (detail::tvec4< T > const &x, detail::tvec4< \fBint\fP > const &exp)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+OpenGL Mathematics (glm\&.g-truc\&.net)
+.PP
+Copyright (c) 2005 - 2013 G-Truc Creation (www\&.g-truc\&.net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software\&.
+.PP
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\&. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE\&.
+.PP
+\fBGLM Core\fP
+.PP
+\fBDate:\fP
+.RS 4
+2008-08-03 / 2011-06-15 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christophe Riccio 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

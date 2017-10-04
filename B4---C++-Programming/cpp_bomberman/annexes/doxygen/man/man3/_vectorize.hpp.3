@@ -1,0 +1,244 @@
+.TH "lib/gdl/includes/glm/core/_vectorize.hpp" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/glm/core/_vectorize.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBVECTORIZE2_VEC\fP(func)"
+.br
+.ti -1c
+.RI "#define \fBVECTORIZE3_VEC\fP(func)"
+.br
+.ti -1c
+.RI "#define \fBVECTORIZE4_VEC\fP(func)"
+.br
+.ti -1c
+.RI "#define \fBVECTORIZE_VEC\fP(func)"
+.br
+.ti -1c
+.RI "#define \fBVECTORIZE2_VEC_SCA\fP(func)"
+.br
+.ti -1c
+.RI "#define \fBVECTORIZE3_VEC_SCA\fP(func)"
+.br
+.ti -1c
+.RI "#define \fBVECTORIZE4_VEC_SCA\fP(func)"
+.br
+.ti -1c
+.RI "#define \fBVECTORIZE_VEC_SCA\fP(func)"
+.br
+.ti -1c
+.RI "#define \fBVECTORIZE2_VEC_VEC\fP(func)"
+.br
+.ti -1c
+.RI "#define \fBVECTORIZE3_VEC_VEC\fP(func)"
+.br
+.ti -1c
+.RI "#define \fBVECTORIZE4_VEC_VEC\fP(func)"
+.br
+.ti -1c
+.RI "#define \fBVECTORIZE_VEC_VEC\fP(func)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+OpenGL Mathematics (glm\&.g-truc\&.net)
+.PP
+Copyright (c) 2005 - 2013 G-Truc Creation (www\&.g-truc\&.net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software\&.
+.PP
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\&. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE\&.
+.PP
+\fBGLM Core\fP
+.PP
+\fBDate:\fP
+.RS 4
+2011-10-14 / 2011-10-14 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christophe Riccio 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define VECTORIZE2_VEC(func)"
+\fBValue:\fP
+.PP
+.nf
+template <typename T> \
+    GLM_FUNC_QUALIFIER detail::tvec2<T> func( \
+        detail::tvec2<T> const & v) \
+    { \
+        return detail::tvec2<T>( \
+            func(v\&.x), \
+            func(v\&.y)); \
+    }
+.fi
+.SS "#define VECTORIZE2_VEC_SCA(func)"
+\fBValue:\fP
+.PP
+.nf
+template <typename T> \
+    GLM_FUNC_QUALIFIER detail::tvec2<T> func \
+    ( \
+        detail::tvec2<T> const & x,  \
+        typename detail::tvec2<T>::value_type const & y \
+    ) \
+    { \
+        return detail::tvec2<T>( \
+            func(x\&.x, y), \
+            func(x\&.y, y)); \
+    }
+.fi
+.SS "#define VECTORIZE2_VEC_VEC(func)"
+\fBValue:\fP
+.PP
+.nf
+template <typename T> \
+    GLM_FUNC_QUALIFIER detail::tvec2<T> func \
+    ( \
+        detail::tvec2<T> const & x,  \
+        detail::tvec2<T> const & y \
+    ) \
+    { \
+        return detail::tvec2<T>( \
+            func(x\&.x, y\&.x), \
+            func(x\&.y, y\&.y)); \
+    }
+.fi
+.SS "#define VECTORIZE3_VEC(func)"
+\fBValue:\fP
+.PP
+.nf
+template <typename T> \
+    GLM_FUNC_QUALIFIER detail::tvec3<T> func( \
+        detail::tvec3<T> const & v) \
+    { \
+        return detail::tvec3<T>( \
+            func(v\&.x), \
+            func(v\&.y), \
+            func(v\&.z)); \
+    }
+.fi
+.SS "#define VECTORIZE3_VEC_SCA(func)"
+\fBValue:\fP
+.PP
+.nf
+template <typename T> \
+    GLM_FUNC_QUALIFIER detail::tvec3<T> func \
+    ( \
+        detail::tvec3<T> const & x,  \
+        typename detail::tvec3<T>::value_type const & y \
+    ) \
+    { \
+        return detail::tvec3<T>( \
+            func(x\&.x, y), \
+            func(x\&.y, y), \
+            func(x\&.z, y)); \
+    }
+.fi
+.SS "#define VECTORIZE3_VEC_VEC(func)"
+\fBValue:\fP
+.PP
+.nf
+template <typename T> \
+    GLM_FUNC_QUALIFIER detail::tvec3<T> func \
+    ( \
+        detail::tvec3<T> const & x,  \
+        detail::tvec3<T> const & y \
+    ) \
+    { \
+        return detail::tvec3<T>( \
+            func(x\&.x, y\&.x), \
+            func(x\&.y, y\&.y), \
+            func(x\&.z, y\&.z)); \
+    }
+.fi
+.SS "#define VECTORIZE4_VEC(func)"
+\fBValue:\fP
+.PP
+.nf
+template <typename T> \
+    GLM_FUNC_QUALIFIER detail::tvec4<T> func( \
+        detail::tvec4<T> const & v) \
+    { \
+        return detail::tvec4<T>( \
+            func(v\&.x), \
+            func(v\&.y), \
+            func(v\&.z), \
+            func(v\&.w)); \
+    }
+.fi
+.SS "#define VECTORIZE4_VEC_SCA(func)"
+\fBValue:\fP
+.PP
+.nf
+template <typename T> \
+    GLM_FUNC_QUALIFIER detail::tvec4<T> func \
+    ( \
+        detail::tvec4<T> const & x,  \
+        typename detail::tvec4<T>::value_type const & y \
+    ) \
+    { \
+        return detail::tvec4<T>( \
+            func(x\&.x, y), \
+            func(x\&.y, y), \
+            func(x\&.z, y), \
+            func(x\&.w, y)); \
+    }
+.fi
+.SS "#define VECTORIZE4_VEC_VEC(func)"
+\fBValue:\fP
+.PP
+.nf
+template <typename T> \
+    GLM_FUNC_QUALIFIER detail::tvec4<T> func \
+    ( \
+        detail::tvec4<T> const & x,  \
+        detail::tvec4<T> const & y \
+    ) \
+    { \
+        return detail::tvec4<T>( \
+            func(x\&.x, y\&.x), \
+            func(x\&.y, y\&.y), \
+            func(x\&.z, y\&.z), \
+            func(x\&.w, y\&.w)); \
+    }
+.fi
+.SS "#define VECTORIZE_VEC(func)"
+\fBValue:\fP
+.PP
+.nf
+VECTORIZE2_VEC(func) \
+    VECTORIZE3_VEC(func) \
+    VECTORIZE4_VEC(func)
+.fi
+.SS "#define VECTORIZE_VEC_SCA(func)"
+\fBValue:\fP
+.PP
+.nf
+VECTORIZE2_VEC_SCA(func) \
+    VECTORIZE3_VEC_SCA(func) \
+    VECTORIZE4_VEC_SCA(func)
+.fi
+.SS "#define VECTORIZE_VEC_VEC(func)"
+\fBValue:\fP
+.PP
+.nf
+VECTORIZE2_VEC_VEC(func) \
+    VECTORIZE3_VEC_VEC(func) \
+    VECTORIZE4_VEC_VEC(func)
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

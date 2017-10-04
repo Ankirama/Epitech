@@ -1,0 +1,255 @@
+.TH "lib/gdl/includes/SDL_mutex.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_mutex.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_MUTEX_TIMEDOUT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSDL_MUTEX_MAXWAIT\fP   (~(\fBUint32\fP)0)"
+.br
+.in -1c
+.SS "Mutex functions"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_mutexP\fP(m)   SDL_LockMutex(m)"
+.br
+.ti -1c
+.RI "#define \fBSDL_mutexV\fP(m)   SDL_UnlockMutex(m)"
+.br
+.ti -1c
+.RI "typedef struct SDL_mutex \fBSDL_mutex\fP"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_mutex *SDLCALL \fBSDL_CreateMutex\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_LockMutex\fP (SDL_mutex *mutex)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_TryLockMutex\fP (SDL_mutex *mutex)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_UnlockMutex\fP (SDL_mutex *mutex)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_DestroyMutex\fP (SDL_mutex *mutex)"
+.br
+.in -1c
+.SS "Semaphore functions"
+
+.in +1c
+.ti -1c
+.RI "typedef struct SDL_semaphore \fBSDL_sem\fP"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_sem *SDLCALL \fBSDL_CreateSemaphore\fP (\fBUint32\fP initial_value)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_DestroySemaphore\fP (SDL_sem *sem)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SemWait\fP (SDL_sem *sem)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SemTryWait\fP (SDL_sem *sem)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SemWaitTimeout\fP (SDL_sem *sem, \fBUint32\fP ms)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SemPost\fP (SDL_sem *sem)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBUint32\fP SDLCALL \fBSDL_SemValue\fP (SDL_sem *sem)"
+.br
+.in -1c
+.SS "Condition variable functions"
+
+.in +1c
+.ti -1c
+.RI "typedef struct SDL_cond \fBSDL_cond\fP"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_cond *SDLCALL \fBSDL_CreateCond\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_DestroyCond\fP (SDL_cond *cond)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_CondSignal\fP (SDL_cond *cond)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_CondBroadcast\fP (SDL_cond *cond)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_CondWait\fP (SDL_cond *cond, SDL_mutex *mutex)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_CondWaitTimeout\fP (SDL_cond *cond, SDL_mutex *mutex, \fBUint32\fP ms)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Functions to provide thread synchronization primitives\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define SDL_MUTEX_MAXWAIT   (~(\fBUint32\fP)0)"
+This is the timeout value which corresponds to never time out\&. 
+.SS "#define SDL_MUTEX_TIMEDOUT   1"
+Synchronization functions which can time out return this value if they time out\&. 
+.SS "#define SDL_mutexP(m)   SDL_LockMutex(m)"
+Lock the mutex\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0, or -1 on error\&. 
+.RE
+.PP
+
+.SS "#define SDL_mutexV(m)   SDL_UnlockMutex(m)"
+Unlock the mutex\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0, or -1 on error\&.
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+It is an error to unlock a mutex that has not been locked by the current thread, and doing so results in undefined behavior\&. 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_CondBroadcast (SDL_cond * cond)"
+Restart all threads that are waiting on the condition variable\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 or -1 on error\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_CondSignal (SDL_cond * cond)"
+Restart one of the threads that are waiting on the condition variable\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 or -1 on error\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_CondWait (SDL_cond * cond, SDL_mutex * mutex)"
+Wait on the condition variable, unlocking the provided mutex\&.
+.PP
+\fBWarning:\fP
+.RS 4
+The mutex must be locked before entering this function!
+.RE
+.PP
+The mutex is re-locked once the condition variable is signaled\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 when it is signaled, or -1 on error\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_CondWaitTimeout (SDL_cond * cond, SDL_mutex * mutex, \fBUint32\fP ms)"
+Waits for at most \fCms\fP milliseconds, and returns 0 if the condition variable is signaled, \fBSDL_MUTEX_TIMEDOUT\fP if the condition is not signaled in the allotted time, and -1 on error\&.
+.PP
+\fBWarning:\fP
+.RS 4
+On some platforms this function is implemented by looping with a delay of 1 ms, and so should be avoided if possible\&. 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_cond* SDLCALL SDL_CreateCond (\fBvoid\fP)"
+Create a condition variable\&.
+.PP
+Typical use of condition variables:
+.PP
+Thread A: SDL_LockMutex(lock); while ( ! condition ) { SDL_CondWait(cond, lock); } SDL_UnlockMutex(lock);
+.PP
+Thread B: SDL_LockMutex(lock); \&.\&.\&. condition = true; \&.\&.\&. SDL_CondSignal(cond); SDL_UnlockMutex(lock);
+.PP
+There is some discussion whether to signal the condition variable with the mutex locked or not\&. There is some potential performance benefit to unlocking first on some platforms, but there are some potential race conditions depending on how your code is structured\&.
+.PP
+In general it's safer to signal the condition variable while the mutex is locked\&. 
+.SS "DECLSPEC SDL_mutex* SDLCALL SDL_CreateMutex (\fBvoid\fP)"
+Create a mutex, initialized unlocked\&. 
+.SS "DECLSPEC SDL_sem* SDLCALL SDL_CreateSemaphore (\fBUint32\fP initial_value)"
+Create a semaphore, initialized with value, returns NULL on failure\&. 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_DestroyCond (SDL_cond * cond)"
+Destroy a condition variable\&. 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_DestroyMutex (SDL_mutex * mutex)"
+Destroy a mutex\&. 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_DestroySemaphore (SDL_sem * sem)"
+Destroy a semaphore\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SemPost (SDL_sem * sem)"
+Atomically increases the semaphore's count (not blocking)\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0, or -1 on error\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SemTryWait (SDL_sem * sem)"
+Non-blocking variant of \fBSDL_SemWait()\fP\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 if the wait succeeds, \fBSDL_MUTEX_TIMEDOUT\fP if the wait would block, and -1 on error\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBUint32\fP SDLCALL SDL_SemValue (SDL_sem * sem)"
+Returns the current count of the semaphore\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SemWait (SDL_sem * sem)"
+This function suspends the calling thread until the semaphore pointed to by \fCsem\fP has a positive count\&. It then atomically decreases the semaphore count\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SemWaitTimeout (SDL_sem * sem, \fBUint32\fP ms)"
+Variant of \fBSDL_SemWait()\fP with a timeout in milliseconds\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 if the wait succeeds, \fBSDL_MUTEX_TIMEDOUT\fP if the wait does not succeed in the allotted time, and -1 on error\&.
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+On some platforms this function is implemented by looping with a delay of 1 ms, and so should be avoided if possible\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_TryLockMutex (SDL_mutex * mutex)"
+Try to lock the mutex
+.PP
+\fBReturns:\fP
+.RS 4
+0, SDL_MUTEX_TIMEDOUT, or -1 on error 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

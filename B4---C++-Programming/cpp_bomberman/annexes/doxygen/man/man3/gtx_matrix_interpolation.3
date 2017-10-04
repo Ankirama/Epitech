@@ -1,0 +1,42 @@
+.TH "gtx_matrix_interpolation" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtx_matrix_interpolation \- GLM_GTX_matrix_interpolation
+.PP
+Allows to directly interpolate two exiciting matrices\&.  
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > \fBvoid\fP \fBglm::axisAngle\fP (detail::tmat4x4< T > const &mat, detail::tvec3< T > &axis, T &angle)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::axisAngleMatrix\fP (detail::tvec3< T > const &axis, T const angle)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::extractMatrixRotation\fP (detail::tmat4x4< T > const &mat)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::interpolate\fP (detail::tmat4x4< T > const &m1, detail::tmat4x4< T > const &m2, T const delta)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Allows to directly interpolate two exiciting matrices\&. 
+
+<\fBglm/gtx/matrix_interpolation\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T > \fBvoid\fP glm::axisAngle (\fBdetail::tmat4x4\fP< T > const & mat, \fBdetail::tvec3\fP< T > & axis, T & angle)"
+Get the axis and angle of the rotation from a matrix\&. From GLM_GTX_matrix_interpolation extension\&. 
+.SS "template<typename T > detail::tmat4x4<T> glm::axisAngleMatrix (\fBdetail::tvec3\fP< T > const & axis, T const angle)"
+Build a matrix from axis and angle\&. From GLM_GTX_matrix_interpolation extension\&. 
+.SS "template<typename T > detail::tmat4x4<T> glm::extractMatrixRotation (\fBdetail::tmat4x4\fP< T > const & mat)"
+Extracts the rotation part of a matrix\&. From GLM_GTX_matrix_interpolation extension\&. 
+.SS "template<typename T > detail::tmat4x4<T> glm::interpolate (\fBdetail::tmat4x4\fP< T > const & m1, \fBdetail::tmat4x4\fP< T > const & m2, T const delta)"
+Build a interpolation of 4 * 4 matrixes\&. From GLM_GTX_matrix_interpolation extension\&. Warning! works only with rotation and/or translation matrixes, scale will generate unexpected results\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

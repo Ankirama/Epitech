@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1023</width>
+    <height>689</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="currentPlayer">
+          <property name="text">
+           <string>COULEUR</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="currentCell">
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Current Cell</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="margin">
+               <number>20</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <widget class="QLabel" name="label">
+                  <property name="text">
+                   <string>X</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="margin">
+                   <number>20</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="xValue">
+                  <property name="text">
+                   <string>VALUE</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <item>
+                 <widget class="QLabel" name="label_2">
+                  <property name="text">
+                   <string>Y</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="margin">
+                   <number>20</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="yValue">
+                  <property name="text">
+                   <string>VALUE</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QWidget" name="playerOne" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>250</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="playerTwo" native="true"/>
+        </item>
+       </layout>
+      </item>
+      <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="baseSize">
+         <size>
+          <width>19</width>
+          <height>19</height>
+         </size>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustToContents</enum>
+        </property>
+        <property name="autoScrollMargin">
+         <number>10</number>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="dragDropOverwriteMode">
+         <bool>false</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::NoSelection</enum>
+        </property>
+        <property name="textElideMode">
+         <enum>Qt::ElideMiddle</enum>
+        </property>
+        <property name="showGrid">
+         <bool>false</bool>
+        </property>
+        <property name="rowCount">
+         <number>19</number>
+        </property>
+        <property name="columnCount">
+         <number>19</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="horizontalHeaderHighlightSections">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item alignment="Qt::AlignHCenter">
+     <widget class="QPushButton" name="quitBtn">
+      <property name="text">
+       <string>Quit</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1023</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPlay">
+    <property name="title">
+     <string>Jouer</string>
+    </property>
+    <addaction name="newMenu"/>
+    <addaction name="separator"/>
+    <addaction name="saveMenu"/>
+    <addaction name="loadMenu"/>
+    <addaction name="separator"/>
+    <addaction name="quitMenu"/>
+   </widget>
+   <widget class="QMenu" name="menuOption">
+    <property name="title">
+     <string>Option</string>
+    </property>
+    <widget class="QMenu" name="menuPapierPein">
+     <property name="title">
+      <string>Rules</string>
+     </property>
+     <addaction name="actionFirst_Rule"/>
+     <addaction name="actionSecond_Rule"/>
+    </widget>
+    <widget class="QMenu" name="menuAI">
+     <property name="title">
+      <string>AI</string>
+     </property>
+     <addaction name="actionNormal"/>
+     <addaction name="actionHard"/>
+    </widget>
+    <addaction name="menuPapierPein"/>
+    <addaction name="menuAI"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <addaction name="menuPlay"/>
+   <addaction name="menuOption"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="newMenu">
+   <property name="text">
+    <string>Nouvelle Parti</string>
+   </property>
+  </action>
+  <action name="saveMenu">
+   <property name="text">
+    <string>Sauvegarder</string>
+   </property>
+  </action>
+  <action name="loadMenu">
+   <property name="text">
+    <string>Charger</string>
+   </property>
+  </action>
+  <action name="quitMenu">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="actionFirst_Rule">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>First Rule</string>
+   </property>
+  </action>
+  <action name="actionSecond_Rule">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Second Rule</string>
+   </property>
+  </action>
+  <action name="actionNormal">
+   <property name="text">
+    <string>Normal</string>
+   </property>
+  </action>
+  <action name="actionHard">
+   <property name="text">
+    <string>Hard</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

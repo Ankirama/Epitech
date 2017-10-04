@@ -1,0 +1,87 @@
+- Plusieurs difficultés d'IA : (Facile - Moyen - Difficile - Nightmare)
+
+- Plusieurs états : Jeu - Pause - Menu (interfaces ?)
+
+- Bonus : vitesse joueur / range bombe / nombre bombe posés
+  -> Joueur : vitesse  / nombre bombe
+  -> Bombe : range
+
+- Malus : vitesse joueur / range bombe / nombre bombe posés
+  -> à faire ? (bonus)
+
+
+
+---------------------------------------------
+
+- Interface Objet:
+  * texture (classe)
+  * nom
+
+- Player : public objet
+  * en vie (bool)
+  * bombe (classe) (nombre bombe (int))
+  * vitesse (float ou double)
+  * points (unsigned int)
+  * position
+  * direction (enum)
+
+- AI : public bomberman
+  * difficulte -> pattern (class)
+
+- Player : public bomberman
+  * touche
+
+- Bombe : public objet
+  * range (unsigned int)
+  * texture explosion
+  * délai (unsigned int)
+  * position (unsigned carte)
+
+- Texture :
+  * shader (string)
+  à compléter ?
+
+- Sprite :
+  * texture
+  * position
+
+--------------------------------------------
+
+Fabien :
+       * partie physique map
+       * ia + lua
+
+Charles :
+	* classe animation -> animation bomberman / bomb
+	* Rajouter à la classe Animation (ou dans player) la possibilitée d'avoir des SubAnimations
+	* finir bomberman + human
+	* classe bombe
+
+Raphael :
+	* menu & co
+	* pleins de travail sa moman
+
+Alexandre :
+	  * textures ?
+	  * classe bombe
+	  * classe bonus / malus (générique)
+
+
+Général : chercher texture / animation
+---------------------------------------------
+Sauvegarde:
+  Player:
+    name
+    position
+    texture
+    color
+    direction
+    score
+    Bomb:
+      time (before explosion)
+      range
+      position
+      texture
+  Maze:
+    size
+    path

@@ -1,0 +1,144 @@
+.TH "SDL_HapticDirection" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_HapticDirection \- Structure that represents a haptic direction\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_haptic\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint8\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBdir\fP [3]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure that represents a haptic direction\&. 
+
+Directions can be specified by:
+.IP "\(bu" 2
+\fBSDL_HAPTIC_POLAR\fP : Specified by polar coordinates\&.
+.IP "\(bu" 2
+\fBSDL_HAPTIC_CARTESIAN\fP : Specified by cartesian coordinates\&.
+.IP "\(bu" 2
+\fBSDL_HAPTIC_SPHERICAL\fP : Specified by spherical coordinates\&.
+.PP
+.PP
+Cardinal directions of the haptic device are relative to the positioning of the device\&. North is considered to be away from the user\&.
+.PP
+The following diagram represents the cardinal directions: 
+.PP
+.nf
+             .--.
+             |__| .-------.
+             |=.| |.-----.|
+             |--| ||     ||
+             |  | |'-----'|
+             |__|~')_____('
+               [ COMPUTER ]
+
+
+                 North (0,-1)
+                     ^
+                     |
+                     |
+(1,0)  West <----[ HAPTIC ]----> East (-1,0)
+                     |
+                     |
+                     v
+                  South (0,1)
+
+
+                  [ USER ]
+                    \|||/
+                    (o o)
+              ---ooO-(_)-Ooo---
+
+.fi
+.PP
+.PP
+If type is \fBSDL_HAPTIC_POLAR\fP, direction is encoded by hundredths of a degree starting north and turning clockwise\&. \fBSDL_HAPTIC_POLAR\fP only uses the first \fCdir\fP parameter\&. The cardinal directions would be:
+.IP "\(bu" 2
+North: 0 (0 degrees)
+.IP "\(bu" 2
+East: 9000 (90 degrees)
+.IP "\(bu" 2
+South: 18000 (180 degrees)
+.IP "\(bu" 2
+West: 27000 (270 degrees)
+.PP
+.PP
+If type is \fBSDL_HAPTIC_CARTESIAN\fP, direction is encoded by three positions (X axis, Y axis and Z axis (with 3 axes))\&. \fBSDL_HAPTIC_CARTESIAN\fP uses the first three \fCdir\fP parameters\&. The cardinal directions would be:
+.IP "\(bu" 2
+North: 0,-1, 0
+.IP "\(bu" 2
+East: -1, 0, 0
+.IP "\(bu" 2
+South: 0, 1, 0
+.IP "\(bu" 2
+West: 1, 0, 0
+.PP
+.PP
+The Z axis represents the height of the effect if supported, otherwise it's unused\&. In cartesian encoding (1, 2) would be the same as (2, 4), you can use any multiple you want, only the direction matters\&.
+.PP
+If type is \fBSDL_HAPTIC_SPHERICAL\fP, direction is encoded by two rotations\&. The first two \fCdir\fP parameters are used\&. The \fCdir\fP parameters are as follows (all values are in hundredths of degrees):
+.IP "\(bu" 2
+Degrees from (1, 0) rotated towards (0, 1)\&.
+.IP "\(bu" 2
+Degrees towards (0, 0, 1) (device needs at least 3 axes)\&.
+.PP
+.PP
+Example of force coming from the south with all encodings (force coming from the south means the user will have to pull the stick to counteract): 
+.PP
+.nf
+SDL_HapticDirection direction;
+
+// Cartesian directions
+direction\&.type = SDL_HAPTIC_CARTESIAN; // Using cartesian direction encoding\&.
+direction\&.dir[0] = 0; // X position
+direction\&.dir[1] = 1; // Y position
+// Assuming the device has 2 axes, we don't need to specify third parameter\&.
+
+// Polar directions
+direction\&.type = SDL_HAPTIC_POLAR; // We'll be using polar direction encoding\&.
+direction\&.dir[0] = 18000; // Polar only uses first parameter
+
+// Spherical coordinates
+direction\&.type = SDL_HAPTIC_SPHERICAL; // Spherical encoding
+direction\&.dir[0] = 9000; // Since we only have two axes we don't need more parameters\&.
+
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_HAPTIC_POLAR\fP 
+.PP
+\fBSDL_HAPTIC_CARTESIAN\fP 
+.PP
+\fBSDL_HAPTIC_SPHERICAL\fP 
+.PP
+\fBSDL_HapticEffect\fP 
+.PP
+\fBSDL_HapticNumAxes\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBSint32\fP SDL_HapticDirection::dir[3]"
+The encoded direction\&. 
+.SS "\fBUint8\fP SDL_HapticDirection::type"
+The type of encoding\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

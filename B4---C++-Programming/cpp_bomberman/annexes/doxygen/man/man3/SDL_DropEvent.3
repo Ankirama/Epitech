@@ -1,0 +1,46 @@
+.TH "SDL_DropEvent" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_DropEvent \- An event used to request a file open by the system (event\&.drop\&.*) This event is disabled by default, you can enable it with \fBSDL_EventState()\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "char * \fBfile\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+An event used to request a file open by the system (event\&.drop\&.*) This event is disabled by default, you can enable it with \fBSDL_EventState()\fP 
+
+
+.PP
+\fBNote:\fP
+.RS 4
+If you enable this event, you must free the filename in the event\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "char* SDL_DropEvent::file"
+The file name, which should be freed with SDL_free() 
+.SS "\fBUint32\fP SDL_DropEvent::type"
+\fBSDL_DROPFILE\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

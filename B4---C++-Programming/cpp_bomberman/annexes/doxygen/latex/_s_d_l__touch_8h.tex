@@ -1,0 +1,53 @@
+\hypertarget{_s_d_l__touch_8h}{}\section{lib/gdl/includes/\+S\+D\+L\+\_\+touch.h File Reference}
+\label{_s_d_l__touch_8h}\index{lib/gdl/includes/\+S\+D\+L\+\_\+touch.\+h@{lib/gdl/includes/\+S\+D\+L\+\_\+touch.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+video.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+Include dependency graph for S\+D\+L\+\_\+touch.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s_d_l___finger}{S\+D\+L\+\_\+\+Finger}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__touch_8h_ac24e2ec23c2ac1675fec8f327ef45efe}{}\#define {\bfseries S\+D\+L\+\_\+\+T\+O\+U\+C\+H\+\_\+\+M\+O\+U\+S\+E\+I\+D}~((\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32})-\/1)\label{_s_d_l__touch_8h_ac24e2ec23c2ac1675fec8f327ef45efe}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__touch_8h_a10f5f86abe4ea8308a8706bd5d3b337a}{}typedef \hyperlink{_s_d_l__stdinc_8h_a2c1a61d5c466bb74680be0a8cc1b455d}{Sint64} {\bfseries S\+D\+L\+\_\+\+Touch\+I\+D}\label{_s_d_l__touch_8h_a10f5f86abe4ea8308a8706bd5d3b337a}
+
+\item 
+\hypertarget{_s_d_l__touch_8h_a5fa58141f78415ca09645af359ad2250}{}typedef \hyperlink{_s_d_l__stdinc_8h_a2c1a61d5c466bb74680be0a8cc1b455d}{Sint64} {\bfseries S\+D\+L\+\_\+\+Finger\+I\+D}\label{_s_d_l__touch_8h_a5fa58141f78415ca09645af359ad2250}
+
+\item 
+\hypertarget{_s_d_l__touch_8h_aebfbaf6a1c2acd4e2595fcdeb911d4ac}{}typedef struct \hyperlink{struct_s_d_l___finger}{S\+D\+L\+\_\+\+Finger} {\bfseries S\+D\+L\+\_\+\+Finger}\label{_s_d_l__touch_8h_aebfbaf6a1c2acd4e2595fcdeb911d4ac}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__touch_8h_a14a41a2964ddf868a180e42ccfd441d1}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__touch_8h_a14a41a2964ddf868a180e42ccfd441d1}{S\+D\+L\+\_\+\+Get\+Num\+Touch\+Devices} (\hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void})\label{_s_d_l__touch_8h_a14a41a2964ddf868a180e42ccfd441d1}
+
+\begin{DoxyCompactList}\small\item\em Get the number of registered touch devices. \end{DoxyCompactList}\item 
+\hypertarget{_s_d_l__touch_8h_af23f09dc79eace93cdc8dd770eed0d0a}{}D\+E\+C\+L\+S\+P\+E\+C S\+D\+L\+\_\+\+Touch\+I\+D S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__touch_8h_af23f09dc79eace93cdc8dd770eed0d0a}{S\+D\+L\+\_\+\+Get\+Touch\+Device} (\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} index)\label{_s_d_l__touch_8h_af23f09dc79eace93cdc8dd770eed0d0a}
+
+\begin{DoxyCompactList}\small\item\em Get the touch I\+D with the given index, or 0 if the index is invalid. \end{DoxyCompactList}\item 
+\hypertarget{_s_d_l__touch_8h_a7dcd1494c8dd433b7ef7b24c2926e721}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__touch_8h_a7dcd1494c8dd433b7ef7b24c2926e721}{S\+D\+L\+\_\+\+Get\+Num\+Touch\+Fingers} (S\+D\+L\+\_\+\+Touch\+I\+D touch\+I\+D)\label{_s_d_l__touch_8h_a7dcd1494c8dd433b7ef7b24c2926e721}
+
+\begin{DoxyCompactList}\small\item\em Get the number of active fingers for a given touch device. \end{DoxyCompactList}\item 
+\hypertarget{_s_d_l__touch_8h_a50902a3c1e4dba0b82cb73cb786dae41}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{struct_s_d_l___finger}{S\+D\+L\+\_\+\+Finger} $\ast$S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__touch_8h_a50902a3c1e4dba0b82cb73cb786dae41}{S\+D\+L\+\_\+\+Get\+Touch\+Finger} (S\+D\+L\+\_\+\+Touch\+I\+D touch\+I\+D, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} index)\label{_s_d_l__touch_8h_a50902a3c1e4dba0b82cb73cb786dae41}
+
+\begin{DoxyCompactList}\small\item\em Get the finger object of the given touch, with the given index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include file for S\+D\+L touch event handling. 

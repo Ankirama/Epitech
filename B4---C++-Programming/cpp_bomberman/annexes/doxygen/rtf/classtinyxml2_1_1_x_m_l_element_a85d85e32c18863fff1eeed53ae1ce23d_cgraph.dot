@@ -1,0 +1,21 @@
+digraph "tinyxml2::XMLElement::ShallowClone"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="tinyxml2::XMLElement\l::ShallowClone",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="tinyxml2::XMLDocument\l::NewElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_document.html#a3c335a700a43d7c363a393142a23f234"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="tinyxml2::XMLNode::\lValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_node.html#a92835c779871918f9af569bfe9669fe6"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="tinyxml2::XMLNode::\lToDocument",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_node.html#a836e2966ed736fc3c94f70e12a2a3357",tooltip="Safely cast to a Document, or null. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="tinyxml2::XMLElement\l::FirstAttribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_element.html#a67593e63558ffda0386699c3e4cc0b2c",tooltip="Return the first attribute in the list. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="tinyxml2::XMLAttribute\l::Next",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_attribute.html#a7fd852d6185af90361ec1bc9a7681ad6",tooltip="The next attribute in the list. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="tinyxml2::XMLElement\l::SetAttribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_element.html#a11943abf2d0831548c3790dd5d9f119c",tooltip="Sets the named attribute to value. "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="tinyxml2::XMLAttribute\l::SetAttribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_attribute.html#a406d2c4a13c7af99a65edb59dd9f7581",tooltip="Set the attribute to a string value. "];
+}

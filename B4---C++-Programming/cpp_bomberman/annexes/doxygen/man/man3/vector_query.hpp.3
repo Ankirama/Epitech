@@ -1,0 +1,80 @@
+.TH "lib/gdl/includes/glm/gtx/vector_query.hpp" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/glm/gtx/vector_query.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./glm\&.hpp'\fP
+.br
+\fC#include <cfloat>\fP
+.br
+\fC#include <limits>\fP
+.br
+\fC#include 'vector_query\&.inl'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGLM_GTX_vector_query\fP   GLM_VERSION"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename genType > bool \fBglm::areCollinear\fP (genType const &v0, genType const &v1, typename genType::value_type const &epsilon)"
+.br
+.ti -1c
+.RI "template<typename genType > bool \fBglm::areOrthogonal\fP (genType const &v0, genType const &v1, typename genType::value_type const &epsilon)"
+.br
+.ti -1c
+.RI "template<typename genType , template< typename > class vecType> bool \fBglm::isNormalized\fP (vecType< genType > const &v, genType const &epsilon)"
+.br
+.ti -1c
+.RI "template<typename valType > bool \fBglm::isNull\fP (detail::tvec2< valType > const &v, valType const &epsilon)"
+.br
+.ti -1c
+.RI "template<typename valType > bool \fBglm::isNull\fP (detail::tvec3< valType > const &v, valType const &epsilon)"
+.br
+.ti -1c
+.RI "template<typename valType > bool \fBglm::isNull\fP (detail::tvec4< valType > const &v, valType const &epsilon)"
+.br
+.ti -1c
+.RI "template<typename genType > bool \fBglm::areOrthonormal\fP (genType const &v0, genType const &v1, typename genType::value_type const &epsilon)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+OpenGL Mathematics (glm\&.g-truc\&.net)
+.PP
+Copyright (c) 2005 - 2013 G-Truc Creation (www\&.g-truc\&.net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software\&.
+.PP
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\&. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE\&.
+.PP
+\fBGLM_GTX_vector_query\fP
+.PP
+\fBDate:\fP
+.RS 4
+2008-03-10 / 2011-06-07 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christophe Riccio
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM Core\fP (dependence) 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

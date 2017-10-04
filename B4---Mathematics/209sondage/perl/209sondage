@@ -1,0 +1,70 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+sub usage {
+  printf("Usage : ./209sondage population echantillon sondage\n");
+  exit;
+}
+
+sub check_arg {
+  my ($P, $E, $S) = @_;
+  if ($P < $E) {
+    printf("Error : population inferior to echantillon !\n");
+    usage();
+  } elsif ($P <= 1 || $E <= 1) {
+    printf("Error : population and echantillon must be > 1 !\n");
+    usage();
+  } elsif ($S < 0) {
+    printf("Error : sondage must be > 0 !\n");
+    usage();
+  }
+}
+
+sub calc_var {
+  my ($P, $E, $S) = @_;
+  my $p = $S / 100.0;
+  my $var = $p * (1.0 - $p);
+  return ($var / $E * ($P - $E) / ($P - 1.0));
+}
+
+sub print_result {
+  my ($P, $E, $S, $variance, $amp_95, $amp_99) = @_;
+  printf("taille de la population :\t %0.0f\n", $P);
+  printf("taille de l'echantillon :\t %0.0f\n", $E);
+  printf("resultat du sondage :\t \t %.2f\n", $S);
+  printf("variance estimee :\t \t %0.6f\n", $variance);
+  printf("intervalle de confiance a 95%% : [%.2f%% ; %.2f%%]\n", $S - $amp_95, $S + $amp_95);
+  printf("intervalle de confiance a 99%% : [%.2f%% ; %.2f%%]\n", $S - $amp_99, $S + $amp_99);
+}
+
+sub run_calc {
+  my ($P, $E, $S) = @_;
+  my $variance = calc_var($P, $E, $S);
+  my $amp_95 = 1.96 * sqrt($variance) * 100.0;
+  my $amp_99 = 2.58 * sqrt($variance) * 100.0;
+  print_result($P, $E, $S, $variance, $amp_95, $amp_99);
+}
+
+sub main {
+  my ($P, $E, $S) = @_;
+  # if (isint($P) == 0) {
+  #   printf("Error: %s is not an int\n", $P);
+  #   usage();
+  # } elsif (isint($E) == 0) {
+  #   printf("Error: %s is not an int\n", $E);
+  #   usage();
+  # } elsif (isfloat($S) == 0 && isint($S) == 0) {
+  #   printf("Error: %s is not a float\n", $S);
+  #   usage();
+  # }
+  check_arg($P, $E, $S);
+  run_calc($P, $E, $S);
+}
+
+if ($#ARGV + 1 != 3) {
+  usage();
+}
+
+main($ARGV[0], $ARGV[1], $ARGV[2]);

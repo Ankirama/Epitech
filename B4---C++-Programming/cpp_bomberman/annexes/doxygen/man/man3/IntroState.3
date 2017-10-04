@@ -1,0 +1,422 @@
+.TH "IntroState" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IntroState \- First state of the bomberman\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IntroState\&.hh>\fP
+.PP
+Inherits \fBIGameState\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBe_State\fP { \fBPLAY\fP, \fBLOAD\fP, \fBSCORE\fP, \fBOPTION\fP, \fBQUIT\fP }"
+.br
+.RI "\fIChoose the right action to do\&. \fP"
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInit\fP (\fBGameEngine\fP *)"
+.br
+.RI "\fIInit the state\&. \fP"
+.ti -1c
+.RI "void \fBCleanup\fP ()"
+.br
+.RI "\fICleanup the state\&. \fP"
+.ti -1c
+.RI "void \fBPause\fP ()"
+.br
+.RI "\fIPause\&. \fP"
+.ti -1c
+.RI "void \fBResume\fP (\fBGameEngine\fP *)"
+.br
+.RI "\fIResume\&. \fP"
+.ti -1c
+.RI "void \fBUpdate\fP (\fBGameEngine\fP *)"
+.br
+.RI "\fIUpdate\&. \fP"
+.ti -1c
+.RI "void \fBDraw\fP (\fBGameEngine\fP *)"
+.br
+.RI "\fIDraw the state\&. \fP"
+.ti -1c
+.RI "void \fBUp\fP (\fBGameEngine\fP *)"
+.br
+.RI "\fIKey Up\&. \fP"
+.ti -1c
+.RI "void \fBDown\fP (\fBGameEngine\fP *)"
+.br
+.RI "\fIKey Down\&. \fP"
+.ti -1c
+.RI "void \fBEnter\fP (\fBGameEngine\fP *)"
+.br
+.RI "\fIKey Enter\&. \fP"
+.ti -1c
+.RI "void \fBQuit\fP (\fBGameEngine\fP *)"
+.br
+.RI "\fIKey Escape\&. \fP"
+.ti -1c
+.RI "void \fBLeft\fP (\fBGameEngine\fP *)"
+.br
+.RI "\fIKey Left\&. \fP"
+.ti -1c
+.RI "void \fBRight\fP (\fBGameEngine\fP *)"
+.br
+.RI "\fIKey Right\&. \fP"
+.ti -1c
+.RI "void \fBkeyA\fP (\fBGameEngine\fP *)"
+.br
+.RI "\fIKey A\&. \fP"
+.ti -1c
+.RI "void \fBkeyB\fP (\fBGameEngine\fP *)"
+.br
+.RI "\fIKey B\&. \fP"
+.ti -1c
+.RI "void \fBstyleDraw\fP (\fBGameEngine\fP *, int, std::vector< \fBButton\fP * >::iterator)"
+.br
+.RI "\fIEffect of the function style\&. \fP"
+.ti -1c
+.RI "void \fBStyle\fP (\fBGameEngine\fP *)"
+.br
+.RI "\fIDo an effect when we push a button\&. \fP"
+.ti -1c
+.RI "void \fBmodKey\fP (const int, const int)"
+.br
+.RI "\fIFor change a key, from the map of key\&. \fP"
+.ti -1c
+.RI "std::vector< \fBButton\fP * >::iterator & \fBgetIterator\fP ()"
+.br
+.RI "\fIget the iterator button \fP"
+.ti -1c
+.RI "std::vector< \fBButton\fP * > & \fBgetVector\fP ()"
+.br
+.RI "\fIget the vector button \fP"
+.ti -1c
+.RI "void \fBsetReleased\fP (bool)"
+.br
+.RI "\fIset the booleen m_released \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBIntroState\fP * \fBInstance\fP ()"
+.br
+.RI "\fISingleton of Introstate\&. \fP"
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "typedef void(IntroState::* \fBm_tabFun\fP) (\fBGameEngine\fP *)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddKey\fP (const int, m_tabFun)"
+.br
+.RI "\fIadd a key to the map \fP"
+.ti -1c
+.RI "void \fBdelKey\fP (const int)"
+.br
+.RI "\fIdel a key to the map \fP"
+.ti -1c
+.RI "void \fBdelAllKey\fP ()"
+.br
+.RI "\fIdel all the key of the map \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::map< int, m_tabFun > \fBm_map\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBButton\fP * >::iterator \fBm_it\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBButton\fP * > \fBm_button\fP"
+.br
+.ti -1c
+.RI "std::vector< std::string > \fBm_easter\fP"
+.br
+.ti -1c
+.RI "std::vector< std::string >::iterator \fBm_easterIt\fP"
+.br
+.ti -1c
+.RI "\fBObject2D\fP * \fBm_background\fP"
+.br
+.ti -1c
+.RI "\fBObject2D\fP * \fBm_bomb_left\fP"
+.br
+.ti -1c
+.RI "bool \fBm_released\fP"
+.br
+.ti -1c
+.RI "\fBGenerateText\fP * \fBm_text\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBIntroState\fP \fBm_IntroState\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+First state of the bomberman\&. 
+
+Function for display the state and manage the state 
+.SH "Member Function Documentation"
+.PP 
+.SS "void IntroState::addKey (const int, m_tabFun)\fC [private]\fP"
+
+.PP
+add a key to the map 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIKey\fP 
+.br
+\fIFunction\fP associate to the key 
+.RE
+.PP
+
+.SS "void IntroState::Cleanup ()\fC [virtual]\fP"
+
+.PP
+Cleanup the state\&. Clean the state, but don't delete his element\&. 
+.PP
+Implements \fBIGameState\fP\&.
+.SS "void IntroState::delKey (const int)\fC [private]\fP"
+
+.PP
+del a key to the map 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIKey\fP to delete 
+.RE
+.PP
+
+.SS "void IntroState::Down (\fBGameEngine\fP *)"
+
+.PP
+Key Down\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIThe\fP \fBGameEngine\fP, motor of the game 
+.RE
+.PP
+
+.SS "void IntroState::Draw (\fBGameEngine\fP *)\fC [virtual]\fP"
+
+.PP
+Draw the state\&. Draw background, button\&.\&.\&. 
+.PP
+Implements \fBIGameState\fP\&.
+.SS "void IntroState::Enter (\fBGameEngine\fP *)"
+
+.PP
+Key Enter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIThe\fP \fBGameEngine\fP, motor of the game 
+.RE
+.PP
+
+.SS "void IntroState::Init (\fBGameEngine\fP *)\fC [virtual]\fP"
+
+.PP
+Init the state\&. Load the background, and other image off the state
+.PP
+\fBParameters:\fP
+.RS 4
+\fIThe\fP \fBGameEngine\fP, motor of the game 
+.RE
+.PP
+
+.PP
+Implements \fBIGameState\fP\&.
+.SS "void IntroState::keyA (\fBGameEngine\fP *)"
+
+.PP
+Key A\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIThe\fP \fBGameEngine\fP, motor of the game 
+.RE
+.PP
+
+.SS "void IntroState::keyB (\fBGameEngine\fP *)"
+
+.PP
+Key B\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIThe\fP \fBGameEngine\fP, motor of the game 
+.RE
+.PP
+
+.SS "void IntroState::Left (\fBGameEngine\fP *)"
+
+.PP
+Key Left\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIThe\fP \fBGameEngine\fP, motor of the game 
+.RE
+.PP
+
+.SS "void IntroState::modKey (const int, const int)\fC [virtual]\fP"
+
+.PP
+For change a key, from the map of key\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIThe\fP old key 
+.br
+\fIThe\fP new key 
+.RE
+.PP
+
+.PP
+Implements \fBIGameState\fP\&.
+.SS "void IntroState::Quit (\fBGameEngine\fP *)"
+
+.PP
+Key Escape\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIThe\fP \fBGameEngine\fP, motor of the game 
+.RE
+.PP
+
+.SS "void IntroState::Resume (\fBGameEngine\fP *)\fC [virtual]\fP"
+
+.PP
+Resume\&. Resume the state after pause
+.PP
+\fBParameters:\fP
+.RS 4
+\fIThe\fP \fBGameEngine\fP, motor of the game 
+.RE
+.PP
+
+.PP
+Implements \fBIGameState\fP\&.
+.SS "void IntroState::Right (\fBGameEngine\fP *)"
+
+.PP
+Key Right\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIThe\fP \fBGameEngine\fP, motor of the game 
+.RE
+.PP
+
+.SS "void IntroState::setReleased (bool)"
+
+.PP
+set the booleen m_released 
+.PP
+\fBParameters:\fP
+.RS 4
+\fINew\fP etat of m_released 
+.RE
+.PP
+
+.SS "void IntroState::Style (\fBGameEngine\fP *)"
+
+.PP
+Do an effect when we push a button\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIThe\fP \fBGameEngine\fP, motor of the game 
+.RE
+.PP
+
+.SS "void IntroState::styleDraw (\fBGameEngine\fP *, int, std::vector< \fBButton\fP * >::iterator)"
+
+.PP
+Effect of the function style\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIThe\fP \fBGameEngine\fP, motor of the game 
+.br
+\fIInt\fP position 
+.br
+\fIAn\fP iterator to the button 
+.RE
+.PP
+
+.SS "void IntroState::Up (\fBGameEngine\fP *)"
+
+.PP
+Key Up\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIThe\fP \fBGameEngine\fP, motor of the game 
+.RE
+.PP
+
+.SS "void IntroState::Update (\fBGameEngine\fP *)\fC [virtual]\fP"
+
+.PP
+Update\&. Alias HandleEvent, it's catch the key frol the keyboard
+.PP
+\fBParameters:\fP
+.RS 4
+\fIThe\fP \fBGameEngine\fP, motor of the game 
+.RE
+.PP
+
+.PP
+Implements \fBIGameState\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBObject2D\fP* IntroState::m_background\fC [private]\fP"
+The background of the state 
+.SS "\fBObject2D\fP* IntroState::m_bomb_left\fC [private]\fP"
+The image bomb(between a button) 
+.SS "std::vector<\fBButton\fP *> IntroState::m_button\fC [private]\fP"
+Vector \fBButton\fP 
+.SS "std::vector<std::string> IntroState::m_easter\fC [private]\fP"
+Vector EasterEgg 
+.SS "std::vector<std::string>::iterator IntroState::m_easterIt\fC [private]\fP"
+Iterator of the vector EasterEgg 
+.SS "\fBIntroState\fP IntroState::m_IntroState\fC [static]\fP, \fC [private]\fP"
+Instance of introstate 
+.SS "std::vector<\fBButton\fP *>::iterator IntroState::m_it\fC [private]\fP"
+Iterator of the vector \fBButton\fP 
+.SS "std::map<int, m_tabFun> IntroState::m_map\fC [private]\fP"
+Map of key 
+.SS "bool IntroState::m_released\fC [private]\fP"
+The booleen for the map of key 
+.SS "\fBGenerateText\fP* IntroState::m_text\fC [private]\fP"
+Temporaire 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

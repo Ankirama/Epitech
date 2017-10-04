@@ -1,0 +1,152 @@
+.TH "SDL_RWops" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_RWops \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_rwops\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSint64\fP (SDLCALL *size)(struct \fBSDL_RWops\fP *context)"
+.br
+.ti -1c
+.RI "\fBSint64\fP (SDLCALL *seek)(struct \fBSDL_RWops\fP *context"
+.br
+.ti -1c
+.RI "\fBsize_t\fP (SDLCALL *read)(struct \fBSDL_RWops\fP *context"
+.br
+.ti -1c
+.RI "\fBsize_t\fP (SDLCALL *write)(struct \fBSDL_RWops\fP *context"
+.br
+.ti -1c
+.RI "\fBint\fP (SDLCALL *close)(struct \fBSDL_RWops\fP *context)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSint64\fP \fBoffset\fP"
+.br
+.ti -1c
+.RI "\fBSint64\fP \fBint\fP \fBwhence\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBptr\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsize_t\fP \fBsize\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsize_t\fP \fBsize_t\fP \fBmaxnum\fP"
+.br
+.ti -1c
+.RI "const \fBvoid\fP * \fBptr\fP"
+.br
+.ti -1c
+.RI "const \fBvoid\fP \fBsize_t\fP \fBsize\fP"
+.br
+.ti -1c
+.RI "const \fBvoid\fP \fBsize_t\fP \fBsize_t\fP \fBnum\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      SDL_bool \fBautoclose\fP"
+.br
+.ti -1c
+.RI "      FILE * \fBfp\fP"
+.br
+.ti -1c
+.RI "   } \fBstdio\fP"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBUint8\fP * \fBbase\fP"
+.br
+.ti -1c
+.RI "      \fBUint8\fP * \fBhere\fP"
+.br
+.ti -1c
+.RI "      \fBUint8\fP * \fBstop\fP"
+.br
+.ti -1c
+.RI "   } \fBmem\fP"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBvoid\fP * \fBdata1\fP"
+.br
+.ti -1c
+.RI "      \fBvoid\fP * \fBdata2\fP"
+.br
+.ti -1c
+.RI "   } \fBunknown\fP"
+.br
+.ti -1c
+.RI "} \fBhidden\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the read/write operation structure -- very basic\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "SDL_RWops::int (SDLCALL * close)"
+Close and free an allocated \fBSDL_RWops\fP structure\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 if successful or -1 on write error when flushing data\&. 
+.RE
+.PP
+
+.SS "SDL_RWops::Sint64 (SDLCALL * size)"
+Return the size of the file in this rwops, or -1 if unknown 
+.SS "SDL_RWops::Sint64 (SDLCALL * seek)"
+Seek to \fCoffset\fP relative to \fCwhence\fP, one of stdio's whence values: RW_SEEK_SET, RW_SEEK_CUR, RW_SEEK_END
+.PP
+\fBReturns:\fP
+.RS 4
+the final offset in the data stream, or -1 on error\&. 
+.RE
+.PP
+
+.SS "SDL_RWops::size_t (SDLCALL * read)"
+Read up to \fCmaxnum\fP objects each of size \fCsize\fP from the data stream to the area pointed at by \fCptr\fP\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the number of objects read, or 0 at error or end of file\&. 
+.RE
+.PP
+
+.SS "SDL_RWops::size_t (SDLCALL * write)"
+Write exactly \fCnum\fP objects each of size \fCsize\fP from the area pointed at by \fCptr\fP to data stream\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the number of objects written, or 0 at error or end of file\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

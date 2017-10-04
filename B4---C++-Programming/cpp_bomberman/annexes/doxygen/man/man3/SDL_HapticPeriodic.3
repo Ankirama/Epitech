@@ -1,0 +1,170 @@
+.TH "SDL_HapticPeriodic" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_HapticPeriodic \- A structure containing a template for a Periodic effect\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_haptic\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint16\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBSDL_HapticDirection\fP \fBdirection\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBlength\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBdelay\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBinterval\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBperiod\fP"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fBmagnitude\fP"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fBoffset\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBphase\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBattack_length\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBattack_level\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBfade_length\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBfade_level\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A structure containing a template for a Periodic effect\&. 
+
+The struct handles the following effects:
+.IP "\(bu" 2
+\fBSDL_HAPTIC_SINE\fP
+.IP "\(bu" 2
+\fBSDL_HAPTIC_LEFTRIGHT\fP
+.IP "\(bu" 2
+\fBSDL_HAPTIC_TRIANGLE\fP
+.IP "\(bu" 2
+\fBSDL_HAPTIC_SAWTOOTHUP\fP
+.IP "\(bu" 2
+\fBSDL_HAPTIC_SAWTOOTHDOWN\fP
+.PP
+.PP
+A periodic effect consists in a wave-shaped effect that repeats itself over time\&. The type determines the shape of the wave and the parameters determine the dimensions of the wave\&.
+.PP
+Phase is given by hundredth of a cycle meaning that giving the phase a value of 9000 will displace it 25% of its period\&. Here are sample values:
+.IP "\(bu" 2
+0: No phase displacement\&.
+.IP "\(bu" 2
+9000: Displaced 25% of its period\&.
+.IP "\(bu" 2
+18000: Displaced 50% of its period\&.
+.IP "\(bu" 2
+27000: Displaced 75% of its period\&.
+.IP "\(bu" 2
+36000: Displaced 100% of its period, same as 0, but 0 is preferred\&.
+.PP
+.PP
+Examples: 
+.PP
+.nf
+SDL_HAPTIC_SINE
+  __      __      __      __
+ /  \    /  \    /  \    /
+/    \__/    \__/    \__/
+
+SDL_HAPTIC_SQUARE
+ __    __    __    __    __
+|  |  |  |  |  |  |  |  |  |
+|  |__|  |__|  |__|  |__|  |
+
+SDL_HAPTIC_TRIANGLE
+  /\    /\    /\    /\    /\
+ /  \  /  \  /  \  /  \  /
+/    \/    \/    \/    \/
+
+SDL_HAPTIC_SAWTOOTHUP
+  /|  /|  /|  /|  /|  /|  /|
+ / | / | / | / | / | / | / |
+/  |/  |/  |/  |/  |/  |/  |
+
+SDL_HAPTIC_SAWTOOTHDOWN
+\  |\  |\  |\  |\  |\  |\  |
+ \ | \ | \ | \ | \ | \ | \ |
+  \|  \|  \|  \|  \|  \|  \|
+
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_HAPTIC_SINE\fP 
+.PP
+\fBSDL_HAPTIC_LEFTRIGHT\fP 
+.PP
+\fBSDL_HAPTIC_TRIANGLE\fP 
+.PP
+\fBSDL_HAPTIC_SAWTOOTHUP\fP 
+.PP
+\fBSDL_HAPTIC_SAWTOOTHDOWN\fP 
+.PP
+\fBSDL_HapticEffect\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint16\fP SDL_HapticPeriodic::attack_length"
+Duration of the attack\&. 
+.SS "\fBUint16\fP SDL_HapticPeriodic::attack_level"
+Level at the start of the attack\&. 
+.SS "\fBUint16\fP SDL_HapticPeriodic::button"
+\fBButton\fP that triggers the effect\&. 
+.SS "\fBUint16\fP SDL_HapticPeriodic::delay"
+Delay before starting the effect\&. 
+.SS "\fBSDL_HapticDirection\fP SDL_HapticPeriodic::direction"
+Direction of the effect\&. 
+.SS "\fBUint16\fP SDL_HapticPeriodic::fade_length"
+Duration of the fade\&. 
+.SS "\fBUint16\fP SDL_HapticPeriodic::fade_level"
+Level at the end of the fade\&. 
+.SS "\fBUint16\fP SDL_HapticPeriodic::interval"
+How soon it can be triggered again after button\&. 
+.SS "\fBUint32\fP SDL_HapticPeriodic::length"
+Duration of the effect\&. 
+.SS "\fBSint16\fP SDL_HapticPeriodic::magnitude"
+Peak value\&. 
+.SS "\fBSint16\fP SDL_HapticPeriodic::offset"
+Mean value of the wave\&. 
+.SS "\fBUint16\fP SDL_HapticPeriodic::period"
+Period of the wave\&. 
+.SS "\fBUint16\fP SDL_HapticPeriodic::phase"
+Horizontal shift given by hundredth of a cycle\&. 
+.SS "\fBUint16\fP SDL_HapticPeriodic::type"
+\fBSDL_HAPTIC_SINE\fP, \fBSDL_HAPTIC_LEFTRIGHT\fP, \fBSDL_HAPTIC_TRIANGLE\fP, \fBSDL_HAPTIC_SAWTOOTHUP\fP or \fBSDL_HAPTIC_SAWTOOTHDOWN\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

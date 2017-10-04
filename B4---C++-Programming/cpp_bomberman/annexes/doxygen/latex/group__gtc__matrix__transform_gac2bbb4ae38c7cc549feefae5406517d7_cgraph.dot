@@ -1,0 +1,15 @@
+digraph "glm::perspectiveFov"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::perspectiveFov",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="glm::radians",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__trigonometric.html#ga431d31cdb060059bc5b0696e212f1453"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="glm::pi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__constants.html#gae671930537266a9a650ccb4b88757692"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="glm::cos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__trigonometric.html#gac6708d4f0895dc79b65f50db00840167"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="glm::sin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__trigonometric.html#gafbab21016b7f3bc21afb09a7e42e2df1"];
+}

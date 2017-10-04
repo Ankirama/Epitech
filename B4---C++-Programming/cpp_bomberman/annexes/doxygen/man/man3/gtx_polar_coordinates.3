@@ -1,0 +1,46 @@
+.TH "gtx_polar_coordinates" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtx_polar_coordinates \- GLM_GTX_polar_coordinates
+.PP
+Conversion from Euclidean space to polar space and revert\&.  
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > detail::tvec3< T > \fBglm::polar\fP (detail::tvec3< T > const &euclidean)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tvec3< T > \fBglm::euclidean\fP (detail::tvec2< T > const &polar)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Conversion from Euclidean space to polar space and revert\&. 
+
+<\fBglm/gtx/polar_coordinates\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T > detail::tvec3<T> glm::euclidean (\fBdetail::tvec2\fP< T > const & polar)"
+Convert Polar to Euclidean coordinates\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_polar_coordinates\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tvec3<T> glm::polar (\fBdetail::tvec3\fP< T > const & euclidean)"
+Convert Euclidean to Polar coordinates, x is the xz distance, y, the latitude and z the longitude\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_polar_coordinates\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

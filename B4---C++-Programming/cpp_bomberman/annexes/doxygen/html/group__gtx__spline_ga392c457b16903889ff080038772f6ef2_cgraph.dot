@@ -1,0 +1,11 @@
+digraph "glm::catmullRom"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::catmullRom",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::gtx::pow2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__optimum__pow.html#ga56697e47a1375a352a746a5be3480fc8"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::gtx::pow3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__optimum__pow.html#gad538f8d993d8dd645c7b0c8b1cc79b09"];
+}

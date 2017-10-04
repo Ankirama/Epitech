@@ -1,0 +1,95 @@
+.TH "lib/gdl/includes/SDL_test_random.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_test_random.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDLTest_RandomContext\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDLTest_RandomInt\fP(c)   ((\fBint\fP)\fBSDLTest_Random\fP(c))"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_RandomInit\fP (\fBSDLTest_RandomContext\fP *rndContext, unsigned \fBint\fP xi, unsigned \fBint\fP ci)"
+.br
+.RI "\fIInitialize random number generator with two integers\&. \fP"
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_RandomInitTime\fP (\fBSDLTest_RandomContext\fP *rndContext)"
+.br
+.RI "\fIInitialize random number generator based on current system time\&. \fP"
+.ti -1c
+.RI "unsigned \fBint\fP \fBSDLTest_Random\fP (\fBSDLTest_RandomContext\fP *rndContext)"
+.br
+.RI "\fIInitialize random number generator based on current system time\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL test framework\&.
+.PP
+This code is a part of the SDL2_test library, not the main SDL library\&. 
+.SH "Function Documentation"
+.PP 
+.SS "unsigned \fBint\fP SDLTest_Random (\fBSDLTest_RandomContext\fP * rndContext)"
+
+.PP
+Initialize random number generator based on current system time\&. Note: \&.\&.\&.RandomInit() or \&.\&.\&.RandomInitTime() must have been called before using this function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrndContext\fP pointer to context structure
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A random number (32bit unsigned integer) 
+.RE
+.PP
+
+.SS "\fBvoid\fP SDLTest_RandomInit (\fBSDLTest_RandomContext\fP * rndContext, unsigned \fBint\fP xi, unsigned \fBint\fP ci)"
+
+.PP
+Initialize random number generator with two integers\&. Note: The random sequence of numbers returned by \&.\&.\&.Random() is the same for the same two integers and has a period of 2^31\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrndContext\fP pointer to context structure 
+.br
+\fIxi\fP integer that defines the random sequence 
+.br
+\fIci\fP integer that defines the random sequence 
+.RE
+.PP
+
+.SS "\fBvoid\fP SDLTest_RandomInitTime (\fBSDLTest_RandomContext\fP * rndContext)"
+
+.PP
+Initialize random number generator based on current system time\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrndContext\fP pointer to context structure 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

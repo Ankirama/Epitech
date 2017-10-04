@@ -1,0 +1,463 @@
+﻿<Controls:MetroWindow
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:myView="clr-namespace:MyWindowsMediaPlayer.View"
+                      xmlns:Custom="http://metro.mahapps.com/winfx/xaml/shared" x:Class="MyWindowsMediaPlayer.MainWindow"
+                      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                      xmlns:system="clr-namespace:System;assembly=mscorlib"
+                      xmlns:local="clr-namespace:MyWindowsMediaPlayer.Model"
+                      xmlns:contexts="clr-namespace:System.Runtime.Remoting.Contexts;assembly=mscorlib"
+                      Title="MyWindowsMediaPlayer" Icon="../Ressources/play.png">
+    <Controls:MetroWindow.Resources>
+        <Image x:Key="Play" Source="../Ressources/play.png"/>
+        <Image x:Key="Pause" Source="../Ressources/pause.png"/>
+    </Controls:MetroWindow.Resources>
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button Content="parametre" Command="{Binding Path=FlyoutOc}" />
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+
+    <!-- Window -->
+    <Grid Name="FirstGrid" MinHeight="400" MinWidth="500">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- TreeView -->
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBox Grid.Column="0" Grid.Row="0" Text="{Binding Path=TextSearch, UpdateSourceTrigger=PropertyChanged}">
+                    <TextBox.InputBindings>
+                        <KeyBinding Command="{Binding EnterCommand}" Key="{Binding EnterCommand.GestureKey}"/>
+                    </TextBox.InputBindings>
+                </TextBox>
+                <Grid Column="0" Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox Content="Album" Grid.Column="0" IsChecked="{Binding Path=AlbumCheck}"/>
+                    <CheckBox Content="Artiste" Grid.Column="1" IsChecked="{Binding Path=ArtisteCheck}"/>
+                    <CheckBox Content="Nom" Grid.Column="2" IsChecked="{Binding Path=NameCheck}"/>
+                </Grid>
+            </Grid>
+            <TreeView x:Name="TreeView" Grid.Row="1" Grid.Column="0" Width="190">
+                <TreeViewItem Header="Bibliotheque" IsExpanded="True">
+                    <TreeViewItem Header="Mes Musiques" IsSelected="True"/>
+                    <TreeViewItem Header="Mes Videos"/>
+                    <TreeViewItem Header="Mes Images"/>
+                </TreeViewItem>
+                <TreeViewItem Header="Lecteur" IsSelected="{Binding Path=SelectMediaElement}"/>
+                <TreeViewItem Header="Playlist"/>
+                <TreeViewItem Header="Temporaire Playlist" IsSelected="{Binding Path=TemporaireChecked}"/>
+                <TreeViewItem Header="Search" IsSelected="{Binding Path=SearchChecked}"/>
+            </TreeView>
+            <Button Grid.Column="0" Grid.Row="2" Content="Current Playlist" Background="Transparent" Command="{Binding Path=CurrentPlaylist}"/>
+        </Grid>
+
+        <!-- Multiple View -->
+
+        <ContentControl Grid.Column="1" Grid.Row="0" Name="MediaElementName" Content="{Binding MediaPlayer}" Background="Black">
+            <ContentControl.Style>
+                <Style TargetType="ContentControl">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=TreeView, Path=SelectedItem.Header}">
+                            <DataTrigger.Value>
+                                <system:String>Lecteur</system:String>
+                            </DataTrigger.Value>
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ContentControl.Style>
+        </ContentControl>
+        <ListView Background="Gray" Name="Musique" SelectedItem="{Binding Path=ItemSelectedMusic, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" ItemsSource="{Binding Path=ItemSourceMusic}" SelectedIndex="{Binding Path=ItemIndexMusic}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding ListMusicDoubleClick}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <ListView.Style>
+                <Style TargetType="ListView">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=TreeView, Path=SelectedItem.Header}">
+                            <DataTrigger.Value>
+                                <system:String>Mes Musiques</system:String>
+                            </DataTrigger.Value>
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.Style>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Musique" Width="300">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Column="0" Source="{Binding Path=Musique}"/>
+                                    <TextBlock Grid.Column="1"
+                                               Text="{Binding Path=NameMusique}"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    </TextBlock>
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Artiste" Width="100" DisplayMemberBinding="{Binding Path=Artiste}"/>
+                    <GridViewColumn Header="DURATION" Width="100" DisplayMemberBinding="{Binding Path=Duration}"/>
+                    <GridViewColumn Header="Album" Width="150" DisplayMemberBinding="{Binding Path=Album}"/>
+                </GridView>
+            </ListView.View>
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Add" ItemsSource="{Binding Path=ItemSourcePlaylist}">
+                        <MenuItem.ItemContainerStyle>
+                            <Style TargetType="{x:Type MenuItem}">
+                                <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type MenuItem}}, Path=DataContext.TestCall}"/>
+                                <Setter Property="CommandParameter" Value="{Binding NamePlaylist}"/>
+                            </Style>
+                        </MenuItem.ItemContainerStyle>
+                        <MenuItem.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Name="NamePlaylistText"  Text="{Binding Path=NamePlaylist}"/>
+                            </DataTemplate>
+                        </MenuItem.ItemTemplate>
+                    </MenuItem>
+                </ContextMenu>
+            </ListView.ContextMenu>
+        </ListView>
+        <ListView Background="Gray" Name="Video" SelectedItem="{Binding Path=ItemSelectedVideo, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" ItemsSource="{Binding Path=ItemSourceVideo}"  SelectedIndex="{Binding Path=ItemIndexVideo}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding ListVideoDoubleClick}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <ListView.Style>
+                <Style TargetType="ListView">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=TreeView, Path=SelectedItem.Header}">
+                            <DataTrigger.Value>
+                                <system:String>Mes Videos</system:String>
+                            </DataTrigger.Value>
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.Style>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Video" Width="300">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <!--                                    <Image Grid.Column="0" Source="{Binding Path=Video}"/>-->
+                                    <TextBlock Grid.Column="1"
+                                               Text="{Binding NameVideo}"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    </TextBlock>
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Duration" Width="150" DisplayMemberBinding="{Binding Path=Duration}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView Background="Gray" Name="Image" SelectedItem="{Binding Path=ItemSelectedImage, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" ItemsSource="{Binding Path=ItemSourceImage}"  SelectedIndex="{Binding Path=ItemIndexImage}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding ListImageDoubleClick}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <ListView.Style>
+                <Style TargetType="ListView">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=TreeView, Path=SelectedItem.Header}">
+                            <DataTrigger.Value>
+                                <system:String>Mes Images</system:String>
+                            </DataTrigger.Value>
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.Style>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Image" Width="300">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Column="0" Source="{Binding Path=SourceImage}"/>
+                                    <TextBlock Grid.Column="1"
+                                               Text="{Binding NameImage}"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    </TextBlock>
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Album" Width="150" DisplayMemberBinding="{Binding Path=Album}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView Background="Gray" Name="Playlist" SelectedItem="{Binding Path=ItemSelectedPlaylist, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" ItemsSource="{Binding Path=ItemSourcePlaylist}"  SelectedIndex="{Binding Path=ItemIndexPlaylist}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding ListPlaylistDoubleClick}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <ListView.Style>
+                <Style TargetType="ListView">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=TreeView, Path=SelectedItem.Header}">
+                            <DataTrigger.Value>
+                                <system:String>Playlist</system:String>
+                            </DataTrigger.Value>
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.Style>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Playlist" Width="300">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="1"
+                                               Text="{Binding NamePlaylist}"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    </TextBlock>
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView Grid.Column="1" Grid.Row="0" ItemsSource="{Binding Path=ItemSourceDrag}" SelectedItem="{Binding Path=ItemSelectedDrag}" Background="Gray" SelectedIndex="{Binding Path=ItemIndexDrag}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding ListDragDoubleClick}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <ListView.Style>
+                <Style TargetType="ListView">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=TreeView, Path=SelectedItem.Header}">
+                            <DataTrigger.Value>
+                                <system:String>Temporaire Playlist</system:String>
+                            </DataTrigger.Value>
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.Style>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="300" Header="Name">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="{Binding Path=Name}" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Margin="50,0,0,0">
+                                    </TextBlock>
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView Grid.Column="1" Grid.Row="0" ItemsSource="{Binding Path=ItemSourceSearch}" SelectedItem="{Binding Path=ItemSelectedSearch}" Background="Gray" SelectedIndex="{Binding Path=ItemIndexPlaylistMusic}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding ListSearchDoubleClick}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <ListView.Style>
+                <Style TargetType="ListView">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=TreeView, Path=SelectedItem.Header}">
+                            <DataTrigger.Value>
+                                <system:String>Search</system:String>
+                            </DataTrigger.Value>
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.Style>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="300" Header="Name">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="{Binding Path=Name}" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Margin="50,0,0,0">
+                                    </TextBlock>
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <ToggleButton Grid.Row="0" Grid.Column="0" Style="{DynamicResource MetroCircleToggleButtonStyle}"  IsChecked="{Binding Path=RandomChecked}">
+                <Image Source="../Ressources/random.png"></Image>
+            </ToggleButton>
+            <ToggleButton Grid.Row="0" Grid.Column="1" Style="{DynamicResource MetroCircleToggleButtonStyle}" IsChecked="{Binding Path=RepeatChecked}" Command="{Binding Path=RepeatCommand}">
+                <Image Source="{Binding Path=RepeatSource}"></Image>
+            </ToggleButton>
+        </Grid>
+        <myView:ButtonPlayer Grid.Column="1" Grid.Row="1"/>
+    </Grid>
+
+    <!-- Flyout -->
+
+    <Controls:MetroWindow.Flyouts>
+        <Controls:FlyoutsControl>
+            <Controls:Flyout Name="Flyout" Header="Parametre" Position="Right" Width="300" IsOpen="{Binding Path=FlyoutBool}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Column="0" Grid.Row="6" Text="Synchronisation" BorderThickness="0" IsReadOnly="True" Background="Transparent" FontSize="20"/>
+                    <Grid Grid.Column="0" Grid.Row="7">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" MinHeight="30"/>
+                            <RowDefinition Height="*" MinHeight="30"/>
+                            <RowDefinition Height="*" MinHeight="30"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <CheckBox IsChecked="{Binding MusiqueCheck}" Margin="20,0,0,0" Grid.Column="0" Grid.Row="0" Content="Musique"/>
+                        <CheckBox IsChecked="{Binding VideoCheck}" Margin="20,0,0,0" Grid.Column="0" Grid.Row="1" Content="Video"/>
+                        <CheckBox IsChecked="{Binding ImageCheck}" Margin="20,0,0,0" Grid.Column="0" Grid.Row="2" Content="Image"/>
+                        <Button Grid.Column="1" Grid.Row="0" Content="Search Folder" Command="{Binding SearchFolder}"/>
+                        <CheckBox Grid.Column="1" Grid.Row="1" IsChecked="{Binding Path=Recursion}" Content="Sous-Dossier"/>
+                        <Button Grid.Column="1" Grid.Row="2" Content="Search Computer" Command="{Binding SearchComputer}"/>
+                    </Grid>
+                    <Controls:ProgressRing Grid.Column="0" Grid.Row="8" IsActive="{Binding Path=SynchroRing}" Visibility="{Binding Path=SynchroRingVisibility}" Foreground="{DynamicResource BlackColorBrush}" HorizontalAlignment="Center" Margin="0, 20, 0, 0"/>
+                </Grid>
+            </Controls:Flyout>
+            <Controls:Flyout Name="FlyoutPlaylist" Header="Parametre" Position="Left" Width="300" IsOpen="{Binding Path=FlyoutBoolDrag}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Column="0" Grid.Row="0" Text="{Binding Path=NamePlaylistMusicSelected}" BorderThickness="0" IsReadOnly="True" Background="Transparent" FontSize="20"/>
+                    <ListView Grid.Column="0" Grid.Row="1" ItemsSource="{Binding Path=ItemSourcePlaylistMusic}" SelectedItem="{Binding Path=ItemSelectedPlaylistMusic}" Background="Transparent">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseDoubleClick">
+                                <i:InvokeCommandAction Command="{Binding ListPlaylistMusicDoubleClick}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Width="300">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Grid.Column="0" Text="{Binding Path=NameMusique}" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Margin="50,0,0,0">
+                                                </TextBlock>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </Controls:Flyout>
+        </Controls:FlyoutsControl>
+    </Controls:MetroWindow.Flyouts>
+</Controls:MetroWindow>

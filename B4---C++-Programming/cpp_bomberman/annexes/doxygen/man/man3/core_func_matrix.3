@@ -1,0 +1,193 @@
+.TH "core_func_matrix" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+core_func_matrix \- Matrix functions
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename matType > GLM_FUNC_DECL matType \fBglm::matrixCompMult\fP (matType const &x, matType const &y)"
+.br
+.ti -1c
+.RI "template<typename vecType , typename matType > GLM_FUNC_DECL matType \fBglm::outerProduct\fP (vecType const &c, vecType const &r)"
+.br
+.ti -1c
+.RI "template<typename matType > GLM_FUNC_DECL matType::transpose_type \fBglm::transpose\fP (matType const &x)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_DECL detail::tmat2x2< valType >::value_type \fBglm::determinant\fP (detail::tmat2x2< valType > const &m)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_DECL detail::tmat3x3< valType >::value_type \fBglm::determinant\fP (detail::tmat3x3< valType > const &m)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_DECL detail::tmat4x4< valType >::value_type \fBglm::determinant\fP (detail::tmat4x4< valType > const &m)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_DECL detail::tmat2x2< valType > \fBglm::inverse\fP (detail::tmat2x2< valType > const &m)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_DECL detail::tmat3x3< valType > \fBglm::inverse\fP (detail::tmat3x3< valType > const &m)"
+.br
+.ti -1c
+.RI "template<typename valType > GLM_FUNC_DECL detail::tmat4x4< valType > \fBglm::inverse\fP (detail::tmat4x4< valType > const &m)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+For each of the following built-in matrix functions, there is both a single-precision floating point version, where all arguments and return values are single precision, and a double-precision floating version, where all arguments and return values are double precision\&. Only the single-precision floating point version is shown\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename valType > GLM_FUNC_DECL detail::tmat2x2<valType>::value_type glm::determinant (\fBdetail::tmat2x2\fP< valType > const & m)"
+Return the determinant of a mat2 matrix\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvalType\fP Floating-point scalar types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL determinant man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.6 Matrix Functions\fP 
+.RE
+.PP
+
+.SS "template<typename valType > GLM_FUNC_DECL detail::tmat3x3<valType>::value_type glm::determinant (\fBdetail::tmat3x3\fP< valType > const & m)"
+Return the determinant of a mat3 matrix\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvalType\fP Floating-point scalar types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL determinant man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.6 Matrix Functions\fP 
+.RE
+.PP
+
+.SS "template<typename valType > GLM_FUNC_DECL detail::tmat4x4<valType>::value_type glm::determinant (\fBdetail::tmat4x4\fP< valType > const & m)"
+Return the determinant of a mat4 matrix\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvalType\fP Floating-point scalar types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL determinant man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.6 Matrix Functions\fP 
+.RE
+.PP
+
+.SS "template<typename valType > GLM_FUNC_DECL detail::tmat2x2<valType> glm::inverse (\fBdetail::tmat2x2\fP< valType > const & m)"
+Return the inverse of a mat2 matrix\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvalType\fP Floating-point scalar types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL inverse man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.6 Matrix Functions\fP 
+.RE
+.PP
+
+.SS "template<typename valType > GLM_FUNC_DECL detail::tmat3x3<valType> glm::inverse (\fBdetail::tmat3x3\fP< valType > const & m)"
+Return the inverse of a mat3 matrix\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvalType\fP Floating-point scalar types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL inverse man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.6 Matrix Functions\fP 
+.RE
+.PP
+
+.SS "template<typename valType > GLM_FUNC_DECL detail::tmat4x4<valType> glm::inverse (\fBdetail::tmat4x4\fP< valType > const & m)"
+Return the inverse of a mat4 matrix\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIvalType\fP Floating-point scalar types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL inverse man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.6 Matrix Functions\fP 
+.RE
+.PP
+
+.SS "template<typename matType > GLM_FUNC_DECL matType glm::matrixCompMult (matType const & x, matType const & y)"
+Multiply matrix x by matrix y component-wise, i\&.e\&., result[i][j] is the scalar product of x[i][j] and y[i][j]\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fImatType\fP Floating-point matrix types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL matrixCompMult man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.6 Matrix Functions\fP 
+.RE
+.PP
+
+.SS "template<typename vecType , typename matType > GLM_FUNC_DECL matType glm::outerProduct (vecType const & c, vecType const & r)"
+Treats the first parameter c as a column vector and the second parameter r as a row vector and does a linear algebraic matrix multiply c * r\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fImatType\fP Floating-point matrix types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL outerProduct man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.6 Matrix Functions\fP
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+Clarify the declaration to specify that matType doesn't have to be provided when used\&. 
+.RE
+.PP
+
+.SS "template<typename matType > GLM_FUNC_DECL matType::transpose_type glm::transpose (matType const & x)"
+Returns the transposed matrix of x
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fImatType\fP Floating-point matrix types\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fCGLSL transpose man page\fP 
+.PP
+\fCGLSL 4\&.20\&.8 specification, section 8\&.6 Matrix Functions\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

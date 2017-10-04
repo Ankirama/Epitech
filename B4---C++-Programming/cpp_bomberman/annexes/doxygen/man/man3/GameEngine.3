@@ -1,0 +1,106 @@
+.TH "GameEngine" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GameEngine \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Game\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBinitialize\fP ()"
+.br
+.ti -1c
+.RI "void \fBCleanup\fP ()"
+.br
+.ti -1c
+.RI "gdl::SdlContext \fBgetContext\fP () const "
+.br
+.ti -1c
+.RI "gdl::Clock \fBgetClock\fP () const "
+.br
+.ti -1c
+.RI "void \fBChangeState\fP (\fBIGameState\fP *)"
+.br
+.ti -1c
+.RI "void \fBPushState\fP (\fBIGameState\fP *)"
+.br
+.ti -1c
+.RI "void \fBPopState\fP ()"
+.br
+.ti -1c
+.RI "void \fBHandleEvents\fP ()"
+.br
+.ti -1c
+.RI "bool \fBupdate\fP ()"
+.br
+.ti -1c
+.RI "void \fBdraw\fP ()"
+.br
+.ti -1c
+.RI "bool \fBRunning\fP ()"
+.br
+.ti -1c
+.RI "void \fBQuit\fP ()"
+.br
+.ti -1c
+.RI "void \fBresizeWindow\fP (int, int)"
+.br
+.ti -1c
+.RI "bool \fBgetLock\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetLock\fP (const bool)"
+.br
+.ti -1c
+.RI "gdl::BasicShader & \fBgetShader\fP ()"
+.br
+.ti -1c
+.RI "gdl::Input & \fBgetInput\fP ()"
+.br
+.ti -1c
+.RI "pthread_t & \fBgetPthread\fP ()"
+.br
+.ti -1c
+.RI "pthread_attr_t & \fBgetAttr\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "gdl::SdlContext \fBm_context\fP"
+.br
+.ti -1c
+.RI "gdl::Clock \fBm_clock\fP"
+.br
+.ti -1c
+.RI "gdl::Input \fBm_input\fP"
+.br
+.ti -1c
+.RI "gdl::BasicShader \fBm_shader\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBIGameState\fP * > \fBm_states\fP"
+.br
+.ti -1c
+.RI "bool \fBm_running\fP"
+.br
+.ti -1c
+.RI "bool \fBm_lock\fP"
+.br
+.ti -1c
+.RI "pthread_attr_t \fBm_attr\fP"
+.br
+.ti -1c
+.RI "pthread_t \fBm_sound\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

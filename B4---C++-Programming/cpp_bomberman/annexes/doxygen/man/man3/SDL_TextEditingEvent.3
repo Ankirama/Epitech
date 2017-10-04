@@ -1,0 +1,52 @@
+.TH "SDL_TextEditingEvent" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_TextEditingEvent \- Keyboard text editing event structure (event\&.edit\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwindowID\fP"
+.br
+.ti -1c
+.RI "char \fBtext\fP [SDL_TEXTEDITINGEVENT_TEXT_SIZE]"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBstart\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBlength\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Keyboard text editing event structure (event\&.edit\&.*) 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBSint32\fP SDL_TextEditingEvent::length"
+The length of selected editing text 
+.SS "\fBSint32\fP SDL_TextEditingEvent::start"
+The start cursor of selected editing text 
+.SS "char SDL_TextEditingEvent::text[SDL_TEXTEDITINGEVENT_TEXT_SIZE]"
+The editing text 
+.SS "\fBUint32\fP SDL_TextEditingEvent::type"
+\fBSDL_TEXTEDITING\fP 
+.SS "\fBUint32\fP SDL_TextEditingEvent::windowID"
+The window with keyboard focus, if any 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

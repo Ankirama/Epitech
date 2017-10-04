@@ -1,0 +1,116 @@
+\hypertarget{class_a_character}{}\section{A\+Character Class Reference}
+\label{class_a_character}\index{A\+Character@{A\+Character}}
+
+
+Inheritance diagram for A\+Character\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_a_character__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+Character\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_a_character__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_a_character_a1bb3b7cacff54f459b84f32d054d930d}{}{\bfseries A\+Character} (std\+::string const \&)\label{class_a_character_a1bb3b7cacff54f459b84f32d054d930d}
+
+\item 
+\hypertarget{class_a_character_abcffefc39b7be7213c175f50a3129504}{}{\bfseries A\+Character} (std\+::string const \&, bool const)\label{class_a_character_abcffefc39b7be7213c175f50a3129504}
+
+\item 
+\hypertarget{class_a_character_a5c6d10a4a55a39cb49cf9683add15c82}{}{\bfseries A\+Character} (std\+::string const \&, bool const, e\+Direction const)\label{class_a_character_a5c6d10a4a55a39cb49cf9683add15c82}
+
+\item 
+\hypertarget{class_a_character_abc7b2f62e341406bc29e194c74b4a854}{}bool {\bfseries get\+Alive} () const \label{class_a_character_abc7b2f62e341406bc29e194c74b4a854}
+
+\item 
+\hypertarget{class_a_character_a7aed2f1260c22a6b749eb46c613af07f}{}e\+Direction {\bfseries get\+Direction} () const \label{class_a_character_a7aed2f1260c22a6b749eb46c613af07f}
+
+\item 
+\hypertarget{class_a_character_aef1c9a4209392282d594d7b12616cfd1}{}std\+::vector$<$ \hyperlink{class_bomb}{Bomb} $\ast$ $>$ \& {\bfseries get\+Bomb} () const \label{class_a_character_aef1c9a4209392282d594d7b12616cfd1}
+
+\item 
+\hypertarget{class_a_character_aca55bd2654486d051bcef718698aaf8f}{}\hyperlink{class_animation}{Animation} \& {\bfseries get\+Animation} () const \label{class_a_character_aca55bd2654486d051bcef718698aaf8f}
+
+\item 
+\hypertarget{class_a_character_a534658c68bf530360b93d6ab7dd3c9ae}{}unsigned long {\bfseries get\+Score} () const \label{class_a_character_a534658c68bf530360b93d6ab7dd3c9ae}
+
+\item 
+\hypertarget{class_a_character_aa457888a5bf6986c578da13dab917715}{}std\+::string \& {\bfseries get\+Texture\+Path} () const \label{class_a_character_aa457888a5bf6986c578da13dab917715}
+
+\item 
+\hypertarget{class_a_character_a481b8ffa2142f06d507cebe2ac134329}{}void {\bfseries set\+Alive} (bool const alive)\label{class_a_character_a481b8ffa2142f06d507cebe2ac134329}
+
+\item 
+\hypertarget{class_a_character_a71305fc607d81ec4798e6281bbcdd29d}{}void {\bfseries set\+Direction} (e\+Direction const direction)\label{class_a_character_a71305fc607d81ec4798e6281bbcdd29d}
+
+\item 
+\hypertarget{class_a_character_aa437a9ea006c96642a898ca919bc4d38}{}void {\bfseries set\+Name} (\hyperlink{class_bomb}{Bomb} const \&bomb)\label{class_a_character_aa437a9ea006c96642a898ca919bc4d38}
+
+\item 
+\hypertarget{class_a_character_a5d89b2c91116030ce2feb7bda61ffa7c}{}void {\bfseries set\+Name} (\hyperlink{class_animation}{Animation} const \&\hyperlink{class_animation}{Animation})\label{class_a_character_a5d89b2c91116030ce2feb7bda61ffa7c}
+
+\item 
+\hypertarget{class_a_character_aa63c0b50e06ce547f0f530f7c1dcbeeb}{}void {\bfseries set\+Texture\+Path} (std\+::string const \&texturepath)\label{class_a_character_aa63c0b50e06ce547f0f530f7c1dcbeeb}
+
+\item 
+\hypertarget{class_a_character_a80552fb56c7f548d6283774a874bf40b}{}virtual void {\bfseries spawn} (unsigned int, unsigned int)\label{class_a_character_a80552fb56c7f548d6283774a874bf40b}
+
+\item 
+\hypertarget{class_a_character_ab984a668da32a96a29b313815e4b5e07}{}virtual bool {\bfseries action} (e\+Direction, char $\ast$, unsigned int, unsigned int)=0\label{class_a_character_ab984a668da32a96a29b313815e4b5e07}
+
+\item 
+\hypertarget{class_a_character_a26a26293f933e7abb46dc0527e911e99}{}virtual void {\bfseries initialize} () const =0\label{class_a_character_a26a26293f933e7abb46dc0527e911e99}
+
+\item 
+\hypertarget{class_a_character_a8fe2c1e3df13fd3b36ba22d9dc7baea7}{}virtual void {\bfseries draw} () const =0\label{class_a_character_a8fe2c1e3df13fd3b36ba22d9dc7baea7}
+
+\item 
+\hypertarget{class_a_character_af075823ce6cb8466028fc67443363f3e}{}virtual void {\bfseries update} () const =0\label{class_a_character_af075823ce6cb8466028fc67443363f3e}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_a_character_a4da0a34af9850b10696f82df9009c5e9}{}std\+::string {\bfseries m\+\_\+type}\label{class_a_character_a4da0a34af9850b10696f82df9009c5e9}
+
+\item 
+\hypertarget{class_a_character_a4083c1a5cf5b800b6a4662f4af7755c6}{}bool {\bfseries m\+\_\+alive}\label{class_a_character_a4083c1a5cf5b800b6a4662f4af7755c6}
+
+\item 
+\hypertarget{class_a_character_af89bbca149791a99c7a1daa776be5526}{}e\+Direction {\bfseries m\+\_\+direction}\label{class_a_character_af89bbca149791a99c7a1daa776be5526}
+
+\item 
+\hypertarget{class_a_character_adb37a22112116dc8b3cf1da18c94c370}{}unsigned int {\bfseries m\+\_\+position}\label{class_a_character_adb37a22112116dc8b3cf1da18c94c370}
+
+\item 
+\hypertarget{class_a_character_a6a4d6f761fe96d339e8eb172d6528927}{}std\+::vector$<$ \hyperlink{class_bomb}{Bomb} $\ast$ $>$ {\bfseries m\+\_\+bomb}\label{class_a_character_a6a4d6f761fe96d339e8eb172d6528927}
+
+\item 
+\hypertarget{class_a_character_ad840248b206c5d654c2ff66f00e7fe1d}{}\hyperlink{class_animation}{Animation} $\ast$ {\bfseries m\+\_\+animation}\label{class_a_character_ad840248b206c5d654c2ff66f00e7fe1d}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_a_character_abc98df2ccf043a87dcb2ca18920a8676}{}{\bfseries A\+Character} (\hyperlink{class_a_character}{A\+Character} const \&)\label{class_a_character_abc98df2ccf043a87dcb2ca18920a8676}
+
+\item 
+\hypertarget{class_a_character_a32bb31f0c3adf6ffa69704a8d0f20ccb}{}\hyperlink{class_a_character}{A\+Character} \& {\bfseries operator=} (\hyperlink{class_a_character}{A\+Character} const \&)\label{class_a_character_a32bb31f0c3adf6ffa69704a8d0f20ccb}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/A\+Character.\+hh\end{DoxyCompactItemize}

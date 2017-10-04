@@ -1,0 +1,76 @@
+.TH "ListDir" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ListDir \- List files in specific directory\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ListDir\&.hh>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBListDir\fP ()"
+.br
+.RI "\fI\fBListDir\fP's constructor\&. \fP"
+.ti -1c
+.RI "\fB~ListDir\fP ()"
+.br
+.RI "\fI\fBListDir\fP's destructor\&. \fP"
+.ti -1c
+.RI "std::vector< std::string > \fBgetFiles\fP (std::string const &path)"
+.br
+.RI "\fIlist everyfile in path \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "DIR * \fBm_dirp\fP"
+.br
+.ti -1c
+.RI "struct dirent * \fBm_files\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+List files in specific directory\&. 
+
+Allow to list files in specific directory 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ListDir::ListDir ()"
+
+.PP
+\fBListDir\fP's constructor\&. It will init to default values every variable 
+.SH "Member Function Documentation"
+.PP 
+.SS "std::vector<std::string> ListDir::getFiles (std::string const & path)"
+
+.PP
+list everyfile in path It will list everyfile in specific path without '\&.' and '\&.\&.'
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpath\fP we will list file in this path 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Every file stored in string 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "DIR* ListDir::m_dirp\fC [private]\fP"
+variable to 'load' directory and allow us to travel it 
+.SS "struct dirent* ListDir::m_files\fC [private]\fP"
+structure to read into m_dirp 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

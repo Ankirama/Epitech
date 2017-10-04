@@ -1,0 +1,161 @@
+\hypertarget{_xml_write_8hpp}{}\section{include/\+Xml\+Write.hpp File Reference}
+\label{_xml_write_8hpp}\index{include/\+Xml\+Write.\+hpp@{include/\+Xml\+Write.\+hpp}}
+
+
+create xml file  
+
+
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$stack$>$}\\*
+Include dependency graph for Xml\+Write.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{_xml_write_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{_xml_write_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_xml_write}{Xml\+Write}
+\begin{DoxyCompactList}\small\item\em Create and write into xml. \end{DoxyCompactList}\item 
+class \hyperlink{class_xml_write_1_1_controller}{Xml\+Write\+::\+Controller}
+\begin{DoxyCompactList}\small\item\em Internal class to help \hyperlink{class_xml_write}{Xml\+Write}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_xml_write_8hpp_a1c6d5de492ac61ad29aec7aa9a436bbf}{}\#define {\bfseries V\+E\+R\+S\+I\+O\+N}~\char`\"{}1.\+0\char`\"{}\label{_xml_write_8hpp_a1c6d5de492ac61ad29aec7aa9a436bbf}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_xml_write_8hpp_ae01ec3496cf5a0ab390e4c7f36fa6dbe}{}typedef enum e\+\_\+type\+Field {\bfseries t\+\_\+type\+Field}\label{_xml_write_8hpp_ae01ec3496cf5a0ab390e4c7f36fa6dbe}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_xml_write_8hpp_a20c39c563369e060e698192c48873112}{}enum {\bfseries e\+\_\+type\+Field} \{ {\bfseries F\+I\+E\+L\+D\+\_\+\+T\+A\+G\+\_\+\+S\+T\+A\+R\+T}, 
+{\bfseries F\+I\+E\+L\+D\+\_\+\+T\+A\+G\+\_\+\+E\+N\+D}, 
+{\bfseries F\+I\+E\+L\+D\+\_\+\+D\+A\+T\+A}, 
+{\bfseries F\+I\+E\+L\+D\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E}
+ \}\label{_xml_write_8hpp_a20c39c563369e060e698192c48873112}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{class_xml_write_1_1_controller}{Xml\+Write\+::\+Controller} \hyperlink{_xml_write_8hpp_a60cbdc53b290e261cd21789056f81b59}{tag} (const std\+::string \&tag=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em create a tag named $<$tag$>$ \end{DoxyCompactList}\item 
+const \hyperlink{class_xml_write_1_1_controller}{Xml\+Write\+::\+Controller} \hyperlink{_xml_write_8hpp_ace76dead835b4ba939ca9ea7d7e0f71d}{endtag} (const std\+::string \&\hyperlink{_xml_write_8hpp_a60cbdc53b290e261cd21789056f81b59}{tag}=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em close a tag named $<$tag$>$ \end{DoxyCompactList}\item 
+const \hyperlink{class_xml_write_1_1_controller}{Xml\+Write\+::\+Controller} \hyperlink{_xml_write_8hpp_a4a687c3f177b66efa50586999b8a3172}{attribute} (const std\+::string \&attribute)
+\begin{DoxyCompactList}\small\item\em create an attribute named $<$attribute$>$ \end{DoxyCompactList}\item 
+const \hyperlink{class_xml_write_1_1_controller}{Xml\+Write\+::\+Controller} \hyperlink{_xml_write_8hpp_ae5be10c664e590890e54d672fd0c9265}{data} ()
+\begin{DoxyCompactList}\small\item\em add data into element \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+create xml file 
+
+\begin{DoxyAuthor}{Author}
+ankirama 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+01 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\hypertarget{_xml_write_8hpp_a4a687c3f177b66efa50586999b8a3172}{}\index{Xml\+Write.\+hpp@{Xml\+Write.\+hpp}!attribute@{attribute}}
+\index{attribute@{attribute}!Xml\+Write.\+hpp@{Xml\+Write.\+hpp}}
+\subsubsection[{attribute}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Xml\+Write\+::\+Controller} attribute (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{attribute}
+\end{DoxyParamCaption}
+)}\label{_xml_write_8hpp_a4a687c3f177b66efa50586999b8a3172}
+
+
+create an attribute named $<$attribute$>$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attribute} & attribute\textquotesingle{}s name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create a controller with A\+T\+T\+R\+I\+B\+U\+T\+E flag and return it 
+\end{DoxyReturn}
+\hypertarget{_xml_write_8hpp_ae5be10c664e590890e54d672fd0c9265}{}\index{Xml\+Write.\+hpp@{Xml\+Write.\+hpp}!data@{data}}
+\index{data@{data}!Xml\+Write.\+hpp@{Xml\+Write.\+hpp}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Xml\+Write\+::\+Controller} data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_xml_write_8hpp_ae5be10c664e590890e54d672fd0c9265}
+
+
+add data into element 
+
+\begin{DoxyReturn}{Returns}
+Create a controller with D\+A\+T\+A flag and return it 
+\end{DoxyReturn}
+\hypertarget{_xml_write_8hpp_ace76dead835b4ba939ca9ea7d7e0f71d}{}\index{Xml\+Write.\+hpp@{Xml\+Write.\+hpp}!endtag@{endtag}}
+\index{endtag@{endtag}!Xml\+Write.\+hpp@{Xml\+Write.\+hpp}}
+\subsubsection[{endtag}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Xml\+Write\+::\+Controller} endtag (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tag = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{_xml_write_8hpp_ace76dead835b4ba939ca9ea7d7e0f71d}
+
+
+close a tag named $<$tag$>$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & tag\textquotesingle{}s name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create a controller with T\+A\+G\+\_\+\+E\+N\+D flag and return it 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{_xml_write_8hpp_ace76dead835b4ba939ca9ea7d7e0f71d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_xml_write_8hpp_a60cbdc53b290e261cd21789056f81b59}{}\index{Xml\+Write.\+hpp@{Xml\+Write.\+hpp}!tag@{tag}}
+\index{tag@{tag}!Xml\+Write.\+hpp@{Xml\+Write.\+hpp}}
+\subsubsection[{tag}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Xml\+Write\+::\+Controller} tag (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tag = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{_xml_write_8hpp_a60cbdc53b290e261cd21789056f81b59}
+
+
+create a tag named $<$tag$>$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & tag\textquotesingle{}s name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create a controller with T\+A\+G\+\_\+\+S\+T\+A\+R\+T flag and return it 
+\end{DoxyReturn}

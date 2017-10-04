@@ -1,0 +1,257 @@
+.TH "glm::detail::tvec2< T >" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+glm::detail::tvec2< T > \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBctor\fP { \fBnull\fP }"
+.br
+.ti -1c
+.RI "typedef T \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef std::size_t \fBsize_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBtvec2\fP< T > \fBtype\fP"
+.br
+.ti -1c
+.RI "typedef \fBtvec2\fP< bool > \fBbool_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "GLM_FUNC_DECL GLM_CONSTEXPR size_type \fBlength\fP () const "
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL value_type & \fBoperator[]\fP (size_type i)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL value_type const & \fBoperator[]\fP (size_type i) const "
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec2\fP (\fBtvec2\fP< T > const &v)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec2\fP (ctor)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec2\fP (value_type const &s)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec2\fP (value_type const &s1, value_type const &s2)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec2\fP (\fBtref2\fP< T > const &r)"
+.br
+.ti -1c
+.RI "template<int E0, int E1> GLM_FUNC_DECL \fBtvec2\fP (const \fBglm::detail::swizzle\fP< 2, T, \fBtvec2\fP< T >, E0, E1,-1,-2 > &that)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP (U const &x)"
+.br
+.RI "\fIExplicit converions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename U , typename V > GLM_FUNC_DECL \fBtvec2\fP (U const &x, V const &y)"
+.br
+.RI "\fIExplicit converions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP (\fBtvec2\fP< U > const &v)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP (\fBtvec3\fP< U > const &v)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP (\fBtvec4\fP< U > const &v)"
+.br
+.RI "\fIExplicit conversions (From section 5\&.4\&.1 Conversion and scalar constructors of GLSL 1\&.30\&.08 specification) \fP"
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator=\fP (\fBtvec2\fP< T > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator+=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator+=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator-=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator-=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator*=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator*=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator/=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator/=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator++\fP ()"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator--\fP ()"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator%=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator%=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator&=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator&=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator|=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator|=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator^=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator^=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator<<=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator<<=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator>>=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtvec2\fP< T > & \fBoperator>>=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL value_type \fBswizzle\fP (comp X) const "
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec2\fP< T > \fBswizzle\fP (comp X, comp Y) const "
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec3\fP< T > \fBswizzle\fP (comp X, comp Y, comp Z) const "
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtvec4\fP< T > \fBswizzle\fP (comp X, comp Y, comp Z, comp W) const "
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtref2\fP< T > \fBswizzle\fP (comp X, comp Y)"
+.br
+.ti -1c
+.RI "template<typename U> GLM_FUNC_QUALIFIER \fBtvec2\fP (U const &x)"
+.br
+.ti -1c
+.RI "template<typename U, typename V> GLM_FUNC_QUALIFIER \fBtvec2\fP (U const &a, V const &b)"
+.br
+.ti -1c
+.RI "template<typename U> GLM_FUNC_QUALIFIER \fBtvec2\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U> GLM_FUNC_QUALIFIER \fBtvec2\fP (\fBtvec3\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U> GLM_FUNC_QUALIFIER \fBtvec2\fP (\fBtvec4\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator+=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator+=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator-=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator-=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator*=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator*=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator/=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator/=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator%=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator%=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator&=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator&=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator|=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator|=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator^=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator^=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator<<=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator<<=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator>>=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtvec2\fP< T > & \fBoperator>>=\fP (\fBtvec2\fP< U > const &v)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "value_type \fBx\fP"
+.br
+.ti -1c
+.RI "value_type \fBy\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

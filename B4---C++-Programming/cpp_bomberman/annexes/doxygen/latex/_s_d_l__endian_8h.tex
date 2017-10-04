@@ -1,0 +1,72 @@
+\hypertarget{_s_d_l__endian_8h}{}\section{lib/gdl/includes/\+S\+D\+L\+\_\+endian.h File Reference}
+\label{_s_d_l__endian_8h}\index{lib/gdl/includes/\+S\+D\+L\+\_\+endian.\+h@{lib/gdl/includes/\+S\+D\+L\+\_\+endian.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+Include dependency graph for S\+D\+L\+\_\+endian.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__endian_8h_a0582882a281bd6c7580e454be3595703}{}\#define {\bfseries S\+D\+L\+\_\+\+B\+Y\+T\+E\+O\+R\+D\+E\+R}~S\+D\+L\+\_\+\+L\+I\+L\+\_\+\+E\+N\+D\+I\+A\+N\label{_s_d_l__endian_8h_a0582882a281bd6c7580e454be3595703}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf The two types of endianness}\par
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__endian_8h_ad2b20e63545e73207b007b03bf08c2df}{}\#define {\bfseries S\+D\+L\+\_\+\+L\+I\+L\+\_\+\+E\+N\+D\+I\+A\+N}~1234\label{_s_d_l__endian_8h_ad2b20e63545e73207b007b03bf08c2df}
+
+\item 
+\hypertarget{_s_d_l__endian_8h_af22db189169b9aa7e356bf26b2a553f6}{}\#define {\bfseries S\+D\+L\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+A\+N}~4321\label{_s_d_l__endian_8h_af22db189169b9aa7e356bf26b2a553f6}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Swap to native}\par
+{\em Byteswap item from the specified endianness to the native endianness. }\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__endian_8h_ae650119b14f608de5d79e0d73a444c35}{}\#define {\bfseries S\+D\+L\+\_\+\+Swap\+L\+E16}(X)~(X)\label{_s_d_l__endian_8h_ae650119b14f608de5d79e0d73a444c35}
+
+\item 
+\hypertarget{_s_d_l__endian_8h_a14265c62e134bff318afba31ec1b0911}{}\#define {\bfseries S\+D\+L\+\_\+\+Swap\+L\+E32}(X)~(X)\label{_s_d_l__endian_8h_a14265c62e134bff318afba31ec1b0911}
+
+\item 
+\hypertarget{_s_d_l__endian_8h_ae1c6fb787318750e4e974345bd46ca4b}{}\#define {\bfseries S\+D\+L\+\_\+\+Swap\+L\+E64}(X)~(X)\label{_s_d_l__endian_8h_ae1c6fb787318750e4e974345bd46ca4b}
+
+\item 
+\hypertarget{_s_d_l__endian_8h_a2b64599423c3c710550238f2ee6fe3a8}{}\#define {\bfseries S\+D\+L\+\_\+\+Swap\+Float\+L\+E}(X)~(X)\label{_s_d_l__endian_8h_a2b64599423c3c710550238f2ee6fe3a8}
+
+\item 
+\hypertarget{_s_d_l__endian_8h_aba916646d6a5abd082d5a21b406d3823}{}\#define {\bfseries S\+D\+L\+\_\+\+Swap\+B\+E16}(X)~S\+D\+L\+\_\+\+Swap16(X)\label{_s_d_l__endian_8h_aba916646d6a5abd082d5a21b406d3823}
+
+\item 
+\hypertarget{_s_d_l__endian_8h_a2a2c8f38728448268d6d881f4a699d54}{}\#define {\bfseries S\+D\+L\+\_\+\+Swap\+B\+E32}(X)~S\+D\+L\+\_\+\+Swap32(X)\label{_s_d_l__endian_8h_a2a2c8f38728448268d6d881f4a699d54}
+
+\item 
+\hypertarget{_s_d_l__endian_8h_acc75cbc3e0bbf00dfd438e2186b91b03}{}\#define {\bfseries S\+D\+L\+\_\+\+Swap\+B\+E64}(X)~S\+D\+L\+\_\+\+Swap64(X)\label{_s_d_l__endian_8h_acc75cbc3e0bbf00dfd438e2186b91b03}
+
+\item 
+\hypertarget{_s_d_l__endian_8h_a12efebb66799de3703518e127361cfb7}{}\#define {\bfseries S\+D\+L\+\_\+\+Swap\+Float\+B\+E}(X)~S\+D\+L\+\_\+\+Swap\+Float(X)\label{_s_d_l__endian_8h_a12efebb66799de3703518e127361cfb7}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__endian_8h_a157cb22d3cc4b3f623822b15c3921e54}{}S\+D\+L\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+L\+I\+N\+E \hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} {\bfseries S\+D\+L\+\_\+\+Swap16} (\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} x)\label{_s_d_l__endian_8h_a157cb22d3cc4b3f623822b15c3921e54}
+
+\item 
+\hypertarget{_s_d_l__endian_8h_a0f516a794e03b48778c9fcf41ddfe026}{}S\+D\+L\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+L\+I\+N\+E \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} {\bfseries S\+D\+L\+\_\+\+Swap32} (\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} x)\label{_s_d_l__endian_8h_a0f516a794e03b48778c9fcf41ddfe026}
+
+\item 
+\hypertarget{_s_d_l__endian_8h_a5ffaae586753b46ec5df4e601702324a}{}S\+D\+L\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+L\+I\+N\+E \hyperlink{_s_d_l__stdinc_8h_ac006cf2bd55a42a9cc8ae9f123aa7e13}{Uint64} {\bfseries S\+D\+L\+\_\+\+Swap64} (\hyperlink{_s_d_l__stdinc_8h_ac006cf2bd55a42a9cc8ae9f123aa7e13}{Uint64} x)\label{_s_d_l__endian_8h_a5ffaae586753b46ec5df4e601702324a}
+
+\item 
+\hypertarget{_s_d_l__endian_8h_a5f0f2d51e5ca5b27627ffc46ec892ce2}{}S\+D\+L\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+L\+I\+N\+E float {\bfseries S\+D\+L\+\_\+\+Swap\+Float} (float x)\label{_s_d_l__endian_8h_a5f0f2d51e5ca5b27627ffc46ec892ce2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for reading and writing endian-\/specific values

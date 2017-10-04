@@ -1,0 +1,376 @@
+.TH "lib/gdl/includes/glm/core/intrinsic_common.inl" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/glm/core/intrinsic_common.inl \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "union \fBglm::detail::ieee754_QNAN\fP"
+.br
+.ti -1c
+.RI "struct \fBglm::detail::ieee754_QNAN::i\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER __m128 \fBglm::detail::sse_abs_ps\fP (__m128 x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER __m128 \fBglm::detail::sse_sgn_ps\fP (__m128 x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER __m128 \fBglm::detail::sse_flr_ps\fP (__m128 x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER __m128 \fBglm::detail::sse_rnd_ps\fP (__m128 x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER __m128 \fBglm::detail::sse_rde_ps\fP (__m128 x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER __m128 \fBglm::detail::sse_ceil_ps\fP (__m128 x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER __m128 \fBglm::detail::sse_frc_ps\fP (__m128 x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER __m128 \fBglm::detail::sse_mod_ps\fP (__m128 x, __m128 y)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER __m128 \fBglm::detail::sse_clp_ps\fP (__m128 v, __m128 minVal, __m128 maxVal)"
+.br
+.RI "\fITODO\&. \fP"
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER __m128 \fBglm::detail::sse_mix_ps\fP (__m128 v1, __m128 v2, __m128 a)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER __m128 \fBglm::detail::sse_stp_ps\fP (__m128 edge, __m128 x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER __m128 \fBglm::detail::sse_ssp_ps\fP (__m128 edge0, __m128 edge1, __m128 x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_QUALIFIER __m128 \fBglm::detail::sse_sqrt_wip_ss\fP (__m128 const &x)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::zero\fP = _mm_setzero_ps()"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::one\fP = _mm_set_ps1(1\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::minus_one\fP = _mm_set_ps1(-1\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::two\fP = _mm_set_ps1(2\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::three\fP = _mm_set_ps1(3\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::pi\fP = _mm_set_ps1(3\&.1415926535897932384626433832795f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::hundred_eighty\fP = _mm_set_ps1(180\&.f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::pi_over_hundred_eighty\fP = _mm_set_ps1(0\&.017453292519943295769236907684886f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::hundred_eighty_over_pi\fP = _mm_set_ps1(57\&.295779513082320876798154814105f)"
+.br
+.ti -1c
+.RI "static const ieee754_QNAN \fBglm::detail::absMask\fP"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::abs4Mask\fP = _mm_set_ps1(absMask\&.f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_epi32_sign_mask\fP = _mm_castsi128_ps(_mm_set1_epi32(static_cast<\fBint\fP>(0x80000000)))"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_epi32_0\fP = _mm_set_ps1(0)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_epi32_1\fP = _mm_set_ps1(1)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_epi32_2\fP = _mm_set_ps1(2)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_epi32_3\fP = _mm_set_ps1(3)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_epi32_4\fP = _mm_set_ps1(4)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_epi32_5\fP = _mm_set_ps1(5)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_epi32_6\fP = _mm_set_ps1(6)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_epi32_7\fP = _mm_set_ps1(7)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_epi32_8\fP = _mm_set_ps1(8)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_epi32_9\fP = _mm_set_ps1(9)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_epi32_127\fP = _mm_set_ps1(127)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_1_3\fP = _mm_set_ps1(0\&.33333333333333333333333333333333f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_0p5\fP = _mm_set_ps1(0\&.5f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_1\fP = _mm_set_ps1(1\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_m1\fP = _mm_set_ps1(-1\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_2\fP = _mm_set_ps1(2\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_3\fP = _mm_set_ps1(3\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_127\fP = _mm_set_ps1(127\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_255\fP = _mm_set_ps1(255\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_2pow23\fP = _mm_set_ps1(8388608\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_1_0_0_0\fP = _mm_set_ps(1\&.0f, 0\&.0f, 0\&.0f, 0\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_0_1_0_0\fP = _mm_set_ps(0\&.0f, 1\&.0f, 0\&.0f, 0\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_0_0_1_0\fP = _mm_set_ps(0\&.0f, 0\&.0f, 1\&.0f, 0\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_0_0_0_1\fP = _mm_set_ps(0\&.0f, 0\&.0f, 0\&.0f, 1\&.0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_pi\fP = _mm_set_ps1(3\&.1415926535897932384626433832795f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_pi2\fP = _mm_set_ps1(6\&.283185307179586476925286766560f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_2_pi\fP = _mm_set_ps1(0\&.63661977236758134307553505349006f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_pi_2\fP = _mm_set_ps1(1\&.5707963267948966192313216916398f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_4_pi\fP = _mm_set_ps1(1\&.2732395447351626861510701069801f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_pi_4\fP = _mm_set_ps1(0\&.78539816339744830961566084581988f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_sincos_p0\fP = _mm_set_ps1(0\&.15707963267948963959e1f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_sincos_p1\fP = _mm_set_ps1(-0\&.64596409750621907082e0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_sincos_p2\fP = _mm_set_ps1(0\&.7969262624561800806e-1f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_sincos_p3\fP = _mm_set_ps1(-0\&.468175413106023168e-2f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_tan_p0\fP = _mm_set_ps1(-1\&.79565251976484877988e7f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_tan_p1\fP = _mm_set_ps1(1\&.15351664838587416140e6f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_tan_p2\fP = _mm_set_ps1(-1\&.30936939181383777646e4f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_tan_q0\fP = _mm_set_ps1(-5\&.38695755929454629881e7f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_tan_q1\fP = _mm_set_ps1(2\&.50083801823357915839e7f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_tan_q2\fP = _mm_set_ps1(-1\&.32089234440210967447e6f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_tan_q3\fP = _mm_set_ps1(1\&.36812963470692954678e4f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_tan_poleval\fP = _mm_set_ps1(3\&.68935e19f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_atan_t0\fP = _mm_set_ps1(-0\&.91646118527267623468e-1f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_atan_t1\fP = _mm_set_ps1(-0\&.13956945682312098640e1f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_atan_t2\fP = _mm_set_ps1(-0\&.94393926122725531747e2f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_atan_t3\fP = _mm_set_ps1(0\&.12888383034157279340e2f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_atan_s0\fP = _mm_set_ps1(0\&.12797564625607904396e1f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_atan_s1\fP = _mm_set_ps1(0\&.21972168858277355914e1f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_atan_s2\fP = _mm_set_ps1(0\&.68193064729268275701e1f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_atan_s3\fP = _mm_set_ps1(0\&.28205206687035841409e2f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp_hi\fP = _mm_set_ps1(88\&.3762626647949f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp_lo\fP = _mm_set_ps1(-88\&.3762626647949f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp_rln2\fP = _mm_set_ps1(1\&.4426950408889634073599f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp_p0\fP = _mm_set_ps1(1\&.26177193074810590878e-4f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp_p1\fP = _mm_set_ps1(3\&.02994407707441961300e-2f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp_q0\fP = _mm_set_ps1(3\&.00198505138664455042e-6f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp_q1\fP = _mm_set_ps1(2\&.52448340349684104192e-3f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp_q2\fP = _mm_set_ps1(2\&.27265548208155028766e-1f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp_q3\fP = _mm_set_ps1(2\&.00000000000000000009e0f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp_c1\fP = _mm_set_ps1(6\&.93145751953125e-1f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp_c2\fP = _mm_set_ps1(1\&.42860682030941723212e-6f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp2_hi\fP = _mm_set_ps1(127\&.4999961853f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp2_lo\fP = _mm_set_ps1(-127\&.4999961853f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp2_p0\fP = _mm_set_ps1(2\&.30933477057345225087e-2f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp2_p1\fP = _mm_set_ps1(2\&.02020656693165307700e1f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp2_p2\fP = _mm_set_ps1(1\&.51390680115615096133e3f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp2_q0\fP = _mm_set_ps1(2\&.33184211722314911771e2f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_exp2_q1\fP = _mm_set_ps1(4\&.36821166879210612817e3f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_log_p0\fP = _mm_set_ps1(-7\&.89580278884799154124e-1f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_log_p1\fP = _mm_set_ps1(1\&.63866645699558079767e1f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_log_p2\fP = _mm_set_ps1(-6\&.41409952958715622951e1f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_log_q0\fP = _mm_set_ps1(-3\&.56722798256324312549e1f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_log_q1\fP = _mm_set_ps1(3\&.12093766372244180303e2f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_log_q2\fP = _mm_set_ps1(-7\&.69691943550460008604e2f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_log_c0\fP = _mm_set_ps1(0\&.693147180559945f)"
+.br
+.ti -1c
+.RI "static const __m128 GLM_VAR_USED \fBglm::detail::_ps_log2_c0\fP = _mm_set_ps1(1\&.44269504088896340735992f)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+OpenGL Mathematics (glm\&.g-truc\&.net)
+.PP
+Copyright (c) 2005 - 2013 G-Truc Creation (www\&.g-truc\&.net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software\&.
+.PP
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\&. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE\&.
+.PP
+\fBGLM Core\fP
+.PP
+\fBDate:\fP
+.RS 4
+2009-05-08 / 2011-06-15 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christophe Riccio
+.RE
+.PP
+OpenGL Mathematics (glm\&.g-truc\&.net)
+.PP
+Copyright (c) 2005 - 2013 G-Truc Creation (www\&.g-truc\&.net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software\&.
+.PP
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\&. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE\&.
+.PP
+\fBGLM Core\fP
+.PP
+\fBDate:\fP
+.RS 4
+2009-06-05 / 2011-06-15 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christophe Riccio 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

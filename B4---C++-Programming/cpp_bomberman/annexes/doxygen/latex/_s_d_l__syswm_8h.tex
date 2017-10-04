@@ -1,0 +1,90 @@
+\hypertarget{_s_d_l__syswm_8h}{}\section{lib/gdl/includes/\+S\+D\+L\+\_\+syswm.h File Reference}
+\label{_s_d_l__syswm_8h}\index{lib/gdl/includes/\+S\+D\+L\+\_\+syswm.\+h@{lib/gdl/includes/\+S\+D\+L\+\_\+syswm.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+video.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+version.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$X11/\+Xlib.\+h$>$}\\*
+{\ttfamily \#include $<$X11/\+Xatom.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+Include dependency graph for S\+D\+L\+\_\+syswm.\+h\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s_d_l___sys_w_mmsg}{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}
+\item 
+struct \hyperlink{struct_s_d_l___sys_w_minfo}{S\+D\+L\+\_\+\+Sys\+W\+Minfo}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__syswm_8h_a25c885f5150c5d1202a70a6a4a135a4a}{}typedef struct \hyperlink{struct_s_d_l___sys_w_minfo}{S\+D\+L\+\_\+\+Sys\+W\+Minfo} {\bfseries S\+D\+L\+\_\+\+Sys\+W\+Minfo}\label{_s_d_l__syswm_8h_a25c885f5150c5d1202a70a6a4a135a4a}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+P\+E} \{ \\*
+{\bfseries S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+U\+N\+K\+N\+O\+W\+N}, 
+{\bfseries S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+I\+N\+D\+O\+W\+S}, 
+{\bfseries S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+X11}, 
+{\bfseries S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+D\+I\+R\+E\+C\+T\+F\+B}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+C\+O\+C\+O\+A}, 
+{\bfseries S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+U\+I\+K\+I\+T}, 
+{\bfseries S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+A\+Y\+L\+A\+N\+D}, 
+{\bfseries S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+M\+I\+R}, 
+\\*
+{\bfseries S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+I\+N\+R\+T}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+D\+E\+C\+L\+S\+P\+E\+C S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+L\+L \hyperlink{_s_d_l__syswm_8h_ad6e40121a96c88af20d9469a04706fef}{S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info} (\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window} $\ast$window, \hyperlink{struct_s_d_l___sys_w_minfo}{S\+D\+L\+\_\+\+Sys\+W\+Minfo} $\ast$info)
+\begin{DoxyCompactList}\small\item\em This function allows access to driver-\/dependent window information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include file for S\+D\+L custom system window manager hooks.
+
+Your application has access to a special type of event \hyperlink{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa73749d735a18ce6ef17a09ee70d5dbe7}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+E\+V\+E\+N\+T}, which contains window-\/manager specific information and arrives whenever an unhandled window event occurs. This event is ignored by default, but you can enable it with \hyperlink{_s_d_l__events_8h_afb772893e1c46f186fa39a4defe76df3}{S\+D\+L\+\_\+\+Event\+State()}. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7}{}\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+P\+E@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+P\+E}}
+\index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+P\+E@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+P\+E}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+P\+E}}\label{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7}
+These are the various supported windowing subsystems 
+
+\subsection{Function Documentation}
+\hypertarget{_s_d_l__syswm_8h_ad6e40121a96c88af20d9469a04706fef}{}\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info@{S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info}}
+\index{S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info@{S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+C\+L\+S\+P\+E\+C S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+L\+L S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+D\+L\+\_\+\+Window} $\ast$}]{window, }
+\item[{{\bf S\+D\+L\+\_\+\+Sys\+W\+Minfo} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{_s_d_l__syswm_8h_ad6e40121a96c88af20d9469a04706fef}
+
+
+This function allows access to driver-\/dependent window information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window about which information is being requested \\
+\hline
+{\em info} & This structure must be initialized with the S\+D\+L version, and is then filled in with information about the given window.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+D\+L\+\_\+\+T\+R\+U\+E if the function is implemented and the version member of the {\ttfamily info} struct is valid, S\+D\+L\+\_\+\+F\+A\+L\+S\+E otherwise.
+\end{DoxyReturn}
+You typically use this function like this\+: 
+\begin{DoxyCode}
+1 SDL\_SysWMinfo info;
+2 SDL\_VERSION(&info.version);
+3 if ( SDL\_GetWindowWMInfo(window, &info) ) \{ ... \}
+\end{DoxyCode}
+ 

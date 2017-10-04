@@ -1,0 +1,183 @@
+\hypertarget{group__gtx__transform}{}\section{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}
+\label{group__gtx__transform}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}}
+
+
+Add transformation matrices.  
+
+
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tmat4x4$<$ T $>$ \hyperlink{group__gtx__transform_ga353b66810f6788c6486197cb6a30248c}{glm\+::translate} (T x, T y, T z)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tmat4x4$<$ T $>$ \hyperlink{group__gtx__transform_gaba8fdcaf3cbd37c131b2880116749273}{glm\+::translate} (detail\+::tmat4x4$<$ T $>$ const \&m, T x, T y, T z)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tmat4x4$<$ T $>$ \hyperlink{group__gtx__transform_gae65c5f45d880bf921b2af669b97a8fa8}{glm\+::translate} (detail\+::tvec3$<$ T $>$ const \&v)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tmat4x4$<$ T $>$ \hyperlink{group__gtx__transform_ga5457db4563fa9c0195d4097f9e788617}{glm\+::rotate} (T angle, T x, T y, T z)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tmat4x4$<$ T $>$ \hyperlink{group__gtx__transform_ga9a123708926335a4c097eee1157d4791}{glm\+::rotate} (T angle, detail\+::tvec3$<$ T $>$ const \&v)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tmat4x4$<$ T $>$ \hyperlink{group__gtx__transform_ga3eed13fc5bcaff2f2204b12013bb83bf}{glm\+::rotate} (detail\+::tmat4x4$<$ T $>$ const \&m, T angle, T x, T y, T z)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tmat4x4$<$ T $>$ \hyperlink{group__gtx__transform_ga7ffcdedf36bf2491505845f9d43276ae}{glm\+::scale} (T x, T y, T z)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tmat4x4$<$ T $>$ \hyperlink{group__gtx__transform_ga0ce31189ca3aca6cadc306244af521f0}{glm\+::scale} (detail\+::tmat4x4$<$ T $>$ const \&m, T x, T y, T z)
+\item 
+{\footnotesize template$<$typename T $>$ }\\detail\+::tmat4x4$<$ T $>$ \hyperlink{group__gtx__transform_gad9b1d9ea9a64ba5e76dbe807abf8362c}{glm\+::scale} (detail\+::tvec3$<$ T $>$ const \&v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Add transformation matrices. 
+
+$<$\hyperlink{transform_8hpp}{glm/gtx/transform.\+hpp}$>$ need to be included to use these functionalities. 
+
+\subsection{Function Documentation}
+\hypertarget{group__gtx__transform_ga5457db4563fa9c0195d4097f9e788617}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}!rotate@{rotate}}
+\index{rotate@{rotate}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tmat4x4$<$T$>$ glm\+::rotate (
+\begin{DoxyParamCaption}
+\item[{T}]{angle, }
+\item[{T}]{x, }
+\item[{T}]{y, }
+\item[{T}]{z}
+\end{DoxyParamCaption}
+)}\label{group__gtx__transform_ga5457db4563fa9c0195d4097f9e788617}
+Builds a rotation 4 $\ast$ 4 matrix created from an axis of 3 scalars and an angle expressed in degrees.
+\begin{DoxyItemize}
+\item From \hyperlink{group__gtx__transform}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform } extension 
+\end{DoxyItemize}
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{group__gtx__transform_ga9a123708926335a4c097eee1157d4791}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}!rotate@{rotate}}
+\index{rotate@{rotate}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tmat4x4$<$T$>$ glm\+::rotate (
+\begin{DoxyParamCaption}
+\item[{T}]{angle, }
+\item[{{\bf detail\+::tvec3}$<$ T $>$ const \&}]{v}
+\end{DoxyParamCaption}
+)}\label{group__gtx__transform_ga9a123708926335a4c097eee1157d4791}
+Builds a rotation 4 $\ast$ 4 matrix created from an axis of 3 scalars and an angle expressed in degrees.
+\begin{DoxyItemize}
+\item From \hyperlink{group__gtx__transform}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform } extension 
+\end{DoxyItemize}
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\hypertarget{group__gtx__transform_ga3eed13fc5bcaff2f2204b12013bb83bf}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}!rotate@{rotate}}
+\index{rotate@{rotate}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tmat4x4$<$T$>$ glm\+::rotate (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat4x4}$<$ T $>$ const \&}]{m, }
+\item[{T}]{angle, }
+\item[{T}]{x, }
+\item[{T}]{y, }
+\item[{T}]{z}
+\end{DoxyParamCaption}
+)}\label{group__gtx__transform_ga3eed13fc5bcaff2f2204b12013bb83bf}
+Transforms a matrix with a rotation 4 $\ast$ 4 matrix created from an axis of 3 scalars and an angle expressed in degrees.
+\begin{DoxyItemize}
+\item From \hyperlink{group__gtx__transform}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform } extension 
+\end{DoxyItemize}\hypertarget{group__gtx__transform_ga7ffcdedf36bf2491505845f9d43276ae}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}!scale@{scale}}
+\index{scale@{scale}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tmat4x4$<$T$>$ glm\+::scale (
+\begin{DoxyParamCaption}
+\item[{T}]{x, }
+\item[{T}]{y, }
+\item[{T}]{z}
+\end{DoxyParamCaption}
+)}\label{group__gtx__transform_ga7ffcdedf36bf2491505845f9d43276ae}
+Builds a scale 4 $\ast$ 4 matrix created from 3 scalars.
+\begin{DoxyItemize}
+\item From \hyperlink{group__gtx__transform}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform } extension 
+\end{DoxyItemize}
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\hypertarget{group__gtx__transform_ga0ce31189ca3aca6cadc306244af521f0}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}!scale@{scale}}
+\index{scale@{scale}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tmat4x4$<$T$>$ glm\+::scale (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat4x4}$<$ T $>$ const \&}]{m, }
+\item[{T}]{x, }
+\item[{T}]{y, }
+\item[{T}]{z}
+\end{DoxyParamCaption}
+)}\label{group__gtx__transform_ga0ce31189ca3aca6cadc306244af521f0}
+Transforms a matrix with a scale 4 $\ast$ 4 matrix created from 3 scalars.
+\begin{DoxyItemize}
+\item From \hyperlink{group__gtx__transform}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform } extension 
+\end{DoxyItemize}
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\hypertarget{group__gtx__transform_gad9b1d9ea9a64ba5e76dbe807abf8362c}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}!scale@{scale}}
+\index{scale@{scale}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tmat4x4$<$T$>$ glm\+::scale (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec3}$<$ T $>$ const \&}]{v}
+\end{DoxyParamCaption}
+)}\label{group__gtx__transform_gad9b1d9ea9a64ba5e76dbe807abf8362c}
+Transforms a matrix with a scale 4 $\ast$ 4 matrix created from a vector of 3 components.
+\begin{DoxyItemize}
+\item From \hyperlink{group__gtx__transform}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform } extension 
+\end{DoxyItemize}\hypertarget{group__gtx__transform_ga353b66810f6788c6486197cb6a30248c}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}!translate@{translate}}
+\index{translate@{translate}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}}
+\subsubsection[{translate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tmat4x4$<$T$>$ glm\+::translate (
+\begin{DoxyParamCaption}
+\item[{T}]{x, }
+\item[{T}]{y, }
+\item[{T}]{z}
+\end{DoxyParamCaption}
+)}\label{group__gtx__transform_ga353b66810f6788c6486197cb6a30248c}
+Builds a translation 4 $\ast$ 4 matrix created from 3 scalars.
+\begin{DoxyItemize}
+\item From \hyperlink{group__gtx__transform}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform } extension 
+\end{DoxyItemize}
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\hypertarget{group__gtx__transform_gaba8fdcaf3cbd37c131b2880116749273}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}!translate@{translate}}
+\index{translate@{translate}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}}
+\subsubsection[{translate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tmat4x4$<$T$>$ glm\+::translate (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat4x4}$<$ T $>$ const \&}]{m, }
+\item[{T}]{x, }
+\item[{T}]{y, }
+\item[{T}]{z}
+\end{DoxyParamCaption}
+)}\label{group__gtx__transform_gaba8fdcaf3cbd37c131b2880116749273}
+Transforms a matrix with a translation 4 $\ast$ 4 matrix created from 3 scalars.
+\begin{DoxyItemize}
+\item From \hyperlink{group__gtx__transform}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform } extension 
+\end{DoxyItemize}
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+\hypertarget{group__gtx__transform_gae65c5f45d880bf921b2af669b97a8fa8}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}!translate@{translate}}
+\index{translate@{translate}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}}
+\subsubsection[{translate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ detail\+::tmat4x4$<$T$>$ glm\+::translate (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tvec3}$<$ T $>$ const \&}]{v}
+\end{DoxyParamCaption}
+)}\label{group__gtx__transform_gae65c5f45d880bf921b2af669b97a8fa8}
+Transforms a matrix with a translation 4 $\ast$ 4 matrix created from 3 scalars.
+\begin{DoxyItemize}
+\item From \hyperlink{group__gtx__transform}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform } extension 
+\end{DoxyItemize}

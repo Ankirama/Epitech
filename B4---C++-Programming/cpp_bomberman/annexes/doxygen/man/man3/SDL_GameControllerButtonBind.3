@@ -1,0 +1,48 @@
+.TH "SDL_GameControllerButtonBind" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_GameControllerButtonBind \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_gamecontroller\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "SDL_GameControllerBindType \fBbindType\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   \fBint\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "   \fBint\fP \fBaxis\fP"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBint\fP \fBhat\fP"
+.br
+.ti -1c
+.RI "      \fBint\fP \fBhat_mask\fP"
+.br
+.ti -1c
+.RI "   } \fBhat\fP"
+.br
+.ti -1c
+.RI "} \fBvalue\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Get the SDL joystick layer binding for this controller button/axis mapping 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

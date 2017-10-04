@@ -1,0 +1,113 @@
+.TH "lib/gdl/includes/glm/core/func_matrix.inl" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/glm/core/func_matrix.inl \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename matType > GLM_FUNC_QUALIFIER matType \fBglm::matrixCompMult\fP (matType const &x, matType const &y)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat2x2< T > \fBglm::outerProduct\fP (detail::tvec2< T > const &c, detail::tvec2< T > const &r)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat3x3< T > \fBglm::outerProduct\fP (detail::tvec3< T > const &c, detail::tvec3< T > const &r)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat4x4< T > \fBglm::outerProduct\fP (detail::tvec4< T > const &c, detail::tvec4< T > const &r)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat2x3< T > \fBglm::outerProduct\fP (detail::tvec3< T > const &c, detail::tvec2< T > const &r)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat3x2< T > \fBglm::outerProduct\fP (detail::tvec2< T > const &c, detail::tvec3< T > const &r)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat2x4< T > \fBglm::outerProduct\fP (detail::tvec4< T > const &c, detail::tvec2< T > const &r)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat4x2< T > \fBglm::outerProduct\fP (detail::tvec2< T > const &c, detail::tvec4< T > const &r)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat3x4< T > \fBglm::outerProduct\fP (detail::tvec4< T > const &c, detail::tvec3< T > const &r)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat4x3< T > \fBglm::outerProduct\fP (detail::tvec3< T > const &c, detail::tvec4< T > const &r)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat2x2< T > \fBglm::transpose\fP (detail::tmat2x2< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat3x3< T > \fBglm::transpose\fP (detail::tmat3x3< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat4x4< T > \fBglm::transpose\fP (detail::tmat4x4< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat2x3< T > \fBglm::transpose\fP (detail::tmat3x2< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat3x2< T > \fBglm::transpose\fP (detail::tmat2x3< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat2x4< T > \fBglm::transpose\fP (detail::tmat4x2< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat4x2< T > \fBglm::transpose\fP (detail::tmat2x4< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat3x4< T > \fBglm::transpose\fP (detail::tmat4x3< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat4x3< T > \fBglm::transpose\fP (detail::tmat3x4< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat2x2< T >::value_type \fBglm::determinant\fP (detail::tmat2x2< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat3x3< T >::value_type \fBglm::determinant\fP (detail::tmat3x3< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat4x4< T >::value_type \fBglm::determinant\fP (detail::tmat4x4< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat2x2< T > \fBglm::inverse\fP (detail::tmat2x2< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat3x3< T > \fBglm::inverse\fP (detail::tmat3x3< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename T > GLM_FUNC_QUALIFIER detail::tmat4x4< T > \fBglm::inverse\fP (detail::tmat4x4< T > const &m)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+OpenGL Mathematics (glm\&.g-truc\&.net)
+.PP
+Copyright (c) 2005 - 2013 G-Truc Creation (www\&.g-truc\&.net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software\&.
+.PP
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\&. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE\&.
+.PP
+\fBGLM Core\fP
+.PP
+\fBDate:\fP
+.RS 4
+2008-03-08 / 2011-06-15 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christophe Riccio 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

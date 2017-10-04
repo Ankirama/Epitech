@@ -1,0 +1,519 @@
+\hypertarget{classgdl_1_1_a_shader}{\section{gdl\-:\-:A\-Shader Class Reference}
+\label{classgdl_1_1_a_shader}\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}}
+}
+
+
+This class represents a shader. If you want to create your own shader, you should inherit from this.  
+
+
+
+
+{\ttfamily \#include $<$A\-Shader.\-hh$>$}
+
+Inheritance diagram for gdl\-:\-:A\-Shader\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgdl_1_1_a_shader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classgdl_1_1_a_shader_a51ce5fd5c2f0afcda913a44ab68ab32b}{void \hyperlink{classgdl_1_1_a_shader_a51ce5fd5c2f0afcda913a44ab68ab32b}{bind} ()}\label{classgdl_1_1_a_shader_a51ce5fd5c2f0afcda913a44ab68ab32b}
+
+\begin{DoxyCompactList}\small\item\em Call gl\-Use\-Program to bind the shader as the current used shader. \end{DoxyCompactList}\item 
+G\-Luint \hyperlink{classgdl_1_1_a_shader_af1ed529201e3a16301b3ab0f6d592d54}{get\-Program\-Id} () const 
+\begin{DoxyCompactList}\small\item\em Get the program Id. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_ae292aeb4a9ebf03d2427ba9f44d50136}{load} (const std\-::string \&path, G\-Lenum type)
+\begin{DoxyCompactList}\small\item\em Load a vertex or a fragment shader from a file. \end{DoxyCompactList}\item 
+G\-Luint \hyperlink{classgdl_1_1_a_shader_a291f4bb70e4374b8a081a57a21e1fe28}{get\-Uniform\-Id} (const std\-::string \&k) const 
+\begin{DoxyCompactList}\small\item\em Get the Open\-G\-L location of a constant variable in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_ae71efb1e61476a56eb5d4fec32d5d1fa}{set\-Uniform} (const std\-::string \&k, glm\-::vec2 const \&v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_a4cfe07c7cacb131d08053b2999b3135f}{set\-Uniform} (const std\-::string \&k, glm\-::vec3 const \&v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_a2ce35c4336139492a98df3db8bdd18d1}{set\-Uniform} (const std\-::string \&k, glm\-::vec4 const \&v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_a183eb89b2c0f2dc8139c33ff406d7c07}{set\-Uniform} (const std\-::string \&k, glm\-::mat2 const \&v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_a727f81c327e4662d8ccc9d16d00d500b}{set\-Uniform} (const std\-::string \&k, glm\-::mat3 const \&v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_a16404bfe7fd48458b5938c1ce280a5b1}{set\-Uniform} (const std\-::string \&k, glm\-::mat4 const \&v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_abe10dffab7a6b3453281f4cb450b783e}{set\-Uniform} (const std\-::string \&k, glm\-::ivec2 const \&v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_af0e6f44857b1835c92a0b79606064ab5}{set\-Uniform} (const std\-::string \&k, glm\-::ivec3 const \&v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_aad8b08fc601c2409b3b670084a1e1a90}{set\-Uniform} (const std\-::string \&k, glm\-::ivec4 const \&v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_a93d3a6b717cf50326e3c0ca544131845}{set\-Uniform} (const std\-::string \&k, glm\-::uvec2 const \&v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_a4670bdbe89a3e37d92d035510837465e}{set\-Uniform} (const std\-::string \&k, glm\-::uvec3 const \&v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_a8b800fb21a0071a28e6093ab99501ae8}{set\-Uniform} (const std\-::string \&k, glm\-::uvec4 const \&v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_aa166b1e4cd12cf7e157659946861d121}{set\-Uniform} (const std\-::string \&k, float v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_ad6091e0ccecf8c062e46482d793e0d6c}{set\-Uniform} (const std\-::string \&k, unsigned int v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_adde4f6da14c5fd786152d81d0a3bb77f}{set\-Uniform} (const std\-::string \&k, int v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+bool \hyperlink{classgdl_1_1_a_shader_a882bdda898c0f8a63b3ced52f933e4ef}{set\-Uniform} (const std\-::string \&k, double v) const 
+\begin{DoxyCompactList}\small\item\em Set a uniform (constant) value in the shader. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classgdl_1_1_a_shader_a0717c838d5a465332be5b91d12d2dbb5}{build} ()=0
+\begin{DoxyCompactList}\small\item\em Build and link the shader (using \-\_\-compile\-Shader and \-\_\-link) and bind the locations of the attributes and samplers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classgdl_1_1_a_shader_ad0608747a9ef46c049e4bd8960e721d1}{void \hyperlink{classgdl_1_1_a_shader_ad0608747a9ef46c049e4bd8960e721d1}{\-\_\-build} ()}\label{classgdl_1_1_a_shader_ad0608747a9ef46c049e4bd8960e721d1}
+
+\begin{DoxyCompactList}\small\item\em Create the program and attach the shaders loaded This function must be called in the build method after \-\_\-link\-Program. \end{DoxyCompactList}\item 
+\hypertarget{classgdl_1_1_a_shader_a791f52f022f2191578b72e3935fb6672}{bool \hyperlink{classgdl_1_1_a_shader_a791f52f022f2191578b72e3935fb6672}{\-\_\-link\-Program} ()}\label{classgdl_1_1_a_shader_a791f52f022f2191578b72e3935fb6672}
+
+\begin{DoxyCompactList}\small\item\em Link the program, This function must be called in the build method just before \-\_\-build. \end{DoxyCompactList}\item 
+\hypertarget{classgdl_1_1_a_shader_aeaeb664dec19e428a6e72933e1fc843b}{bool \hyperlink{classgdl_1_1_a_shader_aeaeb664dec19e428a6e72933e1fc843b}{\-\_\-compile\-Shader} (G\-Luint shader\-Id, std\-::string const \&file) const }\label{classgdl_1_1_a_shader_aeaeb664dec19e428a6e72933e1fc843b}
+
+\begin{DoxyCompactList}\small\item\em Compile the shader, This function is called by the load method. \end{DoxyCompactList}\item 
+\hypertarget{classgdl_1_1_a_shader_a03c085f34360c4c9e2d5479f88a69916}{void \hyperlink{classgdl_1_1_a_shader_a03c085f34360c4c9e2d5479f88a69916}{\-\_\-bind\-Attrib\-Location} (G\-Luint location, std\-::string const \&attrib\-Name)}\label{classgdl_1_1_a_shader_a03c085f34360c4c9e2d5479f88a69916}
+
+\begin{DoxyCompactList}\small\item\em Bind a shader attribute to a location, This function must be called in the build method before the \-\_\-link\-Program and \-\_\-build. \end{DoxyCompactList}\item 
+\hypertarget{classgdl_1_1_a_shader_ad77b6e2c8e74f736bccb2555f35c6fac}{bool \hyperlink{classgdl_1_1_a_shader_ad77b6e2c8e74f736bccb2555f35c6fac}{\-\_\-bind\-Texture\-Unit} (G\-Luint tex\-Unit, std\-::string const \&sampler\-Name)}\label{classgdl_1_1_a_shader_ad77b6e2c8e74f736bccb2555f35c6fac}
+
+\begin{DoxyCompactList}\small\item\em Bind a sampler to the binding point tex\-Unit, This function must be called in the build method after the \-\_\-link\-Program and \-\_\-build. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents a shader. If you want to create your own shader, you should inherit from this. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classgdl_1_1_a_shader_a0717c838d5a465332be5b91d12d2dbb5}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!build@{build}}
+\index{build@{build}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{build}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool gdl\-::\-A\-Shader\-::build (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classgdl_1_1_a_shader_a0717c838d5a465332be5b91d12d2dbb5}
+
+
+Build and link the shader (using \-\_\-compile\-Shader and \-\_\-link) and bind the locations of the attributes and samplers. 
+
+\begin{DoxyReturn}{Returns}
+True if the build succeed, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classgdl_1_1_basic_shader_a2fbfee8bd2e95b001617bfe34c1e53e4}{gdl\-::\-Basic\-Shader}.
+
+\hypertarget{classgdl_1_1_a_shader_af1ed529201e3a16301b3ab0f6d592d54}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!get\-Program\-Id@{get\-Program\-Id}}
+\index{get\-Program\-Id@{get\-Program\-Id}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{get\-Program\-Id}]{\setlength{\rightskip}{0pt plus 5cm}G\-Luint gdl\-::\-A\-Shader\-::get\-Program\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_af1ed529201e3a16301b3ab0f6d592d54}
+
+
+Get the program Id. 
+
+\begin{DoxyReturn}{Returns}
+An unsigned int corresponding to the Open\-G\-L program Id. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_a291f4bb70e4374b8a081a57a21e1fe28}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!get\-Uniform\-Id@{get\-Uniform\-Id}}
+\index{get\-Uniform\-Id@{get\-Uniform\-Id}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{get\-Uniform\-Id}]{\setlength{\rightskip}{0pt plus 5cm}G\-Luint gdl\-::\-A\-Shader\-::get\-Uniform\-Id (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_a291f4bb70e4374b8a081a57a21e1fe28}
+
+
+Get the Open\-G\-L location of a constant variable in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The uniform variable name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The unsigned int corresponding to the uniform location. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_ae292aeb4a9ebf03d2427ba9f44d50136}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!load@{load}}
+\index{load@{load}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::load (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path, }
+\item[{G\-Lenum}]{type}
+\end{DoxyParamCaption}
+)}}\label{classgdl_1_1_a_shader_ae292aeb4a9ebf03d2427ba9f44d50136}
+
+
+Load a vertex or a fragment shader from a file. 
+
+\begin{DoxyReturn}{Returns}
+A boolean which is false if the load has failed. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to the text file containing the G\-L\-S\-L code. \\
+\hline
+{\em type} & G\-L\-\_\-\-V\-E\-R\-T\-E\-X\-\_\-\-S\-H\-A\-D\-E\-R, G\-L\-\_\-\-F\-R\-A\-G\-M\-E\-N\-T\-\_\-\-S\-H\-A\-D\-E\-R or G\-L\-\_\-\-G\-E\-O\-M\-E\-T\-R\-Y\-\_\-\-S\-H\-A\-D\-E\-R. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classgdl_1_1_a_shader_ae71efb1e61476a56eb5d4fec32d5d1fa}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{glm\-::vec2 const \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_ae71efb1e61476a56eb5d4fec32d5d1fa}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_a4cfe07c7cacb131d08053b2999b3135f}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{glm\-::vec3 const \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_a4cfe07c7cacb131d08053b2999b3135f}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_a2ce35c4336139492a98df3db8bdd18d1}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{glm\-::vec4 const \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_a2ce35c4336139492a98df3db8bdd18d1}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_a183eb89b2c0f2dc8139c33ff406d7c07}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{glm\-::mat2 const \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_a183eb89b2c0f2dc8139c33ff406d7c07}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_a727f81c327e4662d8ccc9d16d00d500b}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{glm\-::mat3 const \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_a727f81c327e4662d8ccc9d16d00d500b}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_a16404bfe7fd48458b5938c1ce280a5b1}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{glm\-::mat4 const \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_a16404bfe7fd48458b5938c1ce280a5b1}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_abe10dffab7a6b3453281f4cb450b783e}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{glm\-::ivec2 const \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_abe10dffab7a6b3453281f4cb450b783e}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_af0e6f44857b1835c92a0b79606064ab5}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{glm\-::ivec3 const \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_af0e6f44857b1835c92a0b79606064ab5}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_aad8b08fc601c2409b3b670084a1e1a90}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{glm\-::ivec4 const \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_aad8b08fc601c2409b3b670084a1e1a90}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_a93d3a6b717cf50326e3c0ca544131845}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{glm\-::uvec2 const \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_a93d3a6b717cf50326e3c0ca544131845}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_a4670bdbe89a3e37d92d035510837465e}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{glm\-::uvec3 const \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_a4670bdbe89a3e37d92d035510837465e}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_a8b800fb21a0071a28e6093ab99501ae8}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{glm\-::uvec4 const \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_a8b800fb21a0071a28e6093ab99501ae8}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_aa166b1e4cd12cf7e157659946861d121}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{float}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_aa166b1e4cd12cf7e157659946861d121}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_ad6091e0ccecf8c062e46482d793e0d6c}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{unsigned int}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_ad6091e0ccecf8c062e46482d793e0d6c}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_adde4f6da14c5fd786152d81d0a3bb77f}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{int}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_adde4f6da14c5fd786152d81d0a3bb77f}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+\hypertarget{classgdl_1_1_a_shader_a882bdda898c0f8a63b3ced52f933e4ef}{\index{gdl\-::\-A\-Shader@{gdl\-::\-A\-Shader}!set\-Uniform@{set\-Uniform}}
+\index{set\-Uniform@{set\-Uniform}!gdl::AShader@{gdl\-::\-A\-Shader}}
+\subsubsection[{set\-Uniform}]{\setlength{\rightskip}{0pt plus 5cm}bool gdl\-::\-A\-Shader\-::set\-Uniform (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{k, }
+\item[{double}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classgdl_1_1_a_shader_a882bdda898c0f8a63b3ced52f933e4ef}
+
+
+Set a uniform (constant) value in the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The name of the uniform variable. \\
+\hline
+{\em v} & The value of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the uniform name is not found in the shader. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+includes/A\-Shader.\-hh\item 
+sources/A\-Shader.\-cpp\end{DoxyCompactItemize}

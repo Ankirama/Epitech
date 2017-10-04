@@ -1,0 +1,82 @@
+.TH "gdl::Model" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gdl::Model \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBpause\fP (bool pauseAnim)"
+.br
+.ti -1c
+.RI "bool \fBsetCurrentAnim\fP (\fBint\fP stack, bool loop=true)"
+.br
+.ti -1c
+.RI "bool \fBsetCurrentAnim\fP (std::string const &name, bool loop=true)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgetAnimationFrameNumber\fP (\fBint\fP stack)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgetAnimationFrameNumber\fP (std::string const &name)"
+.br
+.ti -1c
+.RI "float \fBgetFrameDuration\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcreateSubAnim\fP (\fBint\fP stack, std::string const &subAnimName, \fBint\fP frameStart, \fBint\fP frameEnd)"
+.br
+.ti -1c
+.RI "bool \fBcreateSubAnim\fP (std::string const &name, std::string const &subAnimName, \fBint\fP frameStart, \fBint\fP frameEnd)"
+.br
+.ti -1c
+.RI "bool \fBsetCurrentSubAnim\fP (std::string const &name, bool loop=true)"
+.br
+.ti -1c
+.RI "bool \fBload\fP (std::string const &path)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBdraw\fP (\fBAShader\fP &shader, \fBglm::mat4\fP const &transform, double deltaTime)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBremoveFromManager\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "FbxModel * \fB_model\fP"
+.br
+.ti -1c
+.RI "SFbxModelHandler * \fB_modelHandler\fP"
+.br
+.ti -1c
+.RI "bool \fB_loop\fP"
+.br
+.ti -1c
+.RI "double \fB_timeSinceLastFrame\fP"
+.br
+.ti -1c
+.RI "std::map< std::string, SSubAnimationDatas > \fB_subAnims\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static std::map< std::string, SFbxModelHandler * > \fB_meshManager\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

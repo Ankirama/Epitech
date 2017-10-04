@@ -1,0 +1,114 @@
+.TH "SDL_HapticCondition" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_HapticCondition \- A structure containing a template for a Condition effect\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_haptic\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint16\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBSDL_HapticDirection\fP \fBdirection\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBlength\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBdelay\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBinterval\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBright_sat\fP [3]"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBleft_sat\fP [3]"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fBright_coeff\fP [3]"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fBleft_coeff\fP [3]"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBdeadband\fP [3]"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fBcenter\fP [3]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A structure containing a template for a Condition effect\&. 
+
+The struct handles the following effects:
+.IP "\(bu" 2
+\fBSDL_HAPTIC_SPRING\fP: Effect based on axes position\&.
+.IP "\(bu" 2
+\fBSDL_HAPTIC_DAMPER\fP: Effect based on axes velocity\&.
+.IP "\(bu" 2
+\fBSDL_HAPTIC_INERTIA\fP: Effect based on axes acceleration\&.
+.IP "\(bu" 2
+\fBSDL_HAPTIC_FRICTION\fP: Effect based on axes movement\&.
+.PP
+.PP
+Direction is handled by condition internals instead of a direction member\&. The condition effect specific members have three parameters\&. The first refers to the X axis, the second refers to the Y axis and the third refers to the Z axis\&. The right terms refer to the positive side of the axis and the left terms refer to the negative side of the axis\&. Please refer to the \fBSDL_HapticDirection\fP diagram for which side is positive and which is negative\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_HapticDirection\fP 
+.PP
+\fBSDL_HAPTIC_SPRING\fP 
+.PP
+\fBSDL_HAPTIC_DAMPER\fP 
+.PP
+\fBSDL_HAPTIC_INERTIA\fP 
+.PP
+\fBSDL_HAPTIC_FRICTION\fP 
+.PP
+\fBSDL_HapticEffect\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint16\fP SDL_HapticCondition::button"
+\fBButton\fP that triggers the effect\&. 
+.SS "\fBSint16\fP SDL_HapticCondition::center[3]"
+Position of the dead zone\&. 
+.SS "\fBUint16\fP SDL_HapticCondition::deadband[3]"
+Size of the dead zone\&. 
+.SS "\fBUint16\fP SDL_HapticCondition::delay"
+Delay before starting the effect\&. 
+.SS "\fBSDL_HapticDirection\fP SDL_HapticCondition::direction"
+Direction of the effect - Not used ATM\&. 
+.SS "\fBUint16\fP SDL_HapticCondition::interval"
+How soon it can be triggered again after button\&. 
+.SS "\fBSint16\fP SDL_HapticCondition::left_coeff[3]"
+How fast to increase the force towards the negative side\&. 
+.SS "\fBUint16\fP SDL_HapticCondition::left_sat[3]"
+Level when joystick is to the negative side\&. 
+.SS "\fBUint32\fP SDL_HapticCondition::length"
+Duration of the effect\&. 
+.SS "\fBSint16\fP SDL_HapticCondition::right_coeff[3]"
+How fast to increase the force towards the positive side\&. 
+.SS "\fBUint16\fP SDL_HapticCondition::right_sat[3]"
+Level when joystick is to the positive side\&. 
+.SS "\fBUint16\fP SDL_HapticCondition::type"
+\fBSDL_HAPTIC_SPRING\fP, \fBSDL_HAPTIC_DAMPER\fP, \fBSDL_HAPTIC_INERTIA\fP or \fBSDL_HAPTIC_FRICTION\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

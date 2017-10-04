@@ -1,0 +1,19 @@
+digraph "tinyxml2::XMLElement::SetText"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="tinyxml2::XMLElement\l::SetText",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="tinyxml2::XMLNode::\lFirstChild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_node.html#a60e923d13d7dc01f45ab90a2f948b02a",tooltip="Get the first child node, or null if none exists. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="tinyxml2::XMLNode::\lToText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_node.html#a41c55dab9162d1eb62db2008430e376b",tooltip="Safely cast to Text, or null. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="tinyxml2::XMLNode::\lSetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_node.html#a09dd68cf9eae137579f6e50f36487513"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="tinyxml2::XMLNode::\lGetDocument",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_node.html#add244bca368083fa29698db8dcf147ca",tooltip="Get the XMLDocument that owns this XMLNode. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="tinyxml2::XMLDocument\l::NewText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_document.html#acece5de77a0819f2341b08c1e1ed9987"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="tinyxml2::XMLNode::\lInsertFirstChild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_node.html#ac609a8f3ea949027f439280c640bbaf2"];
+}

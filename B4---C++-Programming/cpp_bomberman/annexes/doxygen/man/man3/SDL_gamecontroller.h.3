@@ -1,0 +1,250 @@
+.TH "lib/gdl/includes/SDL_gamecontroller.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_gamecontroller.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'SDL_rwops\&.h'\fP
+.br
+\fC#include 'SDL_joystick\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_GameControllerButtonBind\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_GameControllerAddMappingsFromFile\fP(file)   \fBSDL_GameControllerAddMappingsFromRW\fP(SDL_RWFromFile(file, 'rb'), 1)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct _SDL_GameController \fBSDL_GameController\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBSDL_GameControllerButtonBind\fP \fBSDL_GameControllerButtonBind\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSDL_GameControllerBindType\fP { \fBSDL_CONTROLLER_BINDTYPE_NONE\fP = 0, \fBSDL_CONTROLLER_BINDTYPE_BUTTON\fP, \fBSDL_CONTROLLER_BINDTYPE_AXIS\fP, \fBSDL_CONTROLLER_BINDTYPE_HAT\fP }"
+.br
+.ti -1c
+.RI "enum \fBSDL_GameControllerAxis\fP { \fBSDL_CONTROLLER_AXIS_INVALID\fP = -1, \fBSDL_CONTROLLER_AXIS_LEFTX\fP, \fBSDL_CONTROLLER_AXIS_LEFTY\fP, \fBSDL_CONTROLLER_AXIS_RIGHTX\fP, \fBSDL_CONTROLLER_AXIS_RIGHTY\fP, \fBSDL_CONTROLLER_AXIS_TRIGGERLEFT\fP, \fBSDL_CONTROLLER_AXIS_TRIGGERRIGHT\fP, \fBSDL_CONTROLLER_AXIS_MAX\fP }"
+.br
+.ti -1c
+.RI "enum \fBSDL_GameControllerButton\fP { \fBSDL_CONTROLLER_BUTTON_INVALID\fP = -1, \fBSDL_CONTROLLER_BUTTON_A\fP, \fBSDL_CONTROLLER_BUTTON_B\fP, \fBSDL_CONTROLLER_BUTTON_X\fP, \fBSDL_CONTROLLER_BUTTON_Y\fP, \fBSDL_CONTROLLER_BUTTON_BACK\fP, \fBSDL_CONTROLLER_BUTTON_GUIDE\fP, \fBSDL_CONTROLLER_BUTTON_START\fP, \fBSDL_CONTROLLER_BUTTON_LEFTSTICK\fP, \fBSDL_CONTROLLER_BUTTON_RIGHTSTICK\fP, \fBSDL_CONTROLLER_BUTTON_LEFTSHOULDER\fP, \fBSDL_CONTROLLER_BUTTON_RIGHTSHOULDER\fP, \fBSDL_CONTROLLER_BUTTON_DPAD_UP\fP, \fBSDL_CONTROLLER_BUTTON_DPAD_DOWN\fP, \fBSDL_CONTROLLER_BUTTON_DPAD_LEFT\fP, \fBSDL_CONTROLLER_BUTTON_DPAD_RIGHT\fP, \fBSDL_CONTROLLER_BUTTON_MAX\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GameControllerAddMappingsFromRW\fP (\fBSDL_RWops\fP *rw, \fBint\fP freerw)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GameControllerAddMapping\fP (const char *mappingString)"
+.br
+.ti -1c
+.RI "DECLSPEC char *SDLCALL \fBSDL_GameControllerMappingForGUID\fP (\fBSDL_JoystickGUID\fP guid)"
+.br
+.ti -1c
+.RI "DECLSPEC char *SDLCALL \fBSDL_GameControllerMapping\fP (SDL_GameController *gamecontroller)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_IsGameController\fP (\fBint\fP joystick_index)"
+.br
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GameControllerNameForIndex\fP (\fBint\fP joystick_index)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_GameController *SDLCALL \fBSDL_GameControllerOpen\fP (\fBint\fP joystick_index)"
+.br
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GameControllerName\fP (SDL_GameController *gamecontroller)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_GameControllerGetAttached\fP (SDL_GameController *gamecontroller)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_Joystick *SDLCALL \fBSDL_GameControllerGetJoystick\fP (SDL_GameController *gamecontroller)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GameControllerEventState\fP (\fBint\fP state)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GameControllerUpdate\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSDL_GameControllerAxis\fP SDLCALL \fBSDL_GameControllerGetAxisFromString\fP (const char *pchString)"
+.br
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GameControllerGetStringForAxis\fP (\fBSDL_GameControllerAxis\fP axis)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSDL_GameControllerButtonBind\fP SDLCALL \fBSDL_GameControllerGetBindForAxis\fP (SDL_GameController *gamecontroller, \fBSDL_GameControllerAxis\fP axis)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSint16\fP SDLCALL \fBSDL_GameControllerGetAxis\fP (SDL_GameController *gamecontroller, \fBSDL_GameControllerAxis\fP axis)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSDL_GameControllerButton\fP SDLCALL \fBSDL_GameControllerGetButtonFromString\fP (const char *pchString)"
+.br
+.ti -1c
+.RI "DECLSPEC const char *SDLCALL \fBSDL_GameControllerGetStringForButton\fP (\fBSDL_GameControllerButton\fP button)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBSDL_GameControllerButtonBind\fP SDLCALL \fBSDL_GameControllerGetBindForButton\fP (SDL_GameController *gamecontroller, \fBSDL_GameControllerButton\fP button)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBUint8\fP SDLCALL \fBSDL_GameControllerGetButton\fP (SDL_GameController *gamecontroller, \fBSDL_GameControllerButton\fP button)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_GameControllerClose\fP (SDL_GameController *gamecontroller)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL game controller event handling
+.PP
+In order to use these functions, \fBSDL_Init()\fP must have been called with the \fBSDL_INIT_JOYSTICK\fP flag\&. This causes SDL to scan the system for game controllers, and load appropriate drivers\&.
+.PP
+If you would like to receive controller updates while the application is in the background, you should set the following hint before calling \fBSDL_Init()\fP: SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define SDL_GameControllerAddMappingsFromFile(file)   \fBSDL_GameControllerAddMappingsFromRW\fP(SDL_RWFromFile(file, 'rb'), 1)"
+Load a set of mappings from a file, filtered by the current \fBSDL_GetPlatform()\fP
+.PP
+Convenience macro\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBSDL_GameControllerButtonBind\fP  \fBSDL_GameControllerButtonBind\fP"
+Get the SDL joystick layer binding for this controller button/axis mapping 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBSDL_GameControllerAxis\fP"
+The list of axes available from a controller 
+.SS "enum \fBSDL_GameControllerButton\fP"
+The list of buttons available from a controller 
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GameControllerAddMapping (const char * mappingString)"
+Add or update an existing mapping configuration
+.PP
+\fBReturns:\fP
+.RS 4
+1 if mapping is added, 0 if updated, -1 on error 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GameControllerAddMappingsFromRW (\fBSDL_RWops\fP * rw, \fBint\fP freerw)"
+To count the number of game controllers in the system for the following: int nJoysticks = \fBSDL_NumJoysticks()\fP; int nGameControllers = 0; for ( int i = 0; i < nJoysticks; i++ ) { if ( SDL_IsGameController(i) ) { nGameControllers++; } }
+.PP
+Using the SDL_HINT_GAMECONTROLLERCONFIG hint or the SDL_GameControllerAddMapping you can add support for controllers SDL is unaware of or cause an existing controller to have a different binding\&. The format is: guid,name,mappings
+.PP
+Where GUID is the string value from \fBSDL_JoystickGetGUIDString()\fP, name is the human readable string for the device and mappings are controller mappings to joystick ones\&. Under Windows there is a reserved GUID of 'xinput' that covers any XInput devices\&. The mapping format for joystick is: bX - a joystick button, index X hX\&.Y - hat X with value Y aX - axis X of the joystick Buttons can be used as a controller axis and vice versa\&.
+.PP
+This string shows an example of a valid mapping for a controller '341a3608000000000000504944564944,Afterglow PS3 Controller,a:b1,b:b2,y:b3,x:b0,start:b9,guide:b12,back:b8,dpup:h0\&.1,dpleft:h0\&.8,dpdown:h0\&.4,dpright:h0\&.2,leftshoulder:b4,rightshoulder:b5,leftstick:b10,rightstick:b11,leftx:a0,lefty:a1,rightx:a2,righty:a3,lefttrigger:b6,righttrigger:b7', Load a set of mappings from a seekable SDL data stream (memory or file), filtered by the current \fBSDL_GetPlatform()\fP A community sourced database of controllers is available at https://raw.github.com/gabomdq/SDL_GameControllerDB/master/gamecontrollerdb.txt
+.PP
+If \fCfreerw\fP is non-zero, the stream will be closed after being read\&.
+.PP
+\fBReturns:\fP
+.RS 4
+number of mappings added, -1 on error 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_GameControllerClose (SDL_GameController * gamecontroller)"
+Close a controller previously opened with \fBSDL_GameControllerOpen()\fP\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GameControllerEventState (\fBint\fP state)"
+Enable/disable controller event polling\&.
+.PP
+If controller events are disabled, you must call \fBSDL_GameControllerUpdate()\fP yourself and check the state of the controller when you want controller information\&.
+.PP
+The state can be one of ::SDL_QUERY, ::SDL_ENABLE or ::SDL_IGNORE\&. 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_GameControllerGetAttached (SDL_GameController * gamecontroller)"
+Returns SDL_TRUE if the controller has been opened and currently connected, or SDL_FALSE if it has not\&. 
+.SS "DECLSPEC \fBSint16\fP SDLCALL SDL_GameControllerGetAxis (SDL_GameController * gamecontroller, \fBSDL_GameControllerAxis\fP axis)"
+Get the current state of an axis control on a game controller\&.
+.PP
+The state is a value ranging from -32768 to 32767\&.
+.PP
+The axis indices start at index 0\&. 
+.SS "DECLSPEC \fBSDL_GameControllerAxis\fP SDLCALL SDL_GameControllerGetAxisFromString (const char * pchString)"
+turn this string into a axis mapping 
+.SS "DECLSPEC \fBSDL_GameControllerButtonBind\fP SDLCALL SDL_GameControllerGetBindForAxis (SDL_GameController * gamecontroller, \fBSDL_GameControllerAxis\fP axis)"
+Get the SDL joystick layer binding for this controller button mapping 
+.SS "DECLSPEC \fBSDL_GameControllerButtonBind\fP SDLCALL SDL_GameControllerGetBindForButton (SDL_GameController * gamecontroller, \fBSDL_GameControllerButton\fP button)"
+Get the SDL joystick layer binding for this controller button mapping 
+.SS "DECLSPEC \fBUint8\fP SDLCALL SDL_GameControllerGetButton (SDL_GameController * gamecontroller, \fBSDL_GameControllerButton\fP button)"
+Get the current state of a button on a game controller\&.
+.PP
+The button indices start at index 0\&. 
+.SS "DECLSPEC \fBSDL_GameControllerButton\fP SDLCALL SDL_GameControllerGetButtonFromString (const char * pchString)"
+turn this string into a button mapping 
+.SS "DECLSPEC SDL_Joystick* SDLCALL SDL_GameControllerGetJoystick (SDL_GameController * gamecontroller)"
+Get the underlying joystick object used by a controller 
+.SS "DECLSPEC const char* SDLCALL SDL_GameControllerGetStringForAxis (\fBSDL_GameControllerAxis\fP axis)"
+turn this axis enum into a string mapping 
+.SS "DECLSPEC const char* SDLCALL SDL_GameControllerGetStringForButton (\fBSDL_GameControllerButton\fP button)"
+turn this button enum into a string mapping 
+.SS "DECLSPEC char* SDLCALL SDL_GameControllerMapping (SDL_GameController * gamecontroller)"
+Get a mapping string for an open GameController
+.PP
+\fBReturns:\fP
+.RS 4
+the mapping string\&. Must be freed with SDL_free\&. Returns NULL if no mapping is available 
+.RE
+.PP
+
+.SS "DECLSPEC char* SDLCALL SDL_GameControllerMappingForGUID (\fBSDL_JoystickGUID\fP guid)"
+Get a mapping string for a GUID
+.PP
+\fBReturns:\fP
+.RS 4
+the mapping string\&. Must be freed with SDL_free\&. Returns NULL if no mapping is available 
+.RE
+.PP
+
+.SS "DECLSPEC const char* SDLCALL SDL_GameControllerName (SDL_GameController * gamecontroller)"
+Return the name for this currently opened controller 
+.SS "DECLSPEC const char* SDLCALL SDL_GameControllerNameForIndex (\fBint\fP joystick_index)"
+Get the implementation dependent name of a game controller\&. This can be called before any controllers are opened\&. If no name can be found, this function returns NULL\&. 
+.SS "DECLSPEC SDL_GameController* SDLCALL SDL_GameControllerOpen (\fBint\fP joystick_index)"
+Open a game controller for use\&. The index passed as an argument refers to the N'th game controller on the system\&. This index is the value which will identify this controller in future controller events\&.
+.PP
+\fBReturns:\fP
+.RS 4
+A controller identifier, or NULL if an error occurred\&. 
+.RE
+.PP
+
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_GameControllerUpdate (\fBvoid\fP)"
+Update the current state of the open game controllers\&.
+.PP
+This is called automatically by the event loop if any game controller events are enabled\&. 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_IsGameController (\fBint\fP joystick_index)"
+Is the joystick on this index supported by the game controller interface? 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

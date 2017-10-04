@@ -1,0 +1,97 @@
+.TH "SDL_HapticRamp" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_HapticRamp \- A structure containing a template for a Ramp effect\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_haptic\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint16\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBSDL_HapticDirection\fP \fBdirection\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBlength\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBdelay\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBinterval\fP"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fBstart\fP"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fBend\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBattack_length\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBattack_level\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBfade_length\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBfade_level\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A structure containing a template for a Ramp effect\&. 
+
+This struct is exclusively for the \fBSDL_HAPTIC_RAMP\fP effect\&.
+.PP
+The ramp effect starts at start strength and ends at end strength\&. It augments in linear fashion\&. If you use attack and fade with a ramp the effects get added to the ramp effect making the effect become quadratic instead of linear\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_HAPTIC_RAMP\fP 
+.PP
+\fBSDL_HapticEffect\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint16\fP SDL_HapticRamp::attack_length"
+Duration of the attack\&. 
+.SS "\fBUint16\fP SDL_HapticRamp::attack_level"
+Level at the start of the attack\&. 
+.SS "\fBUint16\fP SDL_HapticRamp::button"
+\fBButton\fP that triggers the effect\&. 
+.SS "\fBUint16\fP SDL_HapticRamp::delay"
+Delay before starting the effect\&. 
+.SS "\fBSDL_HapticDirection\fP SDL_HapticRamp::direction"
+Direction of the effect\&. 
+.SS "\fBSint16\fP SDL_HapticRamp::end"
+Ending strength level\&. 
+.SS "\fBUint16\fP SDL_HapticRamp::fade_length"
+Duration of the fade\&. 
+.SS "\fBUint16\fP SDL_HapticRamp::fade_level"
+Level at the end of the fade\&. 
+.SS "\fBUint16\fP SDL_HapticRamp::interval"
+How soon it can be triggered again after button\&. 
+.SS "\fBUint32\fP SDL_HapticRamp::length"
+Duration of the effect\&. 
+.SS "\fBSint16\fP SDL_HapticRamp::start"
+Beginning strength level\&. 
+.SS "\fBUint16\fP SDL_HapticRamp::type"
+\fBSDL_HAPTIC_RAMP\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

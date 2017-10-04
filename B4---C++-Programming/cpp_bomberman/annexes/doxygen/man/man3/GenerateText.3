@@ -1,0 +1,160 @@
+.TH "GenerateText" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GenerateText \- Display text on screen\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GenerateText\&.hh>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGenerateText\fP (const std::string &text, float x, float y)"
+.br
+.RI "\fI\fBGenerateText\fP's constructor\&. \fP"
+.ti -1c
+.RI "\fB~GenerateText\fP ()"
+.br
+.RI "\fI\fBGenerateText\fP's destructor\&. \fP"
+.ti -1c
+.RI "void \fBInit\fP ()"
+.br
+.RI "\fIinit vector \fP"
+.ti -1c
+.RI "void \fBDraw\fP (gdl::BasicShader shader)"
+.br
+.RI "\fIDisplay letters' vector\&. \fP"
+.ti -1c
+.RI "int \fBgetY\fP () const "
+.br
+.RI "\fIget Y position \fP"
+.ti -1c
+.RI "std::string const & \fBgetStr\fP () const "
+.br
+.RI "\fIget text draw \fP"
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBObject2D\fP * \fBgetLetterObj\fP (char letter, float x, float y)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string const \fBm_str\fP"
+.br
+.RI "\fIcreate new letter \fP"
+.ti -1c
+.RI "std::vector< \fBObject2D\fP * > \fBm_text\fP"
+.br
+.ti -1c
+.RI "float \fBm_posX\fP"
+.br
+.ti -1c
+.RI "float \fBm_posY\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Display text on screen\&. 
+
+Function to display some text on the screen\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GenerateText::GenerateText (const std::string & text, float x, float y)"
+
+.PP
+\fBGenerateText\fP's constructor\&. It will create our object's vector with every letter needed and set it
+.PP
+\fBParameters:\fP
+.RS 4
+\fItext\fP Text we want to display on the screen 
+.br
+\fIx\fP x's position where we want to display it 
+.br
+\fIy\fP y's position where we want to display it 
+.RE
+.PP
+
+.SS "GenerateText::~GenerateText ()"
+
+.PP
+\fBGenerateText\fP's destructor\&. It will clean / delete every letter in our vector then destroy the class 
+.SH "Member Function Documentation"
+.PP 
+.SS "void GenerateText::Draw (gdl::BasicShader shader)"
+
+.PP
+Display letters' vector\&. It will display our letters' vector\&. This function will be called in the draw's loop in a state (like in \fBGameState\fP)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIshader\fP \fBObject2D\fP need a shader so we need it 
+.RE
+.PP
+
+.SS "std::string const& GenerateText::getStr () const"
+
+.PP
+get text draw 
+.PP
+\fBReturns:\fP
+.RS 4
+text stored in the instance 
+.RE
+.PP
+
+.SS "int GenerateText::getY () const"
+
+.PP
+get Y position 
+.PP
+\fBReturns:\fP
+.RS 4
+return Y position 
+.RE
+.PP
+
+.SS "void GenerateText::Init ()"
+
+.PP
+init vector Every letter are \fBObject2D\fP so they have to be initialized\&. This is the goal of this function 
+.SH "Member Data Documentation"
+.PP 
+.SS "float GenerateText::m_posX\fC [private]\fP"
+X initial position (for the first letter) 
+.SS "float GenerateText::m_posY\fC [private]\fP"
+Y initial position (for the first letter) 
+.SS "std::string const GenerateText::m_str\fC [private]\fP"
+
+.PP
+create new letter Create a new object2d from a char
+.PP
+\fBParameters:\fP
+.RS 4
+\fIletter\fP Letter which well be converted 
+.br
+\fIx\fP x's position 
+.br
+\fIy\fP y's position 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBObject2D\fP created from letterstring used to display text 
+.RE
+.PP
+
+.SS "std::vector<\fBObject2D\fP *> GenerateText::m_text\fC [private]\fP"
+Letters' vector created to display on the screen 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

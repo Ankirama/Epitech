@@ -1,0 +1,17 @@
+digraph "tinyxml2::XMLDocument::Print"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="tinyxml2::XMLDocument\l::Print",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="tinyxml2::XMLDocument\l::Accept",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_document.html#aa08503d24898bf9992ae5e5fb8b0cf87"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="tinyxml2::XMLVisitor\l::VisitEnter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_visitor.html#acb3c22fc5f60eb9db98f533f2761f67d",tooltip="Visit a document. "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="tinyxml2::XMLNode::\lFirstChild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_node.html#a60e923d13d7dc01f45ab90a2f948b02a",tooltip="Get the first child node, or null if none exists. "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="tinyxml2::XMLNode::\lNextSibling",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_node.html#abba1df37581d89dccc45acdc55750ba2",tooltip="Get the next (right) sibling node of this node. "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="tinyxml2::XMLVisitor\l::VisitExit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1_x_m_l_visitor.html#a170e9989cd046ba904f302d087e07086",tooltip="Visit a document. "];
+}

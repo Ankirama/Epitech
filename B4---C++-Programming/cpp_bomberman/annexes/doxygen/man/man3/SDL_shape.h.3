@@ -1,0 +1,220 @@
+.TH "lib/gdl/includes/SDL_shape.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_shape.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_pixels\&.h'\fP
+.br
+\fC#include 'SDL_rect\&.h'\fP
+.br
+\fC#include 'SDL_surface\&.h'\fP
+.br
+\fC#include 'SDL_video\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "union \fBSDL_WindowShapeParams\fP"
+.br
+.RI "\fIA union containing parameters for shaped windows\&. \fP"
+.ti -1c
+.RI "struct \fBSDL_WindowShapeMode\fP"
+.br
+.RI "\fIA struct that tags the \fBSDL_WindowShapeParams\fP union with an enum describing the type of its contents\&. \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_NONSHAPEABLE_WINDOW\fP   -1"
+.br
+.ti -1c
+.RI "#define \fBSDL_INVALID_SHAPE_ARGUMENT\fP   -2"
+.br
+.ti -1c
+.RI "#define \fBSDL_WINDOW_LACKS_SHAPE\fP   -3"
+.br
+.ti -1c
+.RI "#define \fBSDL_SHAPEMODEALPHA\fP(mode)   (mode == \fBShapeModeDefault\fP || mode == \fBShapeModeBinarizeAlpha\fP || mode == \fBShapeModeReverseBinarizeAlpha\fP)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBSDL_WindowShapeMode\fP \fBSDL_WindowShapeMode\fP"
+.br
+.RI "\fIA struct that tags the \fBSDL_WindowShapeParams\fP union with an enum describing the type of its contents\&. \fP"
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBWindowShapeMode\fP { \fBShapeModeDefault\fP, \fBShapeModeBinarizeAlpha\fP, \fBShapeModeReverseBinarizeAlpha\fP, \fBShapeModeColorKey\fP }"
+.br
+.RI "\fIAn enum denoting the specific type of contents present in an \fBSDL_WindowShapeParams\fP union\&. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBSDL_Window\fP *SDLCALL \fBSDL_CreateShapedWindow\fP (const char *title, unsigned \fBint\fP x, unsigned \fBint\fP y, unsigned \fBint\fP w, unsigned \fBint\fP h, \fBUint32\fP flags)"
+.br
+.RI "\fICreate a window that can be shaped with the specified position, dimensions, and flags\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_IsShapedWindow\fP (const \fBSDL_Window\fP *window)"
+.br
+.RI "\fIReturn whether the given window is a shaped window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_SetWindowShape\fP (\fBSDL_Window\fP *window, \fBSDL_Surface\fP *shape, \fBSDL_WindowShapeMode\fP *shape_mode)"
+.br
+.RI "\fISet the shape and parameters of a shaped window\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetShapedWindowMode\fP (\fBSDL_Window\fP *window, \fBSDL_WindowShapeMode\fP *shape_mode)"
+.br
+.RI "\fIGet the shape parameters of a shaped window\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file for the shaped window API\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBWindowShapeMode\fP"
+
+.PP
+An enum denoting the specific type of contents present in an \fBSDL_WindowShapeParams\fP union\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIShapeModeDefault \fP\fP
+The default mode, a binarized alpha cutoff of 1\&. 
+.TP
+\fB\fIShapeModeBinarizeAlpha \fP\fP
+A binarized alpha cutoff with a given integer value\&. 
+.TP
+\fB\fIShapeModeReverseBinarizeAlpha \fP\fP
+A binarized alpha cutoff with a given integer value, but with the opposite comparison\&. 
+.TP
+\fB\fIShapeModeColorKey \fP\fP
+A color key is applied\&. 
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC \fBSDL_Window\fP* SDLCALL SDL_CreateShapedWindow (const char * title, unsigned \fBint\fP x, unsigned \fBint\fP y, unsigned \fBint\fP w, unsigned \fBint\fP h, \fBUint32\fP flags)"
+
+.PP
+Create a window that can be shaped with the specified position, dimensions, and flags\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItitle\fP The title of the window, in UTF-8 encoding\&. 
+.br
+\fIx\fP The x position of the window, ::SDL_WINDOWPOS_CENTERED, or ::SDL_WINDOWPOS_UNDEFINED\&. 
+.br
+\fIy\fP The y position of the window, ::SDL_WINDOWPOS_CENTERED, or ::SDL_WINDOWPOS_UNDEFINED\&. 
+.br
+\fIw\fP The width of the window\&. 
+.br
+\fIh\fP The height of the window\&. 
+.br
+\fIflags\fP The flags for the window, a mask of SDL_WINDOW_BORDERLESS with any of the following: \fBSDL_WINDOW_OPENGL\fP, \fBSDL_WINDOW_INPUT_GRABBED\fP, \fBSDL_WINDOW_HIDDEN\fP, \fBSDL_WINDOW_RESIZABLE\fP, \fBSDL_WINDOW_MAXIMIZED\fP, \fBSDL_WINDOW_MINIMIZED\fP, \fBSDL_WINDOW_BORDERLESS\fP is always set, and \fBSDL_WINDOW_FULLSCREEN\fP is always unset\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The window created, or NULL if window creation failed\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_DestroyWindow()\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetShapedWindowMode (\fBSDL_Window\fP * window, \fBSDL_WindowShapeMode\fP * shape_mode)"
+
+.PP
+Get the shape parameters of a shaped window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The shaped window whose parameters should be retrieved\&. 
+.br
+\fIshape_mode\fP An empty shape-mode structure to fill, or NULL to check whether the window has a shape\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 if the window has a shape and, provided shape_mode was not NULL, shape_mode has been filled with the mode data, SDL_NONSHAPEABLE_WINDOW if the SDL_Window given is not a shaped window, or SDL_WINDOW_LACKS_SHAPE if the SDL_Window* given is a shapeable window currently lacking a shape\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_WindowShapeMode\fP 
+.PP
+\fBSDL_SetWindowShape\fP 
+.RE
+.PP
+
+.SS "DECLSPEC SDL_bool SDLCALL SDL_IsShapedWindow (const \fBSDL_Window\fP * window)"
+
+.PP
+Return whether the given window is a shaped window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window to query for being shaped\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+SDL_TRUE if the window is a window that can be shaped, SDL_FALSE if the window is unshaped or NULL\&. 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_CreateShapedWindow\fP 
+.RE
+.PP
+
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_SetWindowShape (\fBSDL_Window\fP * window, \fBSDL_Surface\fP * shape, \fBSDL_WindowShapeMode\fP * shape_mode)"
+
+.PP
+Set the shape and parameters of a shaped window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The shaped window whose parameters should be set\&. 
+.br
+\fIshape\fP A surface encoding the desired shape for the window\&. 
+.br
+\fIshape_mode\fP The parameters to set for the shaped window\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success, SDL_INVALID_SHAPE_ARGUMENT on invalid an invalid shape argument, or SDL_NONSHAPEABLE_WINDOW if the SDL_Window* given does not reference a valid shaped window\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSDL_WindowShapeMode\fP 
+.PP
+\fBSDL_GetShapedWindowMode\fP\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

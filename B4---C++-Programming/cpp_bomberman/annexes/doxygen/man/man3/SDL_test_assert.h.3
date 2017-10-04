@@ -1,0 +1,116 @@
+.TH "lib/gdl/includes/SDL_test_assert.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_test_assert.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBASSERT_FAIL\fP   0"
+.br
+.RI "\fIFails the assert\&. \fP"
+.ti -1c
+.RI "#define \fBASSERT_PASS\fP   1"
+.br
+.RI "\fIPasses the assert\&. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_Assert\fP (\fBint\fP assertCondition, const char *assertDescription,\&.\&.\&.)"
+.br
+.RI "\fIAssert that logs and break execution flow on failures\&. \fP"
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_AssertCheck\fP (\fBint\fP assertCondition, const char *assertDescription,\&.\&.\&.)"
+.br
+.RI "\fIAssert for test cases that logs but does not break execution flow on failures\&. Updates assertion counters\&. \fP"
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_AssertPass\fP (const char *assertDescription,\&.\&.\&.)"
+.br
+.RI "\fIExplicitely pass without checking an assertion condition\&. Updates assertion counter\&. \fP"
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_ResetAssertSummary\fP ()"
+.br
+.RI "\fIResets the assert summary counters to zero\&. \fP"
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_LogAssertSummary\fP ()"
+.br
+.RI "\fILogs summary of all assertions (total, pass, fail) since last reset as INFO or ERROR\&. \fP"
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_AssertSummaryToTestResult\fP ()"
+.br
+.RI "\fIConverts the current assert summary state to a test result\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL test framework\&.
+.PP
+This code is a part of the SDL2_test library, not the main SDL library\&. 
+.SH "Function Documentation"
+.PP 
+.SS "\fBvoid\fP SDLTest_Assert (\fBint\fP assertCondition, const char * assertDescription,  \&.\&.\&.)"
+
+.PP
+Assert that logs and break execution flow on failures\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIassertCondition\fP Evaluated condition or variable to assert; fail (==0) or pass (!=0)\&. 
+.br
+\fIassertDescription\fP Message to log with the assert describing it\&. 
+.RE
+.PP
+
+.SS "\fBint\fP SDLTest_AssertCheck (\fBint\fP assertCondition, const char * assertDescription,  \&.\&.\&.)"
+
+.PP
+Assert for test cases that logs but does not break execution flow on failures\&. Updates assertion counters\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIassertCondition\fP Evaluated condition or variable to assert; fail (==0) or pass (!=0)\&. 
+.br
+\fIassertDescription\fP Message to log with the assert describing it\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Returns the assertCondition so it can be used to externally to break execution flow if desired\&. 
+.RE
+.PP
+
+.SS "\fBvoid\fP SDLTest_AssertPass (const char * assertDescription,  \&.\&.\&.)"
+
+.PP
+Explicitely pass without checking an assertion condition\&. Updates assertion counter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIassertDescription\fP Message to log with the assert describing it\&. 
+.RE
+.PP
+
+.SS "\fBint\fP SDLTest_AssertSummaryToTestResult ()"
+
+.PP
+Converts the current assert summary state to a test result\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+TEST_RESULT_PASSED, TEST_RESULT_FAILED, or TEST_RESULT_NO_ASSERT 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

@@ -1,0 +1,85 @@
+.TH "lib/gdl/includes/SDL_test_crc32.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_test_crc32.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDLTest_Crc32Context\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCrcUint32\fP   unsigned \fBint\fP"
+.br
+.ti -1c
+.RI "#define \fBCrcUint8\fP   unsigned char"
+.br
+.ti -1c
+.RI "#define \fBCRC32_POLY\fP   0xEDB88320   /* Perl String::CRC32 compatible */"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_Crc32Init\fP (\fBSDLTest_Crc32Context\fP *crcContext)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_crc32Calc\fP (\fBSDLTest_Crc32Context\fP *crcContext, CrcUint8 *inBuf, CrcUint32 inLen, CrcUint32 *crc32)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_Crc32CalcStart\fP (\fBSDLTest_Crc32Context\fP *crcContext, CrcUint32 *crc32)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_Crc32CalcEnd\fP (\fBSDLTest_Crc32Context\fP *crcContext, CrcUint32 *crc32)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_Crc32CalcBuffer\fP (\fBSDLTest_Crc32Context\fP *crcContext, CrcUint8 *inBuf, CrcUint32 inLen, CrcUint32 *crc32)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_Crc32Done\fP (\fBSDLTest_Crc32Context\fP *crcContext)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL test framework\&.
+.PP
+This code is a part of the SDL2_test library, not the main SDL library\&. 
+.SH "Function Documentation"
+.PP 
+.SS "\fBint\fP SDLTest_crc32Calc (\fBSDLTest_Crc32Context\fP * crcContext, CrcUint8 * inBuf, CrcUint32 inLen, CrcUint32 * crc32)"
+/brief calculate a crc32 from a data block
+.PP
+/param crcContext pointer to context variable /param inBuf input buffer to checksum /param inLen length of input buffer /param crc32 pointer to Uint32 to store the final CRC into
+.PP
+/returns 0 for OK, -1 on error 
+.SS "\fBint\fP SDLTest_Crc32Done (\fBSDLTest_Crc32Context\fP * crcContext)"
+/brief clean up CRC context
+.PP
+/param crcContext pointer to context variable
+.PP
+/returns 0 for OK, -1 on error 
+.SS "\fBint\fP SDLTest_Crc32Init (\fBSDLTest_Crc32Context\fP * crcContext)"
+/brief Initialize the CRC context
+.PP
+Note: The function initializes the crc table required for all crc calculations\&.
+.PP
+/param crcContext pointer to context variable
+.PP
+/returns 0 for OK, -1 on error 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

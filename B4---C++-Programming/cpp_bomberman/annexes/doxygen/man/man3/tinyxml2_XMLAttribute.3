@@ -1,0 +1,154 @@
+.TH "tinyxml2::XMLAttribute" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tinyxml2::XMLAttribute \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tinyxml2\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBName\fP () const "
+.br
+.RI "\fIThe name of the attribute\&. \fP"
+.ti -1c
+.RI "const char * \fBValue\fP () const "
+.br
+.RI "\fIThe value of the attribute\&. \fP"
+.ti -1c
+.RI "const \fBXMLAttribute\fP * \fBNext\fP () const "
+.br
+.RI "\fIThe next attribute in the list\&. \fP"
+.ti -1c
+.RI "int \fBIntValue\fP () const "
+.br
+.ti -1c
+.RI "unsigned \fBUnsignedValue\fP () const "
+.br
+.RI "\fIQuery as an unsigned integer\&. See \fBIntValue()\fP \fP"
+.ti -1c
+.RI "bool \fBBoolValue\fP () const "
+.br
+.RI "\fIQuery as a boolean\&. See \fBIntValue()\fP \fP"
+.ti -1c
+.RI "double \fBDoubleValue\fP () const "
+.br
+.RI "\fIQuery as a double\&. See \fBIntValue()\fP \fP"
+.ti -1c
+.RI "float \fBFloatValue\fP () const "
+.br
+.RI "\fIQuery as a float\&. See \fBIntValue()\fP \fP"
+.ti -1c
+.RI "XMLError \fBQueryIntValue\fP (int *value) const "
+.br
+.ti -1c
+.RI "XMLError \fBQueryUnsignedValue\fP (unsigned int *value) const "
+.br
+.RI "\fISee QueryIntValue\&. \fP"
+.ti -1c
+.RI "XMLError \fBQueryBoolValue\fP (bool *value) const "
+.br
+.RI "\fISee QueryIntValue\&. \fP"
+.ti -1c
+.RI "XMLError \fBQueryDoubleValue\fP (double *value) const "
+.br
+.RI "\fISee QueryIntValue\&. \fP"
+.ti -1c
+.RI "XMLError \fBQueryFloatValue\fP (float *value) const "
+.br
+.RI "\fISee QueryIntValue\&. \fP"
+.ti -1c
+.RI "void \fBSetAttribute\fP (const char *value)"
+.br
+.RI "\fISet the attribute to a string value\&. \fP"
+.ti -1c
+.RI "void \fBSetAttribute\fP (int value)"
+.br
+.RI "\fISet the attribute to value\&. \fP"
+.ti -1c
+.RI "void \fBSetAttribute\fP (unsigned value)"
+.br
+.RI "\fISet the attribute to value\&. \fP"
+.ti -1c
+.RI "void \fBSetAttribute\fP (bool value)"
+.br
+.RI "\fISet the attribute to value\&. \fP"
+.ti -1c
+.RI "void \fBSetAttribute\fP (double value)"
+.br
+.RI "\fISet the attribute to value\&. \fP"
+.ti -1c
+.RI "void \fBSetAttribute\fP (float value)"
+.br
+.RI "\fISet the attribute to value\&. \fP"
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBBUF_SIZE\fP = 200 }"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXMLAttribute\fP (const \fBXMLAttribute\fP &)"
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (const \fBXMLAttribute\fP &)"
+.br
+.ti -1c
+.RI "void \fBSetName\fP (const char *name)"
+.br
+.ti -1c
+.RI "char * \fBParseDeep\fP (char *p, bool processEntities)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBStrPair\fP \fB_name\fP"
+.br
+.ti -1c
+.RI "\fBStrPair\fP \fB_value\fP"
+.br
+.ti -1c
+.RI "\fBXMLAttribute\fP * \fB_next\fP"
+.br
+.ti -1c
+.RI "\fBMemPool\fP * \fB_memPool\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBXMLElement\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+An attribute is a name-value pair\&. Elements have an arbitrary number of attributes, each with a unique name\&.
+.PP
+\fBNote:\fP
+.RS 4
+The attributes are not XMLNodes\&. You may only query the \fBNext()\fP attribute in a list\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int tinyxml2::XMLAttribute::IntValue () const\fC [inline]\fP"
+IntValue interprets the attribute as an integer, and returns the value\&. If the value isn't an integer, 0 will be returned\&. There is no error checking; use \fBQueryIntValue()\fP if you need error checking\&. 
+.SS "XMLError tinyxml2::XMLAttribute::QueryIntValue (int * value) const"
+QueryIntValue interprets the attribute as an integer, and returns the value in the provided parameter\&. The function will return XML_NO_ERROR on success, and XML_WRONG_ATTRIBUTE_TYPE if the conversion is not successful\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

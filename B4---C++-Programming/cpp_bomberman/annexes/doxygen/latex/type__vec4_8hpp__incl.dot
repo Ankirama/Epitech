@@ -1,0 +1,37 @@
+digraph "lib/gdl/includes/glm/core/type_vec4.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="lib/gdl/includes/glm\l/core/type_vec4.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="type_vec.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$type__vec_8hpp.html"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="type_gentype.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$type__gentype_8hpp.html"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="type_size.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$type__size_8hpp.html"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="cstdlib",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="type_float.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$type__float_8hpp.html"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="type_half.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$type__half_8hpp.html"];
+  Node7 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="type_half.inl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$type__half_8inl.html"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="_detail.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$__detail_8hpp.html"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="setup.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$setup_8hpp.html"];
+  Node9 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="cassert",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="type_int.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$type__int_8hpp.html"];
+  Node12 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="_swizzle.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$__swizzle_8hpp.html"];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="_swizzle_func.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$__swizzle__func_8hpp.html"];
+}

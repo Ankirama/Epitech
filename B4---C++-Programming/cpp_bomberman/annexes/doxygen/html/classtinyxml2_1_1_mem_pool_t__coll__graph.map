@@ -1,0 +1,6 @@
+<map id="tinyxml2::MemPoolT&lt; SIZE &gt;" name="tinyxml2::MemPoolT&lt; SIZE &gt;">
+<area shape="rect" id="node2" href="$classtinyxml2_1_1_mem_pool.html" title="tinyxml2::MemPool" alt="" coords="478,5,613,32"/>
+<area shape="rect" id="node3" href="$uniontinyxml2_1_1_mem_pool_t_1_1_chunk.html" title="tinyxml2::MemPoolT\l\&lt; SIZE \&gt;::Chunk" alt="" coords="5,73,148,114"/>
+<area shape="rect" id="node5" href="$structtinyxml2_1_1_mem_pool_t_1_1_block.html" title="tinyxml2::MemPoolT\l\&lt; SIZE \&gt;::Block" alt="" coords="236,109,379,150"/>
+<area shape="rect" id="node4" href="$classtinyxml2_1_1_dyn_array.html" title="tinyxml2::DynArray\l\&lt; tinyxml2::MemPoolT\l::Block *, 10 \&gt;" alt="" coords="468,107,623,163"/>
+</map>

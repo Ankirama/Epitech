@@ -1,0 +1,62 @@
+#!/usr/bin/python
+
+import sys, os
+from math import *
+
+def buy(portefeuille, cours):
+ buy_actions = floor(portefeuille[0] / cours)
+ commission = cours * buy_actions + (0.15 / 100.0 * (cours * buy_actions))
+ if (portefeuille[0] - commission < 0):
+  buy_actions = buy_actions - 1
+ portefeuille[0] = portefeuille[0] - cours * buy_actions - ceil((0.15 / 100.0 * (cours * buy_actions)))
+ portefeuille[1] = portefeuille[1] + buy_actions
+ os.write(1, "buy {}\n".format(buy_actions))
+ sys.stdout.flush()
+
+def wait():
+ os.write(1, "wait\n")
+ sys.stdout.flush()
+
+def sell(portefeuille, cours):
+ os.write(1, "sell {}\n".format(portefeuille[1]))
+ sys.stdout.flush()
+ portefeuille[0] = portefeuille[0] + portefeuille[1] * cours - ceil((0.15 / 100.0 * (portefeuille[1] * cours)))
+ portefeuille[1] = 0
+
+def getIn(portefeuille, max_day):
+ info = raw_input()
+ day = 1
+ while (info != "--END--"):
+  cours = (int(info))
+  if (day == max_day):
+   sell(portefeuille, cours)
+  elif (day == 1):
+   buy(portefeuille, cours)
+  else:
+   wait()
+  day = day + 1
+  info = raw_input()
+
+def main():
+ info = raw_input()
+ try:
+  capital = (int(info))
+  if (capital <= 0):
+   raise ValueError("Negative Number")
+ except (ValueError):
+  print("error: [{}] must be a number and positive".format(info))
+ info = raw_input()
+ try:
+  day = (int(info))
+  if (day <= 0):
+   raise ValueError("Negative Number")
+ except (ValueError):
+  print("error: [{}] must be a number and positive".format(info))
+ portefeuille = []
+ actions = 0
+ portefeuille.append(capital)
+ portefeuille.append(actions)
+ getIn(portefeuille, day)
+
+if __name__ == "__main__":
+   main()

@@ -1,0 +1,101 @@
+.TH "lib/gdl/includes/SDL_cpuinfo.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_cpuinfo.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_CACHELINE_SIZE\fP   128"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetCPUCount\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetCPUCacheLineSize\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_HasRDTSC\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_HasAltiVec\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_HasMMX\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_Has3DNow\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_HasSSE\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_HasSSE2\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_HasSSE3\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_HasSSE41\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_HasSSE42\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC SDL_bool SDLCALL \fBSDL_HasAVX\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetSystemRAM\fP (\fBvoid\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+CPU feature detection for SDL\&. 
+.SH "Function Documentation"
+.PP 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetCPUCacheLineSize (\fBvoid\fP)"
+This function returns the L1 cache line size of the CPU
+.PP
+This is useful for determining multi-threaded structure padding or SIMD prefetch sizes\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetCPUCount (\fBvoid\fP)"
+This function returns the number of CPU cores available\&. 
+.SS "DECLSPEC \fBint\fP SDLCALL SDL_GetSystemRAM (\fBvoid\fP)"
+This function returns the amount of RAM configured in the system, in MB\&. 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_Has3DNow (\fBvoid\fP)"
+This function returns true if the CPU has 3DNow! features\&. 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_HasAltiVec (\fBvoid\fP)"
+This function returns true if the CPU has AltiVec features\&. 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_HasAVX (\fBvoid\fP)"
+This function returns true if the CPU has AVX features\&. 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_HasMMX (\fBvoid\fP)"
+This function returns true if the CPU has MMX features\&. 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_HasRDTSC (\fBvoid\fP)"
+This function returns true if the CPU has the RDTSC instruction\&. 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_HasSSE (\fBvoid\fP)"
+This function returns true if the CPU has SSE features\&. 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_HasSSE2 (\fBvoid\fP)"
+This function returns true if the CPU has SSE2 features\&. 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_HasSSE3 (\fBvoid\fP)"
+This function returns true if the CPU has SSE3 features\&. 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_HasSSE41 (\fBvoid\fP)"
+This function returns true if the CPU has SSE4\&.1 features\&. 
+.SS "DECLSPEC SDL_bool SDLCALL SDL_HasSSE42 (\fBvoid\fP)"
+This function returns true if the CPU has SSE4\&.2 features\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

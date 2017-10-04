@@ -1,0 +1,4 @@
+<map id="ACharacter" name="ACharacter">
+<area shape="rect" id="node2" href="$class_i_a.html" title="NPC class. " alt="" coords="5,80,44,107"/>
+<area shape="rect" id="node3" href="$class_player.html" title="Player" alt="" coords="68,80,128,107"/>
+</map>

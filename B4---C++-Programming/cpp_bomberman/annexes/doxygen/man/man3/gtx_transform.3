@@ -1,0 +1,103 @@
+.TH "gtx_transform" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtx_transform \- GLM_GTX_transform
+.PP
+Add transformation matrices\&.  
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::translate\fP (T x, T y, T z)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::translate\fP (detail::tmat4x4< T > const &m, T x, T y, T z)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::translate\fP (detail::tvec3< T > const &v)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::rotate\fP (T angle, T x, T y, T z)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::rotate\fP (T angle, detail::tvec3< T > const &v)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::rotate\fP (detail::tmat4x4< T > const &m, T angle, T x, T y, T z)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::scale\fP (T x, T y, T z)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::scale\fP (detail::tmat4x4< T > const &m, T x, T y, T z)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::scale\fP (detail::tvec3< T > const &v)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Add transformation matrices\&. 
+
+<\fBglm/gtx/transform\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T > detail::tmat4x4<T> glm::rotate (T angle, T x, T y, T z)"
+Builds a rotation 4 * 4 matrix created from an axis of 3 scalars and an angle expressed in degrees\&.
+.IP "\(bu" 2
+From \fBGLM_GTX_transform \fP extension 
+.PP
+
+.SS "template<typename T > detail::tmat4x4<T> glm::rotate (T angle, \fBdetail::tvec3\fP< T > const & v)"
+Builds a rotation 4 * 4 matrix created from an axis of 3 scalars and an angle expressed in degrees\&.
+.IP "\(bu" 2
+From \fBGLM_GTX_transform \fP extension 
+.PP
+
+.SS "template<typename T > detail::tmat4x4<T> glm::rotate (\fBdetail::tmat4x4\fP< T > const & m, T angle, T x, T y, T z)"
+Transforms a matrix with a rotation 4 * 4 matrix created from an axis of 3 scalars and an angle expressed in degrees\&.
+.IP "\(bu" 2
+From \fBGLM_GTX_transform \fP extension 
+.PP
+
+.SS "template<typename T > detail::tmat4x4<T> glm::scale (T x, T y, T z)"
+Builds a scale 4 * 4 matrix created from 3 scalars\&.
+.IP "\(bu" 2
+From \fBGLM_GTX_transform \fP extension 
+.PP
+
+.SS "template<typename T > detail::tmat4x4<T> glm::scale (\fBdetail::tmat4x4\fP< T > const & m, T x, T y, T z)"
+Transforms a matrix with a scale 4 * 4 matrix created from 3 scalars\&.
+.IP "\(bu" 2
+From \fBGLM_GTX_transform \fP extension 
+.PP
+
+.SS "template<typename T > detail::tmat4x4<T> glm::scale (\fBdetail::tvec3\fP< T > const & v)"
+Transforms a matrix with a scale 4 * 4 matrix created from a vector of 3 components\&.
+.IP "\(bu" 2
+From \fBGLM_GTX_transform \fP extension 
+.PP
+
+.SS "template<typename T > detail::tmat4x4<T> glm::translate (T x, T y, T z)"
+Builds a translation 4 * 4 matrix created from 3 scalars\&.
+.IP "\(bu" 2
+From \fBGLM_GTX_transform \fP extension 
+.PP
+
+.SS "template<typename T > detail::tmat4x4<T> glm::translate (\fBdetail::tmat4x4\fP< T > const & m, T x, T y, T z)"
+Transforms a matrix with a translation 4 * 4 matrix created from 3 scalars\&.
+.IP "\(bu" 2
+From \fBGLM_GTX_transform \fP extension 
+.PP
+
+.SS "template<typename T > detail::tmat4x4<T> glm::translate (\fBdetail::tvec3\fP< T > const & v)"
+Transforms a matrix with a translation 4 * 4 matrix created from 3 scalars\&.
+.IP "\(bu" 2
+From \fBGLM_GTX_transform \fP extension 
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

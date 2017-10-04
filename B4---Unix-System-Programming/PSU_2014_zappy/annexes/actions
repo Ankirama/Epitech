@@ -1,0 +1,17 @@
+Actions - gfx cmds (c function) usage
+
+Available:
+-
+
+broadcast:
+pbc (player_broadcast) uniquement pour le broadcaster
+
+dead:
+pin (player_inventory) a chaque fois qu'une unite de temps est consomme -> update de l'inventaire
+pdi (player_dead) envoye lors de la deconnection d'un joueur (mort, joueur qui quitte etcetc) donc dans close_connection
+
+fork:
+pfk (player_egg) a envoyer avant l'execution de l'action fork (donc avant les 42 / t)
+enw (egg_created) a envoyer quand l'action fork est execute (donc apres les 42 / t)
+eht (egg_hatched) a envoyer quand l'oeuf eclot (donc apres les 600 / t)
+

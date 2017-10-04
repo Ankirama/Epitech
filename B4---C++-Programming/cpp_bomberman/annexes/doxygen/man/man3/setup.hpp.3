@@ -1,0 +1,389 @@
+.TH "lib/gdl/includes/glm/core/setup.hpp" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/glm/core/setup.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGLM_VERSION\fP   94"
+.br
+.ti -1c
+.RI "#define \fBGLM_VERSION_MAJOR\fP   0"
+.br
+.ti -1c
+.RI "#define \fBGLM_VERSION_MINOR\fP   9"
+.br
+.ti -1c
+.RI "#define \fBGLM_VERSION_PATCH\fP   4"
+.br
+.ti -1c
+.RI "#define \fBGLM_VERSION_REVISION\fP   3"
+.br
+.ti -1c
+.RI "#define \fBGLM_PLATFORM_UNKNOWN\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBGLM_PLATFORM_WINDOWS\fP   0x00010000"
+.br
+.ti -1c
+.RI "#define \fBGLM_PLATFORM_LINUX\fP   0x00020000"
+.br
+.ti -1c
+.RI "#define \fBGLM_PLATFORM_APPLE\fP   0x00040000"
+.br
+.ti -1c
+.RI "#define \fBGLM_PLATFORM_ANDROID\fP   0x00100000"
+.br
+.ti -1c
+.RI "#define \fBGLM_PLATFORM_CHROME_NACL\fP   0x00200000"
+.br
+.ti -1c
+.RI "#define \fBGLM_PLATFORM_UNIX\fP   0x00400000"
+.br
+.ti -1c
+.RI "#define \fBGLM_PLATFORM_QNXNTO\fP   0x00800000"
+.br
+.ti -1c
+.RI "#define \fBGLM_PLATFORM\fP   GLM_PLATFORM_UNKNOWN"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_UNKNOWN\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_VC\fP   0x01000000"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_VC2\fP   0x01000010"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_VC4\fP   0x01000020"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_VC5\fP   0x01000030"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_VC6\fP   0x01000040"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_VC2002\fP   0x01000050"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_VC2003\fP   0x01000060"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_VC2005\fP   0x01000070"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_VC2008\fP   0x01000080"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_VC2010\fP   0x01000090"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_VC2012\fP   0x010000A0"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC\fP   0x02000000"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC_LLVM\fP   0x02000001"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC_CLANG\fP   0x02000002"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC30\fP   0x02000010"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC31\fP   0x02000020"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC32\fP   0x02000030"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC33\fP   0x02000040"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC34\fP   0x02000050"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC35\fP   0x02000060"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC40\fP   0x02000070"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC41\fP   0x02000080"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC42\fP   0x02000090"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC43\fP   0x020000A0"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC44\fP   0x020000B0"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC45\fP   0x020000C0"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC46\fP   0x020000D0"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC47\fP   0x020000E0"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC48\fP   0x020000F0"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC49\fP   0x02000100"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_GCC50\fP   0x02000200"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_BC\fP   0x04000000"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_BCB4\fP   0x04000100"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_BCB5\fP   0x04000200"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_BCB6\fP   0x04000300"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_BCB2009\fP   0x04000500"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CODEWARRIOR\fP   0x08000000"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CUDA\fP   0x10000000"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CUDA30\fP   0x10000010"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CUDA31\fP   0x10000020"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CUDA32\fP   0x10000030"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CUDA40\fP   0x10000040"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CUDA41\fP   0x10000050"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CUDA42\fP   0x10000060"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CLANG\fP   0x20000000"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CLANG26\fP   0x20000010"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CLANG27\fP   0x20000020"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CLANG28\fP   0x20000030"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CLANG29\fP   0x20000040"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CLANG30\fP   0x20000050"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CLANG31\fP   0x20000060"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CLANG32\fP   0x20000070"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CLANG33\fP   0x20000080"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CLANG40\fP   0x20000090"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CLANG41\fP   0x200000A0"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CLANG42\fP   0x200000B0"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_CLANG43\fP   0x200000C0"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_LLVM_GCC\fP   0x40000000"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_INTEL\fP   0x80000000"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_INTEL9\fP   0x80000010"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_INTEL10_0\fP   0x80000020"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_INTEL10_1\fP   0x80000030"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_INTEL11_0\fP   0x80000040"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_INTEL11_1\fP   0x80000050"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_INTEL12_0\fP   0x80000060"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_INTEL12_1\fP   0x80000070"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER_INTEL13_0\fP   0x80000080"
+.br
+.ti -1c
+.RI "#define \fBGLM_MODEL_32\fP   0x00000010"
+.br
+.ti -1c
+.RI "#define \fBGLM_MODEL_64\fP   0x00000020"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPILER\fP   GLM_COMPILER_UNKNOWN"
+.br
+.ti -1c
+.RI "#define \fBGLM_MODEL\fP   GLM_MODEL_32"
+.br
+.ti -1c
+.RI "#define \fBGLM_LANG_CXX\fP   (0 << 0)"
+.br
+.ti -1c
+.RI "#define \fBGLM_LANG_CXX98\fP   ((1 << 1) | GLM_LANG_CXX)"
+.br
+.ti -1c
+.RI "#define \fBGLM_LANG_CXX03\fP   ((1 << 2) | GLM_LANG_CXX98)"
+.br
+.ti -1c
+.RI "#define \fBGLM_LANG_CXX0X\fP   ((1 << 3) | GLM_LANG_CXX03)"
+.br
+.ti -1c
+.RI "#define \fBGLM_LANG_CXX11\fP   ((1 << 4) | GLM_LANG_CXX0X)"
+.br
+.ti -1c
+.RI "#define \fBGLM_LANG_CXXMS\fP   (1 << 5)"
+.br
+.ti -1c
+.RI "#define \fBGLM_LANG_CXXGNU\fP   (1 << 6)"
+.br
+.ti -1c
+.RI "#define \fBGLM_LANG\fP   GLM_LANG_CXX"
+.br
+.ti -1c
+.RI "#define \fBGLM_ARCH_PURE\fP   0x0000"
+.br
+.ti -1c
+.RI "#define \fBGLM_ARCH_SSE2\fP   0x0001"
+.br
+.ti -1c
+.RI "#define \fBGLM_ARCH_SSE3\fP   0x0002"
+.br
+.ti -1c
+.RI "#define \fBGLM_ARCH_SSE4\fP   0x0004"
+.br
+.ti -1c
+.RI "#define \fBGLM_ARCH_AVX\fP   0x0008"
+.br
+.ti -1c
+.RI "#define \fBGLM_ARCH_AVX2\fP   0x0010"
+.br
+.ti -1c
+.RI "#define \fBGLM_ARCH\fP   GLM_ARCH_PURE"
+.br
+.ti -1c
+.RI "#define \fBGLM_SUPPORT_ANONYMOUS_UNION\fP()   ((GLM_LANG & GLM_LANG_CXX98) == GLM_LANG_CXX98)"
+.br
+.ti -1c
+.RI "#define \fBGLM_SUPPORT_ANONYMOUS_UNION_OF_STRUCTURE\fP()   (((GLM_LANG & GLM_LANG_CXX11) == GLM_LANG_CXX11) || ((GLM_COMPILER & GLM_COMPILER_VC) && ((GLM_LANG & GLM_LANG_CXXMS) == GLM_LANG_CXXMS)) || ((GLM_LANG == GLM_LANG_CXX0X) == GLM_LANG_CXX0X))"
+.br
+.ti -1c
+.RI "#define \fBGLM_SUPPORT_SWIZZLE_OPERATOR\fP()   (/*defined(GLM_SWIZZLE) && */GLM_SUPPORT_ANONYMOUS_UNION_OF_STRUCTURE())"
+.br
+.ti -1c
+.RI "#define \fBGLM_SUPPORT_SWIZZLE_FUNCTION\fP()   defined(GLM_SWIZZLE)"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPONENT_ONLY_XYZW\fP   0"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPONENT_CXX98\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPONENT_CXX11\fP   2"
+.br
+.ti -1c
+.RI "#define \fBGLM_COMPONENT\fP   GLM_COMPONENT_ONLY_XYZW"
+.br
+.ti -1c
+.RI "#define \fBGLM_STATIC_ASSERT\fP(x,  message)"
+.br
+.ti -1c
+.RI "#define \fBGLM_STATIC_ASSERT_NULL\fP"
+.br
+.ti -1c
+.RI "#define \fBGLM_CUDA_FUNC_DEF\fP"
+.br
+.ti -1c
+.RI "#define \fBGLM_CUDA_FUNC_DECL\fP"
+.br
+.ti -1c
+.RI "#define \fBGLM_VAR_USED\fP"
+.br
+.ti -1c
+.RI "#define \fBGLM_INLINE\fP   inline"
+.br
+.ti -1c
+.RI "#define \fBGLM_FUNC_DECL\fP   GLM_CUDA_FUNC_DECL"
+.br
+.ti -1c
+.RI "#define \fBGLM_FUNC_QUALIFIER\fP   GLM_CUDA_FUNC_DEF GLM_INLINE"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+OpenGL Mathematics (glm\&.g-truc\&.net)
+.PP
+Copyright (c) 2005 - 2013 G-Truc Creation (www\&.g-truc\&.net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software\&.
+.PP
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\&. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE\&.
+.PP
+\fBGLM Core\fP
+.PP
+\fBDate:\fP
+.RS 4
+2006-11-13 / 2011-06-15 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christophe Riccio 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

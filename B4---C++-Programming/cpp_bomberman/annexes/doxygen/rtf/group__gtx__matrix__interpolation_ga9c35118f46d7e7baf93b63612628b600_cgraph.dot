@@ -1,0 +1,13 @@
+digraph "glm::axisAngleMatrix"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::axisAngleMatrix",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::cos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__trigonometric.html#gac6708d4f0895dc79b65f50db00840167"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::sin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__trigonometric.html#gafbab21016b7f3bc21afb09a7e42e2df1"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::normalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__geometric.html#ga15aa87101457e41663b08a8dcc3357f8"];
+}

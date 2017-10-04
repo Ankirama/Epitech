@@ -1,0 +1,73 @@
+\hypertarget{classgdl_1_1_model}{}\section{gdl\+:\+:Model Class Reference}
+\label{classgdl_1_1_model}\index{gdl\+::\+Model@{gdl\+::\+Model}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classgdl_1_1_model_a2880a8151a0a076dccc17c8a12530dcc}{}\hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries pause} (bool pause\+Anim)\label{classgdl_1_1_model_a2880a8151a0a076dccc17c8a12530dcc}
+
+\item 
+\hypertarget{classgdl_1_1_model_a223b04dc9a2007ac22cc71d019af5749}{}bool {\bfseries set\+Current\+Anim} (\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} stack, bool loop=true)\label{classgdl_1_1_model_a223b04dc9a2007ac22cc71d019af5749}
+
+\item 
+\hypertarget{classgdl_1_1_model_ac4210edf1cfc619f8948e83820b41ca9}{}bool {\bfseries set\+Current\+Anim} (std\+::string const \&name, bool loop=true)\label{classgdl_1_1_model_ac4210edf1cfc619f8948e83820b41ca9}
+
+\item 
+\hypertarget{classgdl_1_1_model_a6c07ff9af9e5f21976f74c76969c5209}{}\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries get\+Animation\+Frame\+Number} (\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} stack)\label{classgdl_1_1_model_a6c07ff9af9e5f21976f74c76969c5209}
+
+\item 
+\hypertarget{classgdl_1_1_model_a2f46e23c1f5bbf46724ab88d4e09edeb}{}\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries get\+Animation\+Frame\+Number} (std\+::string const \&name)\label{classgdl_1_1_model_a2f46e23c1f5bbf46724ab88d4e09edeb}
+
+\item 
+\hypertarget{classgdl_1_1_model_a145f9bb956d043c28f23d8714e72447c}{}float {\bfseries get\+Frame\+Duration} ()\label{classgdl_1_1_model_a145f9bb956d043c28f23d8714e72447c}
+
+\item 
+\hypertarget{classgdl_1_1_model_ac903e3a9a4da067bf245a26e4bb02fd0}{}bool {\bfseries create\+Sub\+Anim} (\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} stack, std\+::string const \&sub\+Anim\+Name, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} frame\+Start, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} frame\+End)\label{classgdl_1_1_model_ac903e3a9a4da067bf245a26e4bb02fd0}
+
+\item 
+\hypertarget{classgdl_1_1_model_aa712f9125986a0d0ee9520e73a2a0f66}{}bool {\bfseries create\+Sub\+Anim} (std\+::string const \&name, std\+::string const \&sub\+Anim\+Name, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} frame\+Start, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} frame\+End)\label{classgdl_1_1_model_aa712f9125986a0d0ee9520e73a2a0f66}
+
+\item 
+\hypertarget{classgdl_1_1_model_a7167ca64cd426f7bd46756ed33bad12f}{}bool {\bfseries set\+Current\+Sub\+Anim} (std\+::string const \&name, bool loop=true)\label{classgdl_1_1_model_a7167ca64cd426f7bd46756ed33bad12f}
+
+\item 
+\hypertarget{classgdl_1_1_model_a73175b246228b1a275a4cf2b59c8d5cd}{}bool {\bfseries load} (std\+::string const \&path)\label{classgdl_1_1_model_a73175b246228b1a275a4cf2b59c8d5cd}
+
+\item 
+\hypertarget{classgdl_1_1_model_a57be549452c2bef282709fe02b0072a3}{}\hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries draw} (\hyperlink{classgdl_1_1_a_shader}{A\+Shader} \&shader, \hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4} const \&transform, double delta\+Time)\label{classgdl_1_1_model_a57be549452c2bef282709fe02b0072a3}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classgdl_1_1_model_a27dfe1058071caf1285b305ae6c9f5ff}{}\hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} {\bfseries remove\+From\+Manager} ()\label{classgdl_1_1_model_a27dfe1058071caf1285b305ae6c9f5ff}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classgdl_1_1_model_a77abc5e28c6bb239efe898c63312fa2f}{}Fbx\+Model $\ast$ {\bfseries \+\_\+model}\label{classgdl_1_1_model_a77abc5e28c6bb239efe898c63312fa2f}
+
+\item 
+\hypertarget{classgdl_1_1_model_a93a620a2af97597fb545f86dd236063a}{}S\+Fbx\+Model\+Handler $\ast$ {\bfseries \+\_\+model\+Handler}\label{classgdl_1_1_model_a93a620a2af97597fb545f86dd236063a}
+
+\item 
+\hypertarget{classgdl_1_1_model_a5c801dcd2b17b692c9762f5a76a53e65}{}bool {\bfseries \+\_\+loop}\label{classgdl_1_1_model_a5c801dcd2b17b692c9762f5a76a53e65}
+
+\item 
+\hypertarget{classgdl_1_1_model_a6513f5a017d5a0a542372522b2f1781b}{}double {\bfseries \+\_\+time\+Since\+Last\+Frame}\label{classgdl_1_1_model_a6513f5a017d5a0a542372522b2f1781b}
+
+\item 
+\hypertarget{classgdl_1_1_model_aa97070e9962ec6b5f86d55ab642b7025}{}std\+::map$<$ std\+::string, S\+Sub\+Animation\+Datas $>$ {\bfseries \+\_\+sub\+Anims}\label{classgdl_1_1_model_aa97070e9962ec6b5f86d55ab642b7025}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classgdl_1_1_model_adbb05700333f09f60d288734fe9a6eaa}{}static std\+::map$<$ std\+::string, S\+Fbx\+Model\+Handler $\ast$ $>$ {\bfseries \+\_\+mesh\+Manager}\label{classgdl_1_1_model_adbb05700333f09f60d288734fe9a6eaa}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/gdl/includes/Model.\+hh\end{DoxyCompactItemize}

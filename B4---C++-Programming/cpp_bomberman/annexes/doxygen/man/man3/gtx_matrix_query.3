@@ -1,0 +1,62 @@
+.TH "gtx_matrix_query" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtx_matrix_query \- GLM_GTX_matrix_query
+.PP
+Query to evaluate matrix properties\&.  
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > bool \fBglm::isNull\fP (detail::tmat2x2< T > const &m, T const &epsilon)"
+.br
+.ti -1c
+.RI "template<typename T > bool \fBglm::isNull\fP (detail::tmat3x3< T > const &m, T const &epsilon)"
+.br
+.ti -1c
+.RI "template<typename T > bool \fBglm::isNull\fP (detail::tmat4x4< T > const &m, T const &epsilon)"
+.br
+.ti -1c
+.RI "template<typename genType > bool \fBglm::isIdentity\fP (genType const &m, typename genType::value_type const &epsilon)"
+.br
+.ti -1c
+.RI "template<typename valType > bool \fBglm::isNormalized\fP (detail::tmat2x2< valType > const &m, valType const &epsilon)"
+.br
+.ti -1c
+.RI "template<typename valType > bool \fBglm::isNormalized\fP (detail::tmat3x3< valType > const &m, valType const &epsilon)"
+.br
+.ti -1c
+.RI "template<typename valType > bool \fBglm::isNormalized\fP (detail::tmat4x4< valType > const &m, valType const &epsilon)"
+.br
+.ti -1c
+.RI "template<typename valType , template< typename > class matType> bool \fBglm::isOrthogonal\fP (matType< valType > const &m, valType const &epsilon)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Query to evaluate matrix properties\&. 
+
+<\fBglm/gtx/matrix_query\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename genType > bool glm::isIdentity (genType const & m, typename genType::value_type const & epsilon)"
+Return whether a matrix is an identity matrix\&. From GLM_GTX_matrix_query extension\&. 
+.SS "template<typename valType > bool glm::isNormalized (\fBdetail::tmat2x2\fP< valType > const & m, valType const & epsilon)"
+Return whether a matrix is a normalized matrix\&. From GLM_GTX_matrix_query extension\&. 
+.SS "template<typename valType > bool glm::isNormalized (\fBdetail::tmat3x3\fP< valType > const & m, valType const & epsilon)"
+Return whether a matrix is a normalized matrix\&. From GLM_GTX_matrix_query extension\&. 
+.SS "template<typename valType > bool glm::isNormalized (\fBdetail::tmat4x4\fP< valType > const & m, valType const & epsilon)"
+Return whether a matrix is a normalized matrix\&. From GLM_GTX_matrix_query extension\&. 
+.SS "template<typename T > bool glm::isNull (\fBdetail::tmat2x2\fP< T > const & m, T const & epsilon)"
+Return whether a matrix a null matrix\&. From GLM_GTX_matrix_query extension\&. 
+.SS "template<typename T > bool glm::isNull (\fBdetail::tmat3x3\fP< T > const & m, T const & epsilon)"
+Return whether a matrix a null matrix\&. From GLM_GTX_matrix_query extension\&. 
+.SS "template<typename T > bool glm::isNull (\fBdetail::tmat4x4\fP< T > const & m, T const & epsilon)"
+Return whether a matrix is a null matrix\&. From GLM_GTX_matrix_query extension\&. 
+.SS "template<typename valType , template< typename > class matType> bool glm::isOrthogonal (matType< valType > const & m, valType const & epsilon)"
+Return whether a matrix is an orthonormalized matrix\&. From GLM_GTX_matrix_query extension\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

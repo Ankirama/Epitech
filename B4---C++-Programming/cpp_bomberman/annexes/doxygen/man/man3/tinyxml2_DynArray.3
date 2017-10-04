@@ -1,0 +1,84 @@
+.TH "tinyxml2::DynArray< T, INITIAL_SIZE >" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tinyxml2::DynArray< T, INITIAL_SIZE > \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "void \fBPush\fP (T t)"
+.br
+.ti -1c
+.RI "T * \fBPushArr\fP (int count)"
+.br
+.ti -1c
+.RI "T \fBPop\fP ()"
+.br
+.ti -1c
+.RI "void \fBPopArr\fP (int count)"
+.br
+.ti -1c
+.RI "bool \fBEmpty\fP () const "
+.br
+.ti -1c
+.RI "T & \fBoperator[]\fP (int i)"
+.br
+.ti -1c
+.RI "const T & \fBoperator[]\fP (int i) const "
+.br
+.ti -1c
+.RI "const T & \fBPeekTop\fP () const "
+.br
+.ti -1c
+.RI "int \fBSize\fP () const "
+.br
+.ti -1c
+.RI "int \fBCapacity\fP () const "
+.br
+.ti -1c
+.RI "const T * \fBMem\fP () const "
+.br
+.ti -1c
+.RI "T * \fBMem\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDynArray\fP (const \fBDynArray\fP &)"
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (const \fBDynArray\fP &)"
+.br
+.ti -1c
+.RI "void \fBEnsureCapacity\fP (int cap)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "T * \fB_mem\fP"
+.br
+.ti -1c
+.RI "T \fB_pool\fP [INITIAL_SIZE]"
+.br
+.ti -1c
+.RI "int \fB_allocated\fP"
+.br
+.ti -1c
+.RI "int \fB_size\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

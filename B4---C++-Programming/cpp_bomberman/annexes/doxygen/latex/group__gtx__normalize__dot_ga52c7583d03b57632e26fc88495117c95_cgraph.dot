@@ -1,0 +1,13 @@
+digraph "glm::normalizeDot"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::normalizeDot",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="glm::dot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__geometric.html#ga05244a4e222740e5e38abe91fc51df79"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="glm::inversesqrt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__exponential.html#ga5ac08ead2e50ad0295b9ad85a3e449e9"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="glm::sqrt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__exponential.html#ga2317d4ff45af448b8402431afa0711f3"];
+}

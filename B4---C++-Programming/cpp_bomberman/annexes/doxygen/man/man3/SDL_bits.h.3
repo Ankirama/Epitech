@@ -1,0 +1,39 @@
+.TH "lib/gdl/includes/SDL_bits.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_bits.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "SDL_FORCE_INLINE \fBint\fP \fBSDL_MostSignificantBitIndex32\fP (\fBUint32\fP x)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Functions for fiddling with bits and bitmasks\&.
+.SH "Function Documentation"
+.PP 
+.SS "SDL_FORCE_INLINE \fBint\fP SDL_MostSignificantBitIndex32 (\fBUint32\fP x)"
+Get the index of the most significant bit\&. Result is undefined when called with 0\&. This operation can also be stated as 'count leading zeroes' and 'log base 2'\&.
+.PP
+\fBReturns:\fP
+.RS 4
+Index of the most significant bit, or -1 if the value is 0\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

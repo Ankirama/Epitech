@@ -1,0 +1,40 @@
+#!/usr/bin/python2.7
+
+import sys
+from my_calc import *
+
+def     usage():
+    '''display usage'''
+    print "Usage : ./106bombyx k(1 <= k <= 4) or"
+    print "./106bombyx imin (0 <= imin) imax (imin < imax)"
+    sys.exit()
+
+def     main():
+    '''main function to check params'''
+    if (len(sys.argv) < 2 or len(sys.argv) > 3):
+        usage()
+    try:
+        if (len(sys.argv) == 2):
+            k = (float(sys.argv[1]))
+            if (k < 1 or k > 4):
+                raise SyntaxError('k < 1 or k > 4')
+        else:
+            imin = (int(sys.argv[1]))
+            if (imin <= 0):
+                raise SyntaxError('imin <= 0')
+            imax = (int(sys.argv[2]))
+            if (imax < imin):
+                raise SyntaxError('imax < imin')
+    except ValueError as e:
+        print "error: {0}".format(e)
+        usage()
+    except SyntaxError as e:
+        print "error: {0}".format(e)
+        usage()
+    if (len(sys.argv) == 2):
+        my_generation(k)
+    else:
+        my_result(imin, imax)
+
+if __name__ == "__main__":
+    main()

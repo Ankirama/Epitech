@@ -1,0 +1,179 @@
+.TH "lib/gdl/includes/SDL_test_common.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_test_common.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDLTest_CommonState\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDEFAULT_WINDOW_WIDTH\fP   640"
+.br
+.ti -1c
+.RI "#define \fBDEFAULT_WINDOW_HEIGHT\fP   480"
+.br
+.ti -1c
+.RI "#define \fBVERBOSE_VIDEO\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBVERBOSE_MODES\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBVERBOSE_RENDER\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBVERBOSE_EVENT\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBVERBOSE_AUDIO\fP   0x00000010"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSDLTest_CommonState\fP * \fBSDLTest_CommonCreateState\fP (char **argv, \fBUint32\fP flags)"
+.br
+.RI "\fIParse command line parameters and create common state\&. \fP"
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_CommonArg\fP (\fBSDLTest_CommonState\fP *state, \fBint\fP index)"
+.br
+.RI "\fIProcess one common argument\&. \fP"
+.ti -1c
+.RI "const char * \fBSDLTest_CommonUsage\fP (\fBSDLTest_CommonState\fP *state)"
+.br
+.RI "\fIReturns common usage information\&. \fP"
+.ti -1c
+.RI "SDL_bool \fBSDLTest_CommonInit\fP (\fBSDLTest_CommonState\fP *state)"
+.br
+.RI "\fIOpen test window\&. \fP"
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_CommonEvent\fP (\fBSDLTest_CommonState\fP *state, \fBSDL_Event\fP *event, \fBint\fP *done)"
+.br
+.RI "\fICommon event handler for test windows\&. \fP"
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_CommonQuit\fP (\fBSDLTest_CommonState\fP *state)"
+.br
+.RI "\fIClose test window\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL test framework\&.
+.PP
+This code is a part of the SDL2_test library, not the main SDL library\&. 
+.SH "Function Documentation"
+.PP 
+.SS "\fBint\fP SDLTest_CommonArg (\fBSDLTest_CommonState\fP * state, \fBint\fP index)"
+
+.PP
+Process one common argument\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstate\fP The common state describing the test window to create\&. 
+.br
+\fIindex\fP The index of the argument to process in argv[]\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The number of arguments processed (i\&.e\&. 1 for --fullscreen, 2 for --video [videodriver], or -1 on error\&. 
+.RE
+.PP
+
+.SS "\fBSDLTest_CommonState\fP* SDLTest_CommonCreateState (char ** argv, \fBUint32\fP flags)"
+
+.PP
+Parse command line parameters and create common state\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargv\fP Array of command line parameters 
+.br
+\fIflags\fP Flags indicating which subsystem to initialize (i\&.e\&. SDL_INIT_VIDEO | SDL_INIT_AUDIO)
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Returns a newly allocated common state object\&. 
+.RE
+.PP
+
+.SS "\fBvoid\fP SDLTest_CommonEvent (\fBSDLTest_CommonState\fP * state, \fBSDL_Event\fP * event, \fBint\fP * done)"
+
+.PP
+Common event handler for test windows\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstate\fP The common state used to create test window\&. 
+.br
+\fIevent\fP The event to handle\&. 
+.br
+\fIdone\fP Flag indicating we are done\&. 
+.RE
+.PP
+
+.SS "SDL_bool SDLTest_CommonInit (\fBSDLTest_CommonState\fP * state)"
+
+.PP
+Open test window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstate\fP The common state describing the test window to create\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+True if initialization succeeded, false otherwise 
+.RE
+.PP
+
+.SS "\fBvoid\fP SDLTest_CommonQuit (\fBSDLTest_CommonState\fP * state)"
+
+.PP
+Close test window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstate\fP The common state used to create test window\&. 
+.RE
+.PP
+
+.SS "const char* SDLTest_CommonUsage (\fBSDLTest_CommonState\fP * state)"
+
+.PP
+Returns common usage information\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstate\fP The common state describing the test window to create\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String with usage information 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

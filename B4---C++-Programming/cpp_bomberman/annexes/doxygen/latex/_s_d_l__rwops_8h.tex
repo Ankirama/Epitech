@@ -1,0 +1,166 @@
+\hypertarget{_s_d_l__rwops_8h}{}\section{lib/gdl/includes/\+S\+D\+L\+\_\+rwops.h File Reference}
+\label{_s_d_l__rwops_8h}\index{lib/gdl/includes/\+S\+D\+L\+\_\+rwops.\+h@{lib/gdl/includes/\+S\+D\+L\+\_\+rwops.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+Include dependency graph for S\+D\+L\+\_\+rwops.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__rwops_8h_abefd1a35086e97620beffc2c069bd97d}{}\#define {\bfseries S\+D\+L\+\_\+\+R\+W\+O\+P\+S\+\_\+\+U\+N\+K\+N\+O\+W\+N}~0   /$\ast$ Unknown stream type $\ast$/\label{_s_d_l__rwops_8h_abefd1a35086e97620beffc2c069bd97d}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_ad979b58d7905cfd8af0bab9ed97c1685}{}\#define {\bfseries S\+D\+L\+\_\+\+R\+W\+O\+P\+S\+\_\+\+W\+I\+N\+F\+I\+L\+E}~1   /$\ast$ Win32 file $\ast$/\label{_s_d_l__rwops_8h_ad979b58d7905cfd8af0bab9ed97c1685}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a054a717fd0b1a2f175e2e822e1ecc67d}{}\#define {\bfseries S\+D\+L\+\_\+\+R\+W\+O\+P\+S\+\_\+\+S\+T\+D\+F\+I\+L\+E}~2   /$\ast$ Stdio file $\ast$/\label{_s_d_l__rwops_8h_a054a717fd0b1a2f175e2e822e1ecc67d}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_ad1e973a8b9f9c6cae33f2870c9f76b7d}{}\#define {\bfseries S\+D\+L\+\_\+\+R\+W\+O\+P\+S\+\_\+\+J\+N\+I\+F\+I\+L\+E}~3   /$\ast$ Android asset $\ast$/\label{_s_d_l__rwops_8h_ad1e973a8b9f9c6cae33f2870c9f76b7d}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a1120765c20af356803b2beb6709e6749}{}\#define {\bfseries S\+D\+L\+\_\+\+R\+W\+O\+P\+S\+\_\+\+M\+E\+M\+O\+R\+Y}~4   /$\ast$ Memory stream $\ast$/\label{_s_d_l__rwops_8h_a1120765c20af356803b2beb6709e6749}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a145dd63b72548f37e2fdd9de8bf15bbc}{}\#define {\bfseries S\+D\+L\+\_\+\+R\+W\+O\+P\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+R\+O}~5   /$\ast$ Read-\/Only memory stream $\ast$/\label{_s_d_l__rwops_8h_a145dd63b72548f37e2fdd9de8bf15bbc}
+
+\item 
+\#define \hyperlink{_s_d_l__rwops_8h_ac028b032bb8230df64bc6284e04789f5}{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T}~0
+\item 
+\#define \hyperlink{_s_d_l__rwops_8h_aba5f3b60c197def370ffa2ca1ab1348d}{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R}~1
+\item 
+\#define \hyperlink{_s_d_l__rwops_8h_a6cf141faabd1b8f2ec3c03cf76eaf553}{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D}~2
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Read/write macros}\par
+{\em Macros to easily read and write from an \hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} structure. }\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__rwops_8h_af4709cdb6df63500202f278ed179a2a1}{}\#define {\bfseries S\+D\+L\+\_\+\+R\+Wsize}(ctx)~(ctx)-\/$>$size(ctx)\label{_s_d_l__rwops_8h_af4709cdb6df63500202f278ed179a2a1}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a21053fbfbd96536cb7b9404a12f66822}{}\#define {\bfseries S\+D\+L\+\_\+\+R\+Wseek}(ctx,  offset,  whence)~(ctx)-\/$>$seek(ctx, offset, whence)\label{_s_d_l__rwops_8h_a21053fbfbd96536cb7b9404a12f66822}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_abda2d76d76788e378d4d27344eb71d43}{}\#define {\bfseries S\+D\+L\+\_\+\+R\+Wtell}(ctx)~(ctx)-\/$>$seek(ctx, 0, \hyperlink{_s_d_l__rwops_8h_aba5f3b60c197def370ffa2ca1ab1348d}{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R})\label{_s_d_l__rwops_8h_abda2d76d76788e378d4d27344eb71d43}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a49822992c9b056f6cf6cfc52c9a13050}{}\#define {\bfseries S\+D\+L\+\_\+\+R\+Wread}(ctx,  ptr,  size,  n)~(ctx)-\/$>$read(ctx, ptr, size, n)\label{_s_d_l__rwops_8h_a49822992c9b056f6cf6cfc52c9a13050}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a83549e70a4a09a1d10c7a1b14b5cbdf4}{}\#define {\bfseries S\+D\+L\+\_\+\+R\+Wwrite}(ctx,  ptr,  size,  n)~(ctx)-\/$>$write(ctx, ptr, size, n)\label{_s_d_l__rwops_8h_a83549e70a4a09a1d10c7a1b14b5cbdf4}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a02700bab029c9438c0102457822c1231}{}\#define {\bfseries S\+D\+L\+\_\+\+R\+Wclose}(ctx)~(ctx)-\/$>$close(ctx)\label{_s_d_l__rwops_8h_a02700bab029c9438c0102457822c1231}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} \hyperlink{_s_d_l__rwops_8h_af758c42c576a0612bdf298c5823a5fe5}{S\+D\+L\+\_\+\+R\+Wops}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__rwops_8h_a02d04e13c85cd28706b8c3881c32dd46}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Alloc\+R\+W} (\hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void})\label{_s_d_l__rwops_8h_a02d04e13c85cd28706b8c3881c32dd46}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_ac4c87c7bed186ea1a98531164ff1acfa}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Free\+R\+W} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$area)\label{_s_d_l__rwops_8h_ac4c87c7bed186ea1a98531164ff1acfa}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf R\+W\+From functions}\par
+{\em Functions to create \hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} structures from various data streams. }\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__rwops_8h_aef7e843c3486bd1770667a594aa0b439}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+R\+W\+From\+File} (const char $\ast$file, const char $\ast$mode)\label{_s_d_l__rwops_8h_aef7e843c3486bd1770667a594aa0b439}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a53e066cae0672b16506a4204bb719e95}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+R\+W\+From\+F\+P} (F\+I\+L\+E $\ast$fp, S\+D\+L\+\_\+bool autoclose)\label{_s_d_l__rwops_8h_a53e066cae0672b16506a4204bb719e95}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_ae6f34841ce63d08597477558ffc0278e}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+R\+W\+From\+Mem} (\hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} $\ast$mem, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} size)\label{_s_d_l__rwops_8h_ae6f34841ce63d08597477558ffc0278e}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a51b4be80c4647e8a473b6b9fed03b1a6}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+R\+W\+From\+Const\+Mem} (const \hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} $\ast$mem, \hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} size)\label{_s_d_l__rwops_8h_a51b4be80c4647e8a473b6b9fed03b1a6}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Read endian functions}\par
+{\em Read an item of the specified endianness and return in native format. }\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__rwops_8h_ab864094eb6b80fbf0c77d34ecdde7907}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Read\+U8} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$src)\label{_s_d_l__rwops_8h_ab864094eb6b80fbf0c77d34ecdde7907}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a7274f5c4b6f22a6b742ec6ef4f9d390b}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Read\+L\+E16} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$src)\label{_s_d_l__rwops_8h_a7274f5c4b6f22a6b742ec6ef4f9d390b}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a3cdf85a50e40dc58536930429b7b4d09}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Read\+B\+E16} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$src)\label{_s_d_l__rwops_8h_a3cdf85a50e40dc58536930429b7b4d09}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a8320334c299a3631fd6beb9937c30f04}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Read\+L\+E32} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$src)\label{_s_d_l__rwops_8h_a8320334c299a3631fd6beb9937c30f04}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_af023e134e3ae87b1595306e5faeaab76}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Read\+B\+E32} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$src)\label{_s_d_l__rwops_8h_af023e134e3ae87b1595306e5faeaab76}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_af7e5d9b56874b8bd3a8a6a0c5393c33d}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__stdinc_8h_ac006cf2bd55a42a9cc8ae9f123aa7e13}{Uint64} S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Read\+L\+E64} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$src)\label{_s_d_l__rwops_8h_af7e5d9b56874b8bd3a8a6a0c5393c33d}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a4917dc584d162bc5f28b63843557214e}{}D\+E\+C\+L\+S\+P\+E\+C \hyperlink{_s_d_l__stdinc_8h_ac006cf2bd55a42a9cc8ae9f123aa7e13}{Uint64} S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Read\+B\+E64} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$src)\label{_s_d_l__rwops_8h_a4917dc584d162bc5f28b63843557214e}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Write endian functions}\par
+{\em Write an item of native format to the specified endianness. }\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_s_d_l__rwops_8h_a07c817f8360ddc8c8983d12373306555}{}D\+E\+C\+L\+S\+P\+E\+C size\+\_\+t S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Write\+U8} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$dst, \hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} value)\label{_s_d_l__rwops_8h_a07c817f8360ddc8c8983d12373306555}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_aa4a7df8d967c5751e3f0974743b9c2d4}{}D\+E\+C\+L\+S\+P\+E\+C size\+\_\+t S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Write\+L\+E16} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$dst, \hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} value)\label{_s_d_l__rwops_8h_aa4a7df8d967c5751e3f0974743b9c2d4}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_ab84ea778a5f8f76cd73a52216c2c08f5}{}D\+E\+C\+L\+S\+P\+E\+C size\+\_\+t S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Write\+B\+E16} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$dst, \hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} value)\label{_s_d_l__rwops_8h_ab84ea778a5f8f76cd73a52216c2c08f5}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a84f37961925773fe8b06ea09ed144568}{}D\+E\+C\+L\+S\+P\+E\+C size\+\_\+t S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Write\+L\+E32} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$dst, \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} value)\label{_s_d_l__rwops_8h_a84f37961925773fe8b06ea09ed144568}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a5debf04eeed819018ddd9a2f70d32c89}{}D\+E\+C\+L\+S\+P\+E\+C size\+\_\+t S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Write\+B\+E32} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$dst, \hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} value)\label{_s_d_l__rwops_8h_a5debf04eeed819018ddd9a2f70d32c89}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_ae4f9b45fbb3bf4a40f3f308419307e6b}{}D\+E\+C\+L\+S\+P\+E\+C size\+\_\+t S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Write\+L\+E64} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$dst, \hyperlink{_s_d_l__stdinc_8h_ac006cf2bd55a42a9cc8ae9f123aa7e13}{Uint64} value)\label{_s_d_l__rwops_8h_ae4f9b45fbb3bf4a40f3f308419307e6b}
+
+\item 
+\hypertarget{_s_d_l__rwops_8h_a0422f79e1889750cf99310e968cb76fc}{}D\+E\+C\+L\+S\+P\+E\+C size\+\_\+t S\+D\+L\+C\+A\+L\+L {\bfseries S\+D\+L\+\_\+\+Write\+B\+E64} (\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops} $\ast$dst, \hyperlink{_s_d_l__stdinc_8h_ac006cf2bd55a42a9cc8ae9f123aa7e13}{Uint64} value)\label{_s_d_l__rwops_8h_a0422f79e1889750cf99310e968cb76fc}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+This file provides a general interface for S\+D\+L to read and write data streams. It can easily be extended to files, memory, etc. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_s_d_l__rwops_8h_aba5f3b60c197def370ffa2ca1ab1348d}{}\index{S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}!R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R@{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R}}
+\index{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R@{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R}!S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}}
+\subsubsection[{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+C\+U\+R~1}\label{_s_d_l__rwops_8h_aba5f3b60c197def370ffa2ca1ab1348d}
+Seek relative to current read point \hypertarget{_s_d_l__rwops_8h_a6cf141faabd1b8f2ec3c03cf76eaf553}{}\index{S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}!R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D@{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D}}
+\index{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D@{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D}!S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}}
+\subsubsection[{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+E\+N\+D~2}\label{_s_d_l__rwops_8h_a6cf141faabd1b8f2ec3c03cf76eaf553}
+Seek relative to the end of data \hypertarget{_s_d_l__rwops_8h_ac028b032bb8230df64bc6284e04789f5}{}\index{S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}!R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T@{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T}}
+\index{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T@{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T}!S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}}
+\subsubsection[{R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+W\+\_\+\+S\+E\+E\+K\+\_\+\+S\+E\+T~0}\label{_s_d_l__rwops_8h_ac028b032bb8230df64bc6284e04789f5}
+Seek from the beginning of data 
+
+\subsection{Typedef Documentation}
+\hypertarget{_s_d_l__rwops_8h_af758c42c576a0612bdf298c5823a5fe5}{}\index{S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}!S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}}
+\index{S\+D\+L\+\_\+\+R\+Wops@{S\+D\+L\+\_\+\+R\+Wops}!S\+D\+L\+\_\+rwops.\+h@{S\+D\+L\+\_\+rwops.\+h}}
+\subsubsection[{S\+D\+L\+\_\+\+R\+Wops}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf S\+D\+L\+\_\+\+R\+Wops}  {\bf S\+D\+L\+\_\+\+R\+Wops}}\label{_s_d_l__rwops_8h_af758c42c576a0612bdf298c5823a5fe5}
+This is the read/write operation structure -- very basic. 

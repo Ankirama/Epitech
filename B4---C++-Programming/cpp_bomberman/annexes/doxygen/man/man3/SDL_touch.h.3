@@ -1,0 +1,72 @@
+.TH "lib/gdl/includes/SDL_touch.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_touch.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'SDL_video\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_Finger\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_TOUCH_MOUSEID\fP   ((\fBUint32\fP)-1)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBSint64\fP \fBSDL_TouchID\fP"
+.br
+.ti -1c
+.RI "typedef \fBSint64\fP \fBSDL_FingerID\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBSDL_Finger\fP \fBSDL_Finger\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetNumTouchDevices\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the number of registered touch devices\&. \fP"
+.ti -1c
+.RI "DECLSPEC SDL_TouchID SDLCALL \fBSDL_GetTouchDevice\fP (\fBint\fP index)"
+.br
+.RI "\fIGet the touch ID with the given index, or 0 if the index is invalid\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBint\fP SDLCALL \fBSDL_GetNumTouchFingers\fP (SDL_TouchID touchID)"
+.br
+.RI "\fIGet the number of active fingers for a given touch device\&. \fP"
+.ti -1c
+.RI "DECLSPEC \fBSDL_Finger\fP *SDLCALL \fBSDL_GetTouchFinger\fP (SDL_TouchID touchID, \fBint\fP index)"
+.br
+.RI "\fIGet the finger object of the given touch, with the given index\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Include file for SDL touch event handling\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

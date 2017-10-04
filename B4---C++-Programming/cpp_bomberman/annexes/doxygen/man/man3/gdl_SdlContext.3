@@ -1,0 +1,43 @@
+.TH "gdl::SdlContext" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gdl::SdlContext \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBgdl::IRenderContext\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBstart\fP (unsigned \fBint\fP swidth, unsigned \fBint\fP sheight, const std::string &name, \fBint\fP initFlags=\fBSDL_INIT_VIDEO\fP, \fBint\fP windowsFlags=\fBSDL_WINDOW_OPENGL\fP)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBupdateInputs\fP (\fBInput\fP &input) const "
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBupdateClock\fP (\fBClock\fP &clock) const "
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBflush\fP () const "
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBstop\fP () const "
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSDL_Window\fP * \fB_window\fP"
+.br
+.ti -1c
+.RI "\fBSDL_GLContext\fP \fB_glContext\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

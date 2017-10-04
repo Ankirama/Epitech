@@ -1,0 +1,73 @@
+.TH "SDL_AudioCVT" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_AudioCVT \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBneeded\fP"
+.br
+.ti -1c
+.RI "\fBSDL_AudioFormat\fP \fBsrc_format\fP"
+.br
+.ti -1c
+.RI "\fBSDL_AudioFormat\fP \fBdst_format\fP"
+.br
+.ti -1c
+.RI "double \fBrate_incr\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP * \fBbuf\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBlen\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBlen_cvt\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBlen_mult\fP"
+.br
+.ti -1c
+.RI "double \fBlen_ratio\fP"
+.br
+.ti -1c
+.RI "SDL_AudioFilter \fBfilters\fP [10]"
+.br
+.ti -1c
+.RI "\fBint\fP \fBfilter_index\fP"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint8\fP* SDL_AudioCVT::buf"
+Buffer to hold entire audio data 
+.SS "\fBSDL_AudioFormat\fP SDL_AudioCVT::dst_format"
+Target audio format 
+.SS "\fBint\fP SDL_AudioCVT::filter_index"
+Current audio conversion function 
+.SS "SDL_AudioFilter SDL_AudioCVT::filters[10]"
+Filter list 
+.SS "\fBint\fP SDL_AudioCVT::len"
+Length of original audio buffer 
+.SS "\fBint\fP SDL_AudioCVT::len_cvt"
+Length of converted audio buffer 
+.SS "\fBint\fP SDL_AudioCVT::len_mult"
+buffer must be len*len_mult big 
+.SS "double SDL_AudioCVT::len_ratio"
+Given len, final size is len*len_ratio 
+.SS "\fBint\fP SDL_AudioCVT::needed"
+Set to 1 if conversion possible 
+.SS "double SDL_AudioCVT::rate_incr"
+Rate conversion increment 
+.SS "\fBSDL_AudioFormat\fP SDL_AudioCVT::src_format"
+Source audio format 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

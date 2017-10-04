@@ -1,0 +1,72 @@
+.TH "gtc_swizzle" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtc_swizzle \- GLM_GTC_swizzle
+.PP
+Provide functions to emulate GLSL swizzle operator fonctionalities\&.  
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBstatic_swizzle1_const\fP(TYPE,  SIZE)"
+.br
+.ti -1c
+.RI "#define \fBstatic_swizzle1_ref\fP(TYPE,  SIZE)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> T const & \fBglm::swizzle\fP (vecType< T > const &v, comp x)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> detail::tvec2< T > const & \fBglm::swizzle\fP (vecType< T > const &v, comp x, comp y)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> detail::tvec3< T > const & \fBglm::swizzle\fP (vecType< T > const &v, comp x, comp y, comp z)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> detail::tvec4< T > const & \fBglm::swizzle\fP (vecType< T > const &v, comp x, comp y, comp z, comp w)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> T & \fBglm::swizzle\fP (vecType< T > &v, comp x)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> detail::tref2< T > \fBglm::swizzle\fP (vecType< T > &v, comp x, comp y)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> detail::tref3< T > \fBglm::swizzle\fP (vecType< T > &v, comp x, comp y, comp z)"
+.br
+.ti -1c
+.RI "template<typename T , template< typename > class vecType> detail::tref4< T > \fBglm::swizzle\fP (vecType< T > &v, comp x, comp y, comp z, comp w)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provide functions to emulate GLSL swizzle operator fonctionalities\&. 
+
+<\fBglm/gtc/swizzle\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define static_swizzle1_const(TYPE, SIZE)"
+\fBValue:\fP
+.PP
+.nf
+template <comp x>                                      \
+        GLM_FUNC_QUALIFIER TYPE swizzle(detail::tvec##SIZE<TYPE> const & v) \
+        {return v[x];}
+.fi
+.SS "#define static_swizzle1_ref(TYPE, SIZE)"
+\fBValue:\fP
+.PP
+.nf
+template <comp x>                                                    \
+        GLM_FUNC_QUALIFIER TYPE& swizzle(detail::tvec##SIZE<TYPE> & v)      \
+        {return v[x];}
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

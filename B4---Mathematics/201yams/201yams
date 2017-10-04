@@ -1,0 +1,240 @@
+#!/usr/bin/env php
+<?php
+  function usage() {
+    echo "Usage : ./201yams de1 de2 de3 de4 de5 type_valeur\n";
+    echo "Exemple : ./201yams 0 0 0 0 0 yams_4\n";
+    exit ;
+  }
+
+  function facto( $n ) {
+    if ( $n == 0 )
+      return 1;
+    else
+      return ( $n * facto( $n - 1 ) );
+  }
+
+  function combination( $k, $n ) {
+    return (facto ($n) / (facto($k) * facto ($n - $k)));
+  }
+
+  function binomiale( $k, $n ) {
+    return ( ( combination( $k, $n ) * pow( 1/6, $k ) * pow( 5/6, $n - $k ) ) );
+  }
+
+  function paire( $dices, $type ) {
+    $nb_dices = 0;
+    $good_dices = 0;
+    $prob = 0;
+    for ( $i = 0; $i < 5; ++$i ) {
+      if ( $dices[$i] != $type )
+        ++$nb_dices;
+    }
+    $good_dices = 5 - $nb_dices;
+    if ( $good_dices >= 2 )
+      $prob = 1;
+    else {
+      $max = 5 - $good_dices;
+      for ($i = 2 - $good_dices; $i <= $max; ++$i) {
+        $prob += binomiale($i, $max);
+      }
+    }
+    $prob *= 100;
+    echo "Probabilite d'obtenir une paire de " . $type . " : " . round($prob, 2) . "%\n";
+  }
+
+  function brelan( $dices, $type ) {
+    $nb_dices = 0;
+    $good_dices = 0;
+    $prob = 0;
+    for ( $i = 0; $i < 5; ++$i ) {
+      if ( $dices[$i] != $type )
+        ++$nb_dices;
+    }
+    $good_dices = 5 - $nb_dices;
+    if ( $good_dices >= 3 )
+      $prob = 1;
+    else {
+      $max = 5 - $good_dices;
+      for ($i = 3 - $good_dices; $i <= $max; ++$i) {
+        $prob += binomiale($i, $max);
+      }
+    }
+    $prob *= 100;
+    echo "Probabilite d'obtenir un brelan de " . $type . " : " . round($prob, 2) . "%\n";
+  }
+
+  function carre( $dices, $type ) {
+    $nb_dices = 0;
+    $good_dices = 0;
+    $prob = 0;
+    for ( $i = 0; $i < 5; ++$i ) {
+      if ( $dices[$i] != $type )
+        ++$nb_dices;
+    }
+    $good_dices = 5 - $nb_dices;
+    if ( $good_dices >= 4 )
+      $prob = 1;
+    else {
+      $max = 5 - $good_dices;
+      for ($i = 4 - $good_dices; $i <= $max; ++$i) {
+        $prob += binomiale($i, $max);
+      }
+    }
+    $prob *= 100;
+    echo "Probabilite d'obtenir un carre de " . $type . " : " . round($prob, 2) . "%\n";
+  }
+
+  function suite( $dices, $type ) {
+    $min = $type - 4;
+    $nb_dices = 0;
+    for ( $i = 0; $i < 5; ++$i ) {
+      for ( $j = 0; $j < $i; ++$j ) {
+        if ($dices[$j] == $dices[$i])
+          $dices[$j] = 0;
+      }
+    }
+    for ( $i = 0; $i < 5; ++$i ) {
+      if ( $dices[$i] < $min || $dices[$i] > $type )
+        ++$nb_dices;
+    }
+    $good_dices = 5 - $nb_dices;
+    $max_dices = 5 - $good_dices;
+    $prob = ( facto( $max_dices ) / pow( 6, $max_dices ) ) * 100;
+    echo "Probabilite d'obtenir une grande suite : " . round($prob, 2) . "%\n";
+  }
+
+  function yams( $dices, $type ) {
+    $nb_dices = 0;
+    $good_dices = 0;
+    $prob = 0;
+    for ( $i = 0; $i < 5; ++$i ) {
+      if ( $dices[$i] != $type )
+        ++$nb_dices;
+    }
+    $good_dices = 5 - $nb_dices;
+    if ( $good_dices == 5 )
+      $prob = 1;
+    else {
+      $max = 5 - $good_dices;
+      $prob = binomiale($max, $max);
+    }
+    $prob *= 100;
+    echo "Probabilite d'obtenir un yams de " . $type . " : " . round($prob, 2) . "%\n";
+  }
+
+  function checkDice( $dice ) {
+    if ( !is_numeric( $dice ) ) {
+      echo "Error : " . $dice . " isn't numeric.\n";
+      return 0;
+    }
+    if ( !($dice >= 0 && $dice <= 6) ) {
+      echo "Error : " . $dice . " is not in the range.\n";
+      return 0;
+    }
+    return 1;
+  }
+
+  function full( $dices, $str, $pos ) {
+    $brelan = 0;
+    $pair = 0;
+    $good_brelan = 0;
+    $good_pair = 0;
+    $nb_dices = 0;
+    $prob = 0;
+    $brelan = substr( $str, $pos + 1, 1 );
+    if ( checkDice( $brelan ) == 0 )
+      return (0);
+    if ( ( $pos = strpos( $str, '_', $pos + 1 ) ) === false ) {
+      echo "Error : '" . $my_type . "' isn't a valid type.\n";
+      return (0);
+    }
+    $pair = substr( $str, $pos + 1 );
+    if ( checkDice( $pair ) == 0 )
+      return (0);
+    for ($i = 0; $i < 5; ++$i) {
+      if ($dices[$i] == $brelan && $good_brelan < 3)
+        ++$good_brelan;
+      else if ($dices[$i] == $pair && $good_pair < 2)
+        ++$good_pair;
+      else
+        ++$nb_dices;
+    }
+    $max_dices = 5 - ($good_brelan + $good_pair);
+    if ($good_brelan == 3 && $good_pair == 2)
+      $prob = 1;
+    else {
+      $prob = combination(3 - $good_brelan, $max_dices) / pow(6, $max_dices);
+    }
+    $prob *= 100;
+    echo "Probabilite d'obtenir un full de " . $brelan . " par les " . $pair . " : " . round($prob, 2) . "%\n";
+    return (1);
+  }
+
+  function checkType( $my_type, $type, $nbr_types, $dices ) {
+    $i = 0;
+    $pos = 0;
+    if ( ( $pos = strpos( $my_type, '_' ) ) === false ) {
+      echo "Error : '" . $my_type . "' isn't a valid string.\n";
+      return 0;
+    }
+    $tmp = substr( $my_type, 0, $pos );
+    if ($tmp == "") {
+      echo "Error : '" . $my_type . "' isn't a valid type.\n";
+      return 0;
+    }
+    while ( $i < $nbr_types && strpos( $type[$i], $tmp ) === false )
+      ++$i;
+    if ( $i == $nbr_types ) {
+      echo "Error : '" . $my_type . "' isn't a valid type.\n";
+      return 0;
+    }
+    if ( $i != 3 ) {
+      $dice = substr(  $my_type, $pos + 1 );
+      if ( checkDice( $dice ) == 0 )
+        return 0;
+      switch ( $i ) {
+        case 0:
+          paire( $dices, $dice );
+          break;
+        case 1:
+          brelan( $dices, $dice );
+          break;
+        case 2:
+          carre( $dices, $dice );
+          break;
+        case 4:
+          if ( $dice < 5 ) {
+            echo "Error : '" . $dice . "' isn't in the range.\n";
+            return 0;
+          }
+          suite( $dices, $dice );
+          break;
+        case 5:
+          yams( $dices, $dice );
+          break;
+      }
+    }
+    else
+      if (full( $dices, $my_type, $pos ) == 0)
+        return (0);
+  }
+
+  function main( $argv ) {
+    $type = array( "paire_", "brelan_", "carre_", "full_", "suite_", "yams_" );
+    $dices = array();
+    $nbr_types = count( $type );
+
+    if ( count( $argv ) != 7 ) {
+      usage();
+    }
+    for ( $i=1; $i < 6; ++$i ) {
+      if ( checkDice( $argv[$i] ) == 0 )
+        exit ;
+      array_push( $dices, $argv[$i] );
+    }
+    if ( ( $value = checkType( $argv[6], $type, $nbr_types, $dices ) ) == 0 )
+      exit ;
+    echo "value : " . $value . "\n";
+  }
+  main( $argv );
+?>

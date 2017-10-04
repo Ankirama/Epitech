@@ -1,0 +1,64 @@
+.TH "SDL_JoyHatEvent" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_JoyHatEvent \- Joystick hat position change event structure (event\&.jhat\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "SDL_JoystickID \fBwhich\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBhat\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBvalue\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding1\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding2\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Joystick hat position change event structure (event\&.jhat\&.*) 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBUint8\fP SDL_JoyHatEvent::hat"
+The joystick hat index 
+.SS "\fBUint32\fP SDL_JoyHatEvent::type"
+\fBSDL_JOYHATMOTION\fP 
+.SS "\fBUint8\fP SDL_JoyHatEvent::value"
+The hat position value\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+::SDL_HAT_LEFTUP ::SDL_HAT_UP ::SDL_HAT_RIGHTUP 
+.PP
+::SDL_HAT_LEFT ::SDL_HAT_CENTERED ::SDL_HAT_RIGHT 
+.PP
+::SDL_HAT_LEFTDOWN ::SDL_HAT_DOWN ::SDL_HAT_RIGHTDOWN
+.RE
+.PP
+Note that zero means the POV is centered\&. 
+.SS "SDL_JoystickID SDL_JoyHatEvent::which"
+The joystick instance id 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

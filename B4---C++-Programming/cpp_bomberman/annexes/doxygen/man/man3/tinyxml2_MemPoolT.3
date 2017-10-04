@@ -1,0 +1,91 @@
+.TH "tinyxml2::MemPoolT< SIZE >" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tinyxml2::MemPoolT< SIZE > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBtinyxml2::MemPool\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBBlock\fP"
+.br
+.ti -1c
+.RI "union \fBChunk\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBCOUNT\fP = (4*1024)/SIZE }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "virtual int \fBItemSize\fP () const "
+.br
+.ti -1c
+.RI "int \fBCurrentAllocs\fP () const "
+.br
+.ti -1c
+.RI "virtual void * \fBAlloc\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBFree\fP (void *mem)"
+.br
+.ti -1c
+.RI "void \fBTrace\fP (const char *name)"
+.br
+.ti -1c
+.RI "void \fBSetTracked\fP ()"
+.br
+.ti -1c
+.RI "int \fBUntracked\fP () const "
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMemPoolT\fP (const \fBMemPoolT\fP &)"
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (const \fBMemPoolT\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDynArray\fP< \fBBlock\fP *, 10 > \fB_blockPtrs\fP"
+.br
+.ti -1c
+.RI "\fBChunk\fP * \fB_root\fP"
+.br
+.ti -1c
+.RI "int \fB_currentAllocs\fP"
+.br
+.ti -1c
+.RI "int \fB_nAllocs\fP"
+.br
+.ti -1c
+.RI "int \fB_maxAllocs\fP"
+.br
+.ti -1c
+.RI "int \fB_nUntracked\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

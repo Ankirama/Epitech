@@ -1,0 +1,53 @@
+.TH "lib/gdl/includes/SDL_main.h" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/gdl/includes/SDL_main.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "C_LINKAGE \fBint\fP \fBSDL_main\fP (\fBint\fP argc, char *argv[])"
+.br
+.ti -1c
+.RI "DECLSPEC \fBvoid\fP SDLCALL \fBSDL_SetMainReady\fP (\fBvoid\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Redefine main() on some platforms so that it is called by SDL\&.
+.PP
+The application's main() function must be called with C linkage, and should be declared like this: 
+.PP
+.nf
+#ifdef __cplusplus
+extern "C"
+#endif
+int main(int argc, char *argv[])
+{
+}
+
+.fi
+.PP
+ 
+.SH "Function Documentation"
+.PP 
+.SS "C_LINKAGE \fBint\fP SDL_main (\fBint\fP argc, char * argv[])"
+The prototype for the application's main() function 
+.SS "DECLSPEC \fBvoid\fP SDLCALL SDL_SetMainReady (\fBvoid\fP)"
+This is called by the real SDL main function to let the rest of the library know that initialization was done properly\&.
+.PP
+Calling this yourself without knowing what you're doing can cause crashes and hard to diagnose problems with your application\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

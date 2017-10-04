@@ -1,0 +1,281 @@
+\hypertarget{__vectorize_8hpp}{}\section{lib/gdl/includes/glm/core/\+\_\+vectorize.hpp File Reference}
+\label{__vectorize_8hpp}\index{lib/gdl/includes/glm/core/\+\_\+vectorize.\+hpp@{lib/gdl/includes/glm/core/\+\_\+vectorize.\+hpp}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C}(func)
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C}(func)
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C}(func)
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C}(func)
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}(func)
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}(func)
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}(func)
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}(func)
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}(func)
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}(func)
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}(func)
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}(func)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Open\+G\+L Mathematics (glm.\+g-\/truc.\+net)
+
+Copyright (c) 2005 -\/ 2013 G-\/\+Truc Creation (www.\+g-\/truc.\+net) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+H\+E S\+O\+F\+T\+W\+A\+R\+E I\+S P\+R\+O\+V\+I\+D\+E\+D \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+U\+T W\+A\+R\+R\+A\+N\+T\+Y O\+F A\+N\+Y K\+I\+N\+D, E\+X\+P\+R\+E\+S\+S O\+R I\+M\+P\+L\+I\+E\+D, I\+N\+C\+L\+U\+D\+I\+N\+G B\+U\+T N\+O\+T L\+I\+M\+I\+T\+E\+D T\+O T\+H\+E W\+A\+R\+R\+A\+N\+T\+I\+E\+S O\+F M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y, F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E A\+N\+D N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+N\+T. I\+N N\+O E\+V\+E\+N\+T S\+H\+A\+L\+L T\+H\+E A\+U\+T\+H\+O\+R\+S O\+R C\+O\+P\+Y\+R\+I\+G\+H\+T H\+O\+L\+D\+E\+R\+S B\+E L\+I\+A\+B\+L\+E F\+O\+R A\+N\+Y C\+L\+A\+I\+M, D\+A\+M\+A\+G\+E\+S O\+R O\+T\+H\+E\+R L\+I\+A\+B\+I\+L\+I\+T\+Y, W\+H\+E\+T\+H\+E\+R I\+N A\+N A\+C\+T\+I\+O\+N O\+F C\+O\+N\+T\+R\+A\+C\+T, T\+O\+R\+T O\+R O\+T\+H\+E\+R\+W\+I\+S\+E, A\+R\+I\+S\+I\+N\+G F\+R\+O\+M, O\+U\+T O\+F O\+R I\+N C\+O\+N\+N\+E\+C\+T\+I\+O\+N W\+I\+T\+H T\+H\+E S\+O\+F\+T\+W\+A\+R\+E O\+R T\+H\+E U\+S\+E O\+R O\+T\+H\+E\+R D\+E\+A\+L\+I\+N\+G\+S I\+N T\+H\+E S\+O\+F\+T\+W\+A\+R\+E.
+
+\hyperlink{group__core}{G\+L\+M Core}
+
+\begin{DoxyDate}{Date}
+2011-\/10-\/14 / 2011-\/10-\/14 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Christophe Riccio 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{__vectorize_8hpp_ae3c9b6cdd382c90aae1055d5eea15f4d}{}\index{\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}!V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C}}
+\index{V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C}!\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}}
+\subsubsection[{V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C(
+\begin{DoxyParamCaption}
+\item[{}]{func}
+\end{DoxyParamCaption}
+)}\label{__vectorize_8hpp_ae3c9b6cdd382c90aae1055d5eea15f4d}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \(\backslash\)
+    GLM\_FUNC\_QUALIFIER detail::tvec2<T> func( \(\backslash\)
+        detail::tvec2<T> \textcolor{keyword}{const} & v) \(\backslash\)
+    \{ \(\backslash\)
+        return detail::tvec2<T>( \(\backslash\)
+            func(v.x), \(\backslash\)
+            func(v.y)); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__vectorize_8hpp_a72c07d752410a21e0ffbdd45f5dba233}{}\index{\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}!V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A@{V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}}
+\index{V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A@{V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}!\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}}
+\subsubsection[{V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A(
+\begin{DoxyParamCaption}
+\item[{}]{func}
+\end{DoxyParamCaption}
+)}\label{__vectorize_8hpp_a72c07d752410a21e0ffbdd45f5dba233}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \(\backslash\)
+    GLM\_FUNC\_QUALIFIER detail::tvec2<T> func \(\backslash\)
+    ( \(\backslash\)
+        detail::tvec2<T> \textcolor{keyword}{const} & x,  \(\backslash\)
+        typename detail::tvec2<T>::value\_type \textcolor{keyword}{const} & y \(\backslash\)
+    ) \(\backslash\)
+    \{ \(\backslash\)
+        return detail::tvec2<T>( \(\backslash\)
+            func(x.x, y), \(\backslash\)
+            func(x.y, y)); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__vectorize_8hpp_abd99a9b1a1225ee4f112600524dd3f65}{}\index{\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}!V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}}
+\index{V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}!\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}}
+\subsubsection[{V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+T\+O\+R\+I\+Z\+E2\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C(
+\begin{DoxyParamCaption}
+\item[{}]{func}
+\end{DoxyParamCaption}
+)}\label{__vectorize_8hpp_abd99a9b1a1225ee4f112600524dd3f65}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \(\backslash\)
+    GLM\_FUNC\_QUALIFIER detail::tvec2<T> func \(\backslash\)
+    ( \(\backslash\)
+        detail::tvec2<T> \textcolor{keyword}{const} & x,  \(\backslash\)
+        detail::tvec2<T> \textcolor{keyword}{const} & y \(\backslash\)
+    ) \(\backslash\)
+    \{ \(\backslash\)
+        return detail::tvec2<T>( \(\backslash\)
+            func(x.x, y.x), \(\backslash\)
+            func(x.y, y.y)); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__vectorize_8hpp_aa1fbc9cc0324f222c761b140d16caa9a}{}\index{\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}!V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C}}
+\index{V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C}!\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}}
+\subsubsection[{V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C(
+\begin{DoxyParamCaption}
+\item[{}]{func}
+\end{DoxyParamCaption}
+)}\label{__vectorize_8hpp_aa1fbc9cc0324f222c761b140d16caa9a}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \(\backslash\)
+    GLM\_FUNC\_QUALIFIER detail::tvec3<T> func( \(\backslash\)
+        detail::tvec3<T> \textcolor{keyword}{const} & v) \(\backslash\)
+    \{ \(\backslash\)
+        return detail::tvec3<T>( \(\backslash\)
+            func(v.x), \(\backslash\)
+            func(v.y), \(\backslash\)
+            func(v.z)); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__vectorize_8hpp_a1e5a280ab8f25a775ad4c84ef02e4e8e}{}\index{\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}!V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A@{V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}}
+\index{V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A@{V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}!\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}}
+\subsubsection[{V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A(
+\begin{DoxyParamCaption}
+\item[{}]{func}
+\end{DoxyParamCaption}
+)}\label{__vectorize_8hpp_a1e5a280ab8f25a775ad4c84ef02e4e8e}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \(\backslash\)
+    GLM\_FUNC\_QUALIFIER detail::tvec3<T> func \(\backslash\)
+    ( \(\backslash\)
+        detail::tvec3<T> \textcolor{keyword}{const} & x,  \(\backslash\)
+        typename detail::tvec3<T>::value\_type \textcolor{keyword}{const} & y \(\backslash\)
+    ) \(\backslash\)
+    \{ \(\backslash\)
+        return detail::tvec3<T>( \(\backslash\)
+            func(x.x, y), \(\backslash\)
+            func(x.y, y), \(\backslash\)
+            func(x.z, y)); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__vectorize_8hpp_a78ef82af70fe38da5620e9d2b865b690}{}\index{\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}!V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}}
+\index{V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}!\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}}
+\subsubsection[{V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+T\+O\+R\+I\+Z\+E3\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C(
+\begin{DoxyParamCaption}
+\item[{}]{func}
+\end{DoxyParamCaption}
+)}\label{__vectorize_8hpp_a78ef82af70fe38da5620e9d2b865b690}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \(\backslash\)
+    GLM\_FUNC\_QUALIFIER detail::tvec3<T> func \(\backslash\)
+    ( \(\backslash\)
+        detail::tvec3<T> \textcolor{keyword}{const} & x,  \(\backslash\)
+        detail::tvec3<T> \textcolor{keyword}{const} & y \(\backslash\)
+    ) \(\backslash\)
+    \{ \(\backslash\)
+        return detail::tvec3<T>( \(\backslash\)
+            func(x.x, y.x), \(\backslash\)
+            func(x.y, y.y), \(\backslash\)
+            func(x.z, y.z)); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__vectorize_8hpp_a0f389e11296ad5286e12095472985f6e}{}\index{\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}!V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C}}
+\index{V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C}!\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}}
+\subsubsection[{V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C(
+\begin{DoxyParamCaption}
+\item[{}]{func}
+\end{DoxyParamCaption}
+)}\label{__vectorize_8hpp_a0f389e11296ad5286e12095472985f6e}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \(\backslash\)
+    GLM\_FUNC\_QUALIFIER detail::tvec4<T> func( \(\backslash\)
+        detail::tvec4<T> \textcolor{keyword}{const} & v) \(\backslash\)
+    \{ \(\backslash\)
+        return detail::tvec4<T>( \(\backslash\)
+            func(v.x), \(\backslash\)
+            func(v.y), \(\backslash\)
+            func(v.z), \(\backslash\)
+            func(v.w)); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__vectorize_8hpp_aef63adf885fa2a32b5cd29c62e85cda6}{}\index{\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}!V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A@{V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}}
+\index{V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A@{V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}!\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}}
+\subsubsection[{V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A(
+\begin{DoxyParamCaption}
+\item[{}]{func}
+\end{DoxyParamCaption}
+)}\label{__vectorize_8hpp_aef63adf885fa2a32b5cd29c62e85cda6}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \(\backslash\)
+    GLM\_FUNC\_QUALIFIER detail::tvec4<T> func \(\backslash\)
+    ( \(\backslash\)
+        detail::tvec4<T> \textcolor{keyword}{const} & x,  \(\backslash\)
+        typename detail::tvec4<T>::value\_type \textcolor{keyword}{const} & y \(\backslash\)
+    ) \(\backslash\)
+    \{ \(\backslash\)
+        return detail::tvec4<T>( \(\backslash\)
+            func(x.x, y), \(\backslash\)
+            func(x.y, y), \(\backslash\)
+            func(x.z, y), \(\backslash\)
+            func(x.w, y)); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__vectorize_8hpp_aa7d7ce3040d0ce6045790ec640bdcc52}{}\index{\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}!V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}}
+\index{V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}!\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}}
+\subsubsection[{V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+T\+O\+R\+I\+Z\+E4\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C(
+\begin{DoxyParamCaption}
+\item[{}]{func}
+\end{DoxyParamCaption}
+)}\label{__vectorize_8hpp_aa7d7ce3040d0ce6045790ec640bdcc52}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \(\backslash\)
+    GLM\_FUNC\_QUALIFIER detail::tvec4<T> func \(\backslash\)
+    ( \(\backslash\)
+        detail::tvec4<T> \textcolor{keyword}{const} & x,  \(\backslash\)
+        detail::tvec4<T> \textcolor{keyword}{const} & y \(\backslash\)
+    ) \(\backslash\)
+    \{ \(\backslash\)
+        return detail::tvec4<T>( \(\backslash\)
+            func(x.x, y.x), \(\backslash\)
+            func(x.y, y.y), \(\backslash\)
+            func(x.z, y.z), \(\backslash\)
+            func(x.w, y.w)); \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{__vectorize_8hpp_abf1c63b2e2a5f89eb56203a44d7faa80}{}\index{\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}!V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C}}
+\index{V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C}!\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}}
+\subsubsection[{V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C(
+\begin{DoxyParamCaption}
+\item[{}]{func}
+\end{DoxyParamCaption}
+)}\label{__vectorize_8hpp_abf1c63b2e2a5f89eb56203a44d7faa80}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+VECTORIZE2\_VEC(func) \(\backslash\)
+    VECTORIZE3\_VEC(func) \(\backslash\)
+    VECTORIZE4\_VEC(func)
+\end{DoxyCode}
+\hypertarget{__vectorize_8hpp_a2729fd9cd063dbe0a1f612affa1379d6}{}\index{\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}!V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A@{V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}}
+\index{V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A@{V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}!\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}}
+\subsubsection[{V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C\+\_\+\+S\+C\+A(
+\begin{DoxyParamCaption}
+\item[{}]{func}
+\end{DoxyParamCaption}
+)}\label{__vectorize_8hpp_a2729fd9cd063dbe0a1f612affa1379d6}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+VECTORIZE2\_VEC\_SCA(func) \(\backslash\)
+    VECTORIZE3\_VEC\_SCA(func) \(\backslash\)
+    VECTORIZE4\_VEC\_SCA(func)
+\end{DoxyCode}
+\hypertarget{__vectorize_8hpp_a785c9c640cbc3e839f0c25ff54333ab6}{}\index{\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}!V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}}
+\index{V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C@{V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}!\+\_\+vectorize.\+hpp@{\+\_\+vectorize.\+hpp}}
+\subsubsection[{V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+T\+O\+R\+I\+Z\+E\+\_\+\+V\+E\+C\+\_\+\+V\+E\+C(
+\begin{DoxyParamCaption}
+\item[{}]{func}
+\end{DoxyParamCaption}
+)}\label{__vectorize_8hpp_a785c9c640cbc3e839f0c25ff54333ab6}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+VECTORIZE2\_VEC\_VEC(func) \(\backslash\)
+    VECTORIZE3\_VEC\_VEC(func) \(\backslash\)
+    VECTORIZE4\_VEC\_VEC(func)
+\end{DoxyCode}

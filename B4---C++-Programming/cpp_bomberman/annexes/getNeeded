@@ -1,0 +1,25 @@
+get que je need:
+dans classe player (ou dans l'interface Bomberman):
+  getName()         --> name player
+  getPosition()     --> position player
+  getDirection()    --> direction player
+  getSpeed()        --> speed player
+  getTexturePath()  --> texture path
+  getColor()        --> color player
+    getR()          --> red intensity
+    getG()          --> greed intensity
+    getB()          --> blue intensity
+  getScore()        --> score player
+  getLeft()         --> left key
+  getRight()        --> right key
+  getUp()           --> up key
+  getDown()         --> down key
+  getBomb()         --> bomb key
+  getBombs()        --> bombs vector
+__________
+
+dans classe bombe:
+  getTexturePath()  --> texture path
+  getTime()         --> time until explosion
+  getRange()        --> range explosion
+  getPosition()     --> position bomb

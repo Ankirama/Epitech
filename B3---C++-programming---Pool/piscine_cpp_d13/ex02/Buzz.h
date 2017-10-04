@@ -1,0 +1,24 @@
+//
+//  Buzz.h
+//  piscine_cpp_d13
+//
+//  Created by  on 19/01/15.
+//  Copyright (c) 2015 . All rights reserved.
+//
+
+#ifndef __piscine_cpp_d13__Buzz__
+#define __piscine_cpp_d13__Buzz__
+
+#include <string>
+#include "Toy.h"
+
+class Buzz : public Toy {
+public:
+    explicit Buzz(std::string const&);
+    explicit Buzz(std::string const&, std::string const&);
+    explicit Buzz(Buzz const&);
+    Buzz& operator=(Buzz const&);
+    ~Buzz();
+};
+
+#endif /* defined(__piscine_cpp_d13__Buzz__) */

@@ -1,0 +1,188 @@
+.TH "glm::detail::tmat4x4< T >" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+glm::detail::tmat4x4< T > \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBctor\fP { \fBnull\fP }"
+.br
+.ti -1c
+.RI "typedef T \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef std::size_t \fBsize_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBtvec4\fP< T > \fBcol_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBtvec4\fP< T > \fBrow_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBtmat4x4\fP< T > \fBtype\fP"
+.br
+.ti -1c
+.RI "typedef \fBtmat4x4\fP< T > \fBtranspose_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "GLM_FUNC_DECL GLM_CONSTEXPR size_type \fBlength\fP () const "
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP (\fBtmat4x4\fP const &m)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP (ctor Null)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP (value_type const &x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP (value_type const &x0, value_type const &y0, value_type const &z0, value_type const &w0, value_type const &x1, value_type const &y1, value_type const &z1, value_type const &w1, value_type const &x2, value_type const &y2, value_type const &z2, value_type const &w2, value_type const &x3, value_type const &y3, value_type const &z3, value_type const &w3)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP (\fBcol_type\fP const &v0, \fBcol_type\fP const &v1, \fBcol_type\fP const &v2, \fBcol_type\fP const &v3)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtmat4x4\fP (U const &x)"
+.br
+.ti -1c
+.RI "template<typename X1 , typename Y1 , typename Z1 , typename W1 , typename X2 , typename Y2 , typename Z2 , typename W2 , typename X3 , typename Y3 , typename Z3 , typename W3 , typename X4 , typename Y4 , typename Z4 , typename W4 > GLM_FUNC_DECL \fBtmat4x4\fP (X1 const &x1, Y1 const &y1, Z1 const &z1, W1 const &w1, X2 const &x2, Y2 const &y2, Z2 const &z2, W2 const &w2, X3 const &x3, Y3 const &y3, Z3 const &z3, W3 const &w3, X4 const &x4, Y4 const &y4, Z4 const &z4, W4 const &w4)"
+.br
+.ti -1c
+.RI "template<typename V1 , typename V2 , typename V3 , typename V4 > GLM_FUNC_DECL \fBtmat4x4\fP (\fBtvec4\fP< V1 > const &v1, \fBtvec4\fP< V2 > const &v2, \fBtvec4\fP< V3 > const &v3, \fBtvec4\fP< V4 > const &v4)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtmat4x4\fP (\fBtmat4x4\fP< U > const &m)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP (\fBtmat2x2\fP< T > const &x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP (\fBtmat3x3\fP< T > const &x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP (\fBtmat2x3\fP< T > const &x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP (\fBtmat3x2\fP< T > const &x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP (\fBtmat2x4\fP< T > const &x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP (\fBtmat4x2\fP< T > const &x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP (\fBtmat3x4\fP< T > const &x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP (\fBtmat4x3\fP< T > const &x)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBcol_type\fP & \fBoperator[]\fP (size_type i)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBcol_type\fP const & \fBoperator[]\fP (size_type i) const "
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP< T > & \fBoperator=\fP (\fBtmat4x4\fP< T > const &m)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtmat4x4\fP< T > & \fBoperator=\fP (\fBtmat4x4\fP< U > const &m)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtmat4x4\fP< T > & \fBoperator+=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtmat4x4\fP< T > & \fBoperator+=\fP (\fBtmat4x4\fP< U > const &m)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtmat4x4\fP< T > & \fBoperator-=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtmat4x4\fP< T > & \fBoperator-=\fP (\fBtmat4x4\fP< U > const &m)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtmat4x4\fP< T > & \fBoperator*=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtmat4x4\fP< T > & \fBoperator*=\fP (\fBtmat4x4\fP< U > const &m)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtmat4x4\fP< T > & \fBoperator/=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_DECL \fBtmat4x4\fP< T > & \fBoperator/=\fP (\fBtmat4x4\fP< U > const &m)"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP< T > & \fBoperator++\fP ()"
+.br
+.ti -1c
+.RI "GLM_FUNC_DECL \fBtmat4x4\fP< T > & \fBoperator--\fP ()"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtmat4x4\fP (\fBtmat4x4\fP< U > const &m)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtmat4x4\fP< T > & \fBoperator=\fP (\fBtmat4x4\fP< U > const &m)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtmat4x4\fP< T > & \fBoperator+=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtmat4x4\fP< T > & \fBoperator+=\fP (\fBtmat4x4\fP< U > const &m)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtmat4x4\fP< T > & \fBoperator-=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtmat4x4\fP< T > & \fBoperator-=\fP (\fBtmat4x4\fP< U > const &m)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtmat4x4\fP< T > & \fBoperator*=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtmat4x4\fP< T > & \fBoperator*=\fP (\fBtmat4x4\fP< U > const &m)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtmat4x4\fP< T > & \fBoperator/=\fP (U const &s)"
+.br
+.ti -1c
+.RI "template<typename U > GLM_FUNC_QUALIFIER \fBtmat4x4\fP< T > & \fBoperator/=\fP (\fBtmat4x4\fP< U > const &m)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static GLM_FUNC_DECL size_type \fBcol_size\fP ()"
+.br
+.ti -1c
+.RI "static GLM_FUNC_DECL size_type \fBrow_size\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBcol_type\fP \fBvalue\fP [4]"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename T> \fBcol_type\fP \fBglm::detail::tmat4x4\fP< T >::value[4]\fC [private]\fP"
+Implementation detail 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

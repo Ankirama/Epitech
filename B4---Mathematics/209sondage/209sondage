@@ -1,0 +1,113 @@
+#!/bin/bash
+
+if [[ $# -lt 3 ]]; then
+    echo -e "\033[1;31mUsage: ./209sondage \033[1;35m[time | all] \033[1;32mpopulation \033[1;33mechantillon \033[1;34msondage\033[0m"
+    exit
+fi
+
+if [[ $# -eq 4 ]]; then
+    if [[ $1 != "time" ]] && [[ $1 != "all" ]]; then
+	echo -e "\033[1;31mUsage: ./209sondage \033[1;35m[time | all] \033[1;32mpopulation \033[1;33mechantillon \033[1;34msondage\033[0m"
+	exit
+    fi
+fi
+
+
+if [[ $1 == "time" ]]; then
+    ## compilation
+    echo -e "\033[1;31m\t\t\tCOMPILATION PLEASE WAIT...\033[0m"
+    make all > /dev/null; make clean > /dev/null
+    echo -e "\033[1;31m\t\t\t__________________________\033[0m"
+
+    echo -en "\033[1;31m\t\t\t\tTIME(seconds)\n"
+    echo -en "\033[1;35mPython: \033[1;36m"
+    /usr/bin/time -f "%e" python/209sondage $2 $3 $4 1>/dev/null
+    echo -en "\033[0m"
+
+    echo -en "\033[1;35mPhp: \033[1;36m"
+    /usr/bin/time -f "%e" php/209sondage $2 $3 $4 1>/dev/null
+    echo -e "\033[0m"
+
+    echo -en "\033[1;35mGolang: \033[1;36m"
+    /usr/bin/time -f "%e" go run golang/209sondage.go $2 $3 $4 1>/dev/null
+    echo -e "\033[0m"
+
+    echo -en "\033[1;35mLua: \033[1;36m"
+    /usr/bin/time -f "%e" lua/209sondage $2 $3 $4 1>/dev/null
+    echo -e "\033[0m"
+
+    echo -en "\033[1;35mOcaml: \033[1;36m"
+    /usr/bin/time -f "%e" ocaml/209sondage $2 $3 $4 1>/dev/null
+    echo -e "\033[0m"
+
+    echo -en "\033[1;35mPerl: \033[1;36m"
+    /usr/bin/time -f "%e" perl/209sondage $2 $3 $4 1>/dev/null
+    echo -e "\033[0m"
+
+    echo -en "\033[1;35mRuby: \033[1;36m"
+    /usr/bin/time -f "%e" ruby/209sondage $2 $3 $4 1>/dev/null
+    echo -e "\033[0m"
+
+    echo -en "\033[1;35mNode JS: \033[1;36m"
+    /usr/bin/time -f "%e" nodejs/209sondage $2 $3 $4 1>/dev/null
+    echo -e "\033[0m"
+    
+    echo -en "\033[1;35mC: \033[1;36m"
+    /usr/bin/time -f "%e" C/209sondage $2 $3 $4 1>/dev/null
+    echo -e "\033[0m"
+    
+elif [[ $1 == "all" ]]; then
+    ## compilation
+    echo -e "\033[1;31m\t\t\tCOMPILATION PLEASE WAIT...\033[0m"
+    make all > /dev/null; make clean > /dev/null
+    echo -e "\033[1;31m\t\t\t__________________________\033[0m"
+
+    echo -e "\033[1;35mPYTHON:\033[0m"
+    python/209sondage $2 $3 $4
+    echo -e "\033[1;33mdone\033[0m"
+    echo -e "\033[1;31m_____________\033[0m"
+
+    echo -e "\033[1;35mPHP:\033[0m"
+    php/209sondage $2 $3 $4
+    echo -e "\033[1;33mdone\033[0m"
+    echo -e "\033[1;31m_____________\033[0m"
+
+    echo -e "\033[1;35mGOLANG:\033[0m"
+    go run golang/209sondage.go $2 $3 $4
+    echo -e "\033[1;33mdone\033[0m"
+    echo -e "\033[1;31m_____________\033[0m"
+
+    echo -e "\033[1;35mLUA:\033[0m"
+    lua/209sondage $2 $3 $4
+    echo -e "\033[1;33mdone\033[0m"
+    echo -e "\033[1;31m_____________\033[0m"
+
+    echo -e "\033[1;35mOCAML:\033[0m"
+    ocaml/209sondage $2 $3 $4
+    echo -e "\033[1;33mdone\033[0m"
+    echo -e "\033[1;31m_____________\033[0m"
+
+    echo -e "\033[1;35mPERL:\033[0m"
+    perl/209sondage $2 $3 $4
+    echo -e "\033[1;33mdone\033[0m"
+    echo -e "\033[1;31m_____________\033[0m"
+
+    echo -e "\033[1;35mRUBY:\033[0m"
+    ruby/209sondage $2 $3 $4
+    echo -e "\033[1;33mdone\033[0m"
+
+    echo -e "\033[1;35mC:\033[0m"
+    C/209sondage $2 $3 $4
+    echo -e "\033[1;33mdone\033[0m"
+
+    echo -e "\033[1;31m_____________\033[0m"
+
+    echo -e "\033[1;35mNODE JS:\033[0m"
+    nodejs/209sondage $2 $3 $4
+    echo -e "\033[1;33mdone\033[0m"
+    echo -e "\033[1;31m_____________\033[0m"
+else
+  python/209sondage $1 $2 $3
+fi
+
+make fclean > /dev/null

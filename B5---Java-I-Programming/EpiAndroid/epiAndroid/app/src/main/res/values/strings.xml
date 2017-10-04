@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">EpiAndroid</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="search_hint">Login</string>
+    
+    <!-- SlideMenu -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="community">Communauté</string>
+    <string name="game">Recherche et Plannification</string>
+    <string name="option">Option</string>
+
+    <!-- ProfilFragment -->
+    <string name="profil_titre">Profils</string>
+    <string name="gpa">GPA</string>
+    <string name="semester">Semester</string>
+    <string name="studentYear">Student Year</string>
+
+    <!-- Token -->
+    <string name="token_dialog">Token</string>
+    <string name="token_invalidate">Token not valid</string>
+    <string name="token_validate">Token Valid</string>
+
+    <!-- Trombi -->
+    <string-array name="course">
+        <item>bachelor/classic</item>
+        <item>bachelor/tek1ed</item>
+        <item>bachelor/tek2ed</item>
+    </string-array>
+
+    <!-- Settings -->
+    <string name="pref_notification_activated">Enable Notification</string>
+    <string name="pref_notification_activated_sum">Enable the notification</string>
+    <string name="pref_notification_time">Synchronisation every</string>
+    <string name="pref_notification_time_sum">Synchronise the app every X minute</string>
+    <string name="pref_notification_time_default">30 minutes</string>
+    <string-array name="pref_notification_time_entries">
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hours</item>
+    </string-array>
+    <string-array name="pref_notification_time_value">
+        <item>300000</item>
+        <item>600000</item>
+        <item>900000</item>
+        <item>1800000</item>
+        <item>3600000</item>
+    </string-array>
+
+    <string name="sendEmail">Send Email</string>
+    <string name="sendEmailText">Send Email...</string>
+    <string name="subjectEmail">Send via EpiAndroid</string>
+    <string name="objectEmail">[EpiAndroid] </string>
+
+    <string name="okButton">Ok</string>
+    <string name="cancelButton">Cancel</string>
+
+    <string name="activity">Activity</string>
+    <string name="marks">Marks</string>
+    <string name="modules">Modules</string>
+    <string name="projects">Projects</string>
+
+    <string name="promo">Promo </string>
+
+    <string name="shareTo">Share to..</string>
+
+    <string name="downloaded"> Downloaded</string>
+
+    <string name="professor">Professor</string>
+    <string name="assistant">Assistant</string>
+
+    <string name="subscribe">Subscribe</string>
+    <string name="unsubscribe">Unsubscribe</string>
+    <string name="subText">You have subscribe</string>
+    <string name="unsubText">You have unsubscribe</string>
+
+    <string name="actionDone">Action Effectue</string>
+
+    <string name="relog">Please re login</string>
+
+    <string name="registered">Registered</string>
+    <string name="notRegistered">Not Register</string>
+
+    <string name="token">Token</string>
+
+    <string name="titlePlanning">Title: </string>
+    <string name="startPlanning">Start-Time: </string>
+
+    <string name="gotA">I got a </string>
+    <string name="at"> at </string>
+
+</resources>

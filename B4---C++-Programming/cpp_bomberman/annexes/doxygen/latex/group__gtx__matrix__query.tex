@@ -1,0 +1,119 @@
+\hypertarget{group__gtx__matrix__query}{}\section{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}
+\label{group__gtx__matrix__query}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}}
+
+
+Query to evaluate matrix properties.  
+
+
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{group__gtx__matrix__query_ga522ba657c5bf6a022c49b5717f2b600c}{glm\+::is\+Null} (detail\+::tmat2x2$<$ T $>$ const \&m, T const \&epsilon)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{group__gtx__matrix__query_gaed0ae11694b42e395193800822e5c722}{glm\+::is\+Null} (detail\+::tmat3x3$<$ T $>$ const \&m, T const \&epsilon)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{group__gtx__matrix__query_ga9669ffcd7d91aa8eb2ec421e2b9515c4}{glm\+::is\+Null} (detail\+::tmat4x4$<$ T $>$ const \&m, T const \&epsilon)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\bool \hyperlink{group__gtx__matrix__query_ga5a899dff905871886d6f31517bd1fe30}{glm\+::is\+Identity} (gen\+Type const \&m, typename gen\+Type\+::value\+\_\+type const \&epsilon)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\bool \hyperlink{group__gtx__matrix__query_ga4db0eb631e14d23d597b93b80e324c5d}{glm\+::is\+Normalized} (detail\+::tmat2x2$<$ val\+Type $>$ const \&m, val\+Type const \&epsilon)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\bool \hyperlink{group__gtx__matrix__query_ga4cea149ceb3e528a45fb6cadbd1835bc}{glm\+::is\+Normalized} (detail\+::tmat3x3$<$ val\+Type $>$ const \&m, val\+Type const \&epsilon)
+\item 
+{\footnotesize template$<$typename val\+Type $>$ }\\bool \hyperlink{group__gtx__matrix__query_ga4aaf1b00b9f28f01eaf35f11f8c751aa}{glm\+::is\+Normalized} (detail\+::tmat4x4$<$ val\+Type $>$ const \&m, val\+Type const \&epsilon)
+\item 
+{\footnotesize template$<$typename val\+Type , template$<$ typename $>$ class mat\+Type$>$ }\\bool \hyperlink{group__gtx__matrix__query_gac8a4309441e4f7a83efb978d58b03248}{glm\+::is\+Orthogonal} (mat\+Type$<$ val\+Type $>$ const \&m, val\+Type const \&epsilon)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Query to evaluate matrix properties. 
+
+$<$\hyperlink{matrix__query_8hpp}{glm/gtx/matrix\+\_\+query.\+hpp}$>$ need to be included to use these functionalities. 
+
+\subsection{Function Documentation}
+\hypertarget{group__gtx__matrix__query_ga5a899dff905871886d6f31517bd1fe30}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}!is\+Identity@{is\+Identity}}
+\index{is\+Identity@{is\+Identity}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}}
+\subsubsection[{is\+Identity}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename gen\+Type $>$ bool glm\+::is\+Identity (
+\begin{DoxyParamCaption}
+\item[{gen\+Type const \&}]{m, }
+\item[{typename gen\+Type\+::value\+\_\+type const \&}]{epsilon}
+\end{DoxyParamCaption}
+)}\label{group__gtx__matrix__query_ga5a899dff905871886d6f31517bd1fe30}
+Return whether a matrix is an identity matrix. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query extension. 
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{group__gtx__matrix__query_ga4db0eb631e14d23d597b93b80e324c5d}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}!is\+Normalized@{is\+Normalized}}
+\index{is\+Normalized@{is\+Normalized}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}}
+\subsubsection[{is\+Normalized}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ bool glm\+::is\+Normalized (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat2x2}$<$ val\+Type $>$ const \&}]{m, }
+\item[{val\+Type const \&}]{epsilon}
+\end{DoxyParamCaption}
+)}\label{group__gtx__matrix__query_ga4db0eb631e14d23d597b93b80e324c5d}
+Return whether a matrix is a normalized matrix. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query extension. \hypertarget{group__gtx__matrix__query_ga4cea149ceb3e528a45fb6cadbd1835bc}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}!is\+Normalized@{is\+Normalized}}
+\index{is\+Normalized@{is\+Normalized}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}}
+\subsubsection[{is\+Normalized}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ bool glm\+::is\+Normalized (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat3x3}$<$ val\+Type $>$ const \&}]{m, }
+\item[{val\+Type const \&}]{epsilon}
+\end{DoxyParamCaption}
+)}\label{group__gtx__matrix__query_ga4cea149ceb3e528a45fb6cadbd1835bc}
+Return whether a matrix is a normalized matrix. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query extension. \hypertarget{group__gtx__matrix__query_ga4aaf1b00b9f28f01eaf35f11f8c751aa}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}!is\+Normalized@{is\+Normalized}}
+\index{is\+Normalized@{is\+Normalized}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}}
+\subsubsection[{is\+Normalized}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type $>$ bool glm\+::is\+Normalized (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat4x4}$<$ val\+Type $>$ const \&}]{m, }
+\item[{val\+Type const \&}]{epsilon}
+\end{DoxyParamCaption}
+)}\label{group__gtx__matrix__query_ga4aaf1b00b9f28f01eaf35f11f8c751aa}
+Return whether a matrix is a normalized matrix. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query extension. \hypertarget{group__gtx__matrix__query_ga522ba657c5bf6a022c49b5717f2b600c}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}!is\+Null@{is\+Null}}
+\index{is\+Null@{is\+Null}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}}
+\subsubsection[{is\+Null}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool glm\+::is\+Null (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat2x2}$<$ T $>$ const \&}]{m, }
+\item[{T const \&}]{epsilon}
+\end{DoxyParamCaption}
+)}\label{group__gtx__matrix__query_ga522ba657c5bf6a022c49b5717f2b600c}
+Return whether a matrix a null matrix. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query extension. 
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\hypertarget{group__gtx__matrix__query_gaed0ae11694b42e395193800822e5c722}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}!is\+Null@{is\+Null}}
+\index{is\+Null@{is\+Null}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}}
+\subsubsection[{is\+Null}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool glm\+::is\+Null (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat3x3}$<$ T $>$ const \&}]{m, }
+\item[{T const \&}]{epsilon}
+\end{DoxyParamCaption}
+)}\label{group__gtx__matrix__query_gaed0ae11694b42e395193800822e5c722}
+Return whether a matrix a null matrix. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query extension. 
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\hypertarget{group__gtx__matrix__query_ga9669ffcd7d91aa8eb2ec421e2b9515c4}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}!is\+Null@{is\+Null}}
+\index{is\+Null@{is\+Null}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}}
+\subsubsection[{is\+Null}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool glm\+::is\+Null (
+\begin{DoxyParamCaption}
+\item[{{\bf detail\+::tmat4x4}$<$ T $>$ const \&}]{m, }
+\item[{T const \&}]{epsilon}
+\end{DoxyParamCaption}
+)}\label{group__gtx__matrix__query_ga9669ffcd7d91aa8eb2ec421e2b9515c4}
+Return whether a matrix is a null matrix. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query extension. \hypertarget{group__gtx__matrix__query_gac8a4309441e4f7a83efb978d58b03248}{}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}!is\+Orthogonal@{is\+Orthogonal}}
+\index{is\+Orthogonal@{is\+Orthogonal}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query}}
+\subsubsection[{is\+Orthogonal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename val\+Type , template$<$ typename $>$ class mat\+Type$>$ bool glm\+::is\+Orthogonal (
+\begin{DoxyParamCaption}
+\item[{mat\+Type$<$ val\+Type $>$ const \&}]{m, }
+\item[{val\+Type const \&}]{epsilon}
+\end{DoxyParamCaption}
+)}\label{group__gtx__matrix__query_gac8a4309441e4f7a83efb978d58b03248}
+Return whether a matrix is an orthonormalized matrix. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+query extension. 

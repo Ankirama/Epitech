@@ -1,0 +1,74 @@
+.TH "gdl::Input" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gdl::Input \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBclearInputs\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBaddInput\fP (\fBint\fP input)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBaddKeyInput\fP (\fBint\fP input)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBremoveKeyInput\fP (\fBint\fP input)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetMousePosition\fP (\fBglm::ivec2\fP const &pos, \fBglm::ivec2\fP const &rel)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetMouseWheel\fP (\fBglm::ivec2\fP const &delta)"
+.br
+.ti -1c
+.RI "\fBglm::ivec2\fP const & \fBgetMousePosition\fP ()"
+.br
+.ti -1c
+.RI "\fBglm::ivec2\fP const & \fBgetMouseDelta\fP ()"
+.br
+.ti -1c
+.RI "\fBglm::ivec2\fP const & \fBgetMouseWheel\fP ()"
+.br
+.ti -1c
+.RI "bool \fBgetInput\fP (\fBint\fP input, bool handled=false)"
+.br
+.ti -1c
+.RI "bool \fBgetKey\fP (\fBint\fP input, bool handled=false)"
+.br
+.ti -1c
+.RI "bool \fBgetKeyDown\fP (\fBint\fP input, bool handled=false)"
+.br
+.ti -1c
+.RI "bool \fBgetKeyUp\fP (\fBint\fP input, bool handled=false)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::list< \fBint\fP > \fB_inputs\fP"
+.br
+.ti -1c
+.RI "std::list< \fBint\fP > \fB_keyInputs\fP"
+.br
+.ti -1c
+.RI "\fBglm::ivec2\fP \fB_mousePosition\fP"
+.br
+.ti -1c
+.RI "\fBglm::ivec2\fP \fB_mouseDelta\fP"
+.br
+.ti -1c
+.RI "\fBglm::ivec2\fP \fB_mouseWheelDelta\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

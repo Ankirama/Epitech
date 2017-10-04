@@ -1,0 +1,202 @@
+.TH "gtx_euler_angles" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtx_euler_angles \- GLM_GTX_euler_angles
+.PP
+Build matrices from Euler angles\&.  
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::eulerAngleX\fP (valType const &angleX)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::eulerAngleY\fP (valType const &angleY)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::eulerAngleZ\fP (valType const &angleZ)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::eulerAngleXY\fP (valType const &angleX, valType const &angleY)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::eulerAngleYX\fP (valType const &angleY, valType const &angleX)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::eulerAngleXZ\fP (valType const &angleX, valType const &angleZ)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::eulerAngleZX\fP (valType const &angleZ, valType const &angleX)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::eulerAngleYZ\fP (valType const &angleY, valType const &angleZ)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::eulerAngleZY\fP (valType const &angleZ, valType const &angleY)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::eulerAngleYXZ\fP (valType const &yaw, valType const &pitch, valType const &roll)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::yawPitchRoll\fP (valType const &yaw, valType const &pitch, valType const &roll)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat2x2< T > \fBglm::orientate2\fP (T const &angle)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat3x3< T > \fBglm::orientate3\fP (T const &angle)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat3x3< T > \fBglm::orientate3\fP (detail::tvec3< T > const &angles)"
+.br
+.ti -1c
+.RI "template<typename T > detail::tmat4x4< T > \fBglm::orientate4\fP (detail::tvec3< T > const &angles)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Build matrices from Euler angles\&. 
+
+<\fBglm/gtx/euler_angles\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename valType > detail::tmat4x4<valType> glm::eulerAngleX (valType const & angleX)"
+Creates a 3D 4 * 4 homogeneous rotation matrix from an euler angle X\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tmat4x4<valType> glm::eulerAngleXY (valType const & angleX, valType const & angleY)"
+Creates a 3D 4 * 4 homogeneous rotation matrix from euler angles (X * Y)\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tmat4x4<valType> glm::eulerAngleXZ (valType const & angleX, valType const & angleZ)"
+Creates a 3D 4 * 4 homogeneous rotation matrix from euler angles (X * Z)\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tmat4x4<valType> glm::eulerAngleY (valType const & angleY)"
+Creates a 3D 4 * 4 homogeneous rotation matrix from an euler angle Y\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tmat4x4<valType> glm::eulerAngleYX (valType const & angleY, valType const & angleX)"
+Creates a 3D 4 * 4 homogeneous rotation matrix from euler angles (Y * X)\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tmat4x4<valType> glm::eulerAngleYXZ (valType const & yaw, valType const & pitch, valType const & roll)"
+Creates a 3D 4 * 4 homogeneous rotation matrix from euler angles (Y * X * Z)\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tmat4x4<valType> glm::eulerAngleYZ (valType const & angleY, valType const & angleZ)"
+Creates a 3D 4 * 4 homogeneous rotation matrix from euler angles (Y * Z)\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tmat4x4<valType> glm::eulerAngleZ (valType const & angleZ)"
+Creates a 3D 4 * 4 homogeneous rotation matrix from an euler angle Z\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tmat4x4<valType> glm::eulerAngleZX (valType const & angleZ, valType const & angleX)"
+Creates a 3D 4 * 4 homogeneous rotation matrix from euler angles (Z * X)\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tmat4x4<valType> glm::eulerAngleZY (valType const & angleZ, valType const & angleY)"
+Creates a 3D 4 * 4 homogeneous rotation matrix from euler angles (Z * Y)\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tmat2x2<T> glm::orientate2 (T const & angle)"
+Creates a 2D 2 * 2 rotation matrix from an euler angle\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tmat3x3<T> glm::orientate3 (T const & angle)"
+Creates a 2D 4 * 4 homogeneous rotation matrix from an euler angle\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tmat3x3<T> glm::orientate3 (\fBdetail::tvec3\fP< T > const & angles)"
+Creates a 3D 3 * 3 rotation matrix from euler angles (Y * X * Z)\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SS "template<typename T > detail::tmat4x4<T> glm::orientate4 (\fBdetail::tvec3\fP< T > const & angles)"
+Creates a 3D 4 * 4 homogeneous rotation matrix from euler angles (Y * X * Z)\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tmat4x4<valType> glm::yawPitchRoll (valType const & yaw, valType const & pitch, valType const & roll)"
+Creates a 3D 4 * 4 homogeneous rotation matrix from euler angles (Y * X * Z)\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_euler_angles\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

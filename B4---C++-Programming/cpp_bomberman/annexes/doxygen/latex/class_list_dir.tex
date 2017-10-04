@@ -1,0 +1,85 @@
+\hypertarget{class_list_dir}{}\section{List\+Dir Class Reference}
+\label{class_list_dir}\index{List\+Dir@{List\+Dir}}
+
+
+List files in specific directory.  
+
+
+
+
+{\ttfamily \#include $<$List\+Dir.\+hh$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_list_dir_aac92fbdf95091015a84a9daa284d610b}{List\+Dir} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_list_dir}{List\+Dir}\textquotesingle{}s constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_list_dir_ae7e13336b2eb093202570642a6931dbf}{}\hyperlink{class_list_dir_ae7e13336b2eb093202570642a6931dbf}{$\sim$\+List\+Dir} ()\label{class_list_dir_ae7e13336b2eb093202570642a6931dbf}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_list_dir}{List\+Dir}\textquotesingle{}s destructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{class_list_dir_ae80828ed7f47ac09e17cc05735c257a9}{get\+Files} (std\+::string const \&path)
+\begin{DoxyCompactList}\small\item\em list everyfile in path \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+D\+I\+R $\ast$ \hyperlink{class_list_dir_aaa998893571e65c0f82c129c52543148}{m\+\_\+dirp}
+\item 
+struct dirent $\ast$ \hyperlink{class_list_dir_ad5c1cab9f4223840352773b289640d25}{m\+\_\+files}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+List files in specific directory. 
+
+Allow to list files in specific directory 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_list_dir_aac92fbdf95091015a84a9daa284d610b}{}\index{List\+Dir@{List\+Dir}!List\+Dir@{List\+Dir}}
+\index{List\+Dir@{List\+Dir}!List\+Dir@{List\+Dir}}
+\subsubsection[{List\+Dir}]{\setlength{\rightskip}{0pt plus 5cm}List\+Dir\+::\+List\+Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_list_dir_aac92fbdf95091015a84a9daa284d610b}
+
+
+\hyperlink{class_list_dir}{List\+Dir}\textquotesingle{}s constructor. 
+
+It will init to default values every variable 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_list_dir_ae80828ed7f47ac09e17cc05735c257a9}{}\index{List\+Dir@{List\+Dir}!get\+Files@{get\+Files}}
+\index{get\+Files@{get\+Files}!List\+Dir@{List\+Dir}}
+\subsubsection[{get\+Files}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ List\+Dir\+::get\+Files (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{path}
+\end{DoxyParamCaption}
+)}\label{class_list_dir_ae80828ed7f47ac09e17cc05735c257a9}
+
+
+list everyfile in path 
+
+It will list everyfile in specific path without \textquotesingle{}.\textquotesingle{} and \textquotesingle{}..\textquotesingle{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & we will list file in this path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Every file stored in string 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_list_dir_aaa998893571e65c0f82c129c52543148}{}\index{List\+Dir@{List\+Dir}!m\+\_\+dirp@{m\+\_\+dirp}}
+\index{m\+\_\+dirp@{m\+\_\+dirp}!List\+Dir@{List\+Dir}}
+\subsubsection[{m\+\_\+dirp}]{\setlength{\rightskip}{0pt plus 5cm}D\+I\+R$\ast$ List\+Dir\+::m\+\_\+dirp\hspace{0.3cm}{\ttfamily [private]}}\label{class_list_dir_aaa998893571e65c0f82c129c52543148}
+variable to \textquotesingle{}load\textquotesingle{} directory and allow us to travel it \hypertarget{class_list_dir_ad5c1cab9f4223840352773b289640d25}{}\index{List\+Dir@{List\+Dir}!m\+\_\+files@{m\+\_\+files}}
+\index{m\+\_\+files@{m\+\_\+files}!List\+Dir@{List\+Dir}}
+\subsubsection[{m\+\_\+files}]{\setlength{\rightskip}{0pt plus 5cm}struct dirent$\ast$ List\+Dir\+::m\+\_\+files\hspace{0.3cm}{\ttfamily [private]}}\label{class_list_dir_ad5c1cab9f4223840352773b289640d25}
+structure to read into m\+\_\+dirp 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_list_dir_8hh}{List\+Dir.\+hh}\end{DoxyCompactItemize}

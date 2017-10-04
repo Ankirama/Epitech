@@ -1,0 +1,52 @@
+.TH "AObject" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AObject \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBCube\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBinitialize\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBupdate\fP (gdl::Clock const &, gdl::Input &)"
+.br
+.ti -1c
+.RI "virtual void \fBdraw\fP (gdl::AShader &shader, gdl::Clock const &clock)=0"
+.br
+.ti -1c
+.RI "void \fBtranslate\fP (glm::vec3 const &v)"
+.br
+.ti -1c
+.RI "void \fBrotate\fP (glm::vec3 const &axis, float angle)"
+.br
+.ti -1c
+.RI "void \fBscale\fP (glm::vec3 const &scale)"
+.br
+.ti -1c
+.RI "glm::mat4 \fBgetTransformation\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "glm::vec3 \fB_position\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fB_rotation\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fB_scale\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

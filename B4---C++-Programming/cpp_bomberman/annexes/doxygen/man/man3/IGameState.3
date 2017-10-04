@@ -1,0 +1,42 @@
+.TH "IGameState" 3 "Tue Jun 9 2015" "Version 0.53" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IGameState \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBGameState\fP, \fBIntroState\fP, \fBLoadState\fP, \fBMenuState\fP, \fBMultState\fP, \fBOptionState\fP, \fBPlayState\fP, \fBSaveState\fP, \fBScoreState\fP, and \fBSoloState\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBInit\fP (\fBGameEngine\fP *)=0"
+.br
+.ti -1c
+.RI "virtual void \fBCleanup\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBPause\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBResume\fP (\fBGameEngine\fP *)=0"
+.br
+.ti -1c
+.RI "virtual void \fBUpdate\fP (\fBGameEngine\fP *)=0"
+.br
+.ti -1c
+.RI "virtual void \fBDraw\fP (\fBGameEngine\fP *)=0"
+.br
+.ti -1c
+.RI "virtual void \fBmodKey\fP (const int, const int)=0"
+.br
+.ti -1c
+.RI "void \fBChangeState\fP (\fBGameEngine\fP *game, \fBIGameState\fP *state)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.

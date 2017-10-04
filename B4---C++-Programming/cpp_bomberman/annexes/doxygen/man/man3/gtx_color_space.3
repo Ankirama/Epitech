@@ -1,0 +1,94 @@
+.TH "gtx_color_space" 3 "Sun Jun 7 2015" "Version 0.42" "cpp_bomberman" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gtx_color_space \- GLM_GTX_color_space
+.PP
+Related to RGB to HSV conversions and operations\&.  
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename valType > detail::tvec3< valType > \fBglm::rgbColor\fP (detail::tvec3< valType > const &hsvValue)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tvec3< valType > \fBglm::hsvColor\fP (detail::tvec3< valType > const &rgbValue)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tmat4x4< valType > \fBglm::saturation\fP (valType const s)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tvec3< valType > \fBglm::saturation\fP (valType const s, detail::tvec3< valType > const &color)"
+.br
+.ti -1c
+.RI "template<typename valType > detail::tvec4< valType > \fBglm::saturation\fP (valType const s, detail::tvec4< valType > const &color)"
+.br
+.ti -1c
+.RI "template<typename valType > valType \fBglm::luminosity\fP (detail::tvec3< valType > const &color)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Related to RGB to HSV conversions and operations\&. 
+
+<\fBglm/gtx/color_space\&.hpp\fP> need to be included to use these functionalities\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename valType > detail::tvec3<valType> glm::hsvColor (\fBdetail::tvec3\fP< valType > const & rgbValue)"
+Converts a color from RGB color space to its color in HSV color space\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_color_space\fP 
+.RE
+.PP
+
+.SS "template<typename valType > valType glm::luminosity (\fBdetail::tvec3\fP< valType > const & color)"
+Compute color luminosity associating ratios (0\&.33, 0\&.59, 0\&.11) to RGB canals\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_color_space\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tvec3<valType> glm::rgbColor (\fBdetail::tvec3\fP< valType > const & hsvValue)"
+Converts a color from HSV color space to its color in RGB color space\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_color_space\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tmat4x4<valType> glm::saturation (valType const s)"
+Build a saturation matrix\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_color_space\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tvec3<valType> glm::saturation (valType const s, \fBdetail::tvec3\fP< valType > const & color)"
+Modify the saturation of a color\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_color_space\fP 
+.RE
+.PP
+
+.SS "template<typename valType > detail::tvec4<valType> glm::saturation (valType const s, \fBdetail::tvec4\fP< valType > const & color)"
+Modify the saturation of a color\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBGLM_GTX_color_space\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for cpp_bomberman from the source code\&.
