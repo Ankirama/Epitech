@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epitech C Piscine — Exercise Reference</title>
+  <style>
+    /* ── Catppuccin Mocha ── */
+    :root {
+      --base:      #1e1e2e;
+      --mantle:    #181825;
+      --crust:     #11111b;
+      --surface0:  #313244;
+      --surface1:  #45475a;
+      --surface2:  #585b70;
+      --overlay0:  #6c7086;
+      --overlay1:  #7f849c;
+      --text:      #cdd6f4;
+      --subtext0:  #a6adc8;
+      --subtext1:  #bac2de;
+      --lavender:  #b4befe;
+      --blue:      #89b4fa;
+      --sapphire:  #74c7ec;
+      --sky:       #89dceb;
+      --teal:      #94e2d5;
+      --green:     #a6e3a1;
+      --yellow:    #f9e2af;
+      --peach:     #fab387;
+      --maroon:    #eba0ac;
+      --red:       #f38ba8;
+      --mauve:     #cba6f7;
+      --pink:      #f5c2e7;
+      --flamingo:  #f2cdcd;
+      --rosewater: #f5e0dc;
+    }
+
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--base);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    code {
+      font-family: 'Courier New', 'Consolas', monospace;
+      background: var(--surface0);
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 12px;
+      color: var(--sky);
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--mantle);
+      border-bottom: 1px solid var(--surface0);
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--mauve);
+    }
+    .logo span { color: var(--text); font-weight: 400; }
+    .header-meta { font-size: 12px; color: var(--subtext0); }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, var(--mantle) 0%, var(--crust) 100%);
+      border-bottom: 1px solid var(--surface0);
+      padding: 40px 32px 32px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 28px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+    .hero h1 em { font-style: normal; color: var(--mauve); }
+    .hero p { color: var(--subtext0); font-size: 14px; margin-bottom: 20px; }
+    .stats {
+      display: inline-flex;
+      gap: 24px;
+      background: var(--surface0);
+      border-radius: 12px;
+      padding: 10px 24px;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 22px; font-weight: 700; color: var(--blue); }
+    .stat-label { font-size: 11px; color: var(--subtext0); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ── Tab bar ── */
+    .tabs-wrapper {
+      background: var(--mantle);
+      border-bottom: 1px solid var(--surface0);
+      padding: 0 32px;
+      position: sticky;
+      top: 56px;
+      z-index: 9;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tabs-wrapper::-webkit-scrollbar { display: none; }
+    .tabs { display: flex; gap: 2px; min-width: max-content; }
+    .tab {
+      padding: 12px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--subtext0);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      user-select: none;
+      transition: color 0.1s;
+    }
+    .tab:hover { color: var(--text); }
+    .tab.active { color: var(--mauve); border-bottom-color: var(--mauve); }
+    .badge {
+      background: var(--surface0);
+      border-radius: 99px;
+      padding: 1px 6px;
+      font-size: 10px;
+      color: var(--subtext0);
+    }
+    .tab.active .badge { background: var(--mauve); color: var(--crust); }
+    .tab.bonus.active { color: var(--peach); border-bottom-color: var(--peach); }
+    .tab.bonus.active .badge { background: var(--peach); color: var(--crust); }
+
+    /* ── Content area ── */
+    .content {
+      padding: 28px 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ── Day header ── */
+    .day-header { margin-bottom: 20px; }
+    .day-header h2 { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .day-header p { color: var(--subtext0); font-size: 13px; }
+    .tag {
+      display: inline-block;
+      border-radius: 6px;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-right: 6px;
+    }
+    .tag-shell { background: #fab38722; color: var(--peach); }
+    .tag-c     { background: #89b4fa22; color: var(--blue); }
+    .tag-mixed { background: #a6e3a122; color: var(--green); }
+
+    /* ── Card grid ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: var(--surface0);
+      border-radius: 10px;
+      padding: 16px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: border-color 0.15s, background 0.15s, transform 0.15s;
+    }
+    .card:hover {
+      border-color: var(--mauve);
+      background: var(--surface1);
+      transform: translateY(-1px);
+    }
+    .card-name {
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--sky);
+      margin-bottom: 6px;
+    }
+    .card-name .ext { color: var(--subtext0); font-weight: 400; font-size: 11px; }
+    .card-desc {
+      font-size: 12px;
+      color: var(--subtext1);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .card-footer {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-proto {
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      color: var(--red);
+      background: var(--mantle);
+      border-radius: 4px;
+      padding: 2px 6px;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .card-arrow { color: var(--overlay0); font-size: 12px; }
+
+    /* ── Modal backdrop ── */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 20px;
+    }
+
+    /* ── Modal box ── */
+    .modal {
+      background: var(--mantle);
+      border: 1px solid var(--surface1);
+      border-radius: 14px;
+      width: 100%;
+      max-width: min(580px, 90vw);
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+    .modal-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .modal-title {
+      font-family: 'Courier New', monospace;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--sky);
+    }
+    .modal-close {
+      color: var(--subtext0);
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--surface0);
+      flex-shrink: 0;
+    }
+    .modal-close:hover { background: var(--surface1); color: var(--text); }
+
+    /* ── Modal sections ── */
+    .modal-section { margin-bottom: 16px; }
+    .modal-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--overlay1);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .modal-desc { color: var(--subtext1); font-size: 13px; line-height: 1.7; }
+    .modal-proto {
+      background: var(--crust);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: var(--red);
+      border-left: 3px solid var(--mauve);
+    }
+    .modal-expected {
+      background: var(--crust);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: var(--green);
+      white-space: pre;
+    }
+
+    /* ── Spoiler ── */
+    .spoiler-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      color: var(--yellow);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 8px 12px;
+      background: var(--surface0);
+      border-radius: 8px;
+      border: 1px dashed var(--surface2);
+      margin-bottom: 8px;
+      user-select: none;
+    }
+    .spoiler-toggle:hover { background: var(--surface1); }
+    .spoiler-code {
+      background: var(--crust);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: var(--text);
+      line-height: 1.8;
+      white-space: pre;       /* preserves all indentation and line breaks */
+      overflow-x: auto;       /* horizontal scroll for long lines */
+      tab-size: 4;
+    }
+    /* Syntax highlight tokens */
+    .kw { color: var(--mauve); }
+    .fn { color: var(--blue); }
+    .cm { color: var(--overlay1); font-style: italic; }
+    .ch { color: var(--green); }
+    .nb { color: var(--peach); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--surface0);
+      padding: 20px 32px;
+      text-align: center;
+      color: var(--overlay0);
+      font-size: 12px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🐱 <span>Epitech</span> C Piscine</div>
+  <div class="header-meta">March 2014 · </div>
+</header>
+
+<div class="hero">
+  <h1>Epitech <em>C Piscine</em> — Exercise Reference</h1>
+  <p>All exercise prompts reconstructed from source code. Use tabs to navigate by day.</p>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">13</div><div class="stat-label">Days</div></div>
+    <div class="stat"><div class="stat-num">85+</div><div class="stat-label">Exercises</div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-label">Bonus</div></div>
+  </div>
+</div>
+
+<div class="tabs-wrapper" id="tabs-wrapper">
+  <div class="tabs" id="tabs">
+    <!-- rendered by JS -->
+  </div>
+</div>
+
+<div class="content" id="content">
+  <!-- rendered by JS -->
+</div>
+
+<div class="modal-backdrop" id="modal" style="display:none" onclick="handleBackdropClick(event)">
+  <div class="modal" id="modal-box">
+    <!-- populated by openModal() -->
+  </div>
+</div>
+
+<footer>
+  Built from source ·
+  <a href="https://github.com/ankirama" target="_blank" rel="noopener">github.com/ankirama</a>
+  · Epitech 2014
+</footer>
+
+<script>
+// ── Exercise data ──
+const DAYS = [
+  // ────────────────────────────────────────────────
+  // DAY 01 — Shell: Terminal Discovery
+  // ────────────────────────────────────────────────
+  {
+    id: 'day01', label: 'Day 01', title: 'Shell: Terminal Discovery',
+    description: 'Introduction to shell scripting, file system navigation and archiving.',
+    lang: 'shell', bonus: false,
+    exercises: [
+      {
+        name: 'arborescence.sh',
+        description: 'Write a shell script that recursively displays the full directory tree of the current directory.',
+        prototype: null,
+        expected: null,
+        solution: '#!/bin/bash\nls -R'
+      },
+      {
+        name: 'path.sh',
+        description: 'Write a shell script that displays: (1) the current absolute path, (2) the first 6 lines of a file named coffre-fort, (3) the current date and time.',
+        prototype: null,
+        expected: null,
+        solution: '#!/bin/bash\npwd\nhead -6 coffre-fort\ndate'
+      },
+      {
+        name: 'my_tar.sh',
+        description: 'Write a shell script that creates a tar.gz archive of the current directory, excluding the script itself.',
+        prototype: null,
+        expected: null,
+        solution: '#!/bin/bash\ntar -czf archive.tar.gz --exclude=my_tar.sh .'
+      },
+      {
+        name: 'myman.sh',
+        description: 'Write a shell script that simulates a manual lookup tool. Takes a command name as argument, searches for its documentation in a file named coffre-fort, and displays the result.',
+        prototype: null,
+        expected: null,
+        solution: '#!/bin/bash\ngrep -A 999 "^$1" coffre-fort | head -n 20'
+      },
+    ]
+  },
+
+  // ────────────────────────────────────────────────
+  // DAY 02 — Shell: Process Management
+  // ────────────────────────────────────────────────
+  {
+    id: 'day02', label: 'Day 02', title: 'Shell: Process Management',
+    description: 'Shell scripting for process inspection, filtering and monitoring.',
+    lang: 'shell', bonus: false,
+    exercises: [
+      {
+        name: 'my_proc.sh',
+        description: 'Write a shell script that takes a username as argument and displays only the processes belonging to that user (using ps and sed).',
+        prototype: null,
+        expected: null,
+        solution: '#!/bin/bash\nps aux | grep "^$1"'
+      },
+      {
+        name: 'my_sort_proc.sh',
+        description: "Write a shell script that displays the current user's processes sorted by descending CPU usage.",
+        prototype: null,
+        expected: null,
+        solution: '#!/bin/bash\nps aux --sort=-%cpu | grep "^$USER"'
+      },
+      {
+        name: 'my_not_system_proc.sh',
+        description: 'Write a shell script that displays only non-system (user) processes.',
+        prototype: null,
+        expected: null,
+        solution: "#!/bin/bash\nps aux | awk '$1 != \"root\" {print}'"
+      },
+      {
+        name: 'other_user_proc.sh',
+        description: 'Write a shell script that displays processes belonging to users other than the current user.',
+        prototype: null,
+        expected: null,
+        solution: '#!/bin/bash\nps aux | awk -v user="$USER" \'$1 != user && NR > 1 {print}\''
+      },
+      {
+        name: 'user.sh',
+        description: 'Write a shell script that extracts and displays the list of unique usernames that have active processes.',
+        prototype: null,
+        expected: null,
+        solution: "#!/bin/bash\nps aux | awk 'NR>1 {print $1}' | sort -u"
+      },
+      {
+        name: 'my_clean_proc_name.sh',
+        description: 'Write a shell script that displays the names of running processes, cleaned of their full path (binary name only).',
+        prototype: null,
+        expected: null,
+        solution: "#!/bin/bash\nps aux | awk 'NR>1 {print $11}' | sed 's|.*/||g' | sort -u"
+      },
+      {
+        name: 'scan_process.sh',
+        description: 'Write a shell script that continuously monitors a given process and periodically displays its CPU and memory consumption.',
+        prototype: null,
+        expected: null,
+        solution: '#!/bin/bash\nwhile true; do\n  ps aux | grep "$1" | grep -v grep\n  sleep 1\ndone'
+      },
+      {
+        name: 'my_malware.sh',
+        description: 'Write a shell script that extracts and displays the path of the root shell currently running from the process list.',
+        prototype: null,
+        expected: null,
+        solution: '#!/bin/bash\nps aux | grep "^root" | awk \'{print $11}\' | grep "sh$" | head -1'
+      },
+    ]
+  },
+
+  // ────────────────────────────────────────────────
+  // DAY 03 — C: First Display Functions
+  // ────────────────────────────────────────────────
+  {
+    id: 'day03', label: 'Day 03', title: 'C: First Display Functions',
+    description: 'All functions use only my_putchar() for output. No printf, no write.',
+    lang: 'c', bonus: false,
+    exercises: [
+      {
+        name: 'my_aff_alpha.c',
+        description: 'Write a function that displays the lowercase alphabet in ascending order on a single line.',
+        prototype: 'int my_aff_alpha(void);',
+        expected: 'abcdefghijklmnopqrstuvwxyz',
+        solution: '<span class="kw">int</span>\t<span class="fn">my_aff_alpha</span>()\n{\n  <span class="kw">char</span>\ti;\n\n  i = <span class="ch">\'a\'</span>;\n  <span class="kw">while</span> (i &lt;= <span class="ch">\'z\'</span>)\n    {\n      <span class="fn">my_putchar</span>(i);\n      i += <span class="nb">1</span>;\n    }\n  <span class="kw">return</span> (<span class="nb">0</span>);\n}'
+      },
+      {
+        name: 'my_aff_revalpha.c',
+        description: 'Write a function that displays the lowercase alphabet in descending order.',
+        prototype: 'int my_aff_revalpha(void);',
+        expected: 'zyxwvutsrqponmlkjihgfedcba',
+        solution: '<span class="kw">int</span>\t<span class="fn">my_aff_revalpha</span>()\n{\n  <span class="kw">char</span>\ti;\n\n  i = <span class="ch">\'z\'</span>;\n  <span class="kw">while</span> (i &gt;= <span class="ch">\'a\'</span>)\n    {\n      <span class="fn">my_putchar</span>(i);\n      i -= <span class="nb">1</span>;\n    }\n  <span class="kw">return</span> (<span class="nb">0</span>);\n}'
+      },
+      {
+        name: 'my_aff_chiffre.c',
+        description: 'Write a function that displays digits from 0 to 9 in ascending order.',
+        prototype: 'int my_aff_chiffre(void);',
+        expected: '0123456789',
+        solution: '<span class="kw">int</span>\t<span class="fn">my_aff_chiffre</span>()\n{\n  <span class="kw">char</span>\ti;\n\n  i = <span class="ch">\'0\'</span>;\n  <span class="kw">while</span> (i &lt;= <span class="ch">\'9\'</span>)\n    {\n      <span class="fn">my_putchar</span>(i);\n      i += <span class="nb">1</span>;\n    }\n  <span class="kw">return</span> (<span class="nb">0</span>);\n}'
+      },
+      {
+        name: 'my_isneg.c',
+        description: "Write a function that prints 'N' if the integer is negative, 'P' otherwise (zero is positive).",
+        prototype: 'int my_isneg(int n);',
+        expected: 'my_isneg(-5)  → N\nmy_isneg(0)   → P\nmy_isneg(42)  → P',
+        solution: '<span class="kw">int</span>\t<span class="fn">my_isneg</span>(<span class="kw">int</span> n)\n{\n  <span class="kw">if</span> (n &lt; <span class="nb">0</span>)\n    <span class="fn">my_putchar</span>(<span class="ch">\'N\'</span>);\n  <span class="kw">else</span>\n    <span class="fn">my_putchar</span>(<span class="ch">\'P\'</span>);\n  <span class="kw">return</span> (<span class="nb">0</span>);\n}'
+      },
+      {
+        name: 'my_put_nbr.c',
+        description: 'Write a function that displays an integer, including negative values. Only my_putchar() is allowed.',
+        prototype: 'int my_put_nbr(int nbr);',
+        expected: 'my_put_nbr(42)   → 42\nmy_put_nbr(-7)   → -7\nmy_put_nbr(0)    → 0',
+        solution: '<span class="kw">int</span>\t<span class="fn">rec_my_put_nbr</span>(<span class="kw">int</span> nbr)\n{\n  <span class="kw">if</span> (nbr &lt;= <span class="nb">9</span>)\n    <span class="fn">my_putchar</span>(<span class="ch">\'0\'</span> + nbr);\n  <span class="kw">else</span>\n    {\n      <span class="fn">my_put_nbr</span>(nbr / <span class="nb">10</span>);\n      <span class="fn">my_putchar</span>(<span class="ch">\'0\'</span> + (nbr % <span class="nb">10</span>));\n    }\n}\n\n<span class="kw">int</span>\t<span class="fn">my_put_nbr</span>(<span class="kw">int</span> nbr)\n{\n  <span class="kw">if</span> (nbr &lt; <span class="nb">0</span>)\n    {\n      <span class="fn">my_putchar</span>(<span class="ch">\'-\'</span>);\n      nbr = nbr * (<span class="nb">-1</span>);\n    }\n  <span class="fn">rec_my_put_nbr</span>(nbr);\n}'
+      },
+      {
+        name: 'my_aff_comb.c',
+        description: 'Write a function that displays all combinations of 3 different digits in ascending order, separated by ", ". The last combination is not followed by ", ".',
+        prototype: 'int my_aff_comb(void);',
+        expected: '012, 013, 014, ..., 789',
+        solution: '<span class="kw">int</span>\t<span class="fn">my_aff_comb</span>()\n{\n  <span class="kw">char</span>\ta;\n  <span class="kw">char</span>\tb;\n  <span class="kw">char</span>\tc;\n\n  a = <span class="ch">\'0\'</span>;\n  <span class="kw">while</span> (a &lt;= <span class="ch">\'7\'</span>)\n    {\n      b = <span class="ch">\'0\'</span>;\n      <span class="kw">while</span> (b &lt;= <span class="ch">\'8\'</span>)\n        {\n          c = <span class="ch">\'0\'</span>;\n          <span class="kw">while</span> (c &lt;= <span class="ch">\'9\'</span>)\n            {\n              <span class="kw">if</span> (a &lt; b &amp;&amp; b &lt; c)\n                {\n                  <span class="fn">my_putchar</span>(a);\n                  <span class="fn">my_putchar</span>(b);\n                  <span class="fn">my_putchar</span>(c);\n                  <span class="kw">if</span> (!(a == <span class="ch">\'7\'</span>))\n                    { <span class="fn">my_putchar</span>(<span class="ch">\',\'</span>); <span class="fn">my_putchar</span>(<span class="ch">\' \'</span>); }\n                }\n              c += <span class="nb">1</span>;\n            }\n          b += <span class="nb">1</span>;\n        }\n      a += <span class="nb">1</span>;\n    }\n  <span class="kw">return</span> (<span class="nb">0</span>);\n}'
+      },
+      {
+        name: 'my_aff_comb2.c',
+        description: 'Write a function that displays all combinations of two 2-digit numbers (00 to 99) where the first is smaller than the second, separated by ", ". Format: "AA BB".',
+        prototype: 'int my_aff_comb2(void);',
+        expected: '00 01, 00 02, ..., 98 99',
+        solution: '<span class="kw">int</span>\t<span class="fn">my_aff_comb2</span>()\n{\n  <span class="kw">char</span>\ta;\n  <span class="kw">char</span>\tb;\n\n  a = <span class="nb">0</span>;\n  <span class="kw">while</span> (a &lt; <span class="nb">99</span>)\n    {\n      b = <span class="nb">0</span>;\n      <span class="kw">while</span> (b &lt;= <span class="nb">99</span>)\n        {\n          <span class="kw">if</span> (a &lt; b)\n            {\n              <span class="fn">my_putchar</span>(<span class="ch">\'0\'</span> + (a / <span class="nb">10</span>));\n              <span class="fn">my_putchar</span>(<span class="ch">\'0\'</span> + (a % <span class="nb">10</span>));\n              <span class="fn">my_putchar</span>(<span class="ch">\' \'</span>);\n              <span class="fn">my_putchar</span>(<span class="ch">\'0\'</span> + (b / <span class="nb">10</span>));\n              <span class="fn">my_putchar</span>(<span class="ch">\'0\'</span> + (b % <span class="nb">10</span>));\n              <span class="kw">if</span> (a != <span class="nb">98</span>)\n                { <span class="fn">my_putchar</span>(<span class="ch">\',\'</span>); <span class="fn">my_putchar</span>(<span class="ch">\' \'</span>); }\n            }\n          b += <span class="nb">1</span>;\n        }\n      a += <span class="nb">1</span>;\n    }\n}'
+      },
+      {
+        name: 'my_aff_combn.c',
+        description: 'Write a function that displays all combinations of n different digits in ascending order, separated by ", ". If n <= 0 or n > 10, print a newline. If n == 10, print "0123456789".',
+        prototype: 'int my_aff_combn(int n);',
+        expected: 'my_aff_combn(2) → 01, 02, ..., 89\nmy_aff_combn(3) → 012, 013, ..., 789',
+        solution: null
+      },
+    ]
+  },
+
+  // ────────────────────────────────────────────────
+  // DAY 04 — C: Strings and Arrays
+  // ────────────────────────────────────────────────
+  {
+    id: 'day04', label: 'Day 04', title: 'C: Strings and Arrays',
+    description: 'Core string manipulation and array sorting functions.',
+    lang: 'c', bonus: false,
+    exercises: [
+      {
+        name: 'my_strlen.c',
+        description: "Write a function that returns the length of a string (not counting the terminating '\\0').",
+        prototype: 'int my_strlen(char *str);',
+        expected: 'my_strlen("hello") → 5\nmy_strlen("")      → 0',
+        solution: '<span class="kw">int</span>\t<span class="fn">my_strlen</span>(<span class="kw">char</span> *str)\n{\n  <span class="kw">int</span>\ti;\n\n  i = <span class="nb">0</span>;\n  <span class="kw">while</span> (str[i] != <span class="ch">\'\\0\'</span>)\n    i += <span class="nb">1</span>;\n  <span class="kw">return</span> (i);\n}'
+      },
+      {
+        name: 'my_putstr.c',
+        description: 'Write a function that displays a string character by character using my_putchar().',
+        prototype: 'int my_putstr(char *str);',
+        expected: 'my_putstr("hello") → hello',
+        solution: '<span class="kw">int</span>\t<span class="fn">my_putstr</span>(<span class="kw">char</span> *str)\n{\n  <span class="kw">int</span>\ti;\n\n  i = <span class="nb">0</span>;\n  <span class="kw">while</span> (str[i] != <span class="ch">\'\\0\'</span>)\n    {\n      <span class="fn">my_putchar</span>(str[i]);\n      i += <span class="nb">1</span>;\n    }\n  <span class="kw">return</span> (<span class="nb">0</span>);\n}'
+      },
+      {
+        name: 'my_swap.c',
+        description: 'Write a function that swaps the values pointed to by a and b.',
+        prototype: 'int my_swap(int *a, int *b);',
+        expected: 'a=3, b=7  →  a=7, b=3',
+        solution: '<span class="kw">int</span>\t<span class="fn">my_swap</span>(<span class="kw">int</span> *a, <span class="kw">int</span> *b)\n{\n  <span class="kw">int</span>\ttmp;\n\n  tmp = *a;\n  *a = *b;\n  *b = tmp;\n  <span class="kw">return</span> (<span class="nb">0</span>);\n}'
+      },
+      {
+        name: 'my_sort_int_tab.c',
+        description: 'Write a function that sorts an integer array in ascending order using bubble sort.',
+        prototype: 'void my_sort_int_tab(int *tab, int size);',
+        expected: '{5,3,1,4,2}  →  {1,2,3,4,5}',
+        solution: '<span class="kw">void</span>\t<span class="fn">my_sort_int_tab</span>(<span class="kw">int</span> *tab, <span class="kw">int</span> size)\n{\n  <span class="kw">int</span>\ti;\n  <span class="kw">int</span>\tdone;\n\n  done = <span class="nb">1</span>;\n  <span class="kw">while</span> (done == <span class="nb">1</span>)\n    {\n      done = <span class="nb">0</span>;\n      i = <span class="nb">0</span>;\n      <span class="kw">while</span> (i &lt; (size - <span class="nb">1</span>))\n        {\n          <span class="kw">if</span> (*(tab + i) &gt; *(tab + i + <span class="nb">1</span>))\n            {\n              done = <span class="nb">1</span>;\n              <span class="fn">my_swap</span>(&amp;(*(tab + i)), &amp;(*(tab + i + <span class="nb">1</span>)));\n            }\n          i += <span class="nb">1</span>;\n        }\n    }\n}'
+      },
+      {
+        name: 'my_getnbr.c',
+        description: 'Write a function that converts a string representing an integer to its int value. Handle + and - prefixes. Stop at the first non-numeric character.',
+        prototype: 'int my_getnbr(char *str);',
+        expected: 'my_getnbr("42")   → 42\nmy_getnbr("-7")   → -7\nmy_getnbr("  3")  → 0',
+        solution: null
+      },
+      {
+        name: 'my_evil_str.c',
+        description: 'Write a function that reverses a string in-place (no extra allocation) and returns a pointer to the string.',
+        prototype: 'char *my_evil_str(char *str);',
+        expected: '"hello"  →  "olleh"',
+        solution: '<span class="kw">char</span>\t*<span class="fn">my_evil_str</span>(<span class="kw">char</span> *str)\n{\n  <span class="kw">int</span>\ti;\n  <span class="kw">int</span>\tlen;\n\n  len = <span class="fn">my_strlen</span>(str) - <span class="nb">1</span>;\n  i = <span class="nb">0</span>;\n  <span class="kw">while</span> (i &lt; len)\n    {\n      <span class="fn">my_swap</span>((<span class="kw">int</span> *)&amp;str[i], (<span class="kw">int</span> *)&amp;str[len]);\n      i += <span class="nb">1</span>;\n      len -= <span class="nb">1</span>;\n    }\n  <span class="kw">return</span> (str);\n}'
+      },
+    ]
+  },
+
+  // ────────────────────────────────────────────────
+  // DAY 05 — C: Mathematical Algorithms
+  // ────────────────────────────────────────────────
+  {
+    id: 'day05', label: 'Day 05', title: 'C: Mathematical Algorithms',
+    description: 'Iterative and recursive implementations of classic mathematical functions.',
+    lang: 'c', bonus: false,
+    exercises: [
+      {
+        name: 'my_is_prime.c',
+        description: 'Write a function that returns 1 if the number is prime, 0 otherwise. Numbers less than 2 are not prime.',
+        prototype: 'int my_is_prime(int nb);',
+        expected: 'my_is_prime(7)  → 1\nmy_is_prime(4)  → 0\nmy_is_prime(1)  → 0',
+        solution: '<span class="kw">int</span>\t<span class="fn">my_is_prime</span>(<span class="kw">int</span> nb)\n{\n  <span class="kw">int</span>\ti;\n\n  <span class="kw">if</span> (nb &lt; <span class="nb">2</span>)\n    <span class="kw">return</span> (<span class="nb">0</span>);\n  <span class="kw">if</span> (nb == <span class="nb">2</span>)\n    <span class="kw">return</span> (<span class="nb">1</span>);\n  <span class="kw">if</span> (nb % <span class="nb">2</span> == <span class="nb">0</span>)\n    <span class="kw">return</span> (<span class="nb">0</span>);\n  i = <span class="nb">3</span>;\n  <span class="kw">while</span> (i * i &lt;= nb)\n    {\n      <span class="kw">if</span> (nb % i == <span class="nb">0</span>)\n        <span class="kw">return</span> (<span class="nb">0</span>);\n      i += <span class="nb">2</span>;\n    }\n  <span class="kw">return</span> (<span class="nb">1</span>);\n}'
+      },
+      {
+        name: 'my_find_prime_sup.c',
+        description: 'Write a function that returns the smallest prime number strictly greater than the given number.',
+        prototype: 'int my_find_prime_sup(int nb);',
+        expected: 'my_find_prime_sup(10) → 11\nmy_find_prime_sup(14) → 17',
+        solution: null
+      },
+      {
+        name: 'my_square_root.c',
+        description: 'Write a function that returns the integer square root of nb if it is a perfect square, or 0 otherwise.',
+        prototype: 'int my_square_root(int nb);',
+        expected: 'my_square_root(9)  → 3\nmy_square_root(8)  → 0\nmy_square_root(25) → 5',
+        solution: null
+      },
+      {
+        name: 'my_power_it.c',
+        description: 'Write an iterative function that returns nb raised to the power of power. Return 0 if power is negative.',
+        prototype: 'int my_power_it(int nb, int power);',
+        expected: 'my_power_it(2, 10) → 1024\nmy_power_it(3, -1) → 0',
+        solution: null
+      },
+      {
+        name: 'my_power_rec.c',
+        description: 'Write a recursive function that returns nb raised to the power of power. Return 0 if power is negative.',
+        prototype: 'int my_power_rec(int nb, int power);',
+        expected: 'my_power_rec(2, 10) → 1024\nmy_power_rec(3, 0)  → 1',
+        solution: null
+      },
+      {
+        name: 'my_factorielle_it.c',
+        description: 'Write an iterative function that returns the factorial of nb. Return 0 if nb is negative or greater than 12.',
+        prototype: 'int my_factorielle_it(int nb);',
+        expected: 'my_factorielle_it(5) → 120\nmy_factorielle_it(0) → 1',
+        solution: '<span class="kw">int</span>\t<span class="fn">my_factorielle_it</span>(<span class="kw">int</span> nb)\n{\n  <span class="kw">int</span>\ti;\n  <span class="kw">int</span>\tnbr;\n\n  <span class="kw">if</span> (nb &lt; <span class="nb">0</span> || nb &gt; <span class="nb">12</span>)\n    <span class="kw">return</span> (<span class="nb">0</span>);\n  i = nb;\n  nbr = <span class="nb">1</span>;\n  <span class="kw">while</span> (i &gt; <span class="nb">0</span>)\n    {\n      nbr *= i;\n      i -= <span class="nb">1</span>;\n    }\n  <span class="kw">return</span> (nbr);\n}'
+      },
+      {
+        name: 'my_factorielle_rec.c',
+        description: 'Write a recursive function that returns the factorial of nb. Return 0 if nb is negative.',
+        prototype: 'int my_factorielle_rec(int nb);',
+        expected: 'my_factorielle_rec(5) → 120\nmy_factorielle_rec(1) → 1',
+        solution: null
+      },
+      {
+        name: 'my_8r1.c',
+        description: 'Write a function that prints the number of solutions to the 8 Queens problem (place 8 queens on an 8×8 chessboard so none threatens another).',
+        prototype: 'int my_8r1(void);',
+        expected: '92',
+        solution: null
+      },
+      {
+        name: 'my_8r2.c',
+        description: 'Write a function that displays all solutions to the 8 Queens problem. Each solution is a line of 8 digits representing the queen\'s column position per row.',
+        prototype: 'int my_8r2(void);',
+        expected: '15863724\n16837425\n...',
+        solution: null
+      },
+    ]
+  },
+
+  // ────────────────────────────────────────────────
+  // DAY 06 — C: Advanced String Manipulation
+  // ────────────────────────────────────────────────
+  {
+    id: 'day06', label: 'Day 06', title: 'C: Advanced String Manipulation',
+    description: 'Reimplementing the C standard library string functions from scratch.',
+    lang: 'c', bonus: false,
+    exercises: [
+      { name: 'my_strcpy.c',        description: "Write a function that copies the string pointed to by src (including '\\0') into dest. Returns dest.", prototype: 'char *my_strcpy(char *dest, char *src);', expected: null, solution: null },
+      { name: 'my_strncpy.c',       description: "Write a function that copies at most n characters from src to dest. Pads with '\\0' if src is shorter than n.", prototype: 'char *my_strncpy(char *dest, char *src, int n);', expected: null, solution: null },
+      { name: 'my_revstr.c',        description: 'Write a function that reverses a string in place and returns a pointer to it.', prototype: 'char *my_revstr(char *str);', expected: '"hello" → "olleh"', solution: null },
+      { name: 'my_strstr.c',        description: 'Write a function that finds the first occurrence of to_find in str. Returns a pointer to the start of the match, or NULL.', prototype: 'char *my_strstr(char *str, char *to_find);', expected: null, solution: null },
+      { name: 'my_strcmp.c',        description: 'Write a function that compares two strings lexicographically. Returns negative, zero, or positive.', prototype: 'int my_strcmp(char *s1, char *s2);', expected: null, solution: null },
+      { name: 'my_strncmp.c',       description: 'Write a function that compares the first n characters of two strings.', prototype: 'int my_strncmp(char *s1, char *s2, int n);', expected: null, solution: null },
+      { name: 'my_strupcase.c',     description: 'Write a function that converts all alphabetic characters in a string to uppercase. Returns the modified string.', prototype: 'char *my_strupcase(char *str);', expected: '"hello" → "HELLO"', solution: null },
+      { name: 'my_strlowcase.c',    description: 'Write a function that converts all alphabetic characters in a string to lowercase. Returns the modified string.', prototype: 'char *my_strlowcase(char *str);', expected: '"HELLO" → "hello"', solution: null },
+      { name: 'my_strcapitalize.c', description: 'Write a function that capitalizes the first letter of each word (alphanumeric sequences) and lowercases the rest. Returns the modified string.', prototype: 'char *my_strcapitalize(char *str);', expected: '"hello world" → "Hello World"', solution: null },
+      { name: 'my_str_isalpha.c',   description: 'Write a function that returns 1 if all characters in the string are alphabetic, 0 otherwise.', prototype: 'int my_str_isalpha(char *str);', expected: null, solution: null },
+      { name: 'my_str_isnum.c',     description: "Write a function that returns 1 if all characters are digits ('0'–'9'), 0 otherwise.", prototype: 'int my_str_isnum(char *str);', expected: null, solution: null },
+      { name: 'my_str_islower.c',   description: 'Write a function that returns 1 if all alphabetic characters are lowercase, 0 otherwise.', prototype: 'int my_str_islower(char *str);', expected: null, solution: null },
+      { name: 'my_str_isupper.c',   description: 'Write a function that returns 1 if all alphabetic characters are uppercase, 0 otherwise.', prototype: 'int my_str_isupper(char *str);', expected: null, solution: null },
+      { name: 'my_str_isprintable.c', description: 'Write a function that returns 1 if all characters are printable (ASCII 32–126), 0 otherwise.', prototype: 'int my_str_isprintable(char *str);', expected: null, solution: null },
+      {
+        name: 'my_putnbr_base.c',
+        description: 'Write a function that displays an integer in the base given by the base string (e.g. "0123456789ABCDEF" for hex). Handles negative numbers.',
+        prototype: 'int my_putnbr_base(int nbr, char *base);',
+        expected: 'my_putnbr_base(255, "0123456789ABCDEF") → FF\nmy_putnbr_base(8, "01")                → 1000',
+        solution: null
+      },
+      {
+        name: 'my_getnbr_base.c',
+        description: 'Write a function that converts a string representing a number in the given base to its integer value. Handle + and - prefixes. Return 0 for invalid input.',
+        prototype: 'int my_getnbr_base(char *str, char *base);',
+        expected: 'my_getnbr_base("FF", "0123456789ABCDEF") → 255',
+        solution: null
+      },
+      {
+        name: 'my_showstr.c',
+        description: 'Write a function that displays a string, replacing non-printable characters (outside ASCII 32–126) with their hex escape sequence (e.g. \\0a for newline).',
+        prototype: 'int my_showstr(char *str);',
+        expected: '"hi\\n"  →  hi\\0a',
+        solution: null
+      },
+    ]
+  },
+
+  // ────────────────────────────────────────────────
+  // DAY 07 — C: Concatenation and Parameters
+  // ────────────────────────────────────────────────
+  {
+    id: 'day07', label: 'Day 07', title: 'C: Concatenation and Parameters',
+    description: 'String concatenation functions and command-line argument handling.',
+    lang: 'c', bonus: false,
+    exercises: [
+      {
+        name: 'my_strcat.c',
+        description: 'Write a function that appends the string src to the end of dest. Returns dest.',
+        prototype: 'char *my_strcat(char *dest, char *src);',
+        expected: 'dest="hello", src=" world"  →  "hello world"',
+        solution: '<span class="kw">char</span>\t*<span class="fn">my_strcat</span>(<span class="kw">char</span> *dest, <span class="kw">char</span> *src)\n{\n  <span class="kw">int</span>\ti;\n  <span class="kw">int</span>\tlength;\n\n  length = <span class="nb">0</span>;\n  <span class="kw">while</span> (dest[length] != <span class="ch">\'\\0\'</span>)\n    length += <span class="nb">1</span>;\n  i = <span class="nb">0</span>;\n  <span class="kw">while</span> (src[i] != <span class="ch">\'\\0\'</span>)\n    {\n      dest[length + i] = src[i];\n      i += <span class="nb">1</span>;\n    }\n  dest[length + i] = <span class="ch">\'\\0\'</span>;\n  <span class="kw">return</span> (dest);\n}'
+      },
+      {
+        name: 'my_strncat.c',
+        description: 'Write a function that appends at most n characters of src to the end of dest.',
+        prototype: 'char *my_strncat(char *dest, char *src, int n);',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'my_strlcat.c',
+        description: "Write a function that concatenates src to dest, ensuring the result is at most size-1 characters (plus '\\0'). Returns the total length the string would have had without truncation.",
+        prototype: 'int my_strlcat(char *dest, char *src, int size);',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'my_aff_params',
+        description: 'Write a program that displays all its command-line arguments in order, one per line.',
+        prototype: null,
+        expected: './my_aff_params a b c\n→\na\nb\nc',
+        solution: null
+      },
+      {
+        name: 'my_rev_params',
+        description: 'Write a program that displays all its command-line arguments in reverse order, one per line.',
+        prototype: null,
+        expected: './my_rev_params a b c\n→\nc\nb\na',
+        solution: null
+      },
+      {
+        name: 'my_sort_params',
+        description: 'Write a program that displays all its command-line arguments sorted in ascending lexicographic order, one per line.',
+        prototype: null,
+        expected: './my_sort_params c a b\n→\na\nb\nc',
+        solution: null
+      },
+    ]
+  },
+
+  // ────────────────────────────────────────────────
+  // DAY 08 — C: Dynamic Memory Allocation
+  // ────────────────────────────────────────────────
+  {
+    id: 'day08', label: 'Day 08', title: 'C: Dynamic Memory Allocation',
+    description: 'Using malloc to allocate memory for strings and data structures.',
+    lang: 'c', bonus: false,
+    exercises: [
+      {
+        name: 'my_strdup.c',
+        description: 'Write a function that allocates memory and returns a copy of src. Returns NULL on allocation failure. Use malloc.',
+        prototype: 'char *my_strdup(char *src);',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'convert_base.c',
+        description: 'Write a function that converts the string nbr (in base_from) to a new dynamically allocated string representing the same number in base_to. Handles signs.',
+        prototype: 'char *convert_base(char *nbr, char *base_from, char *base_to);',
+        expected: 'convert_base("ff", "0123456789abcdef", "01234567") → "377"',
+        solution: null
+      },
+      {
+        name: 'sum_params.c',
+        description: 'Write a function that concatenates all command-line arguments separated by newlines into a single dynamically allocated string.',
+        prototype: 'char *sum_params(int argc, char **argv);',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'my_str_to_wordtab.c',
+        description: 'Write a function that splits a string into a NULL-terminated array of words. Separators are all non-alphanumeric characters. Use malloc.',
+        prototype: 'char **my_str_to_wordtab(char *str);',
+        expected: '"hello world" → {"hello", "world", NULL}',
+        solution: null
+      },
+      {
+        name: 'my_show_wordtab.c',
+        description: 'Write a function that displays the contents of a word array (as returned by my_str_to_wordtab), one word per line.',
+        prototype: 'void my_show_wordtab(char **tab);',
+        expected: null,
+        solution: null
+      },
+    ]
+  },
+
+  // ────────────────────────────────────────────────
+  // DAY 09 — C: Macros, Structures, and Endianness
+  // ────────────────────────────────────────────────
+  {
+    id: 'day09', label: 'Day 09', title: 'C: Macros, Structures, and Endianness',
+    description: 'Preprocessor macros, struct-based parameter handling, and system architecture detection.',
+    lang: 'c', bonus: false,
+    exercises: [
+      {
+        name: 'my_macroABS.h',
+        description: 'Write a macro ABS(Value) that returns the absolute value of Value without using any function call.',
+        prototype: '#define ABS(Value) ...',
+        expected: 'ABS(-5) → 5\nABS(3)  → 3',
+        solution: '<span class="cm">/* my_macroABS.h */</span>\n#ifndef MY_MACROABS_H_\n# define MY_MACROABS_H_\n#  define <span class="fn">ABS</span>(Value) ((Value) &lt; <span class="nb">0</span> ? (Value) * <span class="nb">-1</span> : (Value))\n#endif'
+      },
+      {
+        name: 'my_param_to_tab.c',
+        description: 'Write a function that converts command-line arguments into an array of t_arg structures. Each struct holds a duplicated string and its length. The array is zero-terminated.',
+        prototype: 't_arg *my_param_to_tab(int argc, char **argv);',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'my_show_tab.c',
+        description: 'Write a function that displays the contents of a t_arg array. For each element, print the string and its length.',
+        prototype: 'void my_show_tab(t_arg *tab);',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'is_big_endian.c',
+        description: 'Write a function that returns 1 if the machine architecture is big-endian, 0 if it is little-endian. No global variables or constants allowed.',
+        prototype: 'int is_big_endian(void);',
+        expected: 'Intel x86/x64 → 0 (little-endian)',
+        solution: '<span class="kw">int</span>\t<span class="fn">is_big_endian</span>(<span class="kw">void</span>)\n{\n  <span class="kw">int</span>\ti;\n  <span class="kw">char</span>\t*conv_i;\n\n  i = <span class="nb">1</span>;\n  conv_i = (<span class="kw">char</span>*)&amp;i;\n  <span class="kw">return</span> (!*conv_i == <span class="nb">1</span>);\n}'
+      },
+    ]
+  },
+
+  // ────────────────────────────────────────────────
+  // DAY 11 — C: Function Pointers
+  // ────────────────────────────────────────────────
+  {
+    id: 'day11', label: 'Day 11', title: 'C: Function Pointers',
+    description: 'Using function pointers as first-class values: dispatch tables, callbacks, and sorting with comparators.',
+    lang: 'c', bonus: false,
+    exercises: [
+      {
+        name: 'do-op.c',
+        description: 'Write a program that takes exactly 3 arguments: number1 operator number2. Perform the operation using a function pointer dispatch table and print the result. Supported operators: +, -, /, *, %. Handle division/modulo by zero with an error message.',
+        prototype: null,
+        expected: './do-op 10 + 5   → 15\n./do-op 10 / 0   → Stop: division by zero\n./do-op 10 & 5   → 0',
+        solution: null
+      },
+      {
+        name: 'my_sort_wordtab.c',
+        description: 'Write a function that sorts a NULL-terminated array of strings in ascending lexicographic order.',
+        prototype: 'int my_sort_wordtab(char **tab);',
+        expected: '{"c","a","b",NULL}  →  {"a","b","c",NULL}',
+        solution: '<span class="kw">int</span>\t<span class="fn">my_sort_wordtab</span>(<span class="kw">char</span> **tab)\n{\n  <span class="kw">if</span> (tab != NULL)\n    <span class="fn">my_fun_sort_wordtab</span>(tab);\n  <span class="kw">return</span> (<span class="nb">0</span>);\n}\n\n<span class="kw">int</span>\t<span class="fn">my_fun_sort_wordtab</span>(<span class="kw">char</span> **tab)\n{\n  <span class="kw">int</span>\ti;\n  <span class="kw">char</span>\t*tmp;\n  <span class="kw">char</span>\tdone;\n\n  done = <span class="nb">1</span>;\n  <span class="kw">if</span> (tab[<span class="nb">0</span>] != <span class="nb">0</span> &amp;&amp; tab[<span class="nb">1</span>] != <span class="nb">0</span>)\n    {\n      <span class="kw">while</span> (done)\n        {\n          done = <span class="nb">0</span>;\n          i = <span class="nb">0</span>;\n          <span class="kw">while</span> (tab[i + <span class="nb">1</span>] != <span class="nb">0</span>)\n            {\n              <span class="kw">if</span> (<span class="fn">my_strcmp</span>(tab[i], tab[i + <span class="nb">1</span>]) &gt; <span class="nb">0</span>)\n                {\n                  tmp = tab[i];\n                  tab[i] = tab[i + <span class="nb">1</span>];\n                  tab[i + <span class="nb">1</span>] = tmp;\n                  done = <span class="nb">1</span>;\n                }\n              i += <span class="nb">1</span>;\n            }\n        }\n    }\n}'
+      },
+      {
+        name: 'my_advanced_sort_wordtab.c',
+        description: 'Write a function that sorts a NULL-terminated array of strings using a custom comparator function passed as parameter.',
+        prototype: 'void my_advanced_sort_wordtab(char **tab, int (*cmp)(char *, char *));',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'doop (ex_05)',
+        description: 'Extended do-op: the operator is passed as a full string (e.g. "add", "sub"). Use a struct table mapping operator strings to function pointers. If the operator is unknown, print the list of supported operators.',
+        prototype: null,
+        expected: './doop 10 add 5  → 15\n./doop 10 xyz 5  → error: only [ add sub div mul mod ] are supported',
+        solution: null
+      },
+    ]
+  },
+
+  // ────────────────────────────────────────────────
+  // DAY 12 — C: Linked Lists
+  // ────────────────────────────────────────────────
+  {
+    id: 'day12', label: 'Day 12', title: 'C: Linked Lists',
+    description: 'Implementing a complete linked list library from scratch. All exercises use t_list: { void *data; struct s_list *next; }.',
+    lang: 'c', bonus: false,
+    exercises: [
+      {
+        name: 'my_params_in_list.c',
+        description: 'Write a function that converts command-line arguments into a linked list. Each node holds one argument string as its data.',
+        prototype: 't_list *my_params_in_list(int ac, char **av);',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'my_list_size.c',
+        description: 'Write a function that counts and returns the number of nodes in the list.',
+        prototype: 'int my_list_size(t_list *begin);',
+        expected: 'list[a→b→c] → 3',
+        solution: null
+      },
+      {
+        name: 'my_rev_list.c',
+        description: 'Write a function that reverses a linked list in-place and updates the begin pointer. Returns 0 on success.',
+        prototype: 'int my_rev_list(t_list **begin);',
+        expected: 'list[a→b→c]  →  list[c→b→a]',
+        solution: '<span class="kw">int</span>\t\t<span class="fn">my_rev_list</span>(<span class="kw">t_list</span> **begin)\n{\n  <span class="kw">t_list</span>\t*previous;\n  <span class="kw">t_list</span>\t*next;\n\n  <span class="kw">if</span> (begin == NULL)\n    <span class="kw">return</span> (<span class="nb">1</span>);\n  previous = NULL;\n  next = NULL;\n  <span class="kw">while</span> ((*begin) != NULL)\n    {\n      next = (*begin)-&gt;next;\n      (*begin)-&gt;next = previous;\n      previous = (*begin);\n      (*begin) = next;\n    }\n  (*begin) = previous;\n  <span class="kw">return</span> (<span class="nb">0</span>);\n}'
+      },
+      {
+        name: 'my_apply_on_list.c',
+        description: 'Write a function that applies function f to the data field of every node in the list.',
+        prototype: 'void my_apply_on_list(t_list *begin, void (*f)(void *));',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'my_apply_on_eq_in_list.c',
+        description: 'Write a function that applies f to the data of each node whose data equals data_ref according to the comparator cmp.',
+        prototype: 'void my_apply_on_eq_in_list(t_list *begin, void *data_ref, int (*cmp)(void *, void *), void (*f)(void *));',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'my_find_elm_eq_in_list.c',
+        description: 'Write a function that returns the data of the first node whose data equals data_ref according to cmp. Returns NULL if not found.',
+        prototype: 'void *my_find_elm_eq_in_list(t_list *begin, void *data_ref, int (*cmp)(void *, void *));',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'my_find_node_eq_in_list.c',
+        description: 'Write a function that returns a pointer to the first node whose data equals data_ref according to cmp.',
+        prototype: 't_list *my_find_node_eq_in_list(t_list *begin, void *data_ref, int (*cmp)(void *, void *));',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'my_rm_all_eq_from_list.c',
+        description: 'Write a function that removes all nodes whose data equals data_ref. Uses free_fct to free the data and free() for the node itself. Returns the new list head.',
+        prototype: 't_list *my_rm_all_eq_from_list(t_list **begin, void *data_ref, int (*cmp)(void *, void *), void (*free_fct)(void *));',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'my_add_list_to_list.c',
+        description: 'Write a function that concatenates two linked lists by appending begin2 to the end of begin1. Returns the head of the resulting list.',
+        prototype: 't_list *my_add_list_to_list(t_list *begin1, t_list *begin2);',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'my_sort_list.c',
+        description: 'Write a function that sorts a linked list according to the comparator cmp. Returns the new list head.',
+        prototype: 't_list *my_sort_list(t_list **begin, int (*cmp)(void *, void *));',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'my_put_elem_in_sort_list.c',
+        description: 'Write a function that inserts a new element data into an already-sorted linked list, maintaining sort order as defined by cmp. Returns the new list head.',
+        prototype: 't_list *my_put_elem_in_sort_list(t_list **begin, void *data, int (*cmp)(void *, void *));',
+        expected: null,
+        solution: null
+      },
+    ]
+  },
+
+  // ────────────────────────────────────────────────
+  // DAY 13 — C: File I/O and System Calls
+  // ────────────────────────────────────────────────
+  {
+    id: 'day13', label: 'Day 13', title: 'C: File I/O and System Calls',
+    description: 'Reimplementing Unix utilities using only raw system calls (open, read, write, close).',
+    lang: 'c', bonus: false,
+    exercises: [
+      {
+        name: 'cat.c',
+        description: 'Reimplement the cat command in C using only system calls. Without arguments: read from stdin and print to stdout. With arguments: print each file in order. On error, display a custom error message without using perror() or strerror().',
+        prototype: null,
+        expected: './cat file.txt\n./cat file1.txt file2.txt\n./cat   (reads from stdin)',
+        solution: null
+      },
+      {
+        name: 'who.c',
+        description: 'Reimplement the who command in C by reading the UTMP_FILE binary file directly with open/read. Display each active session: username, TTY, date/time, and hostname. Accepts no arguments.',
+        prototype: null,
+        expected: 'user1    tty1    2014-03-26 10:30 (hostname)',
+        solution: null
+      },
+    ]
+  },
+
+  // ────────────────────────────────────────────────
+  // DAY 14 — C: Binary Search Trees
+  // ────────────────────────────────────────────────
+  {
+    id: 'day14', label: 'Day 14', title: 'C: Binary Search Trees',
+    description: 'Building a binary search tree library. All exercises use t_btree: { t_btree *left; t_btree *right; void *item; }.',
+    lang: 'c', bonus: false,
+    exercises: [
+      {
+        name: 'btree_create_node.c',
+        description: 'Write a function that allocates a new binary tree node, sets item, and initializes left and right to NULL. Returns the node.',
+        prototype: 't_btree *btree_create_node(void *item);',
+        expected: null,
+        solution: null
+      },
+      {
+        name: 'btree_apply_prefix.c',
+        description: 'Write a function that performs a pre-order traversal (root → left → right) of the tree and applies applyf to each node\'s item.',
+        prototype: 'void btree_apply_prefix(t_btree *root, void (*applyf)(void *));',
+        expected: 'Tree(2,1,3) → applyf(2), applyf(1), applyf(3)',
+        solution: null
+      },
+      {
+        name: 'btree_apply_infix.c',
+        description: 'Write a function that performs an in-order traversal (left → root → right) and applies applyf to each node\'s item.',
+        prototype: 'void btree_apply_infix(t_btree *root, void (*applyf)(void *));',
+        expected: 'Tree(2,1,3) → applyf(1), applyf(2), applyf(3)',
+        solution: null
+      },
+      {
+        name: 'btree_apply_suffix.c',
+        description: 'Write a function that performs a post-order traversal (left → right → root) and applies applyf to each node\'s item.',
+        prototype: 'void btree_apply_suffix(t_btree *root, void (*applyf)(void *));',
+        expected: 'Tree(2,1,3) → applyf(1), applyf(3), applyf(2)',
+        solution: null
+      },
+      {
+        name: 'btree_insert_data.c',
+        description: 'Write a function that inserts a new element into a BST respecting the order defined by cmpf. If cmpf(item, node->item) <= 0, go left; otherwise go right.',
+        prototype: 'void btree_insert_data(t_btree **root, void *item, int (*cmpf)(void *, void *));',
+        expected: null,
+        solution: null
+      },
+    ]
+  },
+
+  // ────────────────────────────────────────────────
+  // BONUS
+  // ────────────────────────────────────────────────
+  {
+    id: 'bonus', label: 'Bonus', title: 'Bonus Exercises',
+    description: 'Standalone challenges: ASCII art, pattern matching, and expression evaluation.',
+    lang: 'c', bonus: true,
+    exercises: [
+      {
+        name: 'sapin.c',
+        description: "Write a function that draws an ASCII Christmas tree with taille sections. Each section grows by 2 stars per line (starting at 1). A trunk of '|' characters is drawn at the base.",
+        prototype: 'void sapin(int taille);',
+        expected: 'sapin(2):\n    *\n   ***\n  *****\n ...',
+        solution: null
+      },
+      {
+        name: 'match.c',
+        description: "Write a pattern matching function that returns 1 if s1 matches the pattern s2, 0 otherwise. Pattern wildcards: '?' matches any single character, '*' matches any sequence (including empty).",
+        prototype: 'char match(char *s1, char *s2);',
+        expected: 'match("hello", "h?llo")  → 1\nmatch("hello", "h*o")    → 1\nmatch("hello", "world")  → 0',
+        solution: null
+      },
+      {
+        name: 'nmatch.c',
+        description: "Write a recursive function that counts the number of ways s1 can match the pattern s2. '*' matches any sequence of characters.",
+        prototype: 'int nmatch(char *s1, char *s2);',
+        expected: 'nmatch("aa", "a*")  → 3',
+        solution: null
+      },
+      {
+        name: 'eval_expr.c',
+        description: 'Write a program that evaluates an arithmetic expression given as a string. Supports +, -, *, /, % operators and parentheses with correct operator precedence.',
+        prototype: null,
+        expected: './eval_expr "3 + 4 * 2"       → 11\n./eval_expr "(3 + 4) * 2"     → 14\n./eval_expr "10 / 2 + 3 * 4"  → 17',
+        solution: null
+      },
+    ]
+  },
+];
+
+// ── Tab state ──
+let activeDay = DAYS[0].id;
+
+// ── Utility: escape HTML for safe injection ──
+function escHtml(str) {
+  if (!str) return '';
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// ── Render tabs ──
+function renderTabs() {
+  const container = document.getElementById('tabs');
+  container.innerHTML = DAYS.map(d => `
+    <div class="tab${d.bonus ? ' bonus' : ''}${d.id === activeDay ? ' active' : ''}"
+         data-id="${d.id}"
+         onclick="switchDay('${d.id}')">
+      ${escHtml(d.label)}
+      <span class="badge">${d.exercises.length}</span>
+    </div>
+  `).join('');
+}
+
+// ── Switch day ──
+function switchDay(id) {
+  activeDay = id;
+  renderTabs();
+  renderContent();
+}
+
+// ── Render content ──
+function renderContent() {
+  const day = DAYS.find(d => d.id === activeDay);
+  if (!day) {
+    document.getElementById('content').innerHTML =
+      `<p style="color:var(--subtext0);padding:32px 0">No data for ${activeDay}.</p>`;
+    return;
+  }
+
+  const tagClass = { shell: 'tag-shell', c: 'tag-c', mixed: 'tag-mixed' }[day.lang] || 'tag-c';
+  const tagLabel = { shell: 'Shell', c: 'C', mixed: 'C + Shell' }[day.lang] || 'C';
+
+  const cards = day.exercises.map((ex, i) => {
+    const dotIdx = ex.name.lastIndexOf('.');
+    const baseName = dotIdx > -1 ? ex.name.slice(0, dotIdx) : ex.name;
+    const ext = dotIdx > -1 ? ex.name.slice(dotIdx) : '';
+    const protoSnippet = ex.prototype
+      ? `<span class="card-proto">${escHtml(ex.prototype)}</span>`
+      : `<span class="card-proto" style="color:var(--subtext0)">shell script</span>`;
+    return `
+      <div class="card" onclick="openModal('${day.id}', ${i})">
+        <div class="card-name">${escHtml(baseName)}<span class="ext">${escHtml(ext)}</span></div>
+        <div class="card-desc">${escHtml(ex.description)}</div>
+        <div class="card-footer">
+          ${protoSnippet}
+          <span class="card-arrow">↗</span>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  document.getElementById('content').innerHTML = `
+    <div class="day-header">
+      <h2>${escHtml(day.label)} — ${escHtml(day.title)}</h2>
+      <p><span class="tag ${tagClass}">${tagLabel}</span>${escHtml(day.description)}</p>
+    </div>
+    <div class="grid">${cards}</div>
+  `;
+}
+
+// ── Modal state ──
+let currentExercise = null;
+let spoilerOpen = false;
+
+function openModal(dayId, exIdx) {
+  const day = DAYS.find(d => d.id === dayId);
+  if (!day) return;
+  currentExercise = day.exercises[exIdx];
+  spoilerOpen = false;
+  renderModal();
+  document.getElementById('modal').style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+  currentExercise = null;
+}
+
+function handleBackdropClick(e) {
+  if (e.target.id === 'modal') closeModal();
+}
+
+function toggleSpoiler() {
+  spoilerOpen = !spoilerOpen;
+  renderModal();
+}
+
+function renderModal() {
+  const ex = currentExercise;
+  const box = document.getElementById('modal-box');
+  const protoHTML = ex.prototype
+    ? `<div class="modal-section">
+         <div class="modal-label">Prototype</div>
+         <div class="modal-proto">${escHtml(ex.prototype)}</div>
+       </div>`
+    : '';
+  const expectedHTML = ex.expected
+    ? `<div class="modal-section">
+         <div class="modal-label">Expected output</div>
+         <div class="modal-expected">${escHtml(ex.expected)}</div>
+       </div>`
+    : '';
+  const spoilerHTML = ex.solution
+    ? `<div class="modal-section">
+         <div class="modal-label">Solution</div>
+         <div class="spoiler-toggle" onclick="toggleSpoiler()">
+           ${spoilerOpen ? '🙈 Hide solution' : '👁 Show solution'}
+         </div>
+         ${spoilerOpen
+           ? `<div class="spoiler-code">${ex.solution}</div>`
+           : ''}
+       </div>`
+    : '';
+
+  const dotIdx = ex.name.lastIndexOf('.');
+  const baseName = dotIdx > -1 ? ex.name.slice(0, dotIdx) : ex.name;
+  const ext = dotIdx > -1 ? ex.name.slice(dotIdx) : '';
+
+  box.innerHTML = `
+    <div class="modal-header">
+      <div class="modal-title">${escHtml(baseName)}<span style="color:var(--subtext0);font-weight:400">${escHtml(ext)}</span></div>
+      <div class="modal-close" onclick="closeModal()">✕</div>
+    </div>
+    <div class="modal-section">
+      <div class="modal-label">Description</div>
+      <div class="modal-desc">${escHtml(ex.description)}</div>
+    </div>
+    ${protoHTML}
+    ${expectedHTML}
+    ${spoilerHTML}
+  `;
+}
+
+// ── Keyboard: Escape closes modal ──
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+// ── Init ──
+renderTabs();
+renderContent();
+</script>
+
+</body>
+</html>
