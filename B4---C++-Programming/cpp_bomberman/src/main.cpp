@@ -22,7 +22,7 @@
 //   Score::getInstance().addScore("Ankirama", 5000);
 //   Score::getInstance().addScore("louise", 10000);
 //   Score::getInstance().showScore();
-//   Score::getInstance().addScore("Fabien", 50000);
+//   Score::getInstance().addScore("Player", 50000);
 //   Score::getInstance().addScore("Zero", 5);
 //   std::cout << "_______" << std::endl;
 //   Score::getInstance().showScore();
